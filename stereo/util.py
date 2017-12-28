@@ -11,6 +11,8 @@ else:
     import urllib.request
 
 
+# Converts a string to bytes (for writing the string into a file). Provided for
+# compatibility with Python 2 and 3.
 def StrToBytes(text):
     if sys.version_info[0] == 2:
         return text
@@ -18,6 +20,8 @@ def StrToBytes(text):
         return bytes(text, 'UTF-8')
 
 
+# Outputs the given text and lets the user input a response (submitted by
+# pressing the return key). Provided for compatibility with Python 2 and 3.
 def GetUserInput(text):
     if sys.version_info[0] == 2:
         return raw_input(text)
@@ -25,6 +29,8 @@ def GetUserInput(text):
         return input(text)
 
 
+# Creates the given directory (hierarchy), which may already exist. Provided for
+# compatibility with Python 2 and 3.
 def MakeDirsExistOk(directory_path):
     try:
         os.makedirs(directory_path)
@@ -33,6 +39,7 @@ def MakeDirsExistOk(directory_path):
             raise
 
 
+# Deletes all files and folders within the given folder.
 def DeleteFolderContents(folder_path):
   for file_name in os.listdir(folder_path):
     file_path = os.path.join(folder_path, file_name)
@@ -48,6 +55,8 @@ def DeleteFolderContents(folder_path):
       print(traceback.format_exc())
 
 
+# Creates the given directory, respectively deletes all content of the directory
+# in case it already exists.
 def MakeCleanDirectory(folder_path):
     if os.path.isdir(folder_path):
         DeleteFolderContents(folder_path)
@@ -55,7 +64,9 @@ def MakeCleanDirectory(folder_path):
         MakeDirsExistOk(folder_path)
 
 
-# Adapted from: https://stackoverflow.com/questions/22676
+# Downloads the given URL to a file in the given directory. Returns the
+# path to the downloaded file.
+# In part adapted from: https://stackoverflow.com/questions/22676
 def DownloadFile(url, dest_dir_path):
     file_name = url.split('/')[-1]
     dest_file_path = os.path.join(dest_dir_path, file_name)
@@ -67,7 +78,7 @@ def DownloadFile(url, dest_dir_path):
         while True:
             response = GetUserInput("> ")
             if response == 's':
-                return
+                return dest_file_path
             elif response == 'o':
                 break
             else:
@@ -100,28 +111,25 @@ def DownloadFile(url, dest_dir_path):
             
             sys.stdout.write("%d / %d  (%3f%%)\r" % (file_size_downloaded, file_size, file_size_downloaded * 100. / file_size))
             sys.stdout.flush()
+    
+    return dest_file_path
 
 
+# Unzips the given zip file into the given directory.
 def UnzipFile(file_path, unzip_dir_path):
-    try:
-        zip_ref = zipfile.ZipFile(open(file_path, 'rb'))
-        zip_ref.extractall(unzip_dir_path)
-        zip_ref.close()
-    except Exception as e:
-        print('Exception during unzipping:')
-        print(e)
-        print('Stack trace:')
-        print(traceback.format_exc())
+    zip_ref = zipfile.ZipFile(open(file_path, 'rb'))
+    zip_ref.extractall(unzip_dir_path)
+    zip_ref.close()
 
 
-# archive_base_path must not include the extension .zip. The full, final path of
-# the archive is returned by the function.
+# Creates a zip file with the contents of the given directory.
+# The archive_base_path must not include the extension .zip. The full, final
+# path of the archive is returned by the function.
 def ZipDirectory(archive_base_path, root_dir_path):
     return shutil.make_archive(archive_base_path, 'zip', root_dir_path)
 
 
+# Downloads a zip file and directly unzips it.
 def DownloadAndUnzipFile(url, archive_dir_path, unzip_dir_path):
-    DownloadFile(url, archive_dir_path)
-    file_name = url.split('/')[-1]
-    archive_path = os.path.join(archive_dir_path, file_name)
+    archive_path = DownloadFile(url, archive_dir_path)
     UnzipFile(archive_path, unzip_dir_path)

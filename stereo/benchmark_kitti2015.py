@@ -4,8 +4,9 @@ import shutil
 import struct
 
 from benchmark import *
-from benchmark_middlebury2014 import *
+from dataset_format_middlebury2014 import *
 from util import *
+from util_stereo import *
 
 
 class Kitti2015(Benchmark):
@@ -29,11 +30,11 @@ class Kitti2015(Benchmark):
         return False
     
     
-    def GetOptions(self):
+    def GetOptions(self, metadata_dict):
         return  # No options
     
     
-    def DownloadAndConvert(self, archive_dir_path, unpack_dir_path, datasets_dir_path, training_dir_path, test_dir_path):
+    def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
         # Download input images (training + test) and ground truth
         DownloadAndUnzipFile('http://kitti.is.tue.mpg.de/kitti/data_scene_flow.zip', archive_dir_path, unpack_dir_path)
         
@@ -42,11 +43,13 @@ class Kitti2015(Benchmark):
         
         # NOTE: Multi-view extension would be here:
         # http://kitti.is.tue.mpg.de/kitti/data_scene_flow_multiview.zip
-        
-        self.ConvertOriginalToMiddlebury(unpack_dir_path, training_dir_path, test_dir_path)
     
     
-    def ConvertOriginalToMiddlebury(self, unpack_dir_path, training_dir_path, test_dir_path):
+    def CanConvertOriginalToFormat(self, dataset_format):
+        return isinstance(dataset_format, Middlebury2014Format)
+    
+    
+    def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         src_training_path = os.path.join(unpack_dir_path, 'training')
         src_testing_path = os.path.join(unpack_dir_path, 'testing')
         
@@ -159,35 +162,25 @@ class Kitti2015(Benchmark):
             shutil.rmtree(input_folder_path)
     
     
-    def CreateSubmissionArchive(self, method, datasets_dir_path, training_dataset_names, test_dataset_names, training_dir_path, test_dir_path, pack_dir_path, archive_base_path):
+    def CanCreateSubmissionFromFormat(self, dataset_format):
+        return isinstance(dataset_format, Middlebury2014Format)
+    
+    
+    def CreateSubmission(self, dataset_format, method, pack_dir_path,
+                         metadata_dict, training_dir_path, training_datasets,
+                         test_dir_path, test_datasets, archive_base_path):
         # Create output directory
         disp_0_path = os.path.join(pack_dir_path, 'disp_0')
         MakeDirsExistOk(disp_0_path)
         
         # Only test dataset submission is supported.
-        for benchmark_and_dataset_name in test_dataset_names:
+        for (benchmark_and_dataset_name, original_dataset_name) in test_datasets:
             src_dataset_path = os.path.join(test_dir_path, benchmark_and_dataset_name)
-            original_dataset_name = benchmark_and_dataset_name[len(self.Prefix()):]
             
             # Convert .pfm to Kitti's .png disparity
             src_pfm_path = os.path.join(src_dataset_path, 'disp0' + method + '.pfm')
-            (pfm_width, pfm_height, pfm_pixels) = ReadMiddlebury2014PfmFile(src_pfm_path)
-            
-            png_disp = []  # list of rows
-            for y in range(pfm_height - 1, -1, -1):  # iterate in reverse order according to pfm format
-                in_row = pfm_pixels[y * pfm_width : (y + 1) * pfm_width]
-                out_row = []
-                for value in in_row:
-                    if math.isinf(value):
-                        out_row.append(0)  # invalid value
-                    else:
-                        out_row.append(max(1, int(round(256.0 * value))))
-                png_disp.append(out_row)
-            
             dest_png_path = os.path.join(disp_0_path, original_dataset_name + '.png')
-            with open(dest_png_path, 'wb') as dest_png_file:
-                png_writer = png.Writer(width=pfm_width, height=pfm_height, bitdepth=16, compression=9, greyscale=True)
-                png_writer.write(dest_png_file, png_disp)
+            ConvertMiddlebury2014PfmToKitti2015Png(src_pfm_path, dest_png_path)
         
         # Create the archive and clean up.
         archive_filename = ZipDirectory(archive_base_path, pack_dir_path)

@@ -3,8 +3,9 @@ import png
 import shutil
 
 from benchmark import *
-from benchmark_middlebury2014 import *
+from dataset_format_middlebury2014 import *
 from util import *
+from util_stereo import *
 
 
 class HCI2016(Benchmark):
@@ -28,18 +29,20 @@ class HCI2016(Benchmark):
         return True
     
     
-    def GetOptions(self):
+    def GetOptions(self, metadata_dict):
         return  # No options
     
     
-    def DownloadAndConvert(self, archive_dir_path, unpack_dir_path, datasets_dir_path, training_dir_path, test_dir_path):
-        # NOTE(Thomas): Is it fine to hard-code this URL, or should we use the website's API to find it out based on the challenge ID?
+    def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
+        # TODO: Is it fine to hard-code this URL, or should we use the website's API to find it out based on the challenge ID?
         DownloadAndUnzipFile('http://hci-benchmark.org/media/usercontent/iz/z8/JQ/Ib/nT/OV/Dm/hb/geometry_challenge_stereo.zip', archive_dir_path, unpack_dir_path)
-        
-        self.ConvertOriginalToMiddlebury(unpack_dir_path, training_dir_path, test_dir_path)
     
     
-    def ConvertOriginalToMiddlebury(self, unpack_dir_path, training_dir_path, test_dir_path):
+    def CanConvertOriginalToFormat(self, dataset_format):
+        return isinstance(dataset_format, Middlebury2014Format)
+    
+    
+    def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         benchmark_dir = os.path.join(unpack_dir_path, 'geometry_challenge_stereo')
         
         # Determine a list of training filenames
@@ -124,7 +127,13 @@ class HCI2016(Benchmark):
         shutil.rmtree(benchmark_dir)
     
     
-    def CreateSubmissionArchive(self, method, datasets_dir_path, training_dataset_names, test_dataset_names, training_dir_path, test_dir_path, pack_dir_path, archive_base_path):
+    def CanCreateSubmissionFromFormat(self, dataset_format):
+        return isinstance(dataset_format, Middlebury2014Format)
+    
+    
+    def CreateSubmission(self, dataset_format, method, pack_dir_path,
+                         metadata_dict, training_dir_path, training_datasets,
+                         test_dir_path, test_datasets, archive_base_path):
         # TODO: Support confidence, code, and publication submission
         # From the README:
         # FILE STRUCTURE:
@@ -140,14 +149,10 @@ class HCI2016(Benchmark):
         runtimes_path = os.path.join(pack_dir_path, method, 'runtimes')
         MakeDirsExistOk(runtimes_path)
         
-        # Handle training and test datasets in the same way.
-        for item in ([(name, True) for name in training_dataset_names] +
-                     [(name, False) for name in test_dataset_names]):
-            benchmark_and_dataset_name = item[0]
-            is_training = item[1]
-            
-            src_dataset_path = os.path.join(training_dir_path if is_training else test_dir_path, benchmark_and_dataset_name)
-            original_dataset_name = benchmark_and_dataset_name[len(self.Prefix()):]
+        for (src_folder_path, benchmark_and_dataset_name, original_dataset_name) in (
+                [(training_dir_path, a, b) for (a, b) in training_datasets] +
+                [(test_dir_path, a, b) for (a, b) in test_datasets]):
+            src_dataset_path = os.path.join(src_folder_path, benchmark_and_dataset_name)
             
             # Copy .pfm file
             shutil.copy2(os.path.join(src_dataset_path, 'disp0' + method + '.pfm'),
