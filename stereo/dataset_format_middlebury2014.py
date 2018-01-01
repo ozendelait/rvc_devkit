@@ -13,7 +13,7 @@ class Middlebury2014Format(DatasetFormat):
         return 'Middlebury 2014 Stereo format'
     
     
-    def FolderName(self):
+    def Identifier(self):
         return 'middlebury2014'
     
     
@@ -47,6 +47,14 @@ class Middlebury2014Format(DatasetFormat):
                     method_list.append(method)
         
         return method_list
+    
+    
+    def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name):
+        im0_path = os.path.join(dataset_folder_path, dataset_name, 'im0.png')
+        im1_path = os.path.join(dataset_folder_path, dataset_name, 'im1.png')
+        calib = ReadMiddlebury2014CalibFile(os.path.join(dataset_folder_path, dataset_name, 'calib.txt'))
+        output_dir_path = os.path.join(dataset_folder_path, dataset_name)
+        return [im0_path, im1_path, calib['ndisp'], output_dir_path]
     
     
     def CanConvertInputToFormat(self, dataset_format):

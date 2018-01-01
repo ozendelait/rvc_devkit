@@ -12,10 +12,13 @@ class DatasetFormat(object):
         raise NotImplementedError()
     
     
-    # Must return a string used to determine the datasets folder name as:
-    # 'datasets_' + format.FolderName().
+    # Must return a string used to identify the dataset format. On the one hand,
+    # this is used to determine the datasets folder name as:
+    # 'datasets_' + format.Identifier().
+    # On the other hand, this is the name used to refer to the dataset format
+    # in the command line interface.
     @abstractmethod
-    def FolderName(self):
+    def Identifier(self):
         raise NotImplementedError()
     
     
@@ -37,6 +40,13 @@ class DatasetFormat(object):
     # training or test folder in which the dataset lies.
     @abstractmethod
     def ListMethods(self, dataset_folder_path, dataset_name):
+        raise NotImplementedError()
+    
+    
+    # Must prepare for running the method on the given dataset (e.g., by
+    # creating a suitable output folder, if necessary). Must return program
+    # arguments for running the method as a list.
+    def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name):
         raise NotImplementedError()
     
     

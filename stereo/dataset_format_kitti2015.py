@@ -11,7 +11,7 @@ class Kitti2015Format(DatasetFormat):
         return 'Kitti 2015 Stereo format'
     
     
-    def FolderName(self):
+    def Identifier(self):
         return 'kitti2015'
     
     
@@ -43,6 +43,15 @@ class Kitti2015Format(DatasetFormat):
                     methods.append(method_name)
         
         return methods
+    
+    
+    def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name):
+        disp_0_dir_path = os.path.join(dataset_folder_path, method_name + '_disp_0')
+        MakeDirsExistOk(disp_0_dir_path)
+        time_dir_path = os.path.join(dataset_folder_path, method_name + '_time')
+        MakeDirsExistOk(time_dir_path)
+        
+        return [dataset_folder_path, dataset_name, disp_0_dir_path, time_dir_path]
     
     
     def CanConvertInputToFormat(self, dataset_format):

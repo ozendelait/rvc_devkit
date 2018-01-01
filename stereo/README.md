@@ -2,7 +2,8 @@
 
 ## Dataset Download ##
 
-To use the devkit, simply run the main script without any program arguments:
+The simplest way to use the devkit is to run the main script without any program
+arguments:
 ```
 python stereo_devkit.py
 ```
@@ -82,6 +83,45 @@ must be given for each image pair. The time in seconds is stored as a floating
 point value in ASCII encoding in a text file. The file must contain only that
 number.
 
+#### Running ####
+
+The devkit includes support for running algorithms on all datasets. As an
+example, [ELAS](http://www.cvlibs.net/software/libelas/) is included in the
+folder alg-ELAS (TODO: alg-ELAS/README-Middlebury.txt must be adapted). To build
+it, run the following:
+
+```
+cd alg-ELAS
+mkdir build  # The run script expects the executable in the folder "build"
+cd build
+cmake ..
+make
+```
+
+To run the algorithm, simply run the devkit script again in the same directory
+in which it was run originally:
+```
+python stereo_devkit.py
+```
+
+The folder alg-ELAS must be in the same directory. Under these conditions,
+the script will offer to run the algorithm. An alternative way to run algorithms
+using the command line interface is described below in the respective section.
+
+In general, the script looks for all folders starting with alg-. They must
+contain a file named either "run" or "run.py", which is executed by the script
+for all datasets. If the file is a Python script, the same interpreter version
+used for running the devkit script is used. The arguments passed to the script
+depend on the dataset format. For the Middlebury 2014 Stereo format, the
+following arguments are passed to the script:
+
+1. The method name to use for the result.
+2. The path to the left image, im0.png.
+3. The path to the right image, im1.png.
+4. The maximum disparity, ndisp, read from the calib.txt file.
+5. The directory to output the result files to.
+6. Optional additional arguments, if given.
+
 
 ## Kitti 2015 Stereo Format ##
 
@@ -138,6 +178,17 @@ which must contain the time in seconds to compute the disparity image. It is
 stored as a floating point value in ASCII encoding. The file must contain only
 that number.
 
+#### Running ####
+
+For this dataset format, the following parameters are passed to the run file:
+
+1. The method name to use for the result.
+2. The path to the dataset folder (containing the image_2, image_3, etc. folders).
+3. The name of the dataset (i.e., the image filename without the extension .png).
+4. The path to the directory NAME_disp_0 to output the disparity image to.
+5. The path to the directory NAME_time to output the runtime to.
+6. Optional additional arguments, if given.
+
 
 ## Result Submission ##
 
@@ -162,3 +213,41 @@ TODO: How to mark the submissions as belonging to ROB?
 
 Furthermore, the submission must be completed by filling a short form on the
 Robust Vision Challenge website: TODO
+
+
+## Command Line Interface ##
+
+As an alternative to the interactive interface, a command line interface is
+available:
+
+```
+# Download the datasets:
+# - format indicates the dataset format to convert all datasets to and must be
+#   either middlebury2014 or kitti2015
+# - The resolution of the Middlebury datasets can be chosen as [f]ull, [h]alf,
+#   or [q]uarter
+python stereo_devkit.py obtain <format> --middlebury_resolution {f,F,h,H,q,Q}
+
+# Run an algorithm:
+# - format must only be given if the datasets were downloaded in more than one
+#   format. In this case, it must indicate the dataset format to run the method
+#   on and must be either middlebury2014 or kitti2015
+# - runfile_path is the path to the executable file or Python script that will
+#   be called for each dataset, as described in the section "Running" for the
+#   Middlebury 2014 format above
+# - method_name is the method name to use in the result files, which will be
+#   passed to the runfile as first parameter
+# - --training is an optional flag which will run the algorithm on the training
+#   datasets only
+# - additional_arguments are optional additional arguments that will be passed
+#   to the run file after the regular arguments.
+python stereo_devkit.py run [format] <runfile_path> <method_name> [--training] [additional_arguments]
+
+# Create archives for result submission:
+# - format behaves the same as for running an algorithm, see above.
+# - method_name is the method to generate the submission archives for, as
+#   specified when running the algorithm
+# - --training is an optional flag which will create a training-only submission
+#   (however, this may only be supported by a subset of benchmarks)
+python stereo_devkit.py submit [format] <method_name> [--training]
+```

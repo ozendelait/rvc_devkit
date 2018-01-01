@@ -1,6 +1,8 @@
 import argparse
 import json
 import shutil
+import subprocess
+import sys
 import time
 
 from benchmark import *
@@ -9,7 +11,7 @@ from util import *
 
 
 def DatasetsPathForFormat(dataset_format):
-    return 'datasets_' + dataset_format.FolderName()
+    return 'datasets_' + dataset_format.Identifier()
 
 
 def TrainingDatasetsPath(datasets_path):
@@ -50,6 +52,40 @@ def GetBenchmarkFromDatasetDirName(dir_name, benchmarks):
     return benchmark
 
 
+def ChooseDatasetFormat(request_string, dataset_formats):
+    format_index = 0
+    if len(dataset_formats) > 1:
+        print(request_string)
+        for (index, dataset_format) in enumerate(dataset_formats):
+            print('  [' + str(index + 1) + '] ' + dataset_format.Name())
+            print('   ' + (' ' * len(str(index + 1))) + '  ( see ' + dataset_format.Website() + ' )')
+        
+        while True:
+            response = GetUserInput("> ")
+            if not response.isdigit():
+                print('Please enter a number.')
+            elif int(response) <= 0 or int(response) > len(dataset_formats):
+                print('Pleaser enter a valid number.')
+            else:
+                print('')
+                format_index = int(response) - 1
+                break
+    
+    return dataset_formats[format_index]
+
+
+def ParseFormatNameOrExit(format_name, dataset_formats):
+    for dataset_format in dataset_formats:
+        if dataset_format.Identifier() == format_name:
+            return dataset_format
+    
+    print('Format ' + format_name + ' not found.')
+    print('List of supported formats:')
+    for dataset_format in dataset_formats:
+        print('  ' + dataset_format.Identifier())
+    sys.exit(1)
+
+
 def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
                                metadata_dir_path, training_dir_path,
                                test_dir_path, benchmarks):
@@ -61,8 +97,8 @@ def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
     # Folder for performing conversions.
     conversion_dir_path = 'temp_conversion_dir'
     
-    print('The datasets will be downloaded into the current working directory:')
-    print('  ' + os.getcwd())
+    print('The datasets will be downloaded into this folder in the current working directory:')
+    print('  ' + os.path.join(os.getcwd(), DatasetsPathForFormat(chosen_format)))
     print('')
     
     indexed_metadata = dict()
@@ -359,6 +395,37 @@ def CreateSubmissionArchives(chosen_format, dataset_formats, method,
     print('Finally, the submission must be completed by filling a short form on the Robust Vision Challenge website: TODO')  # TODO: Insert URL
 
 
+def RunMethod(method, run_file_path, chosen_format, training_only, additional_arguments):
+    datasets_dir_path = DatasetsPathForFormat(chosen_format)
+    
+    folders = [TrainingDatasetsPath(datasets_dir_path)]
+    if not training_only:
+        folders.append(TestDatasetsPath(datasets_dir_path))
+    
+    for folder in folders:
+        datasets = chosen_format.ListDatasets(folder)
+        for dataset_name in datasets:
+            arguments = chosen_format.PrepareRunningMethod(method, folder, dataset_name)
+            
+            if run_file_path.endswith('.py'):
+                # Use the same Python interpreter which runs this script to run
+                # the run.py script.
+                program_with_arguments = [sys.executable, run_file_path]
+            else:
+                program_with_arguments = [run_file_path]
+            
+            program_with_arguments.append(method)
+            program_with_arguments.extend(arguments)
+            program_with_arguments.extend(additional_arguments)
+            print('Running: ' + ' '.join(program_with_arguments))
+            proc = subprocess.Popen(program_with_arguments)
+            return_code = proc.wait()
+            del proc
+            if return_code != 0:
+                print('Algorithm call failed (return code: ' + str(return_code) + ')')
+                return False
+
+
 def DevkitMain(task_name, benchmarks, dataset_formats):
     # Validate setup.
     if len(dataset_formats) == 0:
@@ -368,19 +435,14 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
     
     # Parse arguments.
     parser = argparse.ArgumentParser()
+    parser.add_argument('command', choices=['obtain', 'run', 'submit'], nargs='?')
     parser.add_argument("--keep_archives", action='store_true', help='Keep the downloaded archives instead of deleting them after extraction.')
+    parser.add_argument('args', nargs=argparse.REMAINDER)
     args = parser.parse_args()
     
-    # Output script information.
-    print('--- ' + task_name.title() + ' devkit for the Robust Vision Challenge 2018 ---')
-    print('')
-    print('Includes the following benchmarks:')
-    for benchmark in benchmarks:
-        print('* ' + benchmark.Name())
-    print('')
-    
     # Check for existing dataset and result files.
-    format_info = dict()
+    format_info = dict()  # Indexed by the dataset_format.
+    downloaded_dataset_formats = []
     for dataset_format in dataset_formats:
         format_info[dataset_format] = dict()
         datasets_dir = DatasetsPathForFormat(dataset_format)
@@ -390,6 +452,8 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
         format_info[dataset_format]['downloaded'] = (
             os.path.isdir(datasets_dir) and
             all([os.path.isfile(os.path.join(MetadataPath(datasets_dir), GetMetaDataFilename(benchmark))) for benchmark in benchmarks]))
+        if format_info[dataset_format]['downloaded']:
+            downloaded_dataset_formats.append(dataset_format)
         
         # Check whether any submissions are possible with result files in this
         # format.
@@ -403,35 +467,111 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
             # require to submit both training and test results).
             (training_submission_methods, full_submission_methods) = (
                 DeterminePossibleSubmissions(TrainingDatasetsPath(format_info[dataset_format]['datasets_dir']),
-                                         TestDatasetsPath(format_info[dataset_format]['datasets_dir']),
-                                         dataset_format,
-                                         benchmarks))
+                                             TestDatasetsPath(format_info[dataset_format]['datasets_dir']),
+                                             dataset_format,
+                                             benchmarks))
             format_info[dataset_format]['training_submission_methods'] = training_submission_methods
             format_info[dataset_format]['full_submission_methods'] = full_submission_methods
+    
+    # Command line interface:
+    if args.command == 'obtain':
+        if len(dataset_formats) == 1:
+            chosen_format = dataset_formats[0]
+        elif len(args.args) == 0:
+            print('Please specify the dataset format.')
+            sys.exit(1)
+        else:
+            chosen_format = ParseFormatNameOrExit(args.args[0], dataset_formats)
+        
+        if format_info[chosen_format]['downloaded']:
+            print('Error: the datasets were already downloaded in this format. Delete the folder first in case you would like to re-download them.')
+            sys.exit(1)
+        
+        datasets_dir_path = DatasetsPathForFormat(chosen_format)
+        DownloadAndConvertDatasets(chosen_format,
+                                   dataset_formats,
+                                   args.keep_archives,
+                                   MetadataPath(datasets_dir_path),
+                                   TrainingDatasetsPath(datasets_dir_path),
+                                   TestDatasetsPath(datasets_dir_path),
+                                   benchmarks)
+        sys.exit(0)
+    elif args.command == 'run':
+        arguments = args.args
+        if len(arguments) < 2:
+            print('Too few program arguments given.')
+            sys.exit(1)
+        elif len(downloaded_dataset_formats) == 0:
+            print('Cannot run an algorithm since no datasets were downloaded yet.')
+            sys.exit(1)
+        elif len(downloaded_dataset_formats) == 1:
+            chosen_format = downloaded_dataset_formats[0]
+        elif len(downloaded_dataset_formats) > 1:
+            chosen_format = ParseFormatNameOrExit(arguments[0], dataset_formats)
+            arguments = arguments[1:]
+        
+        if len(arguments) < 2:
+            print('Too few program arguments given.')
+            sys.exit(1)
+        
+        run_file_path = arguments[0]
+        method = arguments[1]
+        training_only = len(arguments) >= 3 and arguments[2] == '--training'
+        additional_arguments = arguments[(3 if training_only else 2):]
+        
+        if not os.path.isfile(run_file_path):
+            print('Cannot find a file at the given runfile path: ' + run_file_path)
+            sys.exit(1)
+        
+        RunMethod(method, run_file_path, chosen_format, training_only, additional_arguments)
+        sys.exit(0)
+    elif args.command == 'submit':
+        arguments = args.args
+        if len(arguments) < 1:
+            print('Too few program arguments given.')
+            sys.exit(1)
+        elif len(downloaded_dataset_formats) == 0:
+            print('Cannot create archives since no datasets were downloaded yet.')
+            sys.exit(1)
+        elif len(downloaded_dataset_formats) == 1:
+            chosen_format = downloaded_dataset_formats[0]
+        elif len(downloaded_dataset_formats) > 1:
+            chosen_format = ParseFormatNameOrExit(arguments[0], dataset_formats)
+            arguments = arguments[1:]
+        
+        method = arguments[0]
+        is_training_submission = len(arguments) >= 2 and arguments[1] == '--training'
+        
+        if ((is_training_submission and not method in format_info[chosen_format]['training_submission_methods']) or
+            (not is_training_submission and not method in format_info[chosen_format]['full_submission_methods'])):
+            print('Cannot create archives for this method since not all required result files exist.')
+            sys.exit(1)
+        
+        datasets_dir_path = format_info[chosen_format]['datasets_dir']
+        CreateSubmissionArchives(chosen_format, dataset_formats, method,
+                                 is_training_submission,
+                                 MetadataPath(datasets_dir_path),
+                                 TrainingDatasetsPath(datasets_dir_path),
+                                 TestDatasetsPath(datasets_dir_path),
+                                 benchmarks)
+        sys.exit(0)
+    
+    
+    # Interactive interface:
+    
+    # Output script information.
+    print('--- ' + task_name.title() + ' devkit for the Robust Vision Challenge 2018 ---')
+    print('')
+    print('Includes the following benchmarks:')
+    for benchmark in benchmarks:
+        print('* ' + benchmark.Name())
+    print('')
     
     # If no datasets were downloaded yet, do this now.
     if not any([format_info[dataset_format]['downloaded'] for dataset_format in dataset_formats]):
         # If there is more than one format, let the user choose which one to work
         # with.
-        format_index = 0
-        if len(dataset_formats) > 1:
-            print('Choose the dataset format to work with by entering its number:')
-            for (index, dataset_format) in enumerate(dataset_formats):
-                print('  [' + str(index + 1) + '] ' + dataset_format.Name())
-                print('   ' + (' ' * len(str(index + 1))) + '  ( see ' + dataset_format.Website() + ' )')
-            
-            while True:
-                response = GetUserInput("> ")
-                if not response.isdigit():
-                    print('Please enter a number.')
-                elif int(response) <= 0 or int(response) > len(dataset_formats):
-                    print('Pleaser enter a valid number.')
-                else:
-                    print('')
-                    format_index = int(response) - 1
-                    break
-        
-        chosen_format = dataset_formats[format_index]
+        chosen_format = ChooseDatasetFormat('Choose the dataset format to work with by entering its number:', dataset_formats)
         datasets_dir_path = format_info[chosen_format]['datasets_dir']
         
         DownloadAndConvertDatasets(chosen_format,
@@ -466,6 +606,13 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
                     print('  [' + str(counter) + '] Create training submission for: ' + method)
                     actions.append(('training_submission', dataset_format, method))
                     counter += 1
+        
+        for item in os.listdir('.'):
+            if os.path.isdir(item) and len(item) > len('alg-') + 1 and item.startswith('alg-'):
+                method = item[len('alg-'):]
+                print('  [' + str(counter) + '] Run algorithm: ' + method)
+                actions.append(('run_algorithm', method, item))
+                counter += 1
         
         if len(actions) == 0:
             print('> No action possible, exiting.')
@@ -513,5 +660,41 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
                                      TrainingDatasetsPath(datasets_dir_path),
                                      TestDatasetsPath(datasets_dir_path),
                                      benchmarks)
+        elif action[0] == 'run_algorithm':
+            method = action[1]
+            method_dir_path = action[2]
+            
+            # If more than one dataset format is downloaded, let the user choose which
+            # format to run the method on.
+            chosen_format = ChooseDatasetFormat('Choose the dataset format to run the algorithm on by entering its number:', downloaded_dataset_formats)
+            datasets_dir_path = format_info[chosen_format]['datasets_dir']
+            
+            # Let the user choose whether to run the method on training datasets only,
+            # or all datasets.
+            print('Run the algorithm only on training datasets [t], or on all datasets [a]?')
+            while True:
+                response = GetUserInput("> ")
+                if response == 't' or response == 'a':
+                    print('')
+                    training_only = (response == 't')
+                    break
+                else:
+                    print('Please enter t or a.')
+            
+            print('Enter the method name (default if empty: ' + method + '):')
+            response = GetUserInput("> ")
+            if len(response) > 0:
+                method = response
+            
+            print('Enter additional arguments to pass to the run file (if any):')
+            additional_arguments = GetUserInput("> ").split(' ')
+            
+            run_file_path = os.path.join(method_dir_path, 'run')
+            if not os.path.isfile(run_file_path):
+                run_file_path = run_file_path + '.py'
+                if not os.path.isfile(run_file_path):
+                    raise Exception('Cannot find run or run.py in the algorithm\'s directory.')
+            
+            RunMethod(method, run_file_path, chosen_format, training_only, additional_arguments)
         else:
             raise Exception('Internal error: invalid action.')

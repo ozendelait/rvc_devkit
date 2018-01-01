@@ -1,3 +1,4 @@
+import argparse
 import shutil
 
 from benchmark import *
@@ -28,18 +29,25 @@ class Middlebury2014(Benchmark):
     
     
     def GetOptions(self, metadata_dict):
-        print('Choose the resolution for the Middlebury 2014 stereo datasets by entering f, h, or q:')
-        print('  [f] Full resolution (up to 3000 x 2000, ndisp <= 800)')
-        print('  [h] Half resolution (up to 1500 x 1000, ndisp <= 400)')
-        print('  [q] Quarter resolution (up to 750 x 500, ndisp <= 200)')
-        while True:
-            response = GetUserInput("> ")
-            if response == 'f' or response == 'h' or response == 'q':
-                print('')
-                metadata_dict['resolution'] = response.upper()
-                break
-            else:
-                print('Please enter f, h, or q.')
+        parser = argparse.ArgumentParser()
+        parser.add_argument('--middlebury_resolution', choices=['f', 'F', 'h', 'H', 'q', 'Q'], nargs='?')
+        args, unknown = parser.parse_known_args()
+        
+        if args.middlebury_resolution is not None:
+            metadata_dict['resolution'] = args.middlebury_resolution.upper()
+        else:
+            print('Choose the resolution for the Middlebury 2014 stereo datasets by entering f, h, or q:')
+            print('  [f] Full resolution (up to 3000 x 2000, ndisp <= 800)')
+            print('  [h] Half resolution (up to 1500 x 1000, ndisp <= 400)')
+            print('  [q] Quarter resolution (up to 750 x 500, ndisp <= 200)')
+            while True:
+                response = GetUserInput("> ")
+                if response == 'f' or response == 'h' or response == 'q':
+                    print('')
+                    metadata_dict['resolution'] = response.upper()
+                    break
+                else:
+                    print('Please enter f, h, or q.')
     
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):

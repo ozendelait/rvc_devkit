@@ -18,6 +18,22 @@ def ReadMiddlebury2014TimeFile(path):
     return time
 
 
+# Returns a dict which maps the parameters to their values. The values (right
+# side of the equal sign) are all returned as strings (and not parsed).
+def ReadMiddlebury2014CalibFile(path):
+    result = dict()
+    with open(path, 'rb') as calib_file:
+        for line in calib_file.readlines():
+            line = line.decode('UTF-8').rstrip('\n')
+            if len(line) == 0:
+                continue
+            eq_pos = line.find('=')
+            if eq_pos < 0:
+                raise Exception('Cannot parse Middlebury 2014 calib file: ' + path)
+            result[line[:eq_pos]] = line[eq_pos + 1:]
+    return result
+
+
 # Writes a calib.txt file according to the Middlebury format, given the required
 # values.
 def WriteMiddlebury2014CalibFile(path,
