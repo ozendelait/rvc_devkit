@@ -7,6 +7,7 @@ arguments:
 ```
 python stereo_devkit.py
 ```
+On Windows, one may double-click stereo_devkit.py if Python is installed.
 The script will ask about a few settings (including the dataset format to use)
 and then download the datasets into a folder in the current working directory.
 The folder layout is as follows:
@@ -87,8 +88,7 @@ number.
 
 The devkit includes support for running algorithms on all datasets. As an
 example, [ELAS](http://www.cvlibs.net/software/libelas/) is included in the
-folder alg-ELAS (TODO: alg-ELAS/README-Middlebury.txt must be adapted). To build
-it, run the following:
+folder alg-ELAS. To build it, run the following:
 
 ```
 cd alg-ELAS

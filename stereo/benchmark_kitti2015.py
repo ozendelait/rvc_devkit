@@ -75,15 +75,18 @@ class Kitti2015(Benchmark):
                             os.path.join(output_dataset_path, 'im1.png'))
                 
                 # Create calib.txt
-                left_fx = -1  # TODO
-                left_fy = -1  # TODO
-                left_cx = -1  # TODO
-                left_cy = -1  # TODO
-                right_fx = -1  # TODO
-                right_fy = -1  # TODO
-                right_cx = -1  # TODO
-                right_cy = -1  # TODO
-                baseline_in_mm = -1  # TODO
+                # NOTE: The parameters below are unknown, setting them all to zero
+                #       (which might be better compatible with parsers than setting
+                #        them to NaN).
+                left_fx = 0
+                left_fy = 0
+                left_cx = 0
+                left_cy = 0
+                right_fx = 0
+                right_fy = 0
+                right_cx = 0
+                right_cy = 0
+                baseline_in_mm = 0
                 
                 png_reader = png.Reader(os.path.join(output_dataset_path, 'im0.png'))
                 png_data = png_reader.read()

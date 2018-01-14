@@ -34,7 +34,6 @@ class HCI2016(Benchmark):
     
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
-        # TODO: Is it fine to hard-code this URL, or should we use the website's API to find it out based on the challenge ID?
         DownloadAndUnzipFile('http://hci-benchmark.org/media/usercontent/iz/z8/JQ/Ib/nT/OV/Dm/hb/geometry_challenge_stereo.zip', archive_dir_path, unpack_dir_path)
     
     
@@ -67,15 +66,18 @@ class HCI2016(Benchmark):
                         os.path.join(output_dataset_path, 'im1.png'))
             
             # Create calib.txt
-            left_fx = -1  # TODO
-            left_fy = -1  # TODO
-            left_cx = -1  # TODO
-            left_cy = -1  # TODO
-            right_fx = -1  # TODO
-            right_fy = -1  # TODO
-            right_cx = -1  # TODO
-            right_cy = -1  # TODO
-            baseline_in_mm = -1  # TODO
+            # NOTE: The parameters below are unknown, setting them all to zero
+            #       (which might be better compatible with parsers than setting
+            #        them to NaN).
+            left_fx = 0
+            left_fy = 0
+            left_cx = 0
+            left_cy = 0
+            right_fx = 0
+            right_fy = 0
+            right_cx = 0
+            right_cy = 0
+            baseline_in_mm = 0
             
             png_reader = png.Reader(os.path.join(output_dataset_path, 'im0.png'))
             png_data = png_reader.read()
@@ -134,8 +136,8 @@ class HCI2016(Benchmark):
     def CreateSubmission(self, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
-        # TODO: Support confidence, code, and publication submission
-        # From the README:
+        # NOTE: This benchmark would also support confidence, code, and
+        #       publication submission. From the README:
         # FILE STRUCTURE:
         # your_algo_name/disp_maps/geometry_00.pfm
         # your_algo_name/runtimes/geometry_00.txt

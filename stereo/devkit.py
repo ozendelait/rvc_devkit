@@ -583,7 +583,7 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
                                    benchmarks)
     else:
         # Let the user choose an action.
-        # TODO: Offer changing options (e.g., download different resolution for Middlebury)?
+        # NOTE: Offer changing options (e.g., download different resolution for Middlebury)?
         print('Please choose an action by entering its number. The action list includes creating submission archives for all methods with complete result sets. If a method is missing, make sure that all required result files for this method exist.')
         
         actions = []
@@ -638,7 +638,7 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
             # Download / convert the datasets.
             chosen_format = action[1]
             datasets_dir_path = format_info[chosen_format]['datasets_dir']
-            # TODO: It would be more efficient to use existing downloaded files
+            # NOTE: It would be more efficient to use existing downloaded files
             #       as source files for the conversion in case the required
             #       conversions are implemented (and the same options are
             #       requested).
