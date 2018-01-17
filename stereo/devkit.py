@@ -112,9 +112,9 @@ def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
     # Create directories.
     MakeDirsExistOk(archive_dir_path)
     MakeCleanDirectory(unpack_dir_path)
-    MakeDirsExistOk(metadata_dir_path)
-    MakeDirsExistOk(training_dir_path)  
-    MakeDirsExistOk(test_dir_path)  
+    MakeCleanDirectory(metadata_dir_path)
+    MakeCleanDirectory(training_dir_path)
+    MakeCleanDirectory(test_dir_path)
     
     # Download and convert all benchmark datasets.
     for (index, benchmark) in enumerate(benchmarks):
@@ -167,6 +167,7 @@ def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
                 dataset_format = src_formats[dataset_format]
             
             # Perform the conversions.
+            MakeCleanDirectory(conversion_dir_path)
             src_training_dir_path = os.path.join(conversion_dir_path, '0', 'training')
             src_test_dir_path = os.path.join(conversion_dir_path, '0', 'test')
             MakeDirsExistOk(src_training_dir_path)
@@ -348,6 +349,7 @@ def CreateSubmissionArchives(chosen_format, dataset_formats, method,
                     raise Exception('No conversion path to a format with the ability to create a submission archive found')
             
             # Perform the conversions.
+            MakeCleanDirectory(conversion_dir_path)
             src_training_dir_path = training_dir_path
             src_test_dir_path = test_dir_path
             
