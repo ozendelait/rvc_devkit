@@ -154,7 +154,7 @@ def download_eth3d(args):
         archives_path, training_path)
     download_and_extract_7z(
         "https://www.eth3d.net/data/multi_view_test_dslr_undistorted.7z",
-        archives_path, training_path)
+        archives_path, test_path)
 
     if args.format == "Middlebury":
         for dataset in os.listdir(training_path):
@@ -206,13 +206,10 @@ def convert_middlebury_to_eth3d(middlebury_path, eth3d_path):
 
 def download_middlebury(args):
     archives_path = os.path.join(args.path, "dataset_Middlebury/archives")
-    training_path = os.path.join(
-        args.path, "dataset_Middlebury/format_Middlebury/training")
     test_path = os.path.join(
         args.path, "dataset_Middlebury/format_Middlebury/test")
 
     mkdir_if_not_exists(archives_path)
-    mkdir_if_not_exists(training_path)
     mkdir_if_not_exists(test_path)
 
     download_and_extract_zip(
@@ -245,8 +242,11 @@ def download_middlebury(args):
 
 def submit_eth3d(args):
     submission_path = os.path.join(args.path, "dataset_ETH3D/submission")
+    high_res_multi_view_path = os.path.join(
+        submission_path, "high_res_multi_view")
 
     mkdir_if_not_exists(submission_path)
+    mkdir_if_not_exists(high_res_multi_view_path)
 
     for dataset_type in ("training", "test"):
         path = os.path.join(args.path,
@@ -258,15 +258,18 @@ def submit_eth3d(args):
             if ".txt" and ".ply" in result_file_exts:
                 for result_path in result_paths:
                     shutil.copyfile(result_path, os.path.join(
-                        submission_path, os.path.basename(result_path)))
+                        high_res_multi_view_path,
+                        os.path.basename(result_path)))
             else:
-                print("Warning: Imcomplete submission for dataset {} - "
+                print("Warning: Incomplete submission for dataset {} - "
                       "expected files {}.txt and {}.ply".format(
                           dataset_name, dataset_name, dataset_name))
 
     subprocess.call(["7za", "a", "-t7z", "high_res_multi_view.7z",
-                     "*.txt", "*.ply"], cwd=submission_path,
+                     "high_res_multi_view"], cwd=submission_path,
                      stdout=open(os.devnull, 'w'))
+
+    shutil.rmtree(high_res_multi_view_path)
 
     print("ETH3D submission files at", submission_path)
     print(" => This .7z archive must be uploaded to https://www.eth3d.net/")
