@@ -6,6 +6,7 @@ import glob
 import zipfile
 import argparse
 import shutil
+import platform
 import subprocess
 import colmap_util
 import numpy as np
@@ -93,8 +94,23 @@ def extract_zip(file_path, unzip_dir_path):
     zip_ref.close()
 
 
+def run_7z(command, *args, **kwargs):
+    try:
+        subprocess.call(["7z"] + command, *args, **kwargs)
+    except:
+        if platform.system() == "Windows":
+            try:
+                subprocess.call(
+                    ["C:/Progam Files/7-Zip/7z.exe"] + command, *args, **kwargs)
+            except:
+                pass
+            else:
+                return
+        print("Error: 7zip not found in system path")
+
+
 def extract_7z(file_path, target_dir_path):
-    subprocess.call(["7z", "x", "-o" + target_dir_path, "-aos", file_path])
+    run_7z(["x", "-o" + target_dir_path, "-aos", file_path])
 
 
 def zip_directory(archive_base_path, root_dir_path):
@@ -222,14 +238,13 @@ def submit_eth3d(args):
                         "expected files {}.txt and {}.ply".format(
                             dataset_name, dataset_name, dataset_name))
 
-        subprocess.call(["7za", "a", "-t7z", data_name + ".7z",
-                        data_name], cwd=submission_path,
-                        stdout=open(os.devnull, 'w'))
+        run_7z(["a", "-t7z", data_name + ".7z",
+                data_name], cwd=submission_path, stdout=open(os.devnull, 'w'))
 
         shutil.rmtree(data_path)
 
-        print("ETH3D submission files at", submission_path)
-        print(" => This .7z archive must be uploaded to https://www.eth3d.net/")
+    print("ETH3D submission files at", submission_path)
+    print(" => This .7z archive must be uploaded to https://www.eth3d.net/")
 
 
 def convert_middlebury_to_eth3d(middlebury_path, eth3d_path):
@@ -304,6 +319,9 @@ def download_middlebury(args):
 
 
 def submit_middlebury(args):
+    print_heading(
+        "Submitting Middlebury dataset in {} format".format(args.format))
+
     submission_path = os.path.join(args.path, "dataset_Middlebury/submission")
 
     mkdir_if_not_exists(submission_path)
