@@ -38,6 +38,12 @@ def mkdir_if_not_exists(path):
         os.makedirs(path)
 
 
+def print_heading(text):
+    print(len(text) * "=")
+    print(text)
+    print(len(text) * "=")
+
+
 # In part adapted from: https://stackoverflow.com/questions/22676
 def download_file(url, dest_dir_path):
     file_name = url.split('/')[-1]
@@ -105,20 +111,33 @@ def download_and_extract_7z(url, archive_dir_path, unzip_dir_path):
     extract_7z(archive_path, unzip_dir_path)
 
 
+def _convert_eth3d_to_middlebury_image_name(image_path):
+    image_name = os.path.basename(image_path)
+    if "rig_cam" in image_path:
+        base_image_name, image_ext = os.path.splitext(image_name)
+        rig_name_idx = image_path.index("rig_cam")
+        rig_name = image_path[rig_name_idx:rig_name_idx+8]
+        image_name = base_image_name + "_" + rig_name + image_ext
+    return image_name
+
+
 def convert_eth3d_to_middlebury(eth3d_path, middlebury_path):
     mkdir_if_not_exists(middlebury_path)
 
     dataset = os.path.basename(middlebury_path)
 
-    for image_path in glob.glob(os.path.join(eth3d_path, "*/*/*.JPG")):
+    for image_path in glob.glob(os.path.join(eth3d_path, "*/*/*.*")):
+        if os.path.splitext(image_path)[1] not in (".JPG", ".png"):
+            continue
+        middlebury_image_name = \
+            _convert_eth3d_to_middlebury_image_name(image_path)
         shutil.copyfile(
-            image_path,
-            os.path.join(middlebury_path, os.path.basename(image_path)))
+            image_path, os.path.join(middlebury_path, middlebury_image_name))
 
     cameras = colmap_util.read_cameras_text(
-        os.path.join(eth3d_path, "dslr_calibration_undistorted/cameras.txt"))
+        glob.glob(os.path.join(eth3d_path, "*/cameras.txt"))[0])
     images = colmap_util.read_images_text(
-        os.path.join(eth3d_path, "dslr_calibration_undistorted/images.txt"))
+        glob.glob(os.path.join(eth3d_path, "*/images.txt"))[0])
 
     with open(os.path.join(middlebury_path, dataset + "_par.txt"), "w") as fid:
         fid.write("{}\n".format(len(images)))
@@ -131,44 +150,86 @@ def convert_eth3d_to_middlebury(eth3d_path, middlebury_path):
             K[1, 2] = camera.params[3]
             R = colmap_util.qvec2rotmat(image.qvec)
             T = image.tvec
-            fid.write("{} ".format(os.path.basename(image.name)))
+            fid.write("{} ".format(
+                _convert_eth3d_to_middlebury_image_name(image.name)))
             fid.write(" ".join(map(str, K.ravel().tolist()
                                         + R.ravel().tolist()
                                         + T.ravel().tolist())))
             fid.write("\n")
 
 
-def download_eth3d(args):
-    archives_path = os.path.join(args.path, "dataset_ETH3D/archives")
-    training_path = os.path.join(
-        args.path, "dataset_ETH3D/format_ETH3D/training")
-    test_path = os.path.join(
-        args.path, "dataset_ETH3D/format_ETH3D/test")
-
+def _download_eth3d_datasets(args, url, archives_path, data_path):
     mkdir_if_not_exists(archives_path)
-    mkdir_if_not_exists(training_path)
-    mkdir_if_not_exists(test_path)
+    mkdir_if_not_exists(data_path)
 
-    download_and_extract_7z(
-        "https://www.eth3d.net/data/multi_view_training_dslr_undistorted.7z",
-        archives_path, training_path)
-    download_and_extract_7z(
-        "https://www.eth3d.net/data/multi_view_test_dslr_undistorted.7z",
-        archives_path, test_path)
+    download_and_extract_7z(url, archives_path, data_path)
 
     if args.format == "Middlebury":
-        for dataset in os.listdir(training_path):
+        for dataset in os.listdir(data_path):
             convert_eth3d_to_middlebury(
-                os.path.join(training_path, dataset),
-                os.path.join(
-                    args.path,
-                    "dataset_ETH3D/format_Middlebury/training", dataset))
-        for dataset in os.listdir(test_path):
-            convert_eth3d_to_middlebury(
-                os.path.join(test_path, dataset),
-                os.path.join(
-                    args.path,
-                    "dataset_ETH3D/format_Middlebury/test", dataset))
+                os.path.join(data_path, dataset),
+                os.path.join(data_path.replace(
+                    "format_ETH3D", "format_Middlebury"), dataset))
+
+
+def download_eth3d(args):
+    print_heading("Downloading ETH3D dataset in {} format".format(args.format))
+
+    datasets = {
+        "high_res_multi_view/training":
+          "https://www.eth3d.net/data/multi_view_training_dslr_undistorted.7z",
+        "high_res_multi_view/test":
+          "https://www.eth3d.net/data/multi_view_test_dslr_undistorted.7z",
+        "low_res_many_view/training":
+          "https://www.eth3d.net/data/multi_view_training_rig_undistorted.7z",
+        "low_res_many_view/test":
+          "https://www.eth3d.net/data/multi_view_test_rig_undistorted.7z",
+    }
+
+    archives_path = os.path.join(args.path, "dataset_ETH3D/archives")
+
+    for data_name, url in datasets.items():
+        _download_eth3d_datasets(args, url, archives_path,
+            os.path.join(args.path, "dataset_ETH3D/format_ETH3D", data_name))
+
+
+def submit_eth3d(args):
+    print_heading("Submitting ETH3D dataset in {} format".format(args.format))
+
+    submission_path = os.path.join(args.path, "dataset_ETH3D/submission")
+
+    mkdir_if_not_exists(submission_path)
+
+    for data_name in ("high_res_multi_view", "low_res_many_view"):
+        data_path = os.path.join(submission_path, data_name)
+
+        mkdir_if_not_exists(data_path)
+
+        for dataset_type in ("training", "test"):
+            path = os.path.join(args.path, "dataset_ETH3D",
+                "format_{}".format(args.format), data_name, dataset_type)
+            for dataset_name in sorted(os.listdir(path)):
+                result_paths = glob.glob(os.path.join(
+                    path, dataset_name, "{}.*".format(dataset_name)))
+                result_file_exts = [os.path.splitext(p)[1] for p in result_paths]
+                if ".txt" in result_file_exts and ".ply" in result_file_exts:
+                    for result_path in result_paths:
+                        shutil.copyfile(
+                            result_path, os.path.join(
+                                data_path, os.path.basename(result_path)))
+                else:
+                    print("Warning: Incomplete submission for dataset {} - "
+                        "expected files {}.txt and {}.ply".format(
+                            dataset_name, dataset_name, dataset_name))
+
+        subprocess.call(["7za", "a", "-t7z", data_name + ".7z",
+                        data_name], cwd=submission_path,
+                        stdout=open(os.devnull, 'w'))
+
+        shutil.rmtree(data_path)
+
+        print("ETH3D submission files at", submission_path)
+        print(" => This .7z archive must be uploaded to https://www.eth3d.net/")
 
 
 def convert_middlebury_to_eth3d(middlebury_path, eth3d_path):
@@ -205,6 +266,8 @@ def convert_middlebury_to_eth3d(middlebury_path, eth3d_path):
 
 
 def download_middlebury(args):
+    print_heading("Downloading Middlebury dataset in {} format".format(args.format))
+
     archives_path = os.path.join(args.path, "dataset_Middlebury/archives")
     test_path = os.path.join(
         args.path, "dataset_Middlebury/format_Middlebury/test")
@@ -238,41 +301,6 @@ def download_middlebury(args):
                 os.path.join(
                     args.path,
                     "dataset_Middlebury/format_ETH3D/test", dataset))
-
-
-def submit_eth3d(args):
-    submission_path = os.path.join(args.path, "dataset_ETH3D/submission")
-    high_res_multi_view_path = os.path.join(
-        submission_path, "high_res_multi_view")
-
-    mkdir_if_not_exists(submission_path)
-    mkdir_if_not_exists(high_res_multi_view_path)
-
-    for dataset_type in ("training", "test"):
-        path = os.path.join(args.path,
-            "dataset_ETH3D/format_{}".format(args.format), dataset_type)
-        for dataset_name in sorted(os.listdir(path)):
-            result_paths = glob.glob(os.path.join(
-                path, dataset_name, "{}.*".format(dataset_name)))
-            result_file_exts = [os.path.splitext(p)[1] for p in result_paths]
-            if ".txt" and ".ply" in result_file_exts:
-                for result_path in result_paths:
-                    shutil.copyfile(result_path, os.path.join(
-                        high_res_multi_view_path,
-                        os.path.basename(result_path)))
-            else:
-                print("Warning: Incomplete submission for dataset {} - "
-                      "expected files {}.txt and {}.ply".format(
-                          dataset_name, dataset_name, dataset_name))
-
-    subprocess.call(["7za", "a", "-t7z", "high_res_multi_view.7z",
-                     "high_res_multi_view"], cwd=submission_path,
-                     stdout=open(os.devnull, 'w'))
-
-    shutil.rmtree(high_res_multi_view_path)
-
-    print("ETH3D submission files at", submission_path)
-    print(" => This .7z archive must be uploaded to https://www.eth3d.net/")
 
 
 def submit_middlebury(args):
