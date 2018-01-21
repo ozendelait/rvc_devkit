@@ -100,8 +100,8 @@ def run_7z(command, *args, **kwargs):
     except:
         if platform.system() == "Windows":
             try:
-                subprocess.call(
-                    ["C:/Progam Files/7-Zip/7z.exe"] + command, *args, **kwargs)
+                subprocess.call(["C:\\Program Files\\7-Zip\\7z.exe"] + command,
+                                *args, **kwargs)
             except:
                 pass
             else:
@@ -189,7 +189,7 @@ def _download_eth3d_datasets(args, url, archives_path, data_path):
 
 
 def download_eth3d(args):
-    print_heading("Downloading ETH3D dataset in {} format".format(args.format))
+    print_heading("Downloading ETH3D dataset")
 
     datasets = {
         "high_res_multi_view/training":
@@ -210,7 +210,7 @@ def download_eth3d(args):
 
 
 def submit_eth3d(args):
-    print_heading("Submitting ETH3D dataset in {} format".format(args.format))
+    print_heading("Submitting ETH3D dataset")
 
     submission_path = os.path.join(args.path, "dataset_ETH3D/submission")
 
@@ -281,7 +281,7 @@ def convert_middlebury_to_eth3d(middlebury_path, eth3d_path):
 
 
 def download_middlebury(args):
-    print_heading("Downloading Middlebury dataset in {} format".format(args.format))
+    print_heading("Downloading Middlebury dataset")
 
     archives_path = os.path.join(args.path, "dataset_Middlebury/archives")
     test_path = os.path.join(
@@ -319,8 +319,7 @@ def download_middlebury(args):
 
 
 def submit_middlebury(args):
-    print_heading(
-        "Submitting Middlebury dataset in {} format".format(args.format))
+    print_heading("Submitting Middlebury dataset")
 
     submission_path = os.path.join(args.path, "dataset_Middlebury/submission")
 
