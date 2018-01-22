@@ -125,41 +125,16 @@ def ConvertMiddlebury2014PfmToKitti2015Png(src_path, dest_path):
             if math.isinf(value):
                 out_row.append(0)  # invalid value
             else:
-                out_row.append(max(1, int(round(256.0 * value))))
+                converted_value = max(1, int(round(256.0 * value)))
+                if converted_value > 65535:
+                    print('Warning: A disparity value of 256 or larger needed to be clamped in the conversion from PFM to Kitti PNG. File: ' + src_path)
+                    converted_value = 65535
+                out_row.append(converted_value)
         png_disp.append(out_row)
     
     with open(dest_path, 'wb') as dest_png_file:
         png_writer = png.Writer(width=pfm_width, height=pfm_height, bitdepth=16, compression=9, greyscale=True)
         png_writer.write(dest_png_file, png_disp)
-
-
-# Converts a Middlebury .pfm disparity image to a Kitti .png disparity image, while writing
-# only pixels which are in non-occluded regions.
-def ConvertMiddlebury2014PfmToKitti2015PngNoccOnly(src_path, src_mask_path, dest_path):
-    mask_reader = png.Reader(src_mask_path)
-    mask_data = mask_reader.read()
-    mask_rows = list(mask_data[2])
-    
-    (pfm_width, pfm_height, pfm_pixels) = ReadMiddlebury2014PfmFile(src_path)
-    
-    png_disp = []  # list of rows
-    for y in range(pfm_height - 1, -1, -1):  # iterate in reverse order according to pfm format
-        in_row = pfm_pixels[y * pfm_width : (y + 1) * pfm_width]
-        mask_row = mask_rows[pfm_height - 1 - y]
-        out_row = []
-        for x in range(0, len(in_row)):
-            value = in_row[x]
-            if math.isinf(value) or mask_row[x] != 255:
-                out_row.append(0)  # invalid value
-            else:
-                out_row.append(max(1, int(round(256.0 * value))))
-        png_disp.append(out_row)
-    
-    with open(dest_path, 'wb') as dest_png_file:
-        png_writer = png.Writer(width=pfm_width, height=pfm_height, bitdepth=16, compression=9, greyscale=True)
-        png_writer.write(dest_png_file, png_disp)
-    
-    mask_reader.close()
 
 
 # Converts a Kitti .png disparity image to a Middlebury .pfm disparity image.
