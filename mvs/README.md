@@ -2,7 +2,7 @@
 
 ## Requirements ##
 
-You must install the 7zip path into the system path. For example, under
+You must install the 7zip program into the system path. For example, under
 Debian/Ubuntu you can run ``sudo apt install p7zip-full``, under Mac you can
 run ``brew install p7zip``, and under Windows you must download from
 http://www.7-zip.org/ and install it manually.
@@ -14,17 +14,19 @@ You can download the Middlebury and ETH3D datasets using the command:
 
     python mvs/mvs_devkit.py --path PATH --action download
 
-where *PATH* contains the downloaded datasets. If you only want to download one
-dataset, you can specify its name explicitly, e.g.:
+where *PATH* will contain the downloaded datasets. If you only want to download
+one dataset, you can specify its name explicitly, e.g.:
 
     python mvs/mvs_devkit.py --path PATH --action download --dataset ETH3D
 
-You can convert both the Middlebury to the ETH3D format and vice versa using:
+The above commands will download the datasets in their respective format.
+You can download and convert both to a single format using:
 
     python mvs/mvs_devkit.py --path PATH --action download --format Middlebury
 
-For example, if you downloaded the Middlebury format in the ETH3D format, you
-will find the data in the *PATH/dataset_Middlebury/format_ETH3D* folder.
+with Middlebury or ETH3D as format. For example, if you downloaded the
+Middlebury dataset in the ETH3D format, you will find the data in the
+*PATH/dataset_Middlebury/format_ETH3D* folder.
 
 
 ## Dataset Formats ##
