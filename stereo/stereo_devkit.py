@@ -8,7 +8,6 @@ from benchmark_hci import *
 from benchmark_kitti2015 import *
 from benchmark_middlebury2014 import *
 from dataset_format import *
-from dataset_format_kitti2015 import *
 from dataset_format_middlebury2014 import *
 from devkit import *
 
@@ -19,7 +18,7 @@ if __name__ == '__main__':
     benchmarks = [Middlebury2014(), Kitti2015(), ETH3D2017(), HCI2016()]
     
     # Define the list of dataset formats which are supported.
-    dataset_formats = [Middlebury2014Format(), Kitti2015Format()]
+    dataset_formats = [Middlebury2014Format()]
     
     # Call the generic devkit main function.
     DevkitMain('Stereo', benchmarks, dataset_formats)

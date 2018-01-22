@@ -8,9 +8,8 @@ arguments:
 python stereo_devkit.py
 ```
 On Windows, one may double-click stereo_devkit.py if Python is installed.
-The script will ask about a few settings (including the dataset format to use)
-and then download the datasets into a folder in the current working directory.
-The folder layout is as follows:
+The script may ask about a few settings and then download the datasets into a
+folder in the current working directory. The folder layout is as follows:
 
 ```
 - datasets_<format_name>
@@ -20,18 +19,17 @@ The folder layout is as follows:
 ```
 
 If the optional program argument `--keep_archives` is given, the downloaded
-benchmark archive files will not be deleted after the datasets are extracted
-and converted. This is for example useful to avoid re-downloading the archives
-if you would like to obtain the datasets in several formats.
+archive files will not be deleted after the datasets are extracted
+and converted.
 
 
-## Middlebury 2014 Stereo Format ##
+## Dataset Format ##
 
 #### Input ####
 
-For the [Middlebury 2014 Stereo format](http://vision.middlebury.edu/stereo/data/scenes2014/),
-each subfolder within the training and
-test folders contains a dataset (i.e., a stereo pair). The dataset names are
+The [Middlebury 2014 Stereo format](http://vision.middlebury.edu/stereo/data/scenes2014/)
+is used as common format for all datasets. Each subfolder within the training
+and test folders contains a dataset (i.e., a stereo pair). The dataset names are
 prefixed by the dataset's benchmark name. Each dataset contains the following
 files in Middlebury 2014 Stereo format:
 
@@ -111,82 +109,14 @@ using the command line interface is described below in the respective section.
 In general, the script looks for all folders starting with alg-. They must
 contain a file named either "run" or "run.py", which is executed by the script
 for all datasets. If the file is a Python script, the same interpreter version
-used for running the devkit script is used. The arguments passed to the script
-depend on the dataset format. For the Middlebury 2014 Stereo format, the
-following arguments are passed to the script:
+used for running the devkit script is used. The following arguments are passed
+to the script:
 
 1. The method name to use for the result.
 2. The path to the left image, im0.png.
 3. The path to the right image, im1.png.
 4. The maximum disparity, ndisp, read from the calib.txt file.
 5. The directory to output the result files to.
-6. Optional additional arguments, if given.
-
-
-## Kitti 2015 Stereo Format ##
-
-#### Input ####
-
-For the [Kitti 2015 Stereo format](http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo),
-the training and test folders contain the following folders having files for all
-datasets:
-
-```
-disp_occ_0  (ground truth, for training datasets only)
-image_2
-image_3
-```
-
-The filenames are equal to the dataset names (the file extensions may differ).
-The dataset names are prefixed by the dataset's benchmark name.
-
-In the following folders, extra files are present for certain benchmarks in the
-respective benchmarks' formats. Using these files is optional:
-
-```
-cameras                  : For ETH3D.
-images                   : For ETH3D.
-
-disp_noc_0               : For ETH3D, Kitti2015, Middlebury2014 (training datasets only).
-
-gt_sample_count          : For HCI (training datasets only).
-gt_uncertainty           : For HCI (training datasets only).
-mask                     : For HCI.
-mask_dynamic_objects     : For HCI (training datasets only).
-mask_eval                : For HCI (training datasets only).
-
-obj_map                  : For Kitti2015 (training datasets only).
-```
-
-#### Output ####
-
-Result files for a stereo method must be placed in folders named as follows,
-which must be placed within the training / test directories:
-
-```
-NAME_disp_0
-NAME_time
-```
-
-Here, NAME must be the name of the submitted method.
-
-The folder NAME_disp_0 must contain the resulting disparity images in the same
-format as the provided ground truth.
-
-For each dataset, the folder NAME_time must contain a text file dataset_name.txt
-which must contain the time in seconds to compute the disparity image. It is
-stored as a floating point value in ASCII encoding. The file must contain only
-that number.
-
-#### Running ####
-
-For this dataset format, the following parameters are passed to the run file:
-
-1. The method name to use for the result.
-2. The path to the dataset folder (containing the image_2, image_3, etc. folders).
-3. The name of the dataset (i.e., the image filename without the extension .png).
-4. The path to the directory NAME_disp_0 to output the disparity image to.
-5. The path to the directory NAME_time to output the runtime to.
 6. Optional additional arguments, if given.
 
 
@@ -222,32 +152,25 @@ available:
 
 ```
 # Download the datasets:
-# - format indicates the dataset format to convert all datasets to and must be
-#   either middlebury2014 or kitti2015
 # - The resolution of the Middlebury datasets can be chosen as [f]ull, [h]alf,
 #   or [q]uarter
-python stereo_devkit.py obtain <format> --middlebury_resolution {f,F,h,H,q,Q}
+python stereo_devkit.py obtain --middlebury_resolution {f,F,h,H,q,Q}
 
 # Run an algorithm:
-# - format must only be given if the datasets were downloaded in more than one
-#   format. In this case, it must indicate the dataset format to run the method
-#   on and must be either middlebury2014 or kitti2015
 # - runfile_path is the path to the executable file or Python script that will
-#   be called for each dataset, as described in the section "Running" for the
-#   Middlebury 2014 format above
+#   be called for each dataset, as described in the section "Running" above
 # - method_name is the method name to use in the result files, which will be
 #   passed to the runfile as first parameter
 # - --training is an optional flag which will run the algorithm on the training
 #   datasets only
 # - additional_arguments are optional additional arguments that will be passed
 #   to the run file after the regular arguments.
-python stereo_devkit.py run [format] <runfile_path> <method_name> [--training] [additional_arguments]
+python stereo_devkit.py run <runfile_path> <method_name> [--training] [additional_arguments]
 
 # Create archives for result submission:
-# - format behaves the same as for running an algorithm, see above.
 # - method_name is the method to generate the submission archives for, as
 #   specified when running the algorithm
 # - --training is an optional flag which will create a training-only submission
 #   (however, this may only be supported by a subset of benchmarks)
-python stereo_devkit.py submit [format] <method_name> [--training]
+python stereo_devkit.py submit <method_name> [--training]
 ```
