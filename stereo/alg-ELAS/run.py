@@ -38,7 +38,9 @@ def ConvertPngToPgm(in_path, out_path):
             r = png_pixels[i + 0]
             g = png_pixels[i + 1]
             b = png_pixels[i + 2]
-            gray_pixels.append(round(0.299 * r + 0.587 * g + 0.114 * b))
+            # NOTE: One might want to use round() instead of int() here. int()
+            #       is used for consistency with the Middlebury devkit.
+            gray_pixels.append(int(0.299 * r + 0.587 * g + 0.114 * b))
         png_pixels = gray_pixels
     
     width = png_data[0]
