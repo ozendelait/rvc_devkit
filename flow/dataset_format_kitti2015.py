@@ -50,36 +50,52 @@ class Kitti2015Format(DatasetFormat):
     
     def CanConvertInputToFormat(self, dataset_format):
         return isinstance(dataset_format, dataset_format_middlebury.MiddleburyFormat)
-    
+
+
+    def ConvertSeq(self, in_dir, out_dir, seq, in_ext, out_ext):
+        # in_dir contains all sequences as files SEQ_{xx}
+        # out_dir contains subdirs SEQ.
+        out_dir_seq = os.path.join(out_dir, seq)
+        MakeDirsExistOk(out_dir_seq)
+        files_to_copy = [f for f in sorted(os.listdir(in_dir))
+                         if (f.endswith(in_ext) and f.startswith(seq))]
+        files_to_copy = [os.path.join(in_dir, f) for f in files_to_copy]
+        files_to_copy = [f for f in files_to_copy if os.path.isfile(f)]
+
+        if in_ext == '.png' and out_ext == '.png':
+            copy_ = shutil.copy2
+        elif in_ext == '.png' and out_ext == '.flo':
+            copy_ = ConvertKittiPngToMiddleburyFlo
+
+        for file_in in files_to_copy:
+            frameno = file_in[file_in.rfind('_')+1:file_in.rfind('.')]
+            frameno = int(frameno)
+
+            file_out = os.path.join(out_dir_seq, 'frame_{0:04d}'.format(frameno) + out_ext)
+            copy_(file_in, file_out)
+
     
     def ConvertInputToFormat(self, dataset_format, dataset_name, in_path, out_path):
         # Input format:
         # image_2/SEQUENCE_{xx}.png
+        # [If existing: flow_occ/SEQUENCE_{xx}.png]
         #
         # Output format:
-        # SEQUENCE/frame_{xxxx}.png
+        # images/SEQUENCE/frame_{xxxx}.png
+        # [flow/SEQUENCE/frame_{xxxx}.flo]
         #
+        assert isinstance(dataset_format, dataset_format_middlebury.MiddleburyFormat)
 
         # Convert images
-        # TODO: Do we need to convert the flow too?
-        out_dataset_path = os.path.join(out_path, dataset_name)
-        MakeDirsExistOk(flow_dir_path)
-
         in_image_path = os.path.join(in_path, 'image_2')
-        dataset_files = [f for f in os.path.listdir(in_image_path)
-                         if f.startswith(datset_name) and f.endswith('.png')
-                         and os.path.isfile(os.path.join(in_image_path,f))]
+        out_image_path = os.path.join(out_path, 'images')
+        self.ConvertSeq(in_image_path, out_image_path, dataset_name, '.png', '.png')
 
-        for fname_in in dataset_files:
-            frame_id = fname_in[:fname_in.rfind('.png')].split('_')[-1]
-            frame_id = int(frame_id)
-
-            fname_out = os.path.join(out_dataset_path, 'frame_{0:04d}.png'.format(frame))
-
-
-
-        # TODO
-        raise NotImplementedError()
+        # Convert flow
+        in_flow_path = os.path.join(in_path, 'flow_occ')
+        if os.path.isdir(in_flow_path):
+            out_flow_path = os.path.join(out_path, 'flow')
+            self.ConvertSeq(in_flow_path, out_flow_path, dataset_name, '.png', '.flo')
 
 
     def CanConvertOutputToFormat(self, dataset_format):
@@ -87,11 +103,9 @@ class Kitti2015Format(DatasetFormat):
     
     
     def ConvertOutputToFormat(self, dataset_format, method_name, dataset_name, in_path, out_path):
-        # TODO
-        # Convert to Middlebury flow format.
-        out_dataset_path = os.path.join(out_path, dataset_name)
-        MakeDirsExistOk(out_dataset_path)
+        assert isinstance(dataset_format, dataset_format_middlebury.MiddleburyFormat)
 
-        in_disp_path = os.path.join(in_path, method_name + '_flow', dataset_name + '.png')
-        out_pfm_path = os.path.join(out_dataset_path, 'disp0' + method_name + '.pfm')
-        ConvertKitti2015PngToMiddlebury2014Pfm(in_disp_path, out_pfm_path)
+        in_flow_path = os.path.join(in_path, method_name + '_flow_occ')
+        out_flow_path = os.path.join(out_path, method_name + '_flow')
+        MakeDirsExistOk(out_flow_path)
+        self.ConvertSeq(in_flow_path, out_flow_path, dataset_name, '.png', '.flo')
