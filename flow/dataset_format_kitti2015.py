@@ -53,6 +53,31 @@ class Kitti2015Format(DatasetFormat):
     
     
     def ConvertInputToFormat(self, dataset_format, dataset_name, in_path, out_path):
+        # Input format:
+        # image_2/SEQUENCE_{xx}.png
+        #
+        # Output format:
+        # SEQUENCE/frame_{xxxx}.png
+        #
+
+        # Convert images
+        # TODO: Do we need to convert the flow too?
+        out_dataset_path = os.path.join(out_path, dataset_name)
+        MakeDirsExistOk(flow_dir_path)
+
+        in_image_path = os.path.join(in_path, 'image_2')
+        dataset_files = [f for f in os.path.listdir(in_image_path)
+                         if f.startswith(datset_name) and f.endswith('.png')
+                         and os.path.isfile(os.path.join(in_image_path,f))]
+
+        for fname_in in dataset_files:
+            frame_id = fname_in[:fname_in.rfind('.png')].split('_')[-1]
+            frame_id = int(frame_id)
+
+            fname_out = os.path.join(out_dataset_path, 'frame_{0:04d}.png'.format(frame))
+
+
+
         # TODO
         raise NotImplementedError()
 
