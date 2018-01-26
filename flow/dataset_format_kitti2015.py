@@ -4,7 +4,7 @@ from util import *
 from util_flow import *
 
 
-# Kitti 2015 Flow dataset format
+# Kitti 2015 flow dataset format
 class Kitti2015Format(DatasetFormat):
     
     def Name(self):
