@@ -4,7 +4,7 @@ from util import *
 from util_flow import *
 
 
-# Kitti 2015 Stereo dataset format
+# Kitti 2015 Flow dataset format
 class Kitti2015Format(DatasetFormat):
     
     def Name(self):
@@ -20,29 +20,35 @@ class Kitti2015Format(DatasetFormat):
     
     
     def ListDatasets(self, dataset_folder_path):
-        return [dataset[:dataset.rfind('.')] for dataset
+        return [dataset[:dataset.rfind('_')] for dataset
                 in os.listdir(os.path.join(dataset_folder_path, 'image_2'))
                 if os.path.isfile(os.path.join(dataset_folder_path, 'image_2', dataset))]
     
     
     def ListMethods(self, dataset_folder_path, dataset_name):
+        # For existing methods, we expect flow files in
+        # dataset_folder_path/METHOD_flow_occ/dataset_name_??.png
+        #
         methods = []
-        folder_list = os.listdir(dataset_folder_path)
+        folder_list = [folder for folder in os.listdir(dataset_folder_path)
+                       if folder.endswith('_flow_occ')
+                       and os.path.isdir(os.path.join(dataset_folder_path, folder))]
+
         for folder in folder_list:
             folder_path = os.path.join(dataset_folder_path, folder)
 
-            # Check whether the corresponding flow file is in the given folder
-            if (os.path.isdir(folder_path) and
-                folder.endswith('_flow') and
-                os.path.isfile(os.path.join(folder_path, dataset_name + '.png'))):
-                method_name = folder[:-len('_flow')]
+            # Check if any flow files exist corresponding to given dataset
+            flow_files = [f for f in os.listdir(folder_path)
+                          if f.endswith('.png') and f[:rfind('_')]==dataset_name]
+            if len(flow_files) > 0:
+                method_name = folder[:folder.lfind('_flow_occ')]
                 methods.append(method_name)
-       
+
         return methods
     
     
     def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name):
-        flow_dir_path = os.path.join(dataset_folder_path, method_name + '_flow')
+        flow_dir_path = os.path.join(dataset_folder_path, method_name + '_flow_occ')
         MakeDirsExistOk(flow_dir_path)
         # We do not have any timings -- time always has to be entered manually.
         return [dataset_folder_path, dataset_name, flow_dir_path]
