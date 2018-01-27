@@ -53,14 +53,31 @@ class Kitti2015(Benchmark):
     def ConvertToKittiFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         # Convert the downloaded file to KITTI format
         # (i.e., just copy.)
-        shutil.move(os.path.join(unpack_dir_path, 'training', 'image_2'),
-                    training_dir_path)
-        shutil.move(os.path.join(unpack_dir_path, 'training', 'flow_occ'),
-                    training_dir_path)
-        shutil.move(os.path.join(unpack_dir_path, 'testing', 'image_2'),
-                    test_dir_path)
+        indir_training_images = os.path.join(unpack_dir_path, 'training', 'image_2')
+        outdir_training_images = os.path.join(training_dir_path, 'image_2')
+        MakeDirsExistOk(outdir_training_images)
+        for f in os.listdir(indir_training_images):
+            shutil.move(os.path.join(indir_training_images, f),
+                        os.path.join(outdir_training_images, self.Prefix() + f))
 
-    def ConvertToKittiFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
+        indir_training_flow = os.path.join(unpack_dir_path, 'training', 'flow_occ')
+        outdir_training_flow = os.path.join(training_dir_path, 'flow_occ')
+        MakeDirsExistOk(outdir_training_flow)
+        for f in os.listdir(indir_training_flow):
+            shutil.move(os.path.join(indir_training_flow, f),
+                        os.path.join(outdir_training_flow, self.Prefix() + f))
+
+        indir_test_images = os.path.join(unpack_dir_path, 'testing', 'image_2')
+        outdir_test_images = os.path.join(test_dir_path, 'image_2')
+        MakeDirsExistOk(outdir_test_images)
+        for f in os.listdir(indir_test_images):
+            shutil.move(os.path.join(indir_test_images, f),
+                        os.path.join(outdir_test_images, self.Prefix() + f))
+
+        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'testing'))
+
+    def ConvertToMiddleburyFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         # Convert downloaded files to Middlebury format
         src_training_path = os.path.join(unpack_dir_path, 'training')
         src_testing_path = os.path.join(unpack_dir_path, 'testing')
@@ -102,10 +119,25 @@ class Kitti2015(Benchmark):
                                                    os.path.join(output_dataset_flow_path, outname))
 
 
-           
             # Delete original folder
             shutil.rmtree(input_folder_path)
     
+
+
+    def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
+        if isinstance(dataset_format, MiddleburyFormat):
+            self.ConvertToMiddleburyFormat(
+                unpack_dir_path,
+                metadata_dict,
+                training_dir_path,
+                test_dir_path)
+
+        elif isinstance(dataset_format, Kitti2015Format):
+            self.ConvertToKittiFormat(
+                unpack_dir_path,
+                metadata_dict,
+                training_dir_path,
+                test_dir_path)
     
     def CanCreateSubmissionFromFormat(self, dataset_format):
         return isinstance(dataset_format, MiddleburyFormat) or isinstance(dataset_format, Kitti2015Format)
