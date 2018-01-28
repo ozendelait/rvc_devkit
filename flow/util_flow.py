@@ -121,3 +121,14 @@ def ConvertMiddleburyFloToKittiPng(src_path, dest_path):
 def ConvertKittiPngToMiddleburyFlo(src_path, dest_path):
     width, height, u, v, mask = ReadKittiPngFile(src_path)
     WriteMiddleburyFloFile(dest_path, width, height, u, v, mask=mask)
+
+
+def ParseFilenameKitti(filename):
+    # Parse kitti filename (seq_frameno.xx),
+    # return seq, frameno, ext.
+    # Be aware that seq might contain the dataset name (if contained as prefix)
+    ext = filename[filename.rfind('.'):]
+    frameno = filename[filename.rfind('_')+1:filename.rfind('.')]
+    frameno = int(frameno)
+    seq = filename[:filename.rfind('_')]
+    return seq, frameno, ext

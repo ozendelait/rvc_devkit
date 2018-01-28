@@ -157,29 +157,39 @@ class Sintel(Benchmark):
         # Create output directory
         flow_out_path = os.path.join(pack_dir_path, 'flow')
         MakeDirsExistOk(flow_out_path)
-        
+
         # Only test dataset submission is supported.
         for (benchmark_and_dataset_name, original_dataset_name) in test_datasets:
+            # Format of benchmark_and_dataset_name is Sintel_pas_seq.
+            pas, seq = original_dataset_name.split('_')[:2]
+
+            flow_dataset_path = os.path.join(flow_out_path, pas, seq)
+
             if isinstance(dataset_format, Kitti2015Format):
-                # Convert from KITTI (i.e., just copy to the right location and
-                # remove dataset prefix.
-                src_png_path = os.path.join(
-                    test_dir_path, method + '_flow_occ', benchmark_and_dataset_name + '_10.png')
-                dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_10.png')
-                shutils.copy2(src_png_path, dest_png_path)
+                dir_in = os.path.join(test_dir_path,
+                                      method + '_flow_occ')
+
+                files = [f for f in os.listdir(dir_in)
+                         if f.endswith('.png') and
+                         f.startswith(benchmark_and_dataset_name)]
+
+                for f in files:
+                    seq, frameno, ext = ParseFilenameKitti(f)
+                    outfile = os.path.join(flow_dataset_path, 'frame_{0:04d}.flo'.format(frameno+1))
+                    ConvertKittiPngToMiddleburyFlo(os.path.join(dir_in, f), outfile)
 
             elif isinstance(dataset_format, MiddleburyFormat):
-                # Convert from Middlebury directory layout
-                src_flo_path = os.path.join(
-                    test_dir_path, method + '_flow', benchmark_and_dataset_name,
-                    'frame_0010.flo')
-                
-                dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_10.png')
-                ConvertMiddleburyFloToKittyPng(src_flo_path, dest_png_path)
-       
+                dir_in = os.path.join(test_dir_path, method+'_flow', benchmark_and_dataset_name)
+
+                for f in [f for f in os.listdir(dir_in) if f.endswith('.flo')]:
+                    shutil.copy2(os.path.join(dir_in, f), os.path.join(flow_dataset_path, f))
+
+        # TODO: Create bundler file
+        archive_filename = None
+
         # Create the archive and clean up.
-        archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
-        DeleteFolderContents(pack_dir_path)
+        # archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
+        # DeleteFolderContents(pack_dir_path)
         
-        return archive_filename
+        # return archive_filename
     
