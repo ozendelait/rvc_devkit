@@ -49,11 +49,7 @@ images.txt               : For ETH3D.
 
 mask0nocc.png            : For ETH3D, Kitti2015, Middlebury2014 (training datasets only).
 
-gt_sample_count.pfm      : For HCI (training datasets only).
-gt_uncertainty.pfm       : For HCI (training datasets only).
-mask.png                 : For HCI.
-mask_dynamic_objects.png : For HCI (training datasets only).
-mask_eval.png            : For HCI (training datasets only).
+disp0Unc.pfm             : For HCI (training datasets only).
 
 obj_map.png              : For Kitti2015 (training datasets only).
 ```
@@ -137,7 +133,7 @@ exist.
 The resulting archives must be submitted to the respective benchmarks:
 TODO: How to mark the submissions as belonging to ROB?
 * [ETH3D2017](https://www.eth3d.net/login)
-* [HCI2016](http://hci-benchmark.org/accounts/login?next=/challenges/submissions/create/stereo_geometry&hc=stereo_geometry)
+* [HD1K2018](http://hci-benchmark.org/accounts/login?next=/challenges/submissions/create/stereo_geometry&hc=stereo_geometry)
 * [Kitti2015](http://www.cvlibs.net/datasets/kitti/user_login.php)
 * [Middlebury2014](http://vision.middlebury.edu/stereo/submit3/upload.html)
 
@@ -152,6 +148,8 @@ available:
 
 ```
 # Download the datasets:
+# - The resolution of the Middlebury datasets can be chosen as [f]ull, [h]alf,
+#   or [q]uarter
 # - The resolution of the Middlebury datasets can be chosen as [f]ull, [h]alf,
 #   or [q]uarter
 python stereo_devkit.py obtain --middlebury_resolution {f,F,h,H,q,Q}
