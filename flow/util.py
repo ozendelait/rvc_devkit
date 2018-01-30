@@ -58,10 +58,15 @@ def DeleteFolderContents(folder_path):
 # Creates the given directory, respectively deletes all content of the directory
 # in case it already exists.
 def MakeCleanDirectory(folder_path):
-    if os.path.isdir(folder_path):
-        DeleteFolderContents(folder_path)
-    else:
-        MakeDirsExistOk(folder_path)
+    # TODO: Re-enable
+
+    # if os.path.isdir(folder_path):
+    #     DeleteFolderContents(folder_path)
+    # else:
+    #     MakeDirsExistOk(folder_path)
+
+    # TODO: Delete
+    MakeDirsExistOk(folder_path)
 
 
 # Downloads the given URL to a file in the given directory. Returns the
@@ -116,9 +121,17 @@ def DownloadFile(url, dest_dir_path):
 
 
 # Unzips the given zip file into the given directory.
-def UnzipFile(file_path, unzip_dir_path):
+def UnzipFile(file_path, unzip_dir_path, overwrite=True):
     zip_ref = zipfile.ZipFile(open(file_path, 'rb'))
-    zip_ref.extractall(unzip_dir_path)
+
+    if not overwrite:
+        for f in zip_ref.namelist():
+            if not os.path.isfile(os.path.join(unzip_dir_path, f)):
+                zip_ref.extract(f, path=unzip_dir_path)
+            else:
+                print('Not overwriting {}'.format(f))
+    else:
+        zip_ref.extractall(unzip_dir_path)
     zip_ref.close()
 
 
@@ -130,6 +143,6 @@ def ZipDirectory(archive_base_path, root_dir_path):
 
 
 # Downloads a zip file and directly unzips it.
-def DownloadAndUnzipFile(url, archive_dir_path, unzip_dir_path):
+def DownloadAndUnzipFile(url, archive_dir_path, unzip_dir_path, overwrite=True):
     archive_path = DownloadFile(url, archive_dir_path)
-    UnzipFile(archive_path, unzip_dir_path)
+    UnzipFile(archive_path, unzip_dir_path, overwrite=overwrite)

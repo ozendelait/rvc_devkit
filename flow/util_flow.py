@@ -1,6 +1,7 @@
 import math
 import png
 import struct
+import array
 
 from util import *
 
@@ -21,9 +22,9 @@ def ReadMiddleburyFloFile(path):
     """
 
     with open(path, 'rb') as fil:
-        tag = struct.unpack('f', fil.read(4))
-        width = struct.unpack('i', fil.read(4))
-        height = struct.unpack('i', fil.read(4))
+        tag = struct.unpack('f', fil.read(4))[0]
+        width = struct.unpack('i', fil.read(4))[0]
+        height = struct.unpack('i', fil.read(4))[0]
 
         assert tag == TAG_FLOAT
 
@@ -33,11 +34,12 @@ def ReadMiddleburyFloFile(path):
         u = data[::2]
         v = data[1::2]
 
-        mask = map(lambda x,y: x>UNKNOWN_FLOW_THRESH and y > UNKNOWN_FLOW_THRESH, u, v)
+        mask = map(lambda x,y: abs(x)<UNKNOWN_FLOW_THRESH and abs(y) < UNKNOWN_FLOW_THRESH, u, v)
+        mask = list(mask)
         u_masked = map(lambda x,y: x if y else 0, u, mask)
         v_masked = map(lambda x,y: x if y else 0, v, mask)
 
-    return width, height, u_masked, v_masked, mask
+    return width, height, list(u_masked), list(v_masked), list(mask)
 
 def ReadKittiPngFile(path):
     """ Read 16-bit .PNG file as specified by KITTI-2015 (flow).
@@ -68,6 +70,12 @@ def ReadKittiPngFile(path):
             v[ind] = (row[3*x+1] - 2**15) / 64.0
             mask[ind] = row[3*x+2]
 
+            # if mask[ind] > 0:
+            #     print(u[ind], v[ind], mask[ind], row[3*x], row[3*x+1], row[3*x+2])
+
+    print('Metadata:')
+    print(data[3])
+
     png_reader.close()
 
     return (width, height, u, v, mask)
@@ -78,8 +86,8 @@ def WriteMiddleburyFloFile(path, width, height, u, v, mask=None):
     """
 
     if mask is not None:
-        u_masked = map(lambda x,y: x if not y else UNKNOWN_FLOW, u, mask)
-        v_masked = map(lambda x,y: x if not y else UNKNOWN_FLOW, v, mask)
+        u_masked = map(lambda x,y: x if y else UNKNOWN_FLOW, u, mask)
+        v_masked = map(lambda x,y: x if y else UNKNOWN_FLOW, v, mask)
     else:
         u_masked = u
         v_masked = v
@@ -89,7 +97,7 @@ def WriteMiddleburyFloFile(path, width, height, u, v, mask=None):
     data = [x for t in zip(u_masked,v_masked) for x in t]
 
     with open(path, 'wb') as fil:
-        fil.write(TAG_STRING)
+        fil.write(str.encode(TAG_STRING))
         fil.write(struct.pack('i', width))
         fil.write(struct.pack('i', height))
         fil.write(struct.pack(fmt, *data))
@@ -109,9 +117,12 @@ def WriteKittiPngFile(path, width, height, u, v, mask=None):
         data[3*i+1] = int(v_*64.0+2**15)
         data[3*i+2] = int(mask_)
 
+        # if mask_ > 0:
+        #     print(data[3*i], data[3*i+1],data[3*i+2])
+
     with open(path, 'wb') as png_file:
-        png_writer = png.Writer(width=width, height=height, bitdepth=16, compression=9, greyscale=False)
-        png_writer.write(png_file, data)
+        png_writer = png.Writer(width=width, height=height, bitdepth=16, compression=3, greyscale=False)
+        png_writer.write_array(png_file, data)
 
 
 def ConvertMiddleburyFloToKittiPng(src_path, dest_path):

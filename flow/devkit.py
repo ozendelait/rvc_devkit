@@ -202,7 +202,8 @@ def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
         WriteMetaDataDict(os.path.join(metadata_dir_path, GetMetaDataFilename(benchmark)), metadata_dict)
     
     # Clean up unpack and archive directories.
-    shutil.rmtree(unpack_dir_path)
+    #TODO: Re-enable
+    # shutil.rmtree(unpack_dir_path)
     if not keep_archives:
         shutil.rmtree(archive_dir_path)
     

@@ -38,13 +38,7 @@ class Sintel(Benchmark):
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
         # Download input images (training + test) and ground truth
         DownloadAndUnzipFile('http://files.is.tue.mpg.de/sintel/MPI-Sintel-complete.zip', archive_dir_path, unpack_dir_path)
-        
-        # NOTE: Calibration files would be here:
-        # http://kitti.is.tue.mpg.de/kitti/data_scene_flow_calib.zip
-        
-        # NOTE: Multi-view extension would be here:
-        # http://kitti.is.tue.mpg.de/kitti/data_scene_flow_multiview.zip
-    
+   
     
     def CanConvertOriginalToFormat(self, dataset_format):
         return isinstance(dataset_format, MiddleburyFormat) or isinstance(dataset_format, Kitti2015Format)
@@ -61,10 +55,14 @@ class Sintel(Benchmark):
                 frameno = f[f.rfind('_')+1:f.rfind('.')]
                 frameno = int(frameno)
 
+                # KITTI starts at 0, Sintel starts at 1.
+                frameno = frameno-1
+
                 file_out = os.path.join(seq_dir_out, prefix_out + '_{0:02d}'.format(frameno))
 
                 if ext_in == '.png' and ext_out == '.png':
-                    shutil.move(os.path.join(seq_dir_in, f),
+                    #TODO: move
+                    shutil.copy2(os.path.join(seq_dir_in, f),
                                 file_out + ext_out)
                 elif ext_in == '.flo' and ext_out == '.png':
                     ConvertMiddleburyFloToKittiPng(os.path.join(seq_dir_in, f),
@@ -73,10 +71,10 @@ class Sintel(Benchmark):
 
         # Convert the downloaded files to KITTI format
         for (testtrain, testtrain_dir) in [('training', training_dir_path),
-                                           ('testing', test_dir_path)]:
+                                           ('test', test_dir_path)]:
             # For testing and training, copy images
             for pas in ['clean', 'final']:
-                basedir_in = os.path.join(unpack_dir_path, testtrain_dir, pas)
+                basedir_in = os.path.join(unpack_dir_path, testtrain, pas)
                 sequences = [f for f in sorted(os.listdir(basedir_in))]
 
                 for s in sequences:
@@ -87,48 +85,51 @@ class Sintel(Benchmark):
             # Copy flow
             if testtrain == 'training':
                 for pas in ['clean', 'final']:
-                    basedir_in = os.path.join(unpack_dir_path, testtrain_dir, pas)
-                    basedir_flow = os.path.join(unpack_dir_path, testtrain_dir, 'flow')
-                    sequences = [f for f in sorted(os.listdir(basedir_in))]
+                    basedir_flow_in = os.path.join(unpack_dir_path, testtrain, 'flow')
+                    sequences = [f for f in sorted(os.listdir(basedir_flow_in))]
 
                     for s in sequences:
-                        ConvertSequenceToKitti(os.path.join(basedir_flow, s),
+                        ConvertSequenceToKitti(os.path.join(basedir_flow_in, s),
                                             os.path.join(testtrain_dir, 'flow_occ'),
                                             s, pas, '.flo', '.png')
 
 
         # Delete original folder
-        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
+        # TODO: reenable
+        # shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        # shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
 
 
     def ConvertToMiddleburyFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         # Convert the downloaded files to Middlebury format
         for (testtrain, testtrain_dir) in [('training', training_dir_path),
-                                           ('testing', test_dir_path)]:
+                                           ('test', test_dir_path)]:
             # For testing and training, copy images
             for pas in ['clean', 'final']:
                 for seq in os.listdir(os.path.join(unpack_dir_path, testtrain, pas)):
                     dir_in = os.path.join(unpack_dir_path, testtrain, pas, seq)
-                    dir_out = os.path.join(training_dir_path, 'images', self.Prefix() + pas + '_' + seq)
+                    dir_out = os.path.join(testtrain_dir, 'images', self.Prefix() + pas + '_' + seq)
                     MakeDirsExistOk(dir_out)
 
-                    for f in os.listidr(dir_in):
-                        shutil.move(os.path.join(dir_in, f), os.path.join(dir_out, f))
+                    for f in os.listdir(dir_in):
+                        #TODO: move
+                        shutil.copy2(os.path.join(dir_in, f), os.path.join(dir_out, f))
 
             if testtrain == 'training':
                 for pas in ['clean', 'final']:
                     for seq in os.listdir(os.path.join(unpack_dir_path, testtrain, pas)):
                         dir_in = os.path.join(unpack_dir_path, testtrain, 'flow', seq)
-                        dir_out = os.path.join(training_dir_path, 'flow', self.Prefix() + pas + '_' + seq)
+                        dir_out = os.path.join(testtrain_dir, 'flow', self.Prefix() + pas + '_' + seq)
                         MakeDirsExistOk(dir_out)
 
-                        for f in os.listidr(dir_in):
-                            shutil.move(os.path.join(dir_in, f), os.path.join(dir_out, f))
+                        for f in os.listdir(dir_in):
+                            # TODO: move
+                            shutil.copy2(os.path.join(dir_in, f), os.path.join(dir_out, f))
 
         # Delete original folder
-        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
+        # TODO: reenable
+        # shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        # shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
 
 
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
