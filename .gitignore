@@ -3,3 +3,5 @@ __pycache__
 *.pyc
 
 stereo/alg-ELAS/build/
+/stereo/datasets_middlebury2014
+/.idea
