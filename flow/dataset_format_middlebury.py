@@ -21,7 +21,7 @@ class MiddleburyFormat(DatasetFormat):
     
     
     def ListDatasets(self, dataset_folder_path):
-        imagepath = os.path.join(dataset_folder_path)
+        imagepath = os.path.join(dataset_folder_path, 'images')
         return [dataset
                 for dataset in os.listdir(imagepath)
                 if os.path.isdir(os.path.join(imagepath, dataset))]
