@@ -18,7 +18,6 @@ results submitted to all benchmarks individually.
 Prerequisites: Install `git` and `python` (both versions 2.7.x and 3.x should work) if they are not installed yet.
 
 1. Clone this repository:
-   
    ```git clone http://cvlibs.net:3000/ageiger/rob_devkit.git```
 2. See the README in the subfolder of the task you are interested in (depth,
    flow, etc.) for further task-specific instructions.
