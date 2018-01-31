@@ -393,8 +393,6 @@ def CreateSubmissionArchives(chosen_format, dataset_formats, method,
     print('As the next step, submit the archives on the following websites:')
     for pair in archive_website_mapping:
         print('  ' + os.path.basename(pair[0]) + ' on ' + pair[1])
-    print('')
-    print('Finally, the submission must be completed by filling a short form on the Robust Vision Challenge website: TODO')  # TODO: Insert URL
 
 
 def RunMethod(method, run_file_path, chosen_format, training_only, additional_arguments):
