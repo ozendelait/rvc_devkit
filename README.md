@@ -10,7 +10,8 @@ The devkits make it easy to participate in the challenge by:
 Any updates to the devkits will be provided via this repository.
 Notice that using the devkits is not required for participating in the
 challenge: alternatively, algorithms can be manually run on each dataset and
-results submitted to all benchmarks individually.
+results submitted to all benchmarks individually (as long as the same method and
+parameters are used for all results).
 
 
 ## Getting started ##
