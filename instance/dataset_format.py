@@ -46,7 +46,7 @@ class DatasetFormat(object):
     # Must prepare for running the method on the given dataset (e.g., by
     # creating a suitable output folder, if necessary). Must return program
     # arguments for running the method as a list.
-    def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name):
+    def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name,test=False):
         raise NotImplementedError()
     
     

@@ -14,7 +14,7 @@ join = os.path.join
 
 class Cityscapes(Benchmark):
     def Name(self):
-        return "Cityscapes Semantic segmentation challenge"
+        return "Cityscapes instance segmentation challenge"
     
     
     def Prefix(self):
@@ -94,8 +94,6 @@ class Cityscapes(Benchmark):
     def CreateSubmission(self, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
-        # NOTE: This benchmark would also support confidence, code, and
-        #       publication submission. From the README:
         # FILE STRUCTURE:
         # your_algo_name/pred_list/FILENAME.txt
         # your_algo_name/pred_img/FILENAME_MASKID.png

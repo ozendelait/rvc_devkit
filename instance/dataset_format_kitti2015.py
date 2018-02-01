@@ -3,7 +3,7 @@ import shutil
 from dataset_format import *
 from util import *
 from util_stereo import *
-
+join = os.path.join
 
 # KITTI 2015 Stereo dataset format
 class KITTI2015Format(DatasetFormat):
@@ -23,17 +23,17 @@ class KITTI2015Format(DatasetFormat):
     def ListDatasets(self, dataset_folder_path):
         return [dataset for dataset
                 in os.listdir(dataset_folder_path)
-                if os.path.isdir(os.path.join(dataset_folder_path, dataset))]
+                if os.path.isdir(join(dataset_folder_path, dataset))]
     
     
     def ListMethods(self, dataset_folder_path, dataset_name):
         result_file_scheme = [('', '.txt')]
         
         contains_all_result_files = lambda path, method : (
-            all([os.path.isfile(os.path.join(path, prefix + method + suffix))
+            all([os.path.isfile(join(path, prefix + method + suffix))
                 for (prefix, suffix) in result_file_scheme]))
         
-        dataset_path = os.path.join(dataset_folder_path, dataset_name)
+        dataset_path = join(dataset_folder_path, dataset_name)
         first_prefix = result_file_scheme[0][0]
         first_suffix = result_file_scheme[0][1]
         
@@ -48,9 +48,10 @@ class KITTI2015Format(DatasetFormat):
         return method_list
     
     
-    def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name):
-        im0_path = os.path.join(dataset_folder_path, dataset_name, 'im0.png')
-        im1_path = os.path.join(dataset_folder_path, dataset_name, 'im1.png')
-        calib = ReadMiddlebury2014CalibFile(os.path.join(dataset_folder_path, dataset_name, 'calib.txt'))
-        output_dir_path = os.path.join(dataset_folder_path, dataset_name)
-        return [im0_path, im1_path, calib['ndisp'], output_dir_path]
+    def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name,test=False):
+        image_dir = join(dataset_folder_path, dataset_name, 'training' ,'image_2')
+        semantic_instance_dir = join(dataset_folder_path, dataset_name, 'training' ,'instance')
+        image_path_list = [join(semantic_instance_dir,f) for f in os.listdir(image_dir) if os.path.isfile(join(image_dir,f))]
+        semantic_instance_path_list = [join(semantic_instance_dir,f) for f in os.listdir(semantic_instance_dir) if os.path.isfile(join(semantic_instance_dir,f))]
+
+        return image_path_list, semantic_instance_path_list

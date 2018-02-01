@@ -12,7 +12,7 @@ join = os.path.join
 
 class KITTI2015(Benchmark):
     def Name(self):
-        return "KITTI 2015 instance semgentation"
+        return "KITTI 2015 instance semgentation challenge"
     
     
     def Prefix(self):
@@ -63,13 +63,16 @@ class KITTI2015(Benchmark):
 
     
     def CanCreateSubmissionFromFormat(self, dataset_format):
-        return isinstance(dataset_format, Middlebury2014Format)
+        return isinstance(dataset_format, KITTI2015Format)
     
     
     def CreateSubmission(self, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
-
+        # FILE STRUCTURE:
+        # your_algo_name/pred_list/FILENAME.txt
+        # your_algo_name/pred_img/FILENAME_MASKID.png
+        
         # Create the archive and clean up.
         archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
         DeleteFolderContents(pack_dir_path)
