@@ -20,39 +20,21 @@ class HD1K2018(Kitti2015):
     
     
     def Website(self):
-        return 'http://hci-benchmark.org/benchmark/table?hc=stereo'
+        return 'http://hci-benchmark.org/stereo'
 
 
     def GetOptions(self, metadata_dict):
         parser = argparse.ArgumentParser()
-        parser.add_argument('--hd1k_with_uncertainties', action='store_true',
-                            help='Download optional uncertainty maps for the stereo ground truth of the HD1K dataset.')
+        parser.add_argument('--hd1k_with_unc', action='store_true', default=False)
         args, unknown = parser.parse_known_args()
-
-        if args.hd1k_with_uncertainties is not None:
-            metadata_dict['with_uncertainties'] = args.hd1k_with_uncertainties
-        else:
-            print('Please choose whether uncertainty maps for the stereo ground truth '
-                  'should be downloaded [y] or not [n]:')
-            while True:
-                response = GetUserInput("> ")
-                if response == 'y':
-                    print('')
-                    metadata_dict['with_uncertainties'] = True
-                    break
-                elif response == 'n':
-                    metadata_dict['with_uncertainties'] = False
-                    break
-                else:
-                    print('Please enter y or n.')
+        metadata_dict['with_uncertainties'] = args.hd1k_with_unc
 
 
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
-
-        # Download input images and calibration files (training)
+        # Download input images (training)
         DownloadAndUnzipFile('http://hci-benchmark.org/media/downloads/hd1k_input.zip', archive_dir_path, unpack_dir_path)
 
-        # Download ground truth for left view (training)
+        # Download ground truth and calibration files for left view (training)
         DownloadAndUnzipFile('http://hci-benchmark.org/media/downloads/hd1k_stereo_gt.zip', archive_dir_path, unpack_dir_path)
 
         if metadata_dict['with_uncertainties']:
@@ -64,30 +46,28 @@ class HD1K2018(Kitti2015):
 
 
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
-        src_input_path = os.path.join(unpack_dir_path, 'hd1k_input')
-        src_gt_path = os.path.join(unpack_dir_path, 'hd1k_stereo_gt')
-        src_unc_path = os.path.join(unpack_dir_path, 'hd1k_stereo_uncertainty')
+        base_input_path = os.path.join(unpack_dir_path, 'hd1k_input')
+        base_gt_path = os.path.join(unpack_dir_path, 'hd1k_stereo_gt')
+        base_unc_path = os.path.join(unpack_dir_path, 'hd1k_stereo_uncertainty')
 
-        image_2_path = os.path.join(src_input_path, 'image_2')  # contains left images
-        image_3_path = os.path.join(src_input_path, 'image_3')  # contains right images
-        calib_path = os.path.join(src_input_path, 'calib')  # contains calibration files
+        src_image_left_path = os.path.join(base_input_path, 'image_2')  # contains left images
+        src_image_right_path = os.path.join(base_input_path, 'image_3')  # contains right images
+        src_gt_path = os.path.join(base_gt_path, 'disp_occ_0')  # contains stereo ground truth
+        src_calib_path = os.path.join(base_gt_path, 'calib')  # contains calibration files
+        src_unc_path = os.path.join(base_unc_path, 'disp_unc')  # contains uncertainties
 
-        for image_name in os.listdir(image_2_path):
-            dataset_name = image_name[:image_name.rfind('.')]  # remove file extension
-            if dataset_name.endswith('_11'):
-                continue  # These files are for flow only, skip them
+        for image_name in os.listdir(src_image_left_path):
+            dataset_name = os.path.splitext(image_name)[0]  # remove file extension
 
             output_dataset_path = os.path.join(training_dir_path, self.Prefix() + dataset_name)
             MakeDirsExistOk(output_dataset_path)
 
             # Move images
-            shutil.move(os.path.join(image_2_path, image_name),
-                        os.path.join(output_dataset_path, 'im0.png'))
-            shutil.move(os.path.join(image_3_path, image_name),
-                        os.path.join(output_dataset_path, 'im1.png'))
+            shutil.move(os.path.join(src_image_left_path, image_name), os.path.join(output_dataset_path, 'im0.png'))
+            shutil.move(os.path.join(src_image_right_path, image_name), os.path.join(output_dataset_path, 'im1.png'))
 
             # Create calib.txt
-            calib_input_path = os.path.join(calib_path, image_name.replace(".png", ".txt"))
+            calib_input_path = os.path.join(src_calib_path, image_name.replace(".png", ".txt"))
             calib = ReadMiddlebury2014CalibFile(calib_input_path)
 
             width = calib['width']
@@ -95,10 +75,8 @@ class HD1K2018(Kitti2015):
             ndisp = calib['ndisp']
             cam0 = calib['cam0'].replace(";", "").replace("[", "").replace("]", "").strip()
             [left_fx, _, left_cx, _, left_fy, left_cy, _, _, _] = cam0.split(" ")
-            right_fx = left_fx
-            right_fy = left_fy
-            right_cx = left_cx
-            right_cy = left_cy
+            cam1 = calib['cam1'].replace(";", "").replace("[", "").replace("]", "").strip()
+            [right_fx, _, right_cx, _, right_fy, right_cy, _, _, _] = cam1.split(" ")
 
             # NOTE: The parameters below are unknown, setting them all to zero
             #       (which might be better compatible with parsers than setting
@@ -116,18 +94,18 @@ class HD1K2018(Kitti2015):
                 int(ndisp))
 
             # Convert and move disparity maps
-            src_occ_0_path = os.path.join(src_gt_path, 'disp_occ_0', image_name)
+            src_occ_0_path = os.path.join(src_gt_path, image_name)
             dest_occ_0_path = os.path.join(output_dataset_path, 'disp0GT.pfm')
             ConvertKitti2015PngToMiddlebury2014Pfm(src_occ_0_path, dest_occ_0_path)
 
             # Convert and move uncertainty maps
             if metadata_dict['with_uncertainties']:
-                src_unc_0_path = os.path.join(src_unc_path, 'disp_unc_0', image_name)
+                src_unc_0_path = os.path.join(src_unc_path, image_name)
                 dest_unc_0_path = os.path.join(output_dataset_path, 'disp0Unc.pfm')
                 ConvertKitti2015PngToMiddlebury2014Pfm(src_unc_0_path, dest_unc_0_path)
 
         # Delete original folders
-        dir_paths = [src_input_path, src_gt_path, src_unc_path]
+        dir_paths = [base_input_path, base_gt_path, base_unc_path]
         for dir_path in dir_paths:
             if os.path.isdir(dir_path):
                 shutil.rmtree(dir_path)

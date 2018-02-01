@@ -131,14 +131,10 @@ the option to create a submission is missing, make sure that all required files
 exist.
 
 The resulting archives must be submitted to the respective benchmarks:
-TODO: How to mark the submissions as belonging to ROB?
 * [ETH3D2017](https://www.eth3d.net/login)
-* [HD1K2018](http://hci-benchmark.org/accounts/login?next=/challenges/submissions/create/stereo_geometry&hc=stereo_geometry)
+* [HD1K2018](http://hci-benchmark.org/accounts/login)
 * [Kitti2015](http://www.cvlibs.net/datasets/kitti/user_login.php)
 * [Middlebury2014](http://vision.middlebury.edu/stereo/submit3/upload.html)
-
-Furthermore, the submission must be completed by filling a short form on the
-Robust Vision Challenge website: TODO
 
 
 ## Command Line Interface ##
@@ -150,9 +146,9 @@ available:
 # Download the datasets:
 # - The resolution of the Middlebury datasets can be chosen as [f]ull, [h]alf,
 #   or [q]uarter
-# - The resolution of the Middlebury datasets can be chosen as [f]ull, [h]alf,
-#   or [q]uarter
-python stereo_devkit.py obtain --middlebury_resolution {f,F,h,H,q,Q}
+# - For the HD1K dataset, optional uncertainty maps for the stereo ground truth
+#   can be downloaded by adding the flag --hd1k_with_unc
+python stereo_devkit.py obtain --middlebury_resolution {f,F,h,H,q,Q} --hd1k_with_unc
 
 # Run an algorithm:
 # - runfile_path is the path to the executable file or Python script that will
