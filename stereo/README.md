@@ -49,7 +49,7 @@ images.txt               : For ETH3D.
 
 mask0nocc.png            : For ETH3D, Kitti2015, Middlebury2014 (training datasets only).
 
-disp0Unc.pfm             : For HCI (training datasets only).
+disp0Unc.pfm             : For HD1K (training datasets only).
 
 obj_map.png              : For Kitti2015 (training datasets only).
 ```
