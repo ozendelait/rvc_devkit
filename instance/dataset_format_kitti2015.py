@@ -49,9 +49,10 @@ class KITTI2015Format(DatasetFormat):
     
     
     def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name,test=False):
-        image_dir = join(dataset_folder_path, dataset_name, 'training' ,'image_2')
-        semantic_instance_dir = join(dataset_folder_path, dataset_name, 'training' ,'instance')
-        image_path_list = [join(semantic_instance_dir,f) for f in os.listdir(image_dir) if os.path.isfile(join(image_dir,f))]
-        semantic_instance_path_list = [join(semantic_instance_dir,f) for f in os.listdir(semantic_instance_dir) if os.path.isfile(join(semantic_instance_dir,f))]
+        image_dir = join(dataset_folder_path, dataset_name, 'training', 'image_2')
+        semantic_instance_dir = join(dataset_folder_path, dataset_name, 'training', 'instance')
+
+        image_path_list = [join(semantic_instance_dir, f) for f in os.listdir(image_dir) if os.path.isfile(join(image_dir, f))]
+        semantic_instance_path_list = [join(semantic_instance_dir, f) for f in os.listdir(semantic_instance_dir) if os.path.isfile(join(semantic_instance_dir, f))]
 
         return image_path_list, semantic_instance_path_list

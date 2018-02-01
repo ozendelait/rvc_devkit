@@ -114,11 +114,10 @@ def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
     # MakeCleanDirectory(unpack_dir_path)
     MakeCleanDirectory(metadata_dir_path)
     MakeCleanDirectory(training_dir_path)
-    MakeCleanDirectory(os.path.join(training_dir_path,'image_2'))
-    MakeCleanDirectory(os.path.join(training_dir_path,'semantic'))
-    MakeCleanDirectory(os.path.join(training_dir_path,'instance'))
+    MakeCleanDirectory(os.path.join(training_dir_path, 'image_2'))
+    MakeCleanDirectory(os.path.join(training_dir_path, 'instance'))
     MakeCleanDirectory(test_dir_path)
-    MakeCleanDirectory(os.path.join(test_dir_path,'image_2'))
+    MakeCleanDirectory(os.path.join(test_dir_path, 'image_2'))
     
     # Download and convert all benchmark datasets.
     for (index, benchmark) in enumerate(benchmarks):

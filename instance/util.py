@@ -117,6 +117,7 @@ def DownloadFile(url, dest_dir_path):
 
 # Unzips the given zip file into the given directory.
 def UnzipFile(file_path, unzip_dir_path):
+    print("Extracting archive: %s" % file_path)
     zip_ref = zipfile.ZipFile(open(file_path, 'rb'))
     zip_ref.extractall(unzip_dir_path)
     zip_ref.close()

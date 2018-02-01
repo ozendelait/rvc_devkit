@@ -1,4 +1,5 @@
 import math
+import os.path as op
 import png
 import shutil
 
@@ -10,19 +11,19 @@ from util_stereo import *
 import numpy as np
 import scipy.misc as sp
 
-join = os.path.join 
 
 class Cityscapes(Benchmark):
+
     def Name(self):
-        return "Cityscapes instance segmentation challenge"
+        return 'Cityscapes Instance-Level Semantic Labeling Task'
     
     
     def Prefix(self):
-        return "cityscapes_"
+        return 'Cityscapes_'
     
     
     def Website(self):
-        return 'https://www.cityscapes-dataset.com/'
+        return 'https://cityscapes-dataset.com/'
     
     
     def SupportsTrainingDataOnlySubmissions(self):
@@ -38,55 +39,85 @@ class Cityscapes(Benchmark):
     
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
-        print('Cityscapes should be downloaded manually and unpacked in the folder temp_unpack_dir')
-        # DownloadAndUnzipFile('https://www.cityscapes-dataset.com/login/', archive_dir_path, unpack_dir_path)
-    
-    
+        input_file_path = op.join(archive_dir_path, 'leftImg8bit_trainvaltest.zip')
+        gt_file_path = op.join(archive_dir_path, 'gtFine_trainvaltest.zip')
+        expected_archives = [input_file_path, gt_file_path]
+
+        # Try to unpack input and ground truth files
+        self.ExtractManualDownloadArchives(expected_archives, op.join(unpack_dir_path, self.Prefix() + 'dirs'))
+
+
+    def ExtractManualDownloadArchives(self, expected_archives, unpack_dir_path):
+        missing_archives = []
+        for archive_path in expected_archives:
+            if not op.isfile(archive_path):
+                missing_archives.append(archive_path)
+
+        # Extract archives
+        if not missing_archives:
+            for archive_path in expected_archives:
+                UnzipFile(archive_path, unpack_dir_path)
+        # Report missing files
+        else:
+            for missing_archive in missing_archives:
+                print('ERROR: Could not find: ' + missing_archive)
+            print('%s must be downloaded manually. Please register at %s\nto download the data and place it '
+                  'according to the path(s) above.' % (self.Prefix()[:-1], self.Website()))
+            sys.exit(1)
+
+
     def CanConvertOriginalToFormat(self, dataset_format):
         return isinstance(dataset_format, KITTI2015Format)
 
-    def cityscapes_to_kitti(self,cs_instance,cs_semantic):
-        instance = np.zeros(cs_instance.shape,dtype="int32")
-        instance[np.where(cs_instance > 1000 )] = 1+cs_instance[np.where(cs_instance > 1000 )] % 1000
+
+    def CityscapesToKitti(self, cs_instance, cs_semantic):
+        instance = np.zeros(cs_instance.shape, dtype='int32')
+        instance[np.where(cs_instance > 1000)] = 1 + cs_instance[np.where(cs_instance > 1000)] % 1000
         kitti_instance = cs_semantic*256 + instance 
         return kitti_instance
+
         
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
-        temp_image_dir = join(unpack_dir_path,'cityscapes','leftImg8bit_trainvaltest','leftImg8bit')
-        temp_gt_dir    = join(unpack_dir_path,'cityscapes','gtFine_trainvaltest','gtFine')
+        img_dir_path = op.join(unpack_dir_path, self.Prefix() + 'dirs', 'leftImg8bit')
+        gt_dir_path = op.join(unpack_dir_path, self.Prefix() + 'dirs', 'gtFine')
 
-        train_splits = ['train','val']
-        test_splits  = ['test']
+        # Retrieve the dataset splits (train, test, val)
+        splits = [d for d in os.listdir(img_dir_path) if op.isdir(op.join(img_dir_path, d))]
 
-        # move the training data
-        for split in train_splits:
-            city_names = [city for city in os.listdir(join(temp_image_dir,split)) if os.path.isdir(join(temp_image_dir,split,city))]
-            for city in city_names : 
-                # read the image file names without the prefix
-                filenames = ["_".join(f.split("_")[:3]) for f in os.listdir(join(temp_image_dir,split,city)) if os.path.isfile(join(temp_image_dir,split,city,f))]
-                for image_file in filenames:
-                    # copy image data
-                    # shutil.move(join(temp_image_dir,split,city,image_file+'_leftImg8bit.png'),join(training_dir_path,'image_2',image_file+'.png'))
-                    shutil.copy2(join(temp_image_dir,split,city,image_file+'_leftImg8bit.png'),join(training_dir_path,'image_2',self.Prefix()+image_file+'.png'))
-                    # copy the semantic segmentation files
-                    # shutil.move(join(temp_gt_dir,split,city,image_file+"_gtFine_labelIds.png"),join(training_dir_path,'semantic',image_file+".png"))
-                    shutil.copy2(join(temp_gt_dir,split,city,image_file+"_gtFine_labelIds.png"),join(training_dir_path,'semantic',self.Prefix()+image_file+".png"))
-                    # convert the instance files to kitti format
-                    cs_instance = sp.imread(join(temp_gt_dir,split,city,image_file+"_gtFine_instanceIds.png"))
-                    cs_semantic = sp.imread(join(temp_gt_dir,split,city,image_file+"_gtFine_labelIds.png"))
-                    kitti_instance = self.cityscapes_to_kitti(cs_instance,cs_semantic)
-                    sp.toimage(kitti_instance,high=np.max(kitti_instance), low=np.min(kitti_instance), mode='I').save(join(training_dir_path,'instance',self.Prefix()+image_file+".png"))
+        # Move the training data
+        for split in splits:
 
-        # move the test data 
-        for split in test_splits :
-            city_names = [city for city in os.listdir(join(temp_image_dir,split)) if os.path.isdir(join(temp_image_dir,split,city))]
-            for city in city_names : 
-                # read the image file names without the prefix
-                filenames = [f.split("_")[:3].join("_") for f in os.listdir(join(temp_image_dir,split,city)) if os.path.isfile(join(temp_image_dir,split,city,f))]
-                for image_file in filenames:
-                    # copy image data
-                    shutil.copy2(join(temp_image_dir,split,city,image_file+'_leftImg8bit.png'),join(test_dir_path,'image_2',image_file+'.png'))
-    
+            # Extract all cities
+            city_names = [c for c in os.listdir(op.join(img_dir_path, split)) if op.isdir(op.join(img_dir_path, split, c))]
+
+            for city in city_names:
+                city_img_dir_path = op.join(img_dir_path, split, city)
+                city_gt_dir_path = op.join(gt_dir_path, split, city)
+
+                # Read the image file names without the prefix
+                img_names = ['_'.join(f.split('_')[:3]) for f in os.listdir(city_img_dir_path) if op.isfile(op.join(city_img_dir_path, f))]
+
+                for img_name in img_names:
+                    if split == 'test':
+                        # Move the test image data
+                        shutil.move(op.join(city_img_dir_path, img_name + '_leftImg8bit.png'),
+                                    op.join(test_dir_path, 'image_2', self.Prefix() + img_name + '.png'))
+                    else:
+                        # Move the training image data
+                        shutil.move(op.join(city_img_dir_path, img_name + '_leftImg8bit.png'),
+                                    op.join(training_dir_path, 'image_2', self.Prefix() + img_name + '.png'))
+
+                        # Convert the instance files to the Kitti2015 format
+                        cs_instance = sp.imread(op.join(city_gt_dir_path, img_name + '_gtFine_instanceIds.png'))
+                        cs_semantic = sp.imread(op.join(city_gt_dir_path, img_name + '_gtFine_labelIds.png'))
+                        kitti_instance = self.CityscapesToKitti(cs_instance, cs_semantic)
+
+                        tgt_file_name = op.join(training_dir_path, 'instance', self.Prefix() + img_name + '.png')
+                        sp.toimage(kitti_instance, high=np.max(kitti_instance), low=np.min(kitti_instance), mode='I').save(tgt_file_name)
+
+        shutil.rmtree(op.join(unpack_dir_path, self.Prefix() + 'dirs'))
+
+
     def CanCreateSubmissionFromFormat(self, dataset_format):
         return isinstance(dataset_format, KITTI2015Format)
     
@@ -103,4 +134,3 @@ class Cityscapes(Benchmark):
         DeleteFolderContents(pack_dir_path)
         
         return archive_filename
-    
