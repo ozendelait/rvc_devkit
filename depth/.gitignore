@@ -1,1 +1,4 @@
 *.pyc
+datasets_KITTI/*
+datasets_ScanNet/*
+raw_data_KITTI/2011_*
