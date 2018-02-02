@@ -41,3 +41,4 @@ The process for participating in the challenge is as follows.
   a posfix to your method name to signal that your submission participates in
   the challenge. For example, if your method was called ELAS, name your
   submission ELAS_ROB.
+* Register your submission at the [submission form](http://robustvision.net/submit.php#register).
