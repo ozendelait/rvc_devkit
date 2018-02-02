@@ -109,6 +109,6 @@ the 'make.sh' script. Run it using two arguments:
 
 ./evaluate_depth gt_dir prediction_dir
 
-Note that gt_dir is most likely '../../val_selection_cropped/groundtruth_depth'
+Note that gt_dir is most likely '../../datasets_KITTI/val_selection/groundtruth_depth'
 if you unzipped all files in the same base directory. We also included a sample
 result of our proposed approach for the validation split ('predictions/sparseConv_val').
