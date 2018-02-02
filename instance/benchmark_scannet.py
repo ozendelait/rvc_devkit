@@ -40,7 +40,7 @@ class ScanNet(Benchmark):
     
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
-        scannet_train_scans = ['scene0000_00'] #download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scans.txt')
+        scannet_train_scans = download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scans.txt')
         download_scannet.download_rob_task_data(op.join(unpack_dir_path, 'train'), scannet_train_scans)
         expected_train_archives = [os.path.join(op.join(unpack_dir_path, 'train'), scan + '.zip') for scan in scannet_train_scans]
         scannet_test_scans = []  # needs to be made public
