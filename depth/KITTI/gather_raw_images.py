@@ -119,10 +119,10 @@ def main():
         matching_calib_fn = [calib_fn for calib_fn in calib_files
                              if "/" + date + "/" + "calib_cam_to_cam.txt" in calib_fn]
         if len(matching_img_fn) <= 0:
-            print "\nERROR: Could not find a corresponding RGB image for depth map" + depth_fn
+            print "\nERROR: Could not find a corresponding RGB image for depth map " + depth_fn
             exit()
         elif len(matching_img_fn) > 1:
-            print "\nWARNING: Found multiple corresponding RGB images for depth map" \
+            print "\nWARNING: Found multiple corresponding RGB images for depth map " \
                   + "{}: {}".format(depth_fn, matching_img_fn)
         else:
             matching_img_fn = matching_img_fn[0]

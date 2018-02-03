@@ -13,20 +13,23 @@ pip install argparse numpy imageio
 ######################
 
 For the Robust Vision Challenge 2018, we propose two large-scale single-image
-depth datasets, i.e. ScanNet and KITTI.
+depth datasets, i.e. ScanNet and KITTI. Please make sure that you have a minimum
+of 150GB-200GB disk space for all (raw) datasets available. If you run out of space
+while downloading KITTI raw or ScanNet, you can remove unnecessary zip files
+after they have been unzipped.
 
 # ScanNet (see http://www.scan-net.org/ and https://github.com/ScanNet/ScanNet)
 
 For ScanNet, there are two versions of the data. One contains all 2.5 Mio. views with respective depth maps in the raw
 ScanNet data format (1.2TB of data). Note that this may take a very long time, as additional to the huge download, you
 will need to convert the original raw data into our easily readable Robust Vision data format. As many of the original
-views are highly correlated, another variant of the dataset is provided where every 100th frame is available (12GB).
+views are highly correlated, another variant of the dataset is provided where every 100th frame is available (39GB).
 
 If you want to download only every 100th frame (which we highly recommend), execute:
 $ python ScanNet/download-scannet.py --rob_task_data -o datasets_ScanNet/
 After downloading all scenes, you can run the following to unzip all scenes and remove
 corresponding zip files:
-$ bash ScanNet/unzip-and-remove-all-scenes.sh
+$ bash ScanNet/unzip-and-remove-all-zipped-scenes.sh
 Note that the downloaded zips (after unpacking) contain images at the full resolution
 of 1296x968 pixels, while depth maps have a bit less than half the resolution (640x480).
 You find the intrinsic parameters for the full resolution images in the "intrinsic_color"
@@ -60,7 +63,7 @@ $ unzip -d datasets_KITTI datasets_KITTI/data_depth_annotated.zip
 Use the KITTI raw download script (thanks to Omid Hosseini for sharing) to download KITTI raw:
 $ cd raw_data_KITTI && bash raw_data_downloader.sh && cd ..
 Note that you can remove all image_00, image_01, oxts, and velodyne_points folders if you need
-to free some disk space:
+to free some disk space (those files are not required for our challenge):
 $ rm -rf raw_data_KITTI/2011_*_*/2011_*_*_drive_*_sync/image_0[0,1]
 $ rm -rf raw_data_KITTI/2011_*_*/2011_*_*_drive_*_sync/oxts
 $ rm -rf raw_data_KITTI/2011_*_*/2011_*_*_drive_*_sync/velodyne_points
@@ -76,8 +79,11 @@ Now, you will need to gather left and right color images from the KITTI raw data
 match with the GT depth maps (which are already aligned with the RGB images). You can
 choose to either write a text file containing all matching depth and RGB images (-t txt)
 or copy/move/softlink KITTI raw images into the KITTI depth folder structure (-t copy/..)
-$ python KITTI/gather_images.py -d datasets_KITTI/train -r raw_data_KITTI/ -t txt -o kitti_train
-$ python KITTI/gather_images.py -d datasets_KITTI/val -r raw_data_KITTI/ -t txt -o kitti_val
+$ python KITTI/gather_raw_images.py -d datasets_KITTI/train -r raw_data_KITTI/ -t txt -o kitti_train
+$ python KITTI/gather_raw_images.py -d datasets_KITTI/val -r raw_data_KITTI/ -t txt -o kitti_val
+If you use the -t move option for train and val, you can remove all contents of
+the raw_data_KITTI folder to free some more disk space, as all required data
+is located in the datasets_KITTI folder.
 
 
 ####################
