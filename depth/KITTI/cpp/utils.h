@@ -39,7 +39,7 @@ float statWeightedMean(std::vector< std::vector<float> > &errors,int32_t idx,int
 }
 
 float statMin(std::vector< std::vector<float> > &errors,int32_t idx) {
-  float err_min = 1;
+  float err_min = 100000;
   for (int32_t i=0; i<errors.size(); i++)
     if (errors[i][idx]<err_min) err_min = errors[i][idx];
   return err_min;

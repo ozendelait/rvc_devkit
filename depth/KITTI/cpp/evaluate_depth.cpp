@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
+#include <algorithm>    // std::sort
 
 #include "io_depth.h"
 #include "utils.h"
@@ -119,6 +120,81 @@ std::vector<float> depthError (DepthImage &D_gt, DepthImage &D_ipol) {
   return errors;
 }
 
+double computeMedian(std::vector<float> value_array)
+{
+  size_t size = value_array.size();
+
+  if (size == 0)
+    return 0;
+  else if (size == 1)
+    return value_array[0];
+  else
+  {
+    std::sort(value_array.begin(), value_array.end());
+    if (size % 2 == 0)
+      return (value_array[size / 2 - 1] + value_array[size / 2]) / 2;
+    else 
+      return value_array[size / 2];
+  }
+}
+
+/** \brief Method to adjust median depth of prediction to match GT depth maps.
+  * \param D_gt the ground truth depth image
+  * \param D_ipol the interpolated depth image to be benchmarked
+  * \return Scaled depth maps such that first depth map is optimally adjusted 
+  *         to absolute GT depth, and second adjusted to inverse GT depth
+  */
+std::vector<DepthImage>medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
+  DepthImage abs_D_ipol(D_ipol);
+  DepthImage inv_D_ipol(D_ipol);
+
+  std::vector<float> abs_D_gt_values;
+  std::vector<float> abs_D_ipol_values;
+  std::vector<float> inv_D_gt_values;
+  std::vector<float> inv_D_ipol_values;
+
+  // extract width and height
+  uint32_t width  = D_gt.width();
+  uint32_t height = D_gt.height();
+
+  // iterate all pixels to find median values
+  for (uint32_t u = 0; u < width; u++) {
+    for (uint32_t v = 0; v < height; v++) {
+      if (D_gt.isValid(u, v)) {
+        const float depth_gt_abs   = D_gt.getDepth(u, v);
+        const float depth_ipol_abs = D_ipol.getDepth(u, v);
+        abs_D_gt_values.push_back(depth_gt_abs);
+        abs_D_ipol_values.push_back(depth_ipol_abs);
+        inv_D_gt_values.push_back(1.0 / depth_gt_abs);
+        inv_D_ipol_values.push_back(1.0 / depth_ipol_abs);
+      }
+    } //end for v
+  } //end for u
+
+  double median_abs_D_gt   = computeMedian(abs_D_gt_values);
+  double median_abs_D_ipol = computeMedian(abs_D_ipol_values);
+  double median_inv_D_gt   = computeMedian(inv_D_gt_values);
+  double median_inv_D_ipol = computeMedian(inv_D_ipol_values);
+
+  // iterate all pixels to subtract median values
+  for (uint32_t u = 0; u < width; u++) {
+    for (uint32_t v = 0; v < height; v++) {
+      if (D_gt.isValid(u, v)) {
+        const float depth_gt_abs   = D_gt.getDepth(u, v);
+        const float depth_ipol_abs = D_ipol.getDepth(u, v);
+        abs_D_ipol.setDepth(u, v, depth_ipol_abs + (median_abs_D_gt - median_abs_D_ipol));
+        inv_D_ipol.setDepth(u, v, depth_ipol_abs + (median_inv_D_gt - median_inv_D_ipol));
+      }
+    } //end for v
+  } //end for u
+
+  std::vector<DepthImage> depth_images;
+  depth_images.push_back(abs_D_ipol);
+  depth_images.push_back(inv_D_ipol);
+  return depth_images;
+}
+
+
 /** \brief Helper function for png file selection.
   * \param entry direct struct to be compared
   *
@@ -209,7 +285,6 @@ bool eval (string gt_img_dir, string prediction_dir) {
 
       // add depth errors
       std::vector<float> errors_out_curr = depthError(D_gt, D_ipol);
-      errors_out.push_back(errors_out_curr);
 
       // save detailed infos for first 20 images
       if (i < 20) {
@@ -243,6 +318,22 @@ bool eval (string gt_img_dir, string prediction_dir) {
         system(("cp " + img_src + " " + img_dst).c_str());
       }
 
+      // compute median of D_gt and D_ipol, as well as inverse D_gt and D_ipol
+      // then subtract medians from both images (where valid) so that the scale
+      // of each depth map is adjusted to the same range
+      std::vector<DepthImage> depth_images = medianAdjustedDepth(D_gt, D_ipol);
+      DepthImage abs_D_ipol = depth_images[0];
+      DepthImage inv_D_ipol = depth_images[1];
+
+      // compute all error metrics on otimally scaled GT and prediction
+      std::vector<float> errors_out_abs = depthError(D_gt, abs_D_ipol);
+      std::vector<float> errors_out_inv = depthError(D_gt, inv_D_ipol);
+
+      errors_out_curr.reserve(3 * errors_out_curr.size());
+      errors_out_curr.insert(errors_out_curr.end(), errors_out_abs.begin(), errors_out_abs.end());
+      errors_out_curr.insert(errors_out_curr.end(), errors_out_inv.begin(), errors_out_inv.end());
+      errors_out.push_back(errors_out_curr);
+
     // on error, exit
     } catch (...) {
       std::cout << "ERROR: Couldn't read: " << prefix.c_str() << ".png" << std::endl;
@@ -262,7 +353,8 @@ bool eval (string gt_img_dir, string prediction_dir) {
     return false;
   }
 
-  const char *metrics[] = {"mae", 
+  const char *metrics[] = {
+                           "mae", 
                            "rmse", 
                            "inverse mae", 
                            "inverse rmse", 
@@ -270,7 +362,26 @@ bool eval (string gt_img_dir, string prediction_dir) {
                            "log rmse", 
                            "scale invariant log", 
                            "abs relative", 
-                           "squared relative"};
+                           "squared relative",
+                           "(scale-inv.abs.opt.) mae", 
+                           "(scale-inv.abs.opt.) rmse", 
+                           "(scale-inv.abs.opt.) inverse mae", 
+                           "(scale-inv.abs.opt.) inverse rmse", 
+                           "(scale-inv.abs.opt.) log mae", 
+                           "(scale-inv.abs.opt.) log rmse", 
+                           "(scale-inv.abs.opt.) scale invariant log", 
+                           "(scale-inv.abs.opt.) abs relative", 
+                           "(scale-inv.abs.opt.) squared relative",
+                           "(scale-inv.inv.opt.) mae", 
+                           "(scale-inv.inv.opt.) rmse", 
+                           "(scale-inv.inv.opt.) inverse mae", 
+                           "(scale-inv.inv.opt.) inverse rmse", 
+                           "(scale-inv.inv.opt.) log mae", 
+                           "(scale-inv.inv.opt.) log rmse", 
+                           "(scale-inv.inv.opt.) scale invariant log", 
+                           "(scale-inv.inv.opt.) abs relative", 
+                           "(scale-inv.inv.opt.) squared relative"
+                         };
   // write mean, min and max
   std::cout << "Done. Your evaluation results are:" << std::endl;
   for (int32_t i = 0; i < errors_out[0].size(); i++) {
