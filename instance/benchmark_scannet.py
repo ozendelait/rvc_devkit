@@ -48,13 +48,13 @@ class ScanNet(Benchmark):
         scannet_train_scans = download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scans.txt')
         download_scannet.download_rob_task_data(op.join(unpack_dir_path, 'train'), scannet_train_scans)
         expected_train_archives = [os.path.join(op.join(unpack_dir_path, 'train'), scan + '.zip') for scan in scannet_train_scans]
-        scannet_test_scans = []  # needs to be made public
-        #download_scannet.download_rob_task_data(op.join(unpack_dir_path, 'test'), scannet_test_scans)
-        #expected_test_archives = [os.path.join(op.join(unpack_dir_path, 'test'), scan + '.zip') for scan in scannet_test_scans]
+        scannet_test_scans = download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scannet_rob_test.txt')
+        download_scannet.download_rob_task_data(op.join(unpack_dir_path, 'test'), scannet_test_scans)
+        expected_test_archives = [os.path.join(op.join(unpack_dir_path, 'test'), scan + '.zip') for scan in scannet_test_scans]
 
         # Try to unpack input and ground truth files
         self.ExtractDownloadArchives(expected_train_archives, op.join(op.join(unpack_dir_path, 'train'), self.Prefix() + 'dirs'))
-        #self.ExtractDownloadArchives(expected_test_archives, op.join(op.join(unpack_dir_path, 'test'), self.Prefix() + 'dirs'))
+        self.ExtractDownloadArchives(expected_test_archives, op.join(op.join(unpack_dir_path, 'test'), self.Prefix() + 'dirs'))
 
 
     def ExtractDownloadArchives(self, expected_archives, unpack_dir_path):
@@ -94,16 +94,13 @@ class ScanNet(Benchmark):
             for f in files:
                 shutil.move(op.join(instance_path, f), op.join(training_dir_path, 'instance', self.Prefix() + scene + '_' + f))
         test_path = op.join(unpack_dir_path, 'test', self.Prefix() + 'dirs')
-        scenes = [op.join(train_path, d) for d in os.listdir(train_path)]
-        for scene_path in scenes:
+        scenes = os.listdir(test_path)
+        for scene in scenes:
+            scene_path = op.join(test_path, scene)
             color_path = os.path.join(scene_path, 'color')
-            instance_path = os.path.join(scene_path, 'instance')
             files = os.listdir(color_path)
             for f in files:
                 shutil.move(op.join(color_path, f), op.join(test_dir_path, 'image_2', self.Prefix() + scene + '_' + f))
-            files = os.listdir(instance_path)
-            for f in files:
-                shutil.move(op.join(instance_path, f), op.join(test_dir_path, 'instance', self.Prefix() + scene + '_' + f))
 
 
     def CanCreateSubmissionFromFormat(self, dataset_format):
