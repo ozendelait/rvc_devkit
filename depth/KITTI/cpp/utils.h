@@ -21,32 +21,32 @@ bool imageFormat(std::string file_name,png::color_type col,size_t depth,int32_t 
   return true;
 }
 
-float statMean(std::vector< std::vector<float> > &errors,int32_t idx) {
-  float err_mean = 0;
+double statMean(std::vector< std::vector<double> > &errors,int32_t idx) {
+  double err_mean = 0;
   for (int32_t i=0; i<errors.size(); i++)
     err_mean += errors[i][idx];
-  return err_mean/(float)errors.size();
+  return err_mean/(double)errors.size();
 }
 
-float statWeightedMean(std::vector< std::vector<float> > &errors,int32_t idx,int32_t idx_num) {
-  float err = 0;
-  float num = 0;
+double statWeightedMean(std::vector< std::vector<double> > &errors,int32_t idx,int32_t idx_num) {
+  double err = 0;
+  double num = 0;
   for (int32_t i=0; i<errors.size(); i++) {
     err += errors[i][idx];
     num += errors[i][idx_num];
   }
-  return err/std::max(num,1.0f);
+  return err/std::max(num,1.0);
 }
 
-float statMin(std::vector< std::vector<float> > &errors,int32_t idx) {
-  float err_min = 100000;
+double statMin(std::vector< std::vector<double> > &errors,int32_t idx) {
+  double err_min = 100000;
   for (int32_t i=0; i<errors.size(); i++)
     if (errors[i][idx]<err_min) err_min = errors[i][idx];
   return err_min;
 }
 
-float statMax(std::vector< std::vector<float> > &errors,int32_t idx) {
-  float err_max = 0;
+double statMax(std::vector< std::vector<double> > &errors,int32_t idx) {
+  double err_max = 0;
   for (int32_t i=0; i<errors.size(); i++)
     if (errors[i][idx]>err_max) err_max = errors[i][idx];
   return err_max;

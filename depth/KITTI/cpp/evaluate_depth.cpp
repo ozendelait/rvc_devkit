@@ -17,7 +17,7 @@ using namespace std;
   * \return mae between original and ground truth depth (2 entries: occluded and non-occluded)
   *
   */
-std::vector<float> depthError (DepthImage &D_gt, DepthImage &D_ipol) {
+std::vector<double> depthError (DepthImage &D_gt, DepthImage &D_ipol) {
 
   // check file size
   if (D_gt.width() != D_ipol.width() || D_gt.height() != D_ipol.height()) {
@@ -40,29 +40,27 @@ std::vector<float> depthError (DepthImage &D_gt, DepthImage &D_ipol) {
   // 8. abs relative
   // 9. squared relative
 
-  std::vector<float> errors(9, 0.f);
+  std::vector<double> errors(9, 0.f);
   //
   uint32_t num_pixels = 0;
   uint32_t num_pixels_result = 0;
 
   //log sum for scale invariant metric
-  float logSum = 0.0;
+  double logSum = 0.0;
 
   // for all pixels do
   for (uint32_t u = 0; u < width; u++) {
     for (uint32_t v = 0; v < height; v++) {
       if (D_gt.isValid(u, v)) {
-        const float depth_ipol_m = D_ipol.getDepth(u, v);
-        const float depth_gt_m   = D_gt.getDepth(u, v);
-
+        const double depth_ipol_m = D_ipol.getDepth(u, v);
+        const double depth_gt_m   = D_gt.getDepth(u, v);
         //error if gt is valid
-        const float d_err = fabs(depth_gt_m - depth_ipol_m);
-
-        const float d_err_squared = d_err * d_err;
-        const float d_err_inv = fabs( 1.0 / depth_gt_m - 1.0 / depth_ipol_m);
-        const float d_err_inv_squared = d_err_inv * d_err_inv;
-        const float d_err_log = fabs(log(depth_ipol_m) - log(depth_gt_m));
-        const float d_err_log_squared = d_err_log * d_err_log;
+        const double d_err = fabs(depth_gt_m - depth_ipol_m);
+        const double d_err_squared = d_err * d_err;
+        const double d_err_inv = fabs( 1.0 / depth_gt_m - 1.0 / depth_ipol_m);
+        const double d_err_inv_squared = d_err_inv * d_err_inv;
+        const double d_err_log = fabs(log(depth_ipol_m) - log(depth_gt_m));
+        const double d_err_log_squared = d_err_log * d_err_log;
 
         //mae
         errors[0] += d_err;
@@ -96,31 +94,31 @@ std::vector<float> depthError (DepthImage &D_gt, DepthImage &D_ipol) {
   }
 
   //normalize mae
-  errors[0] /= (float)num_pixels;
+  errors[0] /= (double)num_pixels;
   //normalize and take sqrt for rmse
-  errors[1] /= (float)num_pixels;
+  errors[1] /= (double)num_pixels;
   errors[1] = sqrt(errors[1]);
   //normalize inverse absoulte error
-  errors[2] /= (float)num_pixels;
+  errors[2] /= (double)num_pixels;
   //normalize and take sqrt for inverse rmse
-  errors[3] /= (float)num_pixels;
+  errors[3] /= (double)num_pixels;
   errors[3] = sqrt(errors[3]);
   //normalize log mae
-  errors[4] /= (float)num_pixels;
+  errors[4] /= (double)num_pixels;
   //first normalize log rmse -> we need this result later
-  const float normalizedSquaredLog = errors[5] / (float)num_pixels;
+  const double normalizedSquaredLog = errors[5] / (double)num_pixels;
   errors[5] = sqrt(normalizedSquaredLog);
   //calculate scale invariant metric
-  errors[6] = sqrt(normalizedSquaredLog - (logSum*logSum / ((float)num_pixels*(float)num_pixels)));
+  errors[6] = normalizedSquaredLog - (logSum*logSum / ((double)num_pixels*(double)num_pixels));
   //normalize abs relative
-  errors[7] /= (float)num_pixels;
+  errors[7] /= (double)num_pixels;
   //normalize squared relative
-  errors[8] /= (float)num_pixels;
+  errors[8] /= (double)num_pixels;
   // return errors
   return errors;
 }
 
-double computeMedian(std::vector<float> value_array)
+double computeMedian(std::vector<double> value_array)
 {
   size_t size = value_array.size();
 
@@ -146,8 +144,8 @@ double computeMedian(std::vector<float> value_array)
   */
 DepthImage medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
   DepthImage abs_D_ipol(D_ipol);
-  std::vector<float> abs_D_gt_values;
-  std::vector<float> abs_D_ipol_values;
+  std::vector<double> abs_D_gt_values;
+  std::vector<double> abs_D_ipol_values;
 
   // extract width and height
   uint32_t width  = D_gt.width();
@@ -157,8 +155,8 @@ DepthImage medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
   for (uint32_t u = 0; u < width; u++) {
     for (uint32_t v = 0; v < height; v++) {
       if (D_gt.isValid(u, v)) {
-        const float depth_gt_abs   = D_gt.getDepth(u, v);
-        const float depth_ipol_abs = D_ipol.getDepth(u, v);
+        const double depth_gt_abs   = D_gt.getDepth(u, v);
+        const double depth_ipol_abs = D_ipol.getDepth(u, v);
         abs_D_gt_values.push_back(depth_gt_abs);
         abs_D_ipol_values.push_back(depth_ipol_abs);
       }
@@ -172,8 +170,8 @@ DepthImage medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
   for (uint32_t u = 0; u < width; u++) {
     for (uint32_t v = 0; v < height; v++) {
       if (D_gt.isValid(u, v)) {
-        const float depth_gt_abs   = D_gt.getDepth(u, v);
-        const float depth_ipol_abs = D_ipol.getDepth(u, v);
+        const double depth_gt_abs   = D_gt.getDepth(u, v);
+        const double depth_ipol_abs = D_ipol.getDepth(u, v);
         abs_D_ipol.setDepth(u, v, depth_ipol_abs + (median_abs_D_gt - median_abs_D_ipol));
       }
     } //end for v
@@ -231,7 +229,7 @@ bool eval (string gt_img_dir, string prediction_dir) {
   }
 
   // std::vector for storing the errors
-  std::vector< std::vector<float> > errors_out;
+  std::vector< std::vector<double> > errors_out;
   // create output directories
   system(("mkdir " + prediction_dir + "/errors_out/").c_str());
   system(("mkdir " + prediction_dir + "/errors_img/").c_str());
@@ -272,7 +270,7 @@ bool eval (string gt_img_dir, string prediction_dir) {
       D_ipol.interpolateBackground();
 
       // add depth errors
-      std::vector<float> errors_out_curr = depthError(D_gt, D_ipol);
+      std::vector<double> errors_out_curr = depthError(D_gt, D_ipol);
 
       // save detailed infos for first 20 images
       if (i < 20) {
@@ -292,7 +290,7 @@ bool eval (string gt_img_dir, string prediction_dir) {
         D_err.write(prediction_dir + "/errors_img/" + prefix + ".png");
 
         // compute maximum depth
-        float max_depth = D_gt.maxDepth();
+        double max_depth = D_gt.maxDepth();
 
         // save original depth image false color coded
         D_orig.writeColor(prediction_dir + "/depth_orig/" + prefix + ".png", max_depth);
@@ -311,7 +309,7 @@ bool eval (string gt_img_dir, string prediction_dir) {
       DepthImage scaled_D_ipol = medianAdjustedDepth(D_gt, D_ipol);
 
       // compute all error metrics on otimally scaled prediction
-      std::vector<float> errors_out_abs = depthError(D_gt, scaled_D_ipol);
+      std::vector<double> errors_out_abs = depthError(D_gt, scaled_D_ipol);
 
       errors_out_curr.reserve(2 * errors_out_curr.size());
       errors_out_curr.insert(errors_out_curr.end(), errors_out_abs.begin(), errors_out_abs.end());
@@ -359,7 +357,7 @@ bool eval (string gt_img_dir, string prediction_dir) {
   // write mean, min and max
   std::cout << "Done. Your evaluation results are:" << std::endl;
   for (int32_t i = 0; i < errors_out[0].size(); i++) {
-    std::cout << "mean " << metrics[i] << ": " << statMean(errors_out, i) << std::endl;
+    std::cout << "mean " << metrics[i] << ": " << roundf(1000000 * statMean(errors_out, i)) / 1000000 << std::endl;
     fprintf(stats_out_file, "mean %s: %f \n", metrics[i], statMean(errors_out, i));
     fprintf(stats_out_file, "min  %s: %f \n", metrics[i], statMin(errors_out, i));
     fprintf(stats_out_file, "max  %s: %f \n", metrics[i], statMax(errors_out, i));
