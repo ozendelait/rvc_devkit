@@ -58,9 +58,9 @@ for scene_dir in sorted(glob.glob(os.path.join(data_base_dir, "scene*_*/"))):
     if scene_name in validation_scenes:
         dst_dir = os.path.join(data_base_dir, "val")
     if scene_name in test_scenes:
-        dst_dir = os.path.join(data_base_dir, "test")
+        dst_dir = os.path.join(data_base_dir, "val")
     if scene_name in rob_test_scenes:
-        dst_dir = os.path.join(data_base_dir, "rob_test")
+        dst_dir = os.path.join(data_base_dir, "test")
     if not os.path.isdir(dst_dir):
         os.makedirs(dst_dir)
     print "Moving {} to {}".format(scene_dir, dst_dir)

@@ -125,7 +125,9 @@ def main():
     raw_input('')
 
     release_file = BASE_URL + RELEASE + '.txt'
+    rob_test_file = BASE_URL + 'v1/scannet_rob_test.txt'
     release_scans = get_release_scans(release_file)
+    rob_test_scans = get_release_scans(rob_test_file)
     file_types = FILETYPES
 
     if args.type:  # download file type
@@ -140,7 +142,8 @@ def main():
         download_label_map(args.out_dir)
     elif args.id:  # download single scan
         scan_id = args.id
-        if scan_id not in release_scans:
+        if (scan_id not in release_scans and not args.rob_task_data) or \
+           (args.rob_task_data and scan_id not in rob_test_scans):
             print('ERROR: Invalid scan id: ' + scan_id)
         else:
             if args.rob_task_data:
@@ -150,6 +153,7 @@ def main():
                 download_scan(scan_id, out_dir, file_types)
     elif args.rob_task_data:  # download rob task data
         download_rob_task_data(args.out_dir, release_scans)
+        download_rob_task_data(args.out_dir, rob_test_scans)
     else:  # download entire release
         if len(file_types) == len(FILETYPES):
             print('WARNING: You are downloading the entire ScanNet release which requires '
