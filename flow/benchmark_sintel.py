@@ -64,8 +64,7 @@ class Sintel(Benchmark):
                 file_out = os.path.join(seq_dir_out, prefix_out + '_{0:02d}'.format(frameno))
 
                 if ext_in == '.png' and ext_out == '.png':
-                    #TODO: move
-                    shutil.copy2(os.path.join(seq_dir_in, f),
+                    shutil.move(os.path.join(seq_dir_in, f),
                                 file_out + ext_out)
                 elif ext_in == '.flo' and ext_out == '.png':
                     ConvertMiddleburyFloToKittiPng(os.path.join(seq_dir_in, f),
@@ -98,9 +97,8 @@ class Sintel(Benchmark):
 
 
         # Delete original folder
-        # TODO: reenable
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
 
 
     def ConvertToMiddleburyFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
@@ -115,8 +113,7 @@ class Sintel(Benchmark):
                     MakeDirsExistOk(dir_out)
 
                     for f in os.listdir(dir_in):
-                        #TODO: move
-                        shutil.copy2(os.path.join(dir_in, f), os.path.join(dir_out, f))
+                        shutil.move(os.path.join(dir_in, f), os.path.join(dir_out, f))
 
             if testtrain == 'training':
                 for pas in ['clean', 'final']:
@@ -126,13 +123,11 @@ class Sintel(Benchmark):
                         MakeDirsExistOk(dir_out)
 
                         for f in os.listdir(dir_in):
-                            # TODO: move
-                            shutil.copy2(os.path.join(dir_in, f), os.path.join(dir_out, f))
+                            shutil.move(os.path.join(dir_in, f), os.path.join(dir_out, f))
 
         # Delete original folder
-        # TODO: reenable
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
 
 
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):

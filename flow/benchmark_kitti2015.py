@@ -57,29 +57,25 @@ class Kitti2015(Benchmark):
         outdir_training_images = os.path.join(training_dir_path, 'image_2')
         MakeDirsExistOk(outdir_training_images)
         for f in os.listdir(indir_training_images):
-            #TODO: move
-            shutil.copy2(os.path.join(indir_training_images, f),
+            shutil.move(os.path.join(indir_training_images, f),
                         os.path.join(outdir_training_images, self.Prefix() + f))
 
         indir_training_flow = os.path.join(unpack_dir_path, 'training', 'flow_occ')
         outdir_training_flow = os.path.join(training_dir_path, 'flow_occ')
         MakeDirsExistOk(outdir_training_flow)
         for f in os.listdir(indir_training_flow):
-            #TODO: move
-            shutil.copy2(os.path.join(indir_training_flow, f),
+            shutil.move(os.path.join(indir_training_flow, f),
                         os.path.join(outdir_training_flow, self.Prefix() + f))
 
         indir_test_images = os.path.join(unpack_dir_path, 'testing', 'image_2')
         outdir_test_images = os.path.join(test_dir_path, 'image_2')
         MakeDirsExistOk(outdir_test_images)
         for f in os.listdir(indir_test_images):
-            #TODO: move
-            shutil.copy2(os.path.join(indir_test_images, f),
+            shutil.move(os.path.join(indir_test_images, f),
                         os.path.join(outdir_test_images, self.Prefix() + f))
 
-        # TODO: reenable
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'testing'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'testing'))
 
     def ConvertToMiddleburyFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         # Convert downloaded files to Middlebury format
@@ -102,8 +98,7 @@ class Kitti2015(Benchmark):
 
                 # Move image
                 outname = 'frame_{0:04d}.png'.format(frameno)
-                #TODO: move
-                shutil.copy2(os.path.join(image_path, image_name),
+                shutil.move(os.path.join(image_path, image_name),
                             os.path.join(output_dataset_image_path, outname)) 
 
             if folder_names[1] == training_dir_path:
@@ -125,8 +120,7 @@ class Kitti2015(Benchmark):
 
 
             # Delete original folder
-            # Todo: reenable
-            # shutil.rmtree(input_folder_path)
+            shutil.rmtree(input_folder_path)
     
 
 

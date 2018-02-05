@@ -58,15 +58,10 @@ def DeleteFolderContents(folder_path):
 # Creates the given directory, respectively deletes all content of the directory
 # in case it already exists.
 def MakeCleanDirectory(folder_path):
-    # TODO: Re-enable
-
-    # if os.path.isdir(folder_path):
-    #     DeleteFolderContents(folder_path)
-    # else:
-    #     MakeDirsExistOk(folder_path)
-
-    # TODO: Delete
-    MakeDirsExistOk(folder_path)
+    if os.path.isdir(folder_path):
+        DeleteFolderContents(folder_path)
+    else:
+        MakeDirsExistOk(folder_path)
 
 
 # Downloads the given URL to a file in the given directory. Returns the

@@ -66,8 +66,7 @@ class Middlebury(Benchmark):
                 file_out = os.path.join(seq_dir_out, prefix_out + '_{0:02d}'.format(frameno))
 
                 if ext_in == '.png' and ext_out == '.png':
-                    #TODO: move
-                    shutil.copy2(os.path.join(seq_dir_in, f),
+                    shutil.movev(os.path.join(seq_dir_in, f),
                                 file_out + ext_out)
                 elif ext_in == '.flo' and ext_out == '.png':
                     ConvertMiddleburyFloToKittiPng(os.path.join(seq_dir_in, f),
@@ -99,9 +98,8 @@ class Middlebury(Benchmark):
 
 
         # Delete original folder
-        # TODO: reenable
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
 
 
     def ConvertToMiddleburyFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
@@ -117,8 +115,7 @@ class Middlebury(Benchmark):
                 for f in os.listdir(dir_in):
                     frameno = f[:f.rfind('.')][-2:]
                     frameno = int(frameno)
-                    #TODO: move
-                    shutil.copy2(os.path.join(dir_in, f),
+                    shutil.move(os.path.join(dir_in, f),
                                  os.path.join(dir_out, 'frame_{0:04d}.png'.format(frameno)))
 
         for (testtrain, testtrain_dir) in [('other-gt-flow', training_dir_path),]:
@@ -130,15 +127,13 @@ class Middlebury(Benchmark):
                 for f in os.listdir(dir_in):
                     frameno = f[:f.rfind('.')][-2:]
                     frameno = int(frameno)
-                    #TODO: move
-                    shutil.copy2(os.path.join(dir_in, f),
+                    shutil.move(os.path.join(dir_in, f),
                                  os.path.join(dir_out, 'frame_{0:04d}.flo'.format(frameno)))
 
 
         # Delete original folder
-        # TODO: reenable
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        # shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
 
 
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
@@ -202,7 +197,6 @@ class Middlebury(Benchmark):
         archive_filename = ZipDirectory(archive_base_path,
                                         os.path.join(pack_dir_path, 'middlebury'))
 
-        # TODO: Re-enable
-        # DeleteFolderContents(pack_dir_path)
+        DeleteFolderContents(pack_dir_path)
         return archive_filename
     

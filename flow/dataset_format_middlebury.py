@@ -16,8 +16,7 @@ class MiddleburyFormat(DatasetFormat):
     
     
     def Website(self):
-        #TODO
-        return 'http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow'
+        return 'https://vision.middlebury.edu/flow'
     
     
     def ListDatasets(self, dataset_folder_path):
