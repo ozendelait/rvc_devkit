@@ -142,8 +142,9 @@ double computeMedian(std::vector<double> value_array)
   * \return Scaled depth maps such that first depth map is optimally adjusted 
   *         to absolute GT depth, and second adjusted to inverse GT depth
   */
-DepthImage medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
+std::vector<DepthImage> medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
   DepthImage abs_D_ipol(D_ipol);
+  DepthImage inv_D_ipol(D_ipol);
   std::vector<double> abs_D_gt_values;
   std::vector<double> abs_D_ipol_values;
 
@@ -173,11 +174,16 @@ DepthImage medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
         const double depth_gt_abs   = D_gt.getDepth(u, v);
         const double depth_ipol_abs = D_ipol.getDepth(u, v);
         abs_D_ipol.setDepth(u, v, depth_ipol_abs + (median_abs_D_gt - median_abs_D_ipol));
+        inv_D_ipol.setDepth(u, v, 1. / (1. / depth_ipol_abs + (1. / median_abs_D_gt - 1. / median_abs_D_ipol)));
       }
     } //end for v
   } //end for u
 
-  return abs_D_ipol;
+  std::vector<DepthImage> depth_images;
+  depth_images.push_back(abs_D_ipol);
+  depth_images.push_back(inv_D_ipol);
+
+  return depth_images;
 }
 
 
@@ -306,13 +312,17 @@ bool eval (string gt_img_dir, string prediction_dir) {
 
       // compute median of D_gt and D_ipol, then adjust values from
       // prediction such that medians match for both images
-      DepthImage scaled_D_ipol = medianAdjustedDepth(D_gt, D_ipol);
+      std::vector<DepthImage> depth_images = medianAdjustedDepth(D_gt, D_ipol);
+      DepthImage scaled_D_ipol = depth_images[0];
+      DepthImage inv_scaled_D_ipol = depth_images[1];
 
       // compute all error metrics on otimally scaled prediction
       std::vector<double> errors_out_abs = depthError(D_gt, scaled_D_ipol);
+      std::vector<double> errors_out_inv = depthError(D_gt, inv_scaled_D_ipol);
 
-      errors_out_curr.reserve(2 * errors_out_curr.size());
+      errors_out_curr.reserve(3 * errors_out_curr.size());
       errors_out_curr.insert(errors_out_curr.end(), errors_out_abs.begin(), errors_out_abs.end());
+      errors_out_curr.insert(errors_out_curr.end(), errors_out_inv.begin(), errors_out_inv.end());
       errors_out.push_back(errors_out_curr);
 
     // on error, exit
@@ -352,7 +362,16 @@ bool eval (string gt_img_dir, string prediction_dir) {
                            "(scaled) log rmse", 
                            "(scaled) scale invariant log", 
                            "(scaled) abs relative", 
-                           "(scaled) squared relative"
+                           "(scaled) squared relative",
+                           "(inv.scaled) mae", 
+                           "(inv.scaled) rmse", 
+                           "(inv.scaled) inverse mae", 
+                           "(inv.scaled) inverse rmse", 
+                           "(inv.scaled) log mae", 
+                           "(inv.scaled) log rmse", 
+                           "(inv.scaled) scale invariant log", 
+                           "(inv.scaled) abs relative", 
+                           "(inv.scaled) squared relative"
                          };
   // write mean, min and max
   std::cout << "Done. Your evaluation results are:" << std::endl;
