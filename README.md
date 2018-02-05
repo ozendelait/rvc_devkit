@@ -7,7 +7,10 @@ The devkits make it easy to participate in the challenge by:
 * converting them to a common format, and
 * creating archives for submission to the individual benchmarks.
 
+At the moment, the devkits should be regarded as beta versions. Please report any
+issues or suggestions for improvement to Joel Janai (joel.janai at tue.mpg.de).
 Any updates to the devkits will be provided via this repository.
+
 Notice that using the devkits is not required for participating in the
 challenge: alternatively, algorithms can be manually run on each dataset and
 results submitted to all benchmarks individually (as long as the same method and
