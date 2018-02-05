@@ -20,9 +20,10 @@ class Kitti2015Format(DatasetFormat):
     
     
     def ListDatasets(self, dataset_folder_path):
-        return [dataset[:dataset.rfind('_')] for dataset
-                in os.listdir(os.path.join(dataset_folder_path, 'image_2'))
-                if os.path.isfile(os.path.join(dataset_folder_path, 'image_2', dataset))]
+        imagepath = os.path.join(dataset_folder_path, 'image_2')
+        return [dataset
+		for dataset in os.listdir(imagepath)
+                if os.path.isfile(os.path.join(imagepath, dataset))]
     
     
     def ListMethods(self, dataset_folder_path, dataset_name):
@@ -61,8 +62,9 @@ class Kitti2015Format(DatasetFormat):
     def ConvertSeq(self, in_dir, out_dir, seq, in_ext, out_ext):
         # in_dir contains all sequences as files SEQ_{xx}
         # out_dir contains subdirs SEQ.
-        out_dir_seq = os.path.join(out_dir, seq)
         MakeDirsExistOk(out_dir_seq)
+
+        out_dir_seq = os.path.join(out_dir, seq)
         files_to_copy = [f for f in sorted(os.listdir(in_dir))
                          if (f.endswith(in_ext) and f.startswith(seq))]
         files_to_copy = [os.path.join(in_dir, f) for f in files_to_copy]

@@ -53,6 +53,7 @@ class Sintel(Benchmark):
             # to a given output directory.
             prefix_out = self.Prefix() + pas + '_' + seq
             files = [f for f in os.listdir(seq_dir_in) if f.endswith(ext_in)]
+            MakeDirsExistOk(seq_dir_out)
 
             for f in files:
                 frameno = f[f.rfind('_')+1:f.rfind('.')]
