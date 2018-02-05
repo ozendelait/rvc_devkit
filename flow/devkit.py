@@ -204,8 +204,8 @@ def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
     # Clean up unpack and archive directories.
     #TODO: Re-enable
     # shutil.rmtree(unpack_dir_path)
-    if not keep_archives:
-        shutil.rmtree(archive_dir_path)
+    # if not keep_archives:
+    #     shutil.rmtree(archive_dir_path)
     
     print('')
     print('Done! The datasets are in:')

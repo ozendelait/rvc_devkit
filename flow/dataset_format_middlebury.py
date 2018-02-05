@@ -21,6 +21,7 @@ class MiddleburyFormat(DatasetFormat):
     
     
     def ListDatasets(self, dataset_folder_path):
+        print(dataset_folder_path)
         imagepath = os.path.join(dataset_folder_path, 'images')
         return [dataset
                 for dataset in os.listdir(imagepath)
@@ -31,19 +32,20 @@ class MiddleburyFormat(DatasetFormat):
         # For existing methods, we expect flow files in
         # dataset_folder_path/images/dataset_name/frame_XX.flo
         #
+        print(dataset_folder_path, dataset_name)
         methods = []
         folder_list = [folder for folder in os.listdir(dataset_folder_path)
                        if folder.endswith('_flow')
                        and os.path.isdir(os.path.join(dataset_folder_path, folder))]
 
         for folder in folder_list:
-            folder_path = os.path.join(dataset_folder_path, folder)
+            folder_path = os.path.join(dataset_folder_path, folder, dataset_name)
 
             # Check if any flow files exist corresponding to given dataset
             flow_files = [f for f in os.listdir(folder_path)
                           if f.endswith('.flo') and f.startswith('frame_')]
             if len(flow_files) > 0:
-                method_name = folder[:folder.lfind('_flow')]
+                method_name = folder[:folder.rfind('_flow')]
                 methods.append(method_name)
 
         return methods

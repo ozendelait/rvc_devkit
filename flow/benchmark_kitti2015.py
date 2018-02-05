@@ -153,7 +153,7 @@ class Kitti2015(Benchmark):
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
         # Create output directory
-        flow_out_path = os.path.join(pack_dir_path, 'flow')
+        flow_out_path = os.path.join(pack_dir_path, 'kitti', 'flow')
         MakeDirsExistOk(flow_out_path)
         
         # Only test dataset submission is supported.
@@ -173,10 +173,11 @@ class Kitti2015(Benchmark):
                     'frame_0010.flo')
                 
                 dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_10.png')
-                ConvertMiddleburyFloToKittyPng(src_flo_path, dest_png_path)
+                ConvertMiddleburyFloToKittiPng(src_flo_path, dest_png_path)
        
         # Create the archive and clean up.
-        archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
+        archive_filename = ZipDirectory(archive_base_path,
+                                        os.path.join(pack_dir_path, 'kitti'))
         DeleteFolderContents(pack_dir_path)
         
         return archive_filename

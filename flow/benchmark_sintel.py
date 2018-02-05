@@ -9,6 +9,9 @@ from dataset_format_kitti2015 import *
 from util import *
 from util_flow import *
 
+import platform
+import subprocess
+
 
 class Sintel(Benchmark):
     def Name(self):
@@ -146,8 +149,15 @@ class Sintel(Benchmark):
                 metadata_dict,
                 training_dir_path,
                 test_dir_path)
- 
-    
+
+        # In any case, we need to save the bundler.
+        bundler_path_in = os.path.join(unpack_dir_path, 'bundler')
+        training_path_parent = training_dir_path[:training_dir_path.rstrip('/').rfind('/')]
+        bundler_path_out = os.path.join(training_path_parent, 'bundler')
+        if os.path.isdir(bundler_path_out):
+            shutil.rmtree(bundler_path_out)
+        shutil.copytree(bundler_path_in, bundler_path_out)
+
     def CanCreateSubmissionFromFormat(self, dataset_format):
         return isinstance(dataset_format, MiddleburyFormat) or isinstance(dataset_format, Kitti2015Format)
     
@@ -162,9 +172,13 @@ class Sintel(Benchmark):
         # Only test dataset submission is supported.
         for (benchmark_and_dataset_name, original_dataset_name) in test_datasets:
             # Format of benchmark_and_dataset_name is Sintel_pas_seq.
-            pas, seq = original_dataset_name.split('_')[:2]
+            parts = original_dataset_name.split('_')
+            pas = parts[0]
+            seq = '_'.join(parts[1:])
+            # pas, seq = original_dataset_name.split('_')[:2]
 
             flow_dataset_path = os.path.join(flow_out_path, pas, seq)
+            MakeDirsExistOk(flow_dataset_path)
 
             if isinstance(dataset_format, Kitti2015Format):
                 dir_in = os.path.join(test_dir_path,
@@ -185,12 +199,28 @@ class Sintel(Benchmark):
                 for f in [f for f in os.listdir(dir_in) if f.endswith('.flo')]:
                     shutil.copy2(os.path.join(dir_in, f), os.path.join(flow_dataset_path, f))
 
-        # TODO: Create bundler file
-        archive_filename = None
 
-        # Create the archive and clean up.
-        # archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
-        # DeleteFolderContents(pack_dir_path)
-        
-        # return archive_filename
+        training_path_parent = training_dir_path[:training_dir_path.rstrip('/').rfind('/')]
+        bundler_path = os.path.join(training_path_parent, 'bundler')
+
+        # 
+        if platform.system() == 'Linux':
+            bundler_bin = os.path.join(bundler_path, 'linux-x64', 'bundler')
+        elif platform.system() == 'Darwin':
+            bundler_bin = os.path.join(bundler_path, 'osx', 'bundler')
+        elif platform.system() == 'Windows':
+            bundler_bin = os.path.join(bundler_path, 'win', 'bundler.exe')
+        else:
+            print('== Warning: Unsupported OS for Sintel bundler. ==')
+
+
+        archive_filename = archive_base_path + '.lzma'
+        cmd = [bundler_bin,
+               os.path.join(flow_out_path, 'clean'),
+               os.path.join(flow_out_path, 'final'),
+               archive_filename]
+
+        subprocess.call(cmd)
+
+        return archive_filename
     

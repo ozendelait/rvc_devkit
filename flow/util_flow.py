@@ -73,9 +73,6 @@ def ReadKittiPngFile(path):
             # if mask[ind] > 0:
             #     print(u[ind], v[ind], mask[ind], row[3*x], row[3*x+1], row[3*x+2])
 
-    print('Metadata:')
-    print(data[3])
-
     png_reader.close()
 
     return (width, height, u, v, mask)

@@ -171,7 +171,7 @@ class Middlebury(Benchmark):
         for (benchmark_and_dataset_name, original_dataset_name) in test_datasets:
             seq = original_dataset_name
 
-            flow_dataset_path = os.path.join(pack_dir_path, seq)
+            flow_dataset_path = os.path.join(pack_dir_path, 'middlebury', seq)
             MakeDirsExistOk(flow_dataset_path)
 
             if isinstance(dataset_format, Kitti2015Format):
@@ -199,7 +199,8 @@ class Middlebury(Benchmark):
                                  os.path.join(flow_dataset_path, 'flow{0:02d}'.format(frameno)))
 
         # Create the archive and clean up.
-        archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
+        archive_filename = ZipDirectory(archive_base_path,
+                                        os.path.join(pack_dir_path, 'middlebury'))
 
         # TODO: Re-enable
         # DeleteFolderContents(pack_dir_path)
