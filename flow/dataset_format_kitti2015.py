@@ -21,7 +21,7 @@ class Kitti2015Format(DatasetFormat):
     
     def ListDatasets(self, dataset_folder_path):
         imagepath = os.path.join(dataset_folder_path, 'image_2')
-        return [dataset
+        return [dataset[:dataset.rfind('_')]
 		for dataset in os.listdir(imagepath)
                 if os.path.isfile(os.path.join(imagepath, dataset))]
     
@@ -40,19 +40,19 @@ class Kitti2015Format(DatasetFormat):
 
             # Check if any flow files exist corresponding to given dataset
             flow_files = [f for f in os.listdir(folder_path)
-                          if f.endswith('.png') and f[:rfind('_')]==dataset_name]
+                          if f.endswith('.png') and f[:f.rfind('_')]==dataset_name]
             if len(flow_files) > 0:
-                method_name = folder[:folder.lfind('_flow_occ')]
+                method_name = folder[:folder.rfind('_flow_occ')]
                 methods.append(method_name)
 
         return methods
     
     
     def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name):
-        flow_dir_path = os.path.join(dataset_folder_path, method_name + '_flow_occ')
-        MakeDirsExistOk(flow_dir_path)
-        # We do not have any timings -- time always has to be entered manually.
-        return [dataset_folder_path, dataset_name, flow_dir_path]
+        im0_path = os.path.join(dataset_folder_path, 'image_2', dataset_name +'_10.png')
+        im1_path = os.path.join(dataset_folder_path, 'image_2', dataset_name +'_11.png')
+        output_dir_path = os.path.join(dataset_folder_path, method_name + '_flow_occ', dataset_name + '_10.png')
+        return [im0_path, im1_path, output_dir_path]
     
     
     def CanConvertInputToFormat(self, dataset_format):
