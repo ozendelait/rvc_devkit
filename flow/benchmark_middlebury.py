@@ -66,7 +66,7 @@ class Middlebury(Benchmark):
                 file_out = os.path.join(seq_dir_out, prefix_out + '_{0:02d}'.format(frameno))
 
                 if ext_in == '.png' and ext_out == '.png':
-                    shutil.movev(os.path.join(seq_dir_in, f),
+                    shutil.move(os.path.join(seq_dir_in, f),
                                 file_out + ext_out)
                 elif ext_in == '.flo' and ext_out == '.png':
                     ConvertMiddleburyFloToKittiPng(os.path.join(seq_dir_in, f),
