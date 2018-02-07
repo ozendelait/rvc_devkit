@@ -4,13 +4,14 @@ import png
 import shutil
 
 from benchmark import *
+from benchmark_kitti2015 import KITTI2015
 from dataset_format_kitti2015 import *
 from util import *
 from util_segmentation import *
 
 
 
-class Cityscapes(Benchmark):
+class Cityscapes(KITTI2015):
 
     def Name(self):
         return 'Cityscapes Instance-Level Semantic Labeling Task'
@@ -113,17 +114,3 @@ class Cityscapes(Benchmark):
 
     def CanCreateSubmissionFromFormat(self, dataset_format):
         return isinstance(dataset_format, KITTI2015Format)
-    
-    
-    def CreateSubmission(self, task_name, dataset_format, method, pack_dir_path,
-                         metadata_dict, training_dir_path, training_datasets,
-                         test_dir_path, test_datasets, archive_base_path):
-        # FILE STRUCTURE:
-        # your_algo_name/pred_list/FILENAME.txt
-        # your_algo_name/pred_img/FILENAME_MASKID.png
-        
-        # Create the archive and clean up.
-        archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
-        DeleteFolderContents(pack_dir_path)
-        
-        return archive_filename
