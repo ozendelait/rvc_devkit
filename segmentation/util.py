@@ -41,7 +41,6 @@ def MakeDirsExistOk(directory_path):
 
 # Deletes all files and folders within the given folder.
 def DeleteFolderContents(folder_path):
-  return
   for file_name in os.listdir(folder_path):
     file_path = os.path.join(folder_path, file_name)
     try:
