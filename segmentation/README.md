@@ -73,7 +73,7 @@ or semantic segmentation method must be named and placed as follows:
 ```
 datasets_kitti2015/
     test/
-        MYALGO_instance/
+        algo_MYALGO_instance/
             pred_list/
                 <dataset>_<img_name>.txt
                 ...
@@ -81,7 +81,7 @@ datasets_kitti2015/
                 <dataset>_<img_name>_000.png
                 <dataset>_<img_name>_001.png
                 ...
-        MYALGO_semantic/
+        algo_MYALGO_semantic/
             <dataset>_<img_name>.png
             ...
 ```
@@ -105,7 +105,7 @@ For example, the Kitti2015_000000_10.txt may contain:
 ...
 ```
 
-with binary instance masks in `datasets_kitti2015/test/MYALGO_instance/pred_img/`:
+with binary instance masks in `datasets_kitti2015/test/algo_MYALGO_instance/pred_img/`:
 ```
 Kitti2015_000000_10_000.png
 Kitti2015_000000_10_001.png

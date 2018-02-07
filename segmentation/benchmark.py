@@ -98,7 +98,7 @@ class Benchmark(object):
     # can be used to create the file system structure required in the submission
     # archive. When the method finishes, this directory must be empty again.
     @abstractmethod
-    def CreateSubmission(self, dataset_format, method, pack_dir_path,
+    def CreateSubmission(self, task_name, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
         raise NotImplementedError()

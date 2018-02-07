@@ -9,6 +9,7 @@ from benchmark_scannet import ScanNet
 from dataset_format_kitti2015 import KITTI2015Format
 from devkit import *
 
+
 if __name__ == '__main__':
     # Define the list of benchmarks supported by this script (as listed on http://www.robustvision.net/index.php).
     benchmarks = [KITTI2015(), WildDash(), Cityscapes(), ScanNet()]

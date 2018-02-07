@@ -22,33 +22,42 @@ class KITTI2015Format(DatasetFormat):
     
     def ListDatasets(self, dataset_folder_path):
         input_folder_path = join(dataset_folder_path, "image_2")
-        return [dataset for dataset
-                in os.listdir(input_folder_path)
-                if os.path.isdir(join(input_folder_path, dataset))]
+        datasets = [fname for fname
+                    in os.listdir(input_folder_path)
+                    if os.path.isfile(join(input_folder_path, fname))]
+        return datasets
+
     
-    
-    def ListMethods(self, dataset_folder_path, dataset_name):
-        result_file_scheme = [('', '.txt')]
-        
-        contains_all_result_files = lambda path, method : (
-            all([os.path.isfile(join(path, prefix + method + suffix))
-                for (prefix, suffix) in result_file_scheme]))
-        
-        dataset_path = join(dataset_folder_path, dataset_name)
-        first_prefix = result_file_scheme[0][0]
-        first_suffix = result_file_scheme[0][1]
-        
-        method_list = []
-        
-        for filename in os.listdir(dataset_path):
-            if filename.startswith(first_prefix) and filename.endswith(first_suffix):
-                method = filename[len(first_prefix):-len(first_suffix)]  # strip prefix and suffix
-                if contains_all_result_files(dataset_path, method):
-                    method_list.append(method)
-        
-        return method_list
-    
-    
+    def ListMethods(self, task_name, dataset_folder_path, dataset_name):
+        if task_name == "semantic":
+            # find all algorithm directories with semantic segmentation results
+            algo_dirs = [dd for dd in os.listdir(dataset_folder_path) if dd.startswith("algo_")
+                         and dd.endswith("_semantic") and os.path.isdir(os.path.join(dataset_folder_path, dd))]
+
+            methods = []
+            # check if result file for specific dataset image exists
+            for algo_dir in algo_dirs:
+                if os.path.isfile(os.path.join(dataset_folder_path, algo_dir, dataset_name)):
+                    algo_name = "_".join(algo_dir.split("_")[1:-1])
+                    methods.append(algo_name)
+
+            return methods
+
+        if task_name == "instance":
+            # find all algorithm directories with instance segmentation results
+            algo_dirs = [dd for dd in os.listdir(dataset_folder_path) if dd.startswith("algo_")
+                         and dd.endswith("_instance") and os.path.isdir(os.path.join(dataset_folder_path, dd))]
+
+            methods = []
+            # check if result file for specific dataset image exists
+            for algo_dir in algo_dirs:
+                if os.path.isfile(os.path.join(dataset_folder_path, algo_dir, "pred_list", dataset_name.replace(".png", ".txt"))):
+                    algo_name = "_".join(algo_dir.split("_")[1:-1])
+                    methods.append(algo_name)
+
+            return methods
+
+
     def PrepareRunningMethod(self, method_name, dataset_folder_path, dataset_name,test=False):
         image_dir = join(dataset_folder_path, dataset_name, 'training', 'image_2')
         semantic_instance_dir = join(dataset_folder_path, dataset_name, 'training', 'instance')

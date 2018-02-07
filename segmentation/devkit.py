@@ -217,7 +217,7 @@ def DownloadAndConvertDatasets(chosen_format, dataset_formats, keep_archives,
     print('  ' + test_dir_path)
 
 
-def DeterminePossibleSubmissions(training_dir_path, test_dir_path, dataset_format, benchmarks):
+def DeterminePossibleSubmissions(task_name, training_dir_path, test_dir_path, dataset_format, benchmarks):
     # Flags whether a dataset required for one of the categories above has
     # already been checked. If a flag is set, no method which only occurs
     # in subsequent datasets can be complete anymore.
@@ -233,7 +233,7 @@ def DeterminePossibleSubmissions(training_dir_path, test_dir_path, dataset_forma
     # Check training dataset results.
     for benchmark_and_dataset_name in dataset_format.ListDatasets(training_dir_path):
         benchmark = GetBenchmarkFromDatasetDirName(benchmark_and_dataset_name, benchmarks)
-        methods_with_results = dataset_format.ListMethods(training_dir_path, benchmark_and_dataset_name)
+        methods_with_results = dataset_format.ListMethods(task_name, training_dir_path, benchmark_and_dataset_name)
         
         # If results on this dataset are required for training submissions,
         # keep only those methods in the training submission list which
@@ -264,7 +264,7 @@ def DeterminePossibleSubmissions(training_dir_path, test_dir_path, dataset_forma
     # Check test dataset results.
     for benchmark_and_dataset_name in dataset_format.ListDatasets(test_dir_path):
         benchmark = GetBenchmarkFromDatasetDirName(benchmark_and_dataset_name, benchmarks)
-        methods_with_results = dataset_format.ListMethods(test_dir_path, benchmark_and_dataset_name)
+        methods_with_results = dataset_format.ListMethods(task_name, test_dir_path, benchmark_and_dataset_name)
         
         # Keep only those methods in the full submission list which have
         # results on the dataset.
@@ -280,7 +280,7 @@ def DeterminePossibleSubmissions(training_dir_path, test_dir_path, dataset_forma
     return (training_submission_methods, full_submission_methods)
 
 
-def CreateSubmissionArchives(chosen_format, dataset_formats, method,
+def CreateSubmissionArchives(task_name, chosen_format, dataset_formats, method,
                              training_only, metadata_dir_path,
                              training_dir_path, test_dir_path, benchmarks):
     submission_dir_path = 'submission_archives'
@@ -322,7 +322,7 @@ def CreateSubmissionArchives(chosen_format, dataset_formats, method,
         
         if benchmark.CanCreateSubmissionFromFormat(chosen_format):
             # Create the submission archive directly.
-            archive_name = benchmark.CreateSubmission(
+            archive_name = benchmark.CreateSubmission(task_name,
                 chosen_format, method, pack_dir_path, metadata_dict,
                 training_dir_path, training_datasets, test_dir_path, test_datasets,
                 os.path.join(submission_dir_path, benchmark.Prefix() + method))
@@ -379,7 +379,7 @@ def CreateSubmissionArchives(chosen_format, dataset_formats, method,
                     shutil.rmtree(os.path.join(conversion_dir_path, str(conversion_dir_index - 1)))
                 conversion_dir_index += 1
             
-            archive_name = benchmark.CreateSubmission(
+            archive_name = benchmark.CreateSubmission(task_name,
                 dataset_format, method, pack_dir_path, metadata_dict,
                 src_training_dir_path, training_datasets, src_test_dir_path, test_datasets,
                 os.path.join(submission_dir_path, benchmark.Prefix() + method))
@@ -472,7 +472,8 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
             # We do not offer test-data only submissions (some benchmarks even
             # require to submit both training and test results).
             (training_submission_methods, full_submission_methods) = (
-                DeterminePossibleSubmissions(TrainingDatasetsPath(format_info[dataset_format]['datasets_dir']),
+                DeterminePossibleSubmissions(task_name,
+                                             TrainingDatasetsPath(format_info[dataset_format]['datasets_dir']),
                                              TestDatasetsPath(format_info[dataset_format]['datasets_dir']),
                                              dataset_format,
                                              benchmarks))
@@ -544,7 +545,7 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
         elif len(downloaded_dataset_formats) > 1:
             chosen_format = ParseFormatNameOrExit(arguments[0], dataset_formats)
             arguments = arguments[1:]
-        
+
         method = arguments[0]
         is_training_submission = len(arguments) >= 2 and arguments[1] == '--training'
         
@@ -554,7 +555,7 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
             sys.exit(1)
         
         datasets_dir_path = format_info[chosen_format]['datasets_dir']
-        CreateSubmissionArchives(chosen_format, dataset_formats, method,
+        CreateSubmissionArchives(task_name, chosen_format, dataset_formats, method,
                                  is_training_submission,
                                  MetadataPath(datasets_dir_path),
                                  TrainingDatasetsPath(datasets_dir_path),
@@ -660,7 +661,7 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
             chosen_format = action[1]
             is_training_submission = action[0] == 'training_submission'
             datasets_dir_path = format_info[chosen_format]['datasets_dir']
-            CreateSubmissionArchives(chosen_format, dataset_formats, method,
+            CreateSubmissionArchives(task_name, chosen_format, dataset_formats, method,
                                      is_training_submission,
                                      MetadataPath(datasets_dir_path),
                                      TrainingDatasetsPath(datasets_dir_path),

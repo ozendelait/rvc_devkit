@@ -107,7 +107,7 @@ class ScanNet(Benchmark):
         return isinstance(dataset_format, KITTI2015Format)
     
     
-    def CreateSubmission(self, dataset_format, method, pack_dir_path,
+    def CreateSubmission(self, task_name, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
         # FILE STRUCTURE:

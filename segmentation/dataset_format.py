@@ -39,7 +39,7 @@ class DatasetFormat(object):
     # the given dataset exists. dataset_folder_path specifies the path to the
     # training or test folder in which the dataset lies.
     @abstractmethod
-    def ListMethods(self, dataset_folder_path, dataset_name):
+    def ListMethods(self, task_name, dataset_folder_path, dataset_name):
         raise NotImplementedError()
     
     
