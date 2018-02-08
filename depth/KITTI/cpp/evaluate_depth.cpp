@@ -118,35 +118,25 @@ std::vector<double> depthError (DepthImage &D_gt, DepthImage &D_ipol) {
   return errors;
 }
 
-double computeMedian(std::vector<double> value_array)
-{
-  size_t size = value_array.size();
-
-  if (size == 0)
-    return 0;
-  else if (size == 1)
-    return value_array[0];
-  else
-  {
-    std::sort(value_array.begin(), value_array.end());
-    if (size % 2 == 0)
-      return (value_array[size / 2 - 1] + value_array[size / 2]) / 2;
-    else 
-      return value_array[size / 2];
-  }
-}
-
-/** \brief Method to adjust median depth of prediction to match GT depth maps.
+/** \brief Method to adjust depth of prediction to match GT depth maps.
   * \param D_gt the ground truth depth image
-  * \param D_ipol the interpolated depth image to be benchmarked
+  * \param D_pred the interpolated depth image to be benchmarked
   * \return Scaled depth maps such that first depth map is optimally adjusted 
-  *         to absolute GT depth, and second adjusted to inverse GT depth
+  *         to absolute GT depth (mean squared error), second adjusted to 
+  *         inverse GT depth, and third to log depth
   */
-std::vector<DepthImage> medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol) {
-  DepthImage abs_D_ipol(D_ipol);
-  DepthImage inv_D_ipol(D_ipol);
-  std::vector<double> abs_D_gt_values;
-  std::vector<double> abs_D_ipol_values;
+std::vector<DepthImage> scaleAdjustedDepth(DepthImage &D_gt, DepthImage &D_pred) {
+  DepthImage abs_D_pred(D_pred);
+  DepthImage inv_D_pred(D_pred);
+  DepthImage log_D_pred(D_pred);
+
+  int num_valid_pixels          = 0;
+  double sum_valid_predPred_abs = 0.0;
+  double sum_valid_predGt_abs   = 0.0;
+  double sum_valid_predPred_inv = 0.0;
+  double sum_valid_predGt_inv   = 0.0;
+  double sum_valid_log_diff     = 0.0;
+
 
   // extract width and height
   uint32_t width  = D_gt.width();
@@ -155,33 +145,41 @@ std::vector<DepthImage> medianAdjustedDepth(DepthImage &D_gt, DepthImage &D_ipol
   // iterate all pixels to find median values
   for (uint32_t u = 0; u < width; u++) {
     for (uint32_t v = 0; v < height; v++) {
-      if (D_gt.isValid(u, v)) {
+      if (D_pred.isValidAndPositive(u, v) && D_gt.isValidAndPositive(u, v)) {
+        num_valid_pixels += 1;
+        const double depth_pred_abs = D_pred.getDepth(u, v);
         const double depth_gt_abs   = D_gt.getDepth(u, v);
-        const double depth_ipol_abs = D_ipol.getDepth(u, v);
-        abs_D_gt_values.push_back(depth_gt_abs);
-        abs_D_ipol_values.push_back(depth_ipol_abs);
+        // optimize MSE of prediction
+        sum_valid_predPred_abs += depth_pred_abs * depth_pred_abs;
+        sum_valid_predGt_abs   += depth_pred_abs * depth_gt_abs;
+        // optimize MSE on inverse depth
+        sum_valid_predPred_inv += (1.0 / depth_pred_abs) * (1.0 / depth_pred_abs);
+        sum_valid_predGt_inv   += (1.0 / depth_pred_abs) * (1.0 / depth_gt_abs);
+        // optimize MSE on log depth
+        sum_valid_log_diff     += log(depth_gt_abs) - log(depth_pred_abs);
+      
       }
     } //end for v
   } //end for u
 
-  double median_abs_D_gt   = computeMedian(abs_D_gt_values);
-  double median_abs_D_ipol = computeMedian(abs_D_ipol_values);
+  double scale_abs = (sum_valid_predPred_abs > 0) ? (sum_valid_predGt_abs / sum_valid_predPred_abs) : 1.0;
+  double scale_inv = (sum_valid_predPred_inv > 0) ? (1.0 / (sum_valid_predGt_inv / sum_valid_predPred_inv)) : 1.0;
+  double scale_log = exp(sum_valid_log_diff / (float) num_valid_pixels);
 
   // iterate all pixels to subtract median values
   for (uint32_t u = 0; u < width; u++) {
     for (uint32_t v = 0; v < height; v++) {
-      if (D_gt.isValid(u, v)) {
-        const double depth_gt_abs   = D_gt.getDepth(u, v);
-        const double depth_ipol_abs = D_ipol.getDepth(u, v);
-        abs_D_ipol.setDepth(u, v, depth_ipol_abs + (median_abs_D_gt - median_abs_D_ipol));
-        inv_D_ipol.setDepth(u, v, 1. / (1. / depth_ipol_abs + (1. / median_abs_D_gt - 1. / median_abs_D_ipol)));
-      }
+      const double depth_pred_abs = D_pred.getDepth(u, v);
+      abs_D_pred.setDepth(u, v, depth_pred_abs * scale_abs);
+      inv_D_pred.setDepth(u, v, depth_pred_abs * scale_inv);
+      log_D_pred.setDepth(u, v, depth_pred_abs * scale_log);
     } //end for v
   } //end for u
 
   std::vector<DepthImage> depth_images;
-  depth_images.push_back(abs_D_ipol);
-  depth_images.push_back(inv_D_ipol);
+  depth_images.push_back(abs_D_pred);
+  depth_images.push_back(inv_D_pred);
+  depth_images.push_back(log_D_pred);
 
   return depth_images;
 }
@@ -312,17 +310,20 @@ bool eval (string gt_img_dir, string prediction_dir) {
 
       // compute median of D_gt and D_ipol, then adjust values from
       // prediction such that medians match for both images
-      std::vector<DepthImage> depth_images = medianAdjustedDepth(D_gt, D_ipol);
-      DepthImage scaled_D_ipol = depth_images[0];
+      std::vector<DepthImage> depth_images = scaleAdjustedDepth(D_gt, D_ipol);
+      DepthImage abs_scaled_D_ipol = depth_images[0];
       DepthImage inv_scaled_D_ipol = depth_images[1];
+      DepthImage log_scaled_D_ipol = depth_images[2];
 
       // compute all error metrics on otimally scaled prediction
-      std::vector<double> errors_out_abs = depthError(D_gt, scaled_D_ipol);
+      std::vector<double> errors_out_abs = depthError(D_gt, abs_scaled_D_ipol);
       std::vector<double> errors_out_inv = depthError(D_gt, inv_scaled_D_ipol);
+      std::vector<double> errors_out_log = depthError(D_gt, log_scaled_D_ipol);
 
-      errors_out_curr.reserve(3 * errors_out_curr.size());
+      errors_out_curr.reserve(4 * errors_out_curr.size());
       errors_out_curr.insert(errors_out_curr.end(), errors_out_abs.begin(), errors_out_abs.end());
       errors_out_curr.insert(errors_out_curr.end(), errors_out_inv.begin(), errors_out_inv.end());
+      errors_out_curr.insert(errors_out_curr.end(), errors_out_log.begin(), errors_out_log.end());
       errors_out.push_back(errors_out_curr);
 
     // on error, exit
@@ -354,15 +355,15 @@ bool eval (string gt_img_dir, string prediction_dir) {
                            "scale invariant log", 
                            "abs relative", 
                            "squared relative",
-                           "(scaled) mae", 
-                           "(scaled) rmse", 
-                           "(scaled) inverse mae", 
-                           "(scaled) inverse rmse", 
-                           "(scaled) log mae", 
-                           "(scaled) log rmse", 
-                           "(scaled) scale invariant log", 
-                           "(scaled) abs relative", 
-                           "(scaled) squared relative",
+                           "(abs.scaled) mae", 
+                           "(abs.scaled) rmse", 
+                           "(abs.scaled) inverse mae", 
+                           "(abs.scaled) inverse rmse", 
+                           "(abs.scaled) log mae", 
+                           "(abs.scaled) log rmse", 
+                           "(abs.scaled) scale invariant log", 
+                           "(abs.scaled) abs relative", 
+                           "(abs.scaled) squared relative",
                            "(inv.scaled) mae", 
                            "(inv.scaled) rmse", 
                            "(inv.scaled) inverse mae", 
@@ -371,7 +372,16 @@ bool eval (string gt_img_dir, string prediction_dir) {
                            "(inv.scaled) log rmse", 
                            "(inv.scaled) scale invariant log", 
                            "(inv.scaled) abs relative", 
-                           "(inv.scaled) squared relative"
+                           "(inv.scaled) squared relative",
+                           "(log.scaled) mae", 
+                           "(log.scaled) rmse", 
+                           "(log.scaled) inverse mae", 
+                           "(log.scaled) inverse rmse", 
+                           "(log.scaled) log mae", 
+                           "(log.scaled) log rmse", 
+                           "(log.scaled) scale invariant log", 
+                           "(log.scaled) abs relative", 
+                           "(log.scaled) squared relative"
                          };
   // write mean, min and max
   std::cout << "Done. Your evaluation results are:" << std::endl;

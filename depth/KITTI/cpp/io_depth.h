@@ -100,6 +100,11 @@ public:
     return data_[v*width_+u]>=0;
   }
 
+  // is depth valid and larger than zero
+  inline bool isValidAndPositive (const int32_t u,const int32_t v) {
+    return data_[v*width_+u]>0;
+  }
+
   // set depth at given pixel
   inline void setDepth (const int32_t u,const int32_t v,const float val) {
     data_[v*width_+u] = val;
