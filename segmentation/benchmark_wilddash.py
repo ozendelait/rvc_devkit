@@ -67,6 +67,8 @@ class WildDash(Cityscapes):
             src_path_cs_instance = op.join(src_dir_path, img_name + '_instanceIds.png')
             src_path_cs_semantic = op.join(src_dir_path, img_name + '_labelIds.png')
             dest_path = op.join(training_dir_path, 'instance', self.Prefix() + img_name + '.png')
-            ConvertCityscapesToKittiInstances(src_path_cs_instance, src_path_cs_semantic, dest_path)
+            cs_instance = sp.imread(src_path_cs_instance)
+            kitti_instance = ConvertCityscapesToKittiInstances(cs_instance)
+            SaveKittiInstance(kitti_instance,dest_path)
 
         shutil.rmtree(op.join(unpack_dir_path, self.Prefix() + 'dirs'))

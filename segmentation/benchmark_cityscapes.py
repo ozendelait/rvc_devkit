@@ -70,6 +70,8 @@ class Cityscapes(KITTI2015):
 
         
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
+        print("Converting Cityscapes to %s ..."%dataset_format.Identifier()) 
+
         img_dir_path = op.join(unpack_dir_path, self.Prefix() + 'dirs', 'leftImg8bit')
         gt_dir_path = op.join(unpack_dir_path, self.Prefix() + 'dirs', 'gtFine')
 
@@ -105,9 +107,11 @@ class Cityscapes(KITTI2015):
 
                         # Convert the instance segmentation files to the Kitti2015 format
                         src_path_cs_instance = op.join(city_gt_dir_path, img_name + '_gtFine_instanceIds.png')
-                        src_path_cs_semantic = op.join(city_gt_dir_path, img_name + '_gtFine_labelIds.png')
+                        # src_path_cs_semantic = op.join(city_gt_dir_path, img_name + '_gtFine_labelIds.png')
                         dest_path = op.join(training_dir_path, 'instance', self.Prefix() + img_name + '.png')
-                        ConvertCityscapesToKittiInstances(src_path_cs_instance, src_path_cs_semantic, dest_path)
+                        cs_instance = sp.imread(src_path_cs_instance)
+                        kitti_instance = ConvertCityscapesToKittiInstances(cs_instance)
+                        SaveKittiInstance(kitti_instance,dest_path)
 
         shutil.rmtree(op.join(unpack_dir_path, self.Prefix() + 'dirs'))
 

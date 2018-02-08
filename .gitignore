@@ -1,8 +1,10 @@
 *.kdev4
 __pycache__
 *.pyc
+*~
 
 stereo/alg-ELAS/build/
 stereo/datasets_middlebury2014/
-instance/datasets_kitti2015/
-instance/temp_unpack_dir
+segmentation/datasets_kitti2015/
+segmentation/temp_unpack_dir
+segmentation/archives
