@@ -53,8 +53,8 @@ class ScanNet(Benchmark):
         expected_test_archives = [os.path.join(op.join(archive_dir_path, 'test'), scan + '.zip') for scan in scannet_test_scans]
 
         # Try to unpack input and ground truth files
-        self.ExtractDownloadArchives(expected_train_archives[:20], op.join(unpack_dir_path, 'scannet', 'train'))
-        self.ExtractDownloadArchives(expected_test_archives[:20], op.join(unpack_dir_path, 'scannet', 'test'))
+        self.ExtractDownloadArchives(expected_train_archives, op.join(unpack_dir_path, 'scannet', 'train'))
+        self.ExtractDownloadArchives(expected_test_archives, op.join(unpack_dir_path, 'scannet', 'test'))
 
 
     def ExtractDownloadArchives(self, expected_archives, unpack_dir_path):
