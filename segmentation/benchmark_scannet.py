@@ -87,12 +87,16 @@ class ScanNet(Benchmark):
             scene_path = op.join(train_path, scene)
             color_path = os.path.join(scene_path, 'color')
             instance_path = os.path.join(scene_path, 'instance')
+            label_path = os.path.join(scene_path, 'label')
             files = os.listdir(color_path)
             for f in files:
                 shutil.move(op.join(color_path, f), op.join(training_dir_path, 'image_2', self.Prefix() + scene + '_' + f))
             files = os.listdir(instance_path)
             for f in files:
                 shutil.move(op.join(instance_path, f), op.join(training_dir_path, 'instance', self.Prefix() + scene + '_' + f))
+            files = os.listdir(label_path)
+            for f in files:
+                shutil.move(op.join(label_path, f), op.join(training_dir_path, 'semantic', self.Prefix() + scene + '_' + f))
         test_path = op.join(unpack_dir_path, 'scannet', 'test')
         scenes = os.listdir(test_path)
         for scene in scenes:
