@@ -158,7 +158,7 @@ class Kitti2015(Benchmark):
                 src_png_path = os.path.join(
                     test_dir_path, method + '_flow_occ', benchmark_and_dataset_name + '_10.png')
                 dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_10.png')
-                shutils.copy2(src_png_path, dest_png_path)
+                shutil.copy2(src_png_path, dest_png_path)
 
             elif isinstance(dataset_format, MiddleburyFormat):
                 # Convert from Middlebury directory layout
