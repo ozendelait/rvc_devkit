@@ -130,7 +130,7 @@ class KITTI2015(Benchmark):
                 for line in lines:
                     relative_path, label_id, confidence = line.strip().split(" ")
                     relative, subdir, img_name = relative_path.split("/")
-                    new_line = "%s/%s/%s %s %s" % (
+                    new_line = "%s/%s/%s %s %s\n" % (
                     relative, subdir, img_name[len(self.Prefix()):], label_id, confidence)
                     f.write(new_line)
 

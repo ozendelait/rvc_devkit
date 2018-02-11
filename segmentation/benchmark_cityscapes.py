@@ -30,7 +30,7 @@ class Cityscapes(KITTI2015):
     
     
     def SupportsTrainingDataInFullSubmissions(self):
-        return True
+        return False
     
     
     def GetOptions(self, metadata_dict):
