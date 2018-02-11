@@ -5,6 +5,7 @@ __pycache__
 
 stereo/alg-ELAS/build/
 stereo/datasets_middlebury2014/
-segmentation/datasets_kitti2015/
+segmentation/datasets_*/
+segmentation/algo_*/
 segmentation/temp_unpack_dir
 segmentation/archives

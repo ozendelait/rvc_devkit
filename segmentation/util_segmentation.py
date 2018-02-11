@@ -18,6 +18,16 @@ def ConvertCityscapesToKittiInstances(cs_instance):
     kitti_instance = semantic*256 + instance 
     return kitti_instance
 
+# Converts Kitti instance segmentation labels to Cityscapes instance segmentation labels
+def ConvertKittiToCityscapesInstances(kitti_instance):
+    cs_instance = np.zeros(kitti_instance.shape,dtype="int32")
+    instance = kitti_instance%256
+    semantic = kitti_instance//256
+    cs_instance = semantic
+    cs_instance[np.where(instance>0)] = semantic[np.where(instance>0)]*1000 + instance[np.where(instance>0)] - 1
+    return cs_instance
+
+
 def SaveKittiInstance(kitti_instance, dest_path):
     sp.toimage(kitti_instance, high=np.max(kitti_instance), low=np.min(kitti_instance), mode='I').save(dest_path)
 
