@@ -48,20 +48,21 @@ The [Kitti 2015 segmentation format](TODO)(TODO) is used as common format for al
 The image names are prefixed by the dataset's benchmark name.
 Exactly the same image names are used for the input images and the ground truth files.
 ```
-test/
-   image_2/
-      <dataset>_<img_name>.png
-      ...
-training/
-   image_2/
-      <dataset>_<img_name>.png
-      ...
-   instance/
-      <dataset>_<img_name>.png
-      ...
-   semantic/
-      <dataset>_<img_name>.png
-      ...
+datasets_kitti2015/
+   test/
+      image_2/
+         <dataset>_<img_name>.png
+         ...
+   training/
+      image_2/
+         <dataset>_<img_name>.png
+         ...
+      instance/
+         <dataset>_<img_name>.png
+         ...
+      semantic/
+         <dataset>_<img_name>.png
+         ...
 ```
 
 
@@ -87,7 +88,8 @@ datasets_kitti2015/
 ```
 
 You may provide results for instance segmentation, semantic segmentation or both.
-
+The `datasets_kitti2015/test/` directory for your algorithm output is the same directory which
+contains the `ìmage_2` input images of the test scenes.
 
 The txt files of the instance segmentation should look as follows:
 ```
