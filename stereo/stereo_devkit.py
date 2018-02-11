@@ -4,7 +4,7 @@
 
 from benchmark import *
 from benchmark_eth3d import *
-from benchmark_hci import *
+from benchmark_hd1k import *
 from benchmark_kitti2015 import *
 from benchmark_middlebury2014 import *
 from dataset_format import *
@@ -15,8 +15,8 @@ from devkit import *
 if __name__ == '__main__':
     # Define the list of benchmarks supported by this script (in the order in
     # which they are listed on http://www.robustvision.net/index.php).
-    benchmarks = [Middlebury2014(), Kitti2015(), ETH3D2017(), HCI2016()]
-    
+    benchmarks = [Middlebury2014(), Kitti2015(), ETH3D2017(), HD1K2018()]
+
     # Define the list of dataset formats which are supported.
     dataset_formats = [Middlebury2014Format()]
     
