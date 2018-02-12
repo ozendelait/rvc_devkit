@@ -37,7 +37,7 @@ class KITTI2015(Benchmark):
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
         # Download input images and ground truth segmentation (temporary location, will be moved to cvlibs)
-        DownloadAndUnzipFile('http://hci-benchmark.org/media/downloads/kitti2015.zip',
+        DownloadAndUnzipFile('http://kitti.is.tue.mpg.de/kitti/data_semantics.zip',
                              archive_dir_path, op.join(unpack_dir_path))
 
     
@@ -47,7 +47,7 @@ class KITTI2015(Benchmark):
     
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         # Move datasets into common folder
-        src_dir_path = op.join(unpack_dir_path, 'kitti2015', 'segmentation')
+        src_dir_path = unpack_dir_path 
         
         for (mode, dest_path) in [('training', training_dir_path), ('testing', test_dir_path)]:
             src_mode_path = op.join(src_dir_path, mode)
