@@ -1,0 +1,9 @@
+*.kdev4
+__pycache__
+*.pyc
+
+stereo/alg-ELAS/build/
+stereo/datasets_*
+segmentation/datasets_*
+segmentation/algo_*
+
