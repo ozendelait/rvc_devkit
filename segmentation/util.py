@@ -127,6 +127,14 @@ def UnzipFile(file_path, unzip_dir_path):
 # The archive_base_path must not include the extension .zip. The full, final
 # path of the archive is returned by the function.
 def ZipDirectory(archive_base_path, root_dir_path):
+    # with zipfile.ZipFile(archive_base_path + '.zip',"w",zipfile.ZIP_DEFLATED, allowZip64=True) as zf:
+    #     for root, dirname, filenames in os.walk(root_dir_path):
+    #         for name in filenames:
+    #             src_name = os.path.join(root, name)
+    #             tgt_name = os.path.normpath(os.path.join(dirname[0], name))
+    #             zf.write(src_name, tgt_name)
+    # return archive_base_path + '.zip'
+
     return shutil.make_archive(archive_base_path, 'zip', root_dir_path)
 
 
