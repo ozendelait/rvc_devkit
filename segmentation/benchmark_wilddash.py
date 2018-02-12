@@ -12,7 +12,7 @@ from benchmark_cityscapes import Cityscapes
 
 class WildDash(Cityscapes):
     def Name(self):
-        return 'WildDash Instance Segmentation 2018'
+        return 'WildDash Segmentation 2018'
     
     
     def Prefix(self):

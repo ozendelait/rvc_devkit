@@ -569,7 +569,7 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
     # Output script information.
     print('--- ' + task_name.title() + ' devkit for the Robust Vision Challenge 2018 ---')
     print('')
-    print('Includes the following benchmarks:')
+    print('Includes the following %s segmentation benchmarks:' % task_name)
     for benchmark in benchmarks:
         print('* ' + benchmark.Name())
     print('')

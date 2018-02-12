@@ -14,7 +14,7 @@ from util_segmentation import *
 class Cityscapes(KITTI2015):
 
     def Name(self):
-        return 'Cityscapes Instance-Level Semantic Labeling Task'
+        return 'Cityscapes Semantic Labeling Task'
     
     
     def Prefix(self):

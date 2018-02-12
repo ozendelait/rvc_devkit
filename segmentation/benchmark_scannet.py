@@ -17,7 +17,7 @@ import scipy.misc as sp
 class ScanNet(KITTI2015):
 
     def Name(self):
-        return 'ScanNet Instance-Level Semantic Labeling Task'
+        return 'ScanNet Semantic Labeling Task'
     
     
     def Prefix(self):

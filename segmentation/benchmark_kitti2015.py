@@ -12,7 +12,7 @@ from util_segmentation import *
 
 class KITTI2015(Benchmark):
     def Name(self):
-        return 'KITTI 2015 instance semgentation challenge'
+        return 'KITTI 2015 Segmentation Challenge'
     
     
     def Prefix(self):
