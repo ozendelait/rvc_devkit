@@ -133,8 +133,9 @@ class Middlebury(Benchmark):
 
 
         # Delete original folder
-        shutil.rmtree(os.path.join(unpack_dir_path, 'training'))
-        shutil.rmtree(os.path.join(unpack_dir_path, 'test'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'other-data'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'other-gt-flow'))
+        shutil.rmtree(os.path.join(unpack_dir_path, 'eval-data'))
 
 
     def ConvertOriginalToFormat(self, dataset_format, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
