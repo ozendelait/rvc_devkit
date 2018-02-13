@@ -21,10 +21,16 @@ class Kitti2015Format(DatasetFormat):
     
     def ListDatasets(self, dataset_folder_path):
         imagepath = os.path.join(dataset_folder_path, 'image_2')
-        return [dataset[:dataset.rfind('_')]
-		for dataset in os.listdir(imagepath)
-                if os.path.isfile(os.path.join(imagepath, dataset))]
-    
+        datasets = []
+        for dataset in os.listdir(imagepath):
+            # Chop of frame number
+            dataset_base = dataset[:dataset.rfind('_')]
+
+            if os.path.isfile(os.path.join(imagepath, dataset)) and not dataset_base in datasets:
+                datasets.append(dataset_base)
+
+        return list(sorted(datasets))
+
     
     def ListMethods(self, dataset_folder_path, dataset_name):
         # For existing methods, we expect flow files in

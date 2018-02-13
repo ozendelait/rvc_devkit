@@ -146,12 +146,17 @@ class Kitti2015(Benchmark):
     def CreateSubmission(self, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
+        import sys
+        sys.stdout.write('\nCreating submission for KITTI\n')
+        sys.stdout.flush()
         # Create output directory
         flow_out_path = os.path.join(pack_dir_path, 'kitti', 'flow')
         MakeDirsExistOk(flow_out_path)
         
         # Only test dataset submission is supported.
         for (benchmark_and_dataset_name, original_dataset_name) in test_datasets:
+            sys.stdout.write('Creating submission for dataset {} -- {}'.format(benchmark_and_dataset_name, original_dataset_name))
+            sys.stdout.flush()
             if isinstance(dataset_format, Kitti2015Format):
                 # Convert from KITTI (i.e., just copy to the right location and
                 # remove dataset prefix.
@@ -168,11 +173,19 @@ class Kitti2015(Benchmark):
                 
                 dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_10.png')
                 ConvertMiddleburyFloToKittiPng(src_flo_path, dest_png_path)
+
+            sys.stdout.write(' Done.\n')
+            sys.stdout.flush()
        
+
+        sys.stdout.write(' Creating zipfile...')
+        sys.stdout.flush()
         # Create the archive and clean up.
         archive_filename = ZipDirectory(archive_base_path,
                                         os.path.join(pack_dir_path, 'kitti'))
         DeleteFolderContents(pack_dir_path)
+        sys.stdout.write('Done.\n')
+        sys.stdout.flush()
         
         return archive_filename
     

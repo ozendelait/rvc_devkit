@@ -11,6 +11,7 @@ from util_flow import *
 
 import platform
 import subprocess
+import os,stat # To change permissions for bundler
 
 
 class Sintel(Benchmark):
@@ -161,12 +162,20 @@ class Sintel(Benchmark):
     def CreateSubmission(self, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
+
+        import sys
+        sys.stdout.write('\nCreating submission for Sintel...\n')
+        sys.stdout.flush()
+        
         # Create output directory
         flow_out_path = os.path.join(pack_dir_path, 'flow')
         MakeDirsExistOk(flow_out_path)
 
         # Only test dataset submission is supported.
         for (benchmark_and_dataset_name, original_dataset_name) in test_datasets:
+            sys.stdout.write('Creating submission for dataset {} -- {}'.format(benchmark_and_dataset_name, original_dataset_name))
+            sys.stdout.flush()
+
             # Format of benchmark_and_dataset_name is Sintel_pas_seq.
             parts = original_dataset_name.split('_')
             pas = parts[0]
@@ -185,6 +194,8 @@ class Sintel(Benchmark):
                          f.startswith(benchmark_and_dataset_name)]
 
                 for f in files:
+                    sys.stdout.write('.')
+                    sys.stdout.flush()
                     seq, frameno, ext = ParseFilenameKitti(f)
                     outfile = os.path.join(flow_dataset_path, 'frame_{0:04d}.flo'.format(frameno+1))
                     ConvertKittiPngToMiddleburyFlo(os.path.join(dir_in, f), outfile)
@@ -193,7 +204,14 @@ class Sintel(Benchmark):
                 dir_in = os.path.join(test_dir_path, method+'_flow', benchmark_and_dataset_name)
 
                 for f in [f for f in os.listdir(dir_in) if f.endswith('.flo')]:
+                    sys.stdout.write('.')
+                    sys.stdout.flush()
                     shutil.copy2(os.path.join(dir_in, f), os.path.join(flow_dataset_path, f))
+
+            
+            sys.stdout.write(' Done.\n')
+            sys.stdout.flush()
+
 
 
         training_path_parent = training_dir_path[:training_dir_path.rstrip('/').rfind('/')]
@@ -202,8 +220,10 @@ class Sintel(Benchmark):
         # 
         if platform.system() == 'Linux':
             bundler_bin = os.path.join(bundler_path, 'linux-x64', 'bundler')
+            os.chmod(bundler_bin, stat.S_IXUSR)
         elif platform.system() == 'Darwin':
             bundler_bin = os.path.join(bundler_path, 'osx', 'bundler')
+            os.chmod(bundler_bin, stat.S_IXUSR)
         elif platform.system() == 'Windows':
             bundler_bin = os.path.join(bundler_path, 'win', 'bundler.exe')
         else:
@@ -216,7 +236,16 @@ class Sintel(Benchmark):
                os.path.join(flow_out_path, 'final'),
                archive_filename]
 
+
+        sys.stdout.write(' Calling bundler as:\n')
+        sys.stdout.write(repr(cmd))
+        sys.stdout.write('\n')
+        sys.stdout.flush()
+
         subprocess.call(cmd)
+
+        sys.stdout.write('Done.\n')
+        sys.stdout.flush()
 
         return archive_filename
     
