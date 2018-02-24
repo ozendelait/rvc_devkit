@@ -90,14 +90,23 @@ def download_label_map(out_dir):
     print('Downloaded label mapping file.')
 
 
-def download_rob_task_data(out_dir, scan_ids):
-    print('Downloading ScanNet Robust Vision task data for ' + str(len(scan_ids)) + ' scans...')
+def download_rob_task_data(out_dir, scan_ids=[]):
+    type = 'all' if len(scan_ids) == 0 else str(len(scan_ids))
+    print('Downloading ScanNet Robust Vision task data for ' + type + ' scans...')
     if not os.path.isdir(out_dir):
         os.makedirs(out_dir)
-    for scan_id in scan_ids:
-        url = BASE_URL + RELEASE_TASKS + '/rob_tasks/' + scan_id + '.zip'
-        out_file = out_dir + '/' + scan_id + '.zip'
+    if len(scan_ids) == 0: # download all
+        url = BASE_URL + RELEASE_TASKS + '/rob_tasks/scenes_all.zip'
+        out_file = out_dir + '/scenes_all.zip'
         download_file(url, out_file)
+        url = BASE_URL + RELEASE_TASKS + '/rob_tasks/scenes_test.zip'
+        out_file = out_dir + '/scenes_test.zip'
+        download_file(url, out_file)
+    else:
+        for scan_id in scan_ids:
+            url = BASE_URL + RELEASE_TASKS + '/rob_tasks/' + scan_id + '.zip'
+            out_file = out_dir + '/' + scan_id + '.zip'
+            download_file(url, out_file)
     print('Downloaded ROB task data.')
 
 
@@ -152,8 +161,7 @@ def main():
                 out_dir = os.path.join(args.out_dir, scan_id)
                 download_scan(scan_id, out_dir, file_types)
     elif args.rob_task_data:  # download rob task data
-        download_rob_task_data(args.out_dir, release_scans)
-        download_rob_task_data(args.out_dir, rob_test_scans)
+        download_rob_task_data(args.out_dir)
     else:  # download entire release
         if len(file_types) == len(FILETYPES):
             print('WARNING: You are downloading the entire ScanNet release which requires '

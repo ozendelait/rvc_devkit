@@ -46,12 +46,15 @@ class ScanNet(KITTI2015):
         print('***')
         print('Press any key to continue, or CTRL-C to exit.')
         key = raw_input('')
-        scannet_train_scans = download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scans.txt')
-        download_scannet.download_rob_task_data(op.join(archive_dir_path, 'train'), scannet_train_scans)
-        expected_train_archives = [os.path.join(op.join(archive_dir_path,  'train'), scan + '.zip') for scan in scannet_train_scans]
-        scannet_test_scans = download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scannet_rob_test.txt')
-        download_scannet.download_rob_task_data(op.join(archive_dir_path, 'test'), scannet_test_scans)
-        expected_test_archives = [os.path.join(op.join(archive_dir_path, 'test'), scan + '.zip') for scan in scannet_test_scans]
+        #scannet_train_scans = download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scans.txt')
+        #download_scannet.download_rob_task_data(op.join(archive_dir_path, 'train'), scannet_train_scans)
+        #expected_train_archives = [os.path.join(op.join(archive_dir_path,  'train'), scan + '.zip') for scan in scannet_train_scans]
+        #scannet_test_scans = download_scannet.get_release_scans('http://dovahkiin.stanford.edu/scannet-public/v1/scannet_rob_test.txt')
+        #download_scannet.download_rob_task_data(op.join(archive_dir_path, 'test'), scannet_test_scans)
+        #expected_test_archives = [os.path.join(op.join(archive_dir_path, 'test'), scan + '.zip') for scan in scannet_test_scans]
+        download_scannet.download_rob_task_data(archive_dir_path)
+        expected_train_archives = [os.path.join(archive_dir_path, 'scenes_all.zip')]
+        expected_test_archives = [os.path.join(archive_dir_path, 'scenes_test.zip')]
 
         # Try to unpack input and ground truth files
         self.ExtractDownloadArchives(expected_train_archives, op.join(unpack_dir_path, 'scannet', 'train'))
