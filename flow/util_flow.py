@@ -51,7 +51,7 @@ def ReadKittiPngFile(path):
     png_reader = png.Reader(path)
     data = png_reader.read()
     if data[3]['bitdepth'] != 16:
-        raise Exception('bitdepth of ' + src_path + ' is not 16')
+        raise Exception('bitdepth of ' + path + ' is not 16')
 
     width = data[0]
     height = data[1]
