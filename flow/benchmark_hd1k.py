@@ -32,10 +32,10 @@ class HD1K2018(Kitti2015):
         # Download ground truth for left view files (training)
         DownloadAndUnzipFile('http://hci-benchmark.org/media/downloads/hd1k_flow_gt.zip', archive_dir_path, unpack_dir_path)
 
-        # NOTE: Input images for the test set will soon be available at:
-        # 'http://hci-benchmark.org/media/downloads/hd1k_stereo_flow_challenge.zip'
+        # Download input images (test)
+        DownloadAndUnzipFile('http://hci-benchmark.org/media/downloads/hd1k_challenge.zip', archive_dir_path, unpack_dir_path)
 
-        # Uncertainty maps for the optical flow ground truth would be here:
+        # Uncertainty maps for the optical flow ground truth are here:
         # 'http://hci-benchmark.org/media/downloads/hd1k_flow_uncertainty.zip'
 
 
@@ -43,12 +43,16 @@ class HD1K2018(Kitti2015):
         # Move the downloaded files to the target directory structure
         base_input_dir = os.path.join(unpack_dir_path, 'hd1k_input')
         base_gt_dir = os.path.join(unpack_dir_path, 'hd1k_flow_gt')
+        base_test_dir = os.path.join(unpack_dir_path, 'hd1k_challenge')
 
         # Move input image sequences
         self._MoveKittiFiles('image_2', base_input_dir, training_dir_path)
 
         # Move optical flow ground truth
         self._MoveKittiFiles('flow_occ', base_gt_dir, training_dir_path)
+
+        # Move input image sequences
+        self._MoveKittiFiles('image_2', base_test_dir, test_dir_path)
 
         # Delete original folders
         dir_paths = [base_input_dir, base_gt_dir]
@@ -73,18 +77,24 @@ class HD1K2018(Kitti2015):
         # Move the downloaded files to the target directory structure
         base_input_dir = os.path.join(unpack_dir_path, 'hd1k_input')
         base_gt_dir = os.path.join(unpack_dir_path, 'hd1k_flow_gt')
+        base_test_dir = os.path.join(unpack_dir_path, 'hd1k_challenge')
 
-        src_image_dir_path = os.path.join(base_input_dir, 'image_2')  # contains left images
-        src_gt_dir_path = os.path.join(base_gt_dir, 'flow_occ')  # contains flow ground truth
+        src_image_dir_path = os.path.join(base_input_dir, 'image_2')  # contains left images (training)
+        src_gt_dir_path = os.path.join(base_gt_dir, 'flow_occ')  # contains flow ground truth (training)
+        src_test_dir_path = os.path.join(base_test_dir, 'image_2')  # contains left images (test)
 
         outdir_training_images = os.path.join(training_dir_path, 'images')
         outdir_training_flow = os.path.join(training_dir_path, 'flow')
+        outdir_test_images = os.path.join(test_dir_path, 'images')
 
-        # Move input image sequences
+        # Move input image sequences (training)
         self._MoveMiddleburyFiles(src_image_dir_path, outdir_training_images)
 
-        # Move optical flow ground truth
+        # Move optical flow ground truth (training)
         self._MoveMiddleburyFiles(src_gt_dir_path, outdir_training_flow, convert_to_flo=True)
+
+        # Move input image sequences (test)
+        self._MoveMiddleburyFiles(src_test_dir_path, outdir_test_images)
 
         # Delete original folders
         dir_paths = [base_input_dir, base_gt_dir]
