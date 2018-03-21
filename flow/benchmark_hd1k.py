@@ -118,3 +118,49 @@ class HD1K2018(Kitti2015):
             else:
                 dest_file_path = os.path.join(dest_sequence_dir_path, "frame_%04d.png" % img_frame)
                 shutil.move(src_file_path, dest_file_path)
+
+
+    def CreateSubmission(self, dataset_format, method, pack_dir_path,
+                         metadata_dict, training_dir_path, training_datasets,
+                         test_dir_path, test_datasets, archive_base_path):
+
+        print('Creating submission for %s' % self.Prefix()[:-1])
+
+        # Create output directories
+        flow_out_path = os.path.join(pack_dir_path, 'hd1k', 'flow')
+        MakeDirsExistOk(flow_out_path)
+        time_out_path = os.path.join(pack_dir_path, 'hd1k', 'runtime')
+        MakeDirsExistOk(time_out_path)
+
+        # Only test dataset submission is supported.
+        for (benchmark_and_dataset_name, original_dataset_name) in test_datasets:
+            print('Creating submission for dataset %s' % (benchmark_and_dataset_name))
+
+            if isinstance(dataset_format, Kitti2015Format):
+                # Convert from KITTI (i.e., just copy to the right location and remove dataset prefix.
+                src_png_path = os.path.join(test_dir_path, method + '_flow_occ', benchmark_and_dataset_name + '_0010.png')
+                dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_0010.png')
+                shutil.copy2(src_png_path, dest_png_path)
+
+                # Copy runtimes
+                src_txt_path = os.path.join(test_dir_path, method + '_flow_occ', benchmark_and_dataset_name + '_0010.txt')
+                dest_txt_path = os.path.join(time_out_path, original_dataset_name + '_0010.txt')
+                shutil.copy2(src_txt_path, dest_txt_path)
+
+            elif isinstance(dataset_format, MiddleburyFormat):
+                # Convert from Middlebury directory layout
+                src_flo_path = os.path.join(test_dir_path, method + '_flow', benchmark_and_dataset_name, 'frame_0010.flo')
+                dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_0010.png')
+                ConvertMiddleburyFloToKittiPng(src_flo_path, dest_png_path)
+
+                # Copy runtimes
+                src_txt_path = os.path.join(test_dir_path, method + '_flow', benchmark_and_dataset_name, 'frame_0010.txt')
+                dest_txt_path = os.path.join(time_out_path, original_dataset_name + '_0010.txt')
+                shutil.copy2(src_txt_path, dest_txt_path)
+
+        # Create the archive and clean up.
+        print(' Creating zipfile...')
+        archive_filename = ZipDirectory(archive_base_path, os.path.join(pack_dir_path, 'hd1k'))
+        DeleteFolderContents(pack_dir_path)
+
+        return archive_filename

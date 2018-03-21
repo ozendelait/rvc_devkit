@@ -89,16 +89,23 @@ datasets_middlebury/
             ...
 ```
 
+For HD1K, the time for calculating the optical flow is expected in addition to each flow result.
+The time in seconds is stored as a floating point value in ASCII encoding in a text file called ```frame_XXXX.txt```.
+The file must contain only that number. Runtime files should be placed right next to the flow results in the same directory.
+
 And for KITTI:
 
 ```
 datasets_kitti2015/
     testing/
-        MYALGO_flow/
+        MYALGO_flow_occ/
             SEQ_XX.png
             ...
 ```
 
+
+For HD1K, runtime files ```SEQ_XX.txt``` should be placed right next to the flow results.
+See the Middlebury output description for further details.
 
 #### Running ####
 
