@@ -45,6 +45,6 @@ The process for participating in the challenge is as follows.
   the challenge. For example, if your method was called ELAS, name your
   submission ELAS_ROB.
   On some benchmark websites special characters such as &, |, * are prohibited.
-  Please limit your method name to alphanumeric characters [A-Z, a-z, 0-9] and underscores
+  Choose a short method name (up to 10 characters) for your method (allowed characters: + - _ A..Z a..z 0..9)
   to guarantee that you can use exactly the same name on all benchmarks.
 * Register your submission at the [submission form](http://robustvision.net/submit.php#register).
