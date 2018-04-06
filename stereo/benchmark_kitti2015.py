@@ -172,6 +172,9 @@ class Kitti2015(Benchmark):
     def CreateSubmission(self, dataset_format, method, pack_dir_path,
                          metadata_dict, training_dir_path, training_datasets,
                          test_dir_path, test_datasets, archive_base_path):
+        runtime_sum = 0.0
+        runtime_count = 0
+        
         # Create output directory
         disp_0_path = os.path.join(pack_dir_path, 'disp_0')
         MakeDirsExistOk(disp_0_path)
@@ -184,10 +187,20 @@ class Kitti2015(Benchmark):
             src_pfm_path = os.path.join(src_dataset_path, 'disp0' + method + '.pfm')
             dest_png_path = os.path.join(disp_0_path, original_dataset_name + '.png')
             ConvertMiddlebury2014PfmToKitti2015Png(src_pfm_path, dest_png_path)
+            
+            # Collect average runtime
+            src_time_path = os.path.join(src_dataset_path, 'time' + method + '.txt')
+            time = ReadMiddlebury2014TimeFile(src_time_path)
+            
+            runtime_sum += time
+            runtime_count += 1
         
         # Create the archive and clean up.
         archive_filename = ZipDirectory(archive_base_path, pack_dir_path)
         DeleteFolderContents(pack_dir_path)
+        
+        # Output average runtime (this needs to be entered for the submission)
+        print('The average runtime on Kitti test images is (you will need this for the submission): ' + str(runtime_sum / runtime_count) + " seconds")
         
         return archive_filename
     

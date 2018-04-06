@@ -49,8 +49,6 @@ images.txt               : For ETH3D.
 
 mask0nocc.png            : For ETH3D, Kitti2015, Middlebury2014 (training datasets only).
 
-disp0Unc.pfm             : For HD1K (training datasets only).
-
 obj_map.png              : For Kitti2015 (training datasets only).
 ```
 
@@ -132,7 +130,6 @@ exist.
 
 The resulting archives must be submitted to the respective benchmarks:
 * [ETH3D2017](https://www.eth3d.net/login)
-* [HD1K2018](http://hci-benchmark.org/accounts/login)
 * [Kitti2015](http://www.cvlibs.net/datasets/kitti/user_login.php)
 * [Middlebury2014](http://vision.middlebury.edu/stereo/submit3/upload.html)
 
@@ -146,9 +143,7 @@ available:
 # Download the datasets:
 # - The resolution of the Middlebury datasets can be chosen as [f]ull, [h]alf,
 #   or [q]uarter
-# - For the HD1K dataset, optional uncertainty maps for the stereo ground truth
-#   can be downloaded by adding the flag --hd1k_with_unc
-python stereo_devkit.py obtain --middlebury_resolution {f,F,h,H,q,Q} --hd1k_with_unc
+python stereo_devkit.py obtain --middlebury_resolution {f,F,h,H,q,Q}
 
 # Run an algorithm:
 # - runfile_path is the path to the executable file or Python script that will
