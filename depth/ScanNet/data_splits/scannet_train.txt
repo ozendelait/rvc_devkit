@@ -2,7 +2,6 @@ scene0191_00
 scene0191_01
 scene0191_02
 scene0119_00
-scene0230_00
 scene0528_00
 scene0528_01
 scene0705_00
@@ -13,7 +12,6 @@ scene0415_01
 scene0415_02
 scene0007_00
 scene0141_00
-scene0141_01
 scene0141_02
 scene0515_00
 scene0515_01
@@ -230,7 +228,6 @@ scene0044_01
 scene0044_02
 scene0510_00
 scene0510_01
-scene0510_02
 scene0571_00
 scene0571_01
 scene0166_00
@@ -721,7 +718,6 @@ scene0335_02
 scene0261_00
 scene0261_01
 scene0261_02
-scene0261_03
 scene0640_00
 scene0640_01
 scene0640_02

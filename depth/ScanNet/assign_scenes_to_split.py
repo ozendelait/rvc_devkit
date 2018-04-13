@@ -26,7 +26,7 @@ print "Found {} scenes in validation split".format(len(validation_scenes))
 print "Found {} scenes in test split".format(len(test_scenes))
 print "Found {} scenes in rob_test split".format(len(rob_test_scenes))
 
-if len(training_scenes) < 1045 or len(validation_scenes) < 156 or len(test_scenes) < 312 \
+if len(training_scenes) < 1041 or len(validation_scenes) < 156 or len(test_scenes) < 309 \
    or len(rob_test_scenes) < 80:
     print "ERROR: Did not find data split information"
     exit()
