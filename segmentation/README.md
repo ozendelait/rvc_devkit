@@ -44,7 +44,7 @@ and converted.
 
 #### Input ####
 
-The [Kitti 2015 segmentation format](TODO)(TODO) is used as common format for all datasets.
+The Kitti 2015 segmentation format (described below) is used as common format for all datasets. 
 The image names are prefixed by the dataset's benchmark name.
 Exactly the same image names are used for the input images and the ground truth files.
 ```
@@ -65,6 +65,15 @@ datasets_kitti2015/
          ...
 ```
 
+The "semantic" folder contains the semantic segmentation ground truth for the training images. Each file is a single channel uint8 8-bit PNG image with each pixel value representing its semantic label ID. The "instance" folder contains the combined instance and semantic segmentation ground truth. Each file is a single channel uint16 16-bit PNG image where the lower 8 bits of each pixel value are its instance ID, while the higher 8 bits of each pixel value are its semantic labels ID. Instance IDs start from 1 for each semantic class (ex. car:1,2,3 ... etc. - buiding:1,2,3 ... etc.). Instance ID value of 0 means no instance ground truth is available and should be ignored for instance segmentation. An example code for reading the instance and semantic segmentation ground truth from the combined ground truth file in python could look like this :
+```
+import scipy.misc as sp
+instance_semantic_gt = sp.imread('instance/<image name>.png')
+instance_gt = instance_semantic_gt  % 256
+semantic_gt = instance_semantic_gt // 256
+
+```
+The labels IDs, names and instance classes of the Cityscapes dataset are used and can be found [here](https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py)
 
 #### Output ####
 

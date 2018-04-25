@@ -398,7 +398,7 @@ def CreateSubmissionArchives(task_name, chosen_format, dataset_formats, method,
     for pair in archive_website_mapping:
         print('  ' + os.path.basename(pair[0]) + ' on ' + pair[1])
     print('')
-    print('Finally, the submission must be completed by filling a short form on the Robust Vision Challenge website: TODO')  # TODO: Insert URL
+    print('Finally, the submission must be completed by filling a short form on the Robust Vision Challenge website: http://www.robustvision.net/')  # TODO: Insert URL
 
 
 def RunMethod(method, run_file_path, chosen_format, training_only, additional_arguments):
@@ -548,7 +548,6 @@ def DevkitMain(task_name, benchmarks, dataset_formats):
 
         method = arguments[0]
         is_training_submission = len(arguments) >= 2 and arguments[1] == '--training'
-        
         if ((is_training_submission and not method in format_info[chosen_format]['training_submission_methods']) or
             (not is_training_submission and not method in format_info[chosen_format]['full_submission_methods'])):
             print('Cannot create archives for this method since not all required result files exist.')

@@ -24,6 +24,15 @@ class Cityscapes(KITTI2015):
     def Website(self):
         return 'https://cityscapes-dataset.com/'
     
+    def LabelIds(self):
+        return range(0,33)
+
+    def LabelNames(self):
+        return ["unlabeled","ego vehicle","rectification border","out of roi","static",
+                "dynamic","ground","road","sidewalk","parking","rail track","building","wall","fence",
+                "guard rail","bridge","tunnel","pole","polegroup","traffic light","traffic sign","vegetation",
+                "terrain","sky","person","rider","car","truck","bus","caravan","trailer","train","motorcycle",
+                "bicycle"]
     
     def SupportsTrainingDataOnlySubmissions(self):
         return False

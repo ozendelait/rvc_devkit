@@ -22,7 +22,16 @@ class KITTI2015(Benchmark):
     def Website(self):
         return 'http://www.cvlibs.net/datasets/kitti/'
     
-    
+    def LabelIds(self):
+        return range(0,34)
+
+    def LabelNames(self):
+        return ["unlabeled","ego vehicle","rectification border","out of roi","static",
+                "dynamic","ground","road","sidewalk","parking","rail track","building","wall","fence",
+                "guard rail","bridge","tunnel","pole","polegroup","traffic light","traffic sign","vegetation",
+                "terrain","sky","person","rider","car","truck","bus","caravan","trailer","train","motorcycle",
+                "bicycle"]
+
     def SupportsTrainingDataOnlySubmissions(self):
         return False
     
@@ -118,6 +127,7 @@ class KITTI2015(Benchmark):
         MakeDirsExistOk(tgt_pred_list_dir)
         MakeDirsExistOk(tgt_pred_img_dir)
 
+        labeIds = self.LabelIds()
         # for each image: copy the list file and all corresponding mask files
         for rob_name, original_name in test_datasets:
 
@@ -129,10 +139,11 @@ class KITTI2015(Benchmark):
             with open(op.join(tgt_pred_list_dir, original_name.replace(".png", ".txt")), "w") as f:
                 for line in lines:
                     relative_path, label_id, confidence = line.strip().split(" ")
-                    relative, subdir, img_name = relative_path.split("/")
-                    new_line = "%s/%s/%s %s %s\n" % (
-                    relative, subdir, img_name[len(self.Prefix()):], label_id, confidence)
-                    f.write(new_line)
+                    if int(label_id) in labeIds : 
+                        relative, subdir, img_name = relative_path.split("/")
+                        new_line = "%s/%s/%s %s %s\n" % (
+                        relative, subdir, img_name[len(self.Prefix()):], label_id, confidence)
+                        f.write(new_line)
 
             # copy all binary masks for the given image
             img_masks = [img for img in mask_names if img.startswith(op.splitext(rob_name)[0])]
@@ -141,7 +152,7 @@ class KITTI2015(Benchmark):
                 tgt_mask = op.join(tgt_pred_img_dir, img_mask[len(self.Prefix()):] + ".png")
                 shutil.copy2(src_mask, tgt_mask)
 
-        archive_filename = ZipDirectory(archive_base_path, method_dir)
+        archive_filename = ZipDirectory(archive_base_path, op.join(method_dir,task_name))
         DeleteFolderContents(pack_dir_path)
 
         return archive_filename

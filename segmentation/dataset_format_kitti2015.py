@@ -60,7 +60,7 @@ class KITTI2015Format(DatasetFormat):
         # check if result file for specific dataset image exists
         for algo_dir in algo_dirs:
             if os.path.isfile(
-                    os.path.join(dataset_folder_path, algo_dir, "pred_list", dataset_name.replace(".png", ".txt"))):
+                    os.path.join(dataset_folder_path, algo_dir, "pred_list", dataset_name.replace(".png", ".txt").replace(".jpg",".txt"))):
                 algo_name = "_".join(algo_dir.split("_")[1:-1])
                 methods.append(algo_name)
 
