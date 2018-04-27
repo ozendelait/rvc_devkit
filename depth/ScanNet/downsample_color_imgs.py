@@ -6,7 +6,7 @@ import sys
 w_depth = 640
 h_depth = 480
 
-color_img_files = sorted(glob.glob("datasets_ScanNet/scene*_*/color/*.png"))
+color_img_files = sorted(glob.glob("datasets_ScanNet/scene*_*/color/*.jpg"))
 
 for img_fn in color_img_files:
     print "\rProcessing file {}".format(img_fn),

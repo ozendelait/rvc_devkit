@@ -140,7 +140,7 @@ class SensorData:
                 color = PIL.Image.fromarray(color)
             else:
                 color = PIL.Image.fromarray(color).resize([self.depth_width, self.depth_height])
-            color.save(os.path.join(output_path, str(f).zfill(10) + '.png'))
+            color.save(os.path.join(output_path, str(f).zfill(10) + '.jpg'))
 
     def save_intrinsic_to_file_rob(self, matrix, filename):
         with open(filename, 'w') as f:
