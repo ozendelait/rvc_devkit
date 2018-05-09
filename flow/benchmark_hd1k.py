@@ -151,6 +151,7 @@ class HD1K2018(Kitti2015):
                 # Convert from Middlebury directory layout
                 src_flo_path = os.path.join(test_dir_path, method + '_flow', benchmark_and_dataset_name, 'frame_0010.flo')
                 dest_png_path = os.path.join(flow_out_path, original_dataset_name + '_0010.png')
+                print(src_flo_path + ' -> ' + dest_png_path)
                 ConvertMiddleburyFloToKittiPng(src_flo_path, dest_png_path)
 
                 # Copy runtimes

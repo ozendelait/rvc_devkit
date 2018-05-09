@@ -2,6 +2,7 @@ import math
 import png
 import struct
 import array
+import numpy as np
 
 from util import *
 
@@ -27,6 +28,9 @@ def ReadMiddleburyFloFile(path):
         height = struct.unpack('i', fil.read(4))[0]
 
         assert tag == TAG_FLOAT
+        
+        #data = np.fromfile(path, dtype=np.float, count=-1)
+        #data = data[3:]
 
         fmt = 'f' * width*height*2
         data = struct.unpack(fmt, fil.read(4*width*height*2))

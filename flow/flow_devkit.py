@@ -16,7 +16,7 @@ from devkit import *
 if __name__ == '__main__':
     # Define the list of benchmarks supported by this script (in the order in
     # which they are listed on http://www.robustvision.net/index.php).
-    benchmarks = [Sintel(), Kitti2015(), Middlebury(), HD1K2018()]
+    benchmarks = [Kitti2015(), Sintel(), Middlebury(), HD1K2018()]
     
     # Define the list of dataset formats which are supported.
     dataset_formats = [MiddleburyFormat(), Kitti2015Format()]
