@@ -46,7 +46,7 @@ class KITTI2015(Benchmark):
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
         # Download input images and ground truth segmentation (temporary location, will be moved to cvlibs)
-        DownloadAndUnzipFile('http://kitti.is.tue.mpg.de/kitti/data_semantics.zip',
+        DownloadAndUnzipFile('https://s3.eu-central-1.amazonaws.com/avg-kitti/data_semantics.zip',
                              archive_dir_path, op.join(unpack_dir_path))
 
     

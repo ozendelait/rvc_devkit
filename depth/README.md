@@ -58,7 +58,7 @@ $ python ScanNet/assign_scenes_to_split.py
 # KITTI Depth (see http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)
 
 Download depth maps and intrinsics for training data:
-$ wget -P datasets_KITTI http://kitti.is.tue.mpg.de/kitti/data_depth_annotated.zip
+$ wget -P datasets_KITTI https://s3.eu-central-1.amazonaws.com/avg-kitti/data_depth_annotated.zip
 $ unzip -d datasets_KITTI datasets_KITTI/data_depth_annotated.zip
 Use the KITTI raw download script (thanks to Omid Hosseini for sharing) to download KITTI raw:
 $ cd raw_data_KITTI && bash raw_data_downloader.sh && cd ..
@@ -68,7 +68,7 @@ $ rm -rf raw_data_KITTI/2011_*_*/2011_*_*_drive_*_sync/image_0[0,1]
 $ rm -rf raw_data_KITTI/2011_*_*/2011_*_*_drive_*_sync/oxts
 $ rm -rf raw_data_KITTI/2011_*_*/2011_*_*_drive_*_sync/velodyne_points
 Selected data (RGB, depth maps, and intrinsics) for validation and test splits:
-$ wget -P datasets_KITTI http://kitti.is.tue.mpg.de/kitti/data_depth_selection.zip
+$ wget -P datasets_KITTI https://s3.eu-central-1.amazonaws.com/avg-kitti/data_depth_selection.zip
 $ unzip datasets_KITTI/data_depth_selection.zip -d datasets_KITTI/
 $ rm -rf datasets_KITTI/depth_selection/test_depth_completion_anonymous
 $ rm -rf datasets_KITTI/depth_selection/val_selection_cropped/velodyne_raw

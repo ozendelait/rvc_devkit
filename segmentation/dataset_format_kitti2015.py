@@ -17,7 +17,7 @@ class KITTI2015Format(DatasetFormat):
     
     
     def Website(self):
-        return 'http://kitti.is.tue.mpg.de/kitti/'
+        return 'http://www.cvlibs.net/datasets/kitti/eval_semantics.php'
     
     
     def ListDatasets(self, dataset_folder_path):

@@ -36,13 +36,13 @@ class Kitti2015(Benchmark):
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
         # Download input images (training + test) and ground truth
-        DownloadAndUnzipFile('http://kitti.is.tue.mpg.de/kitti/data_scene_flow.zip', archive_dir_path, unpack_dir_path)
+        DownloadAndUnzipFile('https://s3.eu-central-1.amazonaws.com/avg-kitti/data_scene_flow.zip', archive_dir_path, unpack_dir_path)
         
         # NOTE: Calibration files would be here:
-        # http://kitti.is.tue.mpg.de/kitti/data_scene_flow_calib.zip
+        # https://s3.eu-central-1.amazonaws.com/avg-kitti/data_scene_flow_calib.zip
         
         # NOTE: Multi-view extension would be here:
-        # http://kitti.is.tue.mpg.de/kitti/data_scene_flow_multiview.zip
+        # https://s3.eu-central-1.amazonaws.com/avg-kitti/data_scene_flow_multiview.zip
     
     
     def CanConvertOriginalToFormat(self, dataset_format):
