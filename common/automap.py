@@ -16,9 +16,12 @@ def wikidata_from_freenetid(freenetid):
       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
     }
     """
-    res0 = return_sparql_query_results(sparql_query%freenetid)
+    try:
+        res0 = return_sparql_query_results(sparql_query%freenetid)
+    except:
+        return {}
     bindings = res0['results'].get('bindings',[])
-    if len(bindings) == 0:
+    if len(bindings) < 3:
         return {}
     return {'wikidata_qid': bindings[0]['item']['value'].split('/')[-1], 'wikidata_name': bindings[1]['item']['value'], 'wikidata_desc': bindings[2]['item']['value']}
 
@@ -29,9 +32,12 @@ def wikidata_from_name(name):
       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
     }
     """
-    res0 = return_sparql_query_results(sparql_query%name)
+    try:
+        res0 = return_sparql_query_results(sparql_query%name)
+    except:
+        return {}
     bindings = res0['results'].get('bindings',[])
-    if len(bindings) == 0:
+    if len(bindings) < 3:
         return {}
     return {'wikidata_qid': bindings[0]['item']['value'].split('/')[-1], 'wikidata_name': bindings[1]['item']['value'], 'wikidata_desc': bindings[2]['item']['value']}
 
