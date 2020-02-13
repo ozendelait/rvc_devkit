@@ -1,4 +1,4 @@
-# Robust Vision Challenge 2018 - Single Image Depth Prediction Devkit #
+# Robust Vision Challenge 2020 - Single Image Depth Prediction Devkit #
 
 
 ###########################
@@ -17,43 +17,6 @@ depth datasets, i.e. ScanNet and KITTI. Please make sure that you have a minimum
 of 150GB-200GB disk space for all (raw) datasets available. If you run out of space
 while downloading KITTI raw or ScanNet, you can remove unnecessary zip files
 after they have been unzipped.
-
-# ScanNet (see http://www.scan-net.org/ and https://github.com/ScanNet/ScanNet)
-
-For ScanNet, there are two versions of the data. One contains all 2.5 Mio. views with respective depth maps in the raw
-ScanNet data format (1.2TB of data). Note that this may take a very long time, as additional to the huge download, you
-will need to convert the original raw data into our easily readable Robust Vision data format. As many of the original
-views are highly correlated, another variant of the dataset is provided where every 100th frame is available (39GB).
-
-If you want to download only every 100th frame (which we highly recommend), execute:
-$ python ScanNet/download-scannet.py --rob_task_data -o datasets_ScanNet/
-After downloading all scenes, you can run the following to unzip all scenes and remove
-corresponding zip files:
-$ bash ScanNet/unzip-and-remove-all-zipped-scenes.sh
-Note that the downloaded zips (after unpacking) contain images at the full resolution
-of 1296x968 pixels, while depth maps have a bit less than half the resolution (640x480).
-You find the intrinsic parameters for the full resolution images in the "intrinsic_color"
-folder. The KITTI dataset provides images and depth maps at the same resolution, so you
-can downsample ScanNet images to the resolution of the depth maps using:
-$ python ScanNet/downsample_color_imgs.py
-You will find the downsampled images in the "color_rob" directories, along with intrinsic
-parameters in the "intrinsic_depth" directories.
-
-If you want to download all frames in the raw .sens format (and convert
-them in a second step), execute
-$ python ScanNet/download-scannet.py --type .sens -o raw_data_ScanNet/
-You can execute the following bash command to automatically convert all raw
-.sens files in raw_data_ScanNet to the Robust Vision default format:
-$ bash ScanNet/export-raw-scannet.sh
-If you want to convert individual .sens files, use
-$ python ScanNet/reader.py --rob --export_depth_images --export_color_images \
-    --export_intrinsics --filename raw_data_ScanNet/<scene>/<scene>.sens   \
-    --output_path datasets_ScanNet/<scene>
-
-After you have a list of scene*_* directories in the datasets_ScanNet folder, you can
-run the following command to assign the scenes according to their dataset split (train, val, test)
-$ python ScanNet/assign_scenes_to_split.py
-
 
 # KITTI Depth (see http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)
 

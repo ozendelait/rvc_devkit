@@ -1,4 +1,4 @@
-# Robust Vision Challenge 2018 - Instance and Semantic Segmentation Devkit #
+# Robust Vision Challenge 2020 - Panoptic, Instance, and Semantic Segmentation Devkit #
 
 ## Dataset Download ##
 
