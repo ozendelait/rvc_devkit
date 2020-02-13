@@ -1,0 +1,3354 @@
+{
+    "accordion": {
+        "oid_id": "/m/0mkg",
+        "oid_name": "Accordion",
+        "wordnet_id": "n02672831"
+    },
+    "adhesive_tape": {
+        "oid_id": "/m/03m3vtv",
+        "oid_name": "Adhesive tape",
+        "wordnet_id": "n02680337"
+    },
+    "aircraft": {
+        "oid_id": "/m/0k5j",
+        "oid_name": "Aircraft",
+        "wordnet_id": "n02686568"
+    },
+    "airplane": {
+        "coco_id": 5,
+        "coco_name": "airplane",
+        "oid_id": "/m/0cmf2",
+        "oid_name": "Airplane",
+        "wordnet_id": "n02691156"
+    },
+    "alarm_clock": {
+        "oid_id": "/m/046dlr",
+        "oid_name": "Alarm clock",
+        "wordnet_id": "n02694662"
+    },
+    "alpaca": {
+        "oid_id": "/m/0pcr",
+        "oid_name": "Alpaca",
+        "wordnet_id": "n15104598"
+    },
+    "ambulance": {
+        "oid_id": "/m/012n7d",
+        "oid_name": "Ambulance",
+        "wordnet_id": "n02701002"
+    },
+    "animal": {
+        "oid_id": "/m/0jbk",
+        "oid_name": "Animal",
+        "wordnet_id": "n00015388"
+    },
+    "ant": {
+        "oid_id": "/m/0_k2",
+        "oid_name": "Ant",
+        "wordnet_id": "n02219486"
+    },
+    "antelope": {
+        "oid_id": "/m/0czz2",
+        "oid_name": "Antelope",
+        "wordnet_id": "n02419796"
+    },
+    "apple": {
+        "coco_id": 53,
+        "coco_name": "apple",
+        "oid_id": "/m/014j1m",
+        "oid_name": "Apple",
+        "wordnet_id": "n12633994"
+    },
+    "armadillo": {
+        "oid_id": "/m/0xfy",
+        "oid_name": "Armadillo",
+        "wordnet_id": "n02454379"
+    },
+    "artichoke": {
+        "oid_id": "/m/047v4b",
+        "oid_name": "Artichoke",
+        "wordnet_id": "n11959632"
+    },
+    "auto_part": {
+        "oid_id": "/m/08dz3q",
+        "oid_name": "Auto part",
+        "wordnet_id": "n02762044"
+    },
+    "axe": {
+        "oid_id": "/m/0c2jj",
+        "oid_name": "Axe",
+        "wordnet_id": "v01257953"
+    },
+    "backpack": {
+        "coco_id": 27,
+        "coco_name": "backpack",
+        "oid_id": "/m/01940j",
+        "oid_name": "Backpack",
+        "wordnet_id": "v01926031"
+    },
+    "bagel": {
+        "oid_id": "/m/01fb_0",
+        "oid_name": "Bagel",
+        "wordnet_id": "n07693725"
+    },
+    "baked_goods": {
+        "oid_id": "/m/052lwg6",
+        "oid_name": "Baked goods",
+        "wordnet_id": "n07622061"
+    },
+    "balance_beam": {
+        "oid_id": "/m/0l3ms",
+        "oid_name": "Balance beam",
+        "wordnet_id": "n02777292"
+    },
+    "ball": {
+        "oid_id": "/m/018xm",
+        "oid_name": "Ball",
+        "wordnet_id": "v01523270"
+    },
+    "balloon": {
+        "oid_id": "/m/01j51",
+        "oid_name": "Balloon",
+        "wordnet_id": "v01948659"
+    },
+    "banana": {
+        "coco_id": 52,
+        "coco_name": "banana",
+        "oid_id": "/m/09qck",
+        "oid_name": "Banana",
+        "wordnet_id": "n12352287"
+    },
+    "band-aid": {
+        "oid_id": "/m/0j496",
+        "oid_name": "Band-aid"
+    },
+    "banjo": {
+        "oid_id": "/m/018j2",
+        "oid_name": "Banjo",
+        "wordnet_id": "n02787622"
+    },
+    "banner": {
+        "coco_id": 92,
+        "coco_name": "banner",
+        "wordnet_id": "n06345878"
+    },
+    "barge": {
+        "oid_id": "/m/01btn",
+        "oid_name": "Barge",
+        "wordnet_id": "v01996574"
+    },
+    "barrel": {
+        "oid_id": "/m/02zn6n",
+        "oid_name": "Barrel",
+        "wordnet_id": "v01502540"
+    },
+    "baseball_bat": {
+        "coco_id": 39,
+        "coco_name": "baseball bat",
+        "oid_id": "/m/03g8mr",
+        "oid_name": "Baseball bat",
+        "wordnet_id": "n02799175"
+    },
+    "baseball_glove": {
+        "coco_id": 40,
+        "coco_name": "baseball glove",
+        "oid_id": "/m/03grzl",
+        "oid_name": "Baseball glove",
+        "wordnet_id": "n02800213"
+    },
+    "bat_(animal)": {
+        "oid_id": "/m/01h44",
+        "oid_name": "Bat (Animal)"
+    },
+    "bathroom_accessory": {
+        "oid_id": "/m/0h8nr_l",
+        "oid_name": "Bathroom accessory"
+    },
+    "bathroom_cabinet": {
+        "oid_id": "/m/04y4h8h",
+        "oid_name": "Bathroom cabinet"
+    },
+    "bathtub": {
+        "oid_id": "/m/03dnzn",
+        "oid_name": "Bathtub",
+        "wordnet_id": "n02808440"
+    },
+    "beaker": {
+        "oid_id": "/m/0d20w4",
+        "oid_name": "Beaker",
+        "wordnet_id": "n02815834"
+    },
+    "bear": {
+        "coco_id": 23,
+        "coco_name": "bear",
+        "oid_id": "/m/01dws",
+        "oid_name": "Bear",
+        "wordnet_id": "v02700867"
+    },
+    "bed": {
+        "coco_id": 65,
+        "coco_name": "bed",
+        "oid_id": "/m/03ssj5",
+        "oid_name": "Bed",
+        "wordnet_id": "v02337066"
+    },
+    "bee": {
+        "oid_id": "/m/01h3n",
+        "oid_name": "Bee",
+        "wordnet_id": "n07975909"
+    },
+    "beehive": {
+        "oid_id": "/m/01gllr",
+        "oid_name": "Beehive",
+        "wordnet_id": "n09218159"
+    },
+    "beer": {
+        "oid_id": "/m/01599",
+        "oid_name": "Beer",
+        "wordnet_id": "n07886849"
+    },
+    "beetle": {
+        "oid_id": "/m/020jm",
+        "oid_name": "Beetle",
+        "wordnet_id": "v02697435"
+    },
+    "bell_pepper": {
+        "oid_id": "/m/0jg57",
+        "oid_name": "Bell pepper",
+        "wordnet_id": "n12901264"
+    },
+    "belt": {
+        "oid_id": "/m/0176mf",
+        "oid_name": "Belt",
+        "wordnet_id": "v01704030"
+    },
+    "bench": {
+        "coco_id": 15,
+        "coco_name": "bench",
+        "oid_id": "/m/0cvnqh",
+        "oid_name": "Bench",
+        "wordnet_id": "v02482889"
+    },
+    "bicycle": {
+        "coco_id": 2,
+        "coco_name": "bicycle",
+        "oid_id": "/m/0199g",
+        "oid_name": "Bicycle",
+        "wordnet_id": "v01935476"
+    },
+    "bicycle_helmet": {
+        "oid_id": "/m/03p3bw",
+        "oid_name": "Bicycle helmet"
+    },
+    "bicycle_wheel": {
+        "oid_id": "/m/01bqk0",
+        "oid_name": "Bicycle wheel",
+        "wordnet_id": "n02836035"
+    },
+    "bidet": {
+        "oid_id": "/m/01vbnl",
+        "oid_name": "Bidet",
+        "wordnet_id": "n02836174"
+    },
+    "billboard": {
+        "oid_id": "/m/01knjb",
+        "oid_name": "Billboard",
+        "wordnet_id": "n02839110"
+    },
+    "billiard_table": {
+        "oid_id": "/m/04p0qw",
+        "oid_name": "Billiard table",
+        "wordnet_id": "n03982430"
+    },
+    "binoculars": {
+        "oid_id": "/m/0lt4_",
+        "oid_name": "Binoculars",
+        "wordnet_id": "n02841315"
+    },
+    "bird": {
+        "coco_id": 16,
+        "coco_name": "bird",
+        "oid_id": "/m/015p6",
+        "oid_name": "Bird",
+        "wordnet_id": "v01139865"
+    },
+    "blanket": {
+        "coco_id": 93,
+        "coco_name": "blanket",
+        "wordnet_id": "v02749405"
+    },
+    "blender": {
+        "oid_id": "/m/02pjr4",
+        "oid_name": "Blender",
+        "wordnet_id": "n02850732"
+    },
+    "blue_jay": {
+        "oid_id": "/m/01f8m5",
+        "oid_name": "Blue jay",
+        "wordnet_id": "n01580870"
+    },
+    "boat": {
+        "coco_id": 9,
+        "coco_name": "boat",
+        "oid_id": "/m/019jd",
+        "oid_name": "Boat",
+        "wordnet_id": "v01944692"
+    },
+    "bomb": {
+        "oid_id": "/m/0ct4f",
+        "oid_name": "Bomb",
+        "wordnet_id": "v02523521"
+    },
+    "book": {
+        "coco_id": 84,
+        "coco_name": "book",
+        "oid_id": "/m/0bt_c3",
+        "oid_name": "Book",
+        "wordnet_id": "v02599754"
+    },
+    "bookcase": {
+        "oid_id": "/m/03__z0",
+        "oid_name": "Bookcase",
+        "wordnet_id": "n02870880"
+    },
+    "boot": {
+        "oid_id": "/m/01b638",
+        "oid_name": "Boot",
+        "wordnet_id": "v01372556"
+    },
+    "bottle": {
+        "coco_id": 44,
+        "coco_name": "bottle",
+        "oid_id": "/m/04dr76w",
+        "oid_name": "Bottle",
+        "wordnet_id": "v02283080"
+    },
+    "bottle_opener": {
+        "oid_id": "/m/04f5ws",
+        "oid_name": "Bottle opener",
+        "wordnet_id": "n02877962"
+    },
+    "bow_and_arrow": {
+        "oid_id": "/m/01g3x7",
+        "oid_name": "Bow and arrow",
+        "wordnet_id": "n02880393"
+    },
+    "bowl": {
+        "coco_id": 51,
+        "coco_name": "bowl",
+        "oid_id": "/m/04kkgm",
+        "oid_name": "Bowl",
+        "wordnet_id": "v01887324"
+    },
+    "bowling_equipment": {
+        "oid_id": "/m/07pj7bq",
+        "oid_name": "Bowling equipment",
+        "wordnet_id": "n02882483"
+    },
+    "box": {
+        "oid_id": "/m/025dyy",
+        "oid_name": "Box",
+        "wordnet_id": "v01485158"
+    },
+    "boy": {
+        "oid_id": "/m/01bl7v",
+        "oid_name": "Boy",
+        "wordnet_id": "n10624074"
+    },
+    "brassiere": {
+        "oid_id": "/m/01gmv2",
+        "oid_name": "Brassiere",
+        "wordnet_id": "n02892767"
+    },
+    "bread": {
+        "oid_id": "/m/09728",
+        "oid_name": "Bread",
+        "wordnet_id": "v01337653"
+    },
+    "bridge": {
+        "coco_id": 95,
+        "coco_name": "bridge",
+        "wordnet_id": "v02623194"
+    },
+    "briefcase": {
+        "oid_id": "/m/0584n8",
+        "oid_name": "Briefcase",
+        "wordnet_id": "n02900705"
+    },
+    "broccoli": {
+        "coco_id": 56,
+        "coco_name": "broccoli",
+        "oid_id": "/m/0hkxq",
+        "oid_name": "Broccoli",
+        "wordnet_id": "n11876803"
+    },
+    "bronze_sculpture": {
+        "oid_id": "/m/01yx86",
+        "oid_name": "Bronze sculpture"
+    },
+    "brown_bear": {
+        "oid_id": "/m/01dxs",
+        "oid_name": "Brown bear",
+        "wordnet_id": "n02132136"
+    },
+    "building": {
+        "oid_id": "/m/0cgh4",
+        "oid_name": "Building",
+        "wordnet_id": "n07973241"
+    },
+    "building-other-merged": {
+        "coco_id": 197,
+        "coco_name": "building-other-merged",
+        "wordnet_id": "n07973241"
+    },
+    "bull": {
+        "oid_id": "/m/0cnyhnx",
+        "oid_name": "Bull",
+        "wordnet_id": "v02374449"
+    },
+    "burrito": {
+        "oid_id": "/m/01j3zr",
+        "oid_name": "Burrito",
+        "wordnet_id": "n07880968"
+    },
+    "bus": {
+        "coco_id": 6,
+        "coco_name": "bus",
+        "oid_id": "/m/01bjv",
+        "oid_name": "Bus",
+        "wordnet_id": "v01950128"
+    },
+    "bust": {
+        "oid_id": "/m/04yqq2",
+        "oid_name": "Bust",
+        "wordnet_id": "v02494850"
+    },
+    "butterfly": {
+        "oid_id": "/m/0cyf8",
+        "oid_name": "Butterfly",
+        "wordnet_id": "v01900156"
+    },
+    "cabbage": {
+        "oid_id": "/m/0fbw6",
+        "oid_name": "Cabbage",
+        "wordnet_id": "v02276866"
+    },
+    "cabinet-merged": {
+        "coco_id": 188,
+        "coco_name": "cabinet-merged",
+        "wordnet_id": "n08381820"
+    },
+    "cabinetry": {
+        "oid_id": "/m/01s105",
+        "oid_name": "Cabinetry",
+        "wordnet_id": "n00607542"
+    },
+    "cake": {
+        "coco_id": 61,
+        "coco_name": "cake",
+        "oid_id": "/m/0fszt",
+        "oid_name": "Cake",
+        "wordnet_id": "v01262321"
+    },
+    "cake_stand": {
+        "oid_id": "/m/0h8n6ft",
+        "oid_name": "Cake stand"
+    },
+    "calculator": {
+        "oid_id": "/m/024d2",
+        "oid_name": "Calculator",
+        "wordnet_id": "n09887034"
+    },
+    "camel": {
+        "oid_id": "/m/01x_v",
+        "oid_name": "Camel",
+        "wordnet_id": "n02437136"
+    },
+    "camera": {
+        "oid_id": "/m/0dv5r",
+        "oid_name": "Camera",
+        "wordnet_id": "n04404997"
+    },
+    "can_opener": {
+        "oid_id": "/m/02mqfb",
+        "oid_name": "Can opener",
+        "wordnet_id": "n02951585"
+    },
+    "canary": {
+        "oid_id": "/m/0ccs93",
+        "oid_name": "Canary",
+        "wordnet_id": "n10091012"
+    },
+    "candle": {
+        "oid_id": "/m/0c06p",
+        "oid_name": "Candle",
+        "wordnet_id": "v02149899"
+    },
+    "candy": {
+        "oid_id": "/m/0gm28",
+        "oid_name": "Candy",
+        "wordnet_id": "v02196378"
+    },
+    "cannon": {
+        "oid_id": "/m/020kz",
+        "oid_name": "Cannon",
+        "wordnet_id": "v01147987"
+    },
+    "canoe": {
+        "oid_id": "/m/0ph39",
+        "oid_name": "Canoe",
+        "wordnet_id": "v01947543"
+    },
+    "cantaloupe": {
+        "oid_id": "/m/0kpt_",
+        "oid_name": "Cantaloupe",
+        "wordnet_id": "n12164656"
+    },
+    "car": {
+        "coco_id": 3,
+        "coco_name": "car",
+        "oid_id": "/m/0k4j",
+        "oid_name": "Car",
+        "wordnet_id": "n02960501"
+    },
+    "cardboard": {
+        "coco_id": 100,
+        "coco_name": "cardboard",
+        "wordnet_id": "n14799601"
+    },
+    "carnivore": {
+        "oid_id": "/m/01lrl",
+        "oid_name": "Carnivore",
+        "wordnet_id": "n02075296"
+    },
+    "carrot": {
+        "coco_id": 57,
+        "coco_name": "carrot",
+        "oid_id": "/m/0fj52s",
+        "oid_name": "Carrot",
+        "wordnet_id": "n12937678"
+    },
+    "cart": {
+        "oid_id": "/m/018p4k",
+        "oid_name": "Cart",
+        "wordnet_id": "v01454810"
+    },
+    "cassette_deck": {
+        "oid_id": "/m/01432t",
+        "oid_name": "Cassette deck",
+        "wordnet_id": "n02979074"
+    },
+    "castle": {
+        "oid_id": "/m/0d5gx",
+        "oid_name": "Castle",
+        "wordnet_id": "v01077329"
+    },
+    "cat": {
+        "coco_id": 17,
+        "coco_name": "cat",
+        "oid_id": "/m/01yrx",
+        "oid_name": "Cat",
+        "wordnet_id": "v01411870"
+    },
+    "cat_furniture": {
+        "oid_id": "/m/0h8nm9j",
+        "oid_name": "Cat furniture"
+    },
+    "caterpillar": {
+        "oid_id": "/m/0cydv",
+        "oid_name": "Caterpillar",
+        "wordnet_id": "n02983507"
+    },
+    "cattle": {
+        "oid_id": "/m/01xq0k1",
+        "oid_name": "Cattle",
+        "wordnet_id": "n02402425"
+    },
+    "ceiling-merged": {
+        "coco_id": 186,
+        "coco_name": "ceiling-merged",
+        "wordnet_id": "n06657646"
+    },
+    "ceiling_fan": {
+        "oid_id": "/m/03ldnb",
+        "oid_name": "Ceiling fan"
+    },
+    "cell_phone": {
+        "coco_id": 77,
+        "coco_name": "cell phone",
+        "wordnet_id": "v00789934"
+    },
+    "cello": {
+        "oid_id": "/m/01xqw",
+        "oid_name": "Cello",
+        "wordnet_id": "n02992211"
+    },
+    "centipede": {
+        "oid_id": "/m/019h78",
+        "oid_name": "Centipede",
+        "wordnet_id": "n01784675"
+    },
+    "chainsaw": {
+        "oid_id": "/m/01j4z9",
+        "oid_name": "Chainsaw",
+        "wordnet_id": "n03000684"
+    },
+    "chair": {
+        "coco_id": 62,
+        "coco_name": "chair",
+        "oid_id": "/m/01mzpv",
+        "oid_name": "Chair",
+        "wordnet_id": "v02440020"
+    },
+    "cheese": {
+        "oid_id": "/m/01nkt",
+        "oid_name": "Cheese",
+        "wordnet_id": "v02680691"
+    },
+    "cheetah": {
+        "oid_id": "/m/0cd4d",
+        "oid_name": "Cheetah",
+        "wordnet_id": "n02130308"
+    },
+    "chest_of_drawers": {
+        "oid_id": "/m/05kyg_",
+        "oid_name": "Chest of drawers",
+        "wordnet_id": "n03015254"
+    },
+    "chicken": {
+        "oid_id": "/m/09b5t",
+        "oid_name": "Chicken",
+        "wordnet_id": "n10781817"
+    },
+    "chime": {
+        "oid_id": "/m/0f8s22",
+        "oid_name": "Chime",
+        "wordnet_id": "v02182342"
+    },
+    "chisel": {
+        "oid_id": "/m/0_dqb",
+        "oid_name": "Chisel",
+        "wordnet_id": "v02574516"
+    },
+    "chopsticks": {
+        "oid_id": "/m/01_5g",
+        "oid_name": "Chopsticks"
+    },
+    "christmas_tree": {
+        "oid_id": "/m/025nd",
+        "oid_name": "Christmas tree",
+        "wordnet_id": "n12787364"
+    },
+    "clock": {
+        "coco_id": 85,
+        "coco_name": "clock",
+        "oid_id": "/m/01x3z",
+        "oid_name": "Clock",
+        "wordnet_id": "v00490968"
+    },
+    "closet": {
+        "oid_id": "/m/0d4w1",
+        "oid_name": "Closet",
+        "wordnet_id": "v01302717"
+    },
+    "clothing": {
+        "oid_id": "/m/09j2d",
+        "oid_name": "Clothing",
+        "wordnet_id": "n03051540"
+    },
+    "coat": {
+        "oid_id": "/m/01xygc",
+        "oid_name": "Coat",
+        "wordnet_id": "v01264283"
+    },
+    "cocktail": {
+        "oid_id": "/m/024g6",
+        "oid_name": "Cocktail",
+        "wordnet_id": "n07911677"
+    },
+    "cocktail_shaker": {
+        "oid_id": "/m/0440zs",
+        "oid_name": "Cocktail shaker",
+        "wordnet_id": "n03062245"
+    },
+    "coconut": {
+        "oid_id": "/m/0djtd",
+        "oid_name": "Coconut",
+        "wordnet_id": "n12587803"
+    },
+    "coffee": {
+        "oid_id": "/m/02vqfm",
+        "oid_name": "Coffee",
+        "wordnet_id": "n12662772"
+    },
+    "coffee_cup": {
+        "oid_id": "/m/02p5f1q",
+        "oid_name": "Coffee cup",
+        "wordnet_id": "n03063073"
+    },
+    "coffee_table": {
+        "oid_id": "/m/078n6m",
+        "oid_name": "Coffee table",
+        "wordnet_id": "n03063968"
+    },
+    "coffeemaker": {
+        "oid_id": "/m/07xyvk",
+        "oid_name": "Coffeemaker"
+    },
+    "coin": {
+        "oid_id": "/m/0242l",
+        "oid_name": "Coin",
+        "wordnet_id": "v01697986"
+    },
+    "common_fig": {
+        "oid_id": "/m/043nyj",
+        "oid_name": "Common fig",
+        "wordnet_id": "n12401684"
+    },
+    "common_sunflower": {
+        "oid_id": "/m/0ftb8",
+        "oid_name": "Common sunflower",
+        "wordnet_id": "n11978713"
+    },
+    "computer_keyboard": {
+        "oid_id": "/m/01m2v",
+        "oid_name": "Computer keyboard",
+        "wordnet_id": "n03085013"
+    },
+    "computer_monitor": {
+        "oid_id": "/m/02522",
+        "oid_name": "Computer monitor",
+        "wordnet_id": "n03085219"
+    },
+    "computer_mouse": {
+        "oid_id": "/m/020lf",
+        "oid_name": "Computer mouse",
+        "wordnet_id": "n03793489"
+    },
+    "container": {
+        "oid_id": "/m/011q46kg",
+        "oid_name": "Container",
+        "wordnet_id": "n03094503"
+    },
+    "convenience_store": {
+        "oid_id": "/m/0crjs",
+        "oid_name": "Convenience store",
+        "wordnet_id": "n03099274"
+    },
+    "cookie": {
+        "oid_id": "/m/021mn",
+        "oid_name": "Cookie",
+        "wordnet_id": "n09963680"
+    },
+    "cooking_spray": {
+        "oid_id": "/m/07mcwg",
+        "oid_name": "Cooking spray"
+    },
+    "corded_phone": {
+        "oid_id": "/m/0h8lkj8",
+        "oid_name": "Corded phone"
+    },
+    "cosmetics": {
+        "oid_id": "/m/014trl",
+        "oid_name": "Cosmetics"
+    },
+    "couch": {
+        "coco_id": 63,
+        "coco_name": "couch",
+        "oid_id": "/m/02crq1",
+        "oid_name": "Couch",
+        "wordnet_id": "v00981276"
+    },
+    "counter": {
+        "coco_id": 107,
+        "coco_name": "counter",
+        "wordnet_id": "v02565491"
+    },
+    "countertop": {
+        "oid_id": "/m/0b3fp9",
+        "oid_name": "Countertop",
+        "wordnet_id": "n03118245"
+    },
+    "cow": {
+        "coco_id": 21,
+        "coco_name": "cow",
+        "wordnet_id": "v01779803"
+    },
+    "cowboy_hat": {
+        "oid_id": "/m/025rp__",
+        "oid_name": "Cowboy hat",
+        "wordnet_id": "n03124170"
+    },
+    "crab": {
+        "oid_id": "/m/0n28_",
+        "oid_name": "Crab",
+        "wordnet_id": "v01932586"
+    },
+    "cream": {
+        "oid_id": "/m/08p92x",
+        "oid_name": "Cream",
+        "wordnet_id": "v01418037"
+    },
+    "cricket_ball": {
+        "oid_id": "/m/02ctlc",
+        "oid_name": "Cricket ball",
+        "wordnet_id": "n03131967"
+    },
+    "crocodile": {
+        "oid_id": "/m/09f_2",
+        "oid_name": "Crocodile",
+        "wordnet_id": "n01697178"
+    },
+    "croissant": {
+        "oid_id": "/m/015wgc",
+        "oid_name": "Croissant",
+        "wordnet_id": "n07691650"
+    },
+    "crown": {
+        "oid_id": "/m/0nl46",
+        "oid_name": "Crown",
+        "wordnet_id": "v02694677"
+    },
+    "crutch": {
+        "oid_id": "/m/05441v",
+        "oid_name": "Crutch",
+        "wordnet_id": "n03141823"
+    },
+    "cucumber": {
+        "oid_id": "/m/015x4r",
+        "oid_name": "Cucumber",
+        "wordnet_id": "n12165384"
+    },
+    "cup": {
+        "coco_id": 47,
+        "coco_name": "cup",
+        "wordnet_id": "v00477828"
+    },
+    "cupboard": {
+        "oid_id": "/m/0642b4",
+        "oid_name": "Cupboard",
+        "wordnet_id": "n03148324"
+    },
+    "curtain": {
+        "coco_id": 109,
+        "coco_name": "curtain",
+        "oid_id": "/m/03rszm",
+        "oid_name": "Curtain",
+        "wordnet_id": "v02353537"
+    },
+    "cutting_board": {
+        "oid_id": "/m/02pdsw",
+        "oid_name": "Cutting board",
+        "wordnet_id": "n03025513"
+    },
+    "dagger": {
+        "oid_id": "/m/02gzp",
+        "oid_name": "Dagger",
+        "wordnet_id": "n06828529"
+    },
+    "dairy_product": {
+        "oid_id": "/m/0284d",
+        "oid_name": "Dairy Product",
+        "wordnet_id": "n07843775"
+    },
+    "deer": {
+        "oid_id": "/m/09kx5",
+        "oid_name": "Deer",
+        "wordnet_id": "n02430045"
+    },
+    "desk": {
+        "oid_id": "/m/01y9k5",
+        "oid_name": "Desk",
+        "wordnet_id": "n03179701"
+    },
+    "dessert": {
+        "oid_id": "/m/0270h",
+        "oid_name": "Dessert",
+        "wordnet_id": "n07609840"
+    },
+    "diaper": {
+        "oid_id": "/m/0f571",
+        "oid_name": "Diaper",
+        "wordnet_id": "n03188725"
+    },
+    "dice": {
+        "oid_id": "/m/029b3",
+        "oid_name": "Dice",
+        "wordnet_id": "v01256867"
+    },
+    "digital_clock": {
+        "oid_id": "/m/06_72j",
+        "oid_name": "Digital clock",
+        "wordnet_id": "n03196217"
+    },
+    "dining_table": {
+        "coco_id": 67,
+        "coco_name": "dining table",
+        "wordnet_id": "n03201208"
+    },
+    "dinosaur": {
+        "oid_id": "/m/029tx",
+        "oid_name": "Dinosaur",
+        "wordnet_id": "n01699831"
+    },
+    "dirt-merged": {
+        "coco_id": 194,
+        "coco_name": "dirt-merged",
+        "wordnet_id": "n14854581"
+    },
+    "dishwasher": {
+        "oid_id": "/m/0ky7b",
+        "oid_name": "Dishwasher",
+        "wordnet_id": "n10017190"
+    },
+    "dog": {
+        "coco_id": 18,
+        "coco_name": "dog",
+        "oid_id": "/m/0bt9lr",
+        "oid_name": "Dog",
+        "wordnet_id": "v02001858"
+    },
+    "dog_bed": {
+        "oid_id": "/m/0h8n6f9",
+        "oid_name": "Dog bed"
+    },
+    "doll": {
+        "oid_id": "/m/0167gd",
+        "oid_name": "Doll",
+        "wordnet_id": "n09989045"
+    },
+    "dolphin": {
+        "oid_id": "/m/02hj4",
+        "oid_name": "Dolphin",
+        "wordnet_id": "n02581957"
+    },
+    "donut": {
+        "coco_id": 60,
+        "coco_name": "donut",
+        "wordnet_id": "n07639069"
+    },
+    "door": {
+        "oid_id": "/m/02dgv",
+        "oid_name": "Door",
+        "wordnet_id": "n05180881"
+    },
+    "door-stuff": {
+        "coco_id": 112,
+        "coco_name": "door-stuff",
+        "wordnet_id": "n05180881"
+    },
+    "door_handle": {
+        "oid_id": "/m/03c7gz",
+        "oid_name": "Door handle",
+        "wordnet_id": "n03222959"
+    },
+    "doughnut": {
+        "oid_id": "/m/0jy4k",
+        "oid_name": "Doughnut",
+        "wordnet_id": "n13875392"
+    },
+    "dragonfly": {
+        "oid_id": "/m/0ft9s",
+        "oid_name": "Dragonfly",
+        "wordnet_id": "n02268443"
+    },
+    "drawer": {
+        "oid_id": "/m/0fqfqc",
+        "oid_name": "Drawer",
+        "wordnet_id": "n10032524"
+    },
+    "dress": {
+        "oid_id": "/m/01d40f",
+        "oid_name": "Dress",
+        "wordnet_id": "v02036650"
+    },
+    "drill_(tool)": {
+        "oid_id": "/m/01d380",
+        "oid_name": "Drill (Tool)"
+    },
+    "drink": {
+        "oid_id": "/m/0271t",
+        "oid_name": "Drink",
+        "wordnet_id": "v01175467"
+    },
+    "drinking_straw": {
+        "oid_id": "/m/03v5tg",
+        "oid_name": "Drinking straw",
+        "wordnet_id": "n04334232"
+    },
+    "drum": {
+        "oid_id": "/m/026t6",
+        "oid_name": "Drum",
+        "wordnet_id": "v02174830"
+    },
+    "duck": {
+        "oid_id": "/m/09ddx",
+        "oid_name": "Duck",
+        "wordnet_id": "v01976220"
+    },
+    "dumbbell": {
+        "oid_id": "/m/04h8sr",
+        "oid_name": "Dumbbell",
+        "wordnet_id": "n10039391"
+    },
+    "eagle": {
+        "oid_id": "/m/09csl",
+        "oid_name": "Eagle",
+        "wordnet_id": "v01598637"
+    },
+    "earrings": {
+        "oid_id": "/m/01r546",
+        "oid_name": "Earrings"
+    },
+    "egg_(food)": {
+        "oid_id": "/m/033cnk",
+        "oid_name": "Egg (Food)"
+    },
+    "elephant": {
+        "coco_id": 22,
+        "coco_name": "elephant",
+        "oid_id": "/m/0bwd_0j",
+        "oid_name": "Elephant",
+        "wordnet_id": "n06881662"
+    },
+    "envelope": {
+        "oid_id": "/m/0frqm",
+        "oid_name": "Envelope",
+        "wordnet_id": "n13869788"
+    },
+    "eraser": {
+        "oid_id": "/m/02fh7f",
+        "oid_name": "Eraser",
+        "wordnet_id": "n03294833"
+    },
+    "face_powder": {
+        "oid_id": "/m/02xb7qb",
+        "oid_name": "Face powder",
+        "wordnet_id": "n03314780"
+    },
+    "facial_tissue_holder": {
+        "oid_id": "/m/0h8nsvg",
+        "oid_name": "Facial tissue holder"
+    },
+    "falcon": {
+        "oid_id": "/m/0f6wt",
+        "oid_name": "Falcon",
+        "wordnet_id": "v01145766"
+    },
+    "fashion_accessory": {
+        "oid_id": "/m/0463sg",
+        "oid_name": "Fashion accessory"
+    },
+    "fast_food": {
+        "oid_id": "/m/01_bhs",
+        "oid_name": "Fast food",
+        "wordnet_id": "n07560193"
+    },
+    "fax": {
+        "oid_id": "/m/02xqq",
+        "oid_name": "Fax",
+        "wordnet_id": "v01007676"
+    },
+    "fedora": {
+        "oid_id": "/m/02fq_6",
+        "oid_name": "Fedora",
+        "wordnet_id": "n03325941"
+    },
+    "fence-merged": {
+        "coco_id": 185,
+        "coco_name": "fence-merged",
+        "wordnet_id": "v02210754"
+    },
+    "filing_cabinet": {
+        "oid_id": "/m/047j0r",
+        "oid_name": "Filing cabinet",
+        "wordnet_id": "n03337140"
+    },
+    "fire_hydrant": {
+        "coco_id": 11,
+        "coco_name": "fire hydrant",
+        "oid_id": "/m/01pns0",
+        "oid_name": "Fire hydrant",
+        "wordnet_id": "n03346898"
+    },
+    "fireplace": {
+        "oid_id": "/m/03tw93",
+        "oid_name": "Fireplace",
+        "wordnet_id": "n03346455"
+    },
+    "fish": {
+        "oid_id": "/m/0ch_cf",
+        "oid_name": "Fish",
+        "wordnet_id": "v01319346"
+    },
+    "flag": {
+        "oid_id": "/m/03120",
+        "oid_name": "Flag",
+        "wordnet_id": "v01985524"
+    },
+    "flashlight": {
+        "oid_id": "/m/01kb5b",
+        "oid_name": "Flashlight",
+        "wordnet_id": "n03359137"
+    },
+    "floor-other-merged": {
+        "coco_id": 190,
+        "coco_name": "floor-other-merged",
+        "wordnet_id": "v01809064"
+    },
+    "floor-wood": {
+        "coco_id": 118,
+        "coco_name": "floor-wood"
+    },
+    "flower": {
+        "coco_id": 119,
+        "coco_name": "flower",
+        "oid_id": "/m/0c9ph5",
+        "oid_name": "Flower",
+        "wordnet_id": "v00294245"
+    },
+    "flowerpot": {
+        "oid_id": "/m/0fm3zh",
+        "oid_name": "Flowerpot",
+        "wordnet_id": "n03991062"
+    },
+    "flute": {
+        "oid_id": "/m/0l14j_",
+        "oid_name": "Flute",
+        "wordnet_id": "v01457376"
+    },
+    "flying_disc": {
+        "oid_id": "/m/02wmf",
+        "oid_name": "Flying disc"
+    },
+    "food": {
+        "oid_id": "/m/02wbm",
+        "oid_name": "Food",
+        "wordnet_id": "n07555863"
+    },
+    "food-other-merged": {
+        "coco_id": 196,
+        "coco_name": "food-other-merged",
+        "wordnet_id": "n07555863"
+    },
+    "food_processor": {
+        "oid_id": "/m/03y6mg",
+        "oid_name": "Food processor",
+        "wordnet_id": "n03378174"
+    },
+    "football": {
+        "oid_id": "/m/01226z",
+        "oid_name": "Football",
+        "wordnet_id": "n03378765"
+    },
+    "football_helmet": {
+        "oid_id": "/m/07qxg_",
+        "oid_name": "Football helmet",
+        "wordnet_id": "n03379051"
+    },
+    "footwear": {
+        "oid_id": "/m/09j5n",
+        "oid_name": "Footwear",
+        "wordnet_id": "n03381126"
+    },
+    "fork": {
+        "coco_id": 48,
+        "coco_name": "fork",
+        "oid_id": "/m/0dt3t",
+        "oid_name": "Fork",
+        "wordnet_id": "v01579340"
+    },
+    "fountain": {
+        "oid_id": "/m/0220r2",
+        "oid_name": "Fountain",
+        "wordnet_id": "n09443453"
+    },
+    "fox": {
+        "oid_id": "/m/0306r",
+        "oid_name": "Fox",
+        "wordnet_id": "v02575723"
+    },
+    "french_fries": {
+        "oid_id": "/m/02y6n",
+        "oid_name": "French fries",
+        "wordnet_id": "n07711080"
+    },
+    "french_horn": {
+        "oid_id": "/m/0319l",
+        "oid_name": "French horn",
+        "wordnet_id": "n03394916"
+    },
+    "frisbee": {
+        "coco_id": 34,
+        "coco_name": "frisbee",
+        "wordnet_id": "n03397947"
+    },
+    "frog": {
+        "oid_id": "/m/09ld4",
+        "oid_name": "Frog",
+        "wordnet_id": "v01382818"
+    },
+    "fruit": {
+        "coco_id": 122,
+        "coco_name": "fruit",
+        "oid_id": "/m/02xwb",
+        "oid_name": "Fruit",
+        "wordnet_id": "v01652895"
+    },
+    "frying_pan": {
+        "oid_id": "/m/04v6l4",
+        "oid_name": "Frying pan",
+        "wordnet_id": "n03400231"
+    },
+    "furniture": {
+        "oid_id": "/m/0c_jw",
+        "oid_name": "Furniture",
+        "wordnet_id": "n03405725"
+    },
+    "garden_asparagus": {
+        "oid_id": "/m/0cjs7",
+        "oid_name": "Garden Asparagus"
+    },
+    "gas_stove": {
+        "oid_id": "/m/02wv84t",
+        "oid_name": "Gas stove",
+        "wordnet_id": "n03425595"
+    },
+    "giraffe": {
+        "coco_id": 25,
+        "coco_name": "giraffe",
+        "oid_id": "/m/03bk1",
+        "oid_name": "Giraffe",
+        "wordnet_id": "n02439033"
+    },
+    "girl": {
+        "oid_id": "/m/05r655",
+        "oid_name": "Girl",
+        "wordnet_id": "n10130686"
+    },
+    "glasses": {
+        "oid_id": "/m/0jyfg",
+        "oid_name": "Glasses",
+        "wordnet_id": "n04272054"
+    },
+    "glove": {
+        "oid_id": "/m/0174n1",
+        "oid_name": "Glove",
+        "wordnet_id": "n03441112"
+    },
+    "goat": {
+        "oid_id": "/m/03fwl",
+        "oid_name": "Goat",
+        "wordnet_id": "n09884666"
+    },
+    "goggles": {
+        "oid_id": "/m/02_n6y",
+        "oid_name": "Goggles",
+        "wordnet_id": "n03443912"
+    },
+    "goldfish": {
+        "oid_id": "/m/03fj2",
+        "oid_name": "Goldfish",
+        "wordnet_id": "n01443537"
+    },
+    "golf_ball": {
+        "oid_id": "/m/044r5d",
+        "oid_name": "Golf ball",
+        "wordnet_id": "n03445777"
+    },
+    "golf_cart": {
+        "oid_id": "/m/0323sq",
+        "oid_name": "Golf cart",
+        "wordnet_id": "n03445924"
+    },
+    "gondola": {
+        "oid_id": "/m/02068x",
+        "oid_name": "Gondola",
+        "wordnet_id": "n03447593"
+    },
+    "goose": {
+        "oid_id": "/m/0dbvp",
+        "oid_name": "Goose",
+        "wordnet_id": "v01457079"
+    },
+    "grape": {
+        "oid_id": "/m/0388q",
+        "oid_name": "Grape",
+        "wordnet_id": "n13144794"
+    },
+    "grapefruit": {
+        "oid_id": "/m/0hqkz",
+        "oid_name": "Grapefruit",
+        "wordnet_id": "n12709688"
+    },
+    "grass-merged": {
+        "coco_id": 193,
+        "coco_name": "grass-merged",
+        "wordnet_id": "v01603032"
+    },
+    "gravel": {
+        "coco_id": 125,
+        "coco_name": "gravel",
+        "wordnet_id": "v01787955"
+    },
+    "grinder": {
+        "oid_id": "/m/0h8jyh6",
+        "oid_name": "Grinder",
+        "wordnet_id": "n07697825"
+    },
+    "guacamole": {
+        "oid_id": "/m/02g30s",
+        "oid_name": "Guacamole",
+        "wordnet_id": "n07583066"
+    },
+    "guitar": {
+        "oid_id": "/m/0342h",
+        "oid_name": "Guitar",
+        "wordnet_id": "n03467517"
+    },
+    "hair_drier": {
+        "coco_id": 89,
+        "coco_name": "hair drier",
+        "wordnet_id": "n03483316"
+    },
+    "hair_dryer": {
+        "oid_id": "/m/03wvsk",
+        "oid_name": "Hair dryer",
+        "wordnet_id": "n03483316"
+    },
+    "hair_spray": {
+        "oid_id": "/m/05w9t9",
+        "oid_name": "Hair spray",
+        "wordnet_id": "n03476991"
+    },
+    "hamburger": {
+        "oid_id": "/m/0cdn1",
+        "oid_name": "Hamburger",
+        "wordnet_id": "n07697100"
+    },
+    "hammer": {
+        "oid_id": "/m/03l9g",
+        "oid_name": "Hammer",
+        "wordnet_id": "v01675245"
+    },
+    "hamster": {
+        "oid_id": "/m/03qrc",
+        "oid_name": "Hamster",
+        "wordnet_id": "n02342885"
+    },
+    "hand_dryer": {
+        "oid_id": "/m/0c3m8g",
+        "oid_name": "Hand dryer"
+    },
+    "handbag": {
+        "coco_id": 31,
+        "coco_name": "handbag",
+        "oid_id": "/m/080hkjn",
+        "oid_name": "Handbag",
+        "wordnet_id": "n02774152"
+    },
+    "handgun": {
+        "oid_id": "/m/0gxl3",
+        "oid_name": "Handgun",
+        "wordnet_id": "n03948459"
+    },
+    "harbor_seal": {
+        "oid_id": "/m/02l8p9",
+        "oid_name": "Harbor seal",
+        "wordnet_id": "n02079851"
+    },
+    "harmonica": {
+        "oid_id": "/m/03qjg",
+        "oid_name": "Harmonica",
+        "wordnet_id": "n03494278"
+    },
+    "harp": {
+        "oid_id": "/m/03m5k",
+        "oid_name": "Harp",
+        "wordnet_id": "v01732713"
+    },
+    "harpsichord": {
+        "oid_id": "/m/03q5t",
+        "oid_name": "Harpsichord",
+        "wordnet_id": "n03496296"
+    },
+    "hat": {
+        "oid_id": "/m/02dl1y",
+        "oid_name": "Hat",
+        "wordnet_id": "v02363128"
+    },
+    "headphones": {
+        "oid_id": "/m/01b7fy",
+        "oid_name": "Headphones"
+    },
+    "heater": {
+        "oid_id": "/m/03qhv5",
+        "oid_name": "Heater",
+        "wordnet_id": "n03508101"
+    },
+    "hedgehog": {
+        "oid_id": "/m/0cl4p",
+        "oid_name": "Hedgehog",
+        "wordnet_id": "n02346627"
+    },
+    "helicopter": {
+        "oid_id": "/m/09ct_",
+        "oid_name": "Helicopter",
+        "wordnet_id": "n03512147"
+    },
+    "helmet": {
+        "oid_id": "/m/0zvk5",
+        "oid_name": "Helmet",
+        "wordnet_id": "n03513376"
+    },
+    "high_heels": {
+        "oid_id": "/m/06k2mb",
+        "oid_name": "High heels"
+    },
+    "hiking_equipment": {
+        "oid_id": "/m/0268lbt",
+        "oid_name": "Hiking equipment"
+    },
+    "hippopotamus": {
+        "oid_id": "/m/09f20",
+        "oid_name": "Hippopotamus",
+        "wordnet_id": "n02398521"
+    },
+    "home_appliance": {
+        "oid_id": "/m/019dx1",
+        "oid_name": "Home appliance",
+        "wordnet_id": "n03528263"
+    },
+    "honeycomb": {
+        "oid_id": "/m/0fz0h",
+        "oid_name": "Honeycomb",
+        "wordnet_id": "v01752162"
+    },
+    "horizontal_bar": {
+        "oid_id": "/m/0cqn2",
+        "oid_name": "Horizontal bar",
+        "wordnet_id": "n03535780"
+    },
+    "horse": {
+        "coco_id": 19,
+        "coco_name": "horse",
+        "oid_id": "/m/03k3r",
+        "oid_name": "Horse",
+        "wordnet_id": "v01184058"
+    },
+    "hot_dog": {
+        "coco_id": 58,
+        "coco_name": "hot dog",
+        "oid_id": "/m/01b9xk",
+        "oid_name": "Hot dog",
+        "wordnet_id": "n10187710"
+    },
+    "house": {
+        "coco_id": 128,
+        "coco_name": "house",
+        "oid_id": "/m/03jm5",
+        "oid_name": "House",
+        "wordnet_id": "v02701828"
+    },
+    "houseplant": {
+        "oid_id": "/m/03fp41",
+        "oid_name": "Houseplant",
+        "wordnet_id": "n13083023"
+    },
+    "human_arm": {
+        "oid_id": "/m/0dzf4",
+        "oid_name": "Human arm"
+    },
+    "human_beard": {
+        "oid_id": "/m/015h_t",
+        "oid_name": "Human beard"
+    },
+    "human_body": {
+        "oid_id": "/m/02p0tk3",
+        "oid_name": "Human body",
+        "wordnet_id": "n05217168"
+    },
+    "human_ear": {
+        "oid_id": "/m/039xj_",
+        "oid_name": "Human ear"
+    },
+    "human_eye": {
+        "oid_id": "/m/014sv8",
+        "oid_name": "Human eye"
+    },
+    "human_face": {
+        "oid_id": "/m/0dzct",
+        "oid_name": "Human face",
+        "wordnet_id": "n05600637"
+    },
+    "human_foot": {
+        "oid_id": "/m/031n1",
+        "oid_name": "Human foot",
+        "wordnet_id": "n05563266"
+    },
+    "human_hair": {
+        "oid_id": "/m/03q69",
+        "oid_name": "Human hair"
+    },
+    "human_hand": {
+        "oid_id": "/m/0k65p",
+        "oid_name": "Human hand"
+    },
+    "human_head": {
+        "oid_id": "/m/04hgtk",
+        "oid_name": "Human head",
+        "wordnet_id": "n05539138"
+    },
+    "human_leg": {
+        "oid_id": "/m/035r7c",
+        "oid_name": "Human leg"
+    },
+    "human_mouth": {
+        "oid_id": "/m/0283dt1",
+        "oid_name": "Human mouth"
+    },
+    "human_nose": {
+        "oid_id": "/m/0k0pj",
+        "oid_name": "Human nose"
+    },
+    "humidifier": {
+        "oid_id": "/m/04lvq_",
+        "oid_name": "Humidifier"
+    },
+    "ice_cream": {
+        "oid_id": "/m/0cxn2",
+        "oid_name": "Ice cream",
+        "wordnet_id": "n07614500"
+    },
+    "indoor_rower": {
+        "oid_id": "/m/03wym",
+        "oid_name": "Indoor rower"
+    },
+    "infant_bed": {
+        "oid_id": "/m/061hd_",
+        "oid_name": "Infant bed"
+    },
+    "insect": {
+        "oid_id": "/m/03vt0",
+        "oid_name": "Insect",
+        "wordnet_id": "n10792028"
+    },
+    "invertebrate": {
+        "oid_id": "/m/03xxp",
+        "oid_name": "Invertebrate",
+        "wordnet_id": "n01905661"
+    },
+    "ipod": {
+        "oid_id": "/m/0mcx2",
+        "oid_name": "Ipod",
+        "wordnet_id": "n03584254"
+    },
+    "isopod": {
+        "oid_id": "/m/035vxb",
+        "oid_name": "Isopod",
+        "wordnet_id": "n01990800"
+    },
+    "jacket": {
+        "oid_id": "/m/032b3c",
+        "oid_name": "Jacket",
+        "wordnet_id": "v01334931"
+    },
+    "jacuzzi": {
+        "oid_id": "/m/065h6l",
+        "oid_name": "Jacuzzi"
+    },
+    "jaguar_(animal)": {
+        "oid_id": "/m/0449p",
+        "oid_name": "Jaguar (Animal)"
+    },
+    "jeans": {
+        "oid_id": "/m/0fly7",
+        "oid_name": "Jeans"
+    },
+    "jellyfish": {
+        "oid_id": "/m/0d8zb",
+        "oid_name": "Jellyfish",
+        "wordnet_id": "n01913166"
+    },
+    "jet_ski": {
+        "oid_id": "/m/01xs3r",
+        "oid_name": "Jet ski"
+    },
+    "jug": {
+        "oid_id": "/m/08hvt4",
+        "oid_name": "Jug",
+        "wordnet_id": "v02494356"
+    },
+    "juice": {
+        "oid_id": "/m/01z1kdw",
+        "oid_name": "Juice",
+        "wordnet_id": "n14050434"
+    },
+    "kangaroo": {
+        "oid_id": "/m/04c0y",
+        "oid_name": "Kangaroo",
+        "wordnet_id": "n01877134"
+    },
+    "kettle": {
+        "oid_id": "/m/03s_tn",
+        "oid_name": "Kettle",
+        "wordnet_id": "n13768154"
+    },
+    "keyboard": {
+        "coco_id": 76,
+        "coco_name": "keyboard",
+        "wordnet_id": "n03614007"
+    },
+    "kitchen_&_dining_room_table": {
+        "oid_id": "/m/0h8n5zk",
+        "oid_name": "Kitchen & dining room table"
+    },
+    "kitchen_appliance": {
+        "oid_id": "/m/0h99cwc",
+        "oid_name": "Kitchen appliance",
+        "wordnet_id": "n03620052"
+    },
+    "kitchen_knife": {
+        "oid_id": "/m/058qzx",
+        "oid_name": "Kitchen knife"
+    },
+    "kitchen_utensil": {
+        "oid_id": "/m/03hlz0c",
+        "oid_name": "Kitchen utensil",
+        "wordnet_id": "n03621049"
+    },
+    "kitchenware": {
+        "oid_id": "/m/03_wxk",
+        "oid_name": "Kitchenware",
+        "wordnet_id": "n03621377"
+    },
+    "kite": {
+        "coco_id": 38,
+        "coco_name": "kite",
+        "oid_id": "/m/02zt3",
+        "oid_name": "Kite",
+        "wordnet_id": "v02206313"
+    },
+    "knife": {
+        "coco_id": 49,
+        "coco_name": "knife",
+        "oid_id": "/m/04ctx",
+        "oid_name": "Knife",
+        "wordnet_id": "v01231652"
+    },
+    "koala": {
+        "oid_id": "/m/04cp_",
+        "oid_name": "Koala",
+        "wordnet_id": "n01882714"
+    },
+    "ladder": {
+        "oid_id": "/m/012w5l",
+        "oid_name": "Ladder",
+        "wordnet_id": "v00334803"
+    },
+    "ladle": {
+        "oid_id": "/m/027rl48",
+        "oid_name": "Ladle",
+        "wordnet_id": "v01578993"
+    },
+    "ladybug": {
+        "oid_id": "/m/0gj37",
+        "oid_name": "Ladybug",
+        "wordnet_id": "n02165456"
+    },
+    "lamp": {
+        "oid_id": "/m/0dtln",
+        "oid_name": "Lamp",
+        "wordnet_id": "n03636649"
+    },
+    "land_vehicle": {
+        "oid_id": "/m/01prls",
+        "oid_name": "Land vehicle"
+    },
+    "lantern": {
+        "oid_id": "/m/01jfsr",
+        "oid_name": "Lantern",
+        "wordnet_id": "n03640988"
+    },
+    "laptop": {
+        "coco_id": 73,
+        "coco_name": "laptop",
+        "oid_id": "/m/01c648",
+        "oid_name": "Laptop",
+        "wordnet_id": "n03642806"
+    },
+    "lavender_(plant)": {
+        "oid_id": "/m/04gth",
+        "oid_name": "Lavender (Plant)"
+    },
+    "lemon": {
+        "oid_id": "/m/09k_b",
+        "oid_name": "Lemon",
+        "wordnet_id": "n12711596"
+    },
+    "leopard": {
+        "oid_id": "/m/0c29q",
+        "oid_name": "Leopard",
+        "wordnet_id": "n14765422"
+    },
+    "light": {
+        "coco_id": 130,
+        "coco_name": "light",
+        "wordnet_id": "v02759614"
+    },
+    "light_bulb": {
+        "oid_id": "/m/0h8l4fh",
+        "oid_name": "Light bulb",
+        "wordnet_id": "n03665924"
+    },
+    "light_switch": {
+        "oid_id": "/m/03jbxj",
+        "oid_name": "Light switch"
+    },
+    "lighthouse": {
+        "oid_id": "/m/04h7h",
+        "oid_name": "Lighthouse",
+        "wordnet_id": "n02814860"
+    },
+    "lily": {
+        "oid_id": "/m/0jqgx",
+        "oid_name": "Lily",
+        "wordnet_id": "n12426248"
+    },
+    "limousine": {
+        "oid_id": "/m/01lcw4",
+        "oid_name": "Limousine",
+        "wordnet_id": "n03670208"
+    },
+    "lion": {
+        "oid_id": "/m/096mb",
+        "oid_name": "Lion",
+        "wordnet_id": "n10265070"
+    },
+    "lipstick": {
+        "oid_id": "/m/06c7f7",
+        "oid_name": "Lipstick",
+        "wordnet_id": "v01689589"
+    },
+    "lizard": {
+        "oid_id": "/m/04m9y",
+        "oid_name": "Lizard",
+        "wordnet_id": "n10274474"
+    },
+    "lobster": {
+        "oid_id": "/m/0cjq5",
+        "oid_name": "Lobster",
+        "wordnet_id": "n07792725"
+    },
+    "loveseat": {
+        "oid_id": "/m/0703r8",
+        "oid_name": "Loveseat",
+        "wordnet_id": "n03693474"
+    },
+    "luggage_and_bags": {
+        "oid_id": "/m/0hf58v5",
+        "oid_name": "Luggage and bags",
+        "wikidata_desc": "http://www.wikidata.org/entity/Q865054",
+        "wikidata_name": "http://www.wikidata.org/entity/statement/Q1323314-cb18399f-42d7-ad33-7f27-7783ad97d76e",
+        "wikidata_qid": "Q865054-43cf2190-4c1f-2c52-6fe1-0ab2dcb5ce63"
+    },
+    "lynx": {
+        "oid_id": "/m/04g2r",
+        "oid_name": "Lynx",
+        "wordnet_id": "n06571724"
+    },
+    "magpie": {
+        "oid_id": "/m/012074",
+        "oid_name": "Magpie",
+        "wordnet_id": "n10281276"
+    },
+    "mammal": {
+        "oid_id": "/m/04rky",
+        "oid_name": "Mammal",
+        "wordnet_id": "n01861778"
+    },
+    "man": {
+        "oid_id": "/m/04yx4",
+        "oid_name": "Man",
+        "wordnet_id": "v02420991"
+    },
+    "mango": {
+        "oid_id": "/m/0fldg",
+        "oid_name": "Mango",
+        "wordnet_id": "n12761284"
+    },
+    "maple": {
+        "oid_id": "/m/0cffdh",
+        "oid_name": "Maple",
+        "wordnet_id": "n12752666"
+    },
+    "maracas": {
+        "oid_id": "/m/0xzly",
+        "oid_name": "Maracas"
+    },
+    "marine_invertebrates": {
+        "oid_id": "/m/03hl4l9",
+        "oid_name": "Marine invertebrates"
+    },
+    "marine_mammal": {
+        "oid_id": "/m/0gd2v",
+        "oid_name": "Marine mammal"
+    },
+    "measuring_cup": {
+        "oid_id": "/m/07v9_z",
+        "oid_name": "Measuring cup",
+        "wordnet_id": "n03733805"
+    },
+    "mechanical_fan": {
+        "oid_id": "/m/02x984l",
+        "oid_name": "Mechanical fan"
+    },
+    "medical_equipment": {
+        "oid_id": "/m/01xgg_",
+        "oid_name": "Medical equipment"
+    },
+    "microphone": {
+        "oid_id": "/m/0hg7b",
+        "oid_name": "Microphone",
+        "wordnet_id": "n03759954"
+    },
+    "microwave": {
+        "coco_id": 78,
+        "coco_name": "microwave",
+        "wordnet_id": "v00321936"
+    },
+    "microwave_oven": {
+        "oid_id": "/m/0fx9l",
+        "oid_name": "Microwave oven",
+        "wordnet_id": "n03761084"
+    },
+    "milk": {
+        "oid_id": "/m/04zpv",
+        "oid_name": "Milk",
+        "wordnet_id": "v01164906"
+    },
+    "miniskirt": {
+        "oid_id": "/m/01cmb2",
+        "oid_name": "Miniskirt",
+        "wordnet_id": "n03770439"
+    },
+    "mirror": {
+        "oid_id": "/m/054_l",
+        "oid_name": "Mirror",
+        "wordnet_id": "v02766925"
+    },
+    "mirror-stuff": {
+        "coco_id": 133,
+        "coco_name": "mirror-stuff",
+        "wordnet_id": "v02766925"
+    },
+    "missile": {
+        "oid_id": "/m/04ylt",
+        "oid_name": "Missile",
+        "wordnet_id": "n04008634"
+    },
+    "mixer": {
+        "oid_id": "/m/063rgb",
+        "oid_name": "Mixer",
+        "wordnet_id": "n08256369"
+    },
+    "mixing_bowl": {
+        "oid_id": "/m/03hj559",
+        "oid_name": "Mixing bowl",
+        "wordnet_id": "n03775546"
+    },
+    "mobile_phone": {
+        "oid_id": "/m/050k8",
+        "oid_name": "Mobile phone",
+        "wordnet_id": "n02992529"
+    },
+    "monkey": {
+        "oid_id": "/m/08pbxl",
+        "oid_name": "Monkey",
+        "wordnet_id": "v01586018"
+    },
+    "moths_and_butterflies": {
+        "oid_id": "/m/0d_2m",
+        "oid_name": "Moths and butterflies"
+    },
+    "motorcycle": {
+        "coco_id": 4,
+        "coco_name": "motorcycle",
+        "oid_id": "/m/04_sv",
+        "oid_name": "Motorcycle",
+        "wordnet_id": "v01936048"
+    },
+    "mountain-merged": {
+        "coco_id": 192,
+        "coco_name": "mountain-merged",
+        "wordnet_id": "n13774404"
+    },
+    "mouse": {
+        "coco_id": 74,
+        "coco_name": "mouse",
+        "oid_id": "/m/04rmv",
+        "oid_name": "Mouse",
+        "wordnet_id": "v01911888"
+    },
+    "muffin": {
+        "oid_id": "/m/01tcjp",
+        "oid_name": "Muffin",
+        "wordnet_id": "n07690273"
+    },
+    "mug": {
+        "oid_id": "/m/02jvh9",
+        "oid_name": "Mug",
+        "wordnet_id": "v02277663"
+    },
+    "mule": {
+        "oid_id": "/m/0dbzx",
+        "oid_name": "Mule",
+        "wordnet_id": "n03798061"
+    },
+    "mushroom": {
+        "oid_id": "/m/052sf",
+        "oid_name": "Mushroom",
+        "wordnet_id": "v01382437"
+    },
+    "musical_instrument": {
+        "oid_id": "/m/04szw",
+        "oid_name": "Musical instrument",
+        "wordnet_id": "n03800933"
+    },
+    "musical_keyboard": {
+        "oid_id": "/m/057cc",
+        "oid_name": "Musical keyboard"
+    },
+    "nail_(construction)": {
+        "oid_id": "/m/05bm6",
+        "oid_name": "Nail (Construction)"
+    },
+    "necklace": {
+        "oid_id": "/m/01llwg",
+        "oid_name": "Necklace",
+        "wordnet_id": "n03814906"
+    },
+    "net": {
+        "coco_id": 138,
+        "coco_name": "net",
+        "wordnet_id": "v02291548"
+    },
+    "nightstand": {
+        "oid_id": "/m/02z51p",
+        "oid_name": "Nightstand"
+    },
+    "oboe": {
+        "oid_id": "/m/05kms",
+        "oid_name": "Oboe",
+        "wordnet_id": "n03838899"
+    },
+    "office_building": {
+        "oid_id": "/m/021sj1",
+        "oid_name": "Office building",
+        "wordnet_id": "n03842012"
+    },
+    "office_supplies": {
+        "oid_id": "/m/02rdsp",
+        "oid_name": "Office supplies"
+    },
+    "orange": {
+        "coco_id": 55,
+        "coco_name": "orange",
+        "oid_id": "/m/0cyhj_",
+        "oid_name": "Orange",
+        "wordnet_id": "n14991210"
+    },
+    "organ_(musical_instrument)": {
+        "oid_id": "/m/013y1f",
+        "oid_name": "Organ (Musical Instrument)"
+    },
+    "ostrich": {
+        "oid_id": "/m/05n4y",
+        "oid_name": "Ostrich",
+        "wordnet_id": "n10385707"
+    },
+    "otter": {
+        "oid_id": "/m/0cn6p",
+        "oid_name": "Otter",
+        "wordnet_id": "n14765785"
+    },
+    "oven": {
+        "coco_id": 79,
+        "coco_name": "oven",
+        "oid_id": "/m/029bxz",
+        "oid_name": "Oven",
+        "wordnet_id": "n03862676"
+    },
+    "owl": {
+        "oid_id": "/m/09d5_",
+        "oid_name": "Owl",
+        "wordnet_id": "n01621127"
+    },
+    "oyster": {
+        "oid_id": "/m/0_cp5",
+        "oid_name": "Oyster",
+        "wordnet_id": "v01383511"
+    },
+    "paddle": {
+        "oid_id": "/m/014y4n",
+        "oid_name": "Paddle",
+        "wordnet_id": "v02419613"
+    },
+    "palm_tree": {
+        "oid_id": "/m/0cdl1",
+        "oid_name": "Palm tree",
+        "wordnet_id": "n12582231"
+    },
+    "pancake": {
+        "oid_id": "/m/01dwwc",
+        "oid_name": "Pancake",
+        "wordnet_id": "n07640203"
+    },
+    "panda": {
+        "oid_id": "/m/03bj1",
+        "oid_name": "Panda",
+        "wordnet_id": "n02510455"
+    },
+    "paper-merged": {
+        "coco_id": 195,
+        "coco_name": "paper-merged",
+        "wordnet_id": "v01268457"
+    },
+    "paper_cutter": {
+        "oid_id": "/m/080n7g",
+        "oid_name": "Paper cutter",
+        "wordnet_id": "n03886940"
+    },
+    "paper_towel": {
+        "oid_id": "/m/02w3r3",
+        "oid_name": "Paper towel",
+        "wordnet_id": "n03887697"
+    },
+    "parachute": {
+        "oid_id": "/m/0cyfs",
+        "oid_name": "Parachute",
+        "wordnet_id": "v01968275"
+    },
+    "parking_meter": {
+        "coco_id": 14,
+        "coco_name": "parking meter",
+        "oid_id": "/m/015qbp",
+        "oid_name": "Parking meter",
+        "wordnet_id": "n03891332"
+    },
+    "parrot": {
+        "oid_id": "/m/0gv1x",
+        "oid_name": "Parrot",
+        "wordnet_id": "v00958174"
+    },
+    "pasta": {
+        "oid_id": "/m/05z55",
+        "oid_name": "Pasta",
+        "wordnet_id": "n07863374"
+    },
+    "pastry": {
+        "oid_id": "/m/0hnyx",
+        "oid_name": "Pastry",
+        "wordnet_id": "n07623136"
+    },
+    "pavement-merged": {
+        "coco_id": 191,
+        "coco_name": "pavement-merged",
+        "wordnet_id": "n14977504"
+    },
+    "peach": {
+        "oid_id": "/m/0dj6p",
+        "oid_name": "Peach",
+        "wordnet_id": "v00937208"
+    },
+    "pear": {
+        "oid_id": "/m/061_f",
+        "oid_name": "Pear",
+        "wordnet_id": "n12651611"
+    },
+    "pen": {
+        "oid_id": "/m/0k1tl",
+        "oid_name": "Pen",
+        "wordnet_id": "v01698271"
+    },
+    "pencil_case": {
+        "oid_id": "/m/05676x",
+        "oid_name": "Pencil case",
+        "wordnet_id": "n03908618"
+    },
+    "pencil_sharpener": {
+        "oid_id": "/m/02ddwp",
+        "oid_name": "Pencil sharpener",
+        "wordnet_id": "n03908714"
+    },
+    "penguin": {
+        "oid_id": "/m/05z6w",
+        "oid_name": "Penguin",
+        "wordnet_id": "n02055803"
+    },
+    "perfume": {
+        "oid_id": "/m/0p833",
+        "oid_name": "Perfume",
+        "wordnet_id": "v02126382"
+    },
+    "person": {
+        "coco_id": 1,
+        "coco_name": "person",
+        "oid_id": "/m/01g317",
+        "oid_name": "Person",
+        "wordnet_id": "n06326797"
+    },
+    "personal_care": {
+        "oid_id": "/m/02w3_ws",
+        "oid_name": "Personal care",
+        "wordnet_id": "n00665476"
+    },
+    "personal_flotation_device": {
+        "oid_id": "/m/054xkw",
+        "oid_name": "Personal flotation device"
+    },
+    "piano": {
+        "oid_id": "/m/05r5c",
+        "oid_name": "Piano",
+        "wordnet_id": "r00343660"
+    },
+    "picnic_basket": {
+        "oid_id": "/m/07kng9",
+        "oid_name": "Picnic basket"
+    },
+    "picture_frame": {
+        "oid_id": "/m/06z37_",
+        "oid_name": "Picture frame",
+        "wordnet_id": "n03931765"
+    },
+    "pig": {
+        "oid_id": "/m/068zj",
+        "oid_name": "Pig",
+        "wordnet_id": "v02615739"
+    },
+    "pillow": {
+        "coco_id": 141,
+        "coco_name": "pillow",
+        "oid_id": "/m/034c16",
+        "oid_name": "Pillow",
+        "wordnet_id": "v01502946"
+    },
+    "pineapple": {
+        "oid_id": "/m/0fp6w",
+        "oid_name": "Pineapple",
+        "wordnet_id": "n12607456"
+    },
+    "pitcher_(container)": {
+        "oid_id": "/m/054fyh",
+        "oid_name": "Pitcher (Container)"
+    },
+    "pizza": {
+        "coco_id": 59,
+        "coco_name": "pizza",
+        "oid_id": "/m/0663v",
+        "oid_name": "Pizza",
+        "wordnet_id": "n07873807"
+    },
+    "pizza_cutter": {
+        "oid_id": "/m/08ks85",
+        "oid_name": "Pizza cutter"
+    },
+    "plant": {
+        "oid_id": "/m/05s2s",
+        "oid_name": "Plant",
+        "wordnet_id": "v02322810"
+    },
+    "plastic_bag": {
+        "oid_id": "/m/05gqfk",
+        "oid_name": "Plastic bag",
+        "wordnet_id": "n03958227"
+    },
+    "plate": {
+        "oid_id": "/m/050gv4",
+        "oid_name": "Plate",
+        "wordnet_id": "v01395049"
+    },
+    "platform": {
+        "coco_id": 144,
+        "coco_name": "platform",
+        "wordnet_id": "n06501311"
+    },
+    "platter": {
+        "oid_id": "/m/099ssp",
+        "oid_name": "Platter",
+        "wordnet_id": "n03963198"
+    },
+    "playingfield": {
+        "coco_id": 145,
+        "coco_name": "playingfield"
+    },
+    "plumbing_fixture": {
+        "oid_id": "/m/02pkr5",
+        "oid_name": "Plumbing fixture",
+        "wordnet_id": "n03969259"
+    },
+    "polar_bear": {
+        "oid_id": "/m/0633h",
+        "oid_name": "Polar bear",
+        "wordnet_id": "n02134084"
+    },
+    "pomegranate": {
+        "oid_id": "/m/0jwn_",
+        "oid_name": "Pomegranate",
+        "wordnet_id": "n12345280"
+    },
+    "popcorn": {
+        "oid_id": "/m/01hrv5",
+        "oid_name": "Popcorn",
+        "wordnet_id": "n12145477"
+    },
+    "porch": {
+        "oid_id": "/m/04m6gz",
+        "oid_name": "Porch",
+        "wordnet_id": "n03984381"
+    },
+    "porcupine": {
+        "oid_id": "/m/0c568",
+        "oid_name": "Porcupine",
+        "wordnet_id": "n02346627"
+    },
+    "poster": {
+        "oid_id": "/m/01n5jq",
+        "oid_name": "Poster",
+        "wordnet_id": "n09854510"
+    },
+    "potato": {
+        "oid_id": "/m/05vtc",
+        "oid_name": "Potato",
+        "wordnet_id": "n12897493"
+    },
+    "potted_plant": {
+        "coco_id": 64,
+        "coco_name": "potted plant"
+    },
+    "power_plugs_and_sockets": {
+        "oid_id": "/m/03bbps",
+        "oid_name": "Power plugs and sockets"
+    },
+    "pressure_cooker": {
+        "oid_id": "/m/0h8ntjv",
+        "oid_name": "Pressure cooker",
+        "wordnet_id": "n04001265"
+    },
+    "pretzel": {
+        "oid_id": "/m/01f91_",
+        "oid_name": "Pretzel",
+        "wordnet_id": "n07695742"
+    },
+    "printer": {
+        "oid_id": "/m/01m4t",
+        "oid_name": "Printer",
+        "wordnet_id": "n10475297"
+    },
+    "pumpkin": {
+        "oid_id": "/m/05zsy",
+        "oid_name": "Pumpkin",
+        "wordnet_id": "n12158443"
+    },
+    "punching_bag": {
+        "oid_id": "/m/0420v5",
+        "oid_name": "Punching bag",
+        "wordnet_id": "n10492727"
+    },
+    "rabbit": {
+        "oid_id": "/m/06mf6",
+        "oid_name": "Rabbit",
+        "wordnet_id": "v01142761"
+    },
+    "raccoon": {
+        "oid_id": "/m/0dq75",
+        "oid_name": "Raccoon",
+        "wordnet_id": "n14765856"
+    },
+    "racket": {
+        "oid_id": "/m/0dv9c",
+        "oid_name": "Racket",
+        "wordnet_id": "v02491383"
+    },
+    "radish": {
+        "oid_id": "/m/015x5n",
+        "oid_name": "Radish",
+        "wordnet_id": "n11895092"
+    },
+    "railroad": {
+        "coco_id": 147,
+        "coco_name": "railroad",
+        "wordnet_id": "v02506181"
+    },
+    "ratchet_(device)": {
+        "oid_id": "/m/02bm9n",
+        "oid_name": "Ratchet (Device)"
+    },
+    "raven": {
+        "oid_id": "/m/06j2d",
+        "oid_name": "Raven",
+        "wordnet_id": "v01213908"
+    },
+    "rays_and_skates": {
+        "oid_id": "/m/0m53l",
+        "oid_name": "Rays and skates"
+    },
+    "red_panda": {
+        "oid_id": "/m/06l9r",
+        "oid_name": "Red panda",
+        "wordnet_id": "n02509815"
+    },
+    "refrigerator": {
+        "coco_id": 82,
+        "coco_name": "refrigerator",
+        "oid_id": "/m/040b_t",
+        "oid_name": "Refrigerator",
+        "wordnet_id": "n04070727"
+    },
+    "remote": {
+        "coco_id": 75,
+        "coco_name": "remote",
+        "wordnet_id": "n04074963"
+    },
+    "remote_control": {
+        "oid_id": "/m/0qjjc",
+        "oid_name": "Remote control",
+        "wordnet_id": "n04074963"
+    },
+    "reptile": {
+        "oid_id": "/m/06bt6",
+        "oid_name": "Reptile",
+        "wordnet_id": "n01661091"
+    },
+    "rhinoceros": {
+        "oid_id": "/m/03d443",
+        "oid_name": "Rhinoceros",
+        "wordnet_id": "n02391994"
+    },
+    "rifle": {
+        "oid_id": "/m/06c54",
+        "oid_name": "Rifle",
+        "wordnet_id": "v02344568"
+    },
+    "ring_binder": {
+        "oid_id": "/m/04zwwv",
+        "oid_name": "Ring binder"
+    },
+    "river": {
+        "coco_id": 148,
+        "coco_name": "river",
+        "wordnet_id": "n09411430"
+    },
+    "road": {
+        "coco_id": 149,
+        "coco_name": "road",
+        "wordnet_id": "n04096066"
+    },
+    "rock-merged": {
+        "coco_id": 198,
+        "coco_name": "rock-merged",
+        "wordnet_id": "v01876028"
+    },
+    "rocket": {
+        "oid_id": "/m/09rvcxw",
+        "oid_name": "Rocket",
+        "wordnet_id": "v01944086"
+    },
+    "roller_skates": {
+        "oid_id": "/m/02p3w7d",
+        "oid_name": "Roller skates"
+    },
+    "roof": {
+        "coco_id": 151,
+        "coco_name": "roof",
+        "wordnet_id": "v01233993"
+    },
+    "rose": {
+        "oid_id": "/m/06m11",
+        "oid_name": "Rose",
+        "wordnet_id": "n12620196"
+    },
+    "rug-merged": {
+        "coco_id": 200,
+        "coco_name": "rug-merged",
+        "wordnet_id": "n04118021"
+    },
+    "rugby_ball": {
+        "oid_id": "/m/0wdt60w",
+        "oid_name": "Rugby ball",
+        "wordnet_id": "n04118538"
+    },
+    "ruler": {
+        "oid_id": "/m/0hdln",
+        "oid_name": "Ruler",
+        "wordnet_id": "n10541229"
+    },
+    "salad": {
+        "oid_id": "/m/0grw1",
+        "oid_name": "Salad",
+        "wordnet_id": "n07806221"
+    },
+    "salt_and_pepper_shakers": {
+        "oid_id": "/m/02x8cch",
+        "oid_name": "Salt and pepper shakers"
+    },
+    "sand": {
+        "coco_id": 154,
+        "coco_name": "sand",
+        "wordnet_id": "v01386433"
+    },
+    "sandal": {
+        "oid_id": "/m/03nfch",
+        "oid_name": "Sandal",
+        "wordnet_id": "n04133789"
+    },
+    "sandwich": {
+        "coco_id": 54,
+        "coco_name": "sandwich",
+        "oid_id": "/m/0l515",
+        "oid_name": "Sandwich",
+        "wordnet_id": "v01665081"
+    },
+    "saucer": {
+        "oid_id": "/m/03q5c7",
+        "oid_name": "Saucer",
+        "wordnet_id": "n13875185"
+    },
+    "saxophone": {
+        "oid_id": "/m/06ncr",
+        "oid_name": "Saxophone",
+        "wordnet_id": "n04141076"
+    },
+    "scale": {
+        "oid_id": "/m/03txqz",
+        "oid_name": "Scale",
+        "wordnet_id": "v02728388"
+    },
+    "scarf": {
+        "oid_id": "/m/02h19r",
+        "oid_name": "Scarf",
+        "wordnet_id": "v01431132"
+    },
+    "scissors": {
+        "coco_id": 87,
+        "coco_name": "scissors",
+        "oid_id": "/m/01lsmm",
+        "oid_name": "Scissors",
+        "wordnet_id": "n04148054"
+    },
+    "scoreboard": {
+        "oid_id": "/m/057p5t",
+        "oid_name": "Scoreboard",
+        "wordnet_id": "n04149813"
+    },
+    "scorpion": {
+        "oid_id": "/m/0755b",
+        "oid_name": "Scorpion",
+        "wordnet_id": "n09753204"
+    },
+    "screwdriver": {
+        "oid_id": "/m/01bms0",
+        "oid_name": "Screwdriver",
+        "wordnet_id": "n07917272"
+    },
+    "sculpture": {
+        "oid_id": "/m/06msq",
+        "oid_name": "Sculpture",
+        "wordnet_id": "v01684337"
+    },
+    "sea": {
+        "coco_id": 155,
+        "coco_name": "sea",
+        "wordnet_id": "n13776971"
+    },
+    "sea_lion": {
+        "oid_id": "/m/0gd36",
+        "oid_name": "Sea lion",
+        "wordnet_id": "n02077923"
+    },
+    "sea_turtle": {
+        "oid_id": "/m/0120dh",
+        "oid_name": "Sea turtle",
+        "wordnet_id": "n01663401"
+    },
+    "seafood": {
+        "oid_id": "/m/06nwz",
+        "oid_name": "Seafood",
+        "wordnet_id": "n07776866"
+    },
+    "seahorse": {
+        "oid_id": "/m/0nybt",
+        "oid_name": "Seahorse",
+        "wordnet_id": "n02081571"
+    },
+    "seat_belt": {
+        "oid_id": "/m/0dkzw",
+        "oid_name": "Seat belt",
+        "wordnet_id": "n04162706"
+    },
+    "segway": {
+        "oid_id": "/m/076bq",
+        "oid_name": "Segway",
+        "wordnet_id": "n04168199"
+    },
+    "serving_tray": {
+        "oid_id": "/m/0h8n27j",
+        "oid_name": "Serving tray"
+    },
+    "sewing_machine": {
+        "oid_id": "/m/0llzx",
+        "oid_name": "Sewing machine",
+        "wordnet_id": "n04179913"
+    },
+    "shark": {
+        "oid_id": "/m/0by6g",
+        "oid_name": "Shark",
+        "wordnet_id": "v02573031"
+    },
+    "sheep": {
+        "coco_id": 20,
+        "coco_name": "sheep",
+        "oid_id": "/m/07bgp",
+        "oid_name": "Sheep",
+        "wordnet_id": "n10588074"
+    },
+    "shelf": {
+        "coco_id": 156,
+        "coco_name": "shelf",
+        "oid_id": "/m/0gjbg72",
+        "oid_name": "Shelf",
+        "wordnet_id": "n09337253"
+    },
+    "shellfish": {
+        "oid_id": "/m/0fbdv",
+        "oid_name": "Shellfish",
+        "wordnet_id": "n07783210"
+    },
+    "shirt": {
+        "oid_id": "/m/01n4qj",
+        "oid_name": "Shirt",
+        "wordnet_id": "v00049007"
+    },
+    "shorts": {
+        "oid_id": "/m/01bfm9",
+        "oid_name": "Shorts",
+        "wordnet_id": "n04205318"
+    },
+    "shotgun": {
+        "oid_id": "/m/06nrc",
+        "oid_name": "Shotgun",
+        "wordnet_id": "n04206356"
+    },
+    "shower": {
+        "oid_id": "/m/02f9f_",
+        "oid_name": "Shower",
+        "wordnet_id": "v02757651"
+    },
+    "shrimp": {
+        "oid_id": "/m/0ll1f78",
+        "oid_name": "Shrimp",
+        "wordnet_id": "v01142070"
+    },
+    "sink": {
+        "coco_id": 81,
+        "coco_name": "sink",
+        "oid_id": "/m/0130jx",
+        "oid_name": "Sink",
+        "wordnet_id": "v02039679"
+    },
+    "skateboard": {
+        "coco_id": 41,
+        "coco_name": "skateboard",
+        "oid_id": "/m/06_fw",
+        "oid_name": "Skateboard",
+        "wordnet_id": "v01937795"
+    },
+    "ski": {
+        "oid_id": "/m/071p9",
+        "oid_name": "Ski",
+        "wordnet_id": "v01938426"
+    },
+    "skirt": {
+        "oid_id": "/m/02wv6h6",
+        "oid_name": "Skirt",
+        "wordnet_id": "v02703711"
+    },
+    "skis": {
+        "coco_id": 35,
+        "coco_name": "skis",
+        "wordnet_id": "v01938426"
+    },
+    "skull": {
+        "oid_id": "/m/016m2d",
+        "oid_name": "Skull",
+        "wordnet_id": "n05540121"
+    },
+    "skunk": {
+        "oid_id": "/m/0km7z",
+        "oid_name": "Skunk",
+        "wordnet_id": "v01103693"
+    },
+    "sky-other-merged": {
+        "coco_id": 187,
+        "coco_name": "sky-other-merged",
+        "wordnet_id": "v01512625"
+    },
+    "skyscraper": {
+        "oid_id": "/m/079cl",
+        "oid_name": "Skyscraper",
+        "wordnet_id": "n04233124"
+    },
+    "slow_cooker": {
+        "oid_id": "/m/02tsc9",
+        "oid_name": "Slow cooker"
+    },
+    "snack": {
+        "oid_id": "/m/01ww8y",
+        "oid_name": "Snack",
+        "wordnet_id": "v01173405"
+    },
+    "snail": {
+        "oid_id": "/m/0f9_l",
+        "oid_name": "Snail",
+        "wordnet_id": "v01382917"
+    },
+    "snake": {
+        "oid_id": "/m/078jl",
+        "oid_name": "Snake",
+        "wordnet_id": "v02738976"
+    },
+    "snow": {
+        "coco_id": 159,
+        "coco_name": "snow",
+        "wordnet_id": "v02758977"
+    },
+    "snowboard": {
+        "coco_id": 36,
+        "coco_name": "snowboard",
+        "oid_id": "/m/06__v",
+        "oid_name": "Snowboard",
+        "wordnet_id": "v02104860"
+    },
+    "snowman": {
+        "oid_id": "/m/0152hh",
+        "oid_name": "Snowman",
+        "wordnet_id": "n04251983"
+    },
+    "snowmobile": {
+        "oid_id": "/m/01x3jk",
+        "oid_name": "Snowmobile",
+        "wordnet_id": "v01957273"
+    },
+    "snowplow": {
+        "oid_id": "/m/04vv5k",
+        "oid_name": "Snowplow",
+        "wordnet_id": "n04252225"
+    },
+    "soap_dispenser": {
+        "oid_id": "/m/0c3mkw",
+        "oid_name": "Soap dispenser",
+        "wordnet_id": "n04254120"
+    },
+    "sock": {
+        "oid_id": "/m/01nq26",
+        "oid_name": "Sock",
+        "wordnet_id": "v01397088"
+    },
+    "sofa_bed": {
+        "oid_id": "/m/03m3pdh",
+        "oid_name": "Sofa bed",
+        "wordnet_id": "n03100346"
+    },
+    "sombrero": {
+        "oid_id": "/m/02jfl0",
+        "oid_name": "Sombrero",
+        "wordnet_id": "n08988333"
+    },
+    "sparrow": {
+        "oid_id": "/m/0h23m",
+        "oid_name": "Sparrow",
+        "wordnet_id": "n01539573"
+    },
+    "spatula": {
+        "oid_id": "/m/02d1br",
+        "oid_name": "Spatula",
+        "wordnet_id": "n04270147"
+    },
+    "spice_rack": {
+        "oid_id": "/m/0h8kx63",
+        "oid_name": "Spice rack",
+        "wordnet_id": "n04275175"
+    },
+    "spider": {
+        "oid_id": "/m/09kmb",
+        "oid_name": "Spider",
+        "wordnet_id": "n06579715"
+    },
+    "spoon": {
+        "coco_id": 50,
+        "coco_name": "spoon",
+        "oid_id": "/m/0cmx8",
+        "oid_name": "Spoon",
+        "wordnet_id": "v01579622"
+    },
+    "sports_ball": {
+        "coco_id": 37,
+        "coco_name": "sports ball"
+    },
+    "sports_equipment": {
+        "oid_id": "/m/05y5lj",
+        "oid_name": "Sports equipment",
+        "wordnet_id": "n04285146"
+    },
+    "sports_uniform": {
+        "oid_id": "/m/0h8mhzd",
+        "oid_name": "Sports uniform"
+    },
+    "squash_(plant)": {
+        "oid_id": "/m/0dv77",
+        "oid_name": "Squash (Plant)"
+    },
+    "squid": {
+        "oid_id": "/m/09gys",
+        "oid_name": "Squid",
+        "wordnet_id": "n07781801"
+    },
+    "squirrel": {
+        "oid_id": "/m/071qp",
+        "oid_name": "Squirrel",
+        "wordnet_id": "n14766189"
+    },
+    "stairs": {
+        "coco_id": 161,
+        "coco_name": "stairs",
+        "oid_id": "/m/01lynh",
+        "oid_name": "Stairs",
+        "wordnet_id": "n04298171"
+    },
+    "stapler": {
+        "oid_id": "/m/025fsf",
+        "oid_name": "Stapler",
+        "wordnet_id": "n04303497"
+    },
+    "starfish": {
+        "oid_id": "/m/01h8tj",
+        "oid_name": "Starfish",
+        "wordnet_id": "n02317335"
+    },
+    "stationary_bicycle": {
+        "oid_id": "/m/03kt2w",
+        "oid_name": "Stationary bicycle"
+    },
+    "stethoscope": {
+        "oid_id": "/m/073g6",
+        "oid_name": "Stethoscope",
+        "wordnet_id": "n04317175"
+    },
+    "stool": {
+        "oid_id": "/m/0fqt361",
+        "oid_name": "Stool",
+        "wordnet_id": "v00783859"
+    },
+    "stop_sign": {
+        "coco_id": 13,
+        "coco_name": "stop sign",
+        "oid_id": "/m/02pv19",
+        "oid_name": "Stop sign"
+    },
+    "strawberry": {
+        "oid_id": "/m/07fbm7",
+        "oid_name": "Strawberry",
+        "wordnet_id": "n12630144"
+    },
+    "street_light": {
+        "oid_id": "/m/033rq4",
+        "oid_name": "Street light",
+        "wordnet_id": "n04335886"
+    },
+    "stretcher": {
+        "oid_id": "/m/02lbcq",
+        "oid_name": "Stretcher",
+        "wordnet_id": "n04337157"
+    },
+    "studio_couch": {
+        "oid_id": "/m/026qbn5",
+        "oid_name": "Studio couch",
+        "wordnet_id": "n04344873"
+    },
+    "submarine": {
+        "oid_id": "/m/074d1",
+        "oid_name": "Submarine",
+        "wordnet_id": "v01870674"
+    },
+    "submarine_sandwich": {
+        "oid_id": "/m/06pcq",
+        "oid_name": "Submarine sandwich",
+        "wordnet_id": "n07697825"
+    },
+    "suit": {
+        "oid_id": "/m/01xyhv",
+        "oid_name": "Suit",
+        "wordnet_id": "v02735282"
+    },
+    "suitcase": {
+        "coco_id": 33,
+        "coco_name": "suitcase",
+        "oid_id": "/m/01s55n",
+        "oid_name": "Suitcase",
+        "wordnet_id": "n02773838"
+    },
+    "sun_hat": {
+        "oid_id": "/m/02wbtzl",
+        "oid_name": "Sun hat",
+        "wordnet_id": "n04356595"
+    },
+    "sunglasses": {
+        "oid_id": "/m/017ftj",
+        "oid_name": "Sunglasses",
+        "wordnet_id": "n04356056"
+    },
+    "surfboard": {
+        "coco_id": 42,
+        "coco_name": "surfboard",
+        "oid_id": "/m/019w40",
+        "oid_name": "Surfboard",
+        "wordnet_id": "v01948077"
+    },
+    "sushi": {
+        "oid_id": "/m/07030",
+        "oid_name": "Sushi",
+        "wordnet_id": "n07879450"
+    },
+    "swan": {
+        "oid_id": "/m/0dftk",
+        "oid_name": "Swan",
+        "wordnet_id": "v01881180"
+    },
+    "swim_cap": {
+        "oid_id": "/m/04tn4x",
+        "oid_name": "Swim cap"
+    },
+    "swimming_pool": {
+        "oid_id": "/m/0b_rs",
+        "oid_name": "Swimming pool",
+        "wordnet_id": "n04371225"
+    },
+    "swimwear": {
+        "oid_id": "/m/01gkx_",
+        "oid_name": "Swimwear",
+        "wordnet_id": "n04371563"
+    },
+    "sword": {
+        "oid_id": "/m/06y5r",
+        "oid_name": "Sword",
+        "wordnet_id": "n04373894"
+    },
+    "syringe": {
+        "oid_id": "/m/012ysf",
+        "oid_name": "Syringe",
+        "wordnet_id": "v01373422"
+    },
+    "table": {
+        "oid_id": "/m/04bcr3",
+        "oid_name": "Table",
+        "wordnet_id": "v02642814"
+    },
+    "table-merged": {
+        "coco_id": 189,
+        "coco_name": "table-merged",
+        "wordnet_id": "v02642814"
+    },
+    "table_tennis_racket": {
+        "oid_id": "/m/05_5p_0",
+        "oid_name": "Table tennis racket"
+    },
+    "tablet_computer": {
+        "oid_id": "/m/0bh9flk",
+        "oid_name": "Tablet computer"
+    },
+    "tableware": {
+        "oid_id": "/m/04brg2",
+        "oid_name": "Tableware",
+        "wordnet_id": "n04381994"
+    },
+    "taco": {
+        "oid_id": "/m/07crc",
+        "oid_name": "Taco",
+        "wordnet_id": "n09722898"
+    },
+    "tank": {
+        "oid_id": "/m/07cmd",
+        "oid_name": "Tank",
+        "wordnet_id": "v02282082"
+    },
+    "tap": {
+        "oid_id": "/m/02jz0l",
+        "oid_name": "Tap",
+        "wordnet_id": "v02360274"
+    },
+    "tart": {
+        "oid_id": "/m/02zvsm",
+        "oid_name": "Tart",
+        "wordnet_id": "n10485440"
+    },
+    "taxi": {
+        "oid_id": "/m/0pg52",
+        "oid_name": "Taxi",
+        "wordnet_id": "v01949007"
+    },
+    "tea": {
+        "oid_id": "/m/07clx",
+        "oid_name": "Tea",
+        "wordnet_id": "n12929783"
+    },
+    "teapot": {
+        "oid_id": "/m/01fh4r",
+        "oid_name": "Teapot",
+        "wordnet_id": "n04398044"
+    },
+    "teddy_bear": {
+        "coco_id": 88,
+        "coco_name": "teddy bear",
+        "oid_id": "/m/0kmg4",
+        "oid_name": "Teddy bear",
+        "wordnet_id": "n04399382"
+    },
+    "telephone": {
+        "oid_id": "/m/07cx4",
+        "oid_name": "Telephone",
+        "wordnet_id": "v00789448"
+    },
+    "television": {
+        "oid_id": "/m/07c52",
+        "oid_name": "Television",
+        "wordnet_id": "n06277280"
+    },
+    "tennis_ball": {
+        "oid_id": "/m/05ctyq",
+        "oid_name": "Tennis ball",
+        "wordnet_id": "n04409515"
+    },
+    "tennis_racket": {
+        "coco_id": 43,
+        "coco_name": "tennis racket",
+        "oid_id": "/m/0h8my_4",
+        "oid_name": "Tennis racket",
+        "wordnet_id": "n04409806"
+    },
+    "tent": {
+        "coco_id": 166,
+        "coco_name": "tent",
+        "oid_id": "/m/01j61q",
+        "oid_name": "Tent",
+        "wordnet_id": "v02653996"
+    },
+    "tiara": {
+        "oid_id": "/m/01krhy",
+        "oid_name": "Tiara",
+        "wordnet_id": "n04432203"
+    },
+    "tick": {
+        "oid_id": "/m/0175cv",
+        "oid_name": "Tick",
+        "wordnet_id": "v02185664"
+    },
+    "tie": {
+        "coco_id": 32,
+        "coco_name": "tie",
+        "oid_id": "/m/01rkbr",
+        "oid_name": "Tie",
+        "wordnet_id": "v02538086"
+    },
+    "tiger": {
+        "oid_id": "/m/07dm6",
+        "oid_name": "Tiger",
+        "wordnet_id": "n10710632"
+    },
+    "tin_can": {
+        "oid_id": "/m/02jnhm",
+        "oid_name": "Tin can",
+        "wordnet_id": "n04439039"
+    },
+    "tire": {
+        "oid_id": "/m/0h9mv",
+        "oid_name": "Tire",
+        "wordnet_id": "v02280869"
+    },
+    "toaster": {
+        "coco_id": 80,
+        "coco_name": "toaster",
+        "oid_id": "/m/01k6s3",
+        "oid_name": "Toaster",
+        "wordnet_id": "n10713502"
+    },
+    "toilet": {
+        "coco_id": 70,
+        "coco_name": "toilet",
+        "oid_id": "/m/09g1w",
+        "oid_name": "Toilet",
+        "wordnet_id": "n14475992"
+    },
+    "toilet_paper": {
+        "oid_id": "/m/09gtd",
+        "oid_name": "Toilet paper",
+        "wordnet_id": "n15075141"
+    },
+    "tomato": {
+        "oid_id": "/m/07j87",
+        "oid_name": "Tomato",
+        "wordnet_id": "n12905817"
+    },
+    "tool": {
+        "oid_id": "/m/07k1x",
+        "oid_name": "Tool",
+        "wordnet_id": "v02338003"
+    },
+    "toothbrush": {
+        "coco_id": 90,
+        "coco_name": "toothbrush",
+        "oid_id": "/m/012xff",
+        "oid_name": "Toothbrush",
+        "wordnet_id": "n05262422"
+    },
+    "torch": {
+        "oid_id": "/m/07dd4",
+        "oid_name": "Torch",
+        "wordnet_id": "v00379280"
+    },
+    "tortoise": {
+        "oid_id": "/m/011k07",
+        "oid_name": "Tortoise",
+        "wordnet_id": "n01670092"
+    },
+    "towel": {
+        "coco_id": 168,
+        "coco_name": "towel",
+        "oid_id": "/m/0162_1",
+        "oid_name": "Towel",
+        "wordnet_id": "v01394335"
+    },
+    "tower": {
+        "oid_id": "/m/01fdzj",
+        "oid_name": "Tower",
+        "wordnet_id": "v02696503"
+    },
+    "toy": {
+        "oid_id": "/m/0138tl",
+        "oid_name": "Toy",
+        "wordnet_id": "v02437465"
+    },
+    "traffic_light": {
+        "coco_id": 10,
+        "coco_name": "traffic light",
+        "oid_id": "/m/015qff",
+        "oid_name": "Traffic light",
+        "wordnet_id": "n06874185"
+    },
+    "traffic_sign": {
+        "oid_id": "/m/01mqdt",
+        "oid_name": "Traffic sign"
+    },
+    "train": {
+        "coco_id": 7,
+        "coco_name": "train",
+        "oid_id": "/m/07jdr",
+        "oid_name": "Train",
+        "wordnet_id": "v02553697"
+    },
+    "training_bench": {
+        "oid_id": "/m/076lb9",
+        "oid_name": "Training bench"
+    },
+    "treadmill": {
+        "oid_id": "/m/030610",
+        "oid_name": "Treadmill",
+        "wordnet_id": "n04477387"
+    },
+    "tree": {
+        "oid_id": "/m/07j7r",
+        "oid_name": "Tree",
+        "wordnet_id": "v01934205"
+    },
+    "tree-merged": {
+        "coco_id": 184,
+        "coco_name": "tree-merged",
+        "wordnet_id": "v01934205"
+    },
+    "tree_house": {
+        "oid_id": "/m/02wg_p",
+        "oid_name": "Tree house",
+        "wordnet_id": "n04477966"
+    },
+    "tripod": {
+        "oid_id": "/m/073bxn",
+        "oid_name": "Tripod",
+        "wordnet_id": "n04485082"
+    },
+    "trombone": {
+        "oid_id": "/m/07c6l",
+        "oid_name": "Trombone",
+        "wordnet_id": "n04487394"
+    },
+    "trousers": {
+        "oid_id": "/m/07mhn",
+        "oid_name": "Trousers"
+    },
+    "truck": {
+        "coco_id": 8,
+        "coco_name": "truck",
+        "oid_id": "/m/07r04",
+        "oid_name": "Truck",
+        "wordnet_id": "v01954341"
+    },
+    "trumpet": {
+        "oid_id": "/m/07gql",
+        "oid_name": "Trumpet",
+        "wordnet_id": "v01733829"
+    },
+    "turkey": {
+        "oid_id": "/m/0jly1",
+        "oid_name": "Turkey",
+        "wordnet_id": "n10224295"
+    },
+    "turtle": {
+        "oid_id": "/m/09dzg",
+        "oid_name": "Turtle",
+        "wordnet_id": "v01893313"
+    },
+    "tv": {
+        "coco_id": 72,
+        "coco_name": "tv",
+        "wordnet_id": "n06277280"
+    },
+    "umbrella": {
+        "coco_id": 28,
+        "coco_name": "umbrella",
+        "oid_id": "/m/0hnnb",
+        "oid_name": "Umbrella",
+        "wordnet_id": "n04507155"
+    },
+    "unicycle": {
+        "oid_id": "/m/0f6nr",
+        "oid_name": "Unicycle",
+        "wordnet_id": "v01935846"
+    },
+    "van": {
+        "oid_id": "/m/0h2r6",
+        "oid_name": "Van",
+        "wordnet_id": "n08465558"
+    },
+    "vase": {
+        "coco_id": 86,
+        "coco_name": "vase",
+        "oid_id": "/m/02s195",
+        "oid_name": "Vase",
+        "wordnet_id": "n04522168"
+    },
+    "vegetable": {
+        "oid_id": "/m/0f4s2w",
+        "oid_name": "Vegetable",
+        "wordnet_id": "n12212361"
+    },
+    "vehicle": {
+        "oid_id": "/m/07yv9",
+        "oid_name": "Vehicle",
+        "wordnet_id": "n15112086"
+    },
+    "vehicle_registration_plate": {
+        "oid_id": "/m/01jfm_",
+        "oid_name": "Vehicle registration plate"
+    },
+    "violin": {
+        "oid_id": "/m/07y_7",
+        "oid_name": "Violin",
+        "wordnet_id": "n04536866"
+    },
+    "volleyball_(ball)": {
+        "oid_id": "/m/02rgn06",
+        "oid_name": "Volleyball (Ball)"
+    },
+    "waffle": {
+        "oid_id": "/m/01dwsz",
+        "oid_name": "Waffle",
+        "wordnet_id": "v02640440"
+    },
+    "waffle_iron": {
+        "oid_id": "/m/04z4wx",
+        "oid_name": "Waffle iron",
+        "wordnet_id": "n04542943"
+    },
+    "wall-brick": {
+        "coco_id": 171,
+        "coco_name": "wall-brick"
+    },
+    "wall-other-merged": {
+        "coco_id": 199,
+        "coco_name": "wall-other-merged",
+        "wordnet_id": "v01130607"
+    },
+    "wall-stone": {
+        "coco_id": 175,
+        "coco_name": "wall-stone"
+    },
+    "wall-tile": {
+        "coco_id": 176,
+        "coco_name": "wall-tile"
+    },
+    "wall-wood": {
+        "coco_id": 177,
+        "coco_name": "wall-wood"
+    },
+    "wall_clock": {
+        "oid_id": "/m/0h8mzrc",
+        "oid_name": "Wall clock",
+        "wordnet_id": "n04548280"
+    },
+    "wardrobe": {
+        "oid_id": "/m/02vkqh8",
+        "oid_name": "Wardrobe",
+        "wordnet_id": "n04550546"
+    },
+    "washing_machine": {
+        "oid_id": "/m/0174k2",
+        "oid_name": "Washing machine",
+        "wordnet_id": "n04554684"
+    },
+    "waste_container": {
+        "oid_id": "/m/0bjyj5",
+        "oid_name": "Waste container"
+    },
+    "watch": {
+        "oid_id": "/m/0gjkl",
+        "oid_name": "Watch",
+        "wordnet_id": "v02455407"
+    },
+    "water-other": {
+        "coco_id": 178,
+        "coco_name": "water-other",
+        "wordnet_id": "v02357873"
+    },
+    "watercraft": {
+        "oid_id": "/m/01rzcn",
+        "oid_name": "Watercraft",
+        "wordnet_id": "n05644334"
+    },
+    "watermelon": {
+        "oid_id": "/m/0kpqd",
+        "oid_name": "Watermelon",
+        "wordnet_id": "n12164065"
+    },
+    "weapon": {
+        "oid_id": "/m/083kb",
+        "oid_name": "Weapon",
+        "wordnet_id": "n07246932"
+    },
+    "whale": {
+        "oid_id": "/m/084zz",
+        "oid_name": "Whale",
+        "wordnet_id": "v01141938"
+    },
+    "wheel": {
+        "oid_id": "/m/083wq",
+        "oid_name": "Wheel",
+        "wordnet_id": "v02046441"
+    },
+    "wheelchair": {
+        "oid_id": "/m/0qmmr",
+        "oid_name": "Wheelchair",
+        "wordnet_id": "n04576002"
+    },
+    "whisk": {
+        "oid_id": "/m/02vwcm",
+        "oid_name": "Whisk",
+        "wordnet_id": "v02079818"
+    },
+    "whiteboard": {
+        "oid_id": "/m/02d9qx",
+        "oid_name": "Whiteboard"
+    },
+    "willow": {
+        "oid_id": "/m/0mw_6",
+        "oid_name": "Willow",
+        "wordnet_id": "n12724942"
+    },
+    "window": {
+        "oid_id": "/m/0d4v4",
+        "oid_name": "Window",
+        "wordnet_id": "n15299783"
+    },
+    "window-blind": {
+        "coco_id": 180,
+        "coco_name": "window-blind"
+    },
+    "window-other": {
+        "coco_id": 181,
+        "coco_name": "window-other",
+        "wordnet_id": "n15299783"
+    },
+    "window_blind": {
+        "oid_id": "/m/031b6r",
+        "oid_name": "Window blind",
+        "wordnet_id": "n04589190"
+    },
+    "wine": {
+        "oid_id": "/m/081qc",
+        "oid_name": "Wine",
+        "wordnet_id": "v01190840"
+    },
+    "wine_glass": {
+        "coco_id": 46,
+        "coco_name": "wine glass",
+        "oid_id": "/m/09tvcd",
+        "oid_name": "Wine glass",
+        "wordnet_id": "n04592099"
+    },
+    "wine_rack": {
+        "oid_id": "/m/0271qf7",
+        "oid_name": "Wine rack"
+    },
+    "winter_melon": {
+        "oid_id": "/m/02cvgx",
+        "oid_name": "Winter melon",
+        "wordnet_id": "n12164881"
+    },
+    "wok": {
+        "oid_id": "/m/084rd",
+        "oid_name": "Wok",
+        "wordnet_id": "n04596742"
+    },
+    "woman": {
+        "oid_id": "/m/03bt1vf",
+        "oid_name": "Woman",
+        "wordnet_id": "n10788852"
+    },
+    "wood-burning_stove": {
+        "oid_id": "/m/04169hn",
+        "oid_name": "Wood-burning stove"
+    },
+    "woodpecker": {
+        "oid_id": "/m/01dy8n",
+        "oid_name": "Woodpecker",
+        "wordnet_id": "n01838598"
+    },
+    "worm": {
+        "oid_id": "/m/084hf",
+        "oid_name": "Worm",
+        "wordnet_id": "v01868370"
+    },
+    "wrench": {
+        "oid_id": "/m/01j5ks",
+        "oid_name": "Wrench",
+        "wordnet_id": "v01868780"
+    },
+    "zebra": {
+        "coco_id": 24,
+        "coco_name": "zebra",
+        "oid_id": "/m/0898b",
+        "oid_name": "Zebra",
+        "wordnet_id": "n02391049"
+    },
+    "zucchini": {
+        "oid_id": "/m/027pcv",
+        "oid_name": "Zucchini",
+        "wordnet_id": "n12159804"
+    }
+}
