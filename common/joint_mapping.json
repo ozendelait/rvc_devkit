@@ -7,6 +7,9 @@
     "adhesive_tape": {
         "oid_id": "/m/03m3vtv",
         "oid_name": "Adhesive tape",
+        "wikidata_desc": "strip of material backed with adhesive",
+        "wikidata_name": "adhesive tape",
+        "wikidata_qid": "Q320441",
         "wordnet_id": "n02680337"
     },
     "aircraft": {
@@ -19,6 +22,9 @@
         "coco_name": "airplane",
         "oid_id": "/m/0cmf2",
         "oid_name": "Airplane",
+        "wikidata_desc": "heavier-than-air aircraft with fixed wings generating aerodynamic lift in the airflow caused by forward airspeed",
+        "wikidata_name": "fixed-wing aircraft",
+        "wikidata_qid": "Q2875704",
         "wordnet_id": "n02691156"
     },
     "alarm_clock": {
@@ -34,11 +40,17 @@
     "ambulance": {
         "oid_id": "/m/012n7d",
         "oid_name": "Ambulance",
+        "wikidata_desc": "vehicle equipped for transporting and care for ill and wounded people",
+        "wikidata_name": "ambulance",
+        "wikidata_qid": "Q180481",
         "wordnet_id": "n02701002"
     },
     "animal": {
         "oid_id": "/m/0jbk",
         "oid_name": "Animal",
+        "wikidata_desc": "kingdom of multicellular eukaryotic organisms",
+        "wikidata_name": "animal",
+        "wikidata_qid": "Q729",
         "wordnet_id": "n00015388"
     },
     "ant": {
@@ -49,6 +61,9 @@
     "antelope": {
         "oid_id": "/m/0czz2",
         "oid_name": "Antelope",
+        "wikidata_desc": "term referring to many even-toed ungulate species",
+        "wikidata_name": "antelope",
+        "wikidata_qid": "Q25894",
         "wordnet_id": "n02419796"
     },
     "apple": {
@@ -66,6 +81,9 @@
     "artichoke": {
         "oid_id": "/m/047v4b",
         "oid_name": "Artichoke",
+        "wikidata_desc": "species of plant",
+        "wikidata_name": "Cynara scolymus",
+        "wikidata_qid": "Q134609",
         "wordnet_id": "n11959632"
     },
     "auto_part": {
@@ -103,11 +121,17 @@
     "ball": {
         "oid_id": "/m/018xm",
         "oid_name": "Ball",
+        "wikidata_desc": "video game",
+        "wikidata_name": "The Ball",
+        "wikidata_qid": "Q129114",
         "wordnet_id": "v01523270"
     },
     "balloon": {
         "oid_id": "/m/01j51",
         "oid_name": "Balloon",
+        "wikidata_desc": "type of aerostat that remains aloft due to its buoyancy",
+        "wikidata_name": "balloon",
+        "wikidata_qid": "Q183951",
         "wordnet_id": "v01948659"
     },
     "banana": {
@@ -199,6 +223,9 @@
     "beehive": {
         "oid_id": "/m/01gllr",
         "oid_name": "Beehive",
+        "wikidata_desc": "enclosed structure in which honey bees live and raise their young",
+        "wikidata_name": "beehive",
+        "wikidata_qid": "Q165107",
         "wordnet_id": "n09218159"
     },
     "beer": {
@@ -291,6 +318,9 @@
         "coco_name": "boat",
         "oid_id": "/m/019jd",
         "oid_name": "Boat",
+        "wikidata_desc": "smaller watercraft",
+        "wikidata_name": "boat",
+        "wikidata_qid": "Q35872",
         "wordnet_id": "v01944692"
     },
     "bomb": {
@@ -303,6 +333,9 @@
         "coco_name": "book",
         "oid_id": "/m/0bt_c3",
         "oid_name": "Book",
+        "wikidata_desc": "medium for a collection of words and/or pictures to represent knowledge or a fictional story, often manifested in bound paper and ink, or in e-books",
+        "wikidata_name": "book",
+        "wikidata_qid": "Q571",
         "wordnet_id": "v02599754"
     },
     "bookcase": {
@@ -320,6 +353,9 @@
         "coco_name": "bottle",
         "oid_id": "/m/04dr76w",
         "oid_name": "Bottle",
+        "wikidata_desc": "container of liquids",
+        "wikidata_name": "bottle",
+        "wikidata_qid": "Q80228",
         "wordnet_id": "v02283080"
     },
     "bottle_opener": {
@@ -352,6 +388,9 @@
     "boy": {
         "oid_id": "/m/01bl7v",
         "oid_name": "Boy",
+        "wikidata_desc": "Canadian indie pop band",
+        "wikidata_name": "Boy",
+        "wikidata_qid": "Q4952048",
         "wordnet_id": "n10624074"
     },
     "brassiere": {
@@ -362,6 +401,9 @@
     "bread": {
         "oid_id": "/m/09728",
         "oid_name": "Bread",
+        "wikidata_desc": "staple food prepared from a dough",
+        "wikidata_name": "bread",
+        "wikidata_qid": "Q7802",
         "wordnet_id": "v01337653"
     },
     "bridge": {
@@ -388,6 +430,9 @@
     "brown_bear": {
         "oid_id": "/m/01dxs",
         "oid_name": "Brown bear",
+        "wikidata_desc": "species of mammal",
+        "wikidata_name": "brown bear",
+        "wikidata_qid": "Q36341",
         "wordnet_id": "n02132136"
     },
     "building": {
@@ -415,11 +460,17 @@
         "coco_name": "bus",
         "oid_id": "/m/01bjv",
         "oid_name": "Bus",
+        "wikidata_desc": "large road vehicle for transporting people",
+        "wikidata_name": "bus",
+        "wikidata_qid": "Q5638",
         "wordnet_id": "v01950128"
     },
     "bust": {
         "oid_id": "/m/04yqq2",
         "oid_name": "Bust",
+        "wikidata_desc": "representation of the upper part of the human figure, in picture or sculpture",
+        "wikidata_name": "portrait at bust length",
+        "wikidata_qid": "Q241045",
         "wordnet_id": "v02494850"
     },
     "butterfly": {
@@ -456,6 +507,9 @@
     "calculator": {
         "oid_id": "/m/024d2",
         "oid_name": "Calculator",
+        "wikidata_desc": "electronic device used to perform operations of arithmetic",
+        "wikidata_name": "calculator",
+        "wikidata_qid": "Q31087",
         "wordnet_id": "n09887034"
     },
     "camel": {
@@ -466,6 +520,9 @@
     "camera": {
         "oid_id": "/m/0dv5r",
         "oid_name": "Camera",
+        "wikidata_desc": "optical device for recording or transmitting photographic images or videos",
+        "wikidata_name": "camera",
+        "wikidata_qid": "Q15328",
         "wordnet_id": "n04404997"
     },
     "can_opener": {
@@ -486,11 +543,17 @@
     "candy": {
         "oid_id": "/m/0gm28",
         "oid_name": "Candy",
+        "wikidata_desc": "sweet confection",
+        "wikidata_name": "Sweets",
+        "wikidata_qid": "Q185583",
         "wordnet_id": "v02196378"
     },
     "cannon": {
         "oid_id": "/m/020kz",
         "oid_name": "Cannon",
+        "wikidata_desc": "class of artillery which fires at a low or flat trajectory",
+        "wikidata_name": "cannon",
+        "wikidata_qid": "Q81103",
         "wordnet_id": "v01147987"
     },
     "canoe": {
@@ -530,6 +593,9 @@
     "cart": {
         "oid_id": "/m/018p4k",
         "oid_name": "Cart",
+        "wikidata_desc": "simple vehicle designed for transport, mostly uniaxial",
+        "wikidata_name": "cart",
+        "wikidata_qid": "Q234668",
         "wordnet_id": "v01454810"
     },
     "cassette_deck": {
@@ -590,6 +656,9 @@
     "chainsaw": {
         "oid_id": "/m/01j4z9",
         "oid_name": "Chainsaw",
+        "wikidata_desc": "recurring tool",
+        "wikidata_name": "chainsaw",
+        "wikidata_qid": "Q208040",
         "wordnet_id": "n03000684"
     },
     "chair": {
@@ -602,6 +671,9 @@
     "cheese": {
         "oid_id": "/m/01nkt",
         "oid_name": "Cheese",
+        "wikidata_desc": "generic term for a diverse group of milk-based food products",
+        "wikidata_name": "cheese",
+        "wikidata_qid": "Q10943",
         "wordnet_id": "v02680691"
     },
     "cheetah": {
@@ -631,7 +703,10 @@
     },
     "chopsticks": {
         "oid_id": "/m/01_5g",
-        "oid_name": "Chopsticks"
+        "oid_name": "Chopsticks",
+        "wikidata_desc": "shaped pairs of sticks used as eating utensils",
+        "wikidata_name": "chopsticks",
+        "wikidata_qid": "Q81980"
     },
     "christmas_tree": {
         "oid_id": "/m/025nd",
@@ -643,6 +718,9 @@
         "coco_name": "clock",
         "oid_id": "/m/01x3z",
         "oid_name": "Clock",
+        "wikidata_desc": "instrument that measures the passage of time",
+        "wikidata_name": "clock",
+        "wikidata_qid": "Q376",
         "wordnet_id": "v00490968"
     },
     "closet": {
@@ -653,11 +731,17 @@
     "clothing": {
         "oid_id": "/m/09j2d",
         "oid_name": "Clothing",
+        "wikidata_desc": "covering worn on the human body",
+        "wikidata_name": "clothing",
+        "wikidata_qid": "Q11460",
         "wordnet_id": "n03051540"
     },
     "coat": {
         "oid_id": "/m/01xygc",
         "oid_name": "Coat",
+        "wikidata_desc": "diocese of the Catholic Church",
+        "wikidata_name": "Roman Catholic Diocese of Coatzacoalcos",
+        "wikidata_qid": "Q868062",
         "wordnet_id": "v01264283"
     },
     "cocktail": {
@@ -702,6 +786,9 @@
     "common_fig": {
         "oid_id": "/m/043nyj",
         "oid_name": "Common fig",
+        "wikidata_desc": "species of plant",
+        "wikidata_name": "Ficus carica",
+        "wikidata_qid": "Q36146",
         "wordnet_id": "n12401684"
     },
     "common_sunflower": {
@@ -737,6 +824,9 @@
     "cookie": {
         "oid_id": "/m/021mn",
         "oid_name": "Cookie",
+        "wikidata_desc": "small piece of data sent from a website and stored on the user's computer by the user's web browser",
+        "wikidata_name": "HTTP cookie",
+        "wikidata_qid": "Q178995",
         "wordnet_id": "n09963680"
     },
     "cooking_spray": {
@@ -749,13 +839,19 @@
     },
     "cosmetics": {
         "oid_id": "/m/014trl",
-        "oid_name": "Cosmetics"
+        "oid_name": "Cosmetics",
+        "wikidata_desc": "substances used to enhance the appearance or odor of the human body",
+        "wikidata_name": "cosmetics",
+        "wikidata_qid": "Q131207"
     },
     "couch": {
         "coco_id": 63,
         "coco_name": "couch",
         "oid_id": "/m/02crq1",
         "oid_name": "Couch",
+        "wikidata_desc": "piece of furniture for seating two or more persons in the form of a bench with armrests",
+        "wikidata_name": "couch",
+        "wikidata_qid": "Q131514",
         "wordnet_id": "v00981276"
     },
     "counter": {
@@ -806,6 +902,9 @@
     "crown": {
         "oid_id": "/m/0nl46",
         "oid_name": "Crown",
+        "wikidata_desc": "precious item of headwear, symbolizing the power of a ruler",
+        "wikidata_name": "crown",
+        "wikidata_qid": "Q170984",
         "wordnet_id": "v02694677"
     },
     "crutch": {
@@ -843,6 +942,9 @@
     "dagger": {
         "oid_id": "/m/02gzp",
         "oid_name": "Dagger",
+        "wikidata_desc": "fighting weapon with a sharp point",
+        "wikidata_name": "dagger",
+        "wikidata_qid": "Q182780",
         "wordnet_id": "n06828529"
     },
     "dairy_product": {
@@ -888,6 +990,9 @@
     "dinosaur": {
         "oid_id": "/m/029tx",
         "oid_name": "Dinosaur",
+        "wikidata_desc": "1985 film by Robert Guenette",
+        "wikidata_name": "Dinosaur!",
+        "wikidata_qid": "Q3028449",
         "wordnet_id": "n01699831"
     },
     "dirt-merged": {
@@ -919,6 +1024,9 @@
     "dolphin": {
         "oid_id": "/m/02hj4",
         "oid_name": "Dolphin",
+        "wikidata_desc": "video game",
+        "wikidata_name": "Dolphin",
+        "wikidata_qid": "Q20874771",
         "wordnet_id": "n02581957"
     },
     "donut": {
@@ -944,6 +1052,9 @@
     "doughnut": {
         "oid_id": "/m/0jy4k",
         "oid_name": "Doughnut",
+        "wikidata_desc": "dessert food",
+        "wikidata_name": "doughnut",
+        "wikidata_qid": "Q192783",
         "wordnet_id": "n13875392"
     },
     "dragonfly": {
@@ -954,6 +1065,9 @@
     "drawer": {
         "oid_id": "/m/0fqfqc",
         "oid_name": "Drawer",
+        "wikidata_desc": "box-shaped container that fits into a piece of furniture",
+        "wikidata_name": "drawer",
+        "wikidata_qid": "Q223575",
         "wordnet_id": "n10032524"
     },
     "dress": {
@@ -983,6 +1097,9 @@
     "duck": {
         "oid_id": "/m/09ddx",
         "oid_name": "Duck",
+        "wikidata_desc": "common name for many species in the bird family Anatidae",
+        "wikidata_name": "duck",
+        "wikidata_qid": "Q3736439",
         "wordnet_id": "v01976220"
     },
     "dumbbell": {
@@ -1046,6 +1163,9 @@
     "fax": {
         "oid_id": "/m/02xqq",
         "oid_name": "Fax",
+        "wikidata_desc": "method of transmitting images, often of documents",
+        "wikidata_name": "fax",
+        "wikidata_qid": "Q132744",
         "wordnet_id": "v01007676"
     },
     "fedora": {
@@ -1073,6 +1193,9 @@
     "fireplace": {
         "oid_id": "/m/03tw93",
         "oid_name": "Fireplace",
+        "wikidata_desc": "device for firing solid fuels in residential buildings",
+        "wikidata_name": "fireplace",
+        "wikidata_qid": "Q188669",
         "wordnet_id": "n03346455"
     },
     "fish": {
@@ -1118,7 +1241,10 @@
     },
     "flying_disc": {
         "oid_id": "/m/02wmf",
-        "oid_name": "Flying disc"
+        "oid_name": "Flying disc",
+        "wikidata_desc": "gliding toy or sporting item, generally plastic and roughly 20\u201325 cm in diameter with a pronounced lip, used recreationally and competitively for throwing and catching",
+        "wikidata_name": "flying disc",
+        "wikidata_qid": "Q131689"
     },
     "food": {
         "oid_id": "/m/02wbm",
@@ -1138,6 +1264,9 @@
     "football": {
         "oid_id": "/m/01226z",
         "oid_name": "Football",
+        "wikidata_desc": "ball inflated with air that is used to play one of the various sports known as football",
+        "wikidata_name": "football",
+        "wikidata_qid": "Q262090",
         "wordnet_id": "n03378765"
     },
     "football_helmet": {
@@ -1218,6 +1347,9 @@
         "coco_name": "giraffe",
         "oid_id": "/m/03bk1",
         "oid_name": "Giraffe",
+        "wikidata_desc": "proposed species of giraffe native to North Africa",
+        "wikidata_name": "northern giraffe",
+        "wikidata_qid": "Q15083",
         "wordnet_id": "n02439033"
     },
     "girl": {
@@ -1238,11 +1370,17 @@
     "goat": {
         "oid_id": "/m/03fwl",
         "oid_name": "Goat",
+        "wikidata_desc": "domesticated mammal raised primarily for its milk",
+        "wikidata_name": "goat",
+        "wikidata_qid": "Q2934",
         "wordnet_id": "n09884666"
     },
     "goggles": {
         "oid_id": "/m/02_n6y",
         "oid_name": "Goggles",
+        "wikidata_desc": "forms of protective eyewear",
+        "wikidata_name": "goggles",
+        "wikidata_qid": "Q72797",
         "wordnet_id": "n03443912"
     },
     "goldfish": {
@@ -1268,6 +1406,9 @@
     "goose": {
         "oid_id": "/m/0dbvp",
         "oid_name": "Goose",
+        "wikidata_desc": "tribe of birds, use Q16529344 for \"goose\"",
+        "wikidata_name": "Anserini",
+        "wikidata_qid": "Q82562",
         "wordnet_id": "v01457079"
     },
     "grape": {
@@ -1278,6 +1419,9 @@
     "grapefruit": {
         "oid_id": "/m/0hqkz",
         "oid_name": "Grapefruit",
+        "wikidata_desc": "band",
+        "wikidata_name": "Grapefruit",
+        "wikidata_qid": "Q673868",
         "wordnet_id": "n12709688"
     },
     "grass-merged": {
@@ -1354,6 +1498,9 @@
     "harbor_seal": {
         "oid_id": "/m/02l8p9",
         "oid_name": "Harbor seal",
+        "wikidata_desc": "species of mammal",
+        "wikidata_name": "Phoca vitulina",
+        "wikidata_qid": "Q26913",
         "wordnet_id": "n02079851"
     },
     "harmonica": {
@@ -1374,6 +1521,9 @@
     "hat": {
         "oid_id": "/m/02dl1y",
         "oid_name": "Hat",
+        "wikidata_desc": "shaped head covering, having a brim and a crown, or one of these",
+        "wikidata_name": "hat",
+        "wikidata_qid": "Q80151",
         "wordnet_id": "v02363128"
     },
     "headphones": {
@@ -1398,6 +1548,9 @@
     "helmet": {
         "oid_id": "/m/0zvk5",
         "oid_name": "Helmet",
+        "wikidata_desc": "band",
+        "wikidata_name": "Helmet",
+        "wikidata_qid": "Q1412298",
         "wordnet_id": "n03513376"
     },
     "high_heels": {
@@ -1456,7 +1609,10 @@
     },
     "human_arm": {
         "oid_id": "/m/0dzf4",
-        "oid_name": "Human arm"
+        "oid_name": "Human arm",
+        "wikidata_desc": "forearm and upper arm together",
+        "wikidata_name": "arm",
+        "wikidata_qid": "Q43471"
     },
     "human_beard": {
         "oid_id": "/m/015h_t",
@@ -1483,11 +1639,17 @@
     "human_foot": {
         "oid_id": "/m/031n1",
         "oid_name": "Human foot",
+        "wikidata_desc": "anatomical structure found in vertebrates",
+        "wikidata_name": "foot",
+        "wikidata_qid": "Q15807",
         "wordnet_id": "n05563266"
     },
     "human_hair": {
         "oid_id": "/m/03q69",
-        "oid_name": "Human hair"
+        "oid_name": "Human hair",
+        "wikidata_desc": "protein filament that grows from follicles found in the dermis, or skin",
+        "wikidata_name": "hair",
+        "wikidata_qid": "Q28472"
     },
     "human_hand": {
         "oid_id": "/m/0k65p",
@@ -1496,6 +1658,9 @@
     "human_head": {
         "oid_id": "/m/04hgtk",
         "oid_name": "Human head",
+        "wikidata_desc": "part of an organism",
+        "wikidata_name": "head",
+        "wikidata_qid": "Q23640",
         "wordnet_id": "n05539138"
     },
     "human_leg": {
@@ -1508,7 +1673,10 @@
     },
     "human_nose": {
         "oid_id": "/m/0k0pj",
-        "oid_name": "Human nose"
+        "oid_name": "Human nose",
+        "wikidata_desc": "organ that smells and facilitates breathing also kills you",
+        "wikidata_name": "nose",
+        "wikidata_qid": "Q7363"
     },
     "humidifier": {
         "oid_id": "/m/04lvq_",
@@ -1521,7 +1689,10 @@
     },
     "indoor_rower": {
         "oid_id": "/m/03wym",
-        "oid_name": "Indoor rower"
+        "oid_name": "Indoor rower",
+        "wikidata_desc": "sports equipment",
+        "wikidata_name": "indoor rower",
+        "wikidata_qid": "Q1542861"
     },
     "infant_bed": {
         "oid_id": "/m/061hd_",
@@ -1562,11 +1733,17 @@
     },
     "jeans": {
         "oid_id": "/m/0fly7",
-        "oid_name": "Jeans"
+        "oid_name": "Jeans",
+        "wikidata_desc": "trousers often made from denim or dungaree cloth",
+        "wikidata_name": "jeans",
+        "wikidata_qid": "Q83363"
     },
     "jellyfish": {
         "oid_id": "/m/0d8zb",
         "oid_name": "Jellyfish",
+        "wikidata_desc": "soft-bodied, aquatic invertebrates",
+        "wikidata_name": "jellyfish",
+        "wikidata_qid": "Q30178",
         "wordnet_id": "n01913166"
     },
     "jet_ski": {
@@ -1626,6 +1803,9 @@
         "coco_name": "kite",
         "oid_id": "/m/02zt3",
         "oid_name": "Kite",
+        "wikidata_desc": "tethered aircraft",
+        "wikidata_name": "kite",
+        "wikidata_qid": "Q42861",
         "wordnet_id": "v02206313"
     },
     "knife": {
@@ -1643,11 +1823,17 @@
     "ladder": {
         "oid_id": "/m/012w5l",
         "oid_name": "Ladder",
+        "wikidata_desc": "vertical set of rungs or steps",
+        "wikidata_name": "ladder",
+        "wikidata_qid": "Q168639",
         "wordnet_id": "v00334803"
     },
     "ladle": {
         "oid_id": "/m/027rl48",
         "oid_name": "Ladle",
+        "wikidata_desc": "type of spoon having a long handle terminating in a deep bow",
+        "wikidata_name": "ladle",
+        "wikidata_qid": "Q193358",
         "wordnet_id": "v01578993"
     },
     "ladybug": {
@@ -1683,6 +1869,9 @@
     "lemon": {
         "oid_id": "/m/09k_b",
         "oid_name": "Lemon",
+        "wikidata_desc": "French bishop",
+        "wikidata_name": "Thomas-Paul-Henri Lemonnier",
+        "wikidata_qid": "Q3524843",
         "wordnet_id": "n12711596"
     },
     "leopard": {
@@ -1693,6 +1882,9 @@
     "light": {
         "coco_id": 130,
         "coco_name": "light",
+        "wikidata_desc": "American digital photography company and creator of the Light L16 Camera.",
+        "wikidata_name": "Light",
+        "wikidata_qid": "Q22080511",
         "wordnet_id": "v02759614"
     },
     "light_bulb": {
@@ -1702,7 +1894,10 @@
     },
     "light_switch": {
         "oid_id": "/m/03jbxj",
-        "oid_name": "Light switch"
+        "oid_name": "Light switch",
+        "wikidata_desc": "device used to operate electric lights, permanently connected equipment, or electrical outlets",
+        "wikidata_name": "light switch",
+        "wikidata_qid": "Q962420"
     },
     "lighthouse": {
         "oid_id": "/m/04h7h",
@@ -1722,6 +1917,9 @@
     "lion": {
         "oid_id": "/m/096mb",
         "oid_name": "Lion",
+        "wikidata_desc": "2016 film by Garth Davis",
+        "wikidata_name": "Lion",
+        "wikidata_qid": "Q23013699",
         "wordnet_id": "n10265070"
     },
     "lipstick": {
@@ -1747,9 +1945,9 @@
     "luggage_and_bags": {
         "oid_id": "/m/0hf58v5",
         "oid_name": "Luggage and bags",
-        "wikidata_desc": "http://www.wikidata.org/entity/Q865054",
-        "wikidata_name": "http://www.wikidata.org/entity/statement/Q1323314-cb18399f-42d7-ad33-7f27-7783ad97d76e",
-        "wikidata_qid": "Q865054-43cf2190-4c1f-2c52-6fe1-0ab2dcb5ce63"
+        "wikidata_desc": "cases or container for storing traveler's items",
+        "wikidata_name": "baggage",
+        "wikidata_qid": "Q865054"
     },
     "lynx": {
         "oid_id": "/m/04g2r",
@@ -1759,6 +1957,9 @@
     "magpie": {
         "oid_id": "/m/012074",
         "oid_name": "Magpie",
+        "wikidata_desc": "large bird in the crow family",
+        "wikidata_name": "magpie",
+        "wikidata_qid": "Q2495957",
         "wordnet_id": "n10281276"
     },
     "mammal": {
@@ -1779,6 +1980,9 @@
     "maple": {
         "oid_id": "/m/0cffdh",
         "oid_name": "Maple",
+        "wikidata_desc": "genus of plants",
+        "wikidata_name": "Acer",
+        "wikidata_qid": "Q42292",
         "wordnet_id": "n12752666"
     },
     "maracas": {
@@ -1819,6 +2023,9 @@
     "microwave_oven": {
         "oid_id": "/m/0fx9l",
         "oid_name": "Microwave oven",
+        "wikidata_desc": "kitchen cooking appliance",
+        "wikidata_name": "microwave oven",
+        "wikidata_qid": "Q127956",
         "wordnet_id": "n03761084"
     },
     "milk": {
@@ -1849,6 +2056,9 @@
     "mixer": {
         "oid_id": "/m/063rgb",
         "oid_name": "Mixer",
+        "wikidata_desc": "kitchen appliance intended for mixing, folding, beating, and whipping food ingredients",
+        "wikidata_name": "mixer",
+        "wikidata_qid": "Q954087",
         "wordnet_id": "n08256369"
     },
     "mixing_bowl": {
@@ -1859,6 +2069,9 @@
     "mobile_phone": {
         "oid_id": "/m/050k8",
         "oid_name": "Mobile phone",
+        "wikidata_desc": "portable device to make telephone calls using a radio link",
+        "wikidata_name": "mobile phone",
+        "wikidata_qid": "Q17517",
         "wordnet_id": "n02992529"
     },
     "monkey": {
@@ -1875,6 +2088,9 @@
         "coco_name": "motorcycle",
         "oid_id": "/m/04_sv",
         "oid_name": "Motorcycle",
+        "wikidata_desc": "two- or three-wheeled motor vehicle",
+        "wikidata_name": "motorcycle",
+        "wikidata_qid": "Q34493",
         "wordnet_id": "v01936048"
     },
     "mountain-merged": {
@@ -1902,6 +2118,9 @@
     "mule": {
         "oid_id": "/m/0dbzx",
         "oid_name": "Mule",
+        "wikidata_desc": "offspring of a male donkey (jack) and a female horse (mare)",
+        "wikidata_name": "mule",
+        "wikidata_qid": "Q41692",
         "wordnet_id": "n03798061"
     },
     "mushroom": {
@@ -1964,6 +2183,9 @@
     "ostrich": {
         "oid_id": "/m/05n4y",
         "oid_name": "Ostrich",
+        "wikidata_desc": "Journal of African Ornithology",
+        "wikidata_name": "Ostrich",
+        "wikidata_qid": "Q7107739",
         "wordnet_id": "n10385707"
     },
     "otter": {
@@ -2016,6 +2238,9 @@
     "paper_cutter": {
         "oid_id": "/m/080n7g",
         "oid_name": "Paper cutter",
+        "wikidata_desc": "any of several styles of tool (guillotine, scorer, rolling blade) specialised for cutting paper",
+        "wikidata_name": "paper cutter",
+        "wikidata_qid": "Q2205714",
         "wordnet_id": "n03886940"
     },
     "paper_towel": {
@@ -2043,6 +2268,9 @@
     "pasta": {
         "oid_id": "/m/05z55",
         "oid_name": "Pasta",
+        "wikidata_desc": "Italian food made from flour, eggs and water and shaped in different forms, usually cooked and served with a sauce",
+        "wikidata_name": "pasta",
+        "wikidata_qid": "Q178",
         "wordnet_id": "n07863374"
     },
     "pastry": {
@@ -2109,6 +2337,9 @@
     "piano": {
         "oid_id": "/m/05r5c",
         "oid_name": "Piano",
+        "wikidata_desc": "musical instrument",
+        "wikidata_name": "piano",
+        "wikidata_qid": "Q5994",
         "wordnet_id": "r00343660"
     },
     "picnic_basket": {
@@ -2123,6 +2354,9 @@
     "pig": {
         "oid_id": "/m/068zj",
         "oid_name": "Pig",
+        "wikidata_desc": "language",
+        "wikidata_name": "Pisabo",
+        "wikidata_qid": "Q966883",
         "wordnet_id": "v02615739"
     },
     "pillow": {
@@ -2130,6 +2364,9 @@
         "coco_name": "pillow",
         "oid_id": "/m/034c16",
         "oid_name": "Pillow",
+        "wikidata_desc": "cushion for the head",
+        "wikidata_name": "pillow",
+        "wikidata_qid": "Q99895",
         "wordnet_id": "v01502946"
     },
     "pineapple": {
@@ -2214,6 +2451,9 @@
     "poster": {
         "oid_id": "/m/01n5jq",
         "oid_name": "Poster",
+        "wikidata_desc": "any piece of printed paper designed to be attached to a wall or vertical surface",
+        "wikidata_name": "poster",
+        "wikidata_qid": "Q429785",
         "wordnet_id": "n09854510"
     },
     "potato": {
@@ -2237,6 +2477,9 @@
     "pretzel": {
         "oid_id": "/m/01f91_",
         "oid_name": "Pretzel",
+        "wikidata_desc": "type of baked bread",
+        "wikidata_name": "pretzel",
+        "wikidata_qid": "Q160525",
         "wordnet_id": "n07695742"
     },
     "printer": {
@@ -2247,6 +2490,9 @@
     "pumpkin": {
         "oid_id": "/m/05zsy",
         "oid_name": "Pumpkin",
+        "wikidata_desc": "2002 film",
+        "wikidata_name": "Pumpkin",
+        "wikidata_qid": "Q673101",
         "wordnet_id": "n12158443"
     },
     "punching_bag": {
@@ -2312,16 +2558,25 @@
     "remote_control": {
         "oid_id": "/m/0qjjc",
         "oid_name": "Remote control",
+        "wikidata_desc": "system or device used to control other device remotely (or wirelessly)",
+        "wikidata_name": "remote control unit",
+        "wikidata_qid": "Q185091",
         "wordnet_id": "n04074963"
     },
     "reptile": {
         "oid_id": "/m/06bt6",
         "oid_name": "Reptile",
+        "wikidata_desc": "class of animals",
+        "wikidata_name": "Reptilia",
+        "wikidata_qid": "Q10811",
         "wordnet_id": "n01661091"
     },
     "rhinoceros": {
         "oid_id": "/m/03d443",
         "oid_name": "Rhinoceros",
+        "wikidata_desc": "band",
+        "wikidata_name": "Rhinoceros",
+        "wikidata_qid": "Q538369",
         "wordnet_id": "n02391994"
     },
     "rifle": {
@@ -2351,6 +2606,9 @@
     "rocket": {
         "oid_id": "/m/09rvcxw",
         "oid_name": "Rocket",
+        "wikidata_desc": "pyrokinetic engine used for propulsion; for the incendiary weapon, see Q2037215",
+        "wikidata_name": "rocket",
+        "wikidata_qid": "Q41291",
         "wordnet_id": "v01944086"
     },
     "roller_skates": {
@@ -2365,6 +2623,9 @@
     "rose": {
         "oid_id": "/m/06m11",
         "oid_name": "Rose",
+        "wikidata_desc": "genus of plants",
+        "wikidata_name": "Rosa",
+        "wikidata_qid": "Q34687",
         "wordnet_id": "n12620196"
     },
     "rug-merged": {
@@ -2394,6 +2655,9 @@
     "sand": {
         "coco_id": 154,
         "coco_name": "sand",
+        "wikidata_desc": "granular material composed of finely divided rock and mineral particles, sand particles range in diameter from 0.063 to 2 mm (per ISO 14688)",
+        "wikidata_name": "sand",
+        "wikidata_qid": "Q34679",
         "wordnet_id": "v01386433"
     },
     "sandal": {
@@ -2443,6 +2707,9 @@
     "scorpion": {
         "oid_id": "/m/0755b",
         "oid_name": "Scorpion",
+        "wikidata_desc": "order of arachnids",
+        "wikidata_name": "scorpion",
+        "wikidata_qid": "Q19125",
         "wordnet_id": "n09753204"
     },
     "screwdriver": {
@@ -2468,6 +2735,9 @@
     "sea_turtle": {
         "oid_id": "/m/0120dh",
         "oid_name": "Sea turtle",
+        "wikidata_desc": "superfamily of reptiles",
+        "wikidata_name": "Chelonioidea",
+        "wikidata_qid": "Q219329",
         "wordnet_id": "n01663401"
     },
     "seafood": {
@@ -2488,6 +2758,9 @@
     "segway": {
         "oid_id": "/m/076bq",
         "oid_name": "Segway",
+        "wikidata_desc": "battery-powered electric vehicle",
+        "wikidata_name": "Segway PT",
+        "wikidata_qid": "Q214893",
         "wordnet_id": "n04168199"
     },
     "serving_tray": {
@@ -2509,6 +2782,9 @@
         "coco_name": "sheep",
         "oid_id": "/m/07bgp",
         "oid_name": "Sheep",
+        "wikidata_desc": "domesticated animal",
+        "wikidata_name": "domestic sheep",
+        "wikidata_qid": "Q7368",
         "wordnet_id": "n10588074"
     },
     "shelf": {
@@ -2521,6 +2797,9 @@
     "shellfish": {
         "oid_id": "/m/0fbdv",
         "oid_name": "Shellfish",
+        "wikidata_desc": "culinary and fisheries term for exoskeleton-bearing aquatic invertebrates",
+        "wikidata_name": "shellfish",
+        "wikidata_qid": "Q6501235",
         "wordnet_id": "n07783210"
     },
     "shirt": {
@@ -2546,6 +2825,9 @@
     "shrimp": {
         "oid_id": "/m/0ll1f78",
         "oid_name": "Shrimp",
+        "wikidata_desc": "decapod crustaceans",
+        "wikidata_name": "shrimp",
+        "wikidata_qid": "Q1517781",
         "wordnet_id": "v01142070"
     },
     "sink": {
@@ -2580,6 +2862,9 @@
     "skull": {
         "oid_id": "/m/016m2d",
         "oid_name": "Skull",
+        "wikidata_desc": "South Korean reggae singer",
+        "wikidata_name": "SKULL",
+        "wikidata_qid": "Q12603651",
         "wordnet_id": "n05540121"
     },
     "skunk": {
@@ -2626,6 +2911,9 @@
         "coco_name": "snowboard",
         "oid_id": "/m/06__v",
         "oid_name": "Snowboard",
+        "wikidata_desc": "winter sport equipment",
+        "wikidata_name": "snowboard",
+        "wikidata_qid": "Q2000617",
         "wordnet_id": "v02104860"
     },
     "snowman": {
@@ -2688,6 +2976,9 @@
         "coco_name": "spoon",
         "oid_id": "/m/0cmx8",
         "oid_name": "Spoon",
+        "wikidata_desc": "American band",
+        "wikidata_name": "Spoon",
+        "wikidata_qid": "Q1155915",
         "wordnet_id": "v01579622"
     },
     "sports_ball": {
@@ -2722,6 +3013,9 @@
         "coco_name": "stairs",
         "oid_id": "/m/01lynh",
         "oid_name": "Stairs",
+        "wikidata_desc": "construction designed to bridge a large vertical distance by dividing it into smaller vertical distances",
+        "wikidata_name": "stairs",
+        "wikidata_qid": "Q12511",
         "wordnet_id": "n04298171"
     },
     "stapler": {
@@ -2787,6 +3081,9 @@
     "suit": {
         "oid_id": "/m/01xyhv",
         "oid_name": "Suit",
+        "wikidata_desc": "set of matching garments used as formal or business attire",
+        "wikidata_name": "suit",
+        "wikidata_qid": "Q614806",
         "wordnet_id": "v02735282"
     },
     "suitcase": {
@@ -2821,6 +3118,9 @@
     "swan": {
         "oid_id": "/m/0dftk",
         "oid_name": "Swan",
+        "wikidata_desc": "large water bird",
+        "wikidata_name": "swan",
+        "wikidata_qid": "Q34384",
         "wordnet_id": "v01881180"
     },
     "swim_cap": {
@@ -2845,6 +3145,9 @@
     "syringe": {
         "oid_id": "/m/012ysf",
         "oid_name": "Syringe",
+        "wikidata_desc": "a simple pump consisting of a plunger that fits tightly in a tube",
+        "wikidata_name": "syringe",
+        "wikidata_qid": "Q273318",
         "wordnet_id": "v01373422"
     },
     "table": {
@@ -2859,7 +3162,10 @@
     },
     "table_tennis_racket": {
         "oid_id": "/m/05_5p_0",
-        "oid_name": "Table tennis racket"
+        "oid_name": "Table tennis racket",
+        "wikidata_desc": "sports equipment",
+        "wikidata_name": "table tennis racket",
+        "wikidata_qid": "Q337695"
     },
     "tablet_computer": {
         "oid_id": "/m/0bh9flk",
@@ -2878,6 +3184,9 @@
     "tank": {
         "oid_id": "/m/07cmd",
         "oid_name": "Tank",
+        "wikidata_desc": "Taiwanese singer-songwriter",
+        "wikidata_name": "Tank",
+        "wikidata_qid": "Q848765",
         "wordnet_id": "v02282082"
     },
     "tap": {
@@ -2910,6 +3219,9 @@
         "coco_name": "teddy bear",
         "oid_id": "/m/0kmg4",
         "oid_name": "Teddy bear",
+        "wikidata_desc": "soft toy in the form of a bear",
+        "wikidata_name": "teddy bear",
+        "wikidata_qid": "Q213477",
         "wordnet_id": "n04399382"
     },
     "telephone": {
@@ -2920,6 +3232,9 @@
     "television": {
         "oid_id": "/m/07c52",
         "oid_name": "Television",
+        "wikidata_desc": "telecommunication medium for transmitting and receiving moving images",
+        "wikidata_name": "television",
+        "wikidata_qid": "Q289",
         "wordnet_id": "n06277280"
     },
     "tennis_ball": {
@@ -2956,11 +3271,17 @@
         "coco_name": "tie",
         "oid_id": "/m/01rkbr",
         "oid_name": "Tie",
+        "wikidata_desc": "language of Sudan",
+        "wikidata_name": "Tingal",
+        "wikidata_qid": "Q36967",
         "wordnet_id": "v02538086"
     },
     "tiger": {
         "oid_id": "/m/07dm6",
         "oid_name": "Tiger",
+        "wikidata_desc": "species of mammal",
+        "wikidata_name": "tiger",
+        "wikidata_qid": "Q19939",
         "wordnet_id": "n10710632"
     },
     "tin_can": {
@@ -2995,11 +3316,17 @@
     "tomato": {
         "oid_id": "/m/07j87",
         "oid_name": "Tomato",
+        "wikidata_desc": "fruit, used as a vegetable",
+        "wikidata_name": "tomato",
+        "wikidata_qid": "Q20638126",
         "wordnet_id": "n12905817"
     },
     "tool": {
         "oid_id": "/m/07k1x",
         "oid_name": "Tool",
+        "wikidata_desc": "physical item that can be used to achieve a goal",
+        "wikidata_name": "tool",
+        "wikidata_qid": "Q39546",
         "wordnet_id": "v02338003"
     },
     "toothbrush": {
@@ -3017,6 +3344,9 @@
     "tortoise": {
         "oid_id": "/m/011k07",
         "oid_name": "Tortoise",
+        "wikidata_desc": "family of turtles",
+        "wikidata_name": "Testudinidae",
+        "wikidata_qid": "Q46360",
         "wordnet_id": "n01670092"
     },
     "towel": {
@@ -3081,6 +3411,9 @@
     "tripod": {
         "oid_id": "/m/073bxn",
         "oid_name": "Tripod",
+        "wikidata_desc": "provides for the stable formation of cameras, lights, microphones, laboratory instruments or measuring instruments",
+        "wikidata_name": "tripod",
+        "wikidata_qid": "Q683906",
         "wordnet_id": "n04485082"
     },
     "trombone": {
@@ -3112,6 +3445,9 @@
     "turtle": {
         "oid_id": "/m/09dzg",
         "oid_name": "Turtle",
+        "wikidata_desc": "order of reptiles",
+        "wikidata_name": "turtle",
+        "wikidata_qid": "Q223044",
         "wordnet_id": "v01893313"
     },
     "tv": {
@@ -3134,6 +3470,9 @@
     "van": {
         "oid_id": "/m/0h2r6",
         "oid_name": "Van",
+        "wikidata_desc": "covered transportation vehicle",
+        "wikidata_name": "van",
+        "wikidata_qid": "Q193468",
         "wordnet_id": "n08465558"
     },
     "vase": {
@@ -3141,6 +3480,9 @@
         "coco_name": "vase",
         "oid_id": "/m/02s195",
         "oid_name": "Vase",
+        "wikidata_desc": "open container, often used to hold cut flowers",
+        "wikidata_name": "vase",
+        "wikidata_qid": "Q191851",
         "wordnet_id": "n04522168"
     },
     "vegetable": {
@@ -3229,11 +3571,17 @@
     "watercraft": {
         "oid_id": "/m/01rzcn",
         "oid_name": "Watercraft",
+        "wikidata_desc": "vehicles that are intended for locomotion on or in the water",
+        "wikidata_name": "watercraft",
+        "wikidata_qid": "Q1229765",
         "wordnet_id": "n05644334"
     },
     "watermelon": {
         "oid_id": "/m/0kpqd",
         "oid_name": "Watermelon",
+        "wikidata_desc": "large fruit with a smooth hard rind",
+        "wikidata_name": "watermelon",
+        "wikidata_qid": "Q38645",
         "wordnet_id": "n12164065"
     },
     "weapon": {
@@ -3259,6 +3607,9 @@
     "whisk": {
         "oid_id": "/m/02vwcm",
         "oid_name": "Whisk",
+        "wikidata_desc": "kitchen utensil used for mixing and/or whipping ingredients",
+        "wikidata_name": "whisk",
+        "wikidata_qid": "Q263057",
         "wordnet_id": "v02079818"
     },
     "whiteboard": {
@@ -3313,6 +3664,9 @@
     "wok": {
         "oid_id": "/m/084rd",
         "oid_name": "Wok",
+        "wikidata_desc": "Atlantic\u2013Congo language of Cameroon",
+        "wikidata_name": "Voko language",
+        "wikidata_qid": "Q35795",
         "wordnet_id": "n04596742"
     },
     "woman": {
@@ -3344,6 +3698,9 @@
         "coco_name": "zebra",
         "oid_id": "/m/0898b",
         "oid_name": "Zebra",
+        "wikidata_desc": "black and white striped animals in the horse family",
+        "wikidata_name": "zebra",
+        "wikidata_qid": "Q32789",
         "wordnet_id": "n02391049"
     },
     "zucchini": {

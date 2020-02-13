@@ -8,6 +8,19 @@ from qwikidata.sparql import (get_subclasses_of_item,
 def unify_namings(name0):
     return name0.replace(' ','_').lower()
 
+def get_wikidata(str0):
+    try:
+        res0 = return_sparql_query_results(str0)
+    except:
+        return {}
+    bindings = res0['results'].get('bindings',[])
+    if len(bindings) < 1:
+        return {}
+    for b in bindings:
+        qid = b['item']['value'].split('/')[-1]
+        if 'itemDescription' in b and len(qid) < 16:
+            return {'wikidata_qid': qid, 'wikidata_name': b['itemLabel']['value'], 'wikidata_desc': b['itemDescription']['value']}
+    return {}
 
 def wikidata_from_freenetid(freenetid):
     sparql_query = """
@@ -16,15 +29,8 @@ def wikidata_from_freenetid(freenetid):
       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
     }
     """
-    try:
-        res0 = return_sparql_query_results(sparql_query%freenetid)
-    except:
-        return {}
-    bindings = res0['results'].get('bindings',[])
-    if len(bindings) < 3:
-        return {}
-    return {'wikidata_qid': bindings[0]['item']['value'].split('/')[-1], 'wikidata_name': bindings[1]['item']['value'], 'wikidata_desc': bindings[2]['item']['value']}
-
+    return get_wikidata(sparql_query%freenetid)
+   
 def wikidata_from_name(name):
     sparql_query = """
     SELECT distinct ?item ?itemLabel ?itemDescription WHERE{  
@@ -32,15 +38,7 @@ def wikidata_from_name(name):
       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
     }
     """
-    try:
-        res0 = return_sparql_query_results(sparql_query%name)
-    except:
-        return {}
-    bindings = res0['results'].get('bindings',[])
-    if len(bindings) < 3:
-        return {}
-    return {'wikidata_qid': bindings[0]['item']['value'].split('/')[-1], 'wikidata_name': bindings[1]['item']['value'], 'wikidata_desc': bindings[2]['item']['value']}
-
+    return get_wikidata(sparql_query%name.replace('_',' '))
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
@@ -90,7 +88,7 @@ def main(argv=sys.argv[1:]):
     for key, vals in joined_label_space.items():
         if 'wikidata_qid' in vals:
             continue
-        n_qid = wikidata_from_name(name)
+        n_qid = wikidata_from_name(key)
         if len(n_qid) == 0:
             continue
         qid = n_qid['wikidata_qid']
@@ -98,7 +96,7 @@ def main(argv=sys.argv[1:]):
             vals.update(joined_label_space[all_qids[qid]])
             joined_label_space[all_qids[qid]].update(vals)
         else:
-            vals.update(qid)
+            vals.update(n_qid)
             
     fix_wordnet = {'playing_field':'ball_field', 'skis':'ski'}
     #no wordnet: stop_sign sports_ball potted_plant floor-wood playingfield wall-brick wall-stone wall-tile wall-wood window-blind
