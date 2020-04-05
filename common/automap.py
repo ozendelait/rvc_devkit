@@ -98,7 +98,7 @@ def get_wikidata(str0, context = None, retries = 0):
             wn3_conv = best_b['WN3']['value'].split('/')[-1]
             ret_b['wordnet_pwn30'] = wn3_conv[-1]+wn3_conv[:-2]
         if 'FREEN' in best_b:
-            ret_b['freebase_id'] = best_b['FREEN']['value']
+            ret_b['freebase_mid'] = best_b['FREEN']['value']
         return ret_b
     return {}
 
@@ -180,7 +180,7 @@ def main(argv=sys.argv[1:]):
 
     with open(args.limit_labels, 'r') as ifile:
         limit_labels_raw = json.load(ifile)
-    joined_label_space = {unify_namings(entry['name']) : {'coco_id':entry['id'], 'coco_name':entry['name']} for entry in limit_labels_raw}
+    joined_label_space = {unify_namings(entry['name']) : {'coco_pano_id':entry['id'], 'coco_pano_name':entry['name']} for entry in limit_labels_raw}
 
     with open(args.freebase_src, newline='') as ifile:
         freebase_labels_raw = list(csv.reader(ifile))
@@ -190,7 +190,7 @@ def main(argv=sys.argv[1:]):
         key = unify_namings(name)
         if not key in joined_label_space:
             key = key.replace('-stuff','').replace('-merged','').replace('-other','')
-        add_entry = {'oid_name': name, 'freebase_id': fid}
+        add_entry = {'oid_name': name, 'freebase_mid': fid}
         context = key.split('(')
         if len(context) > 1 and context[1][-1] == ')':
             key = context[0].replace('_', '')
@@ -246,20 +246,22 @@ def main(argv=sys.argv[1:]):
         if imagenet_labels[key0] in imagenet_gloss:
             joined_label_space[key]['wordnet_gloss'] = imagenet_gloss[imagenet_labels[key0]]
 
-        if not 'freebase_id' in vals or not 'wikidata_qid' in vals:
+        if not 'freebase_mid' in vals or not 'wikidata_qid' in vals:
             w1 = wikidata_from_wordnet3p0(imagenet_labels[key0])
-            if 'freebase_id' in w1 and 'freebase_id' in vals and vals['freebase_id'] != w1['freebase_id']:
-                print('Freebase clash for ' + key + ': ' + w1['freebase_id']  + ' vs ' + vals['freebase_id'])
+            if 'freebase_mid' in w1 and 'freebase_mid' in vals and vals['freebase_mid'] != w1['freebase_mid']:
+                print('Freebase clash for ' + key + ': ' + w1['freebase_mid']  + ' vs ' + vals['freebase_mid'])
                 continue
             vals.update(w1)
 
-    cnt_open = 0
+    cnt_both = 0
+    cnt_qid = 0
     for key, vals in joined_label_space.items():
-        if 'freebase_id' in vals and 'wordnet_id' in vals:
-            continue
-        cnt_open += 1
+        if 'freebase_mid' in vals and 'wordnet_pwn30' in vals:
+            cnt_both += 1
+        if 'wikidata_qid' in vals:
+            cnt_qid += 1
     
-    print("Could not find mappings for %i entries of %i" % (cnt_open ,len(joined_label_space)))
+    print("Found mappings for %i entries and %i have qids of %i" % (cnt_both , cnt_qid,len(joined_label_space)))
     
     with open(args.output, 'w') as ofile:
         json.dump(joined_label_space, ofile, sort_keys=True, indent=4)
