@@ -16,8 +16,13 @@ max_retries_wikidata = 3
 fix_unified_labels = {'flying_disc':'frisbee', 'doughnut':'donut', 'keyboard': 'computer_keyboard',
                  'cell_phone':'mobile_phone', 'microwave_oven':'microwave',
                  'playing_field':'ball_field', 'skis':'ski', 'loveseat':'couch',
-                 'maracas':'maraca', 'houseplant':'potted_plant', 'remote_control':'remote'}
+                 'maracas':'maraca', 'houseplant':'potted_plant', 'remote_control':'remote',
+                 'hair_drier':'hair_dryer', 'earrings':'earring', 'band-aid': 'adhesive_bandage', 'ring-binder':'ring_binder',
+                 'chopsticks':'chopstick', 'headphones':'headphone', 'vehicle_registration_plate':'license_plate', 'cosmetics':'cosmetic',
+                 'crash_helmet' : 'bicycle_helmet'
+                }
 
+#faulty qid (corresp./data must be fixed on wikidata itself): "balance_beam"
 # these manual corrections are necessary to resolve conflicts with identical words of different meaning
 # tuple of context and wordnet_pwn30 per joined label key; context is used to find correct entry on wikidata
 oid_context_fixed = {"gondola": ("boat","n03447447"), "cucumber":("fruit","n07718472"), "dog":("animal","n02084071"),
@@ -32,12 +37,84 @@ oid_context_fixed = {"gondola": ("boat","n03447447"), "cucumber":("fruit","n0771
                      "mirror":("surface","n03773035"), "sports_equipment": ("object","n04285146"), "envelope": ("letter","n03291819"),
                      "submarine": ("submersible","n04347754"), "sock": ("foot", "n04254777"), "hand": ("extremity", "n05564590"),
                      "ball" :("round","n02778669"), "printer": ("computer","n04004767"), "wardrobe":("furniture","n04550184"),
-                     "perfume":("mixture","n03916031"), "remote": ("device","n04074963"),
+                     "perfume":("mixture","n03916031"), "remote": ("device","n04074963"), "alpaca" :("camelid","n02438272"),
+                     "apple":("fruit","n07739125"), "arm":("human","n05563770"), "banner":("cloth","n02788021"),
+                     "bat":("animal", "n02139199"), "bathroom_cabinet":("toiletries","n03742115"), "bear":("mammal","n02131653"),
+                     "beard":("human", "n05261566"), "pitcher":("spout", "n03950228"), "belt":("waist","n02827606"),  #"window_blind":("covering","n02851099"),
+                     "boot":("footwear","n02872752")
                      }
 
 def unify_namings(name0):
     unif_name = name0.replace(' ','_').lower()
     return fix_unified_labels.get(unif_name,unif_name)
+
+def get_wordnet_gloss(pwn30, retries = 0):
+    res0 = None
+    try:
+        res0_r = requests.get(
+        "http://wordnet-rdf.princeton.edu/json/pwn30/%s"%(pwn30[1:]+'-'+pwn30[0]), params={"format": "json"})
+        if res0_r.status_code == 200:
+            res0 = res0_r.json()
+    except:
+        print("Unexpected error:", sys.exc_info()[0], res0_r)
+        res0 = None
+    if res0 == None or len(res0) < 1 or 'n'+res0[0]['old_keys']['pwn30'][0][:-2] != pwn30:
+        if retries <= 0:
+            print("Warning: bad request:", pwn30, res0_r)
+            return {}
+        else:
+            time.sleep(retry_time_sleep_s)#wait 1s to reduce number of 429 errors
+            return get_wordnet_gloss(pwn30, retries - 1)
+    return {'wordnet_pwn30': pwn30, 'wordnet_gloss': res0[0]['definition']}
+
+def get_wordnet(str0, context = None, retries = 0):
+    res0 = None
+    try:
+        res0_r = requests.get(
+        "http://wordnet-rdf.princeton.edu/json/lemma/%s"%str0.replace('_','%20'), params={"format": "json"})
+        if res0_r.status_code == 200:
+            res0 = res0_r.json()
+    except:
+        print("Unexpected error:", sys.exc_info()[0], res0_r)
+        res0 = None
+    if res0 == None:
+        if retries <= 0:
+            print("Warning: bad request:", res0_r)
+            return {}
+        else:
+            time.sleep(retry_time_sleep_s)#wait 1s to reduce number of 429 errors
+            return get_wordnet(str0, context, retries - 1)
+
+    if res0 == [] and retries > 0 and str0[0].lower() == str0[0]: #search is case sensitve
+        return get_wordnet(str0[0].upper()+str0[1:], context, 0)
+
+    best_r = None
+    for r in res0[:min(16, len(res0))]:
+        if not 'old_keys' in r or not 'pwn30' in r['old_keys']:
+            continue
+        pwn30 = r['old_keys']['pwn30'][0]
+        if pwn30[-2:] != '-n':
+            continue
+        curr_pwn = int(pwn30[:-2])
+        if not context is None:
+            if len(context) > 1 or r['subject'] != "noun."+context[0].replace('human','body'):
+                # check if context words are in the gloss.
+                pos_context = min([r['definition'].find(c) for c in context])
+                if pos_context < 0:
+                    continue
+        if best_r is None:
+            best_r = r
+        if context is None and best_r['subject'] == 'noun.artifact' and r['subject'] != 'noun.artifact':
+            continue #usually man-made objects are the best represenation for COCo/OID representations
+        min_pwn = int(best_r['old_keys']['pwn30'][0][:-2])
+        if curr_pwn < min_pwn:  # smaller q usually stands for a more general entry (vs. an instance)
+            best_r = r
+            continue
+
+    if not best_r is None:
+        ret_b = {'wordnet_pwn30': 'n'+best_r['old_keys']['pwn30'][0][:-2], 'wordnet_gloss': best_r['definition']}
+        return ret_b
+    return {}
 
 def get_wikidata(str0, context = None, retries = 0):
     res0 = None
@@ -60,7 +137,6 @@ def get_wikidata(str0, context = None, retries = 0):
     if len(bindings) < 1:
         return {}
     best_b = None
-    min_q = None
     for b in bindings[:min(16, len(bindings))]:
         qid = b['item']['value'].split('/')[-1]
         if not 'itemDescription' in b or len(qid) > 16:
@@ -77,10 +153,9 @@ def get_wikidata(str0, context = None, retries = 0):
         curr_q = int(b['item']['value'].split('/')[-1][1:])
         if best_b is None:
             best_b = b
-            min_q = curr_q
         else:
             prev_has_wn3 = 'WN3' in best_b
-
+        min_q = int(best_b['item']['value'].split('/')[-1][1:])
         if curr_q < min_q: #smaller q usually stands for a more general entry (vs. an instance)
             best_b = b
             break
@@ -150,8 +225,6 @@ def wikidata_from_name(name, context = None):
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--imagenet_src', type=str, default="./label_definitions/wordnet.json",
-                    help='Path to json file containing wordnet 3.0 label mappings')
     parser.add_argument('--limit_labels', type=str, default="./label_definitions/panoptic_coco_categories.json",
                     help='Path to json file containing subset of names for relevant imagenet labels')
     parser.add_argument('--freebase_src', type=str, default="./label_definitions/oid-class-descriptions-boxable.csv",
@@ -161,22 +234,13 @@ def main(argv=sys.argv[1:]):
     args = parser.parse_args(argv)
 
     #imagenet_labels_raw = {'synset':{}}
-    with open(args.imagenet_src, 'r') as ifile:
-        imagenet_labels_raw = json.load(ifile)
+    #with open(args.imagenet_src, 'r') as ifile:
+    #    imagenet_labels_raw = json.load(ifile)
     
-    imagenet_labels = {}
-    imagenet_gloss = {}
-    for wid,synset in imagenet_labels_raw['synset'].items():
-        if wid[0] != 'n': #currently only nouns are relevant
-            continue
-        imagenet_gloss[wid] = synset.get('gloss',"")
-        for w in synset['word']:
-            w = unify_namings(w)
-            imagenet_labels[w] = wid
-
+    inv_fix_unified_labels = {v: k for k, v in fix_unified_labels.items()}
     #overwrite/fix defined wids
-    for w, (context, wid) in oid_context_fixed.items():
-        imagenet_labels[w] = wid
+    #for w, (context, wid) in oid_context_fixed.items():
+    #    imagenet_labels[w] = wid
 
     with open(args.limit_labels, 'r') as ifile:
         limit_labels_raw = json.load(ifile)
@@ -184,6 +248,7 @@ def main(argv=sys.argv[1:]):
 
     with open(args.freebase_src, newline='') as ifile:
         freebase_labels_raw = list(csv.reader(ifile))
+
 
     all_qids = {}
     for (fid, name) in freebase_labels_raw:
@@ -200,7 +265,12 @@ def main(argv=sys.argv[1:]):
             add_entry['context'] = 'human'
         if key in oid_context_fixed:
             add_entry['context'] = oid_context_fixed[key][0]
+            add_entry.update(get_wordnet_gloss(oid_context_fixed[key][1], retries=0))
+
         f_wd = wikidata_from_freebaseid(fid)
+        if 'wordnet_pwn30' in add_entry and 'wordnet_pwn30' in f_wd and f_wd['wordnet_pwn30'] != add_entry['wordnet_pwn30']:
+            print('Wordnet clash for '+ key +': ' + f_wd['wordnet_pwn30'] + ' vs ' + add_entry['wordnet_pwn30'])
+            continue
         add_entry.update(f_wd)
         if 'wikidata_qid' in add_entry:
             qid = add_entry['wikidata_qid']
@@ -229,25 +299,41 @@ def main(argv=sys.argv[1:]):
 
     #no wordnet: stop_sign sports_ball potted_plant floor-wood playingfield wall-brick wall-stone wall-tile wall-wood window-blind
     for key, vals in joined_label_space.items():
-        key0 = key.replace('-stuff','').replace('-merged','').replace('-other','')
-        if not key0 in imagenet_labels:
-            key0 = key0.replace('_','')
-        key0 = fix_unified_labels.get(key0, key0)
+        if 'wordnet_pwn30' in vals:
+            if not 'wordnet_gloss' in vals:
+                vals.update(get_wordnet_gloss(vals['wordnet_pwn30'], retries=0))
+            r_wn = vals
+        else:
+            key0 = key.replace('-stuff','').replace('-merged','').replace('-other','')
+            key0 = fix_unified_labels.get(key0, key0)
+            if key0 in joined_label_space and 'wordnet_pwn30' in joined_label_space[key0]:
+                continue
+            r_wn = get_wordnet(key0, context=vals.get('context','').split('_'), retries=max_retries_wikidata)
+            if len(r_wn) == 0:
+                if key0 in inv_fix_unified_labels:
+                    key0 = inv_fix_unified_labels[key0]
+                else:
+                    key0 = key0.replace('_','')
+                key0 = fix_unified_labels.get(key0, key0)
+                if key0 in joined_label_space and 'wordnet_pwn30' in joined_label_space[key0]:
+                    continue
+                r_wn = get_wordnet(key0, context=vals.get('context', '').split('_'), retries=max_retries_wikidata)
 
-        if not key0 in imagenet_labels:
+        if not 'wordnet_pwn30' in r_wn:
             print('Not found in wordnet: '+key)
             continue
-        if 'wordnet_pwn30' in vals and vals['wordnet_pwn30'] != imagenet_labels[key0]:
-            print('Wordnet clash for '+ key +': ' + vals['wordnet_pwn30'] + ' vs ' + imagenet_labels[key0])
+        if 'wordnet_pwn30' in vals and vals['wordnet_pwn30'] != r_wn['wordnet_pwn30']:
+            print('Wordnet clash for '+ key +': ' + vals['wordnet_pwn30'] + ' vs ' + r_wn['wordnet_pwn30'])
             continue
-
-        joined_label_space[key]['wordnet_pwn30'] = imagenet_labels[key0]
-
-        if imagenet_labels[key0] in imagenet_gloss:
-            joined_label_space[key]['wordnet_gloss'] = imagenet_gloss[imagenet_labels[key0]]
+        vals.update(r_wn)
 
         if not 'freebase_mid' in vals or not 'wikidata_qid' in vals:
-            w1 = wikidata_from_wordnet3p0(imagenet_labels[key0])
+            w1 = wikidata_from_wordnet3p0(vals['wordnet_pwn30'])
+            if 'wikidata_qid' in w1:
+                qid = w1['wikidata_qid']
+                if qid in all_qids:
+                    print("Warning: dublicate qid: ", all_qids[qid], key)
+                all_qids[qid] = key
             if 'freebase_mid' in w1 and 'freebase_mid' in vals and vals['freebase_mid'] != w1['freebase_mid']:
                 print('Freebase clash for ' + key + ': ' + w1['freebase_mid']  + ' vs ' + vals['freebase_mid'])
                 continue
