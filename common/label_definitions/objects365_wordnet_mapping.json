@@ -69,7 +69,7 @@
         "idx_orig": 79,
         "wordnet_gloss": "large tough nonrigid bag filled with gas or heated air",
         "wordnet_name": "balloon",
-        "wordnet_pwn30": "n02782093"
+        "wordnet_pwn30": "n02782329"
     },
     "Banana": {
         "idx_orig": 144,
@@ -93,7 +93,7 @@
         "idx_orig": 46,
         "wordnet_gloss": "a roughly cylindrical vessel that is open at the top",
         "wordnet_name": "bucket",
-        "wordnet_pwn30": "n02909870"
+        "wordnet_pwn30": "n02795169"
     },
     "Baseball": {
         "idx_orig": 158,
@@ -158,8 +158,8 @@
     "Billards": {
         "idx_orig": 172,
         "wordnet_gloss": "any of several games played on rectangular cloth-covered table (with cushioned edges) in which long tapering cue sticks are used to propel ivory (or composition) balls",
-        "wordnet_name": "billiards",
-        "wordnet_pwn30": "n00499924"
+        "wordnet_name": "billiard ball",
+        "wordnet_pwn30": "n02839351"
     },
     "Binoculars": {
         "idx_orig": 351,
@@ -180,10 +180,7 @@
         "wordnet_pwn30": "n02850732"
     },
     "Board Eraser": {
-        "idx_orig": 280,
-        "wordnet_gloss": "an implement used to erase something",
-        "wordnet_name": "eraser",
-        "wordnet_pwn30": "n03294833"
+        "idx_orig": 280
     },
     "Boat": {
         "idx_orig": 19,
@@ -219,7 +216,7 @@
         "idx_orig": 21,
         "wordnet_gloss": "the act of rolling something (as the ball in bowling)",
         "wordnet_name": "bowl",
-        "wordnet_pwn30": "n00104409"
+        "wordnet_pwn30": "n13893694"
     },
     "Bracelet": {
         "idx_orig": 12,
@@ -333,7 +330,7 @@
         "idx_orig": 3,
         "wordnet_gloss": "a conveyance for passengers or freight on a cable railway; \"they took a cable car to the top of the mountain\"",
         "wordnet_name": "car",
-        "wordnet_pwn30": "n02934451"
+        "wordnet_pwn30": "n02958343"
     },
     "Carpet": {
         "idx_orig": 78,
@@ -342,10 +339,7 @@
         "wordnet_pwn30": "n04118021"
     },
     "Carriage": {
-        "idx_orig": 189,
-        "wordnet_gloss": "a small vehicle with four wheels in which a baby or child is pushed around",
-        "wordnet_name": "carriage",
-        "wordnet_pwn30": "n02766534"
+        "idx_orig": 189
     },
     "Carrot": {
         "idx_orig": 154,
@@ -403,9 +397,7 @@
     },
     "Chips": {
         "idx_orig": 267,
-        "wordnet_gloss": "strips of potato fried in deep fat",
-        "wordnet_name": "chips",
-        "wordnet_pwn30": "n07711080"
+        "wordnet_gloss": "strips of potato fried in deep fat"
     },
     "Chopsticks": {
         "idx_orig": 123,
@@ -421,9 +413,7 @@
     },
     "Cleaning Products": {
         "idx_orig": 180,
-        "wordnet_gloss": "the act of making something clean; \"he gave his shoes a good cleaning\"",
-        "wordnet_name": "cleaning",
-        "wordnet_pwn30": "n00251013"
+        "wordnet_gloss": "the act of making something clean; \"he gave his shoes a good cleaning\""
     },
     "Clock": {
         "idx_orig": 100,
@@ -453,19 +443,15 @@
         "idx_orig": 364,
         "wordnet_gloss": "the act of drawing a comb through hair; \"his hair needed a comb\"",
         "wordnet_name": "comb",
-        "wordnet_pwn30": "n00256746"
+        "wordnet_pwn30": "n03074855"
     },
     "Computer Box": {
         "idx_orig": 145,
-        "wordnet_gloss": "a machine for performing calculations automatically",
-        "wordnet_name": "computer",
-        "wordnet_pwn30": "n03082979"
+        "wordnet_gloss": "a machine for performing calculations automatically"
     },
     "Converter": {
         "idx_orig": 245,
-        "wordnet_gloss": "a device for changing one substance or form or state into another",
-        "wordnet_name": "converter",
-        "wordnet_pwn30": "n03099945"
+        "wordnet_gloss": "a device for changing one substance or form or state into another"
     },
     "Cookies": {
         "idx_orig": 182,
@@ -487,15 +473,11 @@
     },
     "Cosmetics Brush/Eyeliner Pencil": {
         "idx_orig": 345,
-        "wordnet_gloss": "contact with something dangerous or undesirable; \"I had a brush with danger on my way to work\"; \"he tried to avoid any brushes with the police\"",
-        "wordnet_name": "brush",
-        "wordnet_pwn30": "n00039545"
+        "wordnet_gloss": "contact with something dangerous or undesirable; \"I had a brush with danger on my way to work\"; \"he tried to avoid any brushes with the police\""
     },
     "Cosmetics Mirror": {
         "idx_orig": 361,
-        "wordnet_gloss": "polished surface that forms images by reflecting light",
-        "wordnet_name": "mirror",
-        "wordnet_pwn30": "n03773035"
+        "wordnet_gloss": "polished surface that forms images by reflecting light"
     },
     "Couch": {
         "idx_orig": 64,
@@ -523,9 +505,7 @@
     },
     "Crosswalk Sign": {
         "idx_orig": 290,
-        "wordnet_gloss": "structure displaying a board on which advertisements can be posted; \"the highway was lined with signboards\"",
-        "wordnet_name": "sign",
-        "wordnet_pwn30": "n04217882"
+        "wordnet_gloss": "structure displaying a board on which advertisements can be posted; \"the highway was lined with signboards\""
     },
     "Cucumber": {
         "idx_orig": 183,
@@ -583,9 +563,7 @@
     },
     "Dinning Table": {
         "idx_orig": 85,
-        "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\"",
-        "wordnet_name": "table",
-        "wordnet_pwn30": "n04379243"
+        "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\""
     },
     "Dishwasher": {
         "idx_orig": 257,
@@ -597,7 +575,7 @@
         "idx_orig": 101,
         "wordnet_gloss": "metal supports for logs in a fireplace; \"the andirons were too hot to touch\"",
         "wordnet_name": "dog",
-        "wordnet_pwn30": "n02710044"
+        "wordnet_pwn30": "n02084071"
     },
     "Dolphin": {
         "idx_orig": 347,
@@ -621,7 +599,7 @@
         "idx_orig": 37,
         "wordnet_gloss": "a hollow cast iron cylinder attached to the wheel that forms part of the brakes",
         "wordnet_name": "drum",
-        "wordnet_pwn30": "n02890351"
+        "wordnet_pwn30": "n03253071"
     },
     "Duck": {
         "idx_orig": 125,
@@ -637,9 +615,7 @@
     },
     "Dumpling": {
         "idx_orig": 325,
-        "wordnet_gloss": "dessert made by baking fruit wrapped in pastry",
-        "wordnet_name": "dumpling",
-        "wordnet_pwn30": "n07611148"
+        "wordnet_gloss": "dessert made by baking fruit wrapped in pastry"
     },
     "Durian": {
         "idx_orig": 335,
@@ -651,7 +627,7 @@
         "idx_orig": 148,
         "wordnet_gloss": "animal reproductive body consisting of an ovum or embryo together with nutritive and protective envelopes; especially the thin-shelled reproductive body laid by e.g. female birds",
         "wordnet_name": "egg",
-        "wordnet_pwn30": "n01460457"
+        "wordnet_pwn30": "n07840804"
     },
     "Egg tart": {
         "idx_orig": 346,
@@ -686,20 +662,19 @@
     "Extention Cord": {
         "idx_orig": 184,
         "wordnet_gloss": "a line made of twisted fibers or threads; \"the bundle was tied with a cord\"",
-        "wordnet_name": "cord",
-        "wordnet_pwn30": "n03106110"
+        "wordnet_pwn30": "n03307037"
     },
     "Extractor": {
         "idx_orig": 225,
         "wordnet_gloss": "a mechanism in a firearm that pulls an empty shell case out of the chamber and passes it to the ejector",
         "wordnet_name": "extractor",
-        "wordnet_pwn30": "n02972714"
+        "wordnet_pwn30": "n03531546"
     },
     "Fan": {
         "idx_orig": 112,
         "wordnet_gloss": "a device for creating a current of air by movement of a surface or surfaces",
         "wordnet_name": "fan",
-        "wordnet_pwn30": "n03320046"
+        "wordnet_pwn30": "n03271574"
     },
     "Faucet": {
         "idx_orig": 89,
@@ -769,15 +744,13 @@
     },
     "Formula 1 ": {
         "idx_orig": 305,
-        "wordnet_gloss": "something regarded as a normative example; \"the convention of not naming the main character\"; \"violence is the rule not the exception\"; \"his formula for impressing visitors\"",
-        "wordnet_name": "formula",
-        "wordnet_pwn30": "n05667613"
+        "wordnet_gloss": "something regarded as a normative example; \"the convention of not naming the main character\"; \"violence is the rule not the exception\"; \"his formula for impressing visitors\""
     },
     "French": {
         "idx_orig": 320,
         "wordnet_gloss": "the Romance language spoken in France and in countries colonized by France",
         "wordnet_name": "french",
-        "wordnet_pwn30": "n06964901"
+        "wordnet_pwn30": "n03394916"
     },
     "French Fries": {
         "idx_orig": 193,
@@ -831,7 +804,7 @@
         "idx_orig": 17,
         "wordnet_gloss": "the handwear used by fielders in playing baseball",
         "wordnet_name": "glove",
-        "wordnet_pwn30": "n02800213"
+        "wordnet_pwn30": "n03441112"
     },
     "Goldfish": {
         "idx_orig": 331,
@@ -885,7 +858,7 @@
         "idx_orig": 199,
         "wordnet_gloss": "informal terms for a human head",
         "wordnet_name": "bean",
-        "wordnet_pwn30": "n05539454"
+        "wordnet_pwn30": "n07727868"
     },
     "Guitar": {
         "idx_orig": 47,
@@ -948,10 +921,7 @@
         "wordnet_pwn30": "n03261776"
     },
     "Heavy Truck": {
-        "idx_orig": 143,
-        "wordnet_gloss": "a handcart that has a frame with two low wheels and a ledge at the bottom and handles at the top; used to move crates or other heavy objects",
-        "wordnet_name": "truck",
-        "wordnet_pwn30": "n03490119"
+        "idx_orig": 143
     },
     "Helicopter": {
         "idx_orig": 262,
@@ -997,9 +967,7 @@
     },
     "Hoverboard": {
         "idx_orig": 274,
-        "wordnet_gloss": "a flat piece of material designed for a special purpose; \"he nailed boards across the windows\"",
-        "wordnet_name": "board",
-        "wordnet_pwn30": "n02856463"
+        "wordnet_gloss": "a flat piece of material designed for a special purpose; \"he nailed boards across the windows\""
     },
     "Hurdle": {
         "idx_orig": 294,
@@ -1015,9 +983,7 @@
     },
     "Induction Cooker": {
         "idx_orig": 261,
-        "wordnet_gloss": "a utensil for cooking",
-        "wordnet_name": "cooker",
-        "wordnet_pwn30": "n03101156"
+        "wordnet_gloss": "a utensil for cooking"
     },
     "Jellyfish": {
         "idx_orig": 315,
@@ -1047,7 +1013,7 @@
         "idx_orig": 107,
         "wordnet_gloss": "holder consisting of an arrangement of hooks on which keys or locks can be hung",
         "wordnet_name": "keyboard",
-        "wordnet_pwn30": "n03613873"
+        "wordnet_pwn30": "n03085013"
     },
     "Kite": {
         "idx_orig": 264,
@@ -1093,9 +1059,7 @@
     },
     "Leather Shoes": {
         "idx_orig": 31,
-        "wordnet_gloss": "a particular situation; \"If you were in my place what would you do?\"",
-        "wordnet_name": "shoes",
-        "wordnet_pwn30": "n13926786"
+        "wordnet_gloss": "a particular situation; \"If you were in my place what would you do?\""
     },
     "Lemon": {
         "idx_orig": 124,
@@ -1147,9 +1111,7 @@
     },
     "Machinery Vehicle": {
         "idx_orig": 99,
-        "wordnet_gloss": "a conveyance that transports people or objects",
-        "wordnet_name": "vehicle",
-        "wordnet_pwn30": "n04524313"
+        "wordnet_gloss": "a conveyance that transports people or objects"
     },
     "Mango": {
         "idx_orig": 268,
@@ -1161,7 +1123,7 @@
         "idx_orig": 130,
         "wordnet_gloss": "some conspicuous object used to distinguish or mark something; \"the buoys were markers for the channel\"",
         "wordnet_name": "marker",
-        "wordnet_pwn30": "n03721797"
+        "wordnet_pwn30": "n03722007"
     },
     "Mask": {
         "idx_orig": 211,
@@ -1206,10 +1168,7 @@
         "wordnet_pwn30": "n03773035"
     },
     "Moniter/TV": {
-        "idx_orig": 48,
-        "wordnet_gloss": "a piece of electronic equipment that keeps track of the operation of a system continuously and warns of trouble",
-        "wordnet_name": "monitor",
-        "wordnet_pwn30": "n03781787"
+        "idx_orig": 48
     },
     "Monkey": {
         "idx_orig": 349,
@@ -1273,9 +1232,7 @@
     },
     "Nuts": {
         "idx_orig": 263,
-        "wordnet_gloss": "a small (usually square or hexagonal) metal block with internal screw thread to be fitted onto a bolt",
-        "wordnet_name": "nut",
-        "wordnet_pwn30": "n03836191"
+        "wordnet_gloss": "a small (usually square or hexagonal) metal block with internal screw thread to be fitted onto a bolt"
     },
     "Okra": {
         "idx_orig": 363,
@@ -1303,15 +1260,11 @@
     },
     "Other Fish": {
         "idx_orig": 115,
-        "wordnet_gloss": "any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills; \"the shark is a large fish\"; \"in the living room there was a tank of colorful fish\"",
-        "wordnet_name": "fish",
-        "wordnet_pwn30": "n02512053"
+        "wordnet_gloss": "any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills; \"the shark is a large fish\"; \"in the living room there was a tank of colorful fish\""
     },
     "Other Shoes": {
         "idx_orig": 1,
-        "wordnet_gloss": "a particular situation; \"If you were in my place what would you do?\"",
-        "wordnet_name": "shoes",
-        "wordnet_pwn30": "n13926786"
+        "wordnet_gloss": "a particular situation; \"If you were in my place what would you do?\""
     },
     "Oven": {
         "idx_orig": 149,
@@ -1334,8 +1287,7 @@
     "Paint Brush": {
         "idx_orig": 197,
         "wordnet_gloss": "contact with something dangerous or undesirable; \"I had a brush with danger on my way to work\"; \"he tried to avoid any brushes with the police\"",
-        "wordnet_name": "brush",
-        "wordnet_pwn30": "n00039545"
+        "wordnet_pwn30": "n03876231"
     },
     "Papaya": {
         "idx_orig": 321,
@@ -1539,7 +1491,7 @@
         "idx_orig": 168,
         "wordnet_gloss": "a mechanism consisting of a metal honeycomb through which hot fluids circulate; heat is transferred from the fluid through the honeycomb to the airstream that is created either by the motion of the vehicle or by a fan",
         "wordnet_name": "radiator",
-        "wordnet_pwn30": "n04040759"
+        "wordnet_pwn30": "n04041069"
     },
     "Radish": {
         "idx_orig": 324,
@@ -1579,9 +1531,7 @@
     },
     "Rice Cooker": {
         "idx_orig": 288,
-        "wordnet_gloss": "a utensil for cooking",
-        "wordnet_name": "cooker",
-        "wordnet_pwn30": "n03101156"
+        "wordnet_gloss": "a utensil for cooking"
     },
     "Rickshaw": {
         "idx_orig": 251,
@@ -1593,19 +1543,17 @@
         "idx_orig": 27,
         "wordnet_gloss": "a strip of material attached to the leg of a bird to identify it (as in studies of bird migration)",
         "wordnet_name": "ring",
-        "wordnet_pwn30": "n02785191"
+        "wordnet_pwn30": "n04092609"
     },
     "Router/modem": {
         "idx_orig": 339,
         "wordnet_gloss": "a power tool with a shaped cutter; used in carpentry for cutting grooves",
         "wordnet_name": "router",
-        "wordnet_pwn30": "n04114719"
+        "wordnet_pwn30": "n03187746"
     },
     "SUV": {
         "idx_orig": 28,
-        "wordnet_gloss": "a conveyance that transports people or objects",
-        "wordnet_name": "vehicle",
-        "wordnet_pwn30": "n04524313"
+        "wordnet_gloss": "a conveyance that transports people or objects"
     },
     "Sailboat": {
         "idx_orig": 55,
@@ -1705,9 +1653,7 @@
     },
     "Side Table": {
         "idx_orig": 164,
-        "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\"",
-        "wordnet_name": "table",
-        "wordnet_pwn30": "n04379243"
+        "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\""
     },
     "Sink": {
         "idx_orig": 95,
@@ -1724,8 +1670,7 @@
     "Skating and Skiing shoes": {
         "idx_orig": 117,
         "wordnet_gloss": "large edible rays having a long snout and thick tail with pectoral fins continuous with the head; swim by undulating the edges of the pectoral fins",
-        "wordnet_name": "skate",
-        "wordnet_pwn30": "n01501160"
+        "wordnet_pwn30": "n04228581"
     },
     "Skiboard": {
         "idx_orig": 157,
@@ -1766,8 +1711,8 @@
     "Soccer": {
         "idx_orig": 127,
         "wordnet_gloss": "a football game in which two teams of 11 players try to kick or head a ball into the opponents' goal",
-        "wordnet_name": "soccer",
-        "wordnet_pwn30": "n00478262"
+        "wordnet_name": "soccer ball",
+        "wordnet_pwn30": "04254680"
     },
     "Speaker": {
         "idx_orig": 32,
@@ -1777,9 +1722,7 @@
     },
     "Speed Limit Sign": {
         "idx_orig": 207,
-        "wordnet_gloss": "structure displaying a board on which advertisements can be posted; \"the highway was lined with signboards\"",
-        "wordnet_name": "sign",
-        "wordnet_pwn30": "n04217882"
+        "wordnet_gloss": "structure displaying a board on which advertisements can be posted; \"the highway was lined with signboards\""
     },
     "Spoon": {
         "idx_orig": 86,
@@ -1860,10 +1803,7 @@
         "wordnet_pwn30": "n04363559"
     },
     "Surveillance Camera": {
-        "idx_orig": 131,
-        "wordnet_gloss": "equipment for taking photographs (usually consisting of a lightproof box with a lens at one end and light-sensitive film at the other)",
-        "wordnet_name": "camera",
-        "wordnet_pwn30": "n02942699"
+        "idx_orig": 131
     },
     "Sushi": {
         "idx_orig": 227,
@@ -1885,9 +1825,7 @@
     },
     "Table Teniis paddle": {
         "idx_orig": 317,
-        "wordnet_gloss": "a short light oar used without an oarlock to propel a canoe or small boat",
-        "wordnet_name": "paddle",
-        "wordnet_pwn30": "n03873416"
+        "wordnet_gloss": "a short light oar used without an oarlock to propel a canoe or small boat"
     },
     "Table Tennis ": {
         "idx_orig": 362,
@@ -1934,8 +1872,8 @@
     "Tennis": {
         "idx_orig": 291,
         "wordnet_gloss": "a game played with rackets by two or four players who hit a ball back and forth over a net that divides the court",
-        "wordnet_name": "tennis",
-        "wordnet_pwn30": "n00482298"
+        "wordnet_name": "tennis ball",
+        "wordnet_pwn30": "n04409515"
     },
     "Tennis Racket": {
         "idx_orig": 272,
@@ -1959,7 +1897,7 @@
         "idx_orig": 191,
         "wordnet_gloss": "part of an organism consisting of an aggregate of cells having a similar structure and function",
         "wordnet_name": "tissue",
-        "wordnet_pwn30": "n05267345"
+        "wordnet_pwn30": "n15074962"
     },
     "Toaster": {
         "idx_orig": 306,
@@ -2017,15 +1955,11 @@
     },
     "Traffic Sign": {
         "idx_orig": 104,
-        "wordnet_gloss": "structure displaying a board on which advertisements can be posted; \"the highway was lined with signboards\"",
-        "wordnet_name": "sign",
-        "wordnet_pwn30": "n04217882"
+        "wordnet_gloss": "structure displaying a board on which advertisements can be posted; \"the highway was lined with signboards\""
     },
     "Traffic cone": {
         "idx_orig": 60,
-        "wordnet_gloss": "any cone-shaped artifact",
-        "wordnet_name": "cone",
-        "wordnet_pwn30": "n03089348"
+        "wordnet_gloss": "any cone-shaped artifact"
     },
     "Train": {
         "idx_orig": 116,
@@ -2061,7 +1995,7 @@
         "idx_orig": 126,
         "wordnet_gloss": "a wheeled vehicle that runs on rails and is propelled by electricity",
         "wordnet_name": "trolley",
-        "wordnet_pwn30": "n04335435"
+        "wordnet_pwn30": "n03484083"
     },
     "Trombone": {
         "idx_orig": 247,
@@ -2185,8 +2119,6 @@
     },
     "earphone": {
         "idx_orig": 198,
-        "wordnet_gloss": "electro-acoustic transducer for converting electric signals into sounds; it is held over or inserted into the ear; \"it was not the typing but the earphones that she disliked\"",
-        "wordnet_name": "earphone",
-        "wordnet_pwn30": "n03261776"
+        "wordnet_gloss": "electro-acoustic transducer for converting electric signals into sounds; it is held over or inserted into the ear; \"it was not the typing but the earphones that she disliked\""
     }
 }

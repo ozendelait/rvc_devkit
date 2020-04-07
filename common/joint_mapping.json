@@ -210,15 +210,18 @@
         "wordnet_gloss": "round object that is hit or thrown or kicked in games; \"the ball travelled 90 mph on his serve\"; \"the mayor threw out the first ball\"; \"the ball rolled into the corner pocket\"",
         "wordnet_pwn30": "n02778669"
     },
-    "balloon": {
-        "context": "aerostat",
-        "freebase_mid": "/m/01j51",
-        "oid_name": "Balloon",
-        "wikidata_desc": "inflatable flexible bag filled with gas",
-        "wikidata_name": "balloon",
-        "wikidata_qid": "Q9706",
+    "party_balloon": {
+        "wordnet_gloss": "large tough nonrigid bag filled with gas or heated air",
+        "wordnet_pwn30": "n02782329"
+    },
+    "hot_air_balloon": {
+        "context":"aerostat",
         "wordnet_gloss": "large tough nonrigid bag filled with gas or heated air",
         "wordnet_pwn30": "n02782093"
+    },
+    "party_or_hot_air_balloon": {
+        "freebase_mid": "/m/01j51",
+        "oid_name": "Balloon"
     },
     "banana": {
         "coco_pano_id": 52,
@@ -727,15 +730,11 @@
     "building": {
         "freebase_mid": "/m/0cgh4",
         "oid_name": "Building",
+        "coco_pano_id": 197,
+        "coco_pano_name": "building-other-merged",
         "wikidata_desc": "structure, typically with a roof and walls, standing more or less permanently in one place",
         "wikidata_name": "building",
         "wikidata_qid": "Q41176",
-        "wordnet_gloss": "a structure that has a roof and walls and stands more or less permanently in one place; \"there was a three-story building on the corner\"; \"it was an imposing edifice\"",
-        "wordnet_pwn30": "n02913152"
-    },
-    "building-other-merged": {
-        "coco_pano_id": 197,
-        "coco_pano_name": "building-other-merged",
         "wordnet_gloss": "a structure that has a roof and walls and stands more or less permanently in one place; \"there was a three-story building on the corner\"; \"it was an imposing edifice\"",
         "wordnet_pwn30": "n02913152"
     },
@@ -796,13 +795,9 @@
         "wordnet_gloss": "any of various types of cabbage",
         "wordnet_pwn30": "n07713895"
     },
-    "cabinet-merged": {
+    "cabinetry": {
         "coco_pano_id": 188,
         "coco_pano_name": "cabinet-merged",
-        "wordnet_gloss": "a piece of furniture resembling a cupboard with doors and shelves and drawers; for storage or display",
-        "wordnet_pwn30": "n02933112"
-    },
-    "cabinetry": {
         "freebase_mid": "/m/01s105",
         "oid_name": "Cabinetry",
         "wikidata_desc": "box-shaped piece of furniture with doors and/or drawers",
@@ -1017,7 +1012,7 @@
         "wordnet_gloss": "domesticated bovine animals as a group regardless of sex or age; \"so many head of cattle\"; \"wait till the cows come home\"; \"seven thin and ill-favored kine\"- Bible; \"a team of oxen\"",
         "wordnet_pwn30": "n02402425"
     },
-    "ceiling-merged": {
+    "ceiling": {
         "coco_pano_id": 186,
         "coco_pano_name": "ceiling-merged",
         "wordnet_gloss": "the overhead upper surface of a covered space; \"he hated painting the ceiling\"",
@@ -1585,7 +1580,7 @@
         "wordnet_gloss": "any of numerous extinct terrestrial reptiles of the Mesozoic era",
         "wordnet_pwn30": "n01699831"
     },
-    "dirt-merged": {
+    "dirt": {
         "coco_pano_id": 194,
         "coco_pano_name": "dirt-merged",
         "wordnet_gloss": "disgraceful gossip about the private lives of other people",
@@ -1649,6 +1644,8 @@
         "wordnet_pwn30": "n07639069"
     },
     "door": {
+        "coco_pano_id": 112,
+        "coco_pano_name": "door-stuff",
         "context": "entrance",
         "freebase_mid": "/m/02dgv",
         "oid_name": "Door",
@@ -1657,10 +1654,6 @@
         "wikidata_qid": "Q36794",
         "wordnet_gloss": "a swinging or sliding barrier that will close the entrance to a room or building or vehicle; \"he knocked on the door\"; \"he slammed the door as he left\"",
         "wordnet_pwn30": "n03221720"
-    },
-    "door-stuff": {
-        "coco_pano_id": 112,
-        "coco_pano_name": "door-stuff"
     },
     "door_handle": {
         "freebase_mid": "/m/03c7gz",
@@ -1723,8 +1716,7 @@
         "wikidata_desc": "type of musical instrument of the percussion family",
         "wikidata_name": "drum",
         "wikidata_qid": "Q11404",
-        "wordnet_gloss": "a musical percussion instrument; usually consists of a hollow cylinder with a membrane stretched across each end",
-        "wordnet_pwn30": "n03249569"
+        "wordnet_pwn30": "n03253071"
     },
     "duck": {
         "freebase_mid": "/m/09ddx",
@@ -1732,8 +1724,7 @@
         "wikidata_desc": "common name for many species in the bird family Anatidae",
         "wikidata_name": "duck",
         "wikidata_qid": "Q3736439",
-        "wordnet_gloss": "a heavy cotton fabric of plain weave; used for clothing and tents",
-        "wordnet_pwn30": "n03253071"
+        "wordnet_pwn30": "n01846331"
     },
     "dumbbell": {
         "context": "weight",
@@ -1790,8 +1781,7 @@
         "wikidata_desc": "tool for boring holes",
         "wikidata_name": "drill",
         "wikidata_qid": "Q58964",
-        "wordnet_gloss": "a tool with a sharp point and cutting edges for making holes in hard materials (usually rotating rapidly or by repeated blows)",
-        "wordnet_pwn30": "n03239726"
+        "wordnet_pwn30": "n03240140"
     },
     "elephant": {
         "coco_pano_id": 22,
@@ -1896,7 +1886,7 @@
         "wordnet_gloss": "a hat made of felt with a creased crown",
         "wordnet_pwn30": "n03325941"
     },
-    "fence-merged": {
+    "fence": {
         "coco_pano_id": 185,
         "coco_pano_name": "fence-merged",
         "wordnet_gloss": "a barrier that serves to enclose an area",
@@ -1958,15 +1948,16 @@
         "wordnet_gloss": "a small portable battery-powered electric lamp",
         "wordnet_pwn30": "n03359137"
     },
-    "floor-other-merged": {
+    "floor": {
         "coco_pano_id": 190,
         "coco_pano_name": "floor-other-merged",
         "wordnet_gloss": "the inside lower horizontal surface (as of a room, hallway, tent, or other structure); \"they needed rugs to cover the bare floors\"; \"we spread our sleeping bags on the dry floor of the tent\"",
         "wordnet_pwn30": "n03365592"
     },
-    "floor-wood": {
+    "wooden_floor": {
         "coco_pano_id": 118,
-        "coco_pano_name": "floor-wood"
+        "coco_pano_name": "floor-wood",
+        "wordnet_pwn30" : "n03892178"
     },
     "flower": {
         "coco_pano_id": 119,
@@ -1998,17 +1989,13 @@
         "wordnet_pwn30": "n03372029"
     },
     "food": {
+        "coco_pano_id": 196,
+        "coco_pano_name": "food-other-merged",
         "freebase_mid": "/m/02wbm",
         "oid_name": "Food",
         "wikidata_desc": "any substance consumed, provide nutritional support for the body; form of energy stored in chemical",
         "wikidata_name": "food",
         "wikidata_qid": "Q2095",
-        "wordnet_gloss": "any substance that can be metabolized by an animal to give energy and build tissue",
-        "wordnet_pwn30": "n00021265"
-    },
-    "food-other-merged": {
-        "coco_pano_id": 196,
-        "coco_pano_name": "food-other-merged",
         "wordnet_gloss": "any substance that can be metabolized by an animal to give energy and build tissue",
         "wordnet_pwn30": "n00021265"
     },
@@ -2194,7 +2181,7 @@
         "wikidata_name": "glove",
         "wikidata_qid": "Q169031",
         "wordnet_gloss": "the handwear used by fielders in playing baseball",
-        "wordnet_pwn30": "n02800213"
+        "wordnet_pwn30": "n03441112"
     },
     "goat": {
         "freebase_mid": "/m/03fwl",
@@ -2278,11 +2265,9 @@
         "wordnet_gloss": "large yellow fruit with somewhat acid juicy pulp; usual serving consists of a half",
         "wordnet_pwn30": "n07749969"
     },
-    "grass-merged": {
+    "grass": {
         "coco_pano_id": 193,
-        "coco_pano_name": "grass-merged",
-        "wordnet_gloss": "street names for marijuana",
-        "wordnet_pwn30": "n03990834"
+        "coco_pano_name": "grass-merged"
     },
     "gravel": {
         "coco_pano_id": 125,
@@ -3160,6 +3145,8 @@
         "wordnet_pwn30": "n03770439"
     },
     "mirror": {
+        "coco_pano_id": 133,
+        "coco_pano_name": "mirror-stuff",
         "context": "surface",
         "freebase_mid": "/m/054_l",
         "oid_name": "Mirror",
@@ -3168,10 +3155,6 @@
         "wikidata_qid": "Q35197",
         "wordnet_gloss": "polished surface that forms images by reflecting light",
         "wordnet_pwn30": "n03773035"
-    },
-    "mirror-stuff": {
-        "coco_pano_id": 133,
-        "coco_pano_name": "mirror-stuff"
     },
     "missile": {
         "context": "propelled",
@@ -3236,7 +3219,7 @@
         "wordnet_gloss": "a motor vehicle with two wheels and a strong frame",
         "wordnet_pwn30": "n03790512"
     },
-    "mountain-merged": {
+    "mountain": {
         "coco_pano_id": 192,
         "coco_pano_name": "mountain-merged",
         "wordnet_gloss": "a land mass that projects well above its surroundings; higher than a hill",
@@ -3488,11 +3471,9 @@
         "wordnet_gloss": "reddish-brown Old World raccoon-like carnivore; in some classifications considered unrelated to the giant pandas",
         "wordnet_pwn30": "n02509815"
     },
-    "paper-merged": {
+    "paper": {
         "coco_pano_id": 195,
-        "coco_pano_name": "paper-merged",
-        "wordnet_gloss": "the physical object that is the product of a newspaper publisher; \"when it began to rain he covered his head with a newspaper\"",
-        "wordnet_pwn30": "n03822171"
+        "coco_pano_name": "paper-merged"
     },
     "paper_cutter": {
         "freebase_mid": "/m/080n7g",
@@ -3559,7 +3540,7 @@
         "wordnet_gloss": "any of various baked foods made of dough or batter",
         "wordnet_pwn30": "n07622708"
     },
-    "pavement-merged": {
+    "sidewalk": {
         "coco_pano_id": 191,
         "coco_pano_name": "pavement-merged",
         "wordnet_gloss": "the paved surface of a thoroughfare",
@@ -4068,11 +4049,9 @@
         "wordnet_gloss": "an open way (generally public) for travel or transportation",
         "wordnet_pwn30": "n04096066"
     },
-    "rock-merged": {
+    "rock": {
         "coco_pano_id": 198,
-        "coco_pano_name": "rock-merged",
-        "wordnet_gloss": "pitching dangerously to one side",
-        "wordnet_pwn30": "n00348008"
+        "coco_pano_name": "rock-merged"
     },
     "rocket": {
         "freebase_mid": "/m/09rvcxw",
@@ -4108,7 +4087,7 @@
         "wordnet_gloss": "a dusty pink color",
         "wordnet_pwn30": "n04971313"
     },
-    "rug-merged": {
+    "rug": {
         "coco_pano_id": 200,
         "coco_pano_name": "rug-merged",
         "wordnet_gloss": "floor covering consisting of a piece of thick heavy fabric (usually with nap or pile)",
@@ -4480,7 +4459,7 @@
         "wordnet_gloss": "street names for marijuana",
         "wordnet_pwn30": "n03990834"
     },
-    "sky-other-merged": {
+    "sky": {
         "coco_pano_id": 187,
         "coco_pano_name": "sky-other-merged",
         "wordnet_gloss": "the atmosphere and outer space as viewed from the earth",
@@ -4934,15 +4913,11 @@
     "table": {
         "freebase_mid": "/m/04bcr3",
         "oid_name": "Table",
+        "coco_pano_id": 189,
+        "coco_pano_name": "table-merged",
         "wikidata_desc": "piece of furniture with a flat top",
         "wikidata_name": "table",
         "wikidata_qid": "Q14748",
-        "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\"",
-        "wordnet_pwn30": "n04379243"
-    },
-    "table-merged": {
-        "coco_pano_id": 189,
-        "coco_pano_name": "table-merged",
         "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\"",
         "wordnet_pwn30": "n04379243"
     },
@@ -5304,16 +5279,12 @@
     },
     "tree": {
         "freebase_mid": "/m/07j7r",
+        "coco_pano_id": 184,
+        "coco_pano_name": "tree-merged",
         "oid_name": "Tree",
         "wikidata_desc": "perennial woody plant",
         "wikidata_name": "tree",
         "wikidata_qid": "Q10884",
-        "wordnet_gloss": "a tall perennial woody plant having a main trunk and branches forming a distinct elevated crown; includes both gymnosperms and angiosperms",
-        "wordnet_pwn30": "n13104059"
-    },
-    "tree-merged": {
-        "coco_pano_id": 184,
-        "coco_pano_name": "tree-merged",
         "wordnet_gloss": "a tall perennial woody plant having a main trunk and branches forming a distinct elevated crown; includes both gymnosperms and angiosperms",
         "wordnet_pwn30": "n13104059"
     },
@@ -5494,27 +5465,28 @@
         "wordnet_gloss": "a kitchen appliance for baking waffles; the appliance usually consists of two indented metal pans hinged together so that they create a pattern on the waffle",
         "wordnet_pwn30": "n04542943"
     },
-    "wall-brick": {
+    "brickwall": {
         "coco_pano_id": 171,
         "coco_pano_name": "wall-brick"
     },
-    "wall-other-merged": {
+    "wall": {
         "coco_pano_id": 199,
         "coco_pano_name": "wall-other-merged",
         "wordnet_gloss": "an embankment built around a space for defensive purposes; \"they stormed the ramparts of the city\"; \"they blew the trumpet and the walls came tumbling down\"",
         "wordnet_pwn30": "n04051825"
     },
-    "wall-stone": {
+    "stonewall": {
         "coco_pano_id": 175,
         "coco_pano_name": "wall-stone"
     },
-    "wall-tile": {
+    "tiles": {
         "coco_pano_id": 176,
         "coco_pano_name": "wall-tile"
     },
-    "wall-wood": {
+    "wooden_wall": {
         "coco_pano_id": 177,
-        "coco_pano_name": "wall-wood"
+        "coco_pano_name": "wall-wood",
+        "wordnet_pwn30": "n04548503"
     },
     "wall_clock": {
         "freebase_mid": "/m/0h8mzrc",
@@ -5559,11 +5531,11 @@
         "wordnet_gloss": "a small portable timepiece",
         "wordnet_pwn30": "n04555897"
     },
-    "water-other": {
+    "water": {
+        "context": "surface",
         "coco_pano_id": 178,
         "coco_pano_name": "water-other",
-        "wordnet_gloss": "a facility that provides a source of water; \"the town debated the purification of the water supply\"; \"first you have to cut off the water\"",
-        "wordnet_pwn30": "n04562658"
+        "wordnet_pwn30": "n09225146"
     },
     "watercraft": {
         "freebase_mid": "/m/01rzcn",

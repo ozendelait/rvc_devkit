@@ -21,10 +21,18 @@ fix_unified_labels = {'flying_disc':'frisbee', 'doughnut':'donut', 'keyboard': '
                  'chopsticks':'chopstick', 'headphones':'headphone', 'vehicle_registration_plate':'license_plate', 'cosmetics':'cosmetic',
                  'crash_helmet' : 'bicycle_helmet', 'shoes':'shoe', 'picture':'picture_frame', 'speaker':'loudspeaker',
                  'monitor' : 'computer_monitor', 'gun' : 'handgun', 'luggage':'luggage_and_bags', 'table_tennis':'table_tennis_racket',
-                 'pepper' : 'chilli', 'barbell':'dumbbell', "noodle":"pasta", 'asparagus' : 'garden_asparagus', 'drill' : 'electric_drill',
-                 'seal': 'harbor_seal', 'sign' : 'billboard', 'shower' : 'showerhead', 'folder': 'binder', 'tape' : 'adhesive_tape',
-                 'tablet' : 'tablet_computer', 'football' : 'american_football', 'baseball': 'baseball_ball', 'formula_1_':'formula_one_car',
-                 'carraige' : 'horse_carraige'
+                 "noodles":"pasta", 'asparagus' : 'garden_asparagus', 'drill' : 'electric_drill',
+                 'shower' : 'showerhead', 'tape' : 'adhesive_tape',
+                 'tablet' : 'tablet_computer', 'football' : 'american_football', 'formula_1_':'race_car',
+                 'carriage' : 'horse_carraige', 'bakset' : 'basket', 'barrel/bucket':'barrel', 'cigar/cigarette_':'roll_of_tobacco',
+                 'billards' : 'billard_ball', 'blackboard/whiteboard':'whiteboard', 'tennis' : 'tennis_ball',
+                 'cosmetics_brush/eyeliner_pencil' : 'eyeliner_pencil', 'wallet/purse':'purse', 'trolley':'handcart',
+                 'soccer' : 'soccer_ball', 'skating_and_skiing_shoes':'ski_boot', 'router/modem' : 'router', 'paint_brush' : 'paintbrush',
+                 'other_shoes' : 'shoes', "other_fish": "fish", 'Other_Balls' : 'ball', 'nuts' : 'nut', 'moniter/tv' : 'monitor_or_tv',
+                 'french' : 'french_horn', 'fan':'electric_fan', 'extractor' : 'exhaust_hood', 'extention_cord':'extension_cord',
+                 'curling' : 'curling_stone', 'converter' : 'power_brick', 'computer_box' : 'computer_housing',
+                 'table_teniis_paddle' : 'table_teniis_racket', 'table_tennis' : 'table_tennis_ball', 'chips' : 'potato_chip',
+                 'earphones':'in-ear-earphones', 'head_phone' : 'headphone'
                 }
 
 #faulty qid (corresp./data must be fixed on wikidata itself): "balance_beam"
@@ -47,7 +55,7 @@ oid_context_fixed = {"gondola": ("boat","n03447447"), "cucumber":("fruit","n0771
                      "bat":("animal", "n02139199"), "bathroom_cabinet":("toiletries","n03742115"), "bear":("mammal","n02131653"),
                      "beard":("human", "n05261566"), "pitcher":("spout", "n03950228"), "belt":("waist","n02827606"),  #"window_blind":("covering","n02851099"),
                      "boot":("footwear","n02872752"), "beetle":("insect","n02164464"), "bird":("animal", "n01503061"),
-                     "bull":("cattle","n02403325")
+                     "bull":("cattle","n02403325"), "roll_of_tobacco":("smoke", "n04103491")
                      }
 
 def unify_namings(name0):
@@ -261,27 +269,38 @@ def main(argv=sys.argv[1:]):
             #obj365 file
             for key, vals in appendj.items():
                 fitting_key = unify_namings(key)
-                if vals["wordnet_pwn30"] in assign_pwns:
+                if "wordnet_pwn30" in vals and vals["wordnet_pwn30"] in assign_pwns:
                     fitting_key = assign_pwns[vals["wordnet_pwn30"]]
-                elif not fitting_key in joined_label_space and unify_namings(vals["wordnet_name"]) in joined_label_space:
+                elif not fitting_key in joined_label_space and "wordnet_name" in vals and unify_namings(vals["wordnet_name"]) in joined_label_space:
                     fitting_key = unify_namings(vals["wordnet_name"])
                 if not fitting_key in joined_label_space:
-                    print("Adding: "+fitting_key+ " for "+ key + "("+vals["wordnet_gloss"]+")")
-                else:
-                    trg_entry = joined_label_space[fitting_key]
-                    if 'obj365_cat' in trg_entry:
-                        print("Dublicate obj365 cat: "+trg_entry['obj365_cat']+ " vs "+ key )
-                    elif "wordnet_pwn30" in trg_entry and trg_entry["wordnet_pwn30"] != vals["wordnet_pwn30"]:
+                    print("Adding: "+fitting_key+ " for "+ key + "("+vals.get("wordnet_gloss",'')+")")
+                    joined_label_space[fitting_key] = {}
+                    if 'wordnet_pwn30' in vals and vals["wordnet_pwn30"] in assign_pwns:
+                        print("Warning! Doublicate pwn30: ",key, assign_pwns[vals["wordnet_pwn30"]])
+
+                trg_entry = joined_label_space[fitting_key]
+                if 'obj365_cat' in trg_entry and trg_entry['obj365_cat'] != key:
+                    print("Dublicate obj365 cat: "+trg_entry['obj365_cat']+ " vs "+ key )
+                elif "wordnet_pwn30" in vals:
+                    if "wordnet_pwn30" in trg_entry and trg_entry["wordnet_pwn30"] != vals["wordnet_pwn30"]:
+                        if not 'wordnet_gloss' in trg_entry:
+                            trg_entry.update(get_wordnet_gloss(trg_entry["wordnet_pwn30"]))
                         print("Conflicting wordnet entries for "+fitting_key+": " + trg_entry['wordnet_pwn30'] + ' ' + trg_entry['wordnet_gloss']+ " vs " + vals["wordnet_pwn30"] + ' ' + vals['wordnet_gloss'])
+                    else:
+                        trg_entry["wordnet_pwn30"] = vals["wordnet_pwn30"]
+                        assign_pwns[vals["wordnet_pwn30"]] = fitting_key
+                        trg_entry['obj365_cat'] = key
         elif isinstance(appendj, list) and isinstance(appendj[0], dict) and "supercategory" in appendj[0]:
+            # coco panoptic file
             with open(args.limit_labels, 'r') as ifile:
                 limit_labels_raw = json.load(ifile)
             coco_pano = {
                 unify_namings(entry['name']): {'coco_pano_id': entry['id'], 'coco_pano_name': entry['name']} for entry
                 in limit_labels_raw}
             joined_label_space.update(coco_pano)
-            #coco panoptic file
-    sys.exit(0)
+
+
     with open(args.freebase_src, newline='') as ifile:
         freebase_labels_raw = list(csv.reader(ifile))
 
