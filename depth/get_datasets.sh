@@ -36,12 +36,12 @@ download_kitti()
 {
     echo "Downloading the Kitti Data"
     # Download the KITTI Dataset
-    wget -P datasets_KITTI https://s3.eu-central-1.amazonaws.com/avg-kitti/data_depth_annotated.zip
+    wget -nc -P datasets_KITTI https://s3.eu-central-1.amazonaws.com/avg-kitti/data_depth_annotated.zip
     unzip -d datasets_KITTI datasets_KITTI/data_depth_annotated.zip
 
     cd raw_data_KITTI && bash raw_data_downloader.sh && cd ..
 
-    wget -P datasets_KITTI https://s3.eu-central-1.amazonaws.com/avg-kitti/data_depth_selection.zip
+    wget -nc -P datasets_KITTI https://s3.eu-central-1.amazonaws.com/avg-kitti/data_depth_selection.zip
     unzip datasets_KITTI/data_depth_selection.zip -d datasets_KITTI/
 }
 
@@ -51,8 +51,8 @@ arange_kitti()
     # Get the relevant data from the raw dataset to the datasets_KITTI directory
     mv datasets_KITTI/depth_selection/val_selection_cropped datasets_KITTI/val_selection
     mv datasets_KITTI/depth_selection/test_depth_prediction_anonymous datasets_KITTI/test
-    python3 KITTI/gather_raw_images.py -d datasets_KITTI/train -r raw_data_KITTI/ -t copy -o kitti_train
-    python3 KITTI/gather_raw_images.py -d datasets_KITTI/val -r raw_data_KITTI/ -t copy -o kitti_val
+    python2 KITTI/gather_raw_images.py -d datasets_KITTI/train -r raw_data_KITTI/ -t copy -o kitti_train
+    python2 KITTI/gather_raw_images.py -d datasets_KITTI/val -r raw_data_KITTI/ -t copy -o kitti_val
     rmdir datasets_KITTI/depth_selection
 }
 
@@ -62,12 +62,11 @@ download_mpi_sintel()
     # Create a directory containing the raw dataset
     mkdir $(pwd)/raw_data_mpi_sintel
 
-
-    wget -P $(pwd)/raw_data_mpi_sintel http://files.is.tue.mpg.de/jwulff/sintel/MPI-Sintel-depth-training-20150305.zip
+    wget -nc -P $(pwd)/raw_data_mpi_sintel http://files.is.tue.mpg.de/jwulff/sintel/MPI-Sintel-depth-training-20150305.zip
     unzip -d $(pwd)/raw_data_mpi_sintel/depth $(pwd)/raw_data_mpi_sintel/MPI-Sintel-depth-training-20150305.zip
 
     # Get the images of the training set
-    wget -P $(pwd)/raw_data_mpi_sintel http://files.is.tue.mpg.de/sintel/MPI-Sintel-training_images.zip
+    wget -nc -P $(pwd)/raw_data_mpi_sintel http://files.is.tue.mpg.de/sintel/MPI-Sintel-training_images.zip
     unzip -d $(pwd)/raw_data_mpi_sintel/images $(pwd)/raw_data_mpi_sintel/MPI-Sintel-training_images.zip
 
 }
