@@ -29,6 +29,9 @@
     },
     "air_conditioner": {
         "obj365_cat": "Air Conditioner",
+        "wikidata_desc": "a device used to cool air",
+        "wikidata_name": "air conditioner",
+        "wikidata_qid": "Q1265533",
         "wordnet_gloss": "a system that keeps air cool and dry",
         "wordnet_pwn30": "n02686379"
     },
@@ -161,7 +164,7 @@
         "wordnet_gloss": "a thistlelike flower head with edible fleshy leaves and heart",
         "wordnet_pwn30": "n07718747"
     },
-    "auto_part": {
+    "automotive_part": {
         "freebase_mid": "/m/08dz3q",
         "oid_name": "Auto part",
         "wordnet_gloss": "a component of an automobile; \"his business is auto parts\"",
@@ -216,6 +219,9 @@
     "baked_goods": {
         "freebase_mid": "/m/052lwg6",
         "oid_name": "Baked goods",
+        "wikidata_desc": "generic term for foods made from cereals or cereal products that are baked",
+        "wikidata_name": "bakery product",
+        "wikidata_qid": "Q4498085",
         "wordnet_gloss": "foods (like breads and cakes and pastries) that are cooked in an oven",
         "wordnet_pwn30": "n07622061"
     },
@@ -511,8 +517,8 @@
     "bicycle": {
         "coco_pano_id": 2,
         "coco_pano_name": "bicycle",
-        "obj365_cat": "Bicycle",
         "freebase_mid": "/m/0199g",
+        "obj365_cat": "Bicycle",
         "oid_name": "Bicycle",
         "wikidata_desc": "pedal-driven two-wheel vehicle",
         "wikidata_name": "bicycle",
@@ -1993,6 +1999,7 @@
         "wordnet_pwn30": "n03255030"
     },
     "dumpling": {
+        "obj365_cat": "Dumpling",
         "wikidata_desc": "Korean dumplings",
         "wikidata_name": "mandu",
         "wikidata_qid": "Q284983",
@@ -2027,9 +2034,11 @@
         "wordnet_pwn30": "n05320899"
     },
     "earphone": {
+        "obj365_cat": "earphone",
         "wikidata_desc": "small electric device converting electric signal to sound with low volume intended to be held close to a user's ear, usually used in pair placed near to the ears",
         "wikidata_name": "earphone",
         "wikidata_qid": "Q186819",
+        "wordnet_gloss": "an earphone that is inserted into the ear canal",
         "wordnet_pwn30": "n03262248"
     },
     "earring": {
@@ -2270,6 +2279,7 @@
     },
     "fish": {
         "freebase_mid": "/m/0ch_cf",
+        "obj365_cat": "Other Fish",
         "oid_name": "Fish",
         "wikidata_desc": "vertebrate animal that lives in water and (typically) has gills",
         "wikidata_name": "fish",
@@ -2512,6 +2522,9 @@
     },
     "game_board": {
         "obj365_cat": "Game board",
+        "wikidata_desc": "in board games, the central place where the game takes place",
+        "wikidata_name": "game board",
+        "wikidata_qid": "Q1258741",
         "wordnet_gloss": "a flat portable surface (usually rectangular) designed for board games; \"he got out the board and set up the pieces\"",
         "wordnet_pwn30": "n02857023"
     },
@@ -2672,9 +2685,9 @@
         "wordnet_pwn30": "n07749969"
     },
     "grass": {
-        "context": "lawn",
         "coco_pano_id": 193,
         "coco_pano_name": "grass-merged",
+        "context": "lawn",
         "wordnet_gloss": "narrow-leaved green herbage: grown as lawns; used as pasture for grazing animals; cut and dried as hay",
         "wordnet_pwn30": "n12102133"
     },
@@ -3050,6 +3063,7 @@
         "wordnet_pwn30": "n03544360"
     },
     "hoverboard": {
+        "obj365_cat": "Hoverboard",
         "wikidata_desc": "battery-powered electric vehicle",
         "wikidata_name": "self-balancing scooter",
         "wikidata_qid": "Q21161871"
@@ -3823,16 +3837,19 @@
         "wordnet_pwn30": "n03790512"
     },
     "mountain": {
-        "context": "land",
         "coco_pano_id": 192,
         "coco_pano_name": "mountain-merged",
+        "context": "land",
+        "wikidata_desc": "large landform that stretches above the surrounding land",
+        "wikidata_name": "mountain",
+        "wikidata_qid": "Q8502",
         "wordnet_gloss": "a land mass that projects well above its surroundings; higher than a hill",
         "wordnet_pwn30": "n09359803"
     },
     "mouse": {
-        "context": "animal",
         "coco_pano_id": 74,
         "coco_pano_name": "mouse",
+        "context": "animal",
         "freebase_mid": "/m/04rmv",
         "obj365_cat": "Mouse",
         "oid_name": "Mouse",
@@ -3965,6 +3982,7 @@
         "wordnet_pwn30": "n03830835"
     },
     "nut": {
+        "obj365_cat": "Nuts",
         "wikidata_desc": "in botany, type of dry indehiscent fruit",
         "wikidata_name": "nut",
         "wikidata_qid": "Q11009",
@@ -4461,7 +4479,8 @@
     "platform": {
         "coco_pano_id": 144,
         "coco_pano_name": "platform",
-		"wordnet_pwn30": "n03961939"
+        "wordnet_gloss": "a raised horizontal surface; \"the speaker mounted the platform\"",
+        "wordnet_pwn30": "n03961939"
     },
     "platter": {
         "freebase_mid": "/m/099ssp",
@@ -4580,6 +4599,7 @@
         "wordnet_pwn30": "n07710616"
     },
     "potato_chip": {
+        "obj365_cat": "Chips",
         "wikidata_desc": "deep fried thin slice of potato",
         "wikidata_name": "potato chip",
         "wikidata_qid": "Q173265",
@@ -4599,6 +4619,7 @@
         "wordnet_pwn30": "n00017222"
     },
     "power_brick": {
+        "obj365_cat": "Converter",
         "wikidata_desc": "external, enclosed power supply that converts mains electricity for an appliance",
         "wikidata_name": "AC adapter",
         "wikidata_qid": "Q887369"
@@ -4699,6 +4720,7 @@
         "wordnet_pwn30": "n02508021"
     },
     "race_car": {
+        "obj365_cat": "Formula 1 ",
         "wikidata_desc": "type of car used for automobile racing",
         "wikidata_name": "racing automobile",
         "wikidata_qid": "Q673687",
@@ -4845,6 +4867,7 @@
         "wordnet_pwn30": "n07804323"
     },
     "rice_cooker": {
+        "obj365_cat": "Rice Cooker",
         "wikidata_desc": "container or kitchen appliance dedicated to cooking rice",
         "wikidata_name": "rice cooker",
         "wikidata_qid": "Q1137500"
@@ -5291,6 +5314,7 @@
         "wordnet_pwn30": "n04197391"
     },
     "shoes": {
+        "obj365_cat": "Other Shoes",
         "wikidata_desc": "footwear",
         "wikidata_name": "shoe",
         "wikidata_qid": "Q22676",
@@ -5343,7 +5367,9 @@
         "wordnet_gloss": "small slender-bodied chiefly marine decapod crustaceans with a long tail and single pair of pincers; many species are edible",
         "wordnet_pwn30": "n01986806"
     },
-    "side_table": {},
+    "side_table": {
+        "obj365_cat": "Side Table"
+    },
     "sidewalk": {
         "coco_pano_id": 191,
         "coco_pano_name": "pavement-merged",
@@ -5621,7 +5647,9 @@
         "wordnet_gloss": "a hand tool with a thin flexible blade used to mix or spread soft substances",
         "wordnet_pwn30": "n04269944"
     },
-    "speed_limit_sign": {},
+    "speed_limit_sign": {
+        "obj365_cat": "Speed Limit Sign"
+    },
     "spice_rack": {
         "freebase_mid": "/m/0h8kx63",
         "oid_name": "Spice rack",
@@ -5673,7 +5701,10 @@
     },
     "sports_uniform": {
         "freebase_mid": "/m/0h8mhzd",
-        "oid_name": "Sports uniform"
+        "oid_name": "Sports uniform",
+        "wikidata_desc": "regulation clothing worn by sports teams and athletes",
+        "wikidata_name": "sports uniform",
+        "wikidata_qid": "Q11345724"
     },
     "spring_rolls": {
         "obj365_cat": "Spring Rolls",
@@ -5903,7 +5934,12 @@
         "wordnet_gloss": "a narrow buoyant board for riding surf",
         "wordnet_pwn30": "n04363559"
     },
-    "surveillance_camera": {},
+    "surveillance_camera": {
+        "obj365_cat": "Surveillance Camera",
+        "wikidata_desc": "video or still camera used to secure an area",
+        "wikidata_name": "security camera",
+        "wikidata_qid": "Q334415"
+    },
     "sushi": {
         "freebase_mid": "/m/07030",
         "obj365_cat": "Sushi",
@@ -5915,9 +5951,7 @@
         "wordnet_pwn30": "n07879450"
     },
     "suv": {
-        "wikidata_desc": "language",
-        "wikidata_name": "Puroik",
-        "wikidata_qid": "Q56408"
+        "obj365_cat": "SUV"
     },
     "swan": {
         "freebase_mid": "/m/0dftk",
@@ -5993,7 +6027,6 @@
         "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\"",
         "wordnet_pwn30": "n04379243"
     },
-    "table_teniis_racket": {},
     "table_tennis_": {
         "obj365_cat": "Table Tennis ",
         "wordnet_gloss": "a game (trademark Ping-Pong) resembling tennis but played on a table with paddles and a light hollow ball",
@@ -6001,6 +6034,7 @@
     },
     "table_tennis_racket": {
         "freebase_mid": "/m/05_5p_0",
+        "obj365_cat": "Table Teniis paddle",
         "oid_name": "Table tennis racket",
         "wikidata_desc": "sports equipment",
         "wikidata_name": "table tennis racket",
@@ -6045,12 +6079,12 @@
     },
     "tap": {
         "freebase_mid": "/m/02jz0l",
+        "obj365_cat": "Faucet",
         "oid_name": "Tap",
         "wikidata_desc": "regulated inflow of water, for example for drinking water",
         "wikidata_name": "tap",
-        "wikidata_qid": "Q656656",
-		"obj365_cat": "Faucet"
-		},
+        "wikidata_qid": "Q656656"
+    },
     "target": {
         "obj365_cat": "Target",
         "wikidata_desc": "grammar: participant of a situation upon whom an action is carried out or the thematic relation such a participant has with an action. Sometimes, \"theme\" and \"patient\" are used to mean the same thing",
@@ -6229,6 +6263,9 @@
     "tissue": {
         "context": "paper",
         "obj365_cat": "Tissue",
+        "wikidata_desc": "lightweight paper or, light cr\u00eape paper",
+        "wikidata_name": "tissue paper",
+        "wikidata_qid": "Q1471060",
         "wordnet_gloss": "a soft thin (usually translucent) paper",
         "wordnet_pwn30": "n15074962"
     },
@@ -6361,6 +6398,7 @@
         "wordnet_pwn30": "n03769235"
     },
     "traffic_cone": {
+        "obj365_cat": "Traffic cone",
         "wikidata_desc": "Traffick Cone",
         "wikidata_name": "traffic cone",
         "wikidata_qid": "Q694547"
@@ -6379,6 +6417,7 @@
     },
     "traffic_sign": {
         "freebase_mid": "/m/01mqdt",
+        "obj365_cat": "Traffic Sign",
         "oid_name": "Traffic sign",
         "wikidata_desc": "plate with instructions (warning, prohibitory, mandatory, ...) used to control traffic on the road",
         "wikidata_name": "traffic sign",
