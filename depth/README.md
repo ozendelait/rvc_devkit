@@ -26,7 +26,8 @@ To download KITTI and MPI Sintel datasets you may execute:
   bash get_datasets.sh
 
 This will download all the required data and reorder the data into
-the a common format (see below).
+the a common format (see below), in the directories datasets_mpi_sintel
+ and raw_data_mpi_sintel.
 The process requires roughly 300GB of space!
 The download script will not delete any data, to free space again,
 remove all files you don't need.
