@@ -30,10 +30,26 @@ def main(argv=sys.argv[1:]):
     #    super_cat_info = json.load(ifile)
     #solve_leaf_boxable(joined_label_space, super_cat_info, mid_to_key)
 
+    all_lines = [['key']+join_obj_det]
+    for key, vals in joined_label_space.items():
+        add_line = []
+        is_valid_line = False
+        for j in join_obj_det:
+            add_val = ""
+            if j in vals:
+                add_val = vals[j]
+                is_valid_line = True
+            add_line.append(add_val)
+        if is_valid_line:
+            all_lines.append([key]+add_line)
 
+    with open(args.output, mode='w', newline='\n', encoding='utf-8') as ofile:
+        cvswr = csv.writer(ofile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        for l in all_lines:
+            cvswr.writerow(l)
 
-    with open(args.output, 'w') as ofile:
-        json.dump(joined_label_space, ofile, sort_keys=True, indent=4)
+    #with open(args.output, 'w') as ofile:
+    #    json.dump(joined_label_space, ofile, sort_keys=True, indent=4)
     return 0
     
 if __name__ == "__main__":
