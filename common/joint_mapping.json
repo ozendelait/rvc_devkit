@@ -318,6 +318,7 @@
         "wikidata_desc": "ball used in the sport of baseball",
         "wikidata_name": "baseball",
         "wikidata_qid": "Q791187",
+        "wordnet_gloss": "a ball used in playing baseball",
         "wordnet_pwn30": "n02799071"
     },
     "baseball_bat": {
@@ -617,6 +618,9 @@
         "wordnet_gloss": "common jay of eastern North America; bright blue with grey breast",
         "wordnet_pwn30": "n01580870"
     },
+    "board_eraser": {
+        "obj365_cat": "Board Eraser"
+    },
     "boat": {
         "coco_pano_id": 9,
         "coco_pano_name": "boat",
@@ -849,6 +853,7 @@
         "wikidata_desc": "tool with bristles, wire or other filaments, used for cleaning, grooming hair, make up, painting, surface finishing and for many other purposes",
         "wikidata_name": "brush",
         "wikidata_qid": "Q614467",
+        "wordnet_gloss": "an implement that has hairs or bristles firmly set into a handle",
         "wordnet_pwn30": "n02908217"
     },
     "building": {
@@ -1150,6 +1155,9 @@
         "wordnet_gloss": "domesticated bovine animals as a group regardless of sex or age; \"so many head of cattle\"; \"wait till the cows come home\"; \"seven thin and ill-favored kine\"- Bible; \"a team of oxen\"",
         "wordnet_pwn30": "n02402425"
     },
+    "compact_disc": {
+        "obj365_cat": "CD"
+    },
     "ceiling": {
         "coco_pano_id": 186,
         "coco_pano_name": "ceiling-merged",
@@ -1227,6 +1235,7 @@
         "wordnet_pwn30": "n02130308"
     },
     "cherry": {
+        "context": "fruit",
         "obj365_cat": "Cherry",
         "wikidata_desc": "the fruit (for the best-known species see Q165137; or Q131517)",
         "wikidata_name": "cherry",
@@ -1287,6 +1296,9 @@
         "wikidata_qid": "Q47128",
         "wordnet_gloss": "an ornamented evergreen used as a Christmas decoration",
         "wordnet_pwn30": "n03026626"
+    },
+    "cleaning_products": {
+        "obj365_cat": "Cleaning Products"
     },
     "clock": {
         "coco_pano_id": 85,
@@ -1430,6 +1442,9 @@
         "wordnet_gloss": "annual sunflower grown for silage and for its seeds which are a source of oil; common throughout United States and much of North America",
         "wordnet_pwn30": "n11978713"
     },
+    "computer_housing": {
+        "obj365_cat": "Computer Box"
+    },
     "computer_keyboard": {
         "coco_pano_id": 76,
         "coco_pano_name": "keyboard",
@@ -1501,6 +1516,7 @@
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Zea",
         "wikidata_qid": "Q542456",
+        "wordnet_gloss": "ears of corn that can be prepared and served for human food",
         "wordnet_pwn30": "n07731952"
     },
     "cosmetic": {
@@ -1512,6 +1528,9 @@
         "wikidata_qid": "Q131207",
         "wordnet_gloss": "a toiletry designed to beautify the body",
         "wordnet_pwn30": "n03113152"
+    },
+    "cosmetics_mirror": {
+        "obj365_cat": "Cosmetics Mirror"
     },
     "couch": {
         "coco_pano_id": 63,
@@ -1526,9 +1545,12 @@
         "wordnet_pwn30": "n03115762"
     },
     "counter": {
-        "context": "furniture",
         "coco_pano_id": 107,
         "coco_pano_name": "counter",
+        "context": "furniture",
+        "wikidata_desc": "furniture item",
+        "wikidata_name": "counter",
+        "wikidata_qid": "Q1420266",
         "wordnet_gloss": "a piece of furniture that stands at the side of a dining room; has shelves and drawers",
         "wordnet_pwn30": "n02912065"
     },
@@ -1613,6 +1635,9 @@
         "wikidata_qid": "Q207832",
         "wordnet_gloss": "very rich flaky crescent-shaped roll",
         "wordnet_pwn30": "n07691650"
+    },
+    "crosswalk_sign": {
+        "obj365_cat": "Crosswalk Sign"
     },
     "crown": {
         "freebase_mid": "/m/0nl46",
@@ -1780,6 +1805,7 @@
     "dining_table": {
         "coco_pano_id": 67,
         "coco_pano_name": "dining table",
+        "obj365_cat": "Dinning Table",
         "wikidata_desc": "table used when eating",
         "wikidata_name": "dining table",
         "wikidata_qid": "Q10578291",
@@ -2111,6 +2137,19 @@
         "wordnet_gloss": "the organ of sight",
         "wordnet_pwn30": "n05311054"
     },
+    "eyeglasses": {
+        "freebase_mid": "/m/0jyfg",
+        "obj365_cat": "Glasses",
+        "oid_name": "Glasses",
+        "wikidata_desc": "accessories that improve human vision",
+        "wikidata_name": "eyeglasses",
+        "wikidata_qid": "Q37501",
+        "wordnet_gloss": "(plural) optical instrument consisting of a frame that holds a pair of lenses for correcting defective vision",
+        "wordnet_pwn30": "n04272054"
+    },
+    "eyeliner_pencil": {
+        "obj365_cat": "Cosmetics Brush/Eyeliner Pencil"
+    },
     "face": {
         "context": "human",
         "freebase_mid": "/m/0dzct",
@@ -2135,6 +2174,9 @@
         "context": "bird",
         "freebase_mid": "/m/0f6wt",
         "oid_name": "Falcon",
+        "wikidata_desc": "genus of birds",
+        "wikidata_name": "falcon",
+        "wikidata_qid": "Q43489",
         "wordnet_gloss": "diurnal birds of prey having long pointed powerful wings adapted for swift flight",
         "wordnet_pwn30": "n01610955"
     },
@@ -2179,9 +2221,12 @@
         "wordnet_pwn30": "n03325941"
     },
     "fence": {
-        "context":"barrier",
         "coco_pano_id": 185,
         "coco_pano_name": "fence-merged",
+        "context": "barrier",
+        "wikidata_desc": "fence or barrier consisting of one or more horizontal rails and vertical supports",
+        "wikidata_name": "railing",
+        "wikidata_qid": "Q3095365",
         "wordnet_gloss": "a barrier that serves to enclose an area",
         "wordnet_pwn30": "n03327234"
     },
@@ -2318,6 +2363,9 @@
     "folder": {
         "context": "paper",
         "obj365_cat": "Folder",
+        "wikidata_desc": "folder that holds loose papers together for organization and protection",
+        "wikidata_name": "file folder",
+        "wikidata_qid": "Q2429918",
         "wordnet_gloss": "covering that is folded over to protect the contents",
         "wordnet_pwn30": "n03376279"
     },
@@ -2437,7 +2485,9 @@
         "oid_name": "Frog",
         "wikidata_desc": "order of amphibians",
         "wikidata_name": "anura",
-        "wikidata_qid": "Q53636"
+        "wikidata_qid": "Q53636",
+        "wordnet_gloss": "any of various tailless stout-bodied amphibians with long hind limbs for leaping; semiaquatic and terrestrial species",
+        "wordnet_pwn30": "n01639765"
     },
     "fruit": {
         "coco_pano_id": 122,
@@ -2519,18 +2569,8 @@
         "wordnet_gloss": "a female human offspring; \"her daughter cared for her in her old age\"",
         "wordnet_pwn30": "n09992837"
     },
-    "eyeglasses": {
-        "freebase_mid": "/m/0jyfg",
-        "obj365_cat": "Glasses",
-        "oid_name": "Glasses",
-        "wikidata_desc": "accessories that improve human vision",
-        "wikidata_name": "eyeglasses",
-        "wikidata_qid": "Q37501",
-        "wordnet_gloss": "(plural) optical instrument consisting of a frame that holds a pair of lenses for correcting defective vision",
-        "wordnet_pwn30": "n04272054"
-    },
     "globe": {
-        "context":"sphere",
+        "context": "sphere",
         "obj365_cat": "Globe",
         "wordnet_gloss": "a sphere on which a map (especially of the earth) is represented",
         "wordnet_pwn30": "n03440512"
@@ -2642,6 +2682,7 @@
     "grass": {
         "coco_pano_id": 193,
         "coco_pano_name": "grass-merged",
+        "wordnet_gloss": "narrow-leaved green herbage: grown as lawns; used as pasture for grazing animals; cut and dried as hay",
         "wordnet_pwn30": "n12102133"
     },
     "gravel": {
@@ -2883,6 +2924,9 @@
         "wordnet_gloss": "device that heats water or supplies warmth to a room",
         "wordnet_pwn30": "n03508101"
     },
+    "heavy_truck": {
+        "obj365_cat": "Heavy Truck"
+    },
     "hedgehog": {
         "freebase_mid": "/m/0cl4p",
         "oid_name": "Hedgehog",
@@ -2978,6 +3022,9 @@
         "wordnet_gloss": "a padded gymnastic apparatus on legs",
         "wordnet_pwn30": "n03538037"
     },
+    "horse_carraige": {
+        "obj365_cat": "Carriage"
+    },
     "hot_air_balloon": {
         "context": "aerostat",
         "obj365_cat": "Hotair ballon",
@@ -3047,6 +3094,9 @@
         "wikidata_desc": "sports equipment",
         "wikidata_name": "indoor rower",
         "wikidata_qid": "Q1542861"
+    },
+    "induction_cooker": {
+        "obj365_cat": "Induction Cooker"
     },
     "infant_bed": {
         "freebase_mid": "/m/061hd_",
@@ -3344,6 +3394,9 @@
         "wordnet_gloss": "any of various Old World aromatic shrubs or subshrubs with usually mauve or blue flowers; widely cultivated",
         "wordnet_pwn30": "n12849717"
     },
+    "leather_shoes": {
+        "obj365_cat": "Leather Shoes"
+    },
     "leg": {
         "context": "human",
         "freebase_mid": "/m/035r7c",
@@ -3415,6 +3468,14 @@
         "wikidata_desc": "device used to operate electric lights, permanently connected equipment, or electrical outlets",
         "wikidata_name": "light switch",
         "wikidata_qid": "Q962420"
+    },
+    "lighter": {
+        "obj365_cat": "Lighter",
+        "wikidata_desc": "portable device used to generate a flame",
+        "wikidata_name": "lighter",
+        "wikidata_qid": "Q20459",
+        "wordnet_gloss": "a device for lighting or igniting fuel or charges or fires; \"do you have a light?\"",
+        "wordnet_pwn30": "n03666591"
     },
     "lighthouse": {
         "freebase_mid": "/m/04h7h",
@@ -3509,6 +3570,9 @@
         "wordnet_gloss": "short-tailed wildcats with usually tufted ears; valued for their fur",
         "wordnet_pwn30": "n02127052"
     },
+    "machinery_vehicle": {
+        "obj365_cat": "Machinery Vehicle"
+    },
     "magpie": {
         "freebase_mid": "/m/012074",
         "oid_name": "Magpie",
@@ -3586,6 +3650,9 @@
     "mask": {
         "context": "disguise",
         "obj365_cat": "Mask",
+        "wikidata_desc": "any full or partial face covering, whether ceremonial, protective, decorative, or used as disguise",
+        "wikidata_name": "mask",
+        "wikidata_qid": "Q161524",
         "wordnet_gloss": "a covering to disguise or conceal the face",
         "wordnet_pwn30": "n03724870"
     },
@@ -3727,6 +3794,9 @@
         "wordnet_gloss": "a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver",
         "wordnet_pwn30": "n02992529"
     },
+    "monitor_or_tv": {
+        "obj365_cat": "Moniter/TV"
+    },
     "monkey": {
         "freebase_mid": "/m/08pbxl",
         "obj365_cat": "Monkey",
@@ -3762,7 +3832,6 @@
         "wordnet_pwn30": "n03790512"
     },
     "mountain": {
-        "context": "rock",
         "coco_pano_id": 192,
         "coco_pano_name": "mountain-merged",
         "wordnet_gloss": "a land mass that projects well above its surroundings; higher than a hill",
@@ -3851,6 +3920,14 @@
         "wikidata_name": "nail",
         "wikidata_qid": "Q37077"
     },
+    "napkin": {
+        "obj365_cat": "Napkin",
+        "wikidata_desc": "piece of cloth or paper used to wipe one's face or skin while eating",
+        "wikidata_name": "napkin",
+        "wikidata_qid": "Q848532",
+        "wordnet_gloss": "a small piece of table linen that is used to wipe the mouth and to cover the lap in order to protect clothing",
+        "wordnet_pwn30": "n03807537"
+    },
     "necklace": {
         "freebase_mid": "/m/01llwg",
         "obj365_cat": "Necklace",
@@ -3862,8 +3939,10 @@
         "wordnet_pwn30": "n03814906"
     },
     "net": {
+        "context": "trap",
         "coco_pano_id": 138,
         "coco_pano_name": "net",
+        "wordnet_gloss": "a trap made of netting to catch fish or birds or insects",
         "wordnet_pwn30": "n03819994"
     },
     "nightstand": {
@@ -3875,6 +3954,14 @@
         "wikidata_qid": "Q667999",
         "wordnet_gloss": "space by the side of a bed (especially the bed of a sick or dying person); \"the doctor stood at her bedside\"",
         "wordnet_pwn30": "n08649711"
+    },
+    "noodle": {
+        "obj365_cat": "Noddles",
+        "wikidata_desc": "type of staple food made from some type of unleavened dough",
+        "wikidata_name": "noodle",
+        "wikidata_qid": "Q192874",
+        "wordnet_gloss": "informal terms for a human head",
+        "wordnet_pwn30": "n05539454"
     },
     "nose": {
         "context": "human",
@@ -4066,6 +4153,7 @@
         "wikidata_desc": "thin, flexible material mainly used for writing upon, printing upon, drawing or for packaging",
         "wikidata_name": "paper",
         "wikidata_qid": "Q11472",
+        "wordnet_gloss": "a material made of cellulose pulp derived mainly from wood or rags or certain grasses",
         "wordnet_pwn30": "n14974264"
     },
     "paper_cutter": {

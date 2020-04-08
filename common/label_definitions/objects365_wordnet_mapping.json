@@ -97,9 +97,7 @@
     },
     "Baseball": {
         "idx_orig": 158,
-        "wordnet_gloss": "a ball game played with a bat and ball between two teams of nine players; teams take turns at bat trying to score runs; \"he played baseball in high school\"; \"there was a baseball game on every empty lot\"; \"there was a desire for National League ball in the area\"; \"play ball!\"",
-        "wordnet_name": "baseball",
-        "wordnet_pwn30": "n00474568"
+        "wordnet_pwn30": "n02799071"
     },
     "Baseball Bat": {
         "idx_orig": 140,
@@ -250,9 +248,7 @@
     },
     "Brush": {
         "idx_orig": 260,
-        "wordnet_gloss": "contact with something dangerous or undesirable; \"I had a brush with danger on my way to work\"; \"he tried to avoid any brushes with the police\"",
-        "wordnet_name": "brush",
-        "wordnet_pwn30": "n00039545"
+        "wordnet_pwn30": "n02908217"
     },
     "Bus": {
         "idx_orig": 53,
@@ -1621,9 +1617,8 @@
     },
     "Shovel": {
         "idx_orig": 167,
-        "wordnet_gloss": "a machine for excavating",
         "wordnet_name": "shovel",
-        "wordnet_pwn30": "n03996416"
+        "wordnet_pwn30": "n04208210"
     },
     "Showerhead": {
         "idx_orig": 252,
@@ -1698,7 +1693,7 @@
         "idx_orig": 127,
         "wordnet_gloss": "a football game in which two teams of 11 players try to kick or head a ball into the opponents' goal",
         "wordnet_name": "soccer ball",
-        "wordnet_pwn30": "04254680"
+        "wordnet_pwn30": "n04254680"
     },
     "Speaker": {
         "idx_orig": 32,
