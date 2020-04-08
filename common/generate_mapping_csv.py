@@ -13,7 +13,7 @@ def solve_leaf_boxable(joined_label_space, oid_n, mid_to_key):
             solve_leaf_boxable(joined_label_space, n, mid_to_key)
     else:
         key0 = mid_to_key[oid_n["LabelName"]]
-        joined_label_space[key0]["oid_boxabel_leaf"] = oid_n["LabelName"]
+        joined_label_space[key0]["oid_inst_leaf"] = oid_n["LabelName"]
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
@@ -26,7 +26,7 @@ def main(argv=sys.argv[1:]):
         joined_label_space = json.load(ifile)
 
     mid_to_key = {vals['freebase_mid']: key for key, vals in joined_label_space.items() if 'freebase_mid' in vals}
-    with open('label_definitions/challenge-2019-label500-hierarchy.json', 'r') as ifile:
+    with open('label_definitions/challenge-2019-label300-segmentable-hierarchy.json', 'r') as ifile:
         super_cat_info = json.load(ifile)
 
     solve_leaf_boxable(joined_label_space, super_cat_info, mid_to_key)
