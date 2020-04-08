@@ -1,6 +1,7 @@
 {
     "accordion": {
         "freebase_mid": "/m/0mkg",
+        "oid_boxabel_leaf": "/m/0mkg",
         "oid_name": "Accordion",
         "wikidata_desc": "musical instrument",
         "wikidata_name": "accordion",
@@ -20,6 +21,7 @@
     "adhesive_tape": {
         "freebase_mid": "/m/03m3vtv",
         "obj365_cat": "Tape",
+        "oid_boxabel_leaf": "/m/03m3vtv",
         "oid_name": "Adhesive tape",
         "wikidata_desc": "strip of material backed with adhesive",
         "wikidata_name": "adhesive tape",
@@ -51,6 +53,7 @@
         "coco_pano_name": "airplane",
         "freebase_mid": "/m/0cmf2",
         "obj365_cat": "Airplane",
+        "oid_boxabel_leaf": "/m/0cmf2",
         "oid_name": "Airplane",
         "wikidata_desc": "heavier-than-air aircraft with fixed wings generating aerodynamic lift in the airflow caused by forward airspeed",
         "wikidata_name": "fixed-wing aircraft",
@@ -60,6 +63,7 @@
     },
     "alarm_clock": {
         "freebase_mid": "/m/046dlr",
+        "oid_boxabel_leaf": "/m/046dlr",
         "oid_name": "Alarm clock",
         "wikidata_desc": "type of clock",
         "wikidata_name": "alarm clock",
@@ -70,6 +74,7 @@
     "alpaca": {
         "context": "camelid",
         "freebase_mid": "/m/0pcr",
+        "oid_boxabel_leaf": "/m/0pcr",
         "oid_name": "Alpaca",
         "wikidata_desc": "domesticated species of South American camelid",
         "wikidata_name": "alpaca",
@@ -80,6 +85,7 @@
     "ambulance": {
         "freebase_mid": "/m/012n7d",
         "obj365_cat": "Ambulance",
+        "oid_boxabel_leaf": "/m/012n7d",
         "oid_name": "Ambulance",
         "wikidata_desc": "vehicle equipped for transporting and care for ill and wounded people",
         "wikidata_name": "ambulance",
@@ -90,6 +96,7 @@
     "american_football": {
         "freebase_mid": "/m/01226z",
         "obj365_cat": "American Football",
+        "oid_boxabel_leaf": "/m/01226z",
         "oid_name": "Football",
         "wikidata_desc": "ball inflated with air that is used to play one of the various sports known as football",
         "wikidata_name": "football",
@@ -108,6 +115,7 @@
     },
     "ant": {
         "freebase_mid": "/m/0_k2",
+        "oid_boxabel_leaf": "/m/0_k2",
         "oid_name": "Ant",
         "wikidata_desc": "family of insects",
         "wikidata_name": "Formicidae",
@@ -118,6 +126,7 @@
     "antelope": {
         "freebase_mid": "/m/0czz2",
         "obj365_cat": "Antelope",
+        "oid_boxabel_leaf": "/m/0czz2",
         "oid_name": "Antelope",
         "wikidata_desc": "term referring to many even-toed ungulate species",
         "wikidata_name": "antelope",
@@ -132,6 +141,7 @@
         "context": "fruit",
         "freebase_mid": "/m/014j1m",
         "obj365_cat": "Apple",
+        "oid_boxabel_leaf": "/m/014j1m",
         "oid_name": "Apple",
         "wikidata_desc": "fruit of the apple tree",
         "wikidata_name": "apple",
@@ -142,6 +152,7 @@
     "arm": {
         "context": "human",
         "freebase_mid": "/m/0dzf4",
+        "oid_boxabel_leaf": "/m/0dzf4",
         "oid_name": "Human arm",
         "wikidata_desc": "forearm and upper arm together",
         "wikidata_name": "arm",
@@ -160,6 +171,7 @@
     },
     "artichoke": {
         "freebase_mid": "/m/047v4b",
+        "oid_boxabel_leaf": "/m/047v4b",
         "oid_name": "Artichoke",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Cynara scolymus",
@@ -208,6 +220,7 @@
         "coco_pano_name": "backpack",
         "freebase_mid": "/m/01940j",
         "obj365_cat": "Backpack",
+        "oid_boxabel_leaf": "/m/01940j",
         "oid_name": "Backpack",
         "wikidata_desc": "bag carried on one's back",
         "wikidata_name": "backpack",
@@ -217,6 +230,7 @@
     },
     "bagel": {
         "freebase_mid": "/m/01fb_0",
+        "oid_boxabel_leaf": "/m/01fb_0",
         "oid_name": "Bagel",
         "wikidata_desc": "torus-shaped bread product",
         "wikidata_name": "bagel",
@@ -259,6 +273,7 @@
     "balloon": {
         "context": "both_party_or_hot_air_balloon",
         "freebase_mid": "/m/01j51",
+        "oid_boxabel_leaf": "/m/01j51",
         "oid_name": "Balloon",
         "wikidata_desc": "inflatable flexible bag filled with gas",
         "wikidata_name": "balloon",
@@ -271,6 +286,7 @@
         "context": "fruit",
         "freebase_mid": "/m/09qck",
         "obj365_cat": "Banana",
+        "oid_boxabel_leaf": "/m/09qck",
         "oid_name": "Banana",
         "wikidata_desc": "fruit",
         "wikidata_name": "banana",
@@ -316,6 +332,7 @@
     },
     "barge": {
         "freebase_mid": "/m/01btn",
+        "oid_boxabel_leaf": "/m/01btn",
         "oid_name": "Barge",
         "wikidata_desc": "flat-bottomed boat, built mainly for river, canal transport of heavy goods, usually pushed by tugboats",
         "wikidata_name": "barge",
@@ -326,6 +343,7 @@
     "barrel": {
         "freebase_mid": "/m/02zn6n",
         "obj365_cat": "Barrel/bucket",
+        "oid_boxabel_leaf": "/m/02zn6n",
         "oid_name": "Barrel",
         "wikidata_desc": "hollow cylindrical container",
         "wikidata_name": "barrel",
@@ -348,6 +366,7 @@
         "coco_pano_name": "baseball bat",
         "freebase_mid": "/m/03g8mr",
         "obj365_cat": "Baseball Bat",
+        "oid_boxabel_leaf": "/m/03g8mr",
         "oid_name": "Baseball bat",
         "wikidata_desc": "implement",
         "wikidata_name": "baseball bat",
@@ -361,6 +380,7 @@
         "coco_pano_name": "baseball glove",
         "freebase_mid": "/m/03grzl",
         "obj365_cat": "Baseball Glove",
+        "oid_boxabel_leaf": "/m/03grzl",
         "oid_name": "Baseball glove",
         "wikidata_desc": "large leather glove worn by baseball players",
         "wikidata_name": "baseball glove",
@@ -389,6 +409,7 @@
     "bat": {
         "context": "animal",
         "freebase_mid": "/m/01h44",
+        "oid_boxabel_leaf": "/m/01h44",
         "oid_name": "Bat (Animal)",
         "wikidata_desc": "order of mammals",
         "wikidata_name": "bat",
@@ -406,6 +427,7 @@
     "bathroom_cabinet": {
         "context": "toiletries",
         "freebase_mid": "/m/04y4h8h",
+        "oid_boxabel_leaf": "/m/04y4h8h",
         "oid_name": "Bathroom cabinet",
         "wikidata_name": "bathroom cabinet",
         "wikidata_qid": "Q4869069",
@@ -415,6 +437,7 @@
     "bathtub": {
         "freebase_mid": "/m/03dnzn",
         "obj365_cat": "Bathtub",
+        "oid_boxabel_leaf": "/m/03dnzn",
         "oid_name": "Bathtub",
         "wikidata_desc": "large container for holding water in which a person may bathe",
         "wikidata_name": "bathtub",
@@ -424,6 +447,7 @@
     },
     "beaker": {
         "freebase_mid": "/m/0d20w4",
+        "oid_boxabel_leaf": "/m/0d20w4",
         "oid_name": "Beaker",
         "wikidata_desc": "glass container used in laboratories",
         "wikidata_name": "beaker",
@@ -448,6 +472,7 @@
     "beard": {
         "context": "human",
         "freebase_mid": "/m/015h_t",
+        "oid_boxabel_leaf": "/m/015h_t",
         "oid_name": "Human beard",
         "wikidata_desc": "facial hair on the chin, upper lip, cheeks and neck",
         "wikidata_name": "beard",
@@ -470,6 +495,7 @@
     },
     "bee": {
         "freebase_mid": "/m/01h3n",
+        "oid_boxabel_leaf": "/m/01h3n",
         "oid_name": "Bee",
         "wikidata_desc": "clade of insects",
         "wikidata_name": "Anthophila",
@@ -479,6 +505,7 @@
     },
     "beehive": {
         "freebase_mid": "/m/01gllr",
+        "oid_boxabel_leaf": "/m/01gllr",
         "oid_name": "Beehive",
         "wikidata_desc": "enclosed structure in which honey bees live and raise their young",
         "wikidata_name": "beehive",
@@ -488,6 +515,7 @@
     },
     "beer": {
         "freebase_mid": "/m/01599",
+        "oid_boxabel_leaf": "/m/01599",
         "oid_name": "Beer",
         "wikidata_desc": "alcoholic drink",
         "wikidata_name": "beer",
@@ -507,6 +535,7 @@
     },
     "bell_pepper": {
         "freebase_mid": "/m/0jg57",
+        "oid_boxabel_leaf": "/m/0jg57",
         "oid_name": "Bell pepper",
         "wikidata_desc": "group of fruits of Capsicum annuum",
         "wikidata_name": "bell pepper",
@@ -518,6 +547,7 @@
         "context": "waist",
         "freebase_mid": "/m/0176mf",
         "obj365_cat": "Belt",
+        "oid_boxabel_leaf": "/m/0176mf",
         "oid_name": "Belt",
         "wikidata_desc": "worn band or braid, usually around the waist or hips",
         "wikidata_name": "belt",
@@ -531,6 +561,7 @@
         "coco_pano_name": "bench",
         "freebase_mid": "/m/0cvnqh",
         "obj365_cat": "Bench",
+        "oid_boxabel_leaf": "/m/0cvnqh",
         "oid_name": "Bench",
         "wikidata_desc": "piece of furniture on which several people may sit at the same time",
         "wikidata_name": "bench",
@@ -544,6 +575,7 @@
         "coco_pano_name": "bicycle",
         "freebase_mid": "/m/0199g",
         "obj365_cat": "Bicycle",
+        "oid_boxabel_leaf": "/m/0199g",
         "oid_name": "Bicycle",
         "wikidata_desc": "pedal-driven two-wheel vehicle",
         "wikidata_name": "bicycle",
@@ -553,6 +585,7 @@
     },
     "bicycle_helmet": {
         "freebase_mid": "/m/03p3bw",
+        "oid_boxabel_leaf": "/m/03p3bw",
         "oid_name": "Bicycle helmet",
         "wikidata_desc": "helmet for people on bicycles intended to reduce injuries in the event of a collision or crash",
         "wikidata_name": "bicycle helmet",
@@ -560,6 +593,7 @@
     },
     "bicycle_wheel": {
         "freebase_mid": "/m/01bqk0",
+        "oid_boxabel_leaf": "/m/01bqk0",
         "oid_name": "Bicycle wheel",
         "wikidata_desc": "Wheel designed for a bicycle",
         "wikidata_name": "bicycle wheel",
@@ -569,6 +603,7 @@
     },
     "bidet": {
         "freebase_mid": "/m/01vbnl",
+        "oid_boxabel_leaf": "/m/01vbnl",
         "oid_name": "Bidet",
         "wikidata_desc": "plumbing fixture or type of sink intended for washing the genitalia and anus of the human body",
         "wikidata_name": "bidet",
@@ -578,6 +613,7 @@
     },
     "billboard": {
         "freebase_mid": "/m/01knjb",
+        "oid_boxabel_leaf": "/m/01knjb",
         "oid_name": "Billboard",
         "wikidata_desc": "advertising signage",
         "wikidata_name": "billboard",
@@ -596,6 +632,7 @@
     },
     "billiard_table": {
         "freebase_mid": "/m/04p0qw",
+        "oid_boxabel_leaf": "/m/04p0qw",
         "oid_name": "Billiard table",
         "wikidata_desc": "playing surface for cue sports",
         "wikidata_name": "billiard table",
@@ -606,6 +643,7 @@
     "binoculars": {
         "freebase_mid": "/m/0lt4_",
         "obj365_cat": "Binoculars",
+        "oid_boxabel_leaf": "/m/0lt4_",
         "oid_name": "Binoculars",
         "wikidata_desc": "pair of telescopes mounted side-by-side",
         "wikidata_name": "binoculars",
@@ -640,6 +678,7 @@
     "blender": {
         "freebase_mid": "/m/02pjr4",
         "obj365_cat": "Blender",
+        "oid_boxabel_leaf": "/m/02pjr4",
         "oid_name": "Blender",
         "wikidata_desc": "type of home appliance",
         "wikidata_name": "blender",
@@ -649,6 +688,7 @@
     },
     "blue_jay": {
         "freebase_mid": "/m/01f8m5",
+        "oid_boxabel_leaf": "/m/01f8m5",
         "oid_name": "Blue jay",
         "wikidata_desc": "species of bird",
         "wikidata_name": "Blue Jay",
@@ -700,6 +740,7 @@
         "coco_pano_name": "book",
         "freebase_mid": "/m/0bt_c3",
         "obj365_cat": "Book",
+        "oid_boxabel_leaf": "/m/0bt_c3",
         "oid_name": "Book",
         "wikidata_desc": "medium for a collection of words and/or pictures to represent knowledge or a fictional story, often manifested in bound paper and ink, or in e-books",
         "wikidata_name": "book",
@@ -709,6 +750,7 @@
     },
     "bookcase": {
         "freebase_mid": "/m/03__z0",
+        "oid_boxabel_leaf": "/m/03__z0",
         "oid_name": "Bookcase",
         "wikidata_desc": "cabinet with shelving used to store books",
         "wikidata_name": "bookcase",
@@ -720,6 +762,7 @@
         "context": "footwear",
         "freebase_mid": "/m/01b638",
         "obj365_cat": "Boots",
+        "oid_boxabel_leaf": "/m/01b638",
         "oid_name": "Boot",
         "wikidata_desc": "type of footwear extending above the ankle joint",
         "wikidata_name": "boot",
@@ -733,6 +776,7 @@
         "coco_pano_name": "bottle",
         "freebase_mid": "/m/04dr76w",
         "obj365_cat": "Bottle",
+        "oid_boxabel_leaf": "/m/04dr76w",
         "oid_name": "Bottle",
         "wikidata_desc": "container of liquids",
         "wikidata_name": "bottle",
@@ -752,6 +796,7 @@
     "bow_and_arrow": {
         "context": "weapon",
         "freebase_mid": "/m/01g3x7",
+        "oid_boxabel_leaf": "/m/01g3x7",
         "oid_name": "Bow and arrow",
         "wikidata_desc": "ranged weapon system consisting of an elastic launching device and long-shafted projectiles",
         "wikidata_name": "bow",
@@ -775,6 +820,7 @@
         "context": "tableware",
         "freebase_mid": "/m/04kkgm",
         "obj365_cat": "Bowl/Basin",
+        "oid_boxabel_leaf": "/m/04kkgm",
         "oid_name": "Bowl",
         "wikidata_desc": "round, open-top container frequently used as tableware",
         "wikidata_name": "bowl",
@@ -791,6 +837,7 @@
     "box": {
         "freebase_mid": "/m/025dyy",
         "obj365_cat": "Storage box",
+        "oid_boxabel_leaf": "/m/025dyy",
         "oid_name": "Box",
         "wikidata_desc": "container (usually cuboidal) with at least one roughly rectangular cross-section",
         "wikidata_name": "box",
@@ -800,6 +847,7 @@
     },
     "boy": {
         "freebase_mid": "/m/01bl7v",
+        "oid_boxabel_leaf": "/m/01bl7v",
         "oid_name": "Boy",
         "wikidata_desc": "young male human",
         "wikidata_name": "boy",
@@ -818,6 +866,7 @@
     },
     "brassiere": {
         "freebase_mid": "/m/01gmv2",
+        "oid_boxabel_leaf": "/m/01gmv2",
         "oid_name": "Brassiere",
         "wikidata_desc": "undergarment for supporting and concealing/displaying breasts",
         "wikidata_name": "brassiere",
@@ -828,6 +877,7 @@
     "bread": {
         "freebase_mid": "/m/09728",
         "obj365_cat": "Bread",
+        "oid_boxabel_leaf": "/m/09728",
         "oid_name": "Bread",
         "wikidata_desc": "staple food prepared from a dough",
         "wikidata_name": "bread",
@@ -854,6 +904,7 @@
     "briefcase": {
         "freebase_mid": "/m/0584n8",
         "obj365_cat": "Briefcase",
+        "oid_boxabel_leaf": "/m/0584n8",
         "oid_name": "Briefcase",
         "wikidata_desc": "Item to store possessions in",
         "wikidata_name": "briefcase",
@@ -868,6 +919,7 @@
         "context": "vegetable",
         "freebase_mid": "/m/0hkxq",
         "obj365_cat": "Broccoli",
+        "oid_boxabel_leaf": "/m/0hkxq",
         "oid_name": "Broccoli",
         "wikidata_desc": "edible green plant in the cabbage family",
         "wikidata_name": "broccoli",
@@ -877,6 +929,7 @@
     },
     "bronze_sculpture": {
         "freebase_mid": "/m/01yx86",
+        "oid_boxabel_leaf": "/m/01yx86",
         "oid_name": "Bronze sculpture",
         "wikidata_desc": "sculpture cast in bronze",
         "wikidata_name": "bronze sculpture",
@@ -892,6 +945,7 @@
     },
     "brown_bear": {
         "freebase_mid": "/m/01dxs",
+        "oid_boxabel_leaf": "/m/01dxs",
         "oid_name": "Brown bear",
         "wikidata_desc": "species of mammal",
         "wikidata_name": "brown bear",
@@ -922,6 +976,7 @@
     "bull": {
         "context": "cattle",
         "freebase_mid": "/m/0cnyhnx",
+        "oid_boxabel_leaf": "/m/0cnyhnx",
         "oid_name": "Bull",
         "wikidata_desc": "male individual of cattle",
         "wikidata_name": "bull",
@@ -931,6 +986,7 @@
     },
     "burrito": {
         "freebase_mid": "/m/01j3zr",
+        "oid_boxabel_leaf": "/m/01j3zr",
         "oid_name": "Burrito",
         "wikidata_desc": "Mexican dish consisting of a wheat flour tortilla wrapped or folded into a cylindrical shape to completely enclose the filling",
         "wikidata_name": "burrito",
@@ -944,6 +1000,7 @@
         "coco_pano_name": "bus",
         "freebase_mid": "/m/01bjv",
         "obj365_cat": "Bus",
+        "oid_boxabel_leaf": "/m/01bjv",
         "oid_name": "Bus",
         "wikidata_desc": "large road vehicle for transporting people",
         "wikidata_name": "bus",
@@ -953,6 +1010,7 @@
     },
     "bust": {
         "freebase_mid": "/m/04yqq2",
+        "oid_boxabel_leaf": "/m/04yqq2",
         "oid_name": "Bust",
         "wikidata_desc": "representation of the upper part of the human figure, in picture or sculpture",
         "wikidata_name": "portrait at bust length",
@@ -963,6 +1021,7 @@
     "butterfly": {
         "freebase_mid": "/m/0cyf8",
         "obj365_cat": "Buttefly",
+        "oid_boxabel_leaf": "/m/0cyf8",
         "oid_name": "Butterfly",
         "wikidata_desc": "insect of the order Lepidoptera",
         "wikidata_name": "butterfly",
@@ -973,6 +1032,7 @@
     "cabbage": {
         "freebase_mid": "/m/0fbw6",
         "obj365_cat": "Cabbage",
+        "oid_boxabel_leaf": "/m/0fbw6",
         "oid_name": "Cabbage",
         "wikidata_desc": "variety of plants",
         "wikidata_name": "white cabbage",
@@ -985,6 +1045,7 @@
         "coco_pano_name": "cabinet-merged",
         "freebase_mid": "/m/01s105",
         "obj365_cat": "Cabinet/shelf",
+        "oid_boxabel_leaf": "/m/01s105",
         "oid_name": "Cabinetry",
         "wikidata_desc": "box-shaped piece of furniture with doors and/or drawers",
         "wikidata_name": "Cabinetry",
@@ -998,6 +1059,7 @@
         "coco_pano_name": "cake",
         "freebase_mid": "/m/0fszt",
         "obj365_cat": "Cake",
+        "oid_boxabel_leaf": "/m/0fszt",
         "oid_name": "Cake",
         "wikidata_desc": "baked dessert",
         "wikidata_name": "cake",
@@ -1007,6 +1069,7 @@
     },
     "cake_stand": {
         "freebase_mid": "/m/0h8n6ft",
+        "oid_boxabel_leaf": "/m/0h8n6ft",
         "oid_name": "Cake stand",
         "wikidata_desc": "",
         "wikidata_name": "cake stand",
@@ -1025,6 +1088,7 @@
     "camel": {
         "freebase_mid": "/m/01x_v",
         "obj365_cat": "Campel",
+        "oid_boxabel_leaf": "/m/01x_v",
         "oid_name": "Camel",
         "wikidata_desc": "genus of mammals",
         "wikidata_name": "Camelus",
@@ -1035,6 +1099,7 @@
     "camera": {
         "freebase_mid": "/m/0dv5r",
         "obj365_cat": "Camera",
+        "oid_boxabel_leaf": "/m/0dv5r",
         "oid_name": "Camera",
         "wikidata_desc": "optical device for recording or transmitting photographic images or videos",
         "wikidata_name": "camera",
@@ -1053,6 +1118,7 @@
     },
     "canary": {
         "freebase_mid": "/m/0ccs93",
+        "oid_boxabel_leaf": "/m/0ccs93",
         "oid_name": "Canary",
         "wikidata_desc": "subspecies of bird",
         "wikidata_name": "domestic canary",
@@ -1063,6 +1129,7 @@
     "candle": {
         "freebase_mid": "/m/0c06p",
         "obj365_cat": "Candle",
+        "oid_boxabel_leaf": "/m/0c06p",
         "oid_name": "Candle",
         "wikidata_desc": "solid block of wax with embedded wick",
         "wikidata_name": "candle",
@@ -1073,6 +1140,7 @@
     "candy": {
         "freebase_mid": "/m/0gm28",
         "obj365_cat": "Candy",
+        "oid_boxabel_leaf": "/m/0gm28",
         "oid_name": "Candy",
         "wikidata_desc": "sweet confection",
         "wikidata_name": "candy",
@@ -1082,6 +1150,7 @@
     },
     "cannon": {
         "freebase_mid": "/m/020kz",
+        "oid_boxabel_leaf": "/m/020kz",
         "oid_name": "Cannon",
         "wikidata_desc": "class of artillery which fires at a low or flat trajectory",
         "wikidata_name": "cannon",
@@ -1091,6 +1160,7 @@
     },
     "canoe": {
         "freebase_mid": "/m/0ph39",
+        "oid_boxabel_leaf": "/m/0ph39",
         "oid_name": "Canoe",
         "wikidata_desc": "light boat that is paddled",
         "wikidata_name": "canoe",
@@ -1146,6 +1216,7 @@
         "coco_pano_name": "carrot",
         "freebase_mid": "/m/0fj52s",
         "obj365_cat": "Carrot",
+        "oid_boxabel_leaf": "/m/0fj52s",
         "oid_name": "Carrot",
         "wikidata_desc": "root vegetable, usually orange in color",
         "wikidata_name": "carrot",
@@ -1155,6 +1226,7 @@
     },
     "cart": {
         "freebase_mid": "/m/018p4k",
+        "oid_boxabel_leaf": "/m/018p4k",
         "oid_name": "Cart",
         "wikidata_desc": "simple vehicle designed for transport, mostly uniaxial",
         "wikidata_name": "cart",
@@ -1173,6 +1245,7 @@
     },
     "castle": {
         "freebase_mid": "/m/0d5gx",
+        "oid_boxabel_leaf": "/m/0d5gx",
         "oid_name": "Castle",
         "wikidata_desc": "type of fortified structure built in Europe, Asia and the Middle East during the Middle Ages by nobility",
         "wikidata_name": "castle",
@@ -1186,6 +1259,7 @@
         "coco_pano_name": "cat",
         "freebase_mid": "/m/01yrx",
         "obj365_cat": "Cat",
+        "oid_boxabel_leaf": "/m/01yrx",
         "oid_name": "Cat",
         "wikidata_desc": "domesticated feline",
         "wikidata_name": "house cat",
@@ -1199,6 +1273,7 @@
     },
     "caterpillar": {
         "freebase_mid": "/m/0cydv",
+        "oid_boxabel_leaf": "/m/0cydv",
         "oid_name": "Caterpillar",
         "wikidata_desc": "Larva of a butterfly",
         "wikidata_name": "caterpillar",
@@ -1208,6 +1283,7 @@
     },
     "cattle": {
         "freebase_mid": "/m/01xq0k1",
+        "oid_boxabel_leaf": "/m/01xq0k1",
         "oid_name": "Cattle",
         "wikidata_desc": "domesticated form of Aurochs",
         "wikidata_name": "cattle",
@@ -1227,6 +1303,7 @@
     },
     "ceiling_fan": {
         "freebase_mid": "/m/03ldnb",
+        "oid_boxabel_leaf": "/m/03ldnb",
         "oid_name": "Ceiling fan",
         "wikidata_desc": "type of fan appliance permanently mounted to the ceiling horizontally",
         "wikidata_name": "ceiling fan",
@@ -1235,6 +1312,7 @@
     "cello": {
         "freebase_mid": "/m/01xqw",
         "obj365_cat": "Cello",
+        "oid_boxabel_leaf": "/m/01xqw",
         "oid_name": "Cello",
         "wikidata_desc": "musical instrument",
         "wikidata_name": "cello",
@@ -1244,6 +1322,7 @@
     },
     "centipede": {
         "freebase_mid": "/m/019h78",
+        "oid_boxabel_leaf": "/m/019h78",
         "oid_name": "Centipede",
         "wikidata_desc": "class of many-legged arthropods with elongated bodies",
         "wikidata_name": "Centipede",
@@ -1267,6 +1346,7 @@
         "coco_pano_name": "chair",
         "freebase_mid": "/m/01mzpv",
         "obj365_cat": "Chair",
+        "oid_boxabel_leaf": "/m/01mzpv",
         "oid_name": "Chair",
         "wikidata_desc": "piece of furniture for sitting on",
         "wikidata_name": "chair",
@@ -1286,6 +1366,7 @@
     },
     "cheetah": {
         "freebase_mid": "/m/0cd4d",
+        "oid_boxabel_leaf": "/m/0cd4d",
         "oid_name": "Cheetah",
         "wikidata_desc": "large feline of the genus Acinonyx",
         "wikidata_name": "cheetah",
@@ -1303,6 +1384,7 @@
     },
     "chest_of_drawers": {
         "freebase_mid": "/m/05kyg_",
+        "oid_boxabel_leaf": "/m/05kyg_",
         "oid_name": "Chest of drawers",
         "wikidata_desc": "piece of cabinet furniture",
         "wikidata_name": "chest of drawers",
@@ -1313,6 +1395,7 @@
     "chicken": {
         "freebase_mid": "/m/09b5t",
         "obj365_cat": "Chicken",
+        "oid_boxabel_leaf": "/m/09b5t",
         "oid_name": "Chicken",
         "wikidata_desc": "domesticated bird, primarily a source of food",
         "wikidata_name": "chicken",
@@ -1341,6 +1424,7 @@
     "chopstick": {
         "freebase_mid": "/m/01_5g",
         "obj365_cat": "Chopsticks",
+        "oid_boxabel_leaf": "/m/01_5g",
         "oid_name": "Chopsticks",
         "wikidata_desc": "shaped pairs of sticks used as eating utensils",
         "wikidata_name": "chopsticks",
@@ -1350,6 +1434,7 @@
     },
     "christmas_tree": {
         "freebase_mid": "/m/025nd",
+        "oid_boxabel_leaf": "/m/025nd",
         "oid_name": "Christmas tree",
         "wikidata_desc": "decorated tree used in the celebration of Christmas",
         "wikidata_name": "Christmas tree",
@@ -1393,6 +1478,7 @@
     },
     "coat": {
         "freebase_mid": "/m/01xygc",
+        "oid_boxabel_leaf": "/m/01xygc",
         "oid_name": "Coat",
         "wikidata_desc": "warming outerwear garment for men and women",
         "wikidata_name": "coat",
@@ -1402,6 +1488,7 @@
     },
     "cocktail": {
         "freebase_mid": "/m/024g6",
+        "oid_boxabel_leaf": "/m/024g6",
         "oid_name": "Cocktail",
         "wikidata_desc": "alcoholic mixed drink",
         "wikidata_name": "cocktail",
@@ -1421,6 +1508,7 @@
     "coconut": {
         "freebase_mid": "/m/0djtd",
         "obj365_cat": "Coconut",
+        "oid_boxabel_leaf": "/m/0djtd",
         "oid_name": "Coconut",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Cocos nucifera",
@@ -1430,6 +1518,7 @@
     },
     "coffee": {
         "freebase_mid": "/m/02vqfm",
+        "oid_boxabel_leaf": "/m/02vqfm",
         "oid_name": "Coffee",
         "wikidata_desc": "brewed beverage prepared from roasted coffee seeds",
         "wikidata_name": "coffee",
@@ -1439,6 +1528,7 @@
     },
     "coffee_cup": {
         "freebase_mid": "/m/02p5f1q",
+        "oid_boxabel_leaf": "/m/02p5f1q",
         "oid_name": "Coffee cup",
         "wikidata_desc": "tableware",
         "wikidata_name": "coffee cup",
@@ -1454,6 +1544,7 @@
     "coffee_table": {
         "freebase_mid": "/m/078n6m",
         "obj365_cat": "Coffee Table",
+        "oid_boxabel_leaf": "/m/078n6m",
         "oid_name": "Coffee table",
         "wikidata_desc": "low table used in living room",
         "wikidata_name": "coffee table",
@@ -1463,6 +1554,7 @@
     },
     "coffeemaker": {
         "freebase_mid": "/m/07xyvk",
+        "oid_boxabel_leaf": "/m/07xyvk",
         "oid_name": "Coffeemaker",
         "wikidata_desc": "device for making coffee",
         "wikidata_name": "coffeemaker",
@@ -1470,6 +1562,7 @@
     },
     "coin": {
         "freebase_mid": "/m/0242l",
+        "oid_boxabel_leaf": "/m/0242l",
         "oid_name": "Coin",
         "wikidata_desc": "piece of hard material produced in large quantities to facilitate trade",
         "wikidata_name": "coin",
@@ -1488,6 +1581,7 @@
     },
     "common_fig": {
         "freebase_mid": "/m/043nyj",
+        "oid_boxabel_leaf": "/m/043nyj",
         "oid_name": "Common fig",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Ficus carica",
@@ -1497,6 +1591,7 @@
     },
     "common_sunflower": {
         "freebase_mid": "/m/0ftb8",
+        "oid_boxabel_leaf": "/m/0ftb8",
         "oid_name": "Common sunflower",
         "wikidata_desc": "species or type of flowering plant",
         "wikidata_name": "sunflower",
@@ -1516,6 +1611,7 @@
         "coco_pano_name": "keyboard",
         "freebase_mid": "/m/01m2v",
         "obj365_cat": "Keyboard",
+        "oid_boxabel_leaf": "/m/01m2v",
         "oid_name": "Computer keyboard",
         "wikidata_desc": "device comprising an arrangement of buttons or keys used to input text in computers",
         "wikidata_name": "computer keyboard",
@@ -1525,6 +1621,7 @@
     },
     "computer_monitor": {
         "freebase_mid": "/m/02522",
+        "oid_boxabel_leaf": "/m/02522",
         "oid_name": "Computer monitor",
         "wikidata_desc": "electronic visual display for computers",
         "wikidata_name": "computer monitor",
@@ -1534,6 +1631,7 @@
     },
     "computer_mouse": {
         "freebase_mid": "/m/020lf",
+        "oid_boxabel_leaf": "/m/020lf",
         "oid_name": "Computer mouse",
         "wikidata_desc": "hand-held device used to move a pointer on a computer display",
         "wikidata_name": "mouse",
@@ -1552,6 +1650,7 @@
     },
     "convenience_store": {
         "freebase_mid": "/m/0crjs",
+        "oid_boxabel_leaf": "/m/0crjs",
         "oid_name": "Convenience store",
         "wikidata_desc": "small store that stocks a range of everyday items",
         "wikidata_name": "convenience store",
@@ -1562,6 +1661,7 @@
     "cookie": {
         "freebase_mid": "/m/021mn",
         "obj365_cat": "Cookies",
+        "oid_boxabel_leaf": "/m/021mn",
         "oid_name": "Cookie",
         "wikidata_desc": "baked treat",
         "wikidata_name": "cookie",
@@ -1575,6 +1675,7 @@
     },
     "corded_phone": {
         "freebase_mid": "/m/0h8lkj8",
+        "oid_boxabel_leaf": "/m/0h8lkj8",
         "oid_name": "Corded phone"
     },
     "corn": {
@@ -1605,6 +1706,7 @@
         "coco_pano_name": "couch",
         "freebase_mid": "/m/0703r8",
         "obj365_cat": "Couch",
+        "oid_boxabel_leaf": "/m/0703r8",
         "oid_name": "Loveseat",
         "wikidata_desc": "piece of furniture for seating two or more persons in the form of a bench with armrests",
         "wikidata_name": "couch",
@@ -1624,6 +1726,7 @@
     },
     "countertop": {
         "freebase_mid": "/m/0b3fp9",
+        "oid_boxabel_leaf": "/m/0b3fp9",
         "oid_name": "Countertop",
         "wikidata_desc": "horizontal work surface",
         "wikidata_name": "countertop",
@@ -1644,6 +1747,7 @@
     },
     "cowboy_hat": {
         "freebase_mid": "/m/025rp__",
+        "oid_boxabel_leaf": "/m/025rp__",
         "oid_name": "Cowboy hat",
         "wikidata_desc": "hat",
         "wikidata_name": "cowboy hat",
@@ -1654,6 +1758,7 @@
     "crab": {
         "freebase_mid": "/m/0n28_",
         "obj365_cat": "Crab",
+        "oid_boxabel_leaf": "/m/0n28_",
         "oid_name": "Crab",
         "wikidata_desc": "infraorder of crustaceans",
         "wikidata_name": "Brachyura",
@@ -1681,6 +1786,7 @@
     },
     "cricket_ball": {
         "freebase_mid": "/m/02ctlc",
+        "oid_boxabel_leaf": "/m/02ctlc",
         "oid_name": "Cricket ball",
         "wikidata_desc": "hard, solid ball used to play cricket",
         "wikidata_name": "cricket ball",
@@ -1690,6 +1796,7 @@
     },
     "crocodile": {
         "freebase_mid": "/m/09f_2",
+        "oid_boxabel_leaf": "/m/09f_2",
         "oid_name": "Crocodile",
         "wikidata_desc": "heraldic animal",
         "wikidata_name": "crocodile",
@@ -1699,6 +1806,7 @@
     },
     "croissant": {
         "freebase_mid": "/m/015wgc",
+        "oid_boxabel_leaf": "/m/015wgc",
         "oid_name": "Croissant",
         "wikidata_desc": "French pastry",
         "wikidata_name": "croissant",
@@ -1711,6 +1819,7 @@
     },
     "crown": {
         "freebase_mid": "/m/0nl46",
+        "oid_boxabel_leaf": "/m/0nl46",
         "oid_name": "Crown",
         "wikidata_desc": "precious item of headwear, symbolizing the power of a ruler",
         "wikidata_name": "crown",
@@ -1720,6 +1829,7 @@
     },
     "crutch": {
         "freebase_mid": "/m/05441v",
+        "oid_boxabel_leaf": "/m/05441v",
         "oid_name": "Crutch",
         "wikidata_desc": "mobility aid that transfers weight from the legs to the upper body",
         "wikidata_name": "crutch",
@@ -1731,6 +1841,7 @@
         "context": "fruit",
         "freebase_mid": "/m/015x4r",
         "obj365_cat": "Cucumber",
+        "oid_boxabel_leaf": "/m/015x4r",
         "oid_name": "Cucumber",
         "wikidata_desc": "fruit used as vegetable",
         "wikidata_name": "cucumber",
@@ -1760,6 +1871,7 @@
     },
     "cupboard": {
         "freebase_mid": "/m/0642b4",
+        "oid_boxabel_leaf": "/m/0642b4",
         "oid_name": "Cupboard",
         "wikidata_desc": "closed or open-shelved side table for displaying dishware, more specifically plates, cups and saucers",
         "wikidata_name": "cupboard",
@@ -1779,6 +1891,7 @@
         "coco_pano_id": 109,
         "coco_pano_name": "curtain",
         "freebase_mid": "/m/03rszm",
+        "oid_boxabel_leaf": "/m/03rszm",
         "oid_name": "Curtain",
         "wikidata_desc": "cloth used to block out light",
         "wikidata_name": "curtain",
@@ -1789,6 +1902,7 @@
     "cutting_board": {
         "freebase_mid": "/m/02pdsw",
         "obj365_cat": "Cutting/chopping Board",
+        "oid_boxabel_leaf": "/m/02pdsw",
         "oid_name": "Cutting board",
         "wordnet_gloss": "a wooden board where meats or vegetables can be cut",
         "wordnet_pwn30": "n03025513"
@@ -1803,6 +1917,7 @@
     },
     "dagger": {
         "freebase_mid": "/m/02gzp",
+        "oid_boxabel_leaf": "/m/02gzp",
         "oid_name": "Dagger",
         "wikidata_desc": "fighting weapon with a sharp point",
         "wikidata_name": "dagger",
@@ -1822,6 +1937,7 @@
     "deer": {
         "freebase_mid": "/m/09kx5",
         "obj365_cat": "Deer",
+        "oid_boxabel_leaf": "/m/09kx5",
         "oid_name": "Deer",
         "wikidata_desc": "family of mammals",
         "wikidata_name": "Cervidae",
@@ -1832,6 +1948,7 @@
     "desk": {
         "freebase_mid": "/m/01y9k5",
         "obj365_cat": "Desk",
+        "oid_boxabel_leaf": "/m/01y9k5",
         "oid_name": "Desk",
         "wikidata_desc": "type of table often used in a school or office setting",
         "wikidata_name": "desk",
@@ -1861,6 +1978,7 @@
     },
     "dice": {
         "freebase_mid": "/m/029b3",
+        "oid_boxabel_leaf": "/m/029b3",
         "oid_name": "Dice",
         "wikidata_desc": "throwable object with multiple resting positions, used for generating random outcomes",
         "wikidata_name": "die",
@@ -1870,6 +1988,7 @@
     },
     "digital_clock": {
         "freebase_mid": "/m/06_72j",
+        "oid_boxabel_leaf": "/m/06_72j",
         "oid_name": "Digital clock",
         "wikidata_desc": "type of clock that displays the time with numbers",
         "wikidata_name": "digital clock",
@@ -1890,6 +2009,7 @@
     },
     "dinosaur": {
         "freebase_mid": "/m/029tx",
+        "oid_boxabel_leaf": "/m/029tx",
         "oid_name": "Dinosaur",
         "wikidata_desc": "clade of reptiles including fossil dinosaurs and birds",
         "wikidata_name": "dinosaur",
@@ -1922,6 +2042,7 @@
         "context": "animal",
         "freebase_mid": "/m/0bt9lr",
         "obj365_cat": "Dog",
+        "oid_boxabel_leaf": "/m/0bt9lr",
         "oid_name": "Dog",
         "wikidata_desc": "domestic animal",
         "wikidata_name": "dog",
@@ -1931,6 +2052,7 @@
     },
     "dog_bed": {
         "freebase_mid": "/m/0h8n6f9",
+        "oid_boxabel_leaf": "/m/0h8n6f9",
         "oid_name": "Dog bed",
         "wikidata_desc": "bed for dogs",
         "wikidata_name": "dog bed",
@@ -1938,6 +2060,7 @@
     },
     "doll": {
         "freebase_mid": "/m/0167gd",
+        "oid_boxabel_leaf": "/m/0167gd",
         "oid_name": "Doll",
         "wikidata_desc": "model of a human being, often used as a toy for children",
         "wikidata_name": "doll",
@@ -1948,6 +2071,7 @@
     "dolphin": {
         "freebase_mid": "/m/02hj4",
         "obj365_cat": "Dolphin",
+        "oid_boxabel_leaf": "/m/02hj4",
         "oid_name": "Dolphin",
         "wikidata_desc": "marine mammals, closely related to whales and porpoises",
         "wikidata_name": "dolphin",
@@ -1970,6 +2094,7 @@
         "coco_pano_name": "donut",
         "freebase_mid": "/m/0jy4k",
         "obj365_cat": "Donut",
+        "oid_boxabel_leaf": "/m/0jy4k",
         "oid_name": "Doughnut",
         "wikidata_desc": "dessert food",
         "wikidata_name": "doughnut",
@@ -1982,6 +2107,7 @@
         "coco_pano_name": "door-stuff",
         "context": "entrance",
         "freebase_mid": "/m/02dgv",
+        "oid_boxabel_leaf": "/m/02dgv",
         "oid_name": "Door",
         "wikidata_desc": "flat, movable structure used to open and close an entrance",
         "wikidata_name": "door",
@@ -1991,6 +2117,7 @@
     },
     "door_handle": {
         "freebase_mid": "/m/03c7gz",
+        "oid_boxabel_leaf": "/m/03c7gz",
         "oid_name": "Door handle",
         "wikidata_desc": "attached device used to open or close a door",
         "wikidata_name": "door handle",
@@ -2000,6 +2127,7 @@
     },
     "dragonfly": {
         "freebase_mid": "/m/0ft9s",
+        "oid_boxabel_leaf": "/m/0ft9s",
         "oid_name": "Dragonfly",
         "wikidata_desc": "suborder of insects related to dragonflies",
         "wikidata_name": "Anisoptera",
@@ -2009,6 +2137,7 @@
     },
     "drawer": {
         "freebase_mid": "/m/0fqfqc",
+        "oid_boxabel_leaf": "/m/0fqfqc",
         "oid_name": "Drawer",
         "wikidata_desc": "box-shaped container that fits into a piece of furniture",
         "wikidata_name": "drawer",
@@ -2018,6 +2147,7 @@
     },
     "dress": {
         "freebase_mid": "/m/01d40f",
+        "oid_boxabel_leaf": "/m/01d40f",
         "oid_name": "Dress",
         "wikidata_desc": "garment for women, children, or infants consisting of a bodice and skirt made in one or more pieces",
         "wikidata_name": "dress",
@@ -2034,6 +2164,7 @@
     },
     "drinking_straw": {
         "freebase_mid": "/m/03v5tg",
+        "oid_boxabel_leaf": "/m/03v5tg",
         "oid_name": "Drinking straw",
         "wikidata_desc": "thin tube used to suck liquids from a container into the mouth of the drinker",
         "wikidata_name": "drinking straw",
@@ -2045,6 +2176,7 @@
         "context": "instrument",
         "freebase_mid": "/m/026t6",
         "obj365_cat": "Drum",
+        "oid_boxabel_leaf": "/m/026t6",
         "oid_name": "Drum",
         "wikidata_desc": "type of musical instrument of the percussion family",
         "wikidata_name": "drum",
@@ -2053,6 +2185,7 @@
     "duck": {
         "freebase_mid": "/m/09ddx",
         "obj365_cat": "Duck",
+        "oid_boxabel_leaf": "/m/09ddx",
         "oid_name": "Duck",
         "wikidata_desc": "common name for many species in the bird family Anatidae",
         "wikidata_name": "duck",
@@ -2064,6 +2197,7 @@
         "context": "weight",
         "freebase_mid": "/m/04h8sr",
         "obj365_cat": "Dumbbell",
+        "oid_boxabel_leaf": "/m/04h8sr",
         "oid_name": "Dumbbell",
         "wikidata_desc": "piece of equipment used in weight training",
         "wikidata_name": "dumbbell",
@@ -2091,6 +2225,7 @@
     },
     "eagle": {
         "freebase_mid": "/m/09csl",
+        "oid_boxabel_leaf": "/m/09csl",
         "oid_name": "Eagle",
         "wikidata_desc": "large carnivore bird",
         "wikidata_name": "eagle",
@@ -2101,6 +2236,7 @@
     "ear": {
         "context": "human",
         "freebase_mid": "/m/039xj_",
+        "oid_boxabel_leaf": "/m/039xj_",
         "oid_name": "Human ear",
         "wikidata_desc": "organ that detects sound; organ of hearing and balance",
         "wikidata_name": "ear",
@@ -2116,6 +2252,7 @@
     },
     "earring": {
         "freebase_mid": "/m/01r546",
+        "oid_boxabel_leaf": "/m/01r546",
         "oid_name": "Earrings",
         "wikidata_desc": "piece of jewelry worn on an ear",
         "wikidata_name": "earring",
@@ -2127,6 +2264,7 @@
         "context": "food",
         "freebase_mid": "/m/033cnk",
         "obj365_cat": "Egg",
+        "oid_boxabel_leaf": "/m/033cnk",
         "oid_name": "Egg (Food)",
         "wikidata_desc": "animal egg eaten as food",
         "wikidata_name": "egg",
@@ -2168,6 +2306,7 @@
         "coco_pano_name": "elephant",
         "freebase_mid": "/m/0bwd_0j",
         "obj365_cat": "Elephant",
+        "oid_boxabel_leaf": "/m/0bwd_0j",
         "oid_name": "Elephant",
         "wikidata_desc": "is biggie",
         "wikidata_name": "elephant",
@@ -2178,6 +2317,7 @@
     "envelope": {
         "context": "letter",
         "freebase_mid": "/m/0frqm",
+        "oid_boxabel_leaf": "/m/0frqm",
         "oid_name": "Envelope",
         "wikidata_desc": "packaging item, usually made of thin flat material",
         "wikidata_name": "envelope",
@@ -2215,6 +2355,7 @@
     "eye": {
         "context": "human",
         "freebase_mid": "/m/014sv8",
+        "oid_boxabel_leaf": "/m/014sv8",
         "oid_name": "Human eye",
         "wikidata_desc": "organ that detects light and converts it into electro-chemical impulses in neurons",
         "wikidata_name": "eye",
@@ -2225,6 +2366,7 @@
     "eyeglasses": {
         "freebase_mid": "/m/0jyfg",
         "obj365_cat": "Glasses",
+        "oid_boxabel_leaf": "/m/0jyfg",
         "oid_name": "Glasses",
         "wikidata_desc": "accessories that improve human vision",
         "wikidata_name": "eyeglasses",
@@ -2238,6 +2380,7 @@
     "face": {
         "context": "human",
         "freebase_mid": "/m/0dzct",
+        "oid_boxabel_leaf": "/m/0dzct",
         "oid_name": "Human face",
         "wikidata_desc": "part of the body at the front of the head",
         "wikidata_name": "face",
@@ -2260,6 +2403,7 @@
     "falcon": {
         "context": "bird",
         "freebase_mid": "/m/0f6wt",
+        "oid_boxabel_leaf": "/m/0f6wt",
         "oid_name": "Falcon",
         "wikidata_desc": "genus of birds",
         "wikidata_name": "falcon",
@@ -2295,6 +2439,7 @@
     },
     "fedora": {
         "freebase_mid": "/m/02fq_6",
+        "oid_boxabel_leaf": "/m/02fq_6",
         "oid_name": "Fedora",
         "wikidata_desc": "wide brimmed felt hat with a pinched crown",
         "wikidata_name": "fedora",
@@ -2314,6 +2459,7 @@
     },
     "filing_cabinet": {
         "freebase_mid": "/m/047j0r",
+        "oid_boxabel_leaf": "/m/047j0r",
         "oid_name": "Filing cabinet",
         "wikidata_desc": "piece of office furniture",
         "wikidata_name": "filing cabinet",
@@ -2336,6 +2482,7 @@
         "coco_pano_name": "fire hydrant",
         "freebase_mid": "/m/01pns0",
         "obj365_cat": "Fire Hydrant",
+        "oid_boxabel_leaf": "/m/01pns0",
         "oid_name": "Fire hydrant",
         "wikidata_desc": "connection point by which firefighters can tap into a water supply",
         "wikidata_name": "fire hydrant",
@@ -2354,6 +2501,7 @@
     },
     "fireplace": {
         "freebase_mid": "/m/03tw93",
+        "oid_boxabel_leaf": "/m/03tw93",
         "oid_name": "Fireplace",
         "wikidata_desc": "device for firing solid fuels in residential buildings",
         "wikidata_name": "fireplace",
@@ -2383,6 +2531,7 @@
     "flag": {
         "freebase_mid": "/m/03120",
         "obj365_cat": "Flag",
+        "oid_boxabel_leaf": "/m/03120",
         "oid_name": "Flag",
         "wikidata_desc": "piece of fabric with a distinctive design, used as a symbol",
         "wikidata_name": "flag",
@@ -2392,6 +2541,7 @@
     },
     "flashlight": {
         "freebase_mid": "/m/01kb5b",
+        "oid_boxabel_leaf": "/m/01kb5b",
         "oid_name": "Flashlight",
         "wikidata_desc": "portable, hand-held electric light",
         "wikidata_name": "flashlight",
@@ -2432,6 +2582,7 @@
     },
     "flowerpot": {
         "freebase_mid": "/m/0fm3zh",
+        "oid_boxabel_leaf": "/m/0fm3zh",
         "oid_name": "Flowerpot",
         "wikidata_desc": "(usually) conical container in pottery or plastic in which flowers and plants are grown",
         "wikidata_name": "flowerpot",
@@ -2442,6 +2593,7 @@
     "flute": {
         "freebase_mid": "/m/0l14j_",
         "obj365_cat": "Flute",
+        "oid_boxabel_leaf": "/m/0l14j_",
         "oid_name": "Flute",
         "wikidata_desc": "musical instrument of the woodwind family",
         "wikidata_name": "flute",
@@ -2471,6 +2623,7 @@
     },
     "food_processor": {
         "freebase_mid": "/m/03y6mg",
+        "oid_boxabel_leaf": "/m/03y6mg",
         "oid_name": "Food processor",
         "wikidata_desc": "type of home appliance",
         "wikidata_name": "food processor",
@@ -2481,6 +2634,7 @@
     "foot": {
         "context": "human",
         "freebase_mid": "/m/031n1",
+        "oid_boxabel_leaf": "/m/031n1",
         "oid_name": "Human foot",
         "wikidata_desc": "anatomical structure found in vertebrates",
         "wikidata_name": "foot",
@@ -2490,6 +2644,7 @@
     },
     "football_helmet": {
         "freebase_mid": "/m/07qxg_",
+        "oid_boxabel_leaf": "/m/07qxg_",
         "oid_name": "Football helmet",
         "wikidata_desc": "american football equipment",
         "wikidata_name": "Protective equipment in gridiron football",
@@ -2512,6 +2667,7 @@
         "coco_pano_name": "fork",
         "freebase_mid": "/m/0dt3t",
         "obj365_cat": "Fork",
+        "oid_boxabel_leaf": "/m/0dt3t",
         "oid_name": "Fork",
         "wikidata_desc": "piece of cutlery or kitchenware with two or more tines",
         "wikidata_name": "fork",
@@ -2521,6 +2677,7 @@
     },
     "fountain": {
         "freebase_mid": "/m/0220r2",
+        "oid_boxabel_leaf": "/m/0220r2",
         "oid_name": "Fountain",
         "wikidata_desc": "piece of architecture which ejects water",
         "wikidata_name": "fountain",
@@ -2530,6 +2687,7 @@
     },
     "fox": {
         "freebase_mid": "/m/0306r",
+        "oid_boxabel_leaf": "/m/0306r",
         "oid_name": "Fox",
         "wikidata_desc": "small to medium-sized omnivorous mammal belonging to the family Canidae",
         "wikidata_name": "fox",
@@ -2540,6 +2698,7 @@
     "french_fries": {
         "freebase_mid": "/m/02y6n",
         "obj365_cat": "French Fries",
+        "oid_boxabel_leaf": "/m/02y6n",
         "oid_name": "French fries",
         "wikidata_desc": "deep-fried strips or wedges of potato",
         "wikidata_name": "french fries",
@@ -2550,6 +2709,7 @@
     "french_horn": {
         "freebase_mid": "/m/0319l",
         "obj365_cat": "French",
+        "oid_boxabel_leaf": "/m/0319l",
         "oid_name": "French horn",
         "wikidata_desc": "type of brass instrument",
         "wikidata_name": "French horn",
@@ -2573,6 +2733,7 @@
     "frog": {
         "context": "animal",
         "freebase_mid": "/m/09ld4",
+        "oid_boxabel_leaf": "/m/09ld4",
         "oid_name": "Frog",
         "wikidata_desc": "order of amphibians",
         "wikidata_name": "anura",
@@ -2593,6 +2754,7 @@
     },
     "frying_pan": {
         "freebase_mid": "/m/04v6l4",
+        "oid_boxabel_leaf": "/m/04v6l4",
         "oid_name": "Frying pan",
         "wikidata_desc": "flat bottomed pan for cooking food on a stove",
         "wikidata_name": "frying pan",
@@ -2620,6 +2782,7 @@
     "garden_asparagus": {
         "freebase_mid": "/m/0cjs7",
         "obj365_cat": "Asparagus",
+        "oid_boxabel_leaf": "/m/0cjs7",
         "oid_name": "Garden Asparagus",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Asparagus officinalis",
@@ -2639,6 +2802,7 @@
     "gas_stove": {
         "freebase_mid": "/m/02wv84t",
         "obj365_cat": "Gas stove",
+        "oid_boxabel_leaf": "/m/02wv84t",
         "oid_name": "Gas stove",
         "wikidata_name": "gas stove",
         "wikidata_qid": "Q1667685",
@@ -2651,6 +2815,7 @@
         "coco_pano_name": "giraffe",
         "freebase_mid": "/m/03bk1",
         "obj365_cat": "Giraffe",
+        "oid_boxabel_leaf": "/m/03bk1",
         "oid_name": "Giraffe",
         "wikidata_desc": "proposed species of giraffe native to North Africa",
         "wikidata_name": "northern giraffe",
@@ -2660,6 +2825,7 @@
     },
     "girl": {
         "freebase_mid": "/m/05r655",
+        "oid_boxabel_leaf": "/m/05r655",
         "oid_name": "Girl",
         "wikidata_desc": "young female human",
         "wikidata_name": "girl",
@@ -2688,6 +2854,7 @@
     },
     "goat": {
         "freebase_mid": "/m/03fwl",
+        "oid_boxabel_leaf": "/m/03fwl",
         "oid_name": "Goat",
         "wikidata_desc": "domesticated mammal raised primarily for its milk",
         "wikidata_name": "goat",
@@ -2697,6 +2864,7 @@
     },
     "goggles": {
         "freebase_mid": "/m/02_n6y",
+        "oid_boxabel_leaf": "/m/02_n6y",
         "oid_name": "Goggles",
         "wikidata_desc": "forms of protective eyewear",
         "wikidata_name": "goggles",
@@ -2707,6 +2875,7 @@
     "goldfish": {
         "freebase_mid": "/m/03fj2",
         "obj365_cat": "Goldfish",
+        "oid_boxabel_leaf": "/m/03fj2",
         "oid_name": "Goldfish",
         "wikidata_desc": "species of freshwater fish, common in aquariums",
         "wikidata_name": "goldfish",
@@ -2717,6 +2886,7 @@
     "golf_ball": {
         "freebase_mid": "/m/044r5d",
         "obj365_cat": "Golf Ball",
+        "oid_boxabel_leaf": "/m/044r5d",
         "oid_name": "Golf ball",
         "wikidata_desc": "small solid core dimpled ball used in golf",
         "wikidata_name": "golf ball",
@@ -2726,6 +2896,7 @@
     },
     "golf_cart": {
         "freebase_mid": "/m/0323sq",
+        "oid_boxabel_leaf": "/m/0323sq",
         "oid_name": "Golf cart",
         "wikidata_desc": "small vehicle designed originally to carry golfers",
         "wikidata_name": "golf cart",
@@ -2745,6 +2916,7 @@
     "gondola": {
         "context": "boat",
         "freebase_mid": "/m/02068x",
+        "oid_boxabel_leaf": "/m/02068x",
         "oid_name": "Gondola",
         "wikidata_desc": "type of boat",
         "wikidata_name": "gondola",
@@ -2755,6 +2927,7 @@
     "goose": {
         "freebase_mid": "/m/0dbvp",
         "obj365_cat": "Goose",
+        "oid_boxabel_leaf": "/m/0dbvp",
         "oid_name": "Goose",
         "wikidata_desc": "tribe of birds, use Q16529344 for \"goose\"",
         "wikidata_name": "Anserini",
@@ -2766,6 +2939,7 @@
         "context": "fruit",
         "freebase_mid": "/m/0388q",
         "obj365_cat": "Grape",
+        "oid_boxabel_leaf": "/m/0388q",
         "oid_name": "Grape",
         "wikidata_desc": "the fruit, use Q191019 for the genus, use Q30046 for the species",
         "wikidata_name": "grape",
@@ -2774,6 +2948,7 @@
     "grapefruit": {
         "freebase_mid": "/m/0hqkz",
         "obj365_cat": "Grapefruit",
+        "oid_boxabel_leaf": "/m/0hqkz",
         "oid_name": "Grapefruit",
         "wikidata_desc": "nothospecies of plant",
         "wikidata_name": "Citrus \u00d7paradisi",
@@ -2829,6 +3004,7 @@
     },
     "guacamole": {
         "freebase_mid": "/m/02g30s",
+        "oid_boxabel_leaf": "/m/02g30s",
         "oid_name": "Guacamole",
         "wikidata_desc": "Guatemalan avocado-based dip, spread, or salad",
         "wikidata_name": "guacamole",
@@ -2839,6 +3015,7 @@
     "guitar": {
         "freebase_mid": "/m/0342h",
         "obj365_cat": "Guitar",
+        "oid_boxabel_leaf": "/m/0342h",
         "oid_name": "Guitar",
         "wikidata_desc": "fretted string instrument",
         "wikidata_name": "guitar",
@@ -2849,6 +3026,7 @@
     "hair": {
         "context": "human",
         "freebase_mid": "/m/03q69",
+        "oid_boxabel_leaf": "/m/03q69",
         "oid_name": "Human hair",
         "wikidata_desc": "protein filament that grows from follicles found in the dermis, or skin",
         "wikidata_name": "hair",
@@ -2881,6 +3059,7 @@
     "hamburger": {
         "freebase_mid": "/m/0cdn1",
         "obj365_cat": "Hamburger",
+        "oid_boxabel_leaf": "/m/0cdn1",
         "oid_name": "Hamburger",
         "wikidata_desc": "sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun",
         "wikidata_name": "hamburger",
@@ -2900,6 +3079,7 @@
     },
     "hamster": {
         "freebase_mid": "/m/03qrc",
+        "oid_boxabel_leaf": "/m/03qrc",
         "oid_name": "Hamster",
         "wikidata_desc": "subfamily of mammals",
         "wikidata_name": "Criciolina",
@@ -2910,6 +3090,7 @@
     "hand": {
         "context": "extremity",
         "freebase_mid": "/m/0k65p",
+        "oid_boxabel_leaf": "/m/0k65p",
         "oid_name": "Human hand",
         "wikidata_desc": "extremity at the end of an arm or forelimb",
         "wikidata_name": "hand",
@@ -2930,6 +3111,7 @@
         "coco_pano_name": "handbag",
         "freebase_mid": "/m/080hkjn",
         "obj365_cat": "Handbag/Satchel",
+        "oid_boxabel_leaf": "/m/080hkjn",
         "oid_name": "Handbag",
         "wikidata_desc": "handled medium-to-large bag that is often fashionably designed, typically used by women, to hold personal items",
         "wikidata_name": "handbag",
@@ -2945,6 +3127,7 @@
     "handgun": {
         "freebase_mid": "/m/0gxl3",
         "obj365_cat": "Gun",
+        "oid_boxabel_leaf": "/m/0gxl3",
         "oid_name": "Handgun",
         "wikidata_desc": "handgun",
         "wikidata_name": "Intratec TEC-22",
@@ -2963,6 +3146,7 @@
     },
     "harbor_seal": {
         "freebase_mid": "/m/02l8p9",
+        "oid_boxabel_leaf": "/m/02l8p9",
         "oid_name": "Harbor seal",
         "wikidata_desc": "species of mammal",
         "wikidata_name": "Phoca vitulina",
@@ -2982,6 +3166,7 @@
     "harp": {
         "context": "instrument",
         "freebase_mid": "/m/03m5k",
+        "oid_boxabel_leaf": "/m/03m5k",
         "oid_name": "Harp",
         "wikidata_desc": "class of musical instruments",
         "wikidata_name": "harp",
@@ -2991,6 +3176,7 @@
     },
     "harpsichord": {
         "freebase_mid": "/m/03q5t",
+        "oid_boxabel_leaf": "/m/03q5t",
         "oid_name": "Harpsichord",
         "wikidata_desc": "plucked-string keyboard instrument",
         "wikidata_name": "harpsichord",
@@ -3012,6 +3198,7 @@
     "head": {
         "context": "human",
         "freebase_mid": "/m/04hgtk",
+        "oid_boxabel_leaf": "/m/04hgtk",
         "oid_name": "Human head",
         "wikidata_desc": "part of an organism",
         "wikidata_name": "head",
@@ -3022,6 +3209,7 @@
     "headphone": {
         "freebase_mid": "/m/01b7fy",
         "obj365_cat": "Head Phone",
+        "oid_boxabel_leaf": "/m/01b7fy",
         "oid_name": "Headphones",
         "wikidata_desc": "small electric device converting electric signal to sound with low volume intended to be held close to a user's ear, usually used in pair placed near to the ears",
         "wikidata_name": "earphone",
@@ -3057,6 +3245,7 @@
     "helicopter": {
         "freebase_mid": "/m/09ct_",
         "obj365_cat": "Helicopter",
+        "oid_boxabel_leaf": "/m/09ct_",
         "oid_name": "Helicopter",
         "wikidata_desc": "type of rotor craft in which lift and thrust are supplied by rotors",
         "wikidata_name": "helicopter",
@@ -3078,6 +3267,7 @@
     "high_heels": {
         "freebase_mid": "/m/06k2mb",
         "obj365_cat": "High Heels",
+        "oid_boxabel_leaf": "/m/06k2mb",
         "oid_name": "High heels",
         "wikidata_desc": "footwear that raises the heel of the wearer's foot significantly higher than the toes",
         "wikidata_name": "high heels",
@@ -3116,6 +3306,7 @@
     },
     "honeycomb": {
         "freebase_mid": "/m/0fz0h",
+        "oid_boxabel_leaf": "/m/0fz0h",
         "oid_name": "Honeycomb",
         "wikidata_desc": "mass of hexagonal wax cells built by honey bees in their nests",
         "wikidata_name": "honeycomb",
@@ -3138,6 +3329,7 @@
         "coco_pano_name": "horse",
         "freebase_mid": "/m/03k3r",
         "obj365_cat": "Horse",
+        "oid_boxabel_leaf": "/m/03k3r",
         "oid_name": "Horse",
         "wikidata_desc": "domesticated (work) animal",
         "wikidata_name": "horse",
@@ -3165,6 +3357,7 @@
         "context": "bun",
         "freebase_mid": "/m/01b9xk",
         "obj365_cat": "Hot dog",
+        "oid_boxabel_leaf": "/m/01b9xk",
         "oid_name": "Hot dog",
         "wikidata_desc": "cooked or grilled sausage, often eaten in a sliced bun",
         "wikidata_name": "hot dog",
@@ -3176,6 +3369,7 @@
         "coco_pano_id": 128,
         "coco_pano_name": "house",
         "freebase_mid": "/m/03jm5",
+        "oid_boxabel_leaf": "/m/03jm5",
         "oid_name": "House",
         "wikidata_desc": "building intended for living in",
         "wikidata_name": "house",
@@ -3207,6 +3401,7 @@
     "ice_cream": {
         "freebase_mid": "/m/0cxn2",
         "obj365_cat": "Ice cream",
+        "oid_boxabel_leaf": "/m/0cxn2",
         "oid_name": "Ice cream",
         "wikidata_desc": "frozen dessert",
         "wikidata_name": "ice cream",
@@ -3226,6 +3421,7 @@
     },
     "infant_bed": {
         "freebase_mid": "/m/061hd_",
+        "oid_boxabel_leaf": "/m/061hd_",
         "oid_name": "Infant bed",
         "wikidata_desc": "small bed for infants and very young children",
         "wikidata_name": "infant bed",
@@ -3267,6 +3463,7 @@
     },
     "jacket": {
         "freebase_mid": "/m/032b3c",
+        "oid_boxabel_leaf": "/m/032b3c",
         "oid_name": "Jacket",
         "wikidata_desc": "clothing for the upper body",
         "wikidata_name": "jacket",
@@ -3284,6 +3481,7 @@
     "jaguar": {
         "context": "animal",
         "freebase_mid": "/m/0449p",
+        "oid_boxabel_leaf": "/m/0449p",
         "oid_name": "Jaguar (Animal)",
         "wikidata_desc": "species of big cat native to the Americas",
         "wikidata_name": "jaguar",
@@ -3293,6 +3491,7 @@
     },
     "jeans": {
         "freebase_mid": "/m/0fly7",
+        "oid_boxabel_leaf": "/m/0fly7",
         "oid_name": "Jeans",
         "wikidata_desc": "trousers often made from denim or dungaree cloth",
         "wikidata_name": "jeans",
@@ -3304,6 +3503,7 @@
         "context": "aquatic",
         "freebase_mid": "/m/0d8zb",
         "obj365_cat": "Jellyfish",
+        "oid_boxabel_leaf": "/m/0d8zb",
         "oid_name": "Jellyfish",
         "wikidata_desc": "soft-bodied, aquatic invertebrates",
         "wikidata_name": "jellyfish",
@@ -3313,6 +3513,7 @@
     },
     "jet_ski": {
         "freebase_mid": "/m/01xs3r",
+        "oid_boxabel_leaf": "/m/01xs3r",
         "oid_name": "Jet ski",
         "wikidata_desc": "brand of personal watercraft",
         "wikidata_name": "jet ski",
@@ -3321,6 +3522,7 @@
     "jug": {
         "freebase_mid": "/m/08hvt4",
         "obj365_cat": "Jug",
+        "oid_boxabel_leaf": "/m/08hvt4",
         "oid_name": "Jug",
         "wikidata_desc": "container used to hold liquid",
         "wikidata_name": "jug",
@@ -3330,6 +3532,7 @@
     },
     "juice": {
         "freebase_mid": "/m/01z1kdw",
+        "oid_boxabel_leaf": "/m/01z1kdw",
         "oid_name": "Juice",
         "wikidata_desc": "liquid that is naturally contained in fruit and vegetables",
         "wikidata_name": "juice",
@@ -3339,6 +3542,7 @@
     },
     "kangaroo": {
         "freebase_mid": "/m/04c0y",
+        "oid_boxabel_leaf": "/m/04c0y",
         "oid_name": "Kangaroo",
         "wikidata_desc": "family of mammals",
         "wikidata_name": "Macropodidae",
@@ -3349,6 +3553,7 @@
     "kettle": {
         "freebase_mid": "/m/03s_tn",
         "obj365_cat": "Kettle",
+        "oid_boxabel_leaf": "/m/03s_tn",
         "oid_name": "Kettle",
         "wikidata_desc": "appliance for boiling water",
         "wikidata_name": "kettle",
@@ -3367,6 +3572,7 @@
     },
     "kitchen_and_dining_room_table": {
         "freebase_mid": "/m/0h8n5zk",
+        "oid_boxabel_leaf": "/m/0h8n5zk",
         "oid_name": "Kitchen & dining room table"
     },
     "kitchen_appliance": {
@@ -3380,6 +3586,7 @@
     },
     "kitchen_knife": {
         "freebase_mid": "/m/058qzx",
+        "oid_boxabel_leaf": "/m/058qzx",
         "oid_name": "Kitchen knife",
         "wikidata_desc": "kitchen knife",
         "wikidata_name": "Santoku",
@@ -3409,6 +3616,7 @@
         "coco_pano_name": "kite",
         "freebase_mid": "/m/02zt3",
         "obj365_cat": "Kite",
+        "oid_boxabel_leaf": "/m/02zt3",
         "oid_name": "Kite",
         "wikidata_desc": "tethered aircraft",
         "wikidata_name": "kite",
@@ -3431,6 +3639,7 @@
         "coco_pano_name": "knife",
         "freebase_mid": "/m/04ctx",
         "obj365_cat": "Knife",
+        "oid_boxabel_leaf": "/m/04ctx",
         "oid_name": "Knife",
         "wikidata_desc": "tool with a cutting edge or blade",
         "wikidata_name": "knife",
@@ -3450,6 +3659,7 @@
     "ladder": {
         "freebase_mid": "/m/012w5l",
         "obj365_cat": "Ladder",
+        "oid_boxabel_leaf": "/m/012w5l",
         "oid_name": "Ladder",
         "wikidata_desc": "vertical set of rungs or steps",
         "wikidata_name": "ladder",
@@ -3468,6 +3678,7 @@
     },
     "ladybug": {
         "freebase_mid": "/m/0gj37",
+        "oid_boxabel_leaf": "/m/0gj37",
         "oid_name": "Ladybug",
         "wikidata_desc": "family of insects",
         "wikidata_name": "Coccinellidae",
@@ -3478,6 +3689,7 @@
     "lamp": {
         "freebase_mid": "/m/0dtln",
         "obj365_cat": "Lamp",
+        "oid_boxabel_leaf": "/m/0dtln",
         "oid_name": "Lamp",
         "wikidata_desc": "device that produces light from electricity, packaged into a replaceable assembly",
         "wikidata_name": "light bulb",
@@ -3495,6 +3707,7 @@
     "lantern": {
         "freebase_mid": "/m/01jfsr",
         "obj365_cat": "Lantern",
+        "oid_boxabel_leaf": "/m/01jfsr",
         "oid_name": "Lantern",
         "wikidata_desc": "portable lighting device",
         "wikidata_name": "lantern",
@@ -3508,6 +3721,7 @@
         "coco_pano_name": "laptop",
         "freebase_mid": "/m/01c648",
         "obj365_cat": "Laptop",
+        "oid_boxabel_leaf": "/m/01c648",
         "oid_name": "Laptop",
         "wikidata_desc": "personal computer for mobile use",
         "wikidata_name": "laptop",
@@ -3518,6 +3732,7 @@
     "lavender": {
         "context": "plant",
         "freebase_mid": "/m/04gth",
+        "oid_boxabel_leaf": "/m/04gth",
         "oid_name": "Lavender (Plant)",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Lavandula",
@@ -3531,6 +3746,7 @@
     "leg": {
         "context": "human",
         "freebase_mid": "/m/035r7c",
+        "oid_boxabel_leaf": "/m/035r7c",
         "oid_name": "Human leg",
         "wikidata_desc": "weight bearing and locomotive anatomical structure, usually having a columnar shape, function as \"extensible struts\"",
         "wikidata_name": "leg",
@@ -3541,6 +3757,7 @@
     "lemon": {
         "freebase_mid": "/m/09k_b",
         "obj365_cat": "Lemon",
+        "oid_boxabel_leaf": "/m/09k_b",
         "oid_name": "Lemon",
         "wikidata_desc": "nothospecies of plant (for lemon use Q1093742)",
         "wikidata_name": "Citrus \u00d7limon",
@@ -3550,6 +3767,7 @@
     },
     "leopard": {
         "freebase_mid": "/m/0c29q",
+        "oid_boxabel_leaf": "/m/0c29q",
         "oid_name": "Leopard",
         "wikidata_desc": "species of mammal",
         "wikidata_name": "leopard",
@@ -3568,6 +3786,7 @@
     },
     "license_plate": {
         "freebase_mid": "/m/01jfm_",
+        "oid_boxabel_leaf": "/m/01jfm_",
         "oid_name": "Vehicle registration plate",
         "wikidata_desc": "metal or plastic identification plate attached to a motor vehicle or trailer",
         "wikidata_name": "vehicle registration plate",
@@ -3588,6 +3807,7 @@
         "coco_pano_id": 130,
         "coco_pano_name": "light",
         "freebase_mid": "/m/0h8l4fh",
+        "oid_boxabel_leaf": "/m/0h8l4fh",
         "oid_name": "Light bulb",
         "wikidata_desc": "electric light using a wire filament heated by a current passing through it, until it glows",
         "wikidata_name": "incandescent light bulb",
@@ -3597,6 +3817,7 @@
     },
     "light_switch": {
         "freebase_mid": "/m/03jbxj",
+        "oid_boxabel_leaf": "/m/03jbxj",
         "oid_name": "Light switch",
         "wikidata_desc": "device used to operate electric lights, permanently connected equipment, or electrical outlets",
         "wikidata_name": "light switch",
@@ -3613,6 +3834,7 @@
     },
     "lighthouse": {
         "freebase_mid": "/m/04h7h",
+        "oid_boxabel_leaf": "/m/04h7h",
         "oid_name": "Lighthouse",
         "wikidata_desc": "structure designed to emit light to aid navigation",
         "wikidata_name": "lighthouse",
@@ -3622,6 +3844,7 @@
     },
     "lily": {
         "freebase_mid": "/m/0jqgx",
+        "oid_boxabel_leaf": "/m/0jqgx",
         "oid_name": "Lily",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Lilium",
@@ -3631,6 +3854,7 @@
     },
     "limousine": {
         "freebase_mid": "/m/01lcw4",
+        "oid_boxabel_leaf": "/m/01lcw4",
         "oid_name": "Limousine",
         "wikidata_desc": "luxury sedan or saloon car generally driven by a chauffeur",
         "wikidata_name": "limousine",
@@ -3641,6 +3865,7 @@
     "lion": {
         "freebase_mid": "/m/096mb",
         "obj365_cat": "Lion",
+        "oid_boxabel_leaf": "/m/096mb",
         "oid_name": "Lion",
         "wikidata_desc": "species of big cat",
         "wikidata_name": "lion",
@@ -3660,6 +3885,7 @@
     },
     "lizard": {
         "freebase_mid": "/m/04m9y",
+        "oid_boxabel_leaf": "/m/04m9y",
         "oid_name": "Lizard",
         "wikidata_desc": "suborder of reptiles",
         "wikidata_name": "Lacertilia",
@@ -3670,6 +3896,7 @@
     "lobster": {
         "freebase_mid": "/m/0cjq5",
         "obj365_cat": "Lobster",
+        "oid_boxabel_leaf": "/m/0cjq5",
         "oid_name": "Lobster",
         "wikidata_desc": "family of crustaceans",
         "wikidata_name": "Nephropidae",
@@ -3698,6 +3925,7 @@
     },
     "lynx": {
         "freebase_mid": "/m/04g2r",
+        "oid_boxabel_leaf": "/m/04g2r",
         "oid_name": "Lynx",
         "wikidata_desc": "genus of mammals",
         "wikidata_name": "Lynx",
@@ -3728,6 +3956,7 @@
     },
     "man": {
         "freebase_mid": "/m/04yx4",
+        "oid_boxabel_leaf": "/m/04yx4",
         "oid_name": "Man",
         "wikidata_desc": "male adult human",
         "wikidata_name": "man",
@@ -3738,6 +3967,7 @@
     "mango": {
         "freebase_mid": "/m/0fldg",
         "obj365_cat": "Mango",
+        "oid_boxabel_leaf": "/m/0fldg",
         "oid_name": "Mango",
         "wikidata_desc": "fruit, use Q3919027 for the species; Q161807 for the genus",
         "wikidata_name": "mango",
@@ -3747,6 +3977,7 @@
     },
     "maple": {
         "freebase_mid": "/m/0cffdh",
+        "oid_boxabel_leaf": "/m/0cffdh",
         "oid_name": "Maple",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Acer",
@@ -3795,6 +4026,7 @@
     },
     "measuring_cup": {
         "freebase_mid": "/m/07v9_z",
+        "oid_boxabel_leaf": "/m/07v9_z",
         "oid_name": "Measuring cup",
         "wikidata_desc": "kitchen utensil to measure volume of cooking ingredients",
         "wikidata_name": "measuring cup",
@@ -3809,6 +4041,7 @@
     },
     "mechanical_fan": {
         "freebase_mid": "/m/02x984l",
+        "oid_boxabel_leaf": "/m/02x984l",
         "oid_name": "Mechanical fan",
         "wikidata_desc": "machine with spinning blades used to create airflow",
         "wikidata_name": "mechanical fan",
@@ -3842,6 +4075,7 @@
     "microphone": {
         "freebase_mid": "/m/0hg7b",
         "obj365_cat": "Microphone",
+        "oid_boxabel_leaf": "/m/0hg7b",
         "oid_name": "Microphone",
         "wikidata_desc": "acoustic-to-electric transducer or sensor that converts sound into an electrical signal",
         "wikidata_name": "microphone",
@@ -3856,6 +4090,7 @@
         "context": "appliance",
         "freebase_mid": "/m/0fx9l",
         "obj365_cat": "Microwave",
+        "oid_boxabel_leaf": "/m/0fx9l",
         "oid_name": "Microwave oven",
         "wikidata_desc": "kitchen cooking appliance",
         "wikidata_name": "microwave oven",
@@ -3874,6 +4109,7 @@
     },
     "miniskirt": {
         "freebase_mid": "/m/01cmb2",
+        "oid_boxabel_leaf": "/m/01cmb2",
         "oid_name": "Miniskirt",
         "wikidata_desc": "very short skirt that usually extends to mid-thigh",
         "wikidata_name": "miniskirt",
@@ -3887,6 +4123,7 @@
         "context": "surface",
         "freebase_mid": "/m/054_l",
         "obj365_cat": "Mirror",
+        "oid_boxabel_leaf": "/m/054_l",
         "oid_name": "Mirror",
         "wikidata_desc": "surface, typically glass coated with a metal amalgam, which reflects a clear image.",
         "wikidata_name": "mirror",
@@ -3897,6 +4134,7 @@
     "missile": {
         "context": "propelled",
         "freebase_mid": "/m/04ylt",
+        "oid_boxabel_leaf": "/m/04ylt",
         "oid_name": "Missile",
         "wikidata_desc": "self-propelled guided weapon system",
         "wikidata_name": "missile",
@@ -3906,6 +4144,7 @@
     },
     "mixer": {
         "freebase_mid": "/m/063rgb",
+        "oid_boxabel_leaf": "/m/063rgb",
         "oid_name": "Mixer",
         "wikidata_desc": "kitchen appliance intended for mixing, folding, beating, and whipping food ingredients",
         "wikidata_name": "mixer",
@@ -3928,6 +4167,7 @@
         "coco_pano_name": "cell phone",
         "freebase_mid": "/m/050k8",
         "obj365_cat": "Cell Phone",
+        "oid_boxabel_leaf": "/m/050k8",
         "oid_name": "Mobile phone",
         "wikidata_desc": "portable device to make telephone calls using a radio link",
         "wikidata_name": "mobile phone",
@@ -3941,6 +4181,7 @@
     "monkey": {
         "freebase_mid": "/m/08pbxl",
         "obj365_cat": "Monkey",
+        "oid_boxabel_leaf": "/m/08pbxl",
         "oid_name": "Monkey",
         "wikidata_desc": "animal of the \"higher primates\" (the simians)",
         "wikidata_name": "monkey",
@@ -3967,6 +4208,7 @@
         "coco_pano_name": "motorcycle",
         "freebase_mid": "/m/04_sv",
         "obj365_cat": "Motorcycle",
+        "oid_boxabel_leaf": "/m/04_sv",
         "oid_name": "Motorcycle",
         "wikidata_desc": "two- or three-wheeled motor vehicle",
         "wikidata_name": "motorcycle",
@@ -3992,6 +4234,7 @@
         "context": "animal",
         "freebase_mid": "/m/04rmv",
         "obj365_cat": "Mouse",
+        "oid_boxabel_leaf": "/m/04rmv",
         "oid_name": "Mouse",
         "wikidata_desc": "genus of mammals",
         "wikidata_name": "Mus",
@@ -4000,6 +4243,7 @@
     "mouth": {
         "context": "human",
         "freebase_mid": "/m/0283dt1",
+        "oid_boxabel_leaf": "/m/0283dt1",
         "oid_name": "Human mouth",
         "wikidata_desc": "first portion of the alimentary canal that receives food",
         "wikidata_name": "mouth",
@@ -4009,6 +4253,7 @@
     },
     "muffin": {
         "freebase_mid": "/m/01tcjp",
+        "oid_boxabel_leaf": "/m/01tcjp",
         "oid_name": "Muffin",
         "wikidata_desc": "cake",
         "wikidata_name": "muffin",
@@ -4018,6 +4263,7 @@
     },
     "mug": {
         "freebase_mid": "/m/02jvh9",
+        "oid_boxabel_leaf": "/m/02jvh9",
         "oid_name": "Mug",
         "wikidata_desc": "type of cup",
         "wikidata_name": "mug",
@@ -4027,6 +4273,7 @@
     },
     "mule": {
         "freebase_mid": "/m/0dbzx",
+        "oid_boxabel_leaf": "/m/0dbzx",
         "oid_name": "Mule",
         "wikidata_desc": "offspring of a male donkey (jack) and a female horse (mare)",
         "wikidata_name": "mule",
@@ -4037,6 +4284,7 @@
     "mushroom": {
         "freebase_mid": "/m/052sf",
         "obj365_cat": "Mushroon",
+        "oid_boxabel_leaf": "/m/052sf",
         "oid_name": "Mushroom",
         "wikidata_desc": "fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source",
         "wikidata_name": "mushroom",
@@ -4055,6 +4303,7 @@
     },
     "musical_keyboard": {
         "freebase_mid": "/m/057cc",
+        "oid_boxabel_leaf": "/m/057cc",
         "oid_name": "Musical keyboard",
         "wikidata_desc": "musical instrument part",
         "wikidata_name": "musical keyboard",
@@ -4063,6 +4312,7 @@
     "nail": {
         "context": "construction",
         "freebase_mid": "/m/05bm6",
+        "oid_boxabel_leaf": "/m/05bm6",
         "oid_name": "Nail (Construction)",
         "wikidata_desc": "sharp object of hard metal used as a fastener",
         "wikidata_name": "nail",
@@ -4080,6 +4330,7 @@
     "necklace": {
         "freebase_mid": "/m/01llwg",
         "obj365_cat": "Necklace",
+        "oid_boxabel_leaf": "/m/01llwg",
         "oid_name": "Necklace",
         "wikidata_desc": "article of jewellery",
         "wikidata_name": "necklace",
@@ -4101,6 +4352,7 @@
     "nightstand": {
         "freebase_mid": "/m/02z51p",
         "obj365_cat": "Nightstand",
+        "oid_boxabel_leaf": "/m/02z51p",
         "oid_name": "Nightstand",
         "wikidata_desc": "small table or cabinet designed to stand beside a bed or elsewhere in a bedroom",
         "wikidata_name": "nightstand",
@@ -4120,6 +4372,7 @@
     "nose": {
         "context": "human",
         "freebase_mid": "/m/0k0pj",
+        "oid_boxabel_leaf": "/m/0k0pj",
         "oid_name": "Human nose",
         "wikidata_desc": "organ that smells and facilitates breathing",
         "wikidata_name": "nose",
@@ -4138,6 +4391,7 @@
     },
     "oboe": {
         "freebase_mid": "/m/05kms",
+        "oid_boxabel_leaf": "/m/05kms",
         "oid_name": "Oboe",
         "wikidata_desc": "musical instrument of the woodwind family",
         "wikidata_name": "oboe",
@@ -4147,6 +4401,7 @@
     },
     "office_building": {
         "freebase_mid": "/m/021sj1",
+        "oid_boxabel_leaf": "/m/021sj1",
         "oid_name": "Office building",
         "wikidata_desc": "room where people perform their duties or a position within an organization",
         "wikidata_name": "office",
@@ -4185,6 +4440,7 @@
         "context": "fruit",
         "freebase_mid": "/m/0cyhj_",
         "obj365_cat": "Orange/Tangerine",
+        "oid_boxabel_leaf": "/m/0cyhj_",
         "oid_name": "Orange",
         "wikidata_desc": "citrus fruit of the orange tree",
         "wikidata_name": "orange",
@@ -4195,6 +4451,7 @@
     "organ": {
         "context": "musical_instrument",
         "freebase_mid": "/m/013y1f",
+        "oid_boxabel_leaf": "/m/013y1f",
         "oid_name": "Organ (Musical Instrument)",
         "wikidata_desc": "musical keyboard instrument",
         "wikidata_name": "organ",
@@ -4204,6 +4461,7 @@
     },
     "ostrich": {
         "freebase_mid": "/m/05n4y",
+        "oid_boxabel_leaf": "/m/05n4y",
         "oid_name": "Ostrich",
         "wikidata_desc": "species of large flightless birds",
         "wikidata_name": "Common Ostrich",
@@ -4213,6 +4471,7 @@
     },
     "otter": {
         "freebase_mid": "/m/0cn6p",
+        "oid_boxabel_leaf": "/m/0cn6p",
         "oid_name": "Otter",
         "wikidata_desc": "subfamily of mammals",
         "wikidata_name": "Lutrinae",
@@ -4226,6 +4485,7 @@
         "coco_pano_name": "oven",
         "freebase_mid": "/m/029bxz",
         "obj365_cat": "Oven",
+        "oid_boxabel_leaf": "/m/029bxz",
         "oid_name": "Oven",
         "wikidata_desc": "thermally insulated chamber used for the heating, baking or drying of a substance",
         "wikidata_name": "oven",
@@ -4235,6 +4495,7 @@
     },
     "owl": {
         "freebase_mid": "/m/09d5_",
+        "oid_boxabel_leaf": "/m/09d5_",
         "oid_name": "Owl",
         "wikidata_desc": "order of birds",
         "wikidata_name": "Strigiformes",
@@ -4245,6 +4506,7 @@
     "oyster": {
         "freebase_mid": "/m/0_cp5",
         "obj365_cat": "Oyster",
+        "oid_boxabel_leaf": "/m/0_cp5",
         "oid_name": "Oyster",
         "wikidata_desc": "salt-water bivalve mollusc",
         "wikidata_name": "oyster",
@@ -4255,6 +4517,7 @@
     "paddle": {
         "freebase_mid": "/m/014y4n",
         "obj365_cat": "Paddle",
+        "oid_boxabel_leaf": "/m/014y4n",
         "oid_name": "Paddle",
         "wikidata_desc": "tool used for pushing against liquids, either as a form of propulsion in a boat or as an implement for mixing",
         "wikidata_name": "paddle",
@@ -4272,6 +4535,7 @@
     },
     "palm_tree": {
         "freebase_mid": "/m/0cdl1",
+        "oid_boxabel_leaf": "/m/0cdl1",
         "oid_name": "Palm tree",
         "wikidata_desc": "family of plants",
         "wikidata_name": "Arecaceae",
@@ -4281,6 +4545,7 @@
     },
     "pancake": {
         "freebase_mid": "/m/01dwwc",
+        "oid_boxabel_leaf": "/m/01dwwc",
         "oid_name": "Pancake",
         "wikidata_desc": "thin, round cake made of eggs, milk and flour",
         "wikidata_name": "pancake",
@@ -4327,6 +4592,7 @@
     },
     "paper_towel": {
         "freebase_mid": "/m/02w3r3",
+        "oid_boxabel_leaf": "/m/02w3r3",
         "oid_name": "Paper towel",
         "wikidata_desc": "absorbent towel made from paper",
         "wikidata_name": "paper towel",
@@ -4336,6 +4602,7 @@
     },
     "parachute": {
         "freebase_mid": "/m/0cyfs",
+        "oid_boxabel_leaf": "/m/0cyfs",
         "oid_name": "Parachute",
         "wikidata_desc": "device used to slow the motion of an object through an atmosphere",
         "wikidata_name": "parachute",
@@ -4359,6 +4626,7 @@
     "parrot": {
         "freebase_mid": "/m/0gv1x",
         "obj365_cat": "Parrot",
+        "oid_boxabel_leaf": "/m/0gv1x",
         "oid_name": "Parrot",
         "wikidata_desc": "order of birds",
         "wikidata_name": "Psittaciformes",
@@ -4378,6 +4646,7 @@
     "pasta": {
         "freebase_mid": "/m/05z55",
         "obj365_cat": "Pasta",
+        "oid_boxabel_leaf": "/m/05z55",
         "oid_name": "Pasta",
         "wikidata_desc": "Italian food made from flour, eggs and water and shaped in different forms. It is not considered pasta until served with a sauce.",
         "wikidata_name": "pasta",
@@ -4397,6 +4666,7 @@
     "peach": {
         "freebase_mid": "/m/0dj6p",
         "obj365_cat": "Peach",
+        "oid_boxabel_leaf": "/m/0dj6p",
         "oid_name": "Peach",
         "wikidata_desc": "species of fruit tree (for the fruit use Q13411121)",
         "wikidata_name": "Prunus persica",
@@ -4407,6 +4677,7 @@
     "pear": {
         "freebase_mid": "/m/061_f",
         "obj365_cat": "Pear",
+        "oid_boxabel_leaf": "/m/061_f",
         "oid_name": "Pear",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Pyrus",
@@ -4417,6 +4688,7 @@
     "pen": {
         "freebase_mid": "/m/0k1tl",
         "obj365_cat": "Pen/Pencil",
+        "oid_boxabel_leaf": "/m/0k1tl",
         "oid_name": "Pen",
         "wikidata_desc": "writing and drawing implement",
         "wikidata_name": "pen",
@@ -4446,6 +4718,7 @@
     "penguin": {
         "freebase_mid": "/m/05z6w",
         "obj365_cat": "Penguin",
+        "oid_boxabel_leaf": "/m/05z6w",
         "oid_name": "Penguin",
         "wikidata_desc": "family of birds",
         "wikidata_name": "Spheniscidae",
@@ -4496,6 +4769,7 @@
     },
     "personal_flotation_device": {
         "freebase_mid": "/m/054xkw",
+        "oid_boxabel_leaf": "/m/054xkw",
         "oid_name": "Personal flotation device",
         "wikidata_name": "personal flotation device",
         "wikidata_qid": "Q1262971"
@@ -4503,6 +4777,7 @@
     "piano": {
         "freebase_mid": "/m/05r5c",
         "obj365_cat": "Piano",
+        "oid_boxabel_leaf": "/m/05r5c",
         "oid_name": "Piano",
         "wikidata_desc": "musical instrument",
         "wikidata_name": "piano",
@@ -4521,6 +4796,7 @@
     },
     "picnic_basket": {
         "freebase_mid": "/m/07kng9",
+        "oid_boxabel_leaf": "/m/07kng9",
         "oid_name": "Picnic basket",
         "wikidata_name": "picnic basket",
         "wikidata_qid": "Q2835904"
@@ -4528,6 +4804,7 @@
     "picture_frame": {
         "freebase_mid": "/m/06z37_",
         "obj365_cat": "Picture/Frame",
+        "oid_boxabel_leaf": "/m/06z37_",
         "oid_name": "Picture frame",
         "wikidata_desc": "decorative edging for a picture, such as a painting or photograph",
         "wikidata_name": "picture frame",
@@ -4547,6 +4824,7 @@
     "pig": {
         "freebase_mid": "/m/068zj",
         "obj365_cat": "Pig",
+        "oid_boxabel_leaf": "/m/068zj",
         "oid_name": "Pig",
         "wikidata_desc": "genus of mammals",
         "wikidata_name": "pig",
@@ -4568,6 +4846,7 @@
         "coco_pano_name": "pillow",
         "freebase_mid": "/m/034c16",
         "obj365_cat": "Pillow",
+        "oid_boxabel_leaf": "/m/034c16",
         "oid_name": "Pillow",
         "wikidata_desc": "cushion for the head",
         "wikidata_name": "pillow",
@@ -4578,6 +4857,7 @@
     "pineapple": {
         "freebase_mid": "/m/0fp6w",
         "obj365_cat": "Pineapple",
+        "oid_boxabel_leaf": "/m/0fp6w",
         "oid_name": "Pineapple",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Ananas comosus",
@@ -4588,6 +4868,7 @@
     "pitcher": {
         "context": "spout",
         "freebase_mid": "/m/054fyh",
+        "oid_boxabel_leaf": "/m/054fyh",
         "oid_name": "Pitcher (Container)",
         "wikidata_desc": "container with a spout used for storing and pouring contents which are liquid in form",
         "wikidata_name": "pitcher",
@@ -4601,6 +4882,7 @@
         "coco_pano_name": "pizza",
         "freebase_mid": "/m/0663v",
         "obj365_cat": "Pizza",
+        "oid_boxabel_leaf": "/m/0663v",
         "oid_name": "Pizza",
         "wikidata_desc": "Italian dish of oven-baked bread with various toppings",
         "wikidata_name": "pizza",
@@ -4626,6 +4908,7 @@
     },
     "plastic_bag": {
         "freebase_mid": "/m/05gqfk",
+        "oid_boxabel_leaf": "/m/05gqfk",
         "oid_name": "Plastic bag",
         "wikidata_desc": "type of container made of thin, flexible, plastic film, nonwoven fabric, or plastic textile",
         "wikidata_name": "plastic bag",
@@ -4636,6 +4919,7 @@
     "plate": {
         "freebase_mid": "/m/050gv4",
         "obj365_cat": "Plate",
+        "oid_boxabel_leaf": "/m/050gv4",
         "oid_name": "Plate",
         "wikidata_desc": "flat vessel on which food can be served",
         "wikidata_name": "plate",
@@ -4654,6 +4938,7 @@
     },
     "platter": {
         "freebase_mid": "/m/099ssp",
+        "oid_boxabel_leaf": "/m/099ssp",
         "oid_name": "Platter",
         "wikidata_desc": "large piece of dishware",
         "wikidata_name": "platter",
@@ -4700,6 +4985,7 @@
     },
     "polar_bear": {
         "freebase_mid": "/m/0633h",
+        "oid_boxabel_leaf": "/m/0633h",
         "oid_name": "Polar bear",
         "wikidata_desc": "species of bear native largely within the Arctic Circle",
         "wikidata_name": "polar bear",
@@ -4710,6 +4996,7 @@
     "pomegranate": {
         "freebase_mid": "/m/0jwn_",
         "obj365_cat": "Pomegranate",
+        "oid_boxabel_leaf": "/m/0jwn_",
         "oid_name": "Pomegranate",
         "wikidata_desc": "fruit-bearing deciduous shrub",
         "wikidata_name": "Punica granatum",
@@ -4719,6 +5006,7 @@
     },
     "popcorn": {
         "freebase_mid": "/m/01hrv5",
+        "oid_boxabel_leaf": "/m/01hrv5",
         "oid_name": "Popcorn",
         "wikidata_desc": "snack food",
         "wikidata_name": "popcorn",
@@ -4728,6 +5016,7 @@
     },
     "porch": {
         "freebase_mid": "/m/04m6gz",
+        "oid_boxabel_leaf": "/m/04m6gz",
         "oid_name": "Porch",
         "wikidata_desc": "a room or gallery at the front entrance of a building forming a low front",
         "wikidata_name": "porch",
@@ -4737,6 +5026,7 @@
     },
     "porcupine": {
         "freebase_mid": "/m/0c568",
+        "oid_boxabel_leaf": "/m/0c568",
         "oid_name": "Porcupine",
         "wikidata_desc": "rodent with a coat of sharp spines",
         "wikidata_name": "porcupine",
@@ -4746,6 +5036,7 @@
     },
     "poster": {
         "freebase_mid": "/m/01n5jq",
+        "oid_boxabel_leaf": "/m/01n5jq",
         "oid_name": "Poster",
         "wikidata_desc": "any piece of printed paper designed to be attached to a wall or vertical surface",
         "wikidata_name": "poster",
@@ -4765,6 +5056,7 @@
     "potato": {
         "freebase_mid": "/m/05vtc",
         "obj365_cat": "Potato",
+        "oid_boxabel_leaf": "/m/05vtc",
         "oid_name": "Potato",
         "wikidata_desc": "species of plant",
         "wikidata_name": "potato",
@@ -4787,6 +5079,7 @@
         "coco_pano_name": "potted plant",
         "freebase_mid": "/m/03fp41",
         "obj365_cat": "Potted Plant",
+        "oid_boxabel_leaf": "/m/03fp41",
         "oid_name": "Houseplant",
         "wikidata_desc": "a plant that is grown indoors",
         "wikidata_name": "houseplant",
@@ -4810,6 +5103,7 @@
     },
     "power_plugs_and_sockets": {
         "freebase_mid": "/m/03bbps",
+        "oid_boxabel_leaf": "/m/03bbps",
         "oid_name": "Power plugs and sockets",
         "wikidata_desc": "power connector used to connect appliances to mains power",
         "wikidata_name": "AC power connector",
@@ -4817,6 +5111,7 @@
     },
     "pressure_cooker": {
         "freebase_mid": "/m/0h8ntjv",
+        "oid_boxabel_leaf": "/m/0h8ntjv",
         "oid_name": "Pressure cooker",
         "wikidata_desc": "cooking vessel",
         "wikidata_name": "pressure cooker",
@@ -4826,6 +5121,7 @@
     },
     "pretzel": {
         "freebase_mid": "/m/01f91_",
+        "oid_boxabel_leaf": "/m/01f91_",
         "oid_name": "Pretzel",
         "wikidata_desc": "type of baked bread",
         "wikidata_name": "pretzel",
@@ -4837,6 +5133,7 @@
         "context": "computer",
         "freebase_mid": "/m/01m4t",
         "obj365_cat": "Printer",
+        "oid_boxabel_leaf": "/m/01m4t",
         "oid_name": "Printer",
         "wikidata_desc": "permanently copies digital text or graphics",
         "wikidata_name": "printer",
@@ -4856,6 +5153,7 @@
     "pumpkin": {
         "freebase_mid": "/m/05zsy",
         "obj365_cat": "Pumpkin",
+        "oid_boxabel_leaf": "/m/05zsy",
         "oid_name": "Pumpkin",
         "wikidata_desc": "fruit",
         "wikidata_name": "pumpkin",
@@ -4865,6 +5163,7 @@
     },
     "punching_bag": {
         "freebase_mid": "/m/0420v5",
+        "oid_boxabel_leaf": "/m/0420v5",
         "oid_name": "Punching bag",
         "wikidata_name": "punching bag",
         "wikidata_qid": "Q966668",
@@ -4883,6 +5182,7 @@
     "rabbit": {
         "freebase_mid": "/m/06mf6",
         "obj365_cat": "Rabbit",
+        "oid_boxabel_leaf": "/m/06mf6",
         "oid_name": "Rabbit",
         "wikidata_desc": "species of small mammals (Leporidae)",
         "wikidata_name": "rabbit",
@@ -4892,6 +5192,7 @@
     },
     "raccoon": {
         "freebase_mid": "/m/0dq75",
+        "oid_boxabel_leaf": "/m/0dq75",
         "oid_name": "Raccoon",
         "wikidata_desc": "species of mammal native to North America",
         "wikidata_name": "raccoon",
@@ -4928,6 +5229,7 @@
     "radish": {
         "freebase_mid": "/m/015x5n",
         "obj365_cat": "Radish",
+        "oid_boxabel_leaf": "/m/015x5n",
         "oid_name": "Radish",
         "wikidata_desc": "Fruto",
         "wikidata_name": "Raphanus sativus",
@@ -4957,6 +5259,7 @@
     },
     "raven": {
         "freebase_mid": "/m/06j2d",
+        "oid_boxabel_leaf": "/m/06j2d",
         "oid_name": "Raven",
         "wikidata_desc": "common name of several birds",
         "wikidata_name": "raven",
@@ -5004,6 +5307,7 @@
         "coco_pano_name": "refrigerator",
         "freebase_mid": "/m/040b_t",
         "obj365_cat": "Refrigerator",
+        "oid_boxabel_leaf": "/m/040b_t",
         "oid_name": "Refrigerator",
         "wikidata_desc": "household or industrial appliance for preserving food at a low temperature",
         "wikidata_name": "refrigerator",
@@ -5036,6 +5340,7 @@
     },
     "rhinoceros": {
         "freebase_mid": "/m/03d443",
+        "oid_boxabel_leaf": "/m/03d443",
         "oid_name": "Rhinoceros",
         "wikidata_desc": "family of mammals",
         "wikidata_name": "rhinoceros",
@@ -5070,6 +5375,7 @@
     },
     "rifle": {
         "freebase_mid": "/m/06c54",
+        "oid_boxabel_leaf": "/m/06c54",
         "oid_name": "Rifle",
         "wikidata_desc": "firearm designed to be fired from the shoulder",
         "wikidata_name": "rifle",
@@ -5088,6 +5394,7 @@
     },
     "ring_binder": {
         "freebase_mid": "/m/04zwwv",
+        "oid_boxabel_leaf": "/m/04zwwv",
         "oid_name": "Ring binder",
         "wikidata_desc": "loose-leaf binder with ring-shaped clasps that can be opened to pass through holes in the paper",
         "wikidata_name": "ring binder",
@@ -5124,6 +5431,7 @@
     },
     "rocket": {
         "freebase_mid": "/m/09rvcxw",
+        "oid_boxabel_leaf": "/m/09rvcxw",
         "oid_name": "Rocket",
         "wikidata_desc": "pyrokinetic engine used for propulsion; for the incendiary weapon, see Q2037215",
         "wikidata_name": "rocket",
@@ -5138,6 +5446,7 @@
     },
     "roller_skates": {
         "freebase_mid": "/m/02p3w7d",
+        "oid_boxabel_leaf": "/m/02p3w7d",
         "oid_name": "Roller skates",
         "wikidata_desc": "shoe or overshoe with wheels",
         "wikidata_name": "roller skate",
@@ -5155,6 +5464,7 @@
     },
     "rose": {
         "freebase_mid": "/m/06m11",
+        "oid_boxabel_leaf": "/m/06m11",
         "oid_name": "Rose",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Rosa",
@@ -5184,6 +5494,7 @@
     },
     "rugby_ball": {
         "freebase_mid": "/m/0wdt60w",
+        "oid_boxabel_leaf": "/m/0wdt60w",
         "oid_name": "Rugby ball",
         "wikidata_desc": "elongated ellipsoidal ball used in rugby football",
         "wikidata_name": "rugby ball",
@@ -5195,6 +5506,7 @@
         "context": "stick",
         "freebase_mid": "/m/0hdln",
         "obj365_cat": "Tape Measur/ Ruler",
+        "oid_boxabel_leaf": "/m/0hdln",
         "oid_name": "Ruler",
         "wikidata_desc": "instrument used in geometry, technical drawing, printing, engineering and building to measure distances or to rule straight lines; straightedge which may also contain calibrated lines to measure distances",
         "wikidata_name": "ruler",
@@ -5213,6 +5525,7 @@
     },
     "salad": {
         "freebase_mid": "/m/0grw1",
+        "oid_boxabel_leaf": "/m/0grw1",
         "oid_name": "Salad",
         "wikidata_desc": "dish consisting of a mixture of small pieces of food, usually vegetables or fruit",
         "wikidata_name": "salad",
@@ -5222,6 +5535,7 @@
     },
     "salt_and_pepper_shakers": {
         "freebase_mid": "/m/02x8cch",
+        "oid_boxabel_leaf": "/m/02x8cch",
         "oid_name": "Salt and pepper shakers",
         "wikidata_desc": "kitchen utensil",
         "wikidata_name": "salt and pepper shakers",
@@ -5240,6 +5554,7 @@
     "sandal": {
         "freebase_mid": "/m/03nfch",
         "obj365_cat": "Sandals",
+        "oid_boxabel_leaf": "/m/03nfch",
         "oid_name": "Sandal",
         "wikidata_desc": "type of footwear",
         "wikidata_name": "sandal",
@@ -5262,6 +5577,7 @@
     },
     "saucer": {
         "freebase_mid": "/m/03q5c7",
+        "oid_boxabel_leaf": "/m/03q5c7",
         "oid_name": "Saucer",
         "wikidata_desc": "type of small dishware",
         "wikidata_name": "saucer",
@@ -5280,6 +5596,7 @@
     "saxophone": {
         "freebase_mid": "/m/06ncr",
         "obj365_cat": "Saxophone",
+        "oid_boxabel_leaf": "/m/06ncr",
         "oid_name": "Saxophone",
         "wikidata_desc": "type of musical instrument of the woodwind family",
         "wikidata_name": "saxophone",
@@ -5307,6 +5624,7 @@
     },
     "scarf": {
         "freebase_mid": "/m/02h19r",
+        "oid_boxabel_leaf": "/m/02h19r",
         "oid_name": "Scarf",
         "wikidata_desc": "garment of fabric worn around neck or head",
         "wikidata_name": "scarf",
@@ -5320,6 +5638,7 @@
         "coco_pano_name": "scissors",
         "freebase_mid": "/m/01lsmm",
         "obj365_cat": "Scissors",
+        "oid_boxabel_leaf": "/m/01lsmm",
         "oid_name": "Scissors",
         "wikidata_desc": "hand-operated cutting instrument",
         "wikidata_name": "scissors",
@@ -5338,6 +5657,7 @@
     },
     "scoreboard": {
         "freebase_mid": "/m/057p5t",
+        "oid_boxabel_leaf": "/m/057p5t",
         "oid_name": "Scoreboard",
         "wikidata_name": "scoreboard",
         "wikidata_qid": "Q614379",
@@ -5356,6 +5676,7 @@
     "screwdriver": {
         "freebase_mid": "/m/01bms0",
         "obj365_cat": "Screwdriver",
+        "oid_boxabel_leaf": "/m/01bms0",
         "oid_name": "Screwdriver",
         "wikidata_desc": "hand-tool",
         "wikidata_name": "screwdriver",
@@ -5384,6 +5705,7 @@
     },
     "sea_lion": {
         "freebase_mid": "/m/0gd36",
+        "oid_boxabel_leaf": "/m/0gd36",
         "oid_name": "Sea lion",
         "wikidata_desc": "subfamily of mammals",
         "wikidata_name": "Otariinae",
@@ -5393,6 +5715,7 @@
     },
     "sea_turtle": {
         "freebase_mid": "/m/0120dh",
+        "oid_boxabel_leaf": "/m/0120dh",
         "oid_name": "Sea turtle",
         "wikidata_desc": "superfamily of reptiles",
         "wikidata_name": "Chelonioidea",
@@ -5411,6 +5734,7 @@
     },
     "seahorse": {
         "freebase_mid": "/m/0nybt",
+        "oid_boxabel_leaf": "/m/0nybt",
         "oid_name": "Seahorse",
         "wikidata_desc": "genus of fishes",
         "wikidata_name": "Hippocampus",
@@ -5429,6 +5753,7 @@
     },
     "seat_belt": {
         "freebase_mid": "/m/0dkzw",
+        "oid_boxabel_leaf": "/m/0dkzw",
         "oid_name": "Seat belt",
         "wikidata_desc": "vehicle safety device designed to secure the occupant of a vehicle against harmful movement that may result during a collision or a sudden stop",
         "wikidata_name": "seat belt",
@@ -5438,6 +5763,7 @@
     },
     "segway": {
         "freebase_mid": "/m/076bq",
+        "oid_boxabel_leaf": "/m/076bq",
         "oid_name": "Segway",
         "wikidata_desc": "battery-powered electric vehicle",
         "wikidata_name": "Segway PT",
@@ -5447,10 +5773,12 @@
     },
     "serving_tray": {
         "freebase_mid": "/m/0h8n27j",
+        "oid_boxabel_leaf": "/m/0h8n27j",
         "oid_name": "Serving tray"
     },
     "sewing_machine": {
         "freebase_mid": "/m/0llzx",
+        "oid_boxabel_leaf": "/m/0llzx",
         "oid_name": "Sewing machine",
         "wikidata_desc": "machine used to stitch fabric",
         "wikidata_name": "sewing machine",
@@ -5460,6 +5788,7 @@
     },
     "shark": {
         "freebase_mid": "/m/0by6g",
+        "oid_boxabel_leaf": "/m/0by6g",
         "oid_name": "Shark",
         "wikidata_desc": "superorder of fishes",
         "wikidata_name": "shark",
@@ -5473,6 +5802,7 @@
         "coco_pano_name": "sheep",
         "freebase_mid": "/m/07bgp",
         "obj365_cat": "Sheep",
+        "oid_boxabel_leaf": "/m/07bgp",
         "oid_name": "Sheep",
         "wikidata_desc": "domesticated animal",
         "wikidata_name": "domestic sheep",
@@ -5484,6 +5814,7 @@
         "coco_pano_id": 156,
         "coco_pano_name": "shelf",
         "freebase_mid": "/m/0gjbg72",
+        "oid_boxabel_leaf": "/m/0gjbg72",
         "oid_name": "Shelf",
         "wikidata_desc": "set of shelves, combined into one piece of furniture",
         "wikidata_name": "rack of shelves",
@@ -5511,6 +5842,7 @@
     },
     "shirt": {
         "freebase_mid": "/m/01n4qj",
+        "oid_boxabel_leaf": "/m/01n4qj",
         "oid_name": "Shirt",
         "wikidata_desc": "garment for the upper body",
         "wikidata_name": "shirt",
@@ -5529,6 +5861,7 @@
     },
     "shorts": {
         "freebase_mid": "/m/01bfm9",
+        "oid_boxabel_leaf": "/m/01bfm9",
         "oid_name": "Shorts",
         "wikidata_desc": "garment for the lower body ending above the knee",
         "wikidata_name": "shorts",
@@ -5538,6 +5871,7 @@
     },
     "shotgun": {
         "freebase_mid": "/m/06nrc",
+        "oid_boxabel_leaf": "/m/06nrc",
         "oid_name": "Shotgun",
         "wikidata_desc": "shotgun",
         "wikidata_name": "Benelli M1",
@@ -5556,6 +5890,7 @@
     "showerhead": {
         "freebase_mid": "/m/02f9f_",
         "obj365_cat": "Showerhead",
+        "oid_boxabel_leaf": "/m/02f9f_",
         "oid_name": "Shower",
         "wikidata_desc": "place in which a person bathes under a spray of water",
         "wikidata_name": "shower",
@@ -5566,6 +5901,7 @@
     "shrimp": {
         "freebase_mid": "/m/0ll1f78",
         "obj365_cat": "Shrimp",
+        "oid_boxabel_leaf": "/m/0ll1f78",
         "oid_name": "Shrimp",
         "wikidata_desc": "decapod crustaceans",
         "wikidata_name": "shrimp",
@@ -5593,6 +5929,7 @@
         "context": "basin",
         "freebase_mid": "/m/0130jx",
         "obj365_cat": "Sink",
+        "oid_boxabel_leaf": "/m/0130jx",
         "oid_name": "Sink",
         "wikidata_desc": "basin, located in a kitchen, used to wash dishes and cooking implements",
         "wikidata_name": "kitchen sink",
@@ -5606,6 +5943,7 @@
         "coco_pano_name": "skateboard",
         "freebase_mid": "/m/06_fw",
         "obj365_cat": "Skateboard",
+        "oid_boxabel_leaf": "/m/06_fw",
         "oid_name": "Skateboard",
         "wikidata_desc": "wheeled wooden board used for skateboarding",
         "wikidata_name": "skateboard",
@@ -5619,6 +5957,7 @@
         "coco_pano_name": "skis",
         "freebase_mid": "/m/071p9",
         "obj365_cat": "Skiboard",
+        "oid_boxabel_leaf": "/m/071p9",
         "oid_name": "Ski",
         "wikidata_desc": "narrow strip of wood, plastic, metal for skiing",
         "wikidata_name": "ski",
@@ -5646,6 +5985,7 @@
     },
     "skull": {
         "freebase_mid": "/m/016m2d",
+        "oid_boxabel_leaf": "/m/016m2d",
         "oid_name": "Skull",
         "wikidata_desc": "bony structure that forms the skeleton of head in most vertebrates",
         "wikidata_name": "skull",
@@ -5674,6 +6014,7 @@
     },
     "skyscraper": {
         "freebase_mid": "/m/079cl",
+        "oid_boxabel_leaf": "/m/079cl",
         "oid_name": "Skyscraper",
         "wikidata_desc": "very tall building",
         "wikidata_name": "skyscraper",
@@ -5701,6 +6042,7 @@
     },
     "slow_cooker": {
         "freebase_mid": "/m/02tsc9",
+        "oid_boxabel_leaf": "/m/02tsc9",
         "oid_name": "Slow cooker",
         "wikidata_desc": "electrical cooking appliance used to prepare food by simmering for several hours, mostly unattended",
         "wikidata_name": "slow cooker",
@@ -5717,6 +6059,7 @@
     },
     "snail": {
         "freebase_mid": "/m/0f9_l",
+        "oid_boxabel_leaf": "/m/0f9_l",
         "oid_name": "Snail",
         "wikidata_desc": "mollusc",
         "wikidata_name": "snail",
@@ -5726,6 +6069,7 @@
     },
     "snake": {
         "freebase_mid": "/m/078jl",
+        "oid_boxabel_leaf": "/m/078jl",
         "oid_name": "Snake",
         "wikidata_desc": "limbless, scaly, elongate reptile",
         "wikidata_name": "snake",
@@ -5758,6 +6102,7 @@
         "coco_pano_name": "snowboard",
         "freebase_mid": "/m/06__v",
         "obj365_cat": "Snowboard",
+        "oid_boxabel_leaf": "/m/06__v",
         "oid_name": "Snowboard",
         "wikidata_desc": "winter sport equipment",
         "wikidata_name": "snowboard",
@@ -5767,6 +6112,7 @@
     },
     "snowman": {
         "freebase_mid": "/m/0152hh",
+        "oid_boxabel_leaf": "/m/0152hh",
         "oid_name": "Snowman",
         "wikidata_desc": "figure sculpted from snow",
         "wikidata_name": "snowman",
@@ -5776,6 +6122,7 @@
     },
     "snowmobile": {
         "freebase_mid": "/m/01x3jk",
+        "oid_boxabel_leaf": "/m/01x3jk",
         "oid_name": "Snowmobile",
         "wikidata_desc": "land vehicle designed for winter travel on snow",
         "wikidata_name": "snowmobile",
@@ -5785,6 +6132,7 @@
     },
     "snowplow": {
         "freebase_mid": "/m/04vv5k",
+        "oid_boxabel_leaf": "/m/04vv5k",
         "oid_name": "Snowplow",
         "wikidata_desc": "device for removing snow",
         "wikidata_name": "snowplow",
@@ -5821,6 +6169,7 @@
     "sock": {
         "context": "foot",
         "freebase_mid": "/m/01nq26",
+        "oid_boxabel_leaf": "/m/01nq26",
         "oid_name": "Sock",
         "wikidata_desc": "item of clothing for the feet",
         "wikidata_name": "sock",
@@ -5830,6 +6179,7 @@
     },
     "sofa_bed": {
         "freebase_mid": "/m/03m3pdh",
+        "oid_boxabel_leaf": "/m/03m3pdh",
         "oid_name": "Sofa bed",
         "wikidata_desc": "sofa with a bed inside",
         "wikidata_name": "Sofa bed",
@@ -5840,6 +6190,7 @@
     "sombrero": {
         "context": "hat",
         "freebase_mid": "/m/02jfl0",
+        "oid_boxabel_leaf": "/m/02jfl0",
         "oid_name": "Sombrero",
         "wikidata_desc": "type of wide-brimmed hat in, and associated with, Mexico",
         "wikidata_name": "sombrero",
@@ -5849,6 +6200,7 @@
     },
     "sparrow": {
         "freebase_mid": "/m/0h23m",
+        "oid_boxabel_leaf": "/m/0h23m",
         "oid_name": "Sparrow",
         "wikidata_desc": "family of songbirds",
         "wikidata_name": "sparrow",
@@ -5858,6 +6210,7 @@
     },
     "spatula": {
         "freebase_mid": "/m/02d1br",
+        "oid_boxabel_leaf": "/m/02d1br",
         "oid_name": "Spatula",
         "wikidata_desc": "flexible, wide blade, used to lift, smear, mix, spread, or scrape material, including foods, drugs, plaster, and paint",
         "wikidata_name": "spatula",
@@ -5878,6 +6231,7 @@
     },
     "spider": {
         "freebase_mid": "/m/09kmb",
+        "oid_boxabel_leaf": "/m/09kmb",
         "oid_name": "Spider",
         "wikidata_desc": "order of arachnids",
         "wikidata_name": "Araneae",
@@ -5891,6 +6245,7 @@
         "coco_pano_name": "spoon",
         "freebase_mid": "/m/0cmx8",
         "obj365_cat": "Spoon",
+        "oid_boxabel_leaf": "/m/0cmx8",
         "oid_name": "Spoon",
         "wikidata_desc": "utensil consisting of a small shallow bowl, oval or round, at the end of a handle",
         "wikidata_name": "spoon",
@@ -5919,6 +6274,7 @@
     },
     "sports_uniform": {
         "freebase_mid": "/m/0h8mhzd",
+        "oid_boxabel_leaf": "/m/0h8mhzd",
         "oid_name": "Sports uniform",
         "wikidata_desc": "regulation clothing worn by sports teams and athletes",
         "wikidata_name": "sports uniform",
@@ -5954,6 +6310,7 @@
     },
     "squirrel": {
         "freebase_mid": "/m/071qp",
+        "oid_boxabel_leaf": "/m/071qp",
         "oid_name": "Squirrel",
         "wikidata_desc": "family of mammals",
         "wikidata_name": "Sciuridae-catte",
@@ -5965,6 +6322,7 @@
         "coco_pano_id": 161,
         "coco_pano_name": "stairs",
         "freebase_mid": "/m/01lynh",
+        "oid_boxabel_leaf": "/m/01lynh",
         "oid_name": "Stairs",
         "wikidata_desc": "construction designed to bridge a large vertical distance by dividing it into smaller vertical distances",
         "wikidata_name": "stairs",
@@ -5984,6 +6342,7 @@
     },
     "starfish": {
         "freebase_mid": "/m/01h8tj",
+        "oid_boxabel_leaf": "/m/01h8tj",
         "oid_name": "Starfish",
         "wikidata_desc": "class of echinoderms, marine animal",
         "wikidata_name": "starfish",
@@ -5993,6 +6352,7 @@
     },
     "stationary_bicycle": {
         "freebase_mid": "/m/03kt2w",
+        "oid_boxabel_leaf": "/m/03kt2w",
         "oid_name": "Stationary bicycle",
         "wikidata_desc": "device with saddle, pedals, and some form of handlebars arranged as on a bicycle, but used as exercise equipment rather than transportation.",
         "wikidata_name": "stationary bicycle",
@@ -6026,6 +6386,7 @@
     "stool": {
         "freebase_mid": "/m/0fqt361",
         "obj365_cat": "Stool",
+        "oid_boxabel_leaf": "/m/0fqt361",
         "oid_name": "Stool",
         "wikidata_desc": "item of furniture consisting of a single seat, for one person, without back or armrests, on a base of either three or four legs, generally distinguished from chairs by lack of arms and a back",
         "wikidata_name": "stool",
@@ -6039,6 +6400,7 @@
         "coco_pano_name": "stop sign",
         "freebase_mid": "/m/02pv19",
         "obj365_cat": "Stop Sign",
+        "oid_boxabel_leaf": "/m/02pv19",
         "oid_name": "Stop sign",
         "wikidata_desc": "traffic signal",
         "wikidata_name": "stop sign",
@@ -6049,6 +6411,7 @@
     "strawberry": {
         "freebase_mid": "/m/07fbm7",
         "obj365_cat": "Strawberry",
+        "oid_boxabel_leaf": "/m/07fbm7",
         "oid_name": "Strawberry",
         "wikidata_desc": "nothospecies of plant",
         "wikidata_name": "Fragaria \u00d7 ananassa",
@@ -6059,6 +6422,7 @@
     "street_light": {
         "freebase_mid": "/m/033rq4",
         "obj365_cat": "Street Lights",
+        "oid_boxabel_leaf": "/m/033rq4",
         "oid_name": "Street light",
         "wikidata_desc": "a raised source of light on the edge of a road or walkway",
         "wikidata_name": "streetlight",
@@ -6068,6 +6432,7 @@
     },
     "stretcher": {
         "freebase_mid": "/m/02lbcq",
+        "oid_boxabel_leaf": "/m/02lbcq",
         "oid_name": "Stretcher",
         "wikidata_desc": "equipment for moving patients in need of medical care",
         "wikidata_name": "stretcher",
@@ -6086,6 +6451,7 @@
     },
     "studio_couch": {
         "freebase_mid": "/m/026qbn5",
+        "oid_boxabel_leaf": "/m/026qbn5",
         "oid_name": "Studio couch",
         "wordnet_gloss": "convertible consisting of an upholstered couch that can be converted into a double bed",
         "wordnet_pwn30": "n04344873"
@@ -6102,6 +6468,7 @@
     },
     "submarine_sandwich": {
         "freebase_mid": "/m/06pcq",
+        "oid_boxabel_leaf": "/m/06pcq",
         "oid_name": "Submarine sandwich",
         "wikidata_desc": "sandwich originating from the U.S.; consists of a length of bread or roll split lengthwise and filled with a variety of meats, cheeses, vegetables, and condiments; named after its appearance similar to a submarine",
         "wikidata_name": "submarine sandwich",
@@ -6111,6 +6478,7 @@
     },
     "suit": {
         "freebase_mid": "/m/01xyhv",
+        "oid_boxabel_leaf": "/m/01xyhv",
         "oid_name": "Suit",
         "wikidata_desc": "set of matching garments used as formal or business attire",
         "wikidata_name": "suit",
@@ -6123,6 +6491,7 @@
         "coco_pano_id": 33,
         "coco_pano_name": "suitcase",
         "freebase_mid": "/m/01s55n",
+        "oid_boxabel_leaf": "/m/01s55n",
         "oid_name": "Suitcase",
         "wikidata_desc": "form of luggage",
         "wikidata_name": "suitcase",
@@ -6132,6 +6501,7 @@
     },
     "sun_hat": {
         "freebase_mid": "/m/02wbtzl",
+        "oid_boxabel_leaf": "/m/02wbtzl",
         "oid_name": "Sun hat",
         "wikidata_desc": "wide-brimmed hat designed to shade face and shoulders from the sun",
         "wikidata_name": "sun hat",
@@ -6141,6 +6511,7 @@
     },
     "sunglasses": {
         "freebase_mid": "/m/017ftj",
+        "oid_boxabel_leaf": "/m/017ftj",
         "oid_name": "Sunglasses",
         "wikidata_desc": "fashion accessory",
         "wikidata_name": "sunglasses",
@@ -6154,6 +6525,7 @@
         "coco_pano_name": "surfboard",
         "freebase_mid": "/m/019w40",
         "obj365_cat": "Surfboard",
+        "oid_boxabel_leaf": "/m/019w40",
         "oid_name": "Surfboard",
         "wikidata_desc": "elongated platform used in the sport of surfing",
         "wikidata_name": "surfboard",
@@ -6170,6 +6542,7 @@
     "sushi": {
         "freebase_mid": "/m/07030",
         "obj365_cat": "Sushi",
+        "oid_boxabel_leaf": "/m/07030",
         "oid_name": "Sushi",
         "wikidata_desc": "portioned prepared vinegared rice topped or rolled with other ingredients",
         "wikidata_name": "sushi",
@@ -6187,6 +6560,7 @@
     "swan": {
         "freebase_mid": "/m/0dftk",
         "obj365_cat": "Swan",
+        "oid_boxabel_leaf": "/m/0dftk",
         "oid_name": "Swan",
         "wikidata_desc": "large water bird",
         "wikidata_name": "swan",
@@ -6196,6 +6570,7 @@
     },
     "swim_cap": {
         "freebase_mid": "/m/04tn4x",
+        "oid_boxabel_leaf": "/m/04tn4x",
         "oid_name": "Swim cap",
         "wikidata_desc": "cap worn while swimming or bathing",
         "wikidata_name": "swim cap",
@@ -6205,6 +6580,7 @@
     },
     "swimming_pool": {
         "freebase_mid": "/m/0b_rs",
+        "oid_boxabel_leaf": "/m/0b_rs",
         "oid_name": "Swimming pool",
         "wikidata_desc": "excavation or containment structure filled with water and used for swimming",
         "wikidata_name": "swimming pool",
@@ -6214,6 +6590,7 @@
     },
     "swimwear": {
         "freebase_mid": "/m/01gkx_",
+        "oid_boxabel_leaf": "/m/01gkx_",
         "oid_name": "Swimwear",
         "wikidata_desc": "clothing worn for swimming",
         "wikidata_name": "swimsuit",
@@ -6232,6 +6609,7 @@
     },
     "sword": {
         "freebase_mid": "/m/06y5r",
+        "oid_boxabel_leaf": "/m/06y5r",
         "oid_name": "Sword",
         "wikidata_desc": "bladed weapon",
         "wikidata_name": "sword",
@@ -6268,6 +6646,7 @@
     "table_tennis_racket": {
         "freebase_mid": "/m/05_5p_0",
         "obj365_cat": "Table Teniis paddle",
+        "oid_boxabel_leaf": "/m/05_5p_0",
         "oid_name": "Table tennis racket",
         "wikidata_desc": "sports equipment",
         "wikidata_name": "table tennis racket",
@@ -6276,6 +6655,7 @@
     "tablet_computer": {
         "freebase_mid": "/m/0bh9flk",
         "obj365_cat": "Tablet",
+        "oid_boxabel_leaf": "/m/0bh9flk",
         "oid_name": "Tablet computer",
         "wikidata_desc": "mobile computer with display, circuitry and battery",
         "wikidata_name": "tablet computer",
@@ -6294,6 +6674,7 @@
     },
     "taco": {
         "freebase_mid": "/m/07crc",
+        "oid_boxabel_leaf": "/m/07crc",
         "oid_name": "Taco",
         "wikidata_desc": "Mexican dish consisting of a corn or wheat tortilla folded or rolled around a filling, salsa and guacamole",
         "wikidata_name": "taco",
@@ -6303,6 +6684,7 @@
     },
     "tank": {
         "freebase_mid": "/m/07cmd",
+        "oid_boxabel_leaf": "/m/07cmd",
         "oid_name": "Tank",
         "wikidata_desc": "heavy armored fighting vehicle",
         "wikidata_name": "tank",
@@ -6313,6 +6695,7 @@
     "tap": {
         "freebase_mid": "/m/02jz0l",
         "obj365_cat": "Faucet",
+        "oid_boxabel_leaf": "/m/02jz0l",
         "oid_name": "Tap",
         "wikidata_desc": "regulated inflow of water, for example for drinking water",
         "wikidata_name": "tap",
@@ -6330,6 +6713,7 @@
     "tart": {
         "freebase_mid": "/m/02zvsm",
         "obj365_cat": "Egg tart",
+        "oid_boxabel_leaf": "/m/02zvsm",
         "oid_name": "Tart",
         "wikidata_desc": "baked dessert dish, a filled pastry base with an open top not covered with pastry",
         "wikidata_name": "tart",
@@ -6339,6 +6723,7 @@
     },
     "taxi": {
         "freebase_mid": "/m/0pg52",
+        "oid_boxabel_leaf": "/m/0pg52",
         "oid_name": "Taxi",
         "wikidata_desc": "type of vehicle for hire with a driver",
         "wikidata_name": "taxi",
@@ -6348,6 +6733,7 @@
     },
     "tea": {
         "freebase_mid": "/m/07clx",
+        "oid_boxabel_leaf": "/m/07clx",
         "oid_name": "Tea",
         "wikidata_desc": "drink made from infusing boiling water with the leaves of the tea plant",
         "wikidata_name": "tea",
@@ -6358,6 +6744,7 @@
     "teapot": {
         "freebase_mid": "/m/01fh4r",
         "obj365_cat": "Tea pot",
+        "oid_boxabel_leaf": "/m/01fh4r",
         "oid_name": "Teapot",
         "wikidata_desc": "vessel used for steeping tea leaves",
         "wikidata_name": "teapot",
@@ -6370,6 +6757,7 @@
         "coco_pano_id": 88,
         "coco_pano_name": "teddy bear",
         "freebase_mid": "/m/0kmg4",
+        "oid_boxabel_leaf": "/m/0kmg4",
         "oid_name": "Teddy bear",
         "wikidata_desc": "soft toy in the form of a bear",
         "wikidata_name": "teddy bear",
@@ -6389,6 +6777,7 @@
     },
     "television": {
         "freebase_mid": "/m/07c52",
+        "oid_boxabel_leaf": "/m/07c52",
         "oid_name": "Television",
         "wikidata_desc": "telecommunication medium for transmitting and receiving moving images",
         "wikidata_name": "television",
@@ -6399,6 +6788,7 @@
     "tennis_ball": {
         "freebase_mid": "/m/05ctyq",
         "obj365_cat": "Tennis",
+        "oid_boxabel_leaf": "/m/05ctyq",
         "oid_name": "Tennis ball",
         "wikidata_desc": "ball used in the sport of tennis",
         "wikidata_name": "tennis ball",
@@ -6412,6 +6802,7 @@
         "coco_pano_name": "tennis racket",
         "freebase_mid": "/m/0h8my_4",
         "obj365_cat": "Tennis Racket",
+        "oid_boxabel_leaf": "/m/0h8my_4",
         "oid_name": "Tennis racket",
         "wikidata_desc": "sports equipment",
         "wikidata_name": "tennis racquet",
@@ -6424,6 +6815,7 @@
         "coco_pano_name": "tent",
         "freebase_mid": "/m/01j61q",
         "obj365_cat": "Tent",
+        "oid_boxabel_leaf": "/m/01j61q",
         "oid_name": "Tent",
         "wikidata_desc": "temporary building which can be easily dismantled and which is portable",
         "wikidata_name": "tent",
@@ -6433,6 +6825,7 @@
     },
     "tiara": {
         "freebase_mid": "/m/01krhy",
+        "oid_boxabel_leaf": "/m/01krhy",
         "oid_name": "Tiara",
         "wikidata_desc": "head ornament",
         "wikidata_name": "tiara",
@@ -6442,6 +6835,7 @@
     },
     "tick": {
         "freebase_mid": "/m/0175cv",
+        "oid_boxabel_leaf": "/m/0175cv",
         "oid_name": "Tick",
         "wikidata_desc": "superfamily of arachnids",
         "wikidata_name": "Ixodoidea",
@@ -6455,6 +6849,7 @@
         "coco_pano_name": "tie",
         "freebase_mid": "/m/01rkbr",
         "obj365_cat": "Tie",
+        "oid_boxabel_leaf": "/m/01rkbr",
         "oid_name": "Tie",
         "wikidata_desc": "clothing item, traditionally worn by boys and men with dress shirt",
         "wikidata_name": "necktie",
@@ -6464,6 +6859,7 @@
     },
     "tiger": {
         "freebase_mid": "/m/07dm6",
+        "oid_boxabel_leaf": "/m/07dm6",
         "oid_name": "Tiger",
         "wikidata_desc": "species of mammal",
         "wikidata_name": "tiger",
@@ -6482,6 +6878,7 @@
     "tin_can": {
         "freebase_mid": "/m/02jnhm",
         "obj365_cat": "Canned",
+        "oid_boxabel_leaf": "/m/02jnhm",
         "oid_name": "Tin can",
         "wikidata_desc": "sealed container for storage of foods",
         "wikidata_name": "tin can",
@@ -6491,6 +6888,7 @@
     },
     "tire": {
         "freebase_mid": "/m/0h9mv",
+        "oid_boxabel_leaf": "/m/0h9mv",
         "oid_name": "Tire",
         "wikidata_desc": "ring-shaped covering that fits around a wheel's rim",
         "wikidata_name": "tire",
@@ -6515,6 +6913,7 @@
         "context": "appliance",
         "freebase_mid": "/m/01k6s3",
         "obj365_cat": "Toaster",
+        "oid_boxabel_leaf": "/m/01k6s3",
         "oid_name": "Toaster",
         "wikidata_desc": "small electric kitchen appliance",
         "wikidata_name": "toaster",
@@ -6528,6 +6927,7 @@
         "coco_pano_name": "toilet",
         "freebase_mid": "/m/09g1w",
         "obj365_cat": "Toilet",
+        "oid_boxabel_leaf": "/m/09g1w",
         "oid_name": "Toilet",
         "wikidata_desc": "sanitation fixture",
         "wikidata_name": "toilet",
@@ -6538,6 +6938,7 @@
     "toilet_paper": {
         "freebase_mid": "/m/09gtd",
         "obj365_cat": "Toilet Paper",
+        "oid_boxabel_leaf": "/m/09gtd",
         "oid_name": "Toilet paper",
         "wikidata_desc": "tissue paper for cleaning after urination or defecation",
         "wikidata_name": "toilet paper",
@@ -6548,6 +6949,7 @@
     "tomato": {
         "freebase_mid": "/m/07j87",
         "obj365_cat": "Tomato",
+        "oid_boxabel_leaf": "/m/07j87",
         "oid_name": "Tomato",
         "wikidata_desc": "type of plant species with edible, often red, berry fruit",
         "wikidata_name": "tomato",
@@ -6587,6 +6989,7 @@
     },
     "torch": {
         "freebase_mid": "/m/07dd4",
+        "oid_boxabel_leaf": "/m/07dd4",
         "oid_name": "Torch",
         "wikidata_desc": "stick with a flaming end used as a source of light",
         "wikidata_name": "torch",
@@ -6596,6 +6999,7 @@
     },
     "tortoise": {
         "freebase_mid": "/m/011k07",
+        "oid_boxabel_leaf": "/m/011k07",
         "oid_name": "Tortoise",
         "wikidata_desc": "family of turtles",
         "wikidata_name": "Testudinidae",
@@ -6608,6 +7012,7 @@
         "coco_pano_name": "towel",
         "freebase_mid": "/m/0162_1",
         "obj365_cat": "Towel",
+        "oid_boxabel_leaf": "/m/0162_1",
         "oid_name": "Towel",
         "wikidata_desc": "cloth which is used to dry something",
         "wikidata_name": "towel",
@@ -6617,6 +7022,7 @@
     },
     "tower": {
         "freebase_mid": "/m/01fdzj",
+        "oid_boxabel_leaf": "/m/01fdzj",
         "oid_name": "Tower",
         "wikidata_desc": "structure with height greater than width",
         "wikidata_name": "tower",
@@ -6647,6 +7053,7 @@
         "coco_pano_name": "traffic light",
         "freebase_mid": "/m/015qff",
         "obj365_cat": "Traffic Light",
+        "oid_boxabel_leaf": "/m/015qff",
         "oid_name": "Traffic light",
         "wikidata_desc": "signalling device to control competing flows of traffic",
         "wikidata_name": "traffic light",
@@ -6669,6 +7076,7 @@
         "context": "rail",
         "freebase_mid": "/m/07jdr",
         "obj365_cat": "Train",
+        "oid_boxabel_leaf": "/m/07jdr",
         "oid_name": "Train",
         "wikidata_desc": "one or more self-propelled vehicles that move along fixed rails to transport passengers, animals or cargo",
         "wikidata_name": "train",
@@ -6678,6 +7086,7 @@
     },
     "training_bench": {
         "freebase_mid": "/m/076lb9",
+        "oid_boxabel_leaf": "/m/076lb9",
         "oid_name": "Training bench",
         "wikidata_desc": "weight training apparatus",
         "wikidata_name": "bench",
@@ -6686,6 +7095,7 @@
     "treadmill": {
         "freebase_mid": "/m/030610",
         "obj365_cat": "Treadmill",
+        "oid_boxabel_leaf": "/m/030610",
         "oid_name": "Treadmill",
         "wikidata_desc": "exercise machine",
         "wikidata_name": "treadmill",
@@ -6725,6 +7135,7 @@
     "tripod": {
         "freebase_mid": "/m/073bxn",
         "obj365_cat": "Tripod",
+        "oid_boxabel_leaf": "/m/073bxn",
         "oid_name": "Tripod",
         "wikidata_desc": "provides for the stable formation of cameras, lights, microphones, laboratory instruments or measuring instruments",
         "wikidata_name": "tripod",
@@ -6735,6 +7146,7 @@
     "trombone": {
         "freebase_mid": "/m/07c6l",
         "obj365_cat": "Trombone",
+        "oid_boxabel_leaf": "/m/07c6l",
         "oid_name": "Trombone",
         "wikidata_desc": "type of brass instrument",
         "wikidata_name": "trombone",
@@ -6766,6 +7178,7 @@
         "coco_pano_name": "truck",
         "freebase_mid": "/m/07r04",
         "obj365_cat": "Truck",
+        "oid_boxabel_leaf": "/m/07r04",
         "oid_name": "Truck",
         "wikidata_desc": "freight motor vehicle",
         "wikidata_name": "truck",
@@ -6776,6 +7189,7 @@
     "trumpet": {
         "freebase_mid": "/m/07gql",
         "obj365_cat": "Trumpet",
+        "oid_boxabel_leaf": "/m/07gql",
         "oid_name": "Trumpet",
         "wikidata_desc": "musical instrument with the highest register in the brass family",
         "wikidata_name": "trumpet",
@@ -6793,6 +7207,7 @@
     },
     "turkey": {
         "freebase_mid": "/m/0jly1",
+        "oid_boxabel_leaf": "/m/0jly1",
         "oid_name": "Turkey",
         "wikidata_desc": "genus of birds",
         "wikidata_name": "Meleagris",
@@ -6823,6 +7238,7 @@
         "coco_pano_name": "umbrella",
         "freebase_mid": "/m/0hnnb",
         "obj365_cat": "Umbrella",
+        "oid_boxabel_leaf": "/m/0hnnb",
         "oid_name": "Umbrella",
         "wikidata_desc": "canopy designed to protect against rain or sunlight",
         "wikidata_name": "umbrella",
@@ -6851,6 +7267,7 @@
     "van": {
         "freebase_mid": "/m/0h2r6",
         "obj365_cat": "Van",
+        "oid_boxabel_leaf": "/m/0h2r6",
         "oid_name": "Van",
         "wikidata_desc": "covered transportation vehicle",
         "wikidata_name": "van",
@@ -6864,6 +7281,7 @@
         "coco_pano_name": "vase",
         "freebase_mid": "/m/02s195",
         "obj365_cat": "Vase",
+        "oid_boxabel_leaf": "/m/02s195",
         "oid_name": "Vase",
         "wikidata_desc": "open container, often used to hold cut flowers",
         "wikidata_name": "vase",
@@ -6893,6 +7311,7 @@
     "violin": {
         "freebase_mid": "/m/07y_7",
         "obj365_cat": "Violin",
+        "oid_boxabel_leaf": "/m/07y_7",
         "oid_name": "Violin",
         "wikidata_desc": "bowed string instrument, usually with four strings tuned in perfect fifths",
         "wikidata_name": "violin",
@@ -6904,6 +7323,7 @@
         "context": "ball",
         "freebase_mid": "/m/02rgn06",
         "obj365_cat": "Volleyball",
+        "oid_boxabel_leaf": "/m/02rgn06",
         "oid_name": "Volleyball (Ball)",
         "wikidata_desc": "ball used in volleyball",
         "wikidata_name": "volleyball",
@@ -6913,6 +7333,7 @@
     },
     "waffle": {
         "freebase_mid": "/m/01dwsz",
+        "oid_boxabel_leaf": "/m/01dwsz",
         "oid_name": "Waffle",
         "wikidata_desc": "dish made from leavened batter or dough cooked between two plates that are patterned to give a characteristic size, shape and surface impression",
         "wikidata_name": "waffle",
@@ -6941,6 +7362,7 @@
     },
     "wall_clock": {
         "freebase_mid": "/m/0h8mzrc",
+        "oid_boxabel_leaf": "/m/0h8mzrc",
         "oid_name": "Wall clock",
         "wikidata_name": "wall clock",
         "wikidata_qid": "Q31843230",
@@ -6960,6 +7382,7 @@
     "washing_machine": {
         "freebase_mid": "/m/0174k2",
         "obj365_cat": "Washing Machine/Drying Machine",
+        "oid_boxabel_leaf": "/m/0174k2",
         "oid_name": "Washing machine",
         "wikidata_desc": "Machine that washes clothes automatically",
         "wikidata_name": "washing machine",
@@ -6970,6 +7393,7 @@
     "waste_container": {
         "freebase_mid": "/m/0bjyj5",
         "obj365_cat": "Trash bin Can",
+        "oid_boxabel_leaf": "/m/0bjyj5",
         "oid_name": "Waste container",
         "wikidata_desc": "container that holds waste",
         "wikidata_name": "waste container",
@@ -6980,6 +7404,7 @@
     "watch": {
         "freebase_mid": "/m/0gjkl",
         "obj365_cat": "Watch",
+        "oid_boxabel_leaf": "/m/0gjkl",
         "oid_name": "Watch",
         "wikidata_desc": "personal timepiece",
         "wikidata_name": "watch",
@@ -7010,6 +7435,7 @@
     "watermelon": {
         "freebase_mid": "/m/0kpqd",
         "obj365_cat": "Watermelon",
+        "oid_boxabel_leaf": "/m/0kpqd",
         "oid_name": "Watermelon",
         "wikidata_desc": "large fruit with a smooth hard rind",
         "wikidata_name": "watermelon",
@@ -7028,6 +7454,7 @@
     },
     "whale": {
         "freebase_mid": "/m/084zz",
+        "oid_boxabel_leaf": "/m/084zz",
         "oid_name": "Whale",
         "wikidata_desc": "various marine mammals of the order Cetacea",
         "wikidata_name": "whale",
@@ -7037,6 +7464,7 @@
     },
     "wheel": {
         "freebase_mid": "/m/083wq",
+        "oid_boxabel_leaf": "/m/083wq",
         "oid_name": "Wheel",
         "wikidata_desc": "one of the six simple machines, a circular item that rotates about an axial bearing",
         "wikidata_name": "wheel",
@@ -7045,6 +7473,7 @@
     "wheelchair": {
         "freebase_mid": "/m/0qmmr",
         "obj365_cat": "Wheelchair",
+        "oid_boxabel_leaf": "/m/0qmmr",
         "oid_name": "Wheelchair",
         "wikidata_desc": "chair with wheels, used by people for whom walking is difficult or impossible due to illness, injury, or disability",
         "wikidata_name": "wheelchair",
@@ -7064,6 +7493,7 @@
     "whiteboard": {
         "freebase_mid": "/m/02d9qx",
         "obj365_cat": "Blackboard/Whiteboard",
+        "oid_boxabel_leaf": "/m/02d9qx",
         "oid_name": "Whiteboard",
         "wikidata_desc": "surface for nonpermanent markings",
         "wikidata_name": "whiteboard",
@@ -7073,6 +7503,7 @@
     },
     "willow": {
         "freebase_mid": "/m/0mw_6",
+        "oid_boxabel_leaf": "/m/0mw_6",
         "oid_name": "Willow",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Salix",
@@ -7084,6 +7515,7 @@
         "coco_pano_id": 181,
         "coco_pano_name": "window-other",
         "freebase_mid": "/m/0d4v4",
+        "oid_boxabel_leaf": "/m/0d4v4",
         "oid_name": "Window",
         "wikidata_desc": "transparent or translucent opening",
         "wikidata_name": "window",
@@ -7095,6 +7527,7 @@
         "coco_pano_id": 180,
         "coco_pano_name": "window-blind",
         "freebase_mid": "/m/031b6r",
+        "oid_boxabel_leaf": "/m/031b6r",
         "oid_name": "Window blind",
         "wikidata_desc": "type of window covering",
         "wikidata_name": "window blind",
@@ -7104,6 +7537,7 @@
     },
     "wine": {
         "freebase_mid": "/m/081qc",
+        "oid_boxabel_leaf": "/m/081qc",
         "oid_name": "Wine",
         "wikidata_desc": "alcoholic drink made from grapes",
         "wikidata_name": "wine",
@@ -7117,6 +7551,7 @@
         "coco_pano_name": "wine glass",
         "freebase_mid": "/m/09tvcd",
         "obj365_cat": "Wine Glass",
+        "oid_boxabel_leaf": "/m/09tvcd",
         "oid_name": "Wine glass",
         "wikidata_desc": "drinking vessel",
         "wikidata_name": "wine glass",
@@ -7132,6 +7567,7 @@
     },
     "winter_melon": {
         "freebase_mid": "/m/02cvgx",
+        "oid_boxabel_leaf": "/m/02cvgx",
         "oid_name": "Winter melon",
         "wikidata_desc": "species of plant, Winter melon",
         "wikidata_name": "Wax gourd",
@@ -7141,6 +7577,7 @@
     },
     "wok": {
         "freebase_mid": "/m/084rd",
+        "oid_boxabel_leaf": "/m/084rd",
         "oid_name": "Wok",
         "wikidata_desc": "round-bottomed cooking vessel, originating in China",
         "wikidata_name": "wok",
@@ -7150,6 +7587,7 @@
     },
     "woman": {
         "freebase_mid": "/m/03bt1vf",
+        "oid_boxabel_leaf": "/m/03bt1vf",
         "oid_name": "Woman",
         "wikidata_desc": "female adult human",
         "wikidata_name": "woman",
@@ -7159,6 +7597,7 @@
     },
     "wood-burning_stove": {
         "freebase_mid": "/m/04169hn",
+        "oid_boxabel_leaf": "/m/04169hn",
         "oid_name": "Wood-burning stove",
         "wikidata_desc": "type of stove",
         "wikidata_name": "wood-burning stove",
@@ -7178,6 +7617,7 @@
     },
     "woodpecker": {
         "freebase_mid": "/m/01dy8n",
+        "oid_boxabel_leaf": "/m/01dy8n",
         "oid_name": "Woodpecker",
         "wikidata_desc": "family of birds",
         "wikidata_name": "Picidae",
@@ -7196,6 +7636,7 @@
     },
     "wrench": {
         "freebase_mid": "/m/01j5ks",
+        "oid_boxabel_leaf": "/m/01j5ks",
         "oid_name": "Wrench",
         "wikidata_desc": "tool used to provide grip and mechanical advantage",
         "wikidata_name": "wrench",
@@ -7218,6 +7659,7 @@
         "coco_pano_name": "zebra",
         "freebase_mid": "/m/0898b",
         "obj365_cat": "Zebra",
+        "oid_boxabel_leaf": "/m/0898b",
         "oid_name": "Zebra",
         "wikidata_desc": "black and white striped animals in the horse family",
         "wikidata_name": "zebra",
@@ -7227,6 +7669,7 @@
     },
     "zucchini": {
         "freebase_mid": "/m/027pcv",
+        "oid_boxabel_leaf": "/m/027pcv",
         "oid_name": "Zucchini",
         "wikidata_desc": "Edible summer squash, typically green in color",
         "wikidata_name": "zucchini",
