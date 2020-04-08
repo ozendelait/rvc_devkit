@@ -46,6 +46,7 @@
         "wordnet_pwn30": "n02686568"
     },
     "airplane": {
+        "coco_obj_name": "airplane",
         "coco_pano_id": 5,
         "coco_pano_name": "airplane",
         "freebase_mid": "/m/0cmf2",
@@ -125,6 +126,7 @@
         "wordnet_pwn30": "n02419796"
     },
     "apple": {
+        "coco_obj_name": "apple",
         "coco_pano_id": 53,
         "coco_pano_name": "apple",
         "context": "fruit",
@@ -201,6 +203,7 @@
         "wordnet_pwn30": "n02764044"
     },
     "backpack": {
+        "coco_obj_name": "backpack",
         "coco_pano_id": 27,
         "coco_pano_name": "backpack",
         "freebase_mid": "/m/01940j",
@@ -240,6 +243,7 @@
         "wordnet_pwn30": "n02777292"
     },
     "ball": {
+        "coco_obj_name": "sports ball",
         "coco_pano_id": 37,
         "coco_pano_name": "sports ball",
         "context": "round",
@@ -261,6 +265,7 @@
         "wikidata_qid": "Q9706"
     },
     "banana": {
+        "coco_obj_name": "banana",
         "coco_pano_id": 52,
         "coco_pano_name": "banana",
         "context": "fruit",
@@ -338,6 +343,7 @@
         "wordnet_pwn30": "n02799071"
     },
     "baseball_bat": {
+        "coco_obj_name": "baseball bat",
         "coco_pano_id": 39,
         "coco_pano_name": "baseball bat",
         "freebase_mid": "/m/03g8mr",
@@ -350,6 +356,7 @@
         "wordnet_pwn30": "n02799175"
     },
     "baseball_glove": {
+        "coco_obj_name": "baseball glove",
         "coco_pano_id": 40,
         "coco_pano_name": "baseball glove",
         "freebase_mid": "/m/03grzl",
@@ -425,6 +432,7 @@
         "wordnet_pwn30": "n02815834"
     },
     "bear": {
+        "coco_obj_name": "bear",
         "coco_pano_id": 23,
         "coco_pano_name": "bear",
         "context": "mammal",
@@ -448,6 +456,7 @@
         "wordnet_pwn30": "n05261566"
     },
     "bed": {
+        "coco_obj_name": "bed",
         "coco_pano_id": 65,
         "coco_pano_name": "bed",
         "freebase_mid": "/m/03ssj5",
@@ -517,6 +526,7 @@
         "wordnet_pwn30": "n02827606"
     },
     "bench": {
+        "coco_obj_name": "bench",
         "coco_pano_id": 15,
         "coco_pano_name": "bench",
         "freebase_mid": "/m/0cvnqh",
@@ -529,6 +539,7 @@
         "wordnet_pwn30": "n02828884"
     },
     "bicycle": {
+        "coco_obj_name": "bicycle",
         "coco_pano_id": 2,
         "coco_pano_name": "bicycle",
         "freebase_mid": "/m/0199g",
@@ -603,6 +614,7 @@
         "wordnet_pwn30": "n02841315"
     },
     "bird": {
+        "coco_obj_name": "bird",
         "coco_pano_id": 16,
         "coco_pano_name": "bird",
         "context": "animal",
@@ -651,6 +663,7 @@
         "wikidata_qid": "Q2553927"
     },
     "boat": {
+        "coco_obj_name": "boat",
         "coco_pano_id": 9,
         "coco_pano_name": "boat",
         "freebase_mid": "/m/019jd",
@@ -682,6 +695,7 @@
         "wordnet_pwn30": "n02866578"
     },
     "book": {
+        "coco_obj_name": "book",
         "coco_pano_id": 84,
         "coco_pano_name": "book",
         "freebase_mid": "/m/0bt_c3",
@@ -714,6 +728,7 @@
         "wordnet_pwn30": "n02872752"
     },
     "bottle": {
+        "coco_obj_name": "bottle",
         "coco_pano_id": 44,
         "coco_pano_name": "bottle",
         "freebase_mid": "/m/04dr76w",
@@ -754,6 +769,7 @@
         "wordnet_pwn30": "n02883205"
     },
     "bowl": {
+        "coco_obj_name": "bowl",
         "coco_pano_id": 51,
         "coco_pano_name": "bowl",
         "context": "tableware",
@@ -846,6 +862,7 @@
         "wordnet_pwn30": "n02900705"
     },
     "broccoli": {
+        "coco_obj_name": "broccoli",
         "coco_pano_id": 56,
         "coco_pano_name": "broccoli",
         "context": "vegetable",
@@ -922,6 +939,7 @@
         "wordnet_pwn30": "n07880968"
     },
     "bus": {
+        "coco_obj_name": "bus",
         "coco_pano_id": 6,
         "coco_pano_name": "bus",
         "freebase_mid": "/m/01bjv",
@@ -975,6 +993,7 @@
         "wordnet_pwn30": "n02933112"
     },
     "cake": {
+        "coco_obj_name": "cake",
         "coco_pano_id": 61,
         "coco_pano_name": "cake",
         "freebase_mid": "/m/0fszt",
@@ -1090,6 +1109,7 @@
         "wordnet_pwn30": "n07755929"
     },
     "car": {
+        "coco_obj_name": "car",
         "coco_pano_id": 3,
         "coco_pano_name": "car",
         "context": "auto",
@@ -1121,6 +1141,7 @@
         "wordnet_pwn30": "n01324431"
     },
     "carrot": {
+        "coco_obj_name": "carrot",
         "coco_pano_id": 57,
         "coco_pano_name": "carrot",
         "freebase_mid": "/m/0fj52s",
@@ -1160,6 +1181,7 @@
         "wordnet_pwn30": "n02980441"
     },
     "cat": {
+        "coco_obj_name": "cat",
         "coco_pano_id": 17,
         "coco_pano_name": "cat",
         "freebase_mid": "/m/01yrx",
@@ -1240,6 +1262,7 @@
         "wordnet_pwn30": "n03000684"
     },
     "chair": {
+        "coco_obj_name": "chair",
         "coco_pano_id": 62,
         "coco_pano_name": "chair",
         "freebase_mid": "/m/01mzpv",
@@ -1338,6 +1361,7 @@
         "obj365_cat": "Cleaning Products"
     },
     "clock": {
+        "coco_obj_name": "clock",
         "coco_pano_id": 85,
         "coco_pano_name": "clock",
         "freebase_mid": "/m/01x3z",
@@ -1487,6 +1511,7 @@
         "obj365_cat": "Computer Box"
     },
     "computer_keyboard": {
+        "coco_obj_name": "keyboard",
         "coco_pano_id": 76,
         "coco_pano_name": "keyboard",
         "freebase_mid": "/m/01m2v",
@@ -1575,6 +1600,7 @@
         "obj365_cat": "Cosmetics Mirror"
     },
     "couch": {
+        "coco_obj_name": "couch",
         "coco_pano_id": 63,
         "coco_pano_name": "couch",
         "freebase_mid": "/m/0703r8",
@@ -1606,6 +1632,7 @@
         "wordnet_pwn30": "n03118245"
     },
     "cow": {
+        "coco_obj_name": "cow",
         "coco_pano_id": 21,
         "coco_pano_name": "cow",
         "obj365_cat": "Cow",
@@ -1721,6 +1748,7 @@
         "wordnet_pwn30": "n03145522"
     },
     "cup": {
+        "coco_obj_name": "cup",
         "coco_pano_id": 47,
         "coco_pano_name": "cup",
         "obj365_cat": "Cup",
@@ -1850,6 +1878,7 @@
         "wordnet_pwn30": "n03196217"
     },
     "dining_table": {
+        "coco_obj_name": "dining table",
         "coco_pano_id": 67,
         "coco_pano_name": "dining table",
         "obj365_cat": "Dinning Table",
@@ -1887,6 +1916,7 @@
         "wordnet_pwn30": "n03207941"
     },
     "dog": {
+        "coco_obj_name": "dog",
         "coco_pano_id": 18,
         "coco_pano_name": "dog",
         "context": "animal",
@@ -1935,6 +1965,7 @@
         "wordnet_pwn30": "n02389559"
     },
     "donut": {
+        "coco_obj_name": "donut",
         "coco_pano_id": 60,
         "coco_pano_name": "donut",
         "freebase_mid": "/m/0jy4k",
@@ -2132,6 +2163,7 @@
         "wordnet_pwn30": "n03271574"
     },
     "elephant": {
+        "coco_obj_name": "elephant",
         "coco_pano_id": 22,
         "coco_pano_name": "elephant",
         "freebase_mid": "/m/0bwd_0j",
@@ -2299,6 +2331,7 @@
         "wordnet_pwn30": "n03345837"
     },
     "fire_hydrant": {
+        "coco_obj_name": "fire hydrant",
         "coco_pano_id": 11,
         "coco_pano_name": "fire hydrant",
         "freebase_mid": "/m/01pns0",
@@ -2474,6 +2507,7 @@
         "wordnet_pwn30": "n03380867"
     },
     "fork": {
+        "coco_obj_name": "fork",
         "coco_pano_id": 48,
         "coco_pano_name": "fork",
         "freebase_mid": "/m/0dt3t",
@@ -2524,6 +2558,7 @@
         "wordnet_pwn30": "n03394916"
     },
     "frisbee": {
+        "coco_obj_name": "frisbee",
         "coco_pano_id": 34,
         "coco_pano_name": "frisbee",
         "freebase_mid": "/m/02wmf",
@@ -2611,6 +2646,7 @@
         "wordnet_pwn30": "n03425595"
     },
     "giraffe": {
+        "coco_obj_name": "giraffe",
         "coco_pano_id": 25,
         "coco_pano_name": "giraffe",
         "freebase_mid": "/m/03bk1",
@@ -2821,6 +2857,7 @@
         "wordnet_pwn30": "n05254393"
     },
     "hair_dryer": {
+        "coco_obj_name": "hair drier",
         "coco_pano_id": 89,
         "coco_pano_name": "hair drier",
         "freebase_mid": "/m/03wvsk",
@@ -2888,6 +2925,7 @@
         "wikidata_qid": "Q535923"
     },
     "handbag": {
+        "coco_obj_name": "handbag",
         "coco_pano_id": 31,
         "coco_pano_name": "handbag",
         "freebase_mid": "/m/080hkjn",
@@ -3095,6 +3133,7 @@
         "wordnet_pwn30": "n03535780"
     },
     "horse": {
+        "coco_obj_name": "horse",
         "coco_pano_id": 19,
         "coco_pano_name": "horse",
         "freebase_mid": "/m/03k3r",
@@ -3120,6 +3159,7 @@
         "wordnet_pwn30": "n02782093"
     },
     "hot_dog": {
+        "coco_obj_name": "hot dog",
         "coco_pano_id": 58,
         "coco_pano_name": "hot dog",
         "context": "bun",
@@ -3364,6 +3404,7 @@
         "wordnet_pwn30": "n03621377"
     },
     "kite": {
+        "coco_obj_name": "kite",
         "coco_pano_id": 38,
         "coco_pano_name": "kite",
         "freebase_mid": "/m/02zt3",
@@ -3385,6 +3426,7 @@
         "wordnet_pwn30": "n07763629"
     },
     "knife": {
+        "coco_obj_name": "knife",
         "coco_pano_id": 49,
         "coco_pano_name": "knife",
         "freebase_mid": "/m/04ctx",
@@ -3461,6 +3503,7 @@
         "wordnet_pwn30": "n03640988"
     },
     "laptop": {
+        "coco_obj_name": "laptop",
         "coco_pano_id": 73,
         "coco_pano_name": "laptop",
         "freebase_mid": "/m/01c648",
@@ -3807,6 +3850,7 @@
         "wordnet_pwn30": "n03759954"
     },
     "microwave": {
+        "coco_obj_name": "microwave",
         "coco_pano_id": 78,
         "coco_pano_name": "microwave",
         "context": "appliance",
@@ -3879,6 +3923,7 @@
         "wordnet_pwn30": "n03775546"
     },
     "mobile_phone": {
+        "coco_obj_name": "cell phone",
         "coco_pano_id": 77,
         "coco_pano_name": "cell phone",
         "freebase_mid": "/m/050k8",
@@ -3917,6 +3962,7 @@
         "oid_name": "Moths and butterflies"
     },
     "motorcycle": {
+        "coco_obj_name": "motorcycle",
         "coco_pano_id": 4,
         "coco_pano_name": "motorcycle",
         "freebase_mid": "/m/04_sv",
@@ -3940,6 +3986,7 @@
         "wordnet_pwn30": "n09359803"
     },
     "mouse": {
+        "coco_obj_name": "mouse",
         "coco_pano_id": 74,
         "coco_pano_name": "mouse",
         "context": "animal",
@@ -4132,6 +4179,7 @@
         "wordnet_pwn30": "n07722217"
     },
     "orange": {
+        "coco_obj_name": "orange",
         "coco_pano_id": 55,
         "coco_pano_name": "orange",
         "context": "fruit",
@@ -4173,6 +4221,7 @@
         "wordnet_pwn30": "n02444819"
     },
     "oven": {
+        "coco_obj_name": "oven",
         "coco_pano_id": 79,
         "coco_pano_name": "oven",
         "freebase_mid": "/m/029bxz",
@@ -4295,6 +4344,7 @@
         "wordnet_pwn30": "n03888257"
     },
     "parking_meter": {
+        "coco_obj_name": "parking meter",
         "coco_pano_id": 14,
         "coco_pano_name": "parking meter",
         "freebase_mid": "/m/015qbp",
@@ -4422,6 +4472,7 @@
         "wordnet_pwn30": "n03916031"
     },
     "person": {
+        "coco_obj_name": "person",
         "coco_pano_id": 1,
         "coco_pano_name": "person",
         "freebase_mid": "/m/01g317",
@@ -4435,8 +4486,8 @@
     },
     "personal_care": {
         "freebase_mid": "/m/02w3_ws",
-        "oid_name": "Personal care",
         "obj365_cat": "Toiletry",
+        "oid_name": "Personal care",
         "wikidata_desc": "consumer products used in personal hygiene and for beautification",
         "wikidata_name": "personal care products",
         "wikidata_qid": "Q3246832",
@@ -4545,6 +4596,7 @@
         "wordnet_pwn30": "n03950228"
     },
     "pizza": {
+        "coco_obj_name": "pizza",
         "coco_pano_id": 59,
         "coco_pano_name": "pizza",
         "freebase_mid": "/m/0663v",
@@ -4730,6 +4782,7 @@
         "wordnet_pwn30": "n07712559"
     },
     "potted_plant": {
+        "coco_obj_name": "potted plant",
         "coco_pano_id": 64,
         "coco_pano_name": "potted plant",
         "freebase_mid": "/m/03fp41",
@@ -4946,6 +4999,7 @@
         "wordnet_pwn30": "n02509815"
     },
     "refrigerator": {
+        "coco_obj_name": "refrigerator",
         "coco_pano_id": 82,
         "coco_pano_name": "refrigerator",
         "freebase_mid": "/m/040b_t",
@@ -4958,6 +5012,7 @@
         "wordnet_pwn30": "n04070727"
     },
     "remote": {
+        "coco_obj_name": "remote",
         "coco_pano_id": 75,
         "coco_pano_name": "remote",
         "context": "device",
@@ -5193,6 +5248,7 @@
         "wordnet_pwn30": "n04133789"
     },
     "sandwich": {
+        "coco_obj_name": "sandwich",
         "coco_pano_id": 54,
         "coco_pano_name": "sandwich",
         "freebase_mid": "/m/0l515",
@@ -5259,6 +5315,7 @@
         "wordnet_pwn30": "n04143897"
     },
     "scissors": {
+        "coco_obj_name": "scissors",
         "coco_pano_id": 87,
         "coco_pano_name": "scissors",
         "freebase_mid": "/m/01lsmm",
@@ -5411,6 +5468,7 @@
         "wordnet_pwn30": "n01482330"
     },
     "sheep": {
+        "coco_obj_name": "sheep",
         "coco_pano_id": 20,
         "coco_pano_name": "sheep",
         "freebase_mid": "/m/07bgp",
@@ -5529,6 +5587,7 @@
         "wordnet_pwn30": "n03900750"
     },
     "sink": {
+        "coco_obj_name": "sink",
         "coco_pano_id": 81,
         "coco_pano_name": "sink",
         "context": "basin",
@@ -5542,6 +5601,7 @@
         "wordnet_pwn30": "n04553703"
     },
     "skateboard": {
+        "coco_obj_name": "skateboard",
         "coco_pano_id": 41,
         "coco_pano_name": "skateboard",
         "freebase_mid": "/m/06_fw",
@@ -5554,6 +5614,7 @@
         "wordnet_pwn30": "n04225987"
     },
     "ski": {
+        "coco_obj_name": "skis",
         "coco_pano_id": 35,
         "coco_pano_name": "skis",
         "freebase_mid": "/m/071p9",
@@ -5692,6 +5753,7 @@
         "wordnet_pwn30": "n03066743"
     },
     "snowboard": {
+        "coco_obj_name": "snowboard",
         "coco_pano_id": 36,
         "coco_pano_name": "snowboard",
         "freebase_mid": "/m/06__v",
@@ -5824,6 +5886,7 @@
         "wordnet_pwn30": "n04275283"
     },
     "spoon": {
+        "coco_obj_name": "spoon",
         "coco_pano_id": 50,
         "coco_pano_name": "spoon",
         "freebase_mid": "/m/0cmx8",
@@ -5971,6 +6034,7 @@
         "wordnet_pwn30": "n04326896"
     },
     "stop_sign": {
+        "coco_obj_name": "stop sign",
         "coco_pano_id": 13,
         "coco_pano_name": "stop sign",
         "freebase_mid": "/m/02pv19",
@@ -6055,6 +6119,7 @@
         "wordnet_pwn30": "n04350905"
     },
     "suitcase": {
+        "coco_obj_name": "suitcase",
         "coco_pano_id": 33,
         "coco_pano_name": "suitcase",
         "freebase_mid": "/m/01s55n",
@@ -6084,6 +6149,7 @@
         "wordnet_pwn30": "n04356056"
     },
     "surfboard": {
+        "coco_obj_name": "surfboard",
         "coco_pano_id": 42,
         "coco_pano_name": "surfboard",
         "freebase_mid": "/m/019w40",
@@ -6300,6 +6366,7 @@
         "wordnet_pwn30": "n04398044"
     },
     "teddy_bear": {
+        "coco_obj_name": "teddy bear",
         "coco_pano_id": 88,
         "coco_pano_name": "teddy bear",
         "freebase_mid": "/m/0kmg4",
@@ -6340,6 +6407,7 @@
         "wordnet_pwn30": "n04409515"
     },
     "tennis_racket": {
+        "coco_obj_name": "tennis racket",
         "coco_pano_id": 43,
         "coco_pano_name": "tennis racket",
         "freebase_mid": "/m/0h8my_4",
@@ -6382,6 +6450,7 @@
         "wordnet_pwn30": "n04432308"
     },
     "tie": {
+        "coco_obj_name": "tie",
         "coco_pano_id": 32,
         "coco_pano_name": "tie",
         "freebase_mid": "/m/01rkbr",
@@ -6440,6 +6509,7 @@
         "wordnet_pwn30": "n15074962"
     },
     "toaster": {
+        "coco_obj_name": "toaster",
         "coco_pano_id": 80,
         "coco_pano_name": "toaster",
         "context": "appliance",
@@ -6453,6 +6523,7 @@
         "wordnet_pwn30": "n04442312"
     },
     "toilet": {
+        "coco_obj_name": "toilet",
         "coco_pano_id": 70,
         "coco_pano_name": "toilet",
         "freebase_mid": "/m/09g1w",
@@ -6502,6 +6573,7 @@
         "wordnet_pwn30": "n04451818"
     },
     "toothbrush": {
+        "coco_obj_name": "toothbrush",
         "coco_pano_id": 90,
         "coco_pano_name": "toothbrush",
         "freebase_mid": "/m/012xff",
@@ -6570,6 +6642,7 @@
         "wikidata_qid": "Q694547"
     },
     "traffic_light": {
+        "coco_obj_name": "traffic light",
         "coco_pano_id": 10,
         "coco_pano_name": "traffic light",
         "freebase_mid": "/m/015qff",
@@ -6590,6 +6663,7 @@
         "wikidata_qid": "Q170285"
     },
     "train": {
+        "coco_obj_name": "train",
         "coco_pano_id": 7,
         "coco_pano_name": "train",
         "context": "rail",
@@ -6687,6 +6761,7 @@
         "wordnet_pwn30": "n04489008"
     },
     "truck": {
+        "coco_obj_name": "truck",
         "coco_pano_id": 8,
         "coco_pano_name": "truck",
         "freebase_mid": "/m/07r04",
@@ -6735,6 +6810,7 @@
         "wordnet_pwn30": "n04502197"
     },
     "tv": {
+        "coco_obj_name": "tv",
         "coco_pano_id": 72,
         "coco_pano_name": "tv",
         "wikidata_qid": "Q80752",
@@ -6742,6 +6818,7 @@
         "wordnet_pwn30": "n04405907"
     },
     "umbrella": {
+        "coco_obj_name": "umbrella",
         "coco_pano_id": 28,
         "coco_pano_name": "umbrella",
         "freebase_mid": "/m/0hnnb",
@@ -6782,6 +6859,7 @@
         "wordnet_pwn30": "n04520170"
     },
     "vase": {
+        "coco_obj_name": "vase",
         "coco_pano_id": 86,
         "coco_pano_name": "vase",
         "freebase_mid": "/m/02s195",
@@ -7034,6 +7112,7 @@
         "wordnet_pwn30": "n04964162"
     },
     "wine_glass": {
+        "coco_obj_name": "wine glass",
         "coco_pano_id": 46,
         "coco_pano_name": "wine glass",
         "freebase_mid": "/m/09tvcd",
@@ -7134,6 +7213,7 @@
         "wordnet_pwn30": "n02405302"
     },
     "zebra": {
+        "coco_obj_name": "zebra",
         "coco_pano_id": 24,
         "coco_pano_name": "zebra",
         "freebase_mid": "/m/0898b",
