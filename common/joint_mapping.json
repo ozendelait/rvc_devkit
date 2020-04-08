@@ -511,6 +511,7 @@
     "bicycle": {
         "coco_pano_id": 2,
         "coco_pano_name": "bicycle",
+        "obj365_cat": "Bicycle",
         "freebase_mid": "/m/0199g",
         "oid_name": "Bicycle",
         "wikidata_desc": "pedal-driven two-wheel vehicle",
@@ -1155,9 +1156,6 @@
         "wordnet_gloss": "domesticated bovine animals as a group regardless of sex or age; \"so many head of cattle\"; \"wait till the cows come home\"; \"seven thin and ill-favored kine\"- Bible; \"a team of oxen\"",
         "wordnet_pwn30": "n02402425"
     },
-    "compact_disc": {
-        "obj365_cat": "CD"
-    },
     "ceiling": {
         "coco_pano_id": 186,
         "coco_pano_name": "ceiling-merged",
@@ -1441,6 +1439,9 @@
         "wikidata_qid": "Q171497",
         "wordnet_gloss": "annual sunflower grown for silage and for its seeds which are a source of oil; common throughout United States and much of North America",
         "wordnet_pwn30": "n11978713"
+    },
+    "compact_disc": {
+        "obj365_cat": "CD"
     },
     "computer_housing": {
         "obj365_cat": "Computer Box"
@@ -2029,8 +2030,7 @@
         "wikidata_desc": "small electric device converting electric signal to sound with low volume intended to be held close to a user's ear, usually used in pair placed near to the ears",
         "wikidata_name": "earphone",
         "wikidata_qid": "Q186819",
-        "wordnet_gloss": "electro-acoustic transducer for converting electric signals into sounds; it is held over or inserted into the ear; \"it was not the typing but the earphones that she disliked\"",
-        "wordnet_pwn30": "n03261776"
+        "wordnet_pwn30": "n03262248"
     },
     "earring": {
         "freebase_mid": "/m/01r546",
@@ -2195,14 +2195,6 @@
         "wikidata_qid": "Q81799",
         "wordnet_gloss": "inexpensive food (hamburgers or chicken or milkshakes) prepared and served quickly",
         "wordnet_pwn30": "n07560193"
-    },
-    "faucet": {
-        "obj365_cat": "Faucet",
-        "wikidata_desc": "regulated inflow of water, for example for drinking water",
-        "wikidata_name": "tap",
-        "wikidata_qid": "Q656656",
-        "wordnet_gloss": "a regulator for controlling the flow of a liquid from a reservoir",
-        "wordnet_pwn30": "n03325088"
     },
     "fax": {
         "context": "machine",
@@ -2680,6 +2672,7 @@
         "wordnet_pwn30": "n07749969"
     },
     "grass": {
+        "context": "lawn",
         "coco_pano_id": 193,
         "coco_pano_name": "grass-merged",
         "wordnet_gloss": "narrow-leaved green herbage: grown as lawns; used as pasture for grazing animals; cut and dried as hay",
@@ -2909,9 +2902,7 @@
         "freebase_mid": "/m/01b7fy",
         "obj365_cat": "Head Phone",
         "oid_name": "Headphones",
-        "wikidata_desc": "small electric device converting electric signal to sound with low volume intended to be held close to a user's ear, usually used in pair placed near to the ears",
-        "wikidata_name": "earphone",
-        "wikidata_qid": "Q186819",
+        "wikidata_qid": "",
         "wordnet_gloss": "electro-acoustic transducer for converting electric signals into sounds; it is held over or inserted into the ear; \"it was not the typing but the earphones that she disliked\"",
         "wordnet_pwn30": "n03261776"
     },
@@ -3832,12 +3823,14 @@
         "wordnet_pwn30": "n03790512"
     },
     "mountain": {
+        "context": "land",
         "coco_pano_id": 192,
         "coco_pano_name": "mountain-merged",
         "wordnet_gloss": "a land mass that projects well above its surroundings; higher than a hill",
         "wordnet_pwn30": "n09359803"
     },
     "mouse": {
+        "context": "animal",
         "coco_pano_id": 74,
         "coco_pano_name": "mouse",
         "freebase_mid": "/m/04rmv",
@@ -3845,9 +3838,7 @@
         "oid_name": "Mouse",
         "wikidata_desc": "genus of mammals",
         "wikidata_name": "Mus",
-        "wikidata_qid": "Q39275",
-        "wordnet_gloss": "a hand-operated electronic device that controls the coordinates of a cursor on your computer screen as you move it around on a pad; on the bottom of the device is a ball that rolls on the surface of the pad; \"a mouse takes much more room than a trackball\"",
-        "wordnet_pwn30": "n03793489"
+        "wikidata_qid": "Q39275"
     },
     "mouth": {
         "context": "human",
@@ -3939,9 +3930,9 @@
         "wordnet_pwn30": "n03814906"
     },
     "net": {
-        "context": "trap",
         "coco_pano_id": 138,
         "coco_pano_name": "net",
+        "context": "trap",
         "wordnet_gloss": "a trap made of netting to catch fish or birds or insects",
         "wordnet_pwn30": "n03819994"
     },
@@ -4130,13 +4121,12 @@
         "wordnet_pwn30": "n07640203"
     },
     "panda": {
+        "context": "giant",
         "freebase_mid": "/m/03bj1",
         "oid_name": "Panda",
         "wikidata_desc": "species of mammal",
         "wikidata_name": "giant panda",
-        "wikidata_qid": "Q33602",
-        "wordnet_gloss": "reddish-brown Old World raccoon-like carnivore; in some classifications considered unrelated to the giant pandas",
-        "wordnet_pwn30": "n02509815"
+        "wikidata_qid": "Q33602"
     },
     "papaya": {
         "obj365_cat": "Papaya",
@@ -4471,11 +4461,7 @@
     "platform": {
         "coco_pano_id": 144,
         "coco_pano_name": "platform",
-        "wikidata_desc": "pedestrian path along the side of a road",
-        "wikidata_name": "sidewalk",
-        "wikidata_qid": "Q177749",
-        "wordnet_gloss": "a woman's shoe with a very high thick sole",
-        "wordnet_pwn30": "n03025250"
+		"wordnet_pwn30": "n03961939"
     },
     "platter": {
         "freebase_mid": "/m/099ssp",
@@ -6063,9 +6049,8 @@
         "wikidata_desc": "regulated inflow of water, for example for drinking water",
         "wikidata_name": "tap",
         "wikidata_qid": "Q656656",
-        "wordnet_gloss": "a plug for a bunghole in a cask",
-        "wordnet_pwn30": "n04390977"
-    },
+		"obj365_cat": "Faucet"
+		},
     "target": {
         "obj365_cat": "Target",
         "wikidata_desc": "grammar: participant of a situation upon whom an action is carried out or the thematic relation such a participant has with an action. Sometimes, \"theme\" and \"patient\" are used to mean the same thing",
@@ -6242,6 +6227,7 @@
         "wordnet_pwn30": "n04440749"
     },
     "tissue": {
+        "context": "paper",
         "obj365_cat": "Tissue",
         "wordnet_gloss": "a soft thin (usually translucent) paper",
         "wordnet_pwn30": "n15074962"
@@ -6760,13 +6746,10 @@
     },
     "wheel": {
         "freebase_mid": "/m/083wq",
-        "obj365_cat": "Bicycle",
         "oid_name": "Wheel",
         "wikidata_desc": "one of the six simple machines, a circular item that rotates about an axial bearing",
         "wikidata_name": "wheel",
-        "wikidata_qid": "Q446",
-        "wordnet_gloss": "a wheeled vehicle that has two wheels and is moved by foot pedals",
-        "wordnet_pwn30": "n02834778"
+        "wikidata_qid": "Q446"
     },
     "wheelchair": {
         "freebase_mid": "/m/0qmmr",
@@ -6807,6 +6790,8 @@
         "wordnet_pwn30": "n04584794"
     },
     "window": {
+        "coco_pano_id": 181,
+        "coco_pano_name": "window-other",
         "freebase_mid": "/m/0d4v4",
         "oid_name": "Window",
         "wikidata_desc": "transparent or translucent opening",
@@ -6815,17 +6800,9 @@
         "wordnet_gloss": "a framework of wood or metal that contains a glass windowpane and is built into a wall or roof to admit light or air",
         "wordnet_pwn30": "n04587648"
     },
-    "window-blind": {
-        "coco_pano_id": 180,
-        "coco_pano_name": "window-blind"
-    },
-    "window-other": {
-        "coco_pano_id": 181,
-        "coco_pano_name": "window-other",
-        "wordnet_gloss": "a framework of wood or metal that contains a glass windowpane and is built into a wall or roof to admit light or air",
-        "wordnet_pwn30": "n04587648"
-    },
     "window_blind": {
+        "coco_pano_id": 180,
+        "coco_pano_name": "window-blind",
         "freebase_mid": "/m/031b6r",
         "oid_name": "Window blind",
         "wikidata_desc": "type of window covering",
