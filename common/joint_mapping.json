@@ -28,6 +28,7 @@
         "wordnet_pwn30": "n02680337"
     },
     "air_conditioner": {
+        "freebase_mid": "/m/01127",
         "obj365_cat": "Air Conditioner",
         "wikidata_desc": "a device used to cool air",
         "wikidata_name": "air conditioner",
@@ -167,6 +168,9 @@
     "automotive_part": {
         "freebase_mid": "/m/08dz3q",
         "oid_name": "Auto part",
+        "wikidata_desc": "",
+        "wikidata_name": "",
+        "wikidata_qid": "Q46765731",
         "wordnet_gloss": "a component of an automobile; \"his business is auto parts\"",
         "wordnet_pwn30": "n02762044"
     },
@@ -179,6 +183,7 @@
         "wordnet_pwn30": "n07764847"
     },
     "awning": {
+        "freebase_mid": "/m/07vvqb",
         "obj365_cat": "Awning",
         "wikidata_desc": "secondary covering attached to the exterior wall of a building",
         "wikidata_name": "awning",
@@ -278,13 +283,12 @@
     "banner": {
         "coco_pano_id": 92,
         "coco_pano_name": "banner",
-        "wikidata_desc": "banner",
-        "wikidata_name": "Abag Banner",
-        "wikidata_qid": "Q168131",
+        "freebase_mid": "/m/080gb97",
         "wordnet_gloss": "long strip of cloth or paper used for decoration or advertising",
         "wordnet_pwn30": "n02788021"
     },
     "baozi": {
+        "freebase_mid": "/m/0659_7",
         "obj365_cat": "Baozi",
         "wikidata_desc": "filled bun",
         "wikidata_name": "baozi",
@@ -293,6 +297,7 @@
         "wordnet_pwn30": "n07680932"
     },
     "barbell": {
+        "freebase_mid": "/m/03_163",
         "obj365_cat": "Barbell",
         "wikidata_desc": "exercise equipment used in weight training",
         "wikidata_name": "barbell",
@@ -320,6 +325,7 @@
         "wordnet_pwn30": "n02795169"
     },
     "baseball": {
+        "freebase_mid": "/m/03v6wp",
         "obj365_cat": "Baseball",
         "wikidata_desc": "ball used in the sport of baseball",
         "wikidata_name": "baseball",
@@ -352,6 +358,7 @@
         "wordnet_pwn30": "n02800213"
     },
     "basket": {
+        "freebase_mid": "/m/01z562",
         "obj365_cat": "Bakset",
         "wikidata_desc": "container which is traditionally constructed from stiff fibres",
         "wikidata_name": "basket",
@@ -360,6 +367,7 @@
         "wordnet_pwn30": "n02801938"
     },
     "basketball": {
+        "freebase_mid": "/m/018w8",
         "obj365_cat": "Basketball",
         "wikidata_desc": "team sport played on a court with baskets on either end",
         "wikidata_name": "basketball",
@@ -388,6 +396,8 @@
         "context": "toiletries",
         "freebase_mid": "/m/04y4h8h",
         "oid_name": "Bathroom cabinet",
+        "wikidata_name": "bathroom cabinet",
+        "wikidata_qid": "Q4869069",
         "wordnet_gloss": "cabinet that holds medicines and toiletries",
         "wordnet_pwn30": "n03742115"
     },
@@ -551,11 +561,6 @@
         "wordnet_gloss": "a basin for washing genitals and anal area",
         "wordnet_pwn30": "n02836174"
     },
-    "billard_ball": {
-        "obj365_cat": "Billards",
-        "wordnet_gloss": "ball used in playing billiards",
-        "wordnet_pwn30": "n02839351"
-    },
     "billboard": {
         "freebase_mid": "/m/01knjb",
         "oid_name": "Billboard",
@@ -564,6 +569,15 @@
         "wikidata_qid": "Q623149",
         "wordnet_gloss": "large outdoor signboard",
         "wordnet_pwn30": "n02839110"
+    },
+    "billiard_ball": {
+        "freebase_mid": "/m/02x8n6",
+        "obj365_cat": "Billards",
+        "wikidata_desc": "ball used in cue sports",
+        "wikidata_name": "billiard ball",
+        "wikidata_qid": "Q862747",
+        "wordnet_gloss": "ball used in playing billiards",
+        "wordnet_pwn30": "n02839351"
     },
     "billiard_table": {
         "freebase_mid": "/m/04p0qw",
@@ -600,6 +614,7 @@
     "blanket": {
         "coco_pano_id": 93,
         "coco_pano_name": "blanket",
+        "freebase_mid": "/m/03mcpy",
         "wikidata_desc": "type of bedding",
         "wikidata_name": "blanket",
         "wikidata_qid": "Q5852",
@@ -626,7 +641,9 @@
         "wordnet_pwn30": "n01580870"
     },
     "board_eraser": {
-        "obj365_cat": "Board Eraser"
+        "freebase_mid": "/m/0g9_drw",
+        "obj365_cat": "Board Eraser",
+        "wikidata_qid": "Q2553927"
     },
     "boat": {
         "coco_pano_id": 9,
@@ -723,6 +740,7 @@
         "wordnet_pwn30": "n02879718"
     },
     "bow_tie": {
+        "freebase_mid": "/m/0286h_",
         "obj365_cat": "Bow Tie",
         "wikidata_desc": "variety of necktie",
         "wikidata_name": "bow tie",
@@ -769,6 +787,7 @@
         "wordnet_pwn30": "n09870926"
     },
     "bracelet": {
+        "freebase_mid": "/m/01llx7",
         "obj365_cat": "Bracelet",
         "wikidata_desc": "article worn around the wrist",
         "wikidata_name": "bracelet",
@@ -797,7 +816,10 @@
     },
     "brickwall": {
         "coco_pano_id": 171,
-        "coco_pano_name": "wall-brick"
+        "coco_pano_name": "wall-brick",
+        "wikidata_desc": "",
+        "wikidata_name": "",
+        "wikidata_qid": "Q29731012"
     },
     "bridge": {
         "coco_pano_id": 95,
@@ -856,6 +878,7 @@
         "wordnet_pwn30": "n02132136"
     },
     "brush": {
+        "freebase_mid": "/m/02chd9",
         "obj365_cat": "Brush",
         "wikidata_desc": "tool with bristles, wire or other filaments, used for cleaning, grooming hair, make up, painting, surface finishing and for many other purposes",
         "wikidata_name": "brush",
@@ -960,7 +983,10 @@
     },
     "cake_stand": {
         "freebase_mid": "/m/0h8n6ft",
-        "oid_name": "Cake stand"
+        "oid_name": "Cake stand",
+        "wikidata_desc": "",
+        "wikidata_name": "cake stand",
+        "wikidata_qid": "Q11813459"
     },
     "calculator": {
         "freebase_mid": "/m/024d2",
@@ -1165,6 +1191,7 @@
     "ceiling": {
         "coco_pano_id": 186,
         "coco_pano_name": "ceiling-merged",
+        "freebase_mid": "/m/03gfsp",
         "wikidata_desc": "overhead interior surface that covers the upper limit of a room",
         "wikidata_name": "ceiling",
         "wikidata_qid": "Q221706",
@@ -1240,6 +1267,7 @@
     },
     "cherry": {
         "context": "fruit",
+        "freebase_mid": "/m/0f8sw",
         "obj365_cat": "Cherry",
         "wikidata_desc": "the fruit (for the best-known species see Q165137; or Q131517)",
         "wikidata_name": "cherry",
@@ -1421,6 +1449,7 @@
         "wordnet_pwn30": "n13388245"
     },
     "comb": {
+        "freebase_mid": "/m/020sdj",
         "obj365_cat": "Comb",
         "wikidata_desc": "toothed device used for styling, cleaning and managing hair and scalp",
         "wikidata_name": "comb",
@@ -1519,6 +1548,7 @@
         "oid_name": "Corded phone"
     },
     "corn": {
+        "freebase_mid": "/m/0mgg8",
         "obj365_cat": "Corn",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Zea",
@@ -1600,6 +1630,7 @@
         "wordnet_pwn30": "n00445529"
     },
     "crane": {
+        "freebase_mid": "/m/01v50j",
         "obj365_cat": "Crane",
         "wikidata_desc": "type of machine",
         "wikidata_name": "crane",
@@ -1676,6 +1707,7 @@
         "wordnet_pwn30": "n07718472"
     },
     "cue": {
+        "freebase_mid": "/m/04p168",
         "obj365_cat": "Cue",
         "wikidata_desc": "Cue Stick",
         "wikidata_name": "cue stick",
@@ -1704,6 +1736,9 @@
     },
     "curling_stone": {
         "obj365_cat": "Curling",
+        "wikidata_desc": "",
+        "wikidata_name": "curling stone",
+        "wikidata_qid": "Q16610604",
         "wordnet_gloss": "a game played on ice in which heavy stones with handles are slid toward a target",
         "wordnet_pwn30": "n00461611"
     },
@@ -1831,6 +1866,7 @@
     "dirt": {
         "coco_pano_id": 194,
         "coco_pano_name": "dirt-merged",
+        "freebase_mid": "/m/0807r36",
         "wikidata_desc": "generalized term used to describe unclean matter",
         "wikidata_name": "dirt",
         "wikidata_qid": "Q555882"
@@ -1885,6 +1921,7 @@
         "wordnet_pwn30": "n02068974"
     },
     "donkey": {
+        "freebase_mid": "/m/0ffhf",
         "obj365_cat": "Donkey",
         "wikidata_desc": "domesticated member of the horse family",
         "wikidata_name": "Equus africanus asinus",
@@ -1999,6 +2036,7 @@
         "wordnet_pwn30": "n03255030"
     },
     "dumpling": {
+        "freebase_mid": "/m/06r77g",
         "obj365_cat": "Dumpling",
         "wikidata_desc": "Korean dumplings",
         "wikidata_name": "mandu",
@@ -2007,6 +2045,7 @@
         "wordnet_pwn30": "n07611148"
     },
     "durian": {
+        "freebase_mid": "/m/02dx0",
         "obj365_cat": "Durian",
         "wikidata_desc": "the general fruit. Use Q2309085 for the genus or Q1135236 for the commonest species",
         "wikidata_name": "durian",
@@ -2034,6 +2073,7 @@
         "wordnet_pwn30": "n05320899"
     },
     "earphone": {
+        "freebase_mid": "/m/01b7fy",
         "obj365_cat": "earphone",
         "wikidata_desc": "small electric device converting electric signal to sound with low volume intended to be held close to a user's ear, usually used in pair placed near to the ears",
         "wikidata_name": "earphone",
@@ -2062,6 +2102,7 @@
         "wordnet_pwn30": "n07840804"
     },
     "eggplant": {
+        "freebase_mid": "/m/0cdk2",
         "obj365_cat": "Eggplant",
         "wikidata_desc": "plant species Solanum melongena",
         "wikidata_name": "eggplant",
@@ -2121,6 +2162,7 @@
         "wordnet_pwn30": "n03294833"
     },
     "exhaust_hood": {
+        "freebase_mid": "/m/03mw1c",
         "obj365_cat": "Extractor",
         "wikidata_desc": "type of that home appliance that clears smoke from a stove",
         "wikidata_name": "exhaust hood",
@@ -2172,6 +2214,8 @@
     "face_powder": {
         "freebase_mid": "/m/02xb7qb",
         "oid_name": "Face powder",
+        "wikidata_name": "face powder",
+        "wikidata_qid": "Q1160505",
         "wordnet_gloss": "cosmetic powder for the face",
         "wordnet_pwn30": "n03314780"
     },
@@ -2209,6 +2253,9 @@
         "context": "machine",
         "freebase_mid": "/m/02xqq",
         "oid_name": "Fax",
+        "wikidata_desc": "method of transmitting images, often of documents",
+        "wikidata_name": "fax",
+        "wikidata_qid": "Q132744",
         "wordnet_gloss": "duplicator that transmits the copy by wire or radio",
         "wordnet_pwn30": "n03316105"
     },
@@ -2241,6 +2288,7 @@
         "wordnet_pwn30": "n03337140"
     },
     "fire_extinguisher": {
+        "freebase_mid": "/m/01nl4x",
         "obj365_cat": "Fire Extinguisher",
         "wikidata_desc": "an active fire protection device",
         "wikidata_name": "fire extinguisher",
@@ -2261,6 +2309,7 @@
         "wordnet_pwn30": "n03346898"
     },
     "fire_truck": {
+        "freebase_mid": "/m/012ndj",
         "obj365_cat": "Fire Truck",
         "wikidata_desc": "emergency vehicle intended to put out fires",
         "wikidata_name": "fire engine",
@@ -2288,6 +2337,7 @@
         "wordnet_pwn30": "n02512053"
     },
     "fishing_rod": {
+        "freebase_mid": "Oh yea",
         "obj365_cat": "Fishing Rod",
         "wikidata_desc": "tool",
         "wikidata_name": "fishing rod",
@@ -2315,6 +2365,7 @@
         "wordnet_pwn30": "n03359137"
     },
     "flask": {
+        "freebase_mid": "/m/05hw3k",
         "obj365_cat": "Flask",
         "wikidata_desc": "type of laboratory glassware",
         "wikidata_name": "laboratory flask",
@@ -2325,6 +2376,7 @@
     "floor": {
         "coco_pano_id": 190,
         "coco_pano_name": "floor-other-merged",
+        "freebase_mid": "/m/0l7_8",
         "wikidata_desc": "walking surface of a room",
         "wikidata_name": "floor",
         "wikidata_qid": "Q217164",
@@ -2539,6 +2591,7 @@
         "wordnet_pwn30": "n07719213"
     },
     "garlic": {
+        "freebase_mid": "/m/0dbrl",
         "obj365_cat": "Garlic",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Ajo",
@@ -2550,6 +2603,8 @@
         "freebase_mid": "/m/02wv84t",
         "obj365_cat": "Gas stove",
         "oid_name": "Gas stove",
+        "wikidata_name": "gas stove",
+        "wikidata_qid": "Q1667685",
         "wordnet_gloss": "a range with gas rings and an oven for cooking with gas",
         "wordnet_pwn30": "n03425595"
     },
@@ -2638,6 +2693,7 @@
         "wordnet_pwn30": "n03445924"
     },
     "golf_club": {
+        "freebase_mid": "/m/03gzqq",
         "obj365_cat": "Golf Club",
         "wikidata_desc": "piece of sporting equipment used to hit a golf ball in a game of golf",
         "wikidata_name": "golf club",
@@ -2688,6 +2744,10 @@
         "coco_pano_id": 193,
         "coco_pano_name": "grass-merged",
         "context": "lawn",
+        "freebase_mid": "/m/0fkrk",
+        "wikidata_desc": "family of plants",
+        "wikidata_name": "Poaceae",
+        "wikidata_qid": "Q43238",
         "wordnet_gloss": "narrow-leaved green herbage: grown as lawns; used as pasture for grazing animals; cut and dried as hay",
         "wordnet_pwn30": "n12102133"
     },
@@ -2706,6 +2766,7 @@
         "wordnet_pwn30": "n07727868"
     },
     "green_onion": {
+        "freebase_mid": "/m/042lv8",
         "obj365_cat": "Green Onion",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Welsh onion",
@@ -2846,6 +2907,7 @@
         "wordnet_pwn30": "n03948459"
     },
     "hanger": {
+        "freebase_mid": "/m/0ksls",
         "obj365_cat": "Hanger",
         "wikidata_desc": "devices of wood, metal, or plastic used to hang garments",
         "wikidata_name": "clothes hanger",
@@ -2980,6 +3042,7 @@
         "wordnet_pwn30": "n02398521"
     },
     "hockey_stick": {
+        "freebase_mid": "/m/01tysc",
         "obj365_cat": "Hockey Stick",
         "wikidata_desc": "used to propel the puck in hockey",
         "wikidata_name": "hockey stick",
@@ -3031,6 +3094,7 @@
     },
     "hot_air_balloon": {
         "context": "aerostat",
+        "freebase_mid": "/m/03dk1w",
         "obj365_cat": "Hotair ballon",
         "wikidata_desc": "type of aerostat that remains aloft due to its buoyancy",
         "wikidata_name": "balloon",
@@ -3236,6 +3300,7 @@
         "wordnet_pwn30": "n03612814"
     },
     "key": {
+        "freebase_mid": "/m/0dxyr",
         "obj365_cat": "Key",
         "wikidata_desc": "piece of information in cryptography",
         "wikidata_name": "key",
@@ -3294,6 +3359,7 @@
         "wordnet_pwn30": "n03621473"
     },
     "kiwi_fruit": {
+        "freebase_mid": "/m/04f8p",
         "obj365_cat": "Kiwi fruit",
         "wikidata_desc": "edible berry of several species of woody vines in the genus Actinidia, native to China",
         "wikidata_name": "kiwifruit",
@@ -3432,6 +3498,7 @@
         "wordnet_pwn30": "n02128385"
     },
     "lettuce": {
+        "freebase_mid": "/m/0fqlj",
         "obj365_cat": "Lettuce",
         "wikidata_desc": "species of annual plant of the daisy family, most often grown as a leaf vegetable",
         "wikidata_name": "lettuce",
@@ -3449,6 +3516,7 @@
         "wordnet_pwn30": "n03661180"
     },
     "lifesaver": {
+        "freebase_mid": "/m/02hj2v",
         "obj365_cat": "Lifesaver",
         "wikidata_desc": "buoy designed to be thrown to person in water, to prevent drowning",
         "wikidata_name": "lifebuoy",
@@ -3475,6 +3543,7 @@
         "wikidata_qid": "Q962420"
     },
     "lighter": {
+        "freebase_mid": "/m/01ypq8",
         "obj365_cat": "Lighter",
         "wikidata_desc": "portable device used to generate a flame",
         "wikidata_name": "lighter",
@@ -3549,6 +3618,7 @@
         "wordnet_pwn30": "n01982650"
     },
     "loudspeaker": {
+        "freebase_mid": "/m/0cfpc",
         "obj365_cat": "Speaker",
         "wikidata_desc": "transducer that converts electrical energy into sound energy; electroacoustic transducer that converts an electrical audio signal into a corresponding sound; does not include a box",
         "wikidata_name": "loudspeaker",
@@ -3645,6 +3715,7 @@
         "wikidata_qid": "Q382441"
     },
     "marker": {
+        "freebase_mid": "/m/02fbz6",
         "obj365_cat": "Marker",
         "wikidata_desc": "type of writing tool",
         "wikidata_name": "marker",
@@ -3654,6 +3725,7 @@
     },
     "mask": {
         "context": "disguise",
+        "freebase_mid": "/m/01kr41",
         "obj365_cat": "Mask",
         "wikidata_desc": "any full or partial face covering, whether ceremonial, protective, decorative, or used as disguise",
         "wikidata_name": "mask",
@@ -3683,6 +3755,7 @@
         "wikidata_qid": "Q6498398"
     },
     "medal": {
+        "freebase_mid": "/m/020yd1",
         "obj365_cat": "Medal",
         "wikidata_desc": "round piece of metal, often used as an award",
         "wikidata_name": "medal",
@@ -3698,6 +3771,7 @@
         "wikidata_qid": "Q188223"
     },
     "megaphone": {
+        "freebase_mid": "/m/01f0r6",
         "obj365_cat": "Megaphone",
         "wikidata_desc": "handheld device that amplifies the voice of a speaking person, can be an acoustic megaphone or electronic megaphone",
         "wikidata_name": "megaphone",
@@ -3813,6 +3887,7 @@
         "wordnet_pwn30": "n02484322"
     },
     "mop": {
+        "freebase_mid": "/m/04cvgx",
         "obj365_cat": "Mop",
         "wikidata_desc": "mass or bundle of coarse strings or yarn attached to a stick",
         "wikidata_name": "mop",
@@ -3840,6 +3915,7 @@
         "coco_pano_id": 192,
         "coco_pano_name": "mountain-merged",
         "context": "land",
+        "freebase_mid": "/m/09d_r",
         "wikidata_desc": "large landform that stretches above the surrounding land",
         "wikidata_name": "mountain",
         "wikidata_qid": "Q8502",
@@ -3929,6 +4005,7 @@
         "wikidata_qid": "Q37077"
     },
     "napkin": {
+        "freebase_mid": "/m/026lrs",
         "obj365_cat": "Napkin",
         "wikidata_desc": "piece of cloth or paper used to wipe one's face or skin while eating",
         "wikidata_name": "napkin",
@@ -3964,6 +4041,7 @@
         "wordnet_pwn30": "n08649711"
     },
     "noodle": {
+        "freebase_mid": "/m/0mfnf",
         "obj365_cat": "Noddles",
         "wikidata_desc": "type of staple food made from some type of unleavened dough",
         "wikidata_name": "noodle",
@@ -3982,6 +4060,7 @@
         "wordnet_pwn30": "n03830835"
     },
     "nut": {
+        "freebase_mid": "/m/01lbxg",
         "obj365_cat": "Nuts",
         "wikidata_desc": "in botany, type of dry indehiscent fruit",
         "wikidata_name": "nut",
@@ -4015,6 +4094,7 @@
         "wikidata_qid": "Q2383811"
     },
     "okra": {
+        "freebase_mid": "/m/025s18p",
         "obj365_cat": "Okra",
         "wikidata_desc": "species of edible plant",
         "wikidata_name": "Abelmoschus esculentus",
@@ -4147,16 +4227,16 @@
         "wikidata_qid": "Q33602"
     },
     "papaya": {
+        "freebase_mid": "/m/0g4fr",
         "obj365_cat": "Papaya",
-        "wikidata_desc": "species of plant, use Q12330939 for the papaya (the fruit)",
-        "wikidata_name": "Carica papaya",
-        "wikidata_qid": "Q34887",
+        "wikidata_qid": "Q12330939",
         "wordnet_gloss": "large oval melon-like tropical fruit with yellowish flesh",
         "wordnet_pwn30": "n07762244"
     },
     "paper": {
         "coco_pano_id": 195,
         "coco_pano_name": "paper-merged",
+        "freebase_mid": "/m/0641k",
         "obj365_cat": "Notepaper",
         "wikidata_desc": "thin, flexible material mainly used for writing upon, printing upon, drawing or for packaging",
         "wikidata_name": "paper",
@@ -4337,7 +4417,9 @@
     },
     "personal_flotation_device": {
         "freebase_mid": "/m/054xkw",
-        "oid_name": "Personal flotation device"
+        "oid_name": "Personal flotation device",
+        "wikidata_name": "personal flotation device",
+        "wikidata_qid": "Q1262971"
     },
     "piano": {
         "freebase_mid": "/m/05r5c",
@@ -4351,15 +4433,15 @@
     },
     "pickup_truck": {
         "obj365_cat": "Pickup Truck",
-        "wikidata_desc": "pickup truck",
-        "wikidata_name": "Isuzu D-Max",
-        "wikidata_qid": "Q1674944",
+        "wikidata_qid": "Q215601",
         "wordnet_gloss": "a light truck with an open body and low sides and a tailboard",
         "wordnet_pwn30": "n03930630"
     },
     "picnic_basket": {
         "freebase_mid": "/m/07kng9",
-        "oid_name": "Picnic basket"
+        "oid_name": "Picnic basket",
+        "wikidata_name": "picnic basket",
+        "wikidata_qid": "Q2835904"
     },
     "picture_frame": {
         "freebase_mid": "/m/06z37_",
@@ -4372,6 +4454,7 @@
         "wordnet_pwn30": "n03931765"
     },
     "pie": {
+        "freebase_mid": "/m/0mjqn",
         "obj365_cat": "Pie",
         "wikidata_desc": "baked dish",
         "wikidata_name": "pie",
@@ -4390,6 +4473,7 @@
         "wordnet_pwn30": "n03934998"
     },
     "pigeon": {
+        "freebase_mid": "/m/01c08f",
         "obj365_cat": "Pigeon",
         "wikidata_desc": "species of pigeon; the wild bird from which domesticated pigeons derive",
         "wikidata_name": "Rock Dove",
@@ -4479,6 +4563,7 @@
     "platform": {
         "coco_pano_id": 144,
         "coco_pano_name": "platform",
+        "wikidata_qid": "Q22079390",
         "wordnet_gloss": "a raised horizontal surface; \"the speaker mounted the platform\"",
         "wordnet_pwn30": "n03961939"
     },
@@ -4496,6 +4581,7 @@
         "coco_pano_name": "playingfield"
     },
     "pliers": {
+        "freebase_mid": "/m/02qtr5",
         "obj365_cat": "Pliers",
         "wikidata_desc": "tool with two legs, can fix or modify a workpiece",
         "wikidata_name": "pliers",
@@ -4504,6 +4590,7 @@
         "wordnet_pwn30": "n03966976"
     },
     "plum": {
+        "freebase_mid": "/m/0hs32",
         "obj365_cat": "Plum",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Prunus",
@@ -4581,6 +4668,7 @@
         "wordnet_pwn30": "n02387722"
     },
     "pot": {
+        "freebase_mid": "/m/0k32p",
         "obj365_cat": "Pot",
         "wikidata_desc": "a three-terminal resistor with a sliding or rotating contact that forms an adjustable voltage divider",
         "wikidata_name": "potentiometer",
@@ -4599,6 +4687,7 @@
         "wordnet_pwn30": "n07710616"
     },
     "potato_chip": {
+        "freebase_mid": "/m/066sg",
         "obj365_cat": "Chips",
         "wikidata_desc": "deep fried thin slice of potato",
         "wikidata_name": "potato chip",
@@ -4669,6 +4758,7 @@
         "wordnet_pwn30": "n04004767"
     },
     "projector": {
+        "freebase_mid": "/m/0crf4xx",
         "obj365_cat": "Projector",
         "wikidata_desc": "optical device that projects an image or moving images onto a surface",
         "wikidata_name": "projector",
@@ -4689,10 +4779,13 @@
     "punching_bag": {
         "freebase_mid": "/m/0420v5",
         "oid_name": "Punching bag",
+        "wikidata_name": "punching bag",
+        "wikidata_qid": "Q966668",
         "wordnet_gloss": "an inflated ball or bag that is suspended and punched for training in boxing",
         "wordnet_pwn30": "n04023962"
     },
     "purse": {
+        "freebase_mid": "/m/02_vjy",
         "obj365_cat": "Wallet/Purse",
         "wikidata_desc": "small, flat case that is used to carry personal items such as cash",
         "wikidata_name": "wallet",
@@ -4758,6 +4851,7 @@
     "railroad": {
         "coco_pano_id": 147,
         "coco_pano_name": "railroad",
+        "freebase_mid": "/m/06d_3",
         "wikidata_desc": "conveyance of passengers and goods by way of wheeled vehicles running on rail tracks",
         "wikidata_name": "rail transport",
         "wikidata_qid": "Q3565868",
@@ -4791,6 +4885,7 @@
         "wikidata_qid": "Q6495741"
     },
     "recorder": {
+        "freebase_mid": "/m/06jvx",
         "obj365_cat": "Recorder",
         "wikidata_desc": "woodwind musical instrument",
         "wikidata_name": "recorder",
@@ -4799,6 +4894,7 @@
         "wordnet_pwn30": "n03343354"
     },
     "red_cabbage": {
+        "freebase_mid": "/m/06vm6n",
         "obj365_cat": "Red Cabbage",
         "wikidata_desc": "vegetable",
         "wikidata_name": "red cabbage",
@@ -4859,6 +4955,7 @@
         "wordnet_pwn30": "n02391994"
     },
     "rice": {
+        "freebase_mid": "/m/0l_yh",
         "obj365_cat": "Rice",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Oryza",
@@ -4867,12 +4964,14 @@
         "wordnet_pwn30": "n07804323"
     },
     "rice_cooker": {
+        "freebase_mid": "/m/020ytc",
         "obj365_cat": "Rice Cooker",
         "wikidata_desc": "container or kitchen appliance dedicated to cooking rice",
         "wikidata_name": "rice cooker",
         "wikidata_qid": "Q1137500"
     },
     "rickshaw": {
+        "freebase_mid": "/m/0dd5q",
         "obj365_cat": "Rickshaw",
         "wikidata_desc": "two or three-wheeled passenger cart, of Asian origin",
         "wikidata_name": "rickshaw",
@@ -4890,6 +4989,7 @@
         "wordnet_pwn30": "n04090263"
     },
     "ring": {
+        "freebase_mid": "/m/01zx6q",
         "obj365_cat": "Ring",
         "wikidata_desc": "geometric surface defined by two concentric circles",
         "wikidata_name": "annulus",
@@ -4916,15 +5016,13 @@
     "road": {
         "coco_pano_id": 149,
         "coco_pano_name": "road",
-        "wikidata_desc": "road",
-        "wikidata_name": "A5 road",
-        "wikidata_qid": "Q786293",
         "wordnet_gloss": "an open way (generally public) for travel or transportation",
         "wordnet_pwn30": "n04096066"
     },
     "rock": {
         "coco_pano_id": 198,
         "coco_pano_name": "rock-merged",
+         "freebase_mid": "/m/06by7",
         "wikidata_desc": "genre of popular music that originated as \"rock and roll\" in 1950s USA",
         "wikidata_name": "rock music",
         "wikidata_qid": "Q11399",
@@ -4955,6 +5053,7 @@
     "roof": {
         "coco_pano_id": 151,
         "coco_pano_name": "roof",
+        "freebase_mid": "/m/06hyd",
         "wikidata_desc": "top covering of a building",
         "wikidata_name": "roof",
         "wikidata_qid": "Q83180",
@@ -4971,6 +5070,7 @@
         "wordnet_pwn30": "n04971313"
     },
     "router": {
+        "freebase_mid": "/m/06f76",
         "obj365_cat": "Router/modem",
         "wikidata_desc": "device that forwards data packets between computer networks, creating an overlay internetwork",
         "wikidata_name": "router",
@@ -4981,6 +5081,7 @@
     "rug": {
         "coco_pano_id": 200,
         "coco_pano_name": "rug-merged",
+        "freebase_mid": "/m/01n5cy",
         "obj365_cat": "Carpet",
         "wikidata_desc": "textile floor covering",
         "wikidata_name": "carpet",
@@ -5010,9 +5111,6 @@
     },
     "sailboat": {
         "obj365_cat": "Sailboat",
-        "wikidata_desc": "sailboat",
-        "wikidata_name": "Kirby 23",
-        "wikidata_qid": "Q6414897",
         "wordnet_gloss": "a small sailing vessel; usually with a single mast",
         "wordnet_pwn30": "n04128499"
     },
@@ -5035,6 +5133,7 @@
     "sand": {
         "coco_pano_id": 154,
         "coco_pano_name": "sand",
+        "freebase_mid": "/m/099fz",
         "wikidata_desc": "granular material composed of finely divided rock and mineral particles, sand particles range in diameter from 0.063 to 2 mm (per ISO 14688)",
         "wikidata_name": "sand",
         "wikidata_qid": "Q34679",
@@ -5130,6 +5229,7 @@
         "wordnet_pwn30": "n04148054"
     },
     "scooter": {
+        "freebase_mid": "/m/0dmq2",
         "obj365_cat": "Scooter",
         "wikidata_desc": "type of motorcycle",
         "wikidata_name": "scooter",
@@ -5140,6 +5240,8 @@
     "scoreboard": {
         "freebase_mid": "/m/057p5t",
         "oid_name": "Scoreboard",
+        "wikidata_name": "scoreboard",
+        "wikidata_qid": "Q614379",
         "wordnet_gloss": "a large board for displaying the score of a contest (and some other information)",
         "wordnet_pwn30": "n04149813"
     },
@@ -5174,6 +5276,7 @@
     "sea": {
         "coco_pano_id": 155,
         "coco_pano_name": "sea",
+        "freebase_mid": "/m/0df01",
         "wikidata_desc": "sea",
         "wikidata_name": "Andaman Sea",
         "wikidata_qid": "Q47632",
@@ -5217,6 +5320,7 @@
         "wordnet_pwn30": "n01456756"
     },
     "seal": {
+        "freebase_mid": "/m/0gd3n",
         "obj365_cat": "Seal",
         "wikidata_desc": "infraorder of mammals",
         "wikidata_name": "Pinnipedia",
@@ -5298,9 +5402,8 @@
     },
     "ship": {
         "obj365_cat": "Ship",
-        "wikidata_desc": "ship",
-        "wikidata_name": "Mirabella V",
-        "wikidata_qid": "Q466988",
+
+        "wikidata_qid": "Q11446",
         "wordnet_gloss": "a vessel that carries passengers or freight",
         "wordnet_pwn30": "n04194289"
     },
@@ -5314,6 +5417,7 @@
         "wordnet_pwn30": "n04197391"
     },
     "shoes": {
+        "freebase_mid": "/m/06rrc",
         "obj365_cat": "Other Shoes",
         "wikidata_desc": "footwear",
         "wikidata_name": "shoe",
@@ -5373,6 +5477,7 @@
     "sidewalk": {
         "coco_pano_id": 191,
         "coco_pano_name": "pavement-merged",
+        "freebase_mid": "/m/0dnhy",
         "wikidata_desc": "pedestrian path along the side of a road",
         "wikidata_name": "sidewalk",
         "wikidata_qid": "Q177749",
@@ -5417,6 +5522,7 @@
         "wordnet_pwn30": "n04228054"
     },
     "ski_boot": {
+        "freebase_mid": "/m/01xdh9",
         "obj365_cat": "Skating and Skiing shoes",
         "wikidata_desc": "specialized footwear that are used in skiing to provide a way to attach the skier to skis",
         "wikidata_name": "ski boot",
@@ -5454,6 +5560,7 @@
     "sky": {
         "coco_pano_id": 187,
         "coco_pano_name": "sky-other-merged",
+        "freebase_mid": "/m/01bqvp",
         "wikidata_desc": "everything that is above the surface of the Earth",
         "wikidata_name": "sky",
         "wikidata_qid": "Q527",
@@ -5471,13 +5578,12 @@
     },
     "slide": {
         "obj365_cat": "Slide",
-        "wikidata_desc": "guitar technique for steel guitars",
-        "wikidata_name": "slide",
-        "wikidata_qid": "Q428152",
+        "wikidata_qid": "Q334747",
         "wordnet_gloss": "sloping channel through which things can descend",
         "wordnet_pwn30": "n03029603"
     },
     "slippers": {
+        "freebase_mid": "/m/0216vm",
         "obj365_cat": "Slippers",
         "wikidata_desc": "light footwear made for indoor wear, generally without means of fastening",
         "wikidata_name": "slipper",
@@ -5520,6 +5626,7 @@
         "wordnet_pwn30": "n03968886"
     },
     "sneakers": {
+        "freebase_mid": "/m/027k4k",
         "obj365_cat": "Sneakers",
         "wikidata_desc": "type of shoe",
         "wikidata_name": "athletic shoe",
@@ -5530,6 +5637,7 @@
     "snow": {
         "coco_pano_id": 159,
         "coco_pano_name": "snow",
+        "freebase_mid": "/m/06_dn",
         "wikidata_desc": "precipitation in the form of flakes of crystalline water ice",
         "wikidata_name": "snow",
         "wikidata_qid": "Q7561",
@@ -5576,6 +5684,7 @@
         "wordnet_pwn30": "n04252225"
     },
     "soap": {
+        "freebase_mid": "/m/06q7n",
         "obj365_cat": "Soap",
         "wikidata_desc": "American television genre episodic work of dramatic fiction;",
         "wikidata_name": "soap opera",
@@ -5648,7 +5757,9 @@
         "wordnet_pwn30": "n04269944"
     },
     "speed_limit_sign": {
-        "obj365_cat": "Speed Limit Sign"
+        "obj365_cat": "Speed Limit Sign",
+        "wikidata_name": "speed limit sign",
+        "wikidata_qid": "Q67356821"
     },
     "spice_rack": {
         "freebase_mid": "/m/0h8kx63",
@@ -5683,9 +5794,7 @@
     },
     "sports_car": {
         "obj365_cat": "Sports Car",
-        "wikidata_desc": "sports car",
-        "wikidata_name": "Aston Martin DB AR1",
-        "wikidata_qid": "Q223599",
+        "wikidata_qid": "Q274586",
         "wordnet_gloss": "a small low car with a high-powered engine; usually seats two persons",
         "wordnet_pwn30": "n04285008"
     },
@@ -5777,6 +5886,7 @@
         "wikidata_qid": "Q1370818"
     },
     "steak": {
+        "freebase_mid": "/m/0grtl",
         "obj365_cat": "Steak",
         "wikidata_desc": "cut of meat (e.g. beef, pork)",
         "wikidata_name": "steak",
@@ -5793,12 +5903,10 @@
         "wordnet_gloss": "a medical instrument for listening to the sounds generated inside the body",
         "wordnet_pwn30": "n04317175"
     },
-    "stonewall": {
+    "stone_wall": {
         "coco_pano_id": 175,
         "coco_pano_name": "wall-stone",
-        "wikidata_desc": "gay tavern and recreational bar in New York City",
-        "wikidata_name": "Stonewall Inn",
-        "wikidata_qid": "Q1261362"
+        "wikidata_qid": "Q979531"
     },
     "stool": {
         "freebase_mid": "/m/0fqt361",
@@ -5852,6 +5960,7 @@
         "wordnet_pwn30": "n02957427"
     },
     "stroller": {
+        "freebase_mid": "/m/03ylns",
         "obj365_cat": "Stroller",
         "wikidata_desc": "wheeled baby transport",
         "wikidata_name": "stroller",
@@ -5991,6 +6100,7 @@
         "wordnet_pwn30": "n04371563"
     },
     "swing": {
+        "freebase_mid": "/m/02y929",
         "obj365_cat": "Swing",
         "wikidata_desc": "hanging seat",
         "wikidata_name": "swing",
@@ -6086,6 +6196,7 @@
         "wikidata_qid": "Q656656"
     },
     "target": {
+        "freebase_mid": "/m/04_z0s",
         "obj365_cat": "Target",
         "wikidata_desc": "grammar: participant of a situation upon whom an action is carried out or the thematic relation such a participant has with an action. Sometimes, \"theme\" and \"patient\" are used to mean the same thing",
         "wikidata_name": "patient",
@@ -6237,6 +6348,7 @@
     "tiles": {
         "coco_pano_id": 176,
         "coco_pano_name": "wall-tile",
+        "freebase_mid": "/m/021w6f",
         "wikidata_desc": "manufactured piece of hard-wearing material",
         "wikidata_name": "tile",
         "wikidata_qid": "Q468402"
@@ -6262,6 +6374,7 @@
     },
     "tissue": {
         "context": "paper",
+        "freebase_mid": "/m/06g3fd",
         "obj365_cat": "Tissue",
         "wikidata_desc": "lightweight paper or, light cr\u00eape paper",
         "wikidata_name": "tissue paper",
@@ -6319,11 +6432,9 @@
         "wordnet_gloss": "mildly acid red or yellow pulpy fruit eaten as a vegetable",
         "wordnet_pwn30": "n07734017"
     },
-    "tong": {
+    "tongs": {
         "obj365_cat": "Tong",
-        "wikidata_desc": "American who shot several police in Dallas in 2016",
-        "wikidata_name": "Peter tong akol",
-        "wikidata_qid": "Q25707181",
+        "wikidata_qid": "Q3276479",
         "wordnet_gloss": "any of various devices for taking hold of objects; usually have two hinged legs with handles above and pointed hooks below",
         "wordnet_pwn30": "n04450749"
     },
@@ -6398,6 +6509,7 @@
         "wordnet_pwn30": "n03769235"
     },
     "traffic_cone": {
+        "freebase_mid": "/m/03sy7v",
         "obj365_cat": "Traffic cone",
         "wikidata_desc": "Traffick Cone",
         "wikidata_name": "traffic cone",
@@ -6474,6 +6586,7 @@
         "wordnet_pwn30": "n04477966"
     },
     "tricycle": {
+        "freebase_mid": "/m/01786t",
         "obj365_cat": "Tricycle",
         "wikidata_desc": "three-wheeled self-powered vehicle",
         "wikidata_name": "tricycle",
@@ -6502,6 +6615,7 @@
         "wordnet_pwn30": "n04487394"
     },
     "trophy": {
+        "freebase_mid": "/m/02x94h",
         "obj365_cat": "Trophy",
         "wikidata_desc": "reward for a specific achievement",
         "wikidata_name": "trophy",
@@ -6569,9 +6683,7 @@
     "tv": {
         "coco_pano_id": 72,
         "coco_pano_name": "tv",
-        "wikidata_desc": "country in Oceania",
-        "wikidata_name": "Tuvalu",
-        "wikidata_qid": "Q672",
+        "wikidata_qid": "Q80752",
         "wordnet_gloss": "an electronic device that receives television signals and displays them on a screen; \"the British call a tv set a telly\"",
         "wordnet_pwn30": "n04405907"
     },
@@ -6598,9 +6710,8 @@
     },
     "urinal": {
         "obj365_cat": "Urinal",
-        "wikidata_desc": "urinal",
-        "wikidata_name": "bourdalou",
-        "wikidata_qid": "Q895203",
+
+        "wikidata_qid": "Q152285",
         "wordnet_gloss": "a plumbing fixture (usually attached to the wall) used by men to urinate",
         "wordnet_pwn30": "n04515991"
     },
@@ -6687,15 +6798,15 @@
     "wall": {
         "coco_pano_id": 199,
         "coco_pano_name": "wall-other-merged",
-        "wikidata_desc": "Unix utility",
-        "wikidata_name": "wall",
-        "wikidata_qid": "Q709294",
+        "wikidata_qid": "Q42948",
         "wordnet_gloss": "an embankment built around a space for defensive purposes; \"they stormed the ramparts of the city\"; \"they blew the trumpet and the walls came tumbling down\"",
         "wordnet_pwn30": "n04051825"
     },
     "wall_clock": {
         "freebase_mid": "/m/0h8mzrc",
         "oid_name": "Wall clock",
+        "wikidata_name": "wall clock",
+        "wikidata_qid": "Q31843230",
         "wordnet_gloss": "a clock mounted on a wall",
         "wordnet_pwn30": "n04548280"
     },
@@ -6743,6 +6854,10 @@
         "coco_pano_id": 178,
         "coco_pano_name": "water-other",
         "context": "surface",
+        "freebase_mid": "/m/0838f",
+        "wikidata_desc": "chemical compound",
+        "wikidata_name": "water",
+        "wikidata_qid": "Q283",
         "wordnet_gloss": "the part of the earth's surface covered with water (such as a river or lake or ocean); \"they invaded our territorial waters\"; \"they were sitting by the water's edge\"",
         "wordnet_pwn30": "n09225146"
     },
@@ -6950,9 +7065,7 @@
     },
     "yak": {
         "obj365_cat": "Yak",
-        "wikidata_desc": "language",
-        "wikidata_name": "Yaka language",
-        "wikidata_qid": "Q35588",
+        "wikidata_qid": "Q26547588",
         "wordnet_gloss": "large long-haired wild ox of Tibet often domesticated",
         "wordnet_pwn30": "n02405302"
     },

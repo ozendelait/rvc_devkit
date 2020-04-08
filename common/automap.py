@@ -158,9 +158,15 @@ def get_wikidata(str0, context = None, retries = 0):
     best_b = None
     for b in bindings[:min(16, len(bindings))]:
         qid = b['item']['value'].split('/')[-1]
-        if not 'itemDescription' in b or len(qid) > 16:
+        if len(qid) > 16:
             continue
         prev_has_wn3 = False
+        if best_b is None:
+            best_b = b
+        else:
+            prev_has_wn3 = 'WN3' in best_b
+        if not 'itemDescription' in b:
+            continue
         if not context is None:
             #check if context words are in the first sentence
             pos_context = min([b['itemDescription']['value'].find(c) for c in context])
@@ -170,10 +176,7 @@ def get_wikidata(str0, context = None, retries = 0):
             if pos_fullstop > 0 and pos_context > pos_fullstop:
                 continue
         curr_q = int(b['item']['value'].split('/')[-1][1:])
-        if best_b is None:
-            best_b = b
-        else:
-            prev_has_wn3 = 'WN3' in best_b
+
         min_q = int(best_b['item']['value'].split('/')[-1][1:])
         if curr_q < min_q: #smaller q usually stands for a more general entry (vs. an instance)
             best_b = b
@@ -187,7 +190,11 @@ def get_wikidata(str0, context = None, retries = 0):
             best_b = b
 
     if not best_b is None:
-        ret_b = {'wikidata_qid': best_b['item']['value'].split('/')[-1], 'wikidata_name': best_b['itemLabel']['value'], 'wikidata_desc': best_b['itemDescription']['value']}
+        ret_b = {'wikidata_qid': best_b['item']['value'].split('/')[-1], 'wikidata_name': "", 'wikidata_desc': ""}
+        if 'itemLabel' in  best_b:
+            ret_b['wikidata_name'] = best_b['itemLabel']['value']
+        if 'itemDescription' in best_b:
+            ret_b['wikidata_desc'] = best_b['itemDescription']['value']
         if 'WN3' in best_b and best_b['WN3']['value'].find('wordnet-rdf.princeton.edu/wn30/') >= 0:
             wn3_conv = best_b['WN3']['value'].split('/')[-1]
             ret_b['wordnet_pwn30'] = wn3_conv[-1]+wn3_conv[:-2]
@@ -207,16 +214,26 @@ def wikidata_from_freebaseid(freebaseid):
     return get_wikidata(sparql_query%freebaseid,retries=max_retries_wikidata)
 
 def wikidata_from_qid(qid):
-    sparql_query = """
-    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 WHERE{  
+    sparql_query0 = """
+    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
       ?article schema:about ?item .
       OPTIONAL { ?item  wdt:P2888  ?WN3 }
       OPTIONAL { ?item  wdt:P646  ?FREEN }
       BIND(wd:%s AS ?item).
-      SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
     }
     """
-    return get_wikidata(sparql_query%qid,retries=max_retries_wikidata)
+    sparql_query1 = """
+        SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
+          ?item ?label "%s"@en
+          OPTIONAL { ?item  wdt:P2888  ?WN3 }
+          OPTIONAL { ?item  wdt:P646  ?FREEN }   
+        }
+        """
+    d0 = get_wikidata(sparql_query0 % qid, retries=max_retries_wikidata)
+    if len(d0) == 0:
+        d0 = get_wikidata(sparql_query1 % qid, retries=max_retries_wikidata)
+    return d0
 
 def wikidata_from_wordnet3p0(wordnetid):
     conv_wn = wordnetid[1:]+'-'+ wordnetid[0]
@@ -231,7 +248,7 @@ def wikidata_from_wordnet3p0(wordnetid):
 
 def wikidata_from_name(name, context = None):
     sparql_query0 = """
-    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 WHERE{  
+    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
       ?item ?label "%s"@en.  
       ?article schema:about ?item .
       OPTIONAL { ?item  wdt:P2888  ?WN3 }
@@ -240,11 +257,10 @@ def wikidata_from_name(name, context = None):
     }
     """
     sparql_query1 = """
-    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 WHERE{  
-      ?item ?label "%s"
+    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
+      ?item ?label "%s"@en
       OPTIONAL { ?item  wdt:P2888  ?WN3 }
-      OPTIONAL { ?item  wdt:P646  ?FREEN }
-      SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
+      OPTIONAL { ?item  wdt:P646  ?FREEN }   
     }
     """
     label_check = name.replace('_', ' ')
@@ -323,7 +339,7 @@ def main(argv=sys.argv[1:]):
                     continue
                 fitting_key = unify_namings(key)
                 if "wordnet_pwn30" in vals and vals["wordnet_pwn30"] in check_dubl['wordnet_pwn30']:
-                    fitting_key = check_dubl[vals["wordnet_pwn30"]]
+                    fitting_key = check_dubl['wordnet_pwn30'][vals["wordnet_pwn30"]]
                 elif not fitting_key in joined_label_space and "wordnet_name" in vals and unify_namings(vals["wordnet_name"]) in joined_label_space:
                     fitting_key = unify_namings(vals["wordnet_name"])
                 if not fitting_key in joined_label_space:
