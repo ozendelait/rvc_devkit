@@ -361,7 +361,7 @@ def main(argv=sys.argv[1:]):
     #automatically adds qids
     for key, vals in joined_label_space.items():
         if 'wikidata_qid' in vals:
-            if len('wikidata_qid') > 0 and not 'wikidata_desc' in vals:
+            if len('wikidata_qid') > 0 and not 'wikidata_name' in vals:
                 vals.update(wikidata_from_qid(vals['wikidata_qid']))
             continue
         n_qid = wikidata_from_name(key, context=vals.get('context','').split('_'))

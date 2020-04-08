@@ -643,6 +643,7 @@
     "board_eraser": {
         "freebase_mid": "/m/0g9_drw",
         "obj365_cat": "Board Eraser",
+        "wikidata_name": "Chalkboard eraser",
         "wikidata_qid": "Q2553927"
     },
     "boat": {
@@ -2630,8 +2631,8 @@
         "wordnet_pwn30": "n09992837"
     },
     "globe": {
-        "context": "sphere",
         "obj365_cat": "Globe",
+        "wikidata_qid": "Q133792",
         "wordnet_gloss": "a sphere on which a map (especially of the earth) is represented",
         "wordnet_pwn30": "n03440512"
     },
@@ -2977,7 +2978,8 @@
         "freebase_mid": "/m/01b7fy",
         "obj365_cat": "Head Phone",
         "oid_name": "Headphones",
-        "wikidata_qid": "",
+
+        "wikidata_qid": "Q186819",
         "wordnet_gloss": "electro-acoustic transducer for converting electric signals into sounds; it is held over or inserted into the ear; \"it was not the typing but the earphones that she disliked\"",
         "wordnet_pwn30": "n03261776"
     },
@@ -2991,7 +2993,8 @@
         "wordnet_pwn30": "n03508101"
     },
     "heavy_truck": {
-        "obj365_cat": "Heavy Truck"
+        "obj365_cat": "Heavy Truck",
+        "wikidata_qid": "Q874311"
     },
     "hedgehog": {
         "freebase_mid": "/m/0cl4p",
@@ -3017,6 +3020,7 @@
         "freebase_mid": "/m/0zvk5",
         "obj365_cat": "Helmet",
         "oid_name": "Helmet",
+        "wikidata_qid": "Q173603",
         "wordnet_gloss": "a protective headgear made of hard material to resist blows",
         "wordnet_pwn30": "n03513137"
     },
@@ -4027,6 +4031,8 @@
         "coco_pano_id": 138,
         "coco_pano_name": "net",
         "context": "trap",
+
+        "wikidata_qid": "Q271598",
         "wordnet_gloss": "a trap made of netting to catch fish or birds or insects",
         "wordnet_pwn30": "n03819994"
     },
@@ -4229,6 +4235,8 @@
     "papaya": {
         "freebase_mid": "/m/0g4fr",
         "obj365_cat": "Papaya",
+        "wikidata_desc": "fruit",
+        "wikidata_name": "papaya",
         "wikidata_qid": "Q12330939",
         "wordnet_gloss": "large oval melon-like tropical fruit with yellowish flesh",
         "wordnet_pwn30": "n07762244"
@@ -4432,7 +4440,10 @@
         "wordnet_pwn30": "n03928116"
     },
     "pickup_truck": {
+        "freebase_mid": "/m/0cvq3",
         "obj365_cat": "Pickup Truck",
+        "wikidata_desc": "light-duty truck with an enclosed cab and an open cargo area",
+        "wikidata_name": "pickup truck",
         "wikidata_qid": "Q215601",
         "wordnet_gloss": "a light truck with an open body and low sides and a tailboard",
         "wordnet_pwn30": "n03930630"
@@ -4563,6 +4574,8 @@
     "platform": {
         "coco_pano_id": 144,
         "coco_pano_name": "platform",
+        "wikidata_desc": "structure to elevate something, usually to highlight a speaker or a show",
+        "wikidata_name": "platform",
         "wikidata_qid": "Q22079390",
         "wordnet_gloss": "a raised horizontal surface; \"the speaker mounted the platform\"",
         "wordnet_pwn30": "n03961939"
@@ -5016,13 +5029,14 @@
     "road": {
         "coco_pano_id": 149,
         "coco_pano_name": "road",
+        "wikidata_qid": "Q34442",
         "wordnet_gloss": "an open way (generally public) for travel or transportation",
         "wordnet_pwn30": "n04096066"
     },
     "rock": {
         "coco_pano_id": 198,
         "coco_pano_name": "rock-merged",
-         "freebase_mid": "/m/06by7",
+        "freebase_mid": "/m/06by7",
         "wikidata_desc": "genre of popular music that originated as \"rock and roll\" in 1950s USA",
         "wikidata_name": "rock music",
         "wikidata_qid": "Q11399",
@@ -5111,6 +5125,7 @@
     },
     "sailboat": {
         "obj365_cat": "Sailboat",
+        "wikidata_qid": "Q1075310",
         "wordnet_gloss": "a small sailing vessel; usually with a single mast",
         "wordnet_pwn30": "n04128499"
     },
@@ -5401,8 +5416,10 @@
         "wordnet_pwn30": "n01940736"
     },
     "ship": {
+        "freebase_mid": "/m/06q74",
         "obj365_cat": "Ship",
-
+        "wikidata_desc": "large buoyant watercraft",
+        "wikidata_name": "ship",
         "wikidata_qid": "Q11446",
         "wordnet_gloss": "a vessel that carries passengers or freight",
         "wordnet_pwn30": "n04194289"
@@ -5577,7 +5594,10 @@
         "wordnet_pwn30": "n04233124"
     },
     "slide": {
+        "freebase_mid": "/m/0260d_1",
         "obj365_cat": "Slide",
+        "wikidata_desc": "slides for children to play on in playgrounds",
+        "wikidata_name": "playground slide",
         "wikidata_qid": "Q334747",
         "wordnet_gloss": "sloping channel through which things can descend",
         "wordnet_pwn30": "n03029603"
@@ -5793,7 +5813,10 @@
         "coco_pano_name": "sports ball"
     },
     "sports_car": {
+        "freebase_mid": "/m/012mq4",
         "obj365_cat": "Sports Car",
+        "wikidata_desc": "performance-oriented car class, generally small or light-weight with good handling",
+        "wikidata_name": "sports car",
         "wikidata_qid": "Q274586",
         "wordnet_gloss": "a small low car with a high-powered engine; usually seats two persons",
         "wordnet_pwn30": "n04285008"
@@ -5906,6 +5929,8 @@
     "stone_wall": {
         "coco_pano_id": 175,
         "coco_pano_name": "wall-stone",
+        "wikidata_desc": "masonry structural division",
+        "wikidata_name": "stone wall",
         "wikidata_qid": "Q979531"
     },
     "stool": {
@@ -6434,6 +6459,8 @@
     },
     "tongs": {
         "obj365_cat": "Tong",
+        "wikidata_desc": "kitchenware used for picking up items",
+        "wikidata_name": "tongs",
         "wikidata_qid": "Q3276479",
         "wordnet_gloss": "any of various devices for taking hold of objects; usually have two hinged legs with handles above and pointed hooks below",
         "wordnet_pwn30": "n04450749"
@@ -6709,8 +6736,10 @@
         "wordnet_pwn30": "n04509417"
     },
     "urinal": {
+        "freebase_mid": "/m/033qwb",
         "obj365_cat": "Urinal",
-
+        "wikidata_desc": "device in which to urinate while standing",
+        "wikidata_name": "Pico",
         "wikidata_qid": "Q152285",
         "wordnet_gloss": "a plumbing fixture (usually attached to the wall) used by men to urinate",
         "wordnet_pwn30": "n04515991"
@@ -6798,6 +6827,9 @@
     "wall": {
         "coco_pano_id": 199,
         "coco_pano_name": "wall-other-merged",
+        "freebase_mid": "/m/09qqq",
+        "wikidata_desc": "vertical structure, usually solid, that defines and sometimes protects an area",
+        "wikidata_name": "wall",
         "wikidata_qid": "Q42948",
         "wordnet_gloss": "an embankment built around a space for defensive purposes; \"they stormed the ramparts of the city\"; \"they blew the trumpet and the walls came tumbling down\"",
         "wordnet_pwn30": "n04051825"
@@ -7065,7 +7097,7 @@
     },
     "yak": {
         "obj365_cat": "Yak",
-        "wikidata_qid": "Q26547588",
+        "wikidata_qid": "Q26547",
         "wordnet_gloss": "large long-haired wild ox of Tibet often domesticated",
         "wordnet_pwn30": "n02405302"
     },
