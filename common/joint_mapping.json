@@ -1230,7 +1230,7 @@
         "obj365_cat": "Cherry",
         "wikidata_desc": "the fruit (for the best-known species see Q165137; or Q131517)",
         "wikidata_name": "cherry",
-        "wikidata_qid": "Q196",
+        "wikidata_qid": "Q196"
     },
     "chest_of_drawers": {
         "freebase_mid": "/m/05kyg_",
@@ -1526,7 +1526,7 @@
         "wordnet_pwn30": "n03115762"
     },
     "counter": {
-        "context": "furniture"
+        "context": "furniture",
         "coco_pano_id": 107,
         "coco_pano_name": "counter",
         "wordnet_gloss": "a piece of furniture that stands at the side of a dining room; has shelves and drawers",
@@ -1800,7 +1800,7 @@
         "coco_pano_name": "dirt-merged",
         "wikidata_desc": "generalized term used to describe unclean matter",
         "wikidata_name": "dirt",
-        "wikidata_qid": "Q555882",
+        "wikidata_qid": "Q555882"
     },
     "dishwasher": {
         "freebase_mid": "/m/0ky7b",
@@ -1924,7 +1924,7 @@
         "oid_name": "Drink",
         "wikidata_desc": "kind of liquid which is specifically prepared for human consumption",
         "wikidata_name": "drink",
-        "wikidata_qid": "Q40050",
+        "wikidata_qid": "Q40050"
     },
     "drinking_straw": {
         "freebase_mid": "/m/03v5tg",
@@ -1942,7 +1942,7 @@
         "oid_name": "Drum",
         "wikidata_desc": "type of musical instrument of the percussion family",
         "wikidata_name": "drum",
-        "wikidata_qid": "Q11404",
+        "wikidata_qid": "Q11404"
     },
     "duck": {
         "freebase_mid": "/m/09ddx",
@@ -2132,7 +2132,7 @@
         "oid_name": "Facial tissue holder"
     },
     "falcon": {
-        "context": "bird"
+        "context": "bird",
         "freebase_mid": "/m/0f6wt",
         "oid_name": "Falcon",
         "wordnet_gloss": "diurnal birds of prey having long pointed powerful wings adapted for swift flight",
@@ -2179,7 +2179,7 @@
         "wordnet_pwn30": "n03325941"
     },
     "fence": {
-        "context":"barrier"
+        "context":"barrier",
         "coco_pano_id": 185,
         "coco_pano_name": "fence-merged",
         "wordnet_gloss": "a barrier that serves to enclose an area",
@@ -2316,7 +2316,7 @@
         "wordnet_pwn30": "n03372029"
     },
     "folder": {
-        "context": "paper"
+        "context": "paper",
         "obj365_cat": "Folder",
         "wordnet_gloss": "covering that is folded over to protect the contents",
         "wordnet_pwn30": "n03376279"
@@ -2432,12 +2432,12 @@
         "wordnet_pwn30": "n03397947"
     },
     "frog": {
-        "context": "animal"
+        "context": "animal",
         "freebase_mid": "/m/09ld4",
         "oid_name": "Frog",
         "wikidata_desc": "order of amphibians",
         "wikidata_name": "anura",
-        "wikidata_qid": "Q53636",
+        "wikidata_qid": "Q53636"
     },
     "fruit": {
         "coco_pano_id": 122,
@@ -2530,7 +2530,7 @@
         "wordnet_pwn30": "n04272054"
     },
     "globe": {
-        "context":"sphere"
+        "context":"sphere",
         "obj365_cat": "Globe",
         "wordnet_gloss": "a sphere on which a map (especially of the earth) is represented",
         "wordnet_pwn30": "n03440512"
@@ -2621,13 +2621,13 @@
         "wordnet_pwn30": "n01855672"
     },
     "grape": {
-        "context": "fruit"
+        "context": "fruit",
         "freebase_mid": "/m/0388q",
         "obj365_cat": "Grape",
         "oid_name": "Grape",
         "wikidata_desc": "the fruit, use Q191019 for the genus, use Q30046 for the species",
         "wikidata_name": "grape",
-        "wikidata_qid": "Q10978",
+        "wikidata_qid": "Q10978"
     },
     "grapefruit": {
         "freebase_mid": "/m/0hqkz",
@@ -2903,7 +2903,7 @@
         "wordnet_pwn30": "n03512147"
     },
     "helmet": {
-        "context": "gear"
+        "context": "gear",
         "freebase_mid": "/m/0zvk5",
         "obj365_cat": "Helmet",
         "oid_name": "Helmet",
@@ -2916,7 +2916,7 @@
         "oid_name": "High heels",
         "wikidata_desc": "footwear that raises the heel of the wearer's foot significantly higher than the toes",
         "wikidata_name": "high heels",
-        "wikidata_qid": "Q1057303",
+        "wikidata_qid": "Q1057303"
     },
     "hiking_equipment": {
         "freebase_mid": "/m/0268lbt",

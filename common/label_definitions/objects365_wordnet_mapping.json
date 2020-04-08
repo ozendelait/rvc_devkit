@@ -463,7 +463,7 @@
         "idx_orig": 256,
         "wordnet_gloss": "something sentimental or trite; \"that movie was pure corn\"",
         "wordnet_name": "corn",
-        "wordnet_pwn30": "n04627809"
+        "wordnet_pwn30": "n07731952"
     },
     "Cosmetics": {
         "idx_orig": 220,
@@ -563,7 +563,7 @@
     },
     "Dinning Table": {
         "idx_orig": 85,
-        "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\""
+        "wordnet_pwn30": "n03201208"
     },
     "Dishwasher": {
         "idx_orig": 257,
@@ -614,8 +614,7 @@
         "wordnet_pwn30": "n03255030"
     },
     "Dumpling": {
-        "idx_orig": 325,
-        "wordnet_gloss": "dessert made by baking fruit wrapped in pastry"
+        "idx_orig": 325
     },
     "Durian": {
         "idx_orig": 335,
@@ -936,10 +935,7 @@
         "wordnet_pwn30": "n03513137"
     },
     "High Heels": {
-        "idx_orig": 62,
-        "wordnet_gloss": "a particular situation; \"If you were in my place what would you do?\"",
-        "wordnet_name": "shoes",
-        "wordnet_pwn30": "n13926786"
+        "idx_orig": 62
     },
     "Hockey Stick": {
         "idx_orig": 68,
@@ -1081,9 +1077,8 @@
     },
     "Lighter": {
         "idx_orig": 309,
-        "wordnet_gloss": "a flatbottom boat for carrying heavy loads (especially on canals)",
         "wordnet_name": "lighter",
-        "wordnet_pwn30": "n02792552"
+        "wordnet_pwn30": "n03666591"
     },
     "Lion": {
         "idx_orig": 310,
@@ -1202,9 +1197,7 @@
     },
     "Napkin": {
         "idx_orig": 69,
-        "wordnet_gloss": "garment consisting of a folded cloth drawn up between the legs and fastened at the waist; worn by infants to catch excrement",
-        "wordnet_name": "napkin",
-        "wordnet_pwn30": "n03188531"
+        "wordnet_pwn30": "n03807537"
     },
     "Necklace": {
         "idx_orig": 29,
@@ -1219,16 +1212,11 @@
         "wordnet_pwn30": "n08649711"
     },
     "Noddles": {
-        "idx_orig": 360,
-        "wordnet_gloss": "an informal British expression for head or mind; \"use your noddle\"",
-        "wordnet_name": "noddle",
-        "wordnet_pwn30": "n05611684"
+        "idx_orig": 360
     },
     "Notepaper": {
         "idx_orig": 312,
-        "wordnet_gloss": "writing paper intended for writing short notes or letters",
-        "wordnet_name": "notepaper",
-        "wordnet_pwn30": "n06259166"
+        "wordnet_pwn30": "n14974264"
     },
     "Nuts": {
         "idx_orig": 263,
@@ -1547,9 +1535,7 @@
     },
     "Router/modem": {
         "idx_orig": 339,
-        "wordnet_gloss": "a power tool with a shaped cutter; used in carpentry for cutting grooves",
-        "wordnet_name": "router",
-        "wordnet_pwn30": "n03187746"
+        "wordnet_pwn30": "n04114844"
     },
     "SUV": {
         "idx_orig": 28,
