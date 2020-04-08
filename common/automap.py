@@ -63,7 +63,7 @@ def unify_namings(name0):
     return fix_unified_labels.get(unif_name,unif_name)
 
 def get_wordnet_gloss(pwn30, retries = 0):
-    res0 = None
+    res0, res0_r = None, None
     try:
         res0_r = requests.get(
         "http://wordnet-rdf.princeton.edu/json/pwn30/%s"%(pwn30[1:]+'-'+pwn30[0]), params={"format": "json"})
@@ -236,6 +236,8 @@ def wikidata_from_qid(qid):
     return d0
 
 def wikidata_from_wordnet3p0(wordnetid):
+    if len(wordnetid) < 3:
+        return {}
     conv_wn = wordnetid[1:]+'-'+ wordnetid[0]
     sparql_query = """
     SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 WHERE{  
@@ -374,7 +376,9 @@ def main(argv=sys.argv[1:]):
 
     for key, vals in joined_label_space.items():
         #find missing wordnet entries
-        if 'wordnet_pwn30':
+        if 'wordnet_pwn30' in vals:
+            if len(vals['wordnet_pwn30']) == 0:
+                continue
             add_entry = vals
         else:
             key0 = key.replace('-stuff','').replace('-merged','').replace('-other','')
@@ -382,7 +386,7 @@ def main(argv=sys.argv[1:]):
             if key0 in joined_label_space and 'wordnet_pwn30' in joined_label_space[key0]:
                 continue
             add_entry = get_wordnet(key0, context=vals.get('context','').split('_'), retries=max_retries_wikidata)
-            if len(r_wn) == 0:
+            if len(add_entry) == 0:
                 if key0 in inv_fix_unified_labels:
                     key0 = inv_fix_unified_labels[key0]
                 else:
