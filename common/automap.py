@@ -269,7 +269,7 @@ def wikidata_from_name(name, context = None):
         d0 = get_wikidata(sparql_query1 % label_check, context=context, retries=max_retries_wikidata)
     return d0
 
-unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_cat','coco_pano_id']
+unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name','coco_pano_id']
 check_dubl = {p:{} for p in unique_id_params}
 
 def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True):
@@ -335,7 +335,7 @@ def main(argv=sys.argv[1:]):
         elif isinstance(appendf, dict) and "Person" in appendf:
             #obj365 file
             for key, vals in appendf.items():
-                if key in check_dubl['obj365_cat']:
+                if key in check_dubl['obj365_boxable_name']:
                     continue
                 fitting_key = unify_namings(key)
                 if "wordnet_pwn30" in vals and vals["wordnet_pwn30"] in check_dubl['wordnet_pwn30']:
@@ -344,13 +344,13 @@ def main(argv=sys.argv[1:]):
                     fitting_key = unify_namings(vals["wordnet_name"])
                 if not fitting_key in joined_label_space:
                     print("Adding: "+fitting_key+ " for "+ key + "("+vals.get("wordnet_gloss",'')+")")
-                    joined_label_space[fitting_key] = {'obj365_cat':key}
+                    joined_label_space[fitting_key] = {'obj365_boxable_name':key}
                 trg_entry = joined_label_space[fitting_key]
                 if not check_for_dublicates(fitting_key, vals, trg_entry):
                     continue
                 if "wordnet_pwn30" in vals:
                     trg_entry["wordnet_pwn30"] = vals["wordnet_pwn30"]
-                trg_entry['obj365_cat'] = key
+                trg_entry['obj365_boxable_name'] = key
         elif isinstance(appendf, list) and isinstance(appendf[0], dict) and "supercategory" in appendf[0]:
             # coco panoptic file
             coco_pano = {

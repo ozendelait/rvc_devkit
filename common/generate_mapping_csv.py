@@ -5,7 +5,7 @@
 
 import os, sys, argparse, json, csv, time
 
-join_obj_det = ["oid_name","obj365_cat","coco_obj_name"]
+join_obj_det = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name"]
 
 def solve_leaf_boxable(joined_label_space, oid_n, mid_to_key):
     if "Subcategory" in oid_n:
@@ -25,11 +25,12 @@ def main(argv=sys.argv[1:]):
     with open(args.input, 'r') as ifile:
         joined_label_space = json.load(ifile)
 
-    mid_to_key = {vals['freebase_mid']: key for key, vals in joined_label_space.items() if 'freebase_mid' in vals}
-    with open('label_definitions/challenge-2019-label300-segmentable-hierarchy.json', 'r') as ifile:
-        super_cat_info = json.load(ifile)
+    #mid_to_key = {vals['freebase_mid']: key for key, vals in joined_label_space.items() if 'freebase_mid' in vals}
+    #with open('label_definitions/challenge-2019-label300-segmentable-hierarchy.json', 'r') as ifile:
+    #    super_cat_info = json.load(ifile)
+    #solve_leaf_boxable(joined_label_space, super_cat_info, mid_to_key)
 
-    solve_leaf_boxable(joined_label_space, super_cat_info, mid_to_key)
+
 
     with open(args.output, 'w') as ofile:
         json.dump(joined_label_space, ofile, sort_keys=True, indent=4)
