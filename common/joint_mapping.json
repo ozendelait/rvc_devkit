@@ -240,6 +240,8 @@
         "wordnet_pwn30": "n02777292"
     },
     "ball": {
+        "coco_pano_id": 37,
+        "coco_pano_name": "sports ball",
         "context": "round",
         "freebase_mid": "/m/018xm",
         "obj365_cat": "Other Balls",
@@ -283,7 +285,9 @@
     "banner": {
         "coco_pano_id": 92,
         "coco_pano_name": "banner",
-        "freebase_mid": "/m/080gb97",
+        "wikidata_desc": "flag or other piece of cloth bearing a symbol, logo, slogan or other message",
+        "wikidata_name": "banner",
+        "wikidata_qid": "Q806880",
         "wordnet_gloss": "long strip of cloth or paper used for decoration or advertising",
         "wordnet_pwn30": "n02788021"
     },
@@ -2073,12 +2077,9 @@
         "wordnet_gloss": "the sense organ for hearing and equilibrium",
         "wordnet_pwn30": "n05320899"
     },
-    "earphone": {
-        "freebase_mid": "/m/01b7fy",
+    "earbud": {
         "obj365_cat": "earphone",
-        "wikidata_desc": "small electric device converting electric signal to sound with low volume intended to be held close to a user's ear, usually used in pair placed near to the ears",
-        "wikidata_name": "earphone",
-        "wikidata_qid": "Q186819",
+        "wikidata_qid": "Q50184015",
         "wordnet_gloss": "an earphone that is inserted into the ear canal",
         "wordnet_pwn30": "n03262248"
     },
@@ -2631,7 +2632,10 @@
         "wordnet_pwn30": "n09992837"
     },
     "globe": {
+        "freebase_mid": "/m/01q_cy",
         "obj365_cat": "Globe",
+        "wikidata_desc": "scale model of a celestial body",
+        "wikidata_name": "globe",
         "wikidata_qid": "Q133792",
         "wordnet_gloss": "a sphere on which a map (especially of the earth) is represented",
         "wordnet_pwn30": "n03440512"
@@ -2763,6 +2767,9 @@
     },
     "green_beans": {
         "obj365_cat": "Green beans",
+        "wikidata_desc": "vegetable",
+        "wikidata_name": "green bean",
+        "wikidata_qid": "Q2987371",
         "wordnet_gloss": "immature bean pod eaten as a vegetable",
         "wordnet_pwn30": "n07727868"
     },
@@ -2978,7 +2985,8 @@
         "freebase_mid": "/m/01b7fy",
         "obj365_cat": "Head Phone",
         "oid_name": "Headphones",
-
+        "wikidata_desc": "small electric device converting electric signal to sound with low volume intended to be held close to a user's ear, usually used in pair placed near to the ears",
+        "wikidata_name": "earphone",
         "wikidata_qid": "Q186819",
         "wordnet_gloss": "electro-acoustic transducer for converting electric signals into sounds; it is held over or inserted into the ear; \"it was not the typing but the earphones that she disliked\"",
         "wordnet_pwn30": "n03261776"
@@ -2993,7 +3001,10 @@
         "wordnet_pwn30": "n03508101"
     },
     "heavy_truck": {
+        "freebase_mid": "/m/02gx17",
         "obj365_cat": "Heavy Truck",
+        "wikidata_desc": "vehicles designed for executing construction tasks",
+        "wikidata_name": "heavy equipment",
         "wikidata_qid": "Q874311"
     },
     "hedgehog": {
@@ -3020,6 +3031,8 @@
         "freebase_mid": "/m/0zvk5",
         "obj365_cat": "Helmet",
         "oid_name": "Helmet",
+        "wikidata_desc": "any type of historical or modern armor worn to protect the head",
+        "wikidata_name": "helmet",
         "wikidata_qid": "Q173603",
         "wordnet_gloss": "a protective headgear made of hard material to resist blows",
         "wordnet_pwn30": "n03513137"
@@ -4031,7 +4044,9 @@
         "coco_pano_id": 138,
         "coco_pano_name": "net",
         "context": "trap",
-
+        "freebase_mid": "/m/049h0m",
+        "wikidata_desc": "net used for fishing",
+        "wikidata_name": "fishing net",
         "wikidata_qid": "Q271598",
         "wordnet_gloss": "a trap made of netting to catch fish or birds or insects",
         "wordnet_pwn30": "n03819994"
@@ -4302,7 +4317,11 @@
         "wordnet_pwn30": "n01816887"
     },
     "party_balloon": {
+        "freebase_mid": "/m/06lpsr",
         "obj365_cat": "Ballon",
+        "wikidata_desc": "small balloon used as a children's toy",
+        "wikidata_name": "toy balloon",
+        "wikidata_qid": "Q643435",
         "wordnet_gloss": "small thin inflatable rubber bag with narrow neck",
         "wordnet_pwn30": "n02782329"
     },
@@ -4417,6 +4436,7 @@
     "personal_care": {
         "freebase_mid": "/m/02w3_ws",
         "oid_name": "Personal care",
+        "obj365_cat": "Toiletry",
         "wikidata_desc": "consumer products used in personal hygiene and for beautification",
         "wikidata_name": "personal care products",
         "wikidata_qid": "Q3246832",
@@ -4589,6 +4609,12 @@
         "wordnet_gloss": "sound recording consisting of a disk with a continuous groove; used to reproduce music by rotating while a phonograph needle tracks in the groove",
         "wordnet_pwn30": "n03924069"
     },
+    "playing_card": {
+        "obj365_cat": "Poker Card",
+        "wikidata_desc": "card used as one of a set for playing card games",
+        "wikidata_name": "playing card",
+        "wikidata_qid": "Q47883"
+    },
     "playingfield": {
         "coco_pano_id": 145,
         "coco_pano_name": "playingfield"
@@ -4619,11 +4645,6 @@
         "wikidata_qid": "Q2024731",
         "wordnet_gloss": "a fixture for the distribution and use of water in a building",
         "wordnet_pwn30": "n03969259"
-    },
-    "poker_card": {
-        "obj365_cat": "Poker Card",
-        "wordnet_gloss": "fire iron consisting of a metal rod with a handle; used to stir a fire",
-        "wordnet_pwn30": "n03975926"
     },
     "polar_bear": {
         "freebase_mid": "/m/0633h",
@@ -5029,6 +5050,9 @@
     "road": {
         "coco_pano_id": 149,
         "coco_pano_name": "road",
+        "freebase_mid": "/m/06gfj",
+        "wikidata_desc": "way on land between two places",
+        "wikidata_name": "road",
         "wikidata_qid": "Q34442",
         "wordnet_gloss": "an open way (generally public) for travel or transportation",
         "wordnet_pwn30": "n04096066"
@@ -5124,7 +5148,10 @@
         "wordnet_pwn30": "n04118776"
     },
     "sailboat": {
+        "freebase_mid": "/m/0hsrw",
         "obj365_cat": "Sailboat",
+        "wikidata_desc": "boat propelled partly or entirely by sails",
+        "wikidata_name": "sailboat",
         "wikidata_qid": "Q1075310",
         "wordnet_gloss": "a small sailing vessel; usually with a single mast",
         "wordnet_pwn30": "n04128499"
@@ -5808,10 +5835,6 @@
         "wordnet_gloss": "a piece of cutlery with a shallow bowl-shaped container and a handle; used to stir or serve or take up food",
         "wordnet_pwn30": "n04284002"
     },
-    "sports_ball": {
-        "coco_pano_id": 37,
-        "coco_pano_name": "sports ball"
-    },
     "sports_car": {
         "freebase_mid": "/m/012mq4",
         "obj365_cat": "Sports Car",
@@ -5839,7 +5862,11 @@
         "wikidata_qid": "Q11345724"
     },
     "spring_rolls": {
+        "freebase_mid": "/m/04fzqn3",
         "obj365_cat": "Spring Rolls",
+        "wikidata_desc": "Vietnamese spring roll",
+        "wikidata_name": "ch\u1ea3 gi\u00f2",
+        "wikidata_qid": "Q7382955",
         "wordnet_gloss": "minced vegetables and meat wrapped in a pancake and fried",
         "wordnet_pwn30": "n07866723"
     },
@@ -6085,7 +6112,11 @@
         "wordnet_pwn30": "n07879450"
     },
     "suv": {
-        "obj365_cat": "SUV"
+        "freebase_mid": "/m/0ctrp",
+        "obj365_cat": "SUV",
+        "wikidata_desc": "type of automobile",
+        "wikidata_name": "sport utility vehicle",
+        "wikidata_qid": "Q192152"
     },
     "swan": {
         "freebase_mid": "/m/0dftk",
@@ -6162,10 +6193,11 @@
         "wordnet_gloss": "a piece of furniture having a smooth flat top that is usually supported by one or more vertical legs; \"it was a sturdy table\"",
         "wordnet_pwn30": "n04379243"
     },
-    "table_tennis_": {
+    "table_tennis_ball": {
         "obj365_cat": "Table Tennis ",
-        "wordnet_gloss": "a game (trademark Ping-Pong) resembling tennis but played on a table with paddles and a light hollow ball",
-        "wordnet_pwn30": "n00499263"
+        "wikidata_desc": "ball used in the game of table tennis",
+        "wikidata_name": "table tennis ball",
+        "wikidata_qid": "Q2436595"
     },
     "table_tennis_racket": {
         "freebase_mid": "/m/05_5p_0",
@@ -6441,11 +6473,6 @@
         "wikidata_qid": "Q5840",
         "wordnet_gloss": "a soft thin absorbent paper for use in toilets",
         "wordnet_pwn30": "n15075141"
-    },
-    "toiletry": {
-        "obj365_cat": "Toiletry",
-        "wordnet_gloss": "artifacts used in making your toilet (washing and taking care of your body)",
-        "wordnet_pwn30": "n04447443"
     },
     "tomato": {
         "freebase_mid": "/m/07j87",
@@ -7020,7 +7047,9 @@
     },
     "wine_rack": {
         "freebase_mid": "/m/0271qf7",
-        "oid_name": "Wine rack"
+        "oid_name": "Wine rack",
+        "wikidata_name": "Wine rack",
+        "wikidata_qid": "Q2941029"
     },
     "winter_melon": {
         "freebase_mid": "/m/02cvgx",
@@ -7096,7 +7125,10 @@
         "wordnet_pwn30": "n04606574"
     },
     "yak": {
+        "freebase_mid": "/m/01hhp3",
         "obj365_cat": "Yak",
+        "wikidata_desc": "species of mammal, the wild yak (may, or may not, include the domesticated yak, which otherwise is Bos grunniens, Q19829410)",
+        "wikidata_name": "Bos mutus",
         "wikidata_qid": "Q26547",
         "wordnet_gloss": "large long-haired wild ox of Tibet often domesticated",
         "wordnet_pwn30": "n02405302"
