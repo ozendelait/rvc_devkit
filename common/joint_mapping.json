@@ -332,6 +332,15 @@
         "wordnet_gloss": "small rounded bread either plain or sweet",
         "wordnet_pwn30": "n07680932"
     },
+    "bar_soap": {
+        "freebase_mid": "/m/0fw68",
+        "obj365_boxable_name": "Soap",
+        "wikidata_desc": "salt of fatty acids (long-chain carboxylic acids), used for washing and cleaning",
+        "wikidata_name": "soap",
+        "wikidata_qid": "Q34396",
+        "wordnet_gloss": "soap in the form of a bar",
+        "wordnet_pwn30": "n02797455"
+    },
     "barbell": {
         "freebase_mid": "/m/03_163",
         "obj365_boxable_name": "Barbell",
@@ -1318,9 +1327,7 @@
     "cat_furniture": {
         "freebase_mid": "/m/0h8nm9j",
         "oid_name": "Cat furniture",
-        "wikidata_desc": "",
-        "wikidata_name": "",
-        "wikidata_qid": "Q87584935",
+        "wikidata_qid": "",
         "wordnet_pwn30": ""
     },
     "caterpillar": {
@@ -5640,7 +5647,7 @@
         "wikidata_desc": "container or kitchen appliance dedicated to cooking rice",
         "wikidata_name": "rice cooker",
         "wikidata_qid": "Q1137500",
-		"wordnet_pwn30": ""
+        "wordnet_pwn30": ""
     },
     "rickshaw": {
         "freebase_mid": "/m/0dd5q",
@@ -6184,6 +6191,8 @@
         "freebase_mid": "/m/06nrc",
         "oid_boxable_leaf": "/m/06nrc",
         "oid_name": "Shotgun",
+        "wikidata_desc": "smoothbore firearm which can fire one or more projectiles in a single firing",
+        "wikidata_name": "shotgun",
         "wikidata_qid": "Q486396",
         "wordnet_gloss": "firearm that is a double-barreled smoothbore shoulder weapon for firing shot at short ranges",
         "wordnet_pwn30": "n04206356"
@@ -6221,7 +6230,9 @@
     },
     "side_table": {
         "obj365_boxable_name": "Side Table",
-		"wikidata_qid": "Q65791322",
+        "wikidata_desc": "low table, often tiered, for use next to a chair or sofa",
+        "wikidata_name": "end table",
+        "wikidata_qid": "Q65791322",
         "wordnet_pwn30": ""
     },
     "sidewalk": {
@@ -6313,6 +6324,7 @@
         "wikidata_desc": "family of mammals known for their odor",
         "wikidata_name": "Mephitidae",
         "wikidata_qid": "Q83244",
+        "wordnet_gloss": "American musteline mammal typically ejecting an intensely malodorous fluid when startled; in some classifications put in a separate subfamily Mephitinae",
         "wordnet_pwn30": "n02445715"
     },
     "sky": {
@@ -6459,11 +6471,6 @@
         "wordnet_gloss": "a vehicle used to push snow from roads",
         "wordnet_pwn30": "n04252225"
     },
-    "bar_soap": {
-        "obj365_boxable_name": "Soap",
-        "wikidata_qid": "Q34396",
-        "wordnet_pwn30": "n02797455"
-    },
     "soap_dispenser": {
         "freebase_mid": "/m/0c3mkw",
         "oid_name": "Soap dispenser",
@@ -6541,13 +6548,15 @@
     "speed_limit_sign": {
         "obj365_boxable_name": "Speed Limit Sign",
         "wikidata_name": "speed limit sign",
-        "wikidata_qid": "Q67356821"
-		"wordnet_pwn30": ""
+        "wikidata_qid": "Q67356821",
+        "wordnet_pwn30": ""
     },
     "spice_rack": {
         "freebase_mid": "/m/0h8kx63",
         "oid_name": "Spice rack",
-		"wikidata_qid": "",
+        "wikidata_desc": "",
+        "wikidata_name": "",
+        "wikidata_qid": "Q87584935",
         "wordnet_gloss": "a rack for displaying containers filled with spices",
         "wordnet_pwn30": "n04275175"
     },
@@ -6558,6 +6567,7 @@
         "wikidata_desc": "order of arachnids",
         "wikidata_name": "Araneae",
         "wikidata_qid": "Q1357",
+        "wordnet_gloss": "predatory arachnid with eight legs, two poison fangs, two feelers, and usually two silk-spinning organs at the back end of the body; they spin silk to make cocoons for eggs or traps for prey",
         "wordnet_pwn30": "n01772222"
     },
     "spoon": {
@@ -6681,7 +6691,8 @@
         "wikidata_desc": "device with saddle, pedals, and some form of handlebars arranged as on a bicycle, but used as exercise equipment rather than transportation.",
         "wikidata_name": "stationary bicycle",
         "wikidata_qid": "Q1370818",
-		"wordnet_pwn30": "n03302671"
+        "wordnet_gloss": "an exercise device resembling a stationary bike",
+        "wordnet_pwn30": "n03302671"
     },
     "steak": {
         "freebase_mid": "/m/0grtl",
@@ -6744,6 +6755,7 @@
         "wikidata_desc": "nothospecies of plant",
         "wikidata_name": "Fragaria \u00d7 ananassa",
         "wikidata_qid": "Q13158",
+        "wordnet_gloss": "sweet fleshy red fruit",
         "wordnet_pwn30": "n07745940"
     },
     "street_light": {
@@ -6764,6 +6776,7 @@
         "wikidata_desc": "equipment for moving patients in need of medical care",
         "wikidata_name": "stretcher",
         "wikidata_qid": "Q838960",
+        "wordnet_gloss": "a litter for transporting people who are ill or wounded or dead; usually consists of a sheet of canvas stretched between two poles",
         "wordnet_pwn30": "n04336792"
     },
     "stroller": {
