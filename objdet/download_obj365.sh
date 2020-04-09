@@ -1,5 +1,8 @@
 #!/bin/sh
 # Downloads the objects365 dataset
+# The Google Drive stored version is provided for participants of RVC 2020 
+# and may be taken down afterwards without warning!
+#
 # See the enclosed license.txt for license terms
 # The annotations in this dataset along with this website belong to the Objects365 Consortium 
 # and are licensed under a Creative Commons Attribution 4.0 License. To view the license, visit https://creativecommons.org/licenses/by-sa/4.0/ .
