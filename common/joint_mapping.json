@@ -5640,8 +5640,7 @@
         "wikidata_desc": "container or kitchen appliance dedicated to cooking rice",
         "wikidata_name": "rice cooker",
         "wikidata_qid": "Q1137500",
-        "wordnet_gloss": "an electric cooker that maintains a relatively low temperature",
-        "wordnet_pwn30": "n03133878"
+		"wordnet_pwn30": ""
     },
     "rickshaw": {
         "freebase_mid": "/m/0dd5q",
@@ -6185,9 +6184,7 @@
         "freebase_mid": "/m/06nrc",
         "oid_boxable_leaf": "/m/06nrc",
         "oid_name": "Shotgun",
-        "wikidata_desc": "shotgun",
-        "wikidata_name": "Benelli M1",
-        "wikidata_qid": "Q1151960",
+        "wikidata_qid": "Q486396",
         "wordnet_gloss": "firearm that is a double-barreled smoothbore shoulder weapon for firing shot at short ranges",
         "wordnet_pwn30": "n04206356"
     },
@@ -6223,7 +6220,9 @@
         "wordnet_pwn30": "n01986806"
     },
     "side_table": {
-        "obj365_boxable_name": "Side Table"
+        "obj365_boxable_name": "Side Table",
+		"wikidata_qid": "Q65791322",
+        "wordnet_pwn30": ""
     },
     "sidewalk": {
         "coco_pano_id": 191,
@@ -6314,8 +6313,7 @@
         "wikidata_desc": "family of mammals known for their odor",
         "wikidata_name": "Mephitidae",
         "wikidata_qid": "Q83244",
-        "wordnet_gloss": "street names for marijuana",
-        "wordnet_pwn30": "n03990834"
+        "wordnet_pwn30": "n02445715"
     },
     "sky": {
         "coco_pano_id": 187,
@@ -6363,7 +6361,9 @@
         "oid_name": "Slow cooker",
         "wikidata_desc": "electrical cooking appliance used to prepare food by simmering for several hours, mostly unattended",
         "wikidata_name": "slow cooker",
-        "wikidata_qid": "Q642345"
+        "wikidata_qid": "Q642345",
+        "wordnet_gloss": "an electric cooker that maintains a relatively low temperature",
+        "wordnet_pwn30": "n03133878"
     },
     "snack": {
         "freebase_mid": "/m/01ww8y",
@@ -6459,14 +6459,10 @@
         "wordnet_gloss": "a vehicle used to push snow from roads",
         "wordnet_pwn30": "n04252225"
     },
-    "soap": {
-        "freebase_mid": "/m/06q7n",
+    "bar_soap": {
         "obj365_boxable_name": "Soap",
-        "wikidata_desc": "American television genre episodic work of dramatic fiction;",
-        "wikidata_name": "soap opera",
-        "wikidata_qid": "Q23739",
-        "wordnet_gloss": "a cleansing agent made from the salts of vegetable or animal fats",
-        "wordnet_pwn30": "n04253437"
+        "wikidata_qid": "Q34396",
+        "wordnet_pwn30": "n02797455"
     },
     "soap_dispenser": {
         "freebase_mid": "/m/0c3mkw",
@@ -6546,10 +6542,12 @@
         "obj365_boxable_name": "Speed Limit Sign",
         "wikidata_name": "speed limit sign",
         "wikidata_qid": "Q67356821"
+		"wordnet_pwn30": ""
     },
     "spice_rack": {
         "freebase_mid": "/m/0h8kx63",
         "oid_name": "Spice rack",
+		"wikidata_qid": "",
         "wordnet_gloss": "a rack for displaying containers filled with spices",
         "wordnet_pwn30": "n04275175"
     },
@@ -6560,8 +6558,7 @@
         "wikidata_desc": "order of arachnids",
         "wikidata_name": "Araneae",
         "wikidata_qid": "Q1357",
-        "wordnet_gloss": "a skillet made of cast iron",
-        "wordnet_pwn30": "n04275283"
+        "wordnet_pwn30": "n01772222"
     },
     "spoon": {
         "coco_boxable_name": "spoon",
@@ -6683,7 +6680,8 @@
         "oid_name": "Stationary bicycle",
         "wikidata_desc": "device with saddle, pedals, and some form of handlebars arranged as on a bicycle, but used as exercise equipment rather than transportation.",
         "wikidata_name": "stationary bicycle",
-        "wikidata_qid": "Q1370818"
+        "wikidata_qid": "Q1370818",
+		"wordnet_pwn30": "n03302671"
     },
     "steak": {
         "freebase_mid": "/m/0grtl",
@@ -6735,8 +6733,7 @@
         "wikidata_desc": "traffic signal",
         "wikidata_name": "stop sign",
         "wikidata_qid": "Q250429",
-        "wordnet_gloss": "structure displaying a board on which advertisements can be posted; \"the highway was lined with signboards\"",
-        "wordnet_pwn30": "n04217882"
+        "wordnet_pwn30": ""
     },
     "strawberry": {
         "freebase_mid": "/m/07fbm7",
@@ -6747,8 +6744,7 @@
         "wikidata_desc": "nothospecies of plant",
         "wikidata_name": "Fragaria \u00d7 ananassa",
         "wikidata_qid": "Q13158",
-        "wordnet_gloss": "a soft red birthmark",
-        "wordnet_pwn30": "n04696316"
+        "wordnet_pwn30": "n07745940"
     },
     "street_light": {
         "freebase_mid": "/m/033rq4",
@@ -6768,8 +6764,7 @@
         "wikidata_desc": "equipment for moving patients in need of medical care",
         "wikidata_name": "stretcher",
         "wikidata_qid": "Q838960",
-        "wordnet_gloss": "a stone that forms the top of wall or building",
-        "wordnet_pwn30": "n02957427"
+        "wordnet_pwn30": "n04336792"
     },
     "stroller": {
         "freebase_mid": "/m/03ylns",
