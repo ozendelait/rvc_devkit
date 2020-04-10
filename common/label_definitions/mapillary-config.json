@@ -1,4 +1,6 @@
 {
+  "id_prefix": "mvs",
+  "id_prefix_eval": "mvs_boxable",
   "labels": [
     {
       "color": [

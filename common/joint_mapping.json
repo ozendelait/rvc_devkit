@@ -287,7 +287,8 @@
         "oid_name": "Balloon",
         "wikidata_desc": "inflatable flexible bag filled with gas",
         "wikidata_name": "balloon",
-        "wikidata_qid": "Q9706"
+        "wikidata_qid": "Q9706",
+        "wordnet_pwn30": ""
     },
     "banana": {
         "coco_boxable_name": "banana",
@@ -317,6 +318,9 @@
     "banner": {
         "coco_pano_id": 92,
         "coco_pano_name": "banner",
+        "context": "object",
+        "mvs_id": 32,
+        "mvs_name": "object--banner",
         "wikidata_desc": "flag or other piece of cloth bearing a symbol, logo, slogan or other message",
         "wikidata_name": "banner",
         "wikidata_qid": "Q806880",
@@ -372,6 +376,18 @@
         "wikidata_qid": "Q10289",
         "wordnet_gloss": "a cylindrical container that holds liquids",
         "wordnet_pwn30": "n02795169"
+    },
+    "barrier": {
+        "context": "construction",
+        "freebase_mid": "/m/0ckn6l",
+        "mvs_boxable_id": 5,
+        "mvs_id": 5,
+        "mvs_name": "construction--barrier--other-barrier",
+        "wikidata_desc": "barrier installed within medians of and next to roads to prevent vehicle collisions",
+        "wikidata_name": "traffic barrier",
+        "wikidata_qid": "Q1344551",
+        "wordnet_gloss": "a structure or object that impedes free movement",
+        "wordnet_pwn30": "n02796623"
     },
     "baseball": {
         "freebase_mid": "/m/03v6wp",
@@ -445,9 +461,9 @@
     "bathroom_accessory": {
         "freebase_mid": "/m/0h8nr_l",
         "oid_name": "Bathroom accessory",
-        "wikidata_desc": "bathroom accessory",
-        "wikidata_name": "Shower and bathtub curtains",
-        "wikidata_qid": "Q839818"
+        "wikidata_qid": "",
+        "wordnet_gloss": "any fixture in a bathroom",
+        "wordnet_pwn30": "n02808097"
     },
     "bathroom_cabinet": {
         "context": "toiletries",
@@ -588,7 +604,10 @@
         "coco_boxable_name": "bench",
         "coco_pano_id": 15,
         "coco_pano_name": "bench",
+        "context": "object",
         "freebase_mid": "/m/0cvnqh",
+        "mvs_id": 33,
+        "mvs_name": "object--bench",
         "obj365_boxable_name": "Bench",
         "oid_boxable_leaf": "/m/0cvnqh",
         "oid_name": "Bench",
@@ -602,7 +621,10 @@
         "coco_boxable_name": "bicycle",
         "coco_pano_id": 2,
         "coco_pano_name": "bicycle",
+        "context": "object",
         "freebase_mid": "/m/0199g",
+        "mvs_id": 52,
+        "mvs_name": "object--vehicle--bicycle",
         "obj365_boxable_name": "Bicycle",
         "oid_boxable_leaf": "/m/0199g",
         "oid_name": "Bicycle",
@@ -618,7 +640,9 @@
         "oid_name": "Bicycle helmet",
         "wikidata_desc": "helmet for people on bicycles intended to reduce injuries in the event of a collision or crash",
         "wikidata_name": "bicycle helmet",
-        "wikidata_qid": "Q1127483"
+        "wikidata_qid": "Q1127483",
+        "wordnet_gloss": "a padded helmet worn by people riding bicycles or motorcycles; protects the head in case of accidents",
+        "wordnet_pwn30": "n03127747"
     },
     "bicycle_wheel": {
         "freebase_mid": "/m/01bqk0",
@@ -631,6 +655,16 @@
         "wordnet_gloss": "the wheel of a bicycle",
         "wordnet_pwn30": "n02836035"
     },
+    "bicyclist": {
+        "context": "human",
+        "mvs_id": 20,
+        "mvs_name": "human--rider--bicyclist",
+        "wikidata_desc": "person who rides a bike",
+        "wikidata_name": "cyclist",
+        "wikidata_qid": "Q2125610",
+        "wordnet_gloss": "a person who rides a bicycle",
+        "wordnet_pwn30": "n09986189"
+    },
     "bidet": {
         "freebase_mid": "/m/01vbnl",
         "oid_boxable_leaf": "/m/01vbnl",
@@ -641,8 +675,32 @@
         "wordnet_gloss": "a basin for washing genitals and anal area",
         "wordnet_pwn30": "n02836174"
     },
+    "bike_lane": {
+        "context": "construction",
+        "mvs_boxable_id": 7,
+        "mvs_id": 7,
+        "mvs_name": "construction--flat--bike-lane",
+        "wikidata_desc": "road traffic lane for cyclists",
+        "wikidata_name": "cycle lane",
+        "wikidata_qid": "Q1378400",
+        "wordnet_pwn30": ""
+    },
+    "bike_rack": {
+        "context": "object",
+        "freebase_mid": "/m/01pch1",
+        "mvs_id": 34,
+        "mvs_name": "object--bike-rack",
+        "wikidata_desc": "device used to park bicycles, not to be confused with a kick stand",
+        "wikidata_name": "bicycle stand",
+        "wikidata_qid": "Q1392526",
+        "wordnet_gloss": "a rack for parking bicycles",
+        "wordnet_pwn30": "n02835829"
+    },
     "billboard": {
+        "context": "object",
         "freebase_mid": "/m/01knjb",
+        "mvs_id": 35,
+        "mvs_name": "object--billboard",
         "oid_boxable_leaf": "/m/01knjb",
         "oid_name": "Billboard",
         "wikidata_desc": "advertising signage",
@@ -689,6 +747,8 @@
         "coco_pano_name": "bird",
         "context": "animal",
         "freebase_mid": "/m/015p6",
+        "mvs_id": 0,
+        "mvs_name": "animal--bird",
         "obj365_boxable_name": "Wild Bird",
         "oid_name": "Bird",
         "wikidata_desc": "class of tetrapods",
@@ -733,13 +793,18 @@
         "freebase_mid": "/m/0g9_drw",
         "obj365_boxable_name": "Board Eraser",
         "wikidata_name": "Chalkboard eraser",
-        "wikidata_qid": "Q2553927"
+        "wikidata_qid": "Q2553927",
+        "wordnet_gloss": "an eraser that removes chalk marks from blackboard",
+        "wordnet_pwn30": "n02846619"
     },
     "boat": {
         "coco_boxable_name": "boat",
         "coco_pano_id": 9,
         "coco_pano_name": "boat",
+        "context": "object",
         "freebase_mid": "/m/019jd",
+        "mvs_id": 53,
+        "mvs_name": "object--vehicle--boat",
         "obj365_boxable_name": "Boat",
         "oid_name": "Boat",
         "wikidata_desc": "smaller watercraft",
@@ -868,6 +933,7 @@
     "bowling_equipment": {
         "freebase_mid": "/m/07pj7bq",
         "oid_name": "Bowling equipment",
+        "wikidata_qid": "",
         "wordnet_gloss": "equipment used in bowling",
         "wordnet_pwn30": "n02882483"
     },
@@ -928,13 +994,17 @@
     "brickwall": {
         "coco_pano_id": 171,
         "coco_pano_name": "wall-brick",
-        "wikidata_desc": "",
-        "wikidata_name": "",
-        "wikidata_qid": "Q29731012"
+        "wikidata_qid": "Q29731012",
+        "wordnet_gloss": "masonry done with bricks and mortar",
+        "wordnet_pwn30": "n02898369"
     },
     "bridge": {
         "coco_pano_id": 95,
         "coco_pano_name": "bridge",
+        "context": "construction",
+        "mvs_boxable_id": 16,
+        "mvs_id": 16,
+        "mvs_name": "construction--structure--bridge",
         "wikidata_desc": "bridge",
         "wikidata_name": "Q147864",
         "wikidata_qid": "Q147864",
@@ -976,7 +1046,9 @@
         "oid_name": "Bronze sculpture",
         "wikidata_desc": "sculpture cast in bronze",
         "wikidata_name": "bronze sculpture",
-        "wikidata_qid": "Q928357"
+        "wikidata_qid": "Q928357",
+        "wordnet_gloss": "a sculpture made of bronze",
+        "wordnet_pwn30": "n02906175"
     },
     "broom": {
         "obj365_boxable_name": "Broom",
@@ -1009,7 +1081,11 @@
     "building": {
         "coco_pano_id": 197,
         "coco_pano_name": "building-other-merged",
+        "context": "construction",
         "freebase_mid": "/m/0cgh4",
+        "mvs_boxable_id": 17,
+        "mvs_id": 17,
+        "mvs_name": "construction--structure--building",
         "oid_name": "Building",
         "wikidata_desc": "structure, typically with a roof and walls, standing more or less permanently in one place",
         "wikidata_name": "building",
@@ -1044,7 +1120,10 @@
         "coco_boxable_name": "bus",
         "coco_pano_id": 6,
         "coco_pano_name": "bus",
+        "context": "object",
         "freebase_mid": "/m/01bjv",
+        "mvs_id": 54,
+        "mvs_name": "object--vehicle--bus",
         "obj365_boxable_name": "Bus",
         "oid_boxable_leaf": "/m/01bjv",
         "oid_inst_leaf": "/m/01bjv",
@@ -1123,7 +1202,8 @@
         "oid_name": "Cake stand",
         "wikidata_desc": "",
         "wikidata_name": "cake stand",
-        "wikidata_qid": "Q11813459"
+        "wikidata_qid": "Q11813459",
+        "wordnet_pwn30": ""
     },
     "calculator": {
         "freebase_mid": "/m/024d2",
@@ -1237,8 +1317,10 @@
         "coco_boxable_name": "car",
         "coco_pano_id": 3,
         "coco_pano_name": "car",
-        "context": "auto",
+        "context": "object",
         "freebase_mid": "/m/0k4j",
+        "mvs_id": 55,
+        "mvs_name": "object--vehicle--car",
         "obj365_boxable_name": "Car",
         "oid_name": "Car",
         "wikidata_desc": "road vehicle powered by a motor to carry driver and small number of passengers",
@@ -1246,6 +1328,25 @@
         "wikidata_qid": "Q1420",
         "wordnet_gloss": "a motor vehicle with four wheels; usually propelled by an internal combustion engine; \"he needs a car to get to work\"",
         "wordnet_pwn30": "n02958343"
+    },
+    "car_mount": {
+        "context": "void",
+        "mvs_boxable_id": 63,
+        "mvs_id": 63,
+        "mvs_name": "void--car-mount",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
+    "caravan": {
+        "context": "object",
+        "freebase_mid": "/m/043tzlr",
+        "mvs_id": 56,
+        "mvs_name": "object--vehicle--caravan",
+        "wikidata_desc": "group of people or animals traveling together in a row",
+        "wikidata_name": "caravan",
+        "wikidata_qid": "Q203494",
+        "wordnet_gloss": "a camper equipped with living quarters",
+        "wordnet_pwn30": "n04520382"
     },
     "cardboard": {
         "coco_pano_id": 100,
@@ -1325,9 +1426,20 @@
         "wordnet_pwn30": "n02983507"
     },
     "cat_furniture": {
-        "freebase_mid": "/m/0h8nm9j",
+        "freebase_mid": "/m/026v7pc",
         "oid_name": "Cat furniture",
-        "wikidata_qid": "",
+        "wikidata_name": "Cat tree",
+        "wikidata_qid": "Q1014401",
+        "wordnet_pwn30": ""
+    },
+    "catch_basin": {
+        "context": "object",
+        "freebase_mid": "/m/025cll",
+        "mvs_id": 36,
+        "mvs_name": "object--catch-basin",
+        "wikidata_desc": "rainwater harvesting infrastructure",
+        "wikidata_name": "storm drain",
+        "wikidata_qid": "Q1139766",
         "wordnet_pwn30": ""
     },
     "caterpillar": {
@@ -1367,7 +1479,8 @@
         "oid_name": "Ceiling fan",
         "wikidata_desc": "type of fan appliance permanently mounted to the ceiling horizontally",
         "wikidata_name": "ceiling fan",
-        "wikidata_qid": "Q1181944"
+        "wikidata_qid": "Q1181944",
+        "wordnet_pwn30": ""
     },
     "cello": {
         "freebase_mid": "/m/01xqw",
@@ -1612,11 +1725,6 @@
         "wordnet_gloss": "a cup from which coffee is drunk",
         "wordnet_pwn30": "n03063073"
     },
-    "coffee_machine": {
-        "obj365_boxable_name": "Coffee Machine",
-        "wordnet_gloss": "a kitchen appliance for brewing coffee automatically",
-        "wordnet_pwn30": "n03063338"
-    },
     "coffee_table": {
         "freebase_mid": "/m/078n6m",
         "obj365_boxable_name": "Coffee Table",
@@ -1630,11 +1738,14 @@
     },
     "coffeemaker": {
         "freebase_mid": "/m/07xyvk",
+        "obj365_boxable_name": "Coffee Machine",
         "oid_boxable_leaf": "/m/07xyvk",
         "oid_name": "Coffeemaker",
         "wikidata_desc": "device for making coffee",
         "wikidata_name": "coffeemaker",
-        "wikidata_qid": "Q211841"
+        "wikidata_qid": "Q211841",
+        "wordnet_gloss": "a kitchen appliance for brewing coffee automatically",
+        "wordnet_pwn30": "n03063338"
     },
     "coin": {
         "freebase_mid": "/m/0242l",
@@ -1687,13 +1798,6 @@
         "wordnet_gloss": "a digitally encoded recording on an optical disk that is smaller than a phonograph record; played back by a laser",
         "wordnet_pwn30": "n03079230"
     },
-    "computer_case": {
-        "freebase_mid": "/m/049d8b",
-        "obj365_boxable_name": "Computer Box",
-        "wikidata_desc": "enclosure that contains most of the components of a computer",
-        "wikidata_name": "computer case",
-        "wikidata_qid": "Q3975"
-    },
     "computer_keyboard": {
         "coco_boxable_name": "keyboard",
         "coco_pano_id": 76,
@@ -1730,6 +1834,14 @@
         "wordnet_gloss": "a hand-operated electronic device that controls the coordinates of a cursor on your computer screen as you move it around on a pad; on the bottom of the device is a ball that rolls on the surface of the pad; \"a mouse takes much more room than a trackball\"",
         "wordnet_pwn30": "n03793489"
     },
+    "construction_vehicle": {
+        "freebase_mid": "/m/02gx17",
+        "obj365_boxable_name": "Machinery Vehicle",
+        "wikidata_desc": "vehicles designed for executing construction tasks",
+        "wikidata_name": "heavy equipment",
+        "wikidata_qid": "Q874311",
+        "wordnet_pwn30": ""
+    },
     "container": {
         "freebase_mid": "/m/011q46kg",
         "oid_name": "Container",
@@ -1764,9 +1876,9 @@
     "cooking_spray": {
         "freebase_mid": "/m/07mcwg",
         "oid_name": "Cooking spray",
-        "wikidata_desc": "",
         "wikidata_name": "Cooking spray",
-        "wikidata_qid": "Q5167151"
+        "wikidata_qid": "Q5167151",
+        "wordnet_pwn30": ""
     },
     "corded_phone": {
         "freebase_mid": "/m/0h8lkj8",
@@ -1775,7 +1887,9 @@
         "oid_name": "Corded phone",
         "wikidata_desc": "telephone with a telephone wire; phone that uses a metal wire or fibre optic telephone line for transmission as distinguished from a mobile cellular line, which uses radio waves for transmission",
         "wikidata_name": "landline telephone",
-        "wikidata_qid": "Q738621"
+        "wikidata_qid": "Q738621",
+        "wordnet_gloss": "a telephone set that sits on a desk or table",
+        "wordnet_pwn30": "n03179910"
     },
     "corn": {
         "freebase_mid": "/m/0mgg8",
@@ -1800,7 +1914,9 @@
         "obj365_boxable_name": "Cosmetics Mirror",
         "wikidata_desc": "portable case for makeup or facepowder, usually with a mirror in its lid",
         "wikidata_name": "compact",
-        "wikidata_qid": "Q3400197"
+        "wikidata_qid": "Q3400197",
+        "wordnet_gloss": "a small cosmetics case with a mirror; to be carried in a woman's purse",
+        "wordnet_pwn30": "n03078995"
     },
     "couch": {
         "coco_boxable_name": "couch",
@@ -1924,7 +2040,8 @@
         "obj365_boxable_name": "Crosswalk Sign",
         "wikidata_desc": "",
         "wikidata_name": "Crossing signs",
-        "wikidata_qid": "Q21159411"
+        "wikidata_qid": "Q21159411",
+        "wordnet_pwn30": ""
     },
     "crown": {
         "freebase_mid": "/m/0nl46",
@@ -1988,6 +2105,28 @@
         "wikidata_qid": "Q5662058",
         "wordnet_gloss": "a small room (or recess) or cabinet used for storage space",
         "wordnet_pwn30": "n03148324"
+    },
+    "curb": {
+        "context": "construction",
+        "mvs_boxable_id": 2,
+        "mvs_id": 2,
+        "mvs_name": "construction--barrier--curb",
+        "wikidata_desc": "",
+        "wikidata_name": "curb",
+        "wikidata_qid": "Q3007621",
+        "wordnet_gloss": "an edge between a sidewalk and a roadway consisting of a line of curbstones (usually forming part of a gutter)",
+        "wordnet_pwn30": "n03148920"
+    },
+    "curb_cut": {
+        "context": "construction",
+        "freebase_mid": "/m/0q5br",
+        "mvs_boxable_id": 9,
+        "mvs_id": 9,
+        "mvs_name": "construction--flat--curb-cut",
+        "wikidata_desc": "Lowered road-edge allowing level acces from pavement to road surface",
+        "wikidata_name": "curb cut",
+        "wikidata_qid": "Q2891126",
+        "wordnet_pwn30": ""
     },
     "curling_stone": {
         "obj365_boxable_name": "Curling",
@@ -2069,6 +2208,15 @@
         "wikidata_qid": "Q1064858",
         "wordnet_gloss": "a piece of furniture with a writing surface and usually drawers or other compartments",
         "wordnet_pwn30": "n03179701"
+    },
+    "desktop_computer": {
+        "freebase_mid": "/m/0dvvc",
+        "obj365_boxable_name": "Computer Box",
+        "wikidata_desc": "personal computer=null in a form intended for regular use at a single location desk/table",
+        "wikidata_name": "desktop computer",
+        "wikidata_qid": "Q56155",
+        "wordnet_gloss": "a personal computer small enough to fit conveniently in an individual workspace",
+        "wordnet_pwn30": "n03180011"
     },
     "dessert": {
         "freebase_mid": "/m/0270h",
@@ -2176,7 +2324,8 @@
         "oid_name": "Dog bed",
         "wikidata_desc": "bed for dogs",
         "wikidata_name": "dog bed",
-        "wikidata_qid": "Q54502633"
+        "wikidata_qid": "Q54502633",
+        "wordnet_pwn30": ""
     },
     "doll": {
         "freebase_mid": "/m/0167gd",
@@ -2414,6 +2563,17 @@
         "wordnet_gloss": "egg-shaped vegetable having a shiny skin typically dark purple but occasionally white or yellow",
         "wordnet_pwn30": "n07713074"
     },
+    "ego": {
+        "context": "void",
+        "mvs_boxable_id": 64,
+        "mvs_id": 64,
+        "mvs_name": "void--ego-vehicle",
+        "wikidata_desc": "self-identity in the psyche",
+        "wikidata_name": "Ego",
+        "wikidata_qid": "Q5348142",
+        "wordnet_gloss": "your consciousness of your own identity",
+        "wordnet_pwn30": "n05675601"
+    },
     "electric_drill": {
         "context": "tool",
         "freebase_mid": "/m/01d380",
@@ -2426,7 +2586,10 @@
         "wordnet_pwn30": "n03240140"
     },
     "electric_fan": {
+        "freebase_mid": "/m/02x984l",
         "obj365_boxable_name": "Fan",
+        "oid_boxable_leaf": "/m/02x984l",
+        "oid_name": "Mechanical fan",
         "wikidata_desc": "machine powered by electricity used to create airflow",
         "wikidata_name": "electric fan",
         "wikidata_qid": "Q25841836",
@@ -2510,7 +2673,9 @@
         "wordnet_pwn30": "n04272054"
     },
     "eyeliner_pencil": {
-        "obj365_boxable_name": "Cosmetics Brush/Eyeliner Pencil"
+        "obj365_boxable_name": "Cosmetics Brush/Eyeliner Pencil",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "face": {
         "context": "human",
@@ -2533,7 +2698,9 @@
     },
     "facial_tissue_holder": {
         "freebase_mid": "/m/0h8nsvg",
-        "oid_name": "Facial tissue holder"
+        "oid_name": "Facial tissue holder",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "falcon": {
         "context": "bird",
@@ -2552,7 +2719,9 @@
         "oid_name": "Fashion accessory",
         "wikidata_desc": "item which is used to contribute to the wearer's outfit",
         "wikidata_name": "costume accessory",
-        "wikidata_qid": "Q1065579"
+        "wikidata_qid": "Q1065579",
+        "wordnet_gloss": "clothing that is worn or carried, but not part of your main clothing",
+        "wordnet_pwn30": "n02671780"
     },
     "fast_food": {
         "freebase_mid": "/m/01_bhs",
@@ -2587,7 +2756,10 @@
     "fence": {
         "coco_pano_id": 185,
         "coco_pano_name": "fence-merged",
-        "context": "barrier",
+        "context": "construction",
+        "mvs_boxable_id": 3,
+        "mvs_id": 3,
+        "mvs_name": "construction--barrier--fence",
         "wikidata_desc": "fence or barrier consisting of one or more horizontal rails and vertical supports",
         "wikidata_name": "railing",
         "wikidata_qid": "Q3095365",
@@ -2618,7 +2790,10 @@
         "coco_boxable_name": "fire hydrant",
         "coco_pano_id": 11,
         "coco_pano_name": "fire hydrant",
+        "context": "object",
         "freebase_mid": "/m/01pns0",
+        "mvs_id": 38,
+        "mvs_name": "object--fire-hydrant",
         "obj365_boxable_name": "Fire Hydrant",
         "oid_boxable_leaf": "/m/01pns0",
         "oid_inst_leaf": "/m/01pns0",
@@ -2698,6 +2873,15 @@
         "wikidata_qid": "Q335201",
         "wordnet_gloss": "bottle that has a narrow neck",
         "wordnet_pwn30": "n03359566"
+    },
+    "flat_vegetation_soil": {
+        "context": "includes_grass",
+        "mvs_boxable_id": 29,
+        "mvs_id": 29,
+        "mvs_name": "nature--terrain",
+        "wikidata_name": "terrain",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "floor": {
         "coco_pano_id": 190,
@@ -3159,6 +3343,16 @@
         "wordnet_gloss": "a machine tool that polishes metal",
         "wordnet_pwn30": "n03460040"
     },
+    "ground_animal": {
+        "context": "animal",
+        "freebase_mid": "/m/0fbf1m",
+        "mvs_id": 1,
+        "mvs_name": "animal--ground-animal",
+        "wikidata_desc": "animals living on land",
+        "wikidata_name": "Terrestrial animal",
+        "wikidata_qid": "Q3248864",
+        "wordnet_pwn30": ""
+    },
     "guacamole": {
         "freebase_mid": "/m/02g30s",
         "oid_boxable_leaf": "/m/02g30s",
@@ -3169,6 +3363,17 @@
         "wikidata_qid": "Q207968",
         "wordnet_gloss": "a dip made of mashed avocado mixed with chopped onions and other seasonings",
         "wordnet_pwn30": "n07583066"
+    },
+    "guard_rail": {
+        "context": "construction",
+        "mvs_boxable_id": 4,
+        "mvs_id": 4,
+        "mvs_name": "construction--barrier--guard-rail",
+        "wikidata_desc": "broad category of barriers in roads that keep vehicles from straying into dangerous areas",
+        "wikidata_name": "guard rail",
+        "wikidata_qid": "Q1188866",
+        "wordnet_gloss": "a railing placed alongside a stairway or road for safety",
+        "wordnet_pwn30": "n04127395"
     },
     "guitar": {
         "freebase_mid": "/m/0342h",
@@ -3264,7 +3469,8 @@
         "oid_name": "Hand dryer",
         "wikidata_desc": "electric hand-drying machine",
         "wikidata_name": "hand dryer",
-        "wikidata_qid": "Q535923"
+        "wikidata_qid": "Q535923",
+        "wordnet_pwn30": ""
     },
     "handbag": {
         "coco_boxable_name": "handbag",
@@ -3282,7 +3488,10 @@
         "wordnet_pwn30": "n02774152"
     },
     "handcart": {
+        "mvs_id": 62,
+        "mvs_name": "object--vehicle--wheeled-slow",
         "obj365_boxable_name": "Trolley",
+        "wikidata_qid": "",
         "wordnet_gloss": "wheeled vehicle that can be pushed by a person; may have one or two or four wheels; \"he used a handcart to carry the rocks away\"; \"their pushcart was piled high with groceries\"",
         "wordnet_pwn30": "n03484083"
     },
@@ -3391,13 +3600,6 @@
         "wordnet_gloss": "device that heats water or supplies warmth to a room",
         "wordnet_pwn30": "n03508101"
     },
-    "heavy_truck": {
-        "freebase_mid": "/m/02gx17",
-        "obj365_boxable_name": "Heavy Truck",
-        "wikidata_desc": "vehicles designed for executing construction tasks",
-        "wikidata_name": "heavy equipment",
-        "wikidata_qid": "Q874311"
-    },
     "hedgehog": {
         "freebase_mid": "/m/0cl4p",
         "oid_name": "Hedgehog",
@@ -3437,11 +3639,16 @@
         "oid_name": "High heels",
         "wikidata_desc": "footwear that raises the heel of the wearer's foot significantly higher than the toes",
         "wikidata_name": "high heels",
-        "wikidata_qid": "Q1057303"
+        "wikidata_qid": "Q1057303",
+        "wordnet_pwn30": ""
     },
     "hiking_equipment": {
         "freebase_mid": "/m/0268lbt",
-        "oid_name": "Hiking equipment"
+        "oid_name": "Hiking equipment",
+        "wikidata_desc": "equipment taken on outdoor walking trips",
+        "wikidata_name": "Hiking equipment",
+        "wikidata_qid": "Q16000111",
+        "wordnet_pwn30": ""
     },
     "hippopotamus": {
         "freebase_mid": "/m/09f20",
@@ -3538,6 +3745,15 @@
         "wordnet_gloss": "a frankfurter served hot on a bun",
         "wordnet_pwn30": "n07697537"
     },
+    "hot_tub": {
+        "freebase_mid": "/m/065h6l",
+        "oid_name": "Jacuzzi",
+        "wikidata_desc": "large tub or small pool",
+        "wikidata_name": "hot tub",
+        "wikidata_qid": "Q1936429",
+        "wordnet_gloss": "a very large tub (large enough for more than one bather) filled with hot water",
+        "wordnet_pwn30": "n03543603"
+    },
     "house": {
         "coco_pano_id": 128,
         "coco_pano_name": "house",
@@ -3554,14 +3770,16 @@
         "obj365_boxable_name": "Hoverboard",
         "wikidata_desc": "battery-powered electric vehicle",
         "wikidata_name": "self-balancing scooter",
-        "wikidata_qid": "Q21161871"
+        "wikidata_qid": "Q21161871",
+        "wordnet_pwn30": ""
     },
     "humidifier": {
         "freebase_mid": "/m/04lvq_",
         "oid_name": "Humidifier",
         "wikidata_desc": "device that increases humidity",
         "wikidata_name": "humidifier",
-        "wikidata_qid": "Q1073283"
+        "wikidata_qid": "Q1073283",
+        "wordnet_pwn30": ""
     },
     "hurdle": {
         "obj365_boxable_name": "Hurdle",
@@ -3587,10 +3805,16 @@
         "oid_name": "Indoor rower",
         "wikidata_desc": "sports equipment",
         "wikidata_name": "indoor rower",
-        "wikidata_qid": "Q1542861"
+        "wikidata_qid": "Q1542861",
+        "wordnet_pwn30": ""
     },
-    "induction_cooker": {
-        "obj365_boxable_name": "Induction Cooker"
+    "induction_stove": {
+        "freebase_mid": "/m/04mlf2",
+        "obj365_boxable_name": "Induction Cooker",
+        "wikidata_desc": "Type of cooker that uses electromagnetic induction",
+        "wikidata_name": "induction stove",
+        "wikidata_qid": "Q751960",
+        "wordnet_pwn30": ""
     },
     "infant_bed": {
         "freebase_mid": "/m/061hd_",
@@ -3598,7 +3822,9 @@
         "oid_name": "Infant bed",
         "wikidata_desc": "small bed for infants and very young children",
         "wikidata_name": "infant bed",
-        "wikidata_qid": "Q412770"
+        "wikidata_qid": "Q412770",
+        "wordnet_gloss": "a small bed for babies; enclosed by sides to prevent the baby from falling",
+        "wordnet_pwn30": "n02766320"
     },
     "insect": {
         "freebase_mid": "/m/03vt0",
@@ -3623,7 +3849,8 @@
         "oid_name": "Ipod",
         "wikidata_desc": "line of portable media players",
         "wikidata_name": "iPod",
-        "wikidata_qid": "Q9479"
+        "wikidata_qid": "Q9479",
+        "wordnet_pwn30": ""
     },
     "isopod": {
         "freebase_mid": "/m/035vxb",
@@ -3643,13 +3870,6 @@
         "wikidata_qid": "Q849964",
         "wordnet_gloss": "(dentistry) dental appliance consisting of an artificial crown for a broken or decayed tooth; \"tomorrow my dentist will fit me for a crown\"",
         "wordnet_pwn30": "n03139089"
-    },
-    "jacuzzi": {
-        "freebase_mid": "/m/065h6l",
-        "oid_name": "Jacuzzi",
-        "wikidata_desc": "large tub or small pool",
-        "wikidata_name": "hot tub",
-        "wikidata_qid": "Q1936429"
     },
     "jaguar": {
         "context": "animal",
@@ -3720,6 +3940,15 @@
         "wordnet_gloss": "any of several liquids of the body; \"digestive juices\"",
         "wordnet_pwn30": "n05398609"
     },
+    "junction_box": {
+        "context": "object",
+        "freebase_mid": "/m/02p8q0k",
+        "mvs_id": 39,
+        "mvs_name": "object--junction-box",
+        "wikidata_name": "junction box",
+        "wikidata_qid": "Q336757",
+        "wordnet_pwn30": ""
+    },
     "kangaroo": {
         "freebase_mid": "/m/04c0y",
         "oid_boxable_leaf": "/m/04c0y",
@@ -3755,7 +3984,9 @@
     "kitchen_and_dining_room_table": {
         "freebase_mid": "/m/0h8n5zk",
         "oid_boxable_leaf": "/m/0h8n5zk",
-        "oid_name": "Kitchen & dining room table"
+        "oid_name": "Kitchen & dining room table",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "kitchen_appliance": {
         "freebase_mid": "/m/0h99cwc",
@@ -3771,16 +4002,17 @@
         "oid_boxable_leaf": "/m/058qzx",
         "oid_inst_leaf": "/m/058qzx",
         "oid_name": "Kitchen knife",
-        "wikidata_desc": "kitchen knife",
-        "wikidata_name": "Santoku",
-        "wikidata_qid": "Q23764"
+        "wikidata_desc": "any knife that is intended to be used in food preparation",
+        "wikidata_name": "kitchen knife",
+        "wikidata_qid": "Q599312",
+        "wordnet_pwn30": ""
     },
     "kitchen_utensil": {
         "freebase_mid": "/m/03hlz0c",
         "oid_name": "Kitchen utensil",
-        "wikidata_desc": "kitchen utensil",
-        "wikidata_name": "lemon squeezer",
-        "wikidata_qid": "Q14902",
+        "wikidata_desc": "small hand-held tool used for food preparation",
+        "wikidata_name": "kitchen utensil",
+        "wikidata_qid": "Q3773693",
         "wordnet_gloss": "a utensil used in preparing food",
         "wordnet_pwn30": "n03621049"
     },
@@ -3884,10 +4116,13 @@
     },
     "land_vehicle": {
         "freebase_mid": "/m/01prls",
+        "mvs_id": 59,
+        "mvs_name": "object--vehicle--other-vehicle",
         "oid_name": "Land vehicle",
         "wikidata_desc": "vehicle mainly meant to move on land",
         "wikidata_name": "land vehicle",
-        "wikidata_qid": "Q1301433"
+        "wikidata_qid": "Q1301433",
+        "wordnet_pwn30": ""
     },
     "lantern": {
         "freebase_mid": "/m/01jfsr",
@@ -4134,9 +4369,6 @@
         "wordnet_gloss": "short-tailed wildcats with usually tufted ears; valued for their fur",
         "wordnet_pwn30": "n02127052"
     },
-    "machinery_vehicle": {
-        "obj365_boxable_name": "Machinery Vehicle"
-    },
     "magpie": {
         "freebase_mid": "/m/012074",
         "oid_name": "Magpie",
@@ -4145,6 +4377,16 @@
         "wikidata_qid": "Q2495957",
         "wordnet_gloss": "long-tailed black-and-white crow that utters a raucous chattering call",
         "wordnet_pwn30": "n01582220"
+    },
+    "mailbox": {
+        "freebase_mid": "/m/04w67_",
+        "mvs_id": 40,
+        "mvs_name": "object--mailbox",
+        "wikidata_desc": "post collection point",
+        "wikidata_name": "post box",
+        "wikidata_qid": "Q49844",
+        "wordnet_gloss": "a private box for delivery of mail",
+        "wordnet_pwn30": "n03710193"
     },
     "mammal": {
         "freebase_mid": "/m/04rky",
@@ -4178,6 +4420,16 @@
         "wordnet_gloss": "large oval tropical fruit having smooth skin, juicy aromatic pulp, and a large hairy seed",
         "wordnet_pwn30": "n07764155"
     },
+    "manhole": {
+        "freebase_mid": "/m/0250ff",
+        "mvs_id": 41,
+        "mvs_name": "object--manhole",
+        "wikidata_desc": "the top opening to an underground utility vault used to house an access point for making connections, inspection, valve adjustments or performing maintenance on underground and buried public utility and other services",
+        "wikidata_name": "manhole",
+        "wikidata_qid": "Q532998",
+        "wordnet_gloss": "a hole (usually with a flush cover) through which a person can gain access to an underground structure",
+        "wordnet_pwn30": "n03717447"
+    },
     "maple": {
         "freebase_mid": "/m/0cffdh",
         "oid_boxable_leaf": "/m/0cffdh",
@@ -4199,14 +4451,18 @@
     },
     "marine_invertebrates": {
         "freebase_mid": "/m/03hl4l9",
-        "oid_name": "Marine invertebrates"
+        "oid_name": "Marine invertebrates",
+        "wikidata_name": "Marine invertebrates",
+        "wikidata_qid": "Q3737872",
+        "wordnet_pwn30": ""
     },
     "marine_mammal": {
         "freebase_mid": "/m/0gd2v",
         "oid_name": "Marine mammal",
         "wikidata_desc": "Mammals that live in the ocean",
         "wikidata_name": "marine mammal",
-        "wikidata_qid": "Q382441"
+        "wikidata_qid": "Q382441",
+        "wordnet_pwn30": ""
     },
     "marker": {
         "freebase_mid": "/m/02fbz6",
@@ -4246,14 +4502,6 @@
         "wordnet_gloss": "ground meat formed into a ball and fried or simmered in broth",
         "wordnet_pwn30": "n07871436"
     },
-    "mechanical_fan": {
-        "freebase_mid": "/m/02x984l",
-        "oid_boxable_leaf": "/m/02x984l",
-        "oid_name": "Mechanical fan",
-        "wikidata_desc": "machine with spinning blades used to create airflow",
-        "wikidata_name": "mechanical fan",
-        "wikidata_qid": "Q6498398"
-    },
     "medal": {
         "freebase_mid": "/m/020yd1",
         "obj365_boxable_name": "Medal",
@@ -4268,7 +4516,8 @@
         "oid_name": "Medical equipment",
         "wikidata_desc": "any instrument, apparatus, implant, in vitro reagent, or similar or related article used for diagnostic and/or therapeutic purposes",
         "wikidata_name": "medical device",
-        "wikidata_qid": "Q6554101"
+        "wikidata_qid": "Q6554101",
+        "wordnet_pwn30": ""
     },
     "megaphone": {
         "freebase_mid": "/m/01f0r6",
@@ -4390,7 +4639,9 @@
         "obj365_boxable_name": "Moniter/TV",
         "wikidata_desc": "electrically controlled display with no moving parts",
         "wikidata_name": "electronic visual display",
-        "wikidata_qid": "Q6021804"
+        "wikidata_qid": "Q6021804",
+        "wordnet_gloss": "an electronic device that represents information in visual form",
+        "wordnet_pwn30": "n03211117"
     },
     "monkey": {
         "freebase_mid": "/m/08pbxl",
@@ -4426,7 +4677,10 @@
         "coco_boxable_name": "motorcycle",
         "coco_pano_id": 4,
         "coco_pano_name": "motorcycle",
+        "context": "object",
         "freebase_mid": "/m/04_sv",
+        "mvs_id": 57,
+        "mvs_name": "object--vehicle--motorcycle",
         "obj365_boxable_name": "Motorcycle",
         "oid_boxable_leaf": "/m/04_sv",
         "oid_inst_leaf": "/m/04_sv",
@@ -4437,11 +4691,24 @@
         "wordnet_gloss": "a motor vehicle with two wheels and a strong frame",
         "wordnet_pwn30": "n03790512"
     },
+    "motorcyclist": {
+        "context": "human",
+        "mvs_id": 21,
+        "mvs_name": "human--rider--motorcyclist",
+        "wikidata_desc": "person who drives a motorbike",
+        "wikidata_name": "motorcyclist",
+        "wikidata_qid": "Q45787133",
+        "wordnet_gloss": "a traveler who rides a motorcycle",
+        "wordnet_pwn30": "n10334009"
+    },
     "mountain": {
         "coco_pano_id": 192,
         "coco_pano_name": "mountain-merged",
-        "context": "land",
+        "context": "nature",
         "freebase_mid": "/m/09d_r",
+        "mvs_boxable_id": 25,
+        "mvs_id": 25,
+        "mvs_name": "nature--mountain",
         "wikidata_desc": "large landform that stretches above the surrounding land",
         "wikidata_name": "mountain",
         "wikidata_qid": "Q8502",
@@ -4648,7 +4915,8 @@
         "oid_name": "Office supplies",
         "wikidata_desc": "item regularly used in offices by businesses and other organizations",
         "wikidata_name": "office supply",
-        "wikidata_qid": "Q2383811"
+        "wikidata_qid": "Q2383811",
+        "wordnet_pwn30": ""
     },
     "okra": {
         "freebase_mid": "/m/025s18p",
@@ -4867,6 +5135,17 @@
         "wordnet_gloss": "a coin-operated timer located next to a parking space; depositing money into it entitles you to park your car there for a specified length of time",
         "wordnet_pwn30": "n03891332"
     },
+    "parking_space": {
+        "freebase_mid": "/m/03pb_0",
+        "mvs_boxable_id": 10,
+        "mvs_id": 10,
+        "mvs_name": "construction--flat--parking",
+        "wikidata_desc": "designated location for parking a vehicle",
+        "wikidata_name": "parking space",
+        "wikidata_qid": "Q1433633",
+        "wordnet_gloss": "a space where an automobile can be parked",
+        "wordnet_pwn30": "n08615810"
+    },
     "parrot": {
         "freebase_mid": "/m/0gv1x",
         "obj365_boxable_name": "Parrot",
@@ -4931,6 +5210,25 @@
         "wikidata_qid": "Q434",
         "wordnet_gloss": "sweet juicy gritty-textured fruit available in many varieties",
         "wordnet_pwn30": "n07767847"
+    },
+    "pedestrian_area": {
+        "freebase_mid": "/m/02751w",
+        "mvs_boxable_id": 11,
+        "mvs_id": 11,
+        "mvs_name": "construction--flat--pedestrian-area",
+        "wikidata_desc": "area of a city or town reserved for pedestrian-only use",
+        "wikidata_name": "pedestrian zone",
+        "wikidata_qid": "Q369730",
+        "wordnet_pwn30": ""
+    },
+    "pedestrian_crossing": {
+        "context": "striped_and_plain_crosswalk",
+        "freebase_mid": "/m/014xcs",
+        "wikidata_desc": "point on a road at which some means are employed to assist pedestrians wishing to cross",
+        "wikidata_name": "crosswalk",
+        "wikidata_qid": "Q8010",
+        "wordnet_gloss": "street crossing where pedestrians have right of way; often marked in some way (especially with diagonal stripes)",
+        "wordnet_pwn30": "n03904183"
     },
     "pen": {
         "freebase_mid": "/m/0k1tl",
@@ -4997,7 +5295,10 @@
         "coco_boxable_name": "person",
         "coco_pano_id": 1,
         "coco_pano_name": "person",
+        "context": "human",
         "freebase_mid": "/m/01g317",
+        "mvs_id": 19,
+        "mvs_name": "human--person",
         "obj365_boxable_name": "Person",
         "oid_name": "Person",
         "wikidata_desc": "being that has certain capacities or attributes constituting personhood (avoid use with P31; use Q5 for humans)",
@@ -5021,7 +5322,19 @@
         "oid_boxable_leaf": "/m/054xkw",
         "oid_name": "Personal flotation device",
         "wikidata_name": "personal flotation device",
-        "wikidata_qid": "Q1262971"
+        "wikidata_qid": "Q1262971",
+        "wordnet_gloss": "rescue equipment consisting of a buoyant belt or jacket to keep a person from drowning",
+        "wordnet_pwn30": "n03663531"
+    },
+    "phone_booth": {
+        "freebase_mid": "/m/01x9x4",
+        "mvs_id": 42,
+        "mvs_name": "object--phone-booth",
+        "wikidata_desc": "small structure furnished with a payphone",
+        "wikidata_name": "telephone booth",
+        "wikidata_qid": "Q1143785",
+        "wordnet_gloss": "booth for using a telephone",
+        "wordnet_pwn30": "n04401680"
     },
     "piano": {
         "freebase_mid": "/m/05r5c",
@@ -5049,7 +5362,8 @@
         "oid_boxable_leaf": "/m/07kng9",
         "oid_name": "Picnic basket",
         "wikidata_name": "picnic basket",
-        "wikidata_qid": "Q2835904"
+        "wikidata_qid": "Q2835904",
+        "wordnet_pwn30": ""
     },
     "picture_frame": {
         "freebase_mid": "/m/06z37_",
@@ -5151,6 +5465,13 @@
         "wikidata_desc": "tool for cutting pizza into slices",
         "wikidata_name": "pizza cutter",
         "wikidata_qid": "Q1546715",
+        "wordnet_pwn30": ""
+    },
+    "plain_crosswalk": {
+        "context": "construction",
+        "mvs_id": 8,
+        "mvs_name": "construction--flat--crosswalk-plain",
+        "wikidata_qid": "",
         "wordnet_pwn30": ""
     },
     "plant": {
@@ -5260,6 +5581,16 @@
         "wordnet_gloss": "white bear of Arctic regions",
         "wordnet_pwn30": "n02134084"
     },
+    "pole": {
+        "context": "object",
+        "mvs_id": 45,
+        "mvs_name": "object--support--pole",
+        "wikidata_desc": "architectural structure",
+        "wikidata_name": "pole",
+        "wikidata_qid": "Q525800",
+        "wordnet_gloss": "a long (usually round) rod of wood or metal or plastic",
+        "wordnet_pwn30": "n03976657"
+    },
     "pomegranate": {
         "freebase_mid": "/m/0jwn_",
         "obj365_boxable_name": "Pomegranate",
@@ -5340,6 +5671,18 @@
         "wikidata_qid": "Q173265",
         "wordnet_gloss": "a thin crisp slice of potato fried in deep fat",
         "wordnet_pwn30": "n07712559"
+    },
+    "pothole": {
+        "context": "object",
+        "freebase_mid": "/m/0327g3",
+        "mvs_boxable_id": 43,
+        "mvs_id": 43,
+        "mvs_name": "object--pothole",
+        "wikidata_desc": "a type of disruption in the surface of a roadway where a portion of the road material has broken away, leaving a hole",
+        "wikidata_name": "pothole",
+        "wikidata_qid": "Q1485806",
+        "wordnet_gloss": "a pit or hole produced by wear or weathering (especially in a road surface)",
+        "wordnet_pwn30": "n09398076"
     },
     "potted_plant": {
         "coco_boxable_name": "potted plant",
@@ -5518,13 +5861,16 @@
         "wordnet_gloss": "pungent fleshy edible root",
         "wordnet_pwn30": "n07735687"
     },
-    "railroad": {
+    "rail_track": {
         "coco_pano_id": 147,
         "coco_pano_name": "railroad",
-        "freebase_mid": "/m/06d_3",
-        "wikidata_desc": "conveyance of passengers and goods by way of wheeled vehicles running on rail tracks",
-        "wikidata_name": "rail transport",
-        "wikidata_qid": "Q3565868",
+        "context": "construction",
+        "mvs_boxable_id": 12,
+        "mvs_id": 12,
+        "mvs_name": "construction--flat--rail-track",
+        "wikidata_desc": "",
+        "wikidata_name": "",
+        "wikidata_qid": "Q57498564",
         "wordnet_gloss": "a line of track providing a runway for wheels; \"he walked along the railroad track\"",
         "wordnet_pwn30": "n04048075"
     },
@@ -5658,6 +6004,16 @@
         "wordnet_gloss": "a small two-wheeled cart for one passenger; pulled by one person",
         "wordnet_pwn30": "n03599486"
     },
+    "rider": {
+        "context": "human",
+        "mvs_id": 22,
+        "mvs_name": "human--rider--other-rider",
+        "wikidata_desc": "person who rides an animal or vehicle, either as an operator or a passenger",
+        "wikidata_name": "rider",
+        "wikidata_qid": "Q11998775",
+        "wordnet_gloss": "a traveler who actively rides a vehicle (as a bicycle or motorcycle)",
+        "wordnet_pwn30": "n10530150"
+    },
     "rifle": {
         "freebase_mid": "/m/06c54",
         "oid_boxable_leaf": "/m/06c54",
@@ -5700,12 +6056,39 @@
     "road": {
         "coco_pano_id": 149,
         "coco_pano_name": "road",
+        "context": "construction",
         "freebase_mid": "/m/06gfj",
+        "mvs_boxable_id": 13,
+        "mvs_id": 13,
+        "mvs_name": "construction--flat--road",
         "wikidata_desc": "way on land between two places",
         "wikidata_name": "road",
         "wikidata_qid": "Q34442",
         "wordnet_gloss": "an open way (generally public) for travel or transportation",
         "wordnet_pwn30": "n04096066"
+    },
+    "road_shoulder": {
+        "context": "construction",
+        "freebase_mid": "/m/02mgm6",
+        "mvs_boxable_id": 14,
+        "mvs_id": 14,
+        "mvs_name": "construction--flat--service-lane",
+        "wikidata_desc": "reserve lane by the verge of a roadway",
+        "wikidata_name": "shoulder",
+        "wikidata_qid": "Q1408712",
+        "wordnet_gloss": "a narrow edge of land (usually unpaved) along the side of a road; \"the car pulled off onto the shoulder\"",
+        "wordnet_pwn30": "n04206948"
+    },
+    "road_surface_marking": {
+        "context": "marking",
+        "freebase_mid": "/m/05j85l",
+        "mvs_boxable_id": 24,
+        "mvs_id": 24,
+        "mvs_name": "marking--general",
+        "wikidata_desc": "any kind of device or material used on a road surface to convey official information",
+        "wikidata_name": "road surface marking",
+        "wikidata_qid": "Q1392287",
+        "wordnet_pwn30": ""
     },
     "rock": {
         "coco_pano_id": 198,
@@ -5844,7 +6227,11 @@
     "sand": {
         "coco_pano_id": 154,
         "coco_pano_name": "sand",
+        "context": "nature",
         "freebase_mid": "/m/099fz",
+        "mvs_boxable_id": 26,
+        "mvs_id": 26,
+        "mvs_name": "nature--sand",
         "wikidata_desc": "granular material composed of finely divided rock and mineral particles, sand particles range in diameter from 0.063 to 2 mm (per ISO 14688)",
         "wikidata_name": "sand",
         "wikidata_qid": "Q34679",
@@ -6238,7 +6625,11 @@
     "sidewalk": {
         "coco_pano_id": 191,
         "coco_pano_name": "pavement-merged",
+        "context": "construction",
         "freebase_mid": "/m/0dnhy",
+        "mvs_boxable_id": 15,
+        "mvs_id": 15,
+        "mvs_name": "construction--flat--sidewalk",
         "wikidata_desc": "pedestrian path along the side of a road",
         "wikidata_name": "sidewalk",
         "wikidata_qid": "Q177749",
@@ -6330,7 +6721,11 @@
     "sky": {
         "coco_pano_id": 187,
         "coco_pano_name": "sky-other-merged",
+        "context": "nature",
         "freebase_mid": "/m/01bqvp",
+        "mvs_boxable_id": 27,
+        "mvs_id": 27,
+        "mvs_name": "nature--sky",
         "wikidata_desc": "everything that is above the surface of the Earth",
         "wikidata_name": "sky",
         "wikidata_qid": "Q527",
@@ -6419,7 +6814,11 @@
     "snow": {
         "coco_pano_id": 159,
         "coco_pano_name": "snow",
+        "context": "nature",
         "freebase_mid": "/m/06_dn",
+        "mvs_boxable_id": 28,
+        "mvs_id": 28,
+        "mvs_name": "nature--snow",
         "wikidata_desc": "precipitation in the form of flakes of crystalline water ice",
         "wikidata_name": "snow",
         "wikidata_qid": "Q7561",
@@ -6554,9 +6953,7 @@
     "spice_rack": {
         "freebase_mid": "/m/0h8kx63",
         "oid_name": "Spice rack",
-        "wikidata_desc": "",
-        "wikidata_name": "",
-        "wikidata_qid": "Q87584935",
+        "wikidata_qid": "",
         "wordnet_gloss": "a rack for displaying containers filled with spices",
         "wordnet_pwn30": "n04275175"
     },
@@ -6610,7 +7007,9 @@
         "oid_name": "Sports uniform",
         "wikidata_desc": "regulation clothing worn by sports teams and athletes",
         "wikidata_name": "sports uniform",
-        "wikidata_qid": "Q11345724"
+        "wikidata_qid": "Q11345724",
+        "wordnet_gloss": "clothing of distinctive design worn by members of a particular group as a means of identification",
+        "wordnet_pwn30": "n04509592"
     },
     "spring_rolls": {
         "freebase_mid": "/m/04fzqn3",
@@ -6759,7 +7158,10 @@
         "wordnet_pwn30": "n07745940"
     },
     "street_light": {
+        "context": "object",
         "freebase_mid": "/m/033rq4",
+        "mvs_id": 44,
+        "mvs_name": "object--street-light",
         "obj365_boxable_name": "Street Lights",
         "oid_boxable_leaf": "/m/033rq4",
         "oid_name": "Street light",
@@ -6779,6 +7181,16 @@
         "wordnet_gloss": "a litter for transporting people who are ill or wounded or dead; usually consists of a sheet of canvas stretched between two poles",
         "wordnet_pwn30": "n04336792"
     },
+    "striped_crosswalk": {
+        "context": "marking",
+        "freebase_mid": "/m/014v7p",
+        "mvs_id": 23,
+        "mvs_name": "marking--crosswalk-zebra",
+        "wikidata_desc": "type of pedestrian crossing",
+        "wikidata_name": "zebra crossing",
+        "wikidata_qid": "Q7328304",
+        "wordnet_pwn30": ""
+    },
     "stroller": {
         "freebase_mid": "/m/03ylns",
         "obj365_boxable_name": "Stroller",
@@ -6793,6 +7205,7 @@
         "oid_boxable_leaf": "/m/026qbn5",
         "oid_inst_leaf": "/m/026qbn5",
         "oid_name": "Studio couch",
+        "wikidata_qid": "",
         "wordnet_gloss": "convertible consisting of an upholstered couch that can be converted into a double bed",
         "wordnet_pwn30": "n04344873"
     },
@@ -6879,10 +7292,14 @@
         "wordnet_pwn30": "n04363559"
     },
     "surveillance_camera": {
+        "mvs_id": 37,
+        "mvs_name": "object--cctv-camera",
         "obj365_boxable_name": "Surveillance Camera",
         "wikidata_desc": "video or still camera used to secure an area",
         "wikidata_name": "security camera",
-        "wikidata_qid": "Q334415"
+        "wikidata_qid": "Q334415",
+        "wordnet_gloss": "a closed-circuit television system used to maintain close observation of a person or group",
+        "wordnet_pwn30": "n04365328"
     },
     "sushi": {
         "freebase_mid": "/m/07030",
@@ -6992,7 +7409,8 @@
         "obj365_boxable_name": "Table Tennis ",
         "wikidata_desc": "ball used in the game of table tennis",
         "wikidata_name": "table tennis ball",
-        "wikidata_qid": "Q2436595"
+        "wikidata_qid": "Q2436595",
+        "wordnet_pwn30": ""
     },
     "table_tennis_racket": {
         "freebase_mid": "/m/05_5p_0",
@@ -7002,7 +7420,8 @@
         "oid_name": "Table tennis racket",
         "wikidata_desc": "sports equipment",
         "wikidata_name": "table tennis racket",
-        "wikidata_qid": "Q337695"
+        "wikidata_qid": "Q337695",
+        "wordnet_pwn30": ""
     },
     "tablet_computer": {
         "freebase_mid": "/m/0bh9flk",
@@ -7013,8 +7432,8 @@
         "wikidata_desc": "mobile computer with display, circuitry and battery",
         "wikidata_name": "tablet computer",
         "wikidata_qid": "Q155972",
-        "wordnet_gloss": "a dose of medicine in the form of a small pellet",
-        "wordnet_pwn30": "n03936568"
+        "wordnet_gloss": "a portable battery-powered computer small enough to be carried in your pocket",
+        "wordnet_pwn30": "n03485407"
     },
     "tableware": {
         "freebase_mid": "/m/04brg2",
@@ -7043,8 +7462,8 @@
         "wikidata_desc": "heavy armored fighting vehicle",
         "wikidata_name": "tank",
         "wikidata_qid": "Q12876",
-        "wordnet_gloss": "a cell for violent prisoners",
-        "wordnet_pwn30": "n03102771"
+        "wordnet_gloss": "an enclosed armored military vehicle; has a cannon and moves on caterpillar treads",
+        "wordnet_pwn30": "n04389033"
     },
     "tap": {
         "freebase_mid": "/m/02jz0l",
@@ -7055,8 +7474,8 @@
         "wikidata_desc": "regulated inflow of water, for example for drinking water",
         "wikidata_name": "tap",
         "wikidata_qid": "Q656656",
-        "wordnet_gloss": "a plug for a bunghole in a cask",
-        "wordnet_pwn30": "n04390977"
+        "wordnet_gloss": "a regulator for controlling the flow of a liquid from a reservoir",
+        "wordnet_pwn30": "n03325088"
     },
     "target": {
         "freebase_mid": "/m/04_z0s",
@@ -7098,8 +7517,8 @@
         "wikidata_desc": "drink made from infusing boiling water with the leaves of the tea plant",
         "wikidata_name": "tea",
         "wikidata_qid": "Q6097",
-        "wordnet_gloss": "a light midafternoon meal of tea and sandwiches or cakes; \"an Englishman would interrupt a war to have his afternoon tea\"",
-        "wordnet_pwn30": "n07575510"
+        "wordnet_gloss": "a tropical evergreen shrub or small tree extensively cultivated in e.g. China and Japan and India; source of tea leaves; \"tea has fragrant white flowers\"",
+        "wordnet_pwn30": "n12929783"
     },
     "teapot": {
         "freebase_mid": "/m/01fh4r",
@@ -7137,15 +7556,18 @@
         "wordnet_gloss": "electronic equipment that converts sound into electrical signals that can be transmitted over distances and then converts received signals back into sounds; \"I talked to him on the telephone\"",
         "wordnet_pwn30": "n04401088"
     },
-    "television": {
-        "freebase_mid": "/m/07c52",
+    "television_set": {
+        "coco_boxable_name": "tv",
+        "coco_pano_id": 72,
+        "coco_pano_name": "tv",
+        "freebase_mid": "/m/0bx_y3w",
         "oid_boxable_leaf": "/m/07c52",
         "oid_name": "Television",
-        "wikidata_desc": "telecommunication medium for transmitting and receiving moving images",
-        "wikidata_name": "television",
-        "wikidata_qid": "Q289",
-        "wordnet_gloss": "a telecommunication system that transmits images of objects (stationary or moving) between distant points",
-        "wordnet_pwn30": "n04404412"
+        "wikidata_desc": "device that combines a tuner, display, and speakers for the purpose of viewing television",
+        "wikidata_name": "television set",
+        "wikidata_qid": "Q8075",
+        "wordnet_gloss": "an electronic device that receives television signals and displays them on a screen; \"the British call a tv set a telly\"",
+        "wordnet_pwn30": "n04405907"
     },
     "tennis_ball": {
         "freebase_mid": "/m/05ctyq",
@@ -7204,8 +7626,8 @@
         "wikidata_desc": "superfamily of arachnids",
         "wikidata_name": "Ixodoidea",
         "wikidata_qid": "Q82645",
-        "wordnet_gloss": "a light mattress",
-        "wordnet_pwn30": "n04432308"
+        "wordnet_gloss": "any of two families of small parasitic arachnids with barbed proboscis; feed on blood of warm-blooded animals",
+        "wordnet_pwn30": "n01776313"
     },
     "tie": {
         "coco_boxable_name": "tie",
@@ -7219,8 +7641,8 @@
         "wikidata_desc": "clothing item, traditionally worn by boys and men with dress shirt",
         "wikidata_name": "necktie",
         "wikidata_qid": "Q44416",
-        "wordnet_gloss": "a fastener that serves to join or connect; \"the walls are held together with metal links placed in the wet mortar during construction\"",
-        "wordnet_pwn30": "n03673971"
+        "wordnet_gloss": "neckwear consisting of a long narrow piece of material worn (mostly by men) under a collar and tied in knot at the front; \"he stood in front of the mirror tightening his necktie\"; \"he wore a vest and tie\"",
+        "wordnet_pwn30": "n03815615"
     },
     "tiger": {
         "freebase_mid": "/m/07dm6",
@@ -7239,7 +7661,9 @@
         "freebase_mid": "/m/021w6f",
         "wikidata_desc": "manufactured piece of hard-wearing material",
         "wikidata_name": "tile",
-        "wikidata_qid": "Q468402"
+        "wikidata_qid": "Q468402",
+        "wordnet_gloss": "a flat thin rectangular slab (as of fired clay or rubber or linoleum) used to cover surfaces",
+        "wordnet_pwn30": "n04435180"
     },
     "tin_can": {
         "freebase_mid": "/m/02jnhm",
@@ -7300,8 +7724,8 @@
         "wikidata_desc": "sanitation fixture",
         "wikidata_name": "toilet",
         "wikidata_qid": "Q7857",
-        "wordnet_gloss": "a room or building equipped with one or more toilets",
-        "wordnet_pwn30": "n04446276"
+        "wordnet_gloss": "a plumbing fixture for defecation and urination",
+        "wordnet_pwn30": "n04446521"
     },
     "toilet_paper": {
         "freebase_mid": "/m/09gtd",
@@ -7365,8 +7789,8 @@
         "wikidata_desc": "stick with a flaming end used as a source of light",
         "wikidata_name": "torch",
         "wikidata_qid": "Q327954",
-        "wordnet_gloss": "a burner that mixes air and gas to produce a very hot flame",
-        "wordnet_pwn30": "n02855390"
+        "wordnet_gloss": "a light usually carried in the hand; consists of some flammable substance",
+        "wordnet_pwn30": "n04456115"
     },
     "tortoise": {
         "freebase_mid": "/m/011k07",
@@ -7410,21 +7834,25 @@
         "wikidata_desc": "thing to be played with",
         "wikidata_name": "toy",
         "wikidata_qid": "Q11422",
-        "wordnet_gloss": "a copy that reproduces a person or thing in greatly reduced size",
-        "wordnet_pwn30": "n03769235"
+        "wordnet_gloss": "an artifact designed to be played with",
+        "wordnet_pwn30": "n03964744"
     },
     "traffic_cone": {
         "freebase_mid": "/m/03sy7v",
         "obj365_boxable_name": "Traffic cone",
         "wikidata_desc": "Traffick Cone",
         "wikidata_name": "traffic cone",
-        "wikidata_qid": "Q694547"
+        "wikidata_qid": "Q694547",
+        "wordnet_pwn30": ""
     },
     "traffic_light": {
         "coco_boxable_name": "traffic light",
         "coco_pano_id": 10,
         "coco_pano_name": "traffic light",
+        "context": "object",
         "freebase_mid": "/m/015qff",
+        "mvs_id": 48,
+        "mvs_name": "object--traffic-light",
         "obj365_boxable_name": "Traffic Light",
         "oid_boxable_leaf": "/m/015qff",
         "oid_inst_leaf": "/m/015qff",
@@ -7435,13 +7863,40 @@
         "wordnet_gloss": "a visual signal to control the flow of traffic at intersections",
         "wordnet_pwn30": "n06874185"
     },
-    "traffic_sign": {
+    "traffic_sign_backside": {
+        "context": "object",
+        "mvs_id": 49,
+        "mvs_name": "object--traffic-sign--back",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
+    "traffic_sign_frame": {
+        "context": "object",
+        "mvs_id": 46,
+        "mvs_name": "object--support--traffic-sign-frame",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
+    "traffic_sign_front": {
+        "context": "object",
         "freebase_mid": "/m/01mqdt",
+        "mvs_id": 50,
+        "mvs_name": "object--traffic-sign--front",
         "obj365_boxable_name": "Traffic Sign",
         "oid_name": "Traffic sign",
         "wikidata_desc": "plate with instructions (warning, prohibitory, mandatory, ...) used to control traffic on the road",
         "wikidata_name": "traffic sign",
-        "wikidata_qid": "Q170285"
+        "wikidata_qid": "Q170285",
+        "wordnet_pwn30": ""
+    },
+    "trailer": {
+        "mvs_id": 60,
+        "mvs_name": "object--vehicle--trailer",
+        "wikidata_desc": "trailer",
+        "wikidata_name": "Trailer",
+        "wikidata_qid": "Q7832787",
+        "wordnet_gloss": "a wheeled vehicle that can be pulled by a car or truck and is equipped for occupancy",
+        "wordnet_pwn30": "n04467099"
     },
     "train": {
         "coco_boxable_name": "train",
@@ -7449,6 +7904,9 @@
         "coco_pano_name": "train",
         "context": "rail",
         "freebase_mid": "/m/07jdr",
+        "mvs_boxable_id": 58,
+        "mvs_id": 58,
+        "mvs_name": "object--vehicle--on-rails",
         "obj365_boxable_name": "Train",
         "oid_boxable_leaf": "/m/07jdr",
         "oid_inst_leaf": "/m/07jdr",
@@ -7465,7 +7923,9 @@
         "oid_name": "Training bench",
         "wikidata_desc": "weight training apparatus",
         "wikidata_name": "bench",
-        "wikidata_qid": "Q1422097"
+        "wikidata_qid": "Q1422097",
+        "wordnet_gloss": "a bench on which a weightlifter lies to do exercises",
+        "wordnet_pwn30": "n03360622"
     },
     "treadmill": {
         "freebase_mid": "/m/030610",
@@ -7476,7 +7936,7 @@
         "wikidata_name": "treadmill",
         "wikidata_qid": "Q839144",
         "wordnet_gloss": "a mill that is powered by men or animals walking on a circular belt or climbing steps",
-        "wordnet_pwn30": "n04477219"
+        "wordnet_pwn30": "n04477387"
     },
     "tree": {
         "coco_pano_id": 184,
@@ -7551,7 +8011,10 @@
         "coco_boxable_name": "truck",
         "coco_pano_id": 8,
         "coco_pano_name": "truck",
+        "context": "object",
         "freebase_mid": "/m/07r04",
+        "mvs_id": 61,
+        "mvs_name": "object--vehicle--truck",
         "obj365_boxable_name": "Truck",
         "oid_boxable_leaf": "/m/07r04",
         "oid_inst_leaf": "/m/07r04",
@@ -7559,8 +8022,17 @@
         "wikidata_desc": "freight motor vehicle",
         "wikidata_name": "truck",
         "wikidata_qid": "Q43193",
-        "wordnet_gloss": "a handcart that has a frame with two low wheels and a ledge at the bottom and handles at the top; used to move crates or other heavy objects",
-        "wordnet_pwn30": "n03490119"
+        "wordnet_gloss": "an automotive vehicle suitable for hauling",
+        "wordnet_pwn30": "n04490091"
+    },
+    "trucking_rig": {
+        "freebase_mid": "/m/078my",
+        "obj365_boxable_name": "Heavy Truck",
+        "wikidata_desc": "combination of a tractor unit and one or more semi-trailers to carry freight",
+        "wikidata_name": "semi-trailer truck",
+        "wikidata_qid": "Q1936841",
+        "wordnet_gloss": "a truck consisting of a tractor and trailer together",
+        "wordnet_pwn30": "n04467665"
     },
     "trumpet": {
         "freebase_mid": "/m/07gql",
@@ -7581,6 +8053,18 @@
         "wordnet_gloss": "the lowest brass wind instrument",
         "wordnet_pwn30": "n02804252"
     },
+    "tunnel": {
+        "context": "construction",
+        "freebase_mid": "/m/0158vt",
+        "mvs_boxable_id": 18,
+        "mvs_id": 18,
+        "mvs_name": "construction--structure--tunnel",
+        "wikidata_desc": "underground passage",
+        "wikidata_name": "tunnel",
+        "wikidata_qid": "Q44377",
+        "wordnet_gloss": "a passageway through or under something, usually underground (especially one for trains or cars); \"the tunnel reduced congestion at that intersection\"",
+        "wordnet_pwn30": "n04497962"
+    },
     "turkey": {
         "freebase_mid": "/m/0jly1",
         "oid_boxable_leaf": "/m/0jly1",
@@ -7599,15 +8083,7 @@
         "wikidata_name": "turtle",
         "wikidata_qid": "Q223044",
         "wordnet_gloss": "a sweater or jersey with a high close-fitting collar",
-        "wordnet_pwn30": "n04502197"
-    },
-    "tv": {
-        "coco_boxable_name": "tv",
-        "coco_pano_id": 72,
-        "coco_pano_name": "tv",
-        "wikidata_qid": "Q80752",
-        "wordnet_gloss": "an electronic device that receives television signals and displays them on a screen; \"the British call a tv set a telly\"",
-        "wordnet_pwn30": "n04405907"
+        "wordnet_pwn30": "n01662784"
     },
     "umbrella": {
         "coco_boxable_name": "umbrella",
@@ -7632,6 +8108,15 @@
         "wordnet_gloss": "a vehicle with a single wheel that is driven by pedals",
         "wordnet_pwn30": "n04509417"
     },
+    "unlabeled": {
+        "context": "void",
+        "mvs_id": 65,
+        "mvs_name": "void--unlabeled",
+        "wikidata_desc": "entity whose identity is not known",
+        "wikidata_name": "unknown",
+        "wikidata_qid": "Q24238356",
+        "wordnet_pwn30": "a01379844"
+    },
     "urinal": {
         "freebase_mid": "/m/033qwb",
         "obj365_boxable_name": "Urinal",
@@ -7640,6 +8125,16 @@
         "wikidata_qid": "Q152285",
         "wordnet_gloss": "a plumbing fixture (usually attached to the wall) used by men to urinate",
         "wordnet_pwn30": "n04515991"
+    },
+    "utility_pole": {
+        "context": "object",
+        "freebase_mid": "/m/04stwn",
+        "mvs_id": 47,
+        "mvs_name": "object--support--utility-pole",
+        "wikidata_desc": "column or post used by public utilities to support overhead electrical cables/wires, and/or communication cables, and related equipment",
+        "wikidata_name": "utility pole",
+        "wikidata_qid": "Q1144084",
+        "wordnet_pwn30": ""
     },
     "van": {
         "freebase_mid": "/m/0h2r6",
@@ -7677,6 +8172,18 @@
         "wikidata_qid": "Q11004",
         "wordnet_gloss": "edible seeds or roots or stems or leaves or bulbs or tubers or nonsweet fruits of any of numerous herbaceous plant",
         "wordnet_pwn30": "n07707451"
+    },
+    "vegetation": {
+        "context": "nature",
+        "freebase_mid": "/m/01fnns",
+        "mvs_boxable_id": 30,
+        "mvs_id": 30,
+        "mvs_name": "nature--vegetation",
+        "wikidata_desc": "total of plant formations and plant communities",
+        "wikidata_name": "vegetation",
+        "wikidata_qid": "Q187997",
+        "wordnet_gloss": "all the plant life in a particular region or period; \"Pleistocene vegetation\"; \"the flora of southern California\"; \"the botany of China\"",
+        "wordnet_pwn30": "n08436759"
     },
     "vehicle": {
         "freebase_mid": "/m/07yv9",
@@ -7734,7 +8241,11 @@
     "wall": {
         "coco_pano_id": 199,
         "coco_pano_name": "wall-other-merged",
+        "context": "construction",
         "freebase_mid": "/m/09qqq",
+        "mvs_boxable_id": 6,
+        "mvs_id": 6,
+        "mvs_name": "construction--barrier--wall",
         "wikidata_desc": "vertical structure, usually solid, that defines and sometimes protects an area",
         "wikidata_name": "wall",
         "wikidata_qid": "Q42948",
@@ -7774,6 +8285,8 @@
     },
     "waste_container": {
         "freebase_mid": "/m/0bjyj5",
+        "mvs_id": 51,
+        "mvs_name": "object--trash-can",
         "obj365_boxable_name": "Trash bin Can",
         "oid_boxable_leaf": "/m/0bjyj5",
         "oid_inst_leaf": "/m/0bjyj5",
@@ -7799,8 +8312,11 @@
     "water": {
         "coco_pano_id": 178,
         "coco_pano_name": "water-other",
-        "context": "surface",
+        "context": "nature",
         "freebase_mid": "/m/0838f",
+        "mvs_boxable_id": 31,
+        "mvs_id": 31,
+        "mvs_name": "nature--water",
         "wikidata_desc": "chemical compound",
         "wikidata_name": "water",
         "wikidata_qid": "Q283",
@@ -7876,8 +8392,8 @@
         "wikidata_desc": "kitchen utensil used for mixing and/or whipping ingredients",
         "wikidata_name": "whisk",
         "wikidata_qid": "Q263057",
-        "wordnet_gloss": "a small short-handled broom used to brush clothes",
-        "wordnet_pwn30": "n04578801"
+        "wordnet_gloss": "a mixer incorporating a coil of wires; used for whipping eggs or cream",
+        "wordnet_pwn30": "n04578934"
     },
     "whiteboard": {
         "freebase_mid": "/m/02d9qx",
@@ -7898,8 +8414,8 @@
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Salix",
         "wikidata_qid": "Q36050",
-        "wordnet_gloss": "a textile machine having a system of revolving spikes for opening and cleaning raw textile fibers",
-        "wordnet_pwn30": "n04584794"
+        "wordnet_gloss": "any of numerous deciduous trees and shrubs of the genus Salix",
+        "wordnet_pwn30": "n12724942"
     },
     "window": {
         "coco_pano_id": 181,
@@ -7954,7 +8470,8 @@
         "freebase_mid": "/m/0271qf7",
         "oid_name": "Wine rack",
         "wikidata_name": "Wine rack",
-        "wikidata_qid": "Q2941029"
+        "wikidata_qid": "Q2941029",
+        "wordnet_pwn30": ""
     },
     "winter_melon": {
         "freebase_mid": "/m/02cvgx",
@@ -7986,8 +8503,8 @@
         "wikidata_desc": "female adult human",
         "wikidata_name": "woman",
         "wikidata_qid": "Q467",
-        "wordnet_gloss": "women as a class; \"it's an insult to American womanhood\"; \"woman is the glory of creation\"; \"the fair sex gathered on the veranda\"",
-        "wordnet_pwn30": "n08477634"
+        "wordnet_gloss": "an adult female person (as opposed to a man); \"the woman kept house while the man hunted\"",
+        "wordnet_pwn30": "n10787470"
     },
     "wood-burning_stove": {
         "freebase_mid": "/m/04169hn",
@@ -7995,17 +8512,23 @@
         "oid_name": "Wood-burning stove",
         "wikidata_desc": "type of stove",
         "wikidata_name": "wood-burning stove",
-        "wikidata_qid": "Q1370219"
+        "wikidata_qid": "Q1370219",
+        "wordnet_gloss": "a stove for cooking (especially a wood- or coal-burning kitchen stove)",
+        "wordnet_pwn30": "n03102371"
     },
     "wooden_floor": {
         "coco_pano_id": 118,
         "coco_pano_name": "floor-wood",
+        "wikidata_desc": "ornate wooden floor design",
+        "wikidata_name": "parquetry",
+        "wikidata_qid": "Q838828",
         "wordnet_gloss": "a floor made of parquetry",
         "wordnet_pwn30": "n03892178"
     },
     "wooden_wall": {
         "coco_pano_id": 177,
         "coco_pano_name": "wall-wood",
+        "wikidata_qid": "",
         "wordnet_gloss": "paneling that forms part of a wall",
         "wordnet_pwn30": "n04548503"
     },
@@ -8026,8 +8549,8 @@
         "wikidata_desc": "animal that typically has a long tube-like body and no legs",
         "wikidata_name": "worm",
         "wikidata_qid": "Q47253",
-        "wordnet_gloss": "screw thread on a gear with the teeth of a worm wheel or rack",
-        "wordnet_pwn30": "n04604513"
+        "wordnet_gloss": "any of numerous relatively small elongated soft-bodied animals especially of the phyla Annelida and Chaetognatha and Nematoda and Nemertea and Platyhelminthes; also many insect larvae",
+        "wordnet_pwn30": "n01922303"
     },
     "wrench": {
         "freebase_mid": "/m/01j5ks",

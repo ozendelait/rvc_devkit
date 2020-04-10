@@ -164,7 +164,7 @@ def get_wikidata(str0, context = None, retries = 0):
         if best_b is None:
             best_b = b
         else:
-            prev_has_wn3 = 'WN3' in best_b
+            prev_has_wn3 = 'WN3' in best_b and best_b['WN3']['value'].find('/wn30/') > 0
         if not 'itemDescription' in b:
             continue
         if not context is None:
@@ -181,7 +181,7 @@ def get_wikidata(str0, context = None, retries = 0):
         if curr_q < min_q: #smaller q usually stands for a more general entry (vs. an instance)
             best_b = b
             break
-        has_wn3 = 'WN3' in b
+        has_wn3 = 'WN3' in b and b['WN3']['value'].find('/wn30/') > 0
         has_frn = 'FREEN' in b
         if has_wn3 and has_frn:
             best_b = b
@@ -271,7 +271,8 @@ def wikidata_from_name(name, context = None):
         d0 = get_wikidata(sparql_query1 % label_check, context=context, retries=max_retries_wikidata)
     return d0
 
-unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name','coco_pano_id']
+unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
+                    'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_name','cityscapes_name']
 check_dubl = {p:{} for p in unique_id_params}
 
 def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True):
@@ -290,7 +291,7 @@ def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--append_file', type=str, default="./label_definitions/objects365_wordnet_mapping.json",
+    parser.add_argument('--append_file', type=str, default="./label_definitions/mapillary-config.json",
                         help='Path to csv or json file containing additional mappings') #./label_definitions/panoptic_coco_categories.json
     parser.add_argument('--input', type=str, default="joint_mapping.json",
                         help="Input json file path, set to empty string to generate anew")
@@ -353,6 +354,45 @@ def main(argv=sys.argv[1:]):
                 if "wordnet_pwn30" in vals:
                     trg_entry["wordnet_pwn30"] = vals["wordnet_pwn30"]
                 trg_entry['obj365_boxable_name'] = key
+        elif isinstance(appendf, dict) and "labels" in appendf and "id_prefix" in appendf:
+            #mapillary-style json
+            id_param = appendf["id_prefix"]+"_id"
+            name_param = appendf["id_prefix"]+"_name"
+            id_param_eval = appendf["id_prefix_eval"] + "_id"
+            possible_cat = None
+            is_inst = ("boxable" in id_param_eval or "inst" in id_param_eval)
+            for idx0, vals in enumerate(appendf["labels"]):
+                if is_inst and vals.get('instances', False):
+                    continue # quick hack to add all instance classes as boxables / inst
+                if vals['name'] in check_dubl[name_param]:
+                    key = check_dubl[name_param][vals['name']]
+                else:
+                    key = vals["readable"]
+                    possible_cat = None
+                    context = vals["readable"].split('(')
+                    if len(context) > 1 and context[1][-1] == ')':
+                        key = context[0].replace('_', '')
+                        possible_cat = context[1][:-1]
+                    pos_dd = vals['name'].find('--')
+                    if pos_dd > 0:
+                        possible_cat = vals['name'][:pos_dd]
+                    key = unify_namings(key)
+
+                if not key in joined_label_space:
+                    print("Adding: "+key+ " for ", vals)
+                    joined_label_space[key] = {}
+                trg_entry = joined_label_space[key]
+                #uniqid = vals['name'] if is_inst else vals['name']
+                vals_add = {name_param:vals['name']}
+                if not is_inst:
+                    vals_add[id_param] = idx0
+                if vals.get("evaluate", True):
+                    vals_add[id_param_eval] = idx0
+                if not possible_cat is None:
+                    vals_add['context'] = possible_cat
+                if not check_for_dublicates(key, vals_add, trg_entry):
+                    continue
+                trg_entry.update(vals_add)
         elif isinstance(appendf, list) and isinstance(appendf[0], dict) and "supercategory" in appendf[0]:
             # coco panoptic file
             coco_pano = {
@@ -363,8 +403,11 @@ def main(argv=sys.argv[1:]):
     #automatically adds qids
     for key, vals in joined_label_space.items():
         if 'wikidata_qid' in vals:
-            if len('wikidata_qid') > 0 and not 'wikidata_name' in vals:
-                vals.update(wikidata_from_qid(vals['wikidata_qid']))
+            if len(vals['wikidata_qid']) > 0 and not 'wikidata_name' in vals:
+                w1 = wikidata_from_qid(vals['wikidata_qid'])
+                if not check_for_dublicates(key, w1, vals):
+                    continue
+                vals.update(w1)
             continue
         n_qid = wikidata_from_name(key, context=vals.get('context','').split('_'))
         if len(n_qid) == 0:
@@ -420,7 +463,7 @@ def main(argv=sys.argv[1:]):
     
     print("Found mappings for %i entries and %i have qids of %i" % (cnt_both , cnt_qid, len(joined_label_space)))
     
-    with open(args.output, 'w') as ofile:
+    with open(args.output, 'w', newline='\n') as ofile:
         json.dump(joined_label_space, ofile, sort_keys=True, indent=4)
         
     return 0
