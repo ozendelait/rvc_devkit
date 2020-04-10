@@ -287,7 +287,8 @@
         "oid_name": "Balloon",
         "wikidata_desc": "inflatable flexible bag filled with gas",
         "wikidata_name": "balloon",
-        "wikidata_qid": "Q9706"
+        "wikidata_qid": "Q9706",
+        "wordnet_pwn30": ""
     },
     "banana": {
         "coco_boxable_name": "banana",
@@ -445,9 +446,9 @@
     "bathroom_accessory": {
         "freebase_mid": "/m/0h8nr_l",
         "oid_name": "Bathroom accessory",
-        "wikidata_desc": "bathroom accessory",
-        "wikidata_name": "Shower and bathtub curtains",
-        "wikidata_qid": "Q839818"
+        "wikidata_qid": "",
+        "wordnet_gloss": "any fixture in a bathroom",
+        "wordnet_pwn30": "n02808097"
     },
     "bathroom_cabinet": {
         "context": "toiletries",
@@ -618,7 +619,9 @@
         "oid_name": "Bicycle helmet",
         "wikidata_desc": "helmet for people on bicycles intended to reduce injuries in the event of a collision or crash",
         "wikidata_name": "bicycle helmet",
-        "wikidata_qid": "Q1127483"
+        "wikidata_qid": "Q1127483",
+        "wordnet_gloss": "a padded helmet worn by people riding bicycles or motorcycles; protects the head in case of accidents",
+        "wordnet_pwn30": "n03127747"
     },
     "bicycle_wheel": {
         "freebase_mid": "/m/01bqk0",
@@ -733,7 +736,9 @@
         "freebase_mid": "/m/0g9_drw",
         "obj365_boxable_name": "Board Eraser",
         "wikidata_name": "Chalkboard eraser",
-        "wikidata_qid": "Q2553927"
+        "wikidata_qid": "Q2553927",
+        "wordnet_gloss": "an eraser that removes chalk marks from blackboard",
+        "wordnet_pwn30": "n02846619"
     },
     "boat": {
         "coco_boxable_name": "boat",
@@ -929,9 +934,9 @@
     "brickwall": {
         "coco_pano_id": 171,
         "coco_pano_name": "wall-brick",
-        "wikidata_desc": "",
-        "wikidata_name": "",
-        "wikidata_qid": "Q29731012"
+        "wikidata_qid": "Q29731012",
+        "wordnet_gloss": "masonry done with bricks and mortar",
+        "wordnet_pwn30": "n02898369"
     },
     "bridge": {
         "coco_pano_id": 95,
@@ -977,7 +982,9 @@
         "oid_name": "Bronze sculpture",
         "wikidata_desc": "sculpture cast in bronze",
         "wikidata_name": "bronze sculpture",
-        "wikidata_qid": "Q928357"
+        "wikidata_qid": "Q928357",
+        "wordnet_gloss": "a sculpture made of bronze",
+        "wordnet_pwn30": "n02906175"
     },
     "broom": {
         "obj365_boxable_name": "Broom",
@@ -1124,7 +1131,8 @@
         "oid_name": "Cake stand",
         "wikidata_desc": "",
         "wikidata_name": "cake stand",
-        "wikidata_qid": "Q11813459"
+        "wikidata_qid": "Q11813459",
+        "wordnet_pwn30": ""
     },
     "calculator": {
         "freebase_mid": "/m/024d2",
@@ -1369,7 +1377,8 @@
         "oid_name": "Ceiling fan",
         "wikidata_desc": "type of fan appliance permanently mounted to the ceiling horizontally",
         "wikidata_name": "ceiling fan",
-        "wikidata_qid": "Q1181944"
+        "wikidata_qid": "Q1181944",
+        "wordnet_pwn30": ""
     },
     "cello": {
         "freebase_mid": "/m/01xqw",
@@ -1687,13 +1696,6 @@
         "wordnet_gloss": "a digitally encoded recording on an optical disk that is smaller than a phonograph record; played back by a laser",
         "wordnet_pwn30": "n03079230"
     },
-    "computer_case": {
-        "freebase_mid": "/m/049d8b",
-        "obj365_boxable_name": "Computer Box",
-        "wikidata_desc": "enclosure that contains most of the components of a computer",
-        "wikidata_name": "computer case",
-        "wikidata_qid": "Q3975"
-    },
     "computer_keyboard": {
         "coco_boxable_name": "keyboard",
         "coco_pano_id": 76,
@@ -1772,9 +1774,9 @@
     "cooking_spray": {
         "freebase_mid": "/m/07mcwg",
         "oid_name": "Cooking spray",
-        "wikidata_desc": "",
         "wikidata_name": "Cooking spray",
-        "wikidata_qid": "Q5167151"
+        "wikidata_qid": "Q5167151",
+        "wordnet_pwn30": ""
     },
     "corded_phone": {
         "freebase_mid": "/m/0h8lkj8",
@@ -1783,7 +1785,9 @@
         "oid_name": "Corded phone",
         "wikidata_desc": "telephone with a telephone wire; phone that uses a metal wire or fibre optic telephone line for transmission as distinguished from a mobile cellular line, which uses radio waves for transmission",
         "wikidata_name": "landline telephone",
-        "wikidata_qid": "Q738621"
+        "wikidata_qid": "Q738621",
+        "wordnet_gloss": "a telephone set that sits on a desk or table",
+        "wordnet_pwn30": "n03179910"
     },
     "corn": {
         "freebase_mid": "/m/0mgg8",
@@ -1808,7 +1812,9 @@
         "obj365_boxable_name": "Cosmetics Mirror",
         "wikidata_desc": "portable case for makeup or facepowder, usually with a mirror in its lid",
         "wikidata_name": "compact",
-        "wikidata_qid": "Q3400197"
+        "wikidata_qid": "Q3400197",
+        "wordnet_gloss": "a small cosmetics case with a mirror; to be carried in a woman's purse",
+        "wordnet_pwn30": "n03078995"
     },
     "couch": {
         "coco_boxable_name": "couch",
@@ -1932,7 +1938,8 @@
         "obj365_boxable_name": "Crosswalk Sign",
         "wikidata_desc": "",
         "wikidata_name": "Crossing signs",
-        "wikidata_qid": "Q21159411"
+        "wikidata_qid": "Q21159411",
+        "wordnet_pwn30": ""
     },
     "crown": {
         "freebase_mid": "/m/0nl46",
@@ -2078,6 +2085,15 @@
         "wordnet_gloss": "a piece of furniture with a writing surface and usually drawers or other compartments",
         "wordnet_pwn30": "n03179701"
     },
+    "desktop_computer": {
+        "freebase_mid": "/m/0dvvc",
+        "obj365_boxable_name": "Computer Box",
+        "wikidata_desc": "personal computer=null in a form intended for regular use at a single location desk/table",
+        "wikidata_name": "desktop computer",
+        "wikidata_qid": "Q56155",
+        "wordnet_gloss": "a personal computer small enough to fit conveniently in an individual workspace",
+        "wordnet_pwn30": "n03180011"
+    },
     "dessert": {
         "freebase_mid": "/m/0270h",
         "obj365_boxable_name": "Dessert",
@@ -2184,7 +2200,8 @@
         "oid_name": "Dog bed",
         "wikidata_desc": "bed for dogs",
         "wikidata_name": "dog bed",
-        "wikidata_qid": "Q54502633"
+        "wikidata_qid": "Q54502633",
+        "wordnet_pwn30": ""
     },
     "doll": {
         "freebase_mid": "/m/0167gd",
@@ -2434,7 +2451,10 @@
         "wordnet_pwn30": "n03240140"
     },
     "electric_fan": {
+        "freebase_mid": "/m/02x984l",
         "obj365_boxable_name": "Fan",
+        "oid_boxable_leaf": "/m/02x984l",
+        "oid_name": "Mechanical fan",
         "wikidata_desc": "machine powered by electricity used to create airflow",
         "wikidata_name": "electric fan",
         "wikidata_qid": "Q25841836",
@@ -2564,7 +2584,9 @@
         "oid_name": "Fashion accessory",
         "wikidata_desc": "item which is used to contribute to the wearer's outfit",
         "wikidata_name": "costume accessory",
-        "wikidata_qid": "Q1065579"
+        "wikidata_qid": "Q1065579",
+        "wordnet_gloss": "clothing that is worn or carried, but not part of your main clothing",
+        "wordnet_pwn30": "n02671780"
     },
     "fast_food": {
         "freebase_mid": "/m/01_bhs",
@@ -3276,7 +3298,8 @@
         "oid_name": "Hand dryer",
         "wikidata_desc": "electric hand-drying machine",
         "wikidata_name": "hand dryer",
-        "wikidata_qid": "Q535923"
+        "wikidata_qid": "Q535923",
+        "wordnet_pwn30": ""
     },
     "handbag": {
         "coco_boxable_name": "handbag",
@@ -3443,14 +3466,16 @@
         "oid_name": "High heels",
         "wikidata_desc": "footwear that raises the heel of the wearer's foot significantly higher than the toes",
         "wikidata_name": "high heels",
-        "wikidata_qid": "Q1057303"
+        "wikidata_qid": "Q1057303",
+        "wordnet_pwn30": ""
     },
     "hiking_equipment": {
         "freebase_mid": "/m/0268lbt",
         "oid_name": "Hiking equipment",
         "wikidata_desc": "equipment taken on outdoor walking trips",
         "wikidata_name": "Hiking equipment",
-        "wikidata_qid": "Q16000111"
+        "wikidata_qid": "Q16000111",
+        "wordnet_pwn30": ""
     },
     "hippopotamus": {
         "freebase_mid": "/m/09f20",
@@ -3547,6 +3572,15 @@
         "wordnet_gloss": "a frankfurter served hot on a bun",
         "wordnet_pwn30": "n07697537"
     },
+    "hot_tub": {
+        "freebase_mid": "/m/065h6l",
+        "oid_name": "Jacuzzi",
+        "wikidata_desc": "large tub or small pool",
+        "wikidata_name": "hot tub",
+        "wikidata_qid": "Q1936429",
+        "wordnet_gloss": "a very large tub (large enough for more than one bather) filled with hot water",
+        "wordnet_pwn30": "n03543603"
+    },
     "house": {
         "coco_pano_id": 128,
         "coco_pano_name": "house",
@@ -3563,14 +3597,16 @@
         "obj365_boxable_name": "Hoverboard",
         "wikidata_desc": "battery-powered electric vehicle",
         "wikidata_name": "self-balancing scooter",
-        "wikidata_qid": "Q21161871"
+        "wikidata_qid": "Q21161871",
+        "wordnet_pwn30": ""
     },
     "humidifier": {
         "freebase_mid": "/m/04lvq_",
         "oid_name": "Humidifier",
         "wikidata_desc": "device that increases humidity",
         "wikidata_name": "humidifier",
-        "wikidata_qid": "Q1073283"
+        "wikidata_qid": "Q1073283",
+        "wordnet_pwn30": ""
     },
     "hurdle": {
         "obj365_boxable_name": "Hurdle",
@@ -3596,7 +3632,8 @@
         "oid_name": "Indoor rower",
         "wikidata_desc": "sports equipment",
         "wikidata_name": "indoor rower",
-        "wikidata_qid": "Q1542861"
+        "wikidata_qid": "Q1542861",
+        "wordnet_pwn30": ""
     },
     "induction_stove": {
         "freebase_mid": "/m/04mlf2",
@@ -3639,7 +3676,8 @@
         "oid_name": "Ipod",
         "wikidata_desc": "line of portable media players",
         "wikidata_name": "iPod",
-        "wikidata_qid": "Q9479"
+        "wikidata_qid": "Q9479",
+        "wordnet_pwn30": ""
     },
     "isopod": {
         "freebase_mid": "/m/035vxb",
@@ -3659,13 +3697,6 @@
         "wikidata_qid": "Q849964",
         "wordnet_gloss": "(dentistry) dental appliance consisting of an artificial crown for a broken or decayed tooth; \"tomorrow my dentist will fit me for a crown\"",
         "wordnet_pwn30": "n03139089"
-    },
-    "jacuzzi": {
-        "freebase_mid": "/m/065h6l",
-        "oid_name": "Jacuzzi",
-        "wikidata_desc": "large tub or small pool",
-        "wikidata_name": "hot tub",
-        "wikidata_qid": "Q1936429"
     },
     "jaguar": {
         "context": "animal",
@@ -3789,9 +3820,10 @@
         "oid_boxable_leaf": "/m/058qzx",
         "oid_inst_leaf": "/m/058qzx",
         "oid_name": "Kitchen knife",
-        "wikidata_desc": "kitchen knife",
-        "wikidata_name": "Santoku",
-        "wikidata_qid": "Q23764"
+        "wikidata_desc": "any knife that is intended to be used in food preparation",
+        "wikidata_name": "kitchen knife",
+        "wikidata_qid": "Q599312",
+        "wordnet_pwn30": ""
     },
     "kitchen_utensil": {
         "freebase_mid": "/m/03hlz0c",
@@ -3905,7 +3937,8 @@
         "oid_name": "Land vehicle",
         "wikidata_desc": "vehicle mainly meant to move on land",
         "wikidata_name": "land vehicle",
-        "wikidata_qid": "Q1301433"
+        "wikidata_qid": "Q1301433",
+        "wordnet_pwn30": ""
     },
     "lantern": {
         "freebase_mid": "/m/01jfsr",
@@ -4224,7 +4257,8 @@
         "oid_name": "Marine mammal",
         "wikidata_desc": "Mammals that live in the ocean",
         "wikidata_name": "marine mammal",
-        "wikidata_qid": "Q382441"
+        "wikidata_qid": "Q382441",
+        "wordnet_pwn30": ""
     },
     "marker": {
         "freebase_mid": "/m/02fbz6",
@@ -4264,14 +4298,6 @@
         "wordnet_gloss": "ground meat formed into a ball and fried or simmered in broth",
         "wordnet_pwn30": "n07871436"
     },
-    "mechanical_fan": {
-        "freebase_mid": "/m/02x984l",
-        "oid_boxable_leaf": "/m/02x984l",
-        "oid_name": "Mechanical fan",
-        "wikidata_desc": "machine with spinning blades used to create airflow",
-        "wikidata_name": "mechanical fan",
-        "wikidata_qid": "Q6498398"
-    },
     "medal": {
         "freebase_mid": "/m/020yd1",
         "obj365_boxable_name": "Medal",
@@ -4286,7 +4312,8 @@
         "oid_name": "Medical equipment",
         "wikidata_desc": "any instrument, apparatus, implant, in vitro reagent, or similar or related article used for diagnostic and/or therapeutic purposes",
         "wikidata_name": "medical device",
-        "wikidata_qid": "Q6554101"
+        "wikidata_qid": "Q6554101",
+        "wordnet_pwn30": ""
     },
     "megaphone": {
         "freebase_mid": "/m/01f0r6",
@@ -4408,7 +4435,9 @@
         "obj365_boxable_name": "Moniter/TV",
         "wikidata_desc": "electrically controlled display with no moving parts",
         "wikidata_name": "electronic visual display",
-        "wikidata_qid": "Q6021804"
+        "wikidata_qid": "Q6021804",
+        "wordnet_gloss": "an electronic device that represents information in visual form",
+        "wordnet_pwn30": "n03211117"
     },
     "monkey": {
         "freebase_mid": "/m/08pbxl",
@@ -4666,7 +4695,8 @@
         "oid_name": "Office supplies",
         "wikidata_desc": "item regularly used in offices by businesses and other organizations",
         "wikidata_name": "office supply",
-        "wikidata_qid": "Q2383811"
+        "wikidata_qid": "Q2383811",
+        "wordnet_pwn30": ""
     },
     "okra": {
         "freebase_mid": "/m/025s18p",
@@ -5039,7 +5069,9 @@
         "oid_boxable_leaf": "/m/054xkw",
         "oid_name": "Personal flotation device",
         "wikidata_name": "personal flotation device",
-        "wikidata_qid": "Q1262971"
+        "wikidata_qid": "Q1262971",
+        "wordnet_gloss": "rescue equipment consisting of a buoyant belt or jacket to keep a person from drowning",
+        "wordnet_pwn30": "n03663531"
     },
     "piano": {
         "freebase_mid": "/m/05r5c",
@@ -5067,7 +5099,8 @@
         "oid_boxable_leaf": "/m/07kng9",
         "oid_name": "Picnic basket",
         "wikidata_name": "picnic basket",
-        "wikidata_qid": "Q2835904"
+        "wikidata_qid": "Q2835904",
+        "wordnet_pwn30": ""
     },
     "picture_frame": {
         "freebase_mid": "/m/06z37_",
@@ -6626,7 +6659,9 @@
         "oid_name": "Sports uniform",
         "wikidata_desc": "regulation clothing worn by sports teams and athletes",
         "wikidata_name": "sports uniform",
-        "wikidata_qid": "Q11345724"
+        "wikidata_qid": "Q11345724",
+        "wordnet_gloss": "clothing of distinctive design worn by members of a particular group as a means of identification",
+        "wordnet_pwn30": "n04509592"
     },
     "spring_rolls": {
         "freebase_mid": "/m/04fzqn3",
@@ -6899,7 +6934,9 @@
         "obj365_boxable_name": "Surveillance Camera",
         "wikidata_desc": "video or still camera used to secure an area",
         "wikidata_name": "security camera",
-        "wikidata_qid": "Q334415"
+        "wikidata_qid": "Q334415",
+        "wordnet_gloss": "a closed-circuit television system used to maintain close observation of a person or group",
+        "wordnet_pwn30": "n04365328"
     },
     "sushi": {
         "freebase_mid": "/m/07030",
@@ -7009,7 +7046,8 @@
         "obj365_boxable_name": "Table Tennis ",
         "wikidata_desc": "ball used in the game of table tennis",
         "wikidata_name": "table tennis ball",
-        "wikidata_qid": "Q2436595"
+        "wikidata_qid": "Q2436595",
+        "wordnet_pwn30": ""
     },
     "table_tennis_racket": {
         "freebase_mid": "/m/05_5p_0",
@@ -7019,7 +7057,8 @@
         "oid_name": "Table tennis racket",
         "wikidata_desc": "sports equipment",
         "wikidata_name": "table tennis racket",
-        "wikidata_qid": "Q337695"
+        "wikidata_qid": "Q337695",
+        "wordnet_pwn30": ""
     },
     "tablet_computer": {
         "freebase_mid": "/m/0bh9flk",
@@ -7030,7 +7069,8 @@
         "wikidata_desc": "mobile computer with display, circuitry and battery",
         "wikidata_name": "tablet computer",
         "wikidata_qid": "Q155972",
-        "wordnet_pwn30": ""
+        "wordnet_gloss": "a portable battery-powered computer small enough to be carried in your pocket",
+        "wordnet_pwn30": "n03485407"
     },
     "tableware": {
         "freebase_mid": "/m/04brg2",
@@ -7463,7 +7503,8 @@
         "oid_name": "Traffic sign",
         "wikidata_desc": "plate with instructions (warning, prohibitory, mandatory, ...) used to control traffic on the road",
         "wikidata_name": "traffic sign",
-        "wikidata_qid": "Q170285"
+        "wikidata_qid": "Q170285",
+        "wordnet_pwn30": ""
     },
     "train": {
         "coco_boxable_name": "train",

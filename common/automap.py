@@ -164,7 +164,7 @@ def get_wikidata(str0, context = None, retries = 0):
         if best_b is None:
             best_b = b
         else:
-            prev_has_wn3 = 'WN3' in best_b
+            prev_has_wn3 = 'WN3' in best_b and best_b['WN3']['value'].find('/wn30/') > 0
         if not 'itemDescription' in b:
             continue
         if not context is None:
@@ -181,7 +181,7 @@ def get_wikidata(str0, context = None, retries = 0):
         if curr_q < min_q: #smaller q usually stands for a more general entry (vs. an instance)
             best_b = b
             break
-        has_wn3 = 'WN3' in b
+        has_wn3 = 'WN3' in b and b['WN3']['value'].find('/wn30/') > 0
         has_frn = 'FREEN' in b
         if has_wn3 and has_frn:
             best_b = b
@@ -364,7 +364,10 @@ def main(argv=sys.argv[1:]):
     for key, vals in joined_label_space.items():
         if 'wikidata_qid' in vals:
             if len(vals['wikidata_qid']) > 0 and not 'wikidata_name' in vals:
-                vals.update(wikidata_from_qid(vals['wikidata_qid']))
+                w1 = wikidata_from_qid(vals['wikidata_qid'])
+                if not check_for_dublicates(key, w1, vals):
+                    continue
+                vals.update(w1)
             continue
         n_qid = wikidata_from_name(key, context=vals.get('context','').split('_'))
         if len(n_qid) == 0:
