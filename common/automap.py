@@ -362,7 +362,7 @@ def main(argv=sys.argv[1:]):
             id_param_eval = appendf["id_prefix_eval"]
             id_param_eval += "_id" if id_is_idx else "_name"
             possible_cat = None
-            id_is_idx = "pano" in id_param_eval
+            id_is_idx = not "boxable" in id_param_eval
             for idx0, vals in enumerate(appendf["labels"]):
                 if not id_is_idx and not vals.get('instances', True):
                     continue # quick hack to add all instance classes as boxables / inst

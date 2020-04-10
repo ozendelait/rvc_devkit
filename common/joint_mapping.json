@@ -623,6 +623,7 @@
     },
     "bicycle": {
         "cityscapes_id": 33,
+        "cityscapes_inst_name": 33,
         "cityscapes_name": "bicycle",
         "cityscapes_pano_id": 33,
         "coco_boxable_name": "bicycle",
@@ -1101,6 +1102,7 @@
     },
     "building": {
         "cityscapes_id": 11,
+        "cityscapes_inst_name": 11,
         "cityscapes_name": "building",
         "cityscapes_pano_id": 11,
         "coco_pano_id": 197,
@@ -1142,6 +1144,7 @@
     },
     "bus": {
         "cityscapes_id": 28,
+        "cityscapes_inst_name": 28,
         "cityscapes_name": "bus",
         "cityscapes_pano_id": 28,
         "coco_boxable_name": "bus",
@@ -1344,6 +1347,7 @@
     },
     "car": {
         "cityscapes_id": 26,
+        "cityscapes_inst_name": 26,
         "cityscapes_name": "car",
         "cityscapes_pano_id": 26,
         "coco_boxable_name": "car",
@@ -2805,6 +2809,7 @@
     },
     "fence": {
         "cityscapes_id": 13,
+        "cityscapes_inst_name": 13,
         "cityscapes_name": "fence",
         "cityscapes_pano_id": 13,
         "coco_pano_id": 185,
@@ -2931,6 +2936,7 @@
     },
     "flat_vegetation_soil": {
         "cityscapes_id": 22,
+        "cityscapes_inst_name": 22,
         "cityscapes_name": "terrain",
         "cityscapes_pano_id": 22,
         "context": "includes_grass",
@@ -4757,6 +4763,7 @@
     },
     "motorcycle": {
         "cityscapes_id": 32,
+        "cityscapes_inst_name": 32,
         "cityscapes_name": "motorcycle",
         "cityscapes_pano_id": 32,
         "coco_boxable_name": "motorcycle",
@@ -5392,6 +5399,7 @@
     },
     "person": {
         "cityscapes_id": 24,
+        "cityscapes_inst_name": 24,
         "cityscapes_name": "person",
         "cityscapes_pano_id": 24,
         "coco_boxable_name": "person",
@@ -5691,6 +5699,7 @@
     },
     "pole": {
         "cityscapes_id": 17,
+        "cityscapes_inst_name": 17,
         "cityscapes_name": "pole",
         "cityscapes_pano_id": 17,
         "context": "object",
@@ -6135,6 +6144,7 @@
     },
     "rider": {
         "cityscapes_id": 25,
+        "cityscapes_inst_name": 25,
         "cityscapes_name": "rider",
         "cityscapes_pano_id": 25,
         "context": "human",
@@ -6189,6 +6199,7 @@
     },
     "road": {
         "cityscapes_id": 7,
+        "cityscapes_inst_name": 7,
         "cityscapes_name": "road",
         "cityscapes_pano_id": 7,
         "coco_pano_id": 149,
@@ -6761,6 +6772,7 @@
     },
     "sidewalk": {
         "cityscapes_id": 8,
+        "cityscapes_inst_name": 8,
         "cityscapes_name": "sidewalk",
         "cityscapes_pano_id": 8,
         "coco_pano_id": 191,
@@ -6860,6 +6872,7 @@
     },
     "sky": {
         "cityscapes_id": 23,
+        "cityscapes_inst_name": 23,
         "cityscapes_name": "sky",
         "cityscapes_pano_id": 23,
         "coco_pano_id": 187,
@@ -8004,6 +8017,7 @@
     },
     "traffic_light": {
         "cityscapes_id": 19,
+        "cityscapes_inst_name": 19,
         "cityscapes_name": "traffic light",
         "cityscapes_pano_id": 19,
         "coco_boxable_name": "traffic light",
@@ -8045,6 +8059,7 @@
     },
     "traffic_sign_front": {
         "cityscapes_id": 20,
+        "cityscapes_inst_name": 20,
         "cityscapes_name": "traffic sign",
         "cityscapes_pano_id": 20,
         "context": "object",
@@ -8076,6 +8091,7 @@
     },
     "train": {
         "cityscapes_id": 31,
+        "cityscapes_inst_name": 31,
         "cityscapes_name": "on rails",
         "cityscapes_pano_id": 31,
         "coco_boxable_name": "train",
@@ -8188,6 +8204,7 @@
     },
     "truck": {
         "cityscapes_id": 27,
+        "cityscapes_inst_name": 27,
         "cityscapes_name": "truck",
         "cityscapes_pano_id": 27,
         "coco_boxable_name": "truck",
@@ -8366,6 +8383,7 @@
     },
     "vegetation": {
         "cityscapes_id": 21,
+        "cityscapes_inst_name": 21,
         "cityscapes_name": "vegetation",
         "cityscapes_pano_id": 21,
         "context": "nature",
@@ -8434,6 +8452,7 @@
     },
     "wall": {
         "cityscapes_id": 12,
+        "cityscapes_inst_name": 12,
         "cityscapes_name": "wall",
         "cityscapes_pano_id": 12,
         "coco_pano_id": 199,

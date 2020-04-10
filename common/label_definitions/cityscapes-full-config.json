@@ -1,6 +1,6 @@
 {
     "id_prefix": "cityscapes",
-    "id_prefix_eval": "cityscapes_pano",
+    "id_prefix_eval": "cityscapes_inst",
     "labels": [
         {
             "color": [
