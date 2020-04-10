@@ -363,7 +363,7 @@ def main(argv=sys.argv[1:]):
     #automatically adds qids
     for key, vals in joined_label_space.items():
         if 'wikidata_qid' in vals:
-            if len('wikidata_qid') > 0 and not 'wikidata_name' in vals:
+            if len(vals['wikidata_qid']) > 0 and not 'wikidata_name' in vals:
                 vals.update(wikidata_from_qid(vals['wikidata_qid']))
             continue
         n_qid = wikidata_from_name(key, context=vals.get('context','').split('_'))
@@ -420,7 +420,7 @@ def main(argv=sys.argv[1:]):
     
     print("Found mappings for %i entries and %i have qids of %i" % (cnt_both , cnt_qid, len(joined_label_space)))
     
-    with open(args.output, 'w') as ofile:
+    with open(args.output, 'w', newline='\n') as ofile:
         json.dump(joined_label_space, ofile, sort_keys=True, indent=4)
         
     return 0

@@ -868,6 +868,7 @@
     "bowling_equipment": {
         "freebase_mid": "/m/07pj7bq",
         "oid_name": "Bowling equipment",
+        "wikidata_qid": "",
         "wordnet_gloss": "equipment used in bowling",
         "wordnet_pwn30": "n02882483"
     },
@@ -1325,9 +1326,10 @@
         "wordnet_pwn30": "n02983507"
     },
     "cat_furniture": {
-        "freebase_mid": "/m/0h8nm9j",
+        "freebase_mid": "/m/026v7pc",
         "oid_name": "Cat furniture",
-        "wikidata_qid": "",
+        "wikidata_name": "Cat tree",
+        "wikidata_qid": "Q1014401",
         "wordnet_pwn30": ""
     },
     "caterpillar": {
@@ -1612,11 +1614,6 @@
         "wordnet_gloss": "a cup from which coffee is drunk",
         "wordnet_pwn30": "n03063073"
     },
-    "coffee_machine": {
-        "obj365_boxable_name": "Coffee Machine",
-        "wordnet_gloss": "a kitchen appliance for brewing coffee automatically",
-        "wordnet_pwn30": "n03063338"
-    },
     "coffee_table": {
         "freebase_mid": "/m/078n6m",
         "obj365_boxable_name": "Coffee Table",
@@ -1630,11 +1627,14 @@
     },
     "coffeemaker": {
         "freebase_mid": "/m/07xyvk",
+        "obj365_boxable_name": "Coffee Machine",
         "oid_boxable_leaf": "/m/07xyvk",
         "oid_name": "Coffeemaker",
         "wikidata_desc": "device for making coffee",
         "wikidata_name": "coffeemaker",
-        "wikidata_qid": "Q211841"
+        "wikidata_qid": "Q211841",
+        "wordnet_gloss": "a kitchen appliance for brewing coffee automatically",
+        "wordnet_pwn30": "n03063338"
     },
     "coin": {
         "freebase_mid": "/m/0242l",
@@ -1729,6 +1729,14 @@
         "wikidata_qid": "Q7987",
         "wordnet_gloss": "a hand-operated electronic device that controls the coordinates of a cursor on your computer screen as you move it around on a pad; on the bottom of the device is a ball that rolls on the surface of the pad; \"a mouse takes much more room than a trackball\"",
         "wordnet_pwn30": "n03793489"
+    },
+    "construction_vehicle": {
+        "freebase_mid": "/m/02gx17",
+        "obj365_boxable_name": "Machinery Vehicle",
+        "wikidata_desc": "vehicles designed for executing construction tasks",
+        "wikidata_name": "heavy equipment",
+        "wikidata_qid": "Q874311",
+        "wordnet_pwn30": ""
     },
     "container": {
         "freebase_mid": "/m/011q46kg",
@@ -2510,7 +2518,9 @@
         "wordnet_pwn30": "n04272054"
     },
     "eyeliner_pencil": {
-        "obj365_boxable_name": "Cosmetics Brush/Eyeliner Pencil"
+        "obj365_boxable_name": "Cosmetics Brush/Eyeliner Pencil",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "face": {
         "context": "human",
@@ -2533,7 +2543,9 @@
     },
     "facial_tissue_holder": {
         "freebase_mid": "/m/0h8nsvg",
-        "oid_name": "Facial tissue holder"
+        "oid_name": "Facial tissue holder",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "falcon": {
         "context": "bird",
@@ -3283,6 +3295,7 @@
     },
     "handcart": {
         "obj365_boxable_name": "Trolley",
+        "wikidata_qid": "",
         "wordnet_gloss": "wheeled vehicle that can be pushed by a person; may have one or two or four wheels; \"he used a handcart to carry the rocks away\"; \"their pushcart was piled high with groceries\"",
         "wordnet_pwn30": "n03484083"
     },
@@ -3391,13 +3404,6 @@
         "wordnet_gloss": "device that heats water or supplies warmth to a room",
         "wordnet_pwn30": "n03508101"
     },
-    "heavy_truck": {
-        "freebase_mid": "/m/02gx17",
-        "obj365_boxable_name": "Heavy Truck",
-        "wikidata_desc": "vehicles designed for executing construction tasks",
-        "wikidata_name": "heavy equipment",
-        "wikidata_qid": "Q874311"
-    },
     "hedgehog": {
         "freebase_mid": "/m/0cl4p",
         "oid_name": "Hedgehog",
@@ -3441,7 +3447,10 @@
     },
     "hiking_equipment": {
         "freebase_mid": "/m/0268lbt",
-        "oid_name": "Hiking equipment"
+        "oid_name": "Hiking equipment",
+        "wikidata_desc": "equipment taken on outdoor walking trips",
+        "wikidata_name": "Hiking equipment",
+        "wikidata_qid": "Q16000111"
     },
     "hippopotamus": {
         "freebase_mid": "/m/09f20",
@@ -3589,8 +3598,13 @@
         "wikidata_name": "indoor rower",
         "wikidata_qid": "Q1542861"
     },
-    "induction_cooker": {
-        "obj365_boxable_name": "Induction Cooker"
+    "induction_stove": {
+        "freebase_mid": "/m/04mlf2",
+        "obj365_boxable_name": "Induction Cooker",
+        "wikidata_desc": "Type of cooker that uses electromagnetic induction",
+        "wikidata_name": "induction stove",
+        "wikidata_qid": "Q751960",
+        "wordnet_pwn30": ""
     },
     "infant_bed": {
         "freebase_mid": "/m/061hd_",
@@ -3598,7 +3612,9 @@
         "oid_name": "Infant bed",
         "wikidata_desc": "small bed for infants and very young children",
         "wikidata_name": "infant bed",
-        "wikidata_qid": "Q412770"
+        "wikidata_qid": "Q412770",
+        "wordnet_gloss": "a small bed for babies; enclosed by sides to prevent the baby from falling",
+        "wordnet_pwn30": "n02766320"
     },
     "insect": {
         "freebase_mid": "/m/03vt0",
@@ -3755,7 +3771,9 @@
     "kitchen_and_dining_room_table": {
         "freebase_mid": "/m/0h8n5zk",
         "oid_boxable_leaf": "/m/0h8n5zk",
-        "oid_name": "Kitchen & dining room table"
+        "oid_name": "Kitchen & dining room table",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "kitchen_appliance": {
         "freebase_mid": "/m/0h99cwc",
@@ -3778,9 +3796,9 @@
     "kitchen_utensil": {
         "freebase_mid": "/m/03hlz0c",
         "oid_name": "Kitchen utensil",
-        "wikidata_desc": "kitchen utensil",
-        "wikidata_name": "lemon squeezer",
-        "wikidata_qid": "Q14902",
+        "wikidata_desc": "small hand-held tool used for food preparation",
+        "wikidata_name": "kitchen utensil",
+        "wikidata_qid": "Q3773693",
         "wordnet_gloss": "a utensil used in preparing food",
         "wordnet_pwn30": "n03621049"
     },
@@ -4134,9 +4152,6 @@
         "wordnet_gloss": "short-tailed wildcats with usually tufted ears; valued for their fur",
         "wordnet_pwn30": "n02127052"
     },
-    "machinery_vehicle": {
-        "obj365_boxable_name": "Machinery Vehicle"
-    },
     "magpie": {
         "freebase_mid": "/m/012074",
         "oid_name": "Magpie",
@@ -4199,7 +4214,10 @@
     },
     "marine_invertebrates": {
         "freebase_mid": "/m/03hl4l9",
-        "oid_name": "Marine invertebrates"
+        "oid_name": "Marine invertebrates",
+        "wikidata_name": "Marine invertebrates",
+        "wikidata_qid": "Q3737872",
+        "wordnet_pwn30": ""
     },
     "marine_mammal": {
         "freebase_mid": "/m/0gd2v",
@@ -6554,9 +6572,7 @@
     "spice_rack": {
         "freebase_mid": "/m/0h8kx63",
         "oid_name": "Spice rack",
-        "wikidata_desc": "",
-        "wikidata_name": "",
-        "wikidata_qid": "Q87584935",
+        "wikidata_qid": "",
         "wordnet_gloss": "a rack for displaying containers filled with spices",
         "wordnet_pwn30": "n04275175"
     },
@@ -6793,6 +6809,7 @@
         "oid_boxable_leaf": "/m/026qbn5",
         "oid_inst_leaf": "/m/026qbn5",
         "oid_name": "Studio couch",
+        "wikidata_qid": "",
         "wordnet_gloss": "convertible consisting of an upholstered couch that can be converted into a double bed",
         "wordnet_pwn30": "n04344873"
     },
@@ -7042,6 +7059,7 @@
         "wikidata_desc": "heavy armored fighting vehicle",
         "wikidata_name": "tank",
         "wikidata_qid": "Q12876",
+        "wordnet_gloss": "an enclosed armored military vehicle; has a cannon and moves on caterpillar treads",
         "wordnet_pwn30": "n04389033"
     },
     "tap": {
@@ -7053,6 +7071,7 @@
         "wikidata_desc": "regulated inflow of water, for example for drinking water",
         "wikidata_name": "tap",
         "wikidata_qid": "Q656656",
+        "wordnet_gloss": "a regulator for controlling the flow of a liquid from a reservoir",
         "wordnet_pwn30": "n03325088"
     },
     "target": {
@@ -7095,6 +7114,7 @@
         "wikidata_desc": "drink made from infusing boiling water with the leaves of the tea plant",
         "wikidata_name": "tea",
         "wikidata_qid": "Q6097",
+        "wordnet_gloss": "a tropical evergreen shrub or small tree extensively cultivated in e.g. China and Japan and India; source of tea leaves; \"tea has fragrant white flowers\"",
         "wordnet_pwn30": "n12929783"
     },
     "teapot": {
@@ -7137,10 +7157,13 @@
         "coco_boxable_name": "tv",
         "coco_pano_id": 72,
         "coco_pano_name": "tv",
-        "freebase_mid": "/m/07c52",
+        "freebase_mid": "/m/0bx_y3w",
         "oid_boxable_leaf": "/m/07c52",
         "oid_name": "Television",
+        "wikidata_desc": "device that combines a tuner, display, and speakers for the purpose of viewing television",
+        "wikidata_name": "television set",
         "wikidata_qid": "Q8075",
+        "wordnet_gloss": "an electronic device that receives television signals and displays them on a screen; \"the British call a tv set a telly\"",
         "wordnet_pwn30": "n04405907"
     },
     "tennis_ball": {
@@ -7200,6 +7223,7 @@
         "wikidata_desc": "superfamily of arachnids",
         "wikidata_name": "Ixodoidea",
         "wikidata_qid": "Q82645",
+        "wordnet_gloss": "any of two families of small parasitic arachnids with barbed proboscis; feed on blood of warm-blooded animals",
         "wordnet_pwn30": "n01776313"
     },
     "tie": {
@@ -7214,6 +7238,7 @@
         "wikidata_desc": "clothing item, traditionally worn by boys and men with dress shirt",
         "wikidata_name": "necktie",
         "wikidata_qid": "Q44416",
+        "wordnet_gloss": "neckwear consisting of a long narrow piece of material worn (mostly by men) under a collar and tied in knot at the front; \"he stood in front of the mirror tightening his necktie\"; \"he wore a vest and tie\"",
         "wordnet_pwn30": "n03815615"
     },
     "tiger": {
@@ -7234,7 +7259,8 @@
         "wikidata_desc": "manufactured piece of hard-wearing material",
         "wikidata_name": "tile",
         "wikidata_qid": "Q468402",
-		"wordnet_pwn30": "n04435180"
+        "wordnet_gloss": "a flat thin rectangular slab (as of fired clay or rubber or linoleum) used to cover surfaces",
+        "wordnet_pwn30": "n04435180"
     },
     "tin_can": {
         "freebase_mid": "/m/02jnhm",
@@ -7295,6 +7321,7 @@
         "wikidata_desc": "sanitation fixture",
         "wikidata_name": "toilet",
         "wikidata_qid": "Q7857",
+        "wordnet_gloss": "a plumbing fixture for defecation and urination",
         "wordnet_pwn30": "n04446521"
     },
     "toilet_paper": {
@@ -7359,6 +7386,7 @@
         "wikidata_desc": "stick with a flaming end used as a source of light",
         "wikidata_name": "torch",
         "wikidata_qid": "Q327954",
+        "wordnet_gloss": "a light usually carried in the hand; consists of some flammable substance",
         "wordnet_pwn30": "n04456115"
     },
     "tortoise": {
@@ -7403,6 +7431,7 @@
         "wikidata_desc": "thing to be played with",
         "wikidata_name": "toy",
         "wikidata_qid": "Q11422",
+        "wordnet_gloss": "an artifact designed to be played with",
         "wordnet_pwn30": "n03964744"
     },
     "traffic_cone": {
@@ -7410,8 +7439,8 @@
         "obj365_boxable_name": "Traffic cone",
         "wikidata_desc": "Traffick Cone",
         "wikidata_name": "traffic cone",
-        "wikidata_qid": "Q694547"
-		"wordnet_pwn30": ""
+        "wikidata_qid": "Q694547",
+        "wordnet_pwn30": ""
     },
     "traffic_light": {
         "coco_boxable_name": "traffic light",
@@ -7459,7 +7488,8 @@
         "wikidata_desc": "weight training apparatus",
         "wikidata_name": "bench",
         "wikidata_qid": "Q1422097",
-		"wordnet_pwn30": "n03360622"
+        "wordnet_gloss": "a bench on which a weightlifter lies to do exercises",
+        "wordnet_pwn30": "n03360622"
     },
     "treadmill": {
         "freebase_mid": "/m/030610",
@@ -7553,7 +7583,17 @@
         "wikidata_desc": "freight motor vehicle",
         "wikidata_name": "truck",
         "wikidata_qid": "Q43193",
+        "wordnet_gloss": "an automotive vehicle suitable for hauling",
         "wordnet_pwn30": "n04490091"
+    },
+    "trucking_rig": {
+        "freebase_mid": "/m/078my",
+        "obj365_boxable_name": "Heavy Truck",
+        "wikidata_desc": "combination of a tractor unit and one or more semi-trailers to carry freight",
+        "wikidata_name": "semi-trailer truck",
+        "wikidata_qid": "Q1936841",
+        "wordnet_gloss": "a truck consisting of a tractor and trailer together",
+        "wordnet_pwn30": "n04467665"
     },
     "trumpet": {
         "freebase_mid": "/m/07gql",
@@ -7861,6 +7901,7 @@
         "wikidata_desc": "kitchen utensil used for mixing and/or whipping ingredients",
         "wikidata_name": "whisk",
         "wikidata_qid": "Q263057",
+        "wordnet_gloss": "a mixer incorporating a coil of wires; used for whipping eggs or cream",
         "wordnet_pwn30": "n04578934"
     },
     "whiteboard": {
@@ -7882,6 +7923,7 @@
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Salix",
         "wikidata_qid": "Q36050",
+        "wordnet_gloss": "any of numerous deciduous trees and shrubs of the genus Salix",
         "wordnet_pwn30": "n12724942"
     },
     "window": {
@@ -7937,8 +7979,8 @@
         "freebase_mid": "/m/0271qf7",
         "oid_name": "Wine rack",
         "wikidata_name": "Wine rack",
-        "wikidata_qid": "Q2941029"
-		"wordnet_pwn30": ""
+        "wikidata_qid": "Q2941029",
+        "wordnet_pwn30": ""
     },
     "winter_melon": {
         "freebase_mid": "/m/02cvgx",
@@ -7970,6 +8012,7 @@
         "wikidata_desc": "female adult human",
         "wikidata_name": "woman",
         "wikidata_qid": "Q467",
+        "wordnet_gloss": "an adult female person (as opposed to a man); \"the woman kept house while the man hunted\"",
         "wordnet_pwn30": "n10787470"
     },
     "wood-burning_stove": {
@@ -7979,18 +8022,22 @@
         "wikidata_desc": "type of stove",
         "wikidata_name": "wood-burning stove",
         "wikidata_qid": "Q1370219",
-		"wordnet_pwn30": "n03102371"
+        "wordnet_gloss": "a stove for cooking (especially a wood- or coal-burning kitchen stove)",
+        "wordnet_pwn30": "n03102371"
     },
     "wooden_floor": {
         "coco_pano_id": 118,
         "coco_pano_name": "floor-wood",
+        "wikidata_desc": "ornate wooden floor design",
+        "wikidata_name": "parquetry",
+        "wikidata_qid": "Q838828",
         "wordnet_gloss": "a floor made of parquetry",
         "wordnet_pwn30": "n03892178"
     },
     "wooden_wall": {
         "coco_pano_id": 177,
         "coco_pano_name": "wall-wood",
-		"wikidata_qid": "Q838828",
+        "wikidata_qid": "",
         "wordnet_gloss": "paneling that forms part of a wall",
         "wordnet_pwn30": "n04548503"
     },
@@ -8011,6 +8058,7 @@
         "wikidata_desc": "animal that typically has a long tube-like body and no legs",
         "wikidata_name": "worm",
         "wikidata_qid": "Q47253",
+        "wordnet_gloss": "any of numerous relatively small elongated soft-bodied animals especially of the phyla Annelida and Chaetognatha and Nematoda and Nemertea and Platyhelminthes; also many insect larvae",
         "wordnet_pwn30": "n01922303"
     },
     "wrench": {
