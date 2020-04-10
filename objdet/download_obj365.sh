@@ -18,8 +18,8 @@
 
 RVC_OBJ365_SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 # All data is downloaded to subfolders of RVC_DATA_DIR; if this is not defined: use this script's dir
-if [[ ! -v RVC_DATA_DIR ]]; then
-  RVC_OBJ365_TRG_DIR=${RVC_OBJ365_SCRIPT_DIR}/objects365
+if [ -z "${RVC_DATA_DIR}" ]; then
+  RVC_OBJ365_TRG_DIR=${RVC_OBJ365_SCRIPT_DIR}/../datasets/objects365
 else
   RVC_OBJ365_TRG_DIR=${RVC_DATA_DIR}/objects365
 fi
