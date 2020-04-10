@@ -375,50 +375,6 @@
             "readable": "bicycle(vehicle)", 
             "name": "bicycle", 
             "evaluate": true
-        }, 
-        {
-            "color": [
-                85, 
-                0, 
-                85
-            ], 
-            "instances": false, 
-            "readable": "license plate(vehicle)", 
-            "name": "license plate", 
-            "evaluate": false
-        }, 
-        {
-            "color": [
-                192, 
-                0, 
-                128
-            ], 
-            "instances": false, 
-            "readable": "tram track(flat)", 
-            "name": "tram track", 
-            "evaluate": false
-        }, 
-        {
-            "color": [
-                174, 
-                64, 
-                67
-            ], 
-            "instances": false, 
-            "readable": "billboard(object)", 
-            "name": "billboard", 
-            "evaluate": false
-        }, 
-        {
-            "color": [
-                210, 
-                170, 
-                100
-            ], 
-            "instances": false, 
-            "readable": "street-light(object)", 
-            "name": "street-light", 
-            "evaluate": false
         }
     ]
 }

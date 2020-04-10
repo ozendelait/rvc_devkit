@@ -2548,7 +2548,8 @@
         "cityscapes_name": "dynamic",
         "context": "void",
         "wikidata_qid": "",
-        "wordnet_pwn30": "01523724"
+        "wordnet_gloss": "capable of being moved or conveyed from one place to another",
+        "wordnet_pwn30": "s01523724"
     },
     "eagle": {
         "freebase_mid": "/m/09csl",
@@ -2613,7 +2614,6 @@
     "ego": {
         "cityscapes_id": 1,
         "cityscapes_name": "ego vehicle",
-        "context": "void"
         "context": "void",
         "mvs_id": 64,
         "mvs_name": "void--ego-vehicle",
@@ -2930,16 +2930,16 @@
         "wordnet_pwn30": "n03359566"
     },
     "flat_vegetation_soil": {
+        "cityscapes_id": 22,
+        "cityscapes_name": "terrain",
+        "cityscapes_pano_id": 22,
         "context": "includes_grass",
         "mvs_id": 29,
         "mvs_name": "nature--terrain",
         "mvs_pano_id": 29,
         "wikidata_name": "terrain",
         "wikidata_qid": "",
-        "wordnet_pwn30": "",
-        "cityscapes_id": 22,
-        "cityscapes_name": "terrain",
-        "cityscapes_pano_id": 22
+        "wordnet_pwn30": ""
     },
     "floor": {
         "coco_pano_id": 190,
@@ -3405,8 +3405,11 @@
         "cityscapes_id": 6,
         "cityscapes_name": "ground",
         "context": "void",
+        "wikidata_desc": "solid surface of Earth that is not permanently covered by water",
+        "wikidata_name": "land",
         "wikidata_qid": "Q11081619",
-         "wordnet_pwn30": "n09334396"
+        "wordnet_gloss": "the solid part of the earth's surface; \"the plane turned away from the sea and moved back over land\"; \"the earth shook for several minutes\"; \"he dropped the logs on the ground\"",
+        "wordnet_pwn30": "n09334396"
     },
     "ground_animal": {
         "context": "animal",
@@ -5070,6 +5073,13 @@
         "wordnet_gloss": "freshwater carnivorous mammal having webbed and clawed feet and dark brown fur",
         "wordnet_pwn30": "n02444819"
     },
+    "out_of_roi": {
+        "cityscapes_id": 3,
+        "cityscapes_name": "out of roi",
+        "context": "void",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
     "oven": {
         "coco_boxable_name": "oven",
         "coco_pano_id": 79,
@@ -5697,8 +5707,8 @@
     "polegroup": {
         "cityscapes_id": 18,
         "cityscapes_name": "polegroup",
-        "context": "object"
-        "wikidata_qid": ""
+        "context": "object",
+        "wikidata_qid": "",
         "wordnet_pwn30": ""
     },
     "pomegranate": {
@@ -6023,6 +6033,13 @@
         "wikidata_qid": "Q66087652",
         "wordnet_gloss": "equipment for making records",
         "wordnet_pwn30": "n04063373"
+    },
+    "rectification_border": {
+        "cityscapes_id": 2,
+        "cityscapes_name": "rectification border",
+        "context": "void",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "red_cabbage": {
         "freebase_mid": "/m/06vm6n",
@@ -7214,6 +7231,7 @@
         "cityscapes_name": "static",
         "context": "void",
         "wikidata_qid": "",
+        "wordnet_gloss": "incapable of being changed or moved or undone; e.g. \"frozen prices\"; \"living on fixed incomes\"",
         "wordnet_pwn30": "s00347707"
     },
     "stationary_bicycle": {
@@ -8026,10 +8044,10 @@
         "wordnet_pwn30": ""
     },
     "traffic_sign_front": {
-        "context": "object",
         "cityscapes_id": 20,
         "cityscapes_name": "traffic sign",
         "cityscapes_pano_id": 20,
+        "context": "object",
         "freebase_mid": "/m/01mqdt",
         "mvs_boxable_name": "object--traffic-sign--front",
         "mvs_id": 50,
@@ -8057,6 +8075,9 @@
         "wordnet_pwn30": "n04467099"
     },
     "train": {
+        "cityscapes_id": 31,
+        "cityscapes_name": "on rails",
+        "cityscapes_pano_id": 31,
         "coco_boxable_name": "train",
         "coco_pano_id": 7,
         "coco_pano_name": "train",
@@ -8073,10 +8094,7 @@
         "wikidata_name": "train",
         "wikidata_qid": "Q870",
         "wordnet_gloss": "public transport provided by a line of railway cars coupled together and drawn by a locomotive; \"express trains don't stop at Princeton Junction\"",
-        "wordnet_pwn30": "n04468005",
-        "cityscapes_id": 31,
-        "cityscapes_name": "on rails",
-        "cityscapes_pano_id": 31
+        "wordnet_pwn30": "n04468005"
     },
     "training_bench": {
         "freebase_mid": "/m/076lb9",
@@ -8285,6 +8303,7 @@
         "wikidata_desc": "entity whose identity is not known",
         "wikidata_name": "unknown",
         "wikidata_qid": "Q24238356",
+        "wordnet_gloss": "lacking a label or tag; \"unlabeled luggage is liable to be lost\"",
         "wordnet_pwn30": "a01379844"
     },
     "urinal": {

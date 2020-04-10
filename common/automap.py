@@ -72,7 +72,7 @@ def get_wordnet_gloss(pwn30, retries = 0):
     except:
         print("Unexpected error:", sys.exc_info()[0], res0_r)
         res0 = None
-    if res0 == None or len(res0) < 1 or 'n'+res0[0]['old_keys']['pwn30'][0][:-2] != pwn30:
+    if res0 == None or len(res0) < 1 or res0[0]['old_keys']['pwn30'][0][-1]+res0[0]['old_keys']['pwn30'][0][:-2] != pwn30:
         if retries <= 0:
             print("Warning: bad request:", pwn30, res0_r)
             return {}
@@ -443,12 +443,13 @@ def main(argv=sys.argv[1:]):
             print('Not found in wordnet: ' + key)
             continue
         if not 'wordnet_gloss' in add_entry:
-            add_entry.update(get_wordnet_gloss(add_entry['wordnet_pwn30'], retries=0))
+            g0 = get_wordnet_gloss(add_entry['wordnet_pwn30'], retries=0)
+            add_entry.update(g0)
         if not check_for_dublicates(key, add_entry, vals):
             continue
         vals.update(add_entry)
-        #find wikidata via qid
-        if not 'freebase_mid' in vals or not 'wikidata_qid' in vals:
+        #find wikidata via pwn30
+        if not 'wikidata_qid' in vals:
             w1 = wikidata_from_wordnet3p0(vals['wordnet_pwn30'])
             if not check_for_dublicates(key, w1, vals):
                 continue
