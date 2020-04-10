@@ -50,6 +50,7 @@
     },
     "airplane": {
         "coco_boxable_name": "airplane",
+        "coco_inst_id": 5,
         "coco_pano_id": 5,
         "coco_pano_name": "airplane",
         "freebase_mid": "/m/0cmf2",
@@ -142,6 +143,7 @@
     },
     "apple": {
         "coco_boxable_name": "apple",
+        "coco_inst_id": 53,
         "coco_pano_id": 53,
         "coco_pano_name": "apple",
         "context": "fruit",
@@ -223,6 +225,7 @@
     },
     "backpack": {
         "coco_boxable_name": "backpack",
+        "coco_inst_id": 27,
         "coco_pano_id": 27,
         "coco_pano_name": "backpack",
         "freebase_mid": "/m/01940j",
@@ -267,6 +270,7 @@
     },
     "ball": {
         "coco_boxable_name": "sports ball",
+        "coco_inst_id": 37,
         "coco_pano_id": 37,
         "coco_pano_name": "sports ball",
         "context": "round",
@@ -292,6 +296,7 @@
     },
     "banana": {
         "coco_boxable_name": "banana",
+        "coco_inst_id": 52,
         "coco_pano_id": 52,
         "coco_pano_name": "banana",
         "context": "fruit",
@@ -402,6 +407,7 @@
     },
     "baseball_bat": {
         "coco_boxable_name": "baseball bat",
+        "coco_inst_id": 39,
         "coco_pano_id": 39,
         "coco_pano_name": "baseball bat",
         "freebase_mid": "/m/03g8mr",
@@ -417,6 +423,7 @@
     },
     "baseball_glove": {
         "coco_boxable_name": "baseball glove",
+        "coco_inst_id": 40,
         "coco_pano_id": 40,
         "coco_pano_name": "baseball glove",
         "freebase_mid": "/m/03grzl",
@@ -501,6 +508,7 @@
     },
     "bear": {
         "coco_boxable_name": "bear",
+        "coco_inst_id": 23,
         "coco_pano_id": 23,
         "coco_pano_name": "bear",
         "context": "mammal",
@@ -526,6 +534,7 @@
     },
     "bed": {
         "coco_boxable_name": "bed",
+        "coco_inst_id": 65,
         "coco_pano_id": 65,
         "coco_pano_name": "bed",
         "freebase_mid": "/m/03ssj5",
@@ -604,6 +613,7 @@
     },
     "bench": {
         "coco_boxable_name": "bench",
+        "coco_inst_id": 15,
         "coco_pano_id": 15,
         "coco_pano_name": "bench",
         "context": "object",
@@ -623,10 +633,11 @@
     },
     "bicycle": {
         "cityscapes_id": 33,
-        "cityscapes_inst_name": 33,
+        "cityscapes_inst_id": 33,
         "cityscapes_name": "bicycle",
         "cityscapes_pano_id": 33,
         "coco_boxable_name": "bicycle",
+        "coco_inst_id": 2,
         "coco_pano_id": 2,
         "coco_pano_name": "bicycle",
         "context": "vehicle",
@@ -759,6 +770,7 @@
     },
     "bird": {
         "coco_boxable_name": "bird",
+        "coco_inst_id": 16,
         "coco_pano_id": 16,
         "coco_pano_name": "bird",
         "context": "animal",
@@ -817,6 +829,7 @@
     },
     "boat": {
         "coco_boxable_name": "boat",
+        "coco_inst_id": 9,
         "coco_pano_id": 9,
         "coco_pano_name": "boat",
         "context": "object",
@@ -854,6 +867,7 @@
     },
     "book": {
         "coco_boxable_name": "book",
+        "coco_inst_id": 84,
         "coco_pano_id": 84,
         "coco_pano_name": "book",
         "freebase_mid": "/m/0bt_c3",
@@ -892,6 +906,7 @@
     },
     "bottle": {
         "coco_boxable_name": "bottle",
+        "coco_inst_id": 44,
         "coco_pano_id": 44,
         "coco_pano_name": "bottle",
         "freebase_mid": "/m/04dr76w",
@@ -936,6 +951,7 @@
     },
     "bowl": {
         "coco_boxable_name": "bowl",
+        "coco_inst_id": 51,
         "coco_pano_id": 51,
         "coco_pano_name": "bowl",
         "context": "tableware",
@@ -1047,6 +1063,7 @@
     },
     "broccoli": {
         "coco_boxable_name": "broccoli",
+        "coco_inst_id": 56,
         "coco_pano_id": 56,
         "coco_pano_name": "broccoli",
         "context": "vegetable",
@@ -1102,7 +1119,7 @@
     },
     "building": {
         "cityscapes_id": 11,
-        "cityscapes_inst_name": 11,
+        "cityscapes_inst_id": 11,
         "cityscapes_name": "building",
         "cityscapes_pano_id": 11,
         "coco_pano_id": 197,
@@ -1144,10 +1161,11 @@
     },
     "bus": {
         "cityscapes_id": 28,
-        "cityscapes_inst_name": 28,
+        "cityscapes_inst_id": 28,
         "cityscapes_name": "bus",
         "cityscapes_pano_id": 28,
         "coco_boxable_name": "bus",
+        "coco_inst_id": 6,
         "coco_pano_id": 6,
         "coco_pano_name": "bus",
         "context": "vehicle",
@@ -1215,6 +1233,7 @@
     },
     "cake": {
         "coco_boxable_name": "cake",
+        "coco_inst_id": 61,
         "coco_pano_id": 61,
         "coco_pano_name": "cake",
         "freebase_mid": "/m/0fszt",
@@ -1347,10 +1366,11 @@
     },
     "car": {
         "cityscapes_id": 26,
-        "cityscapes_inst_name": 26,
+        "cityscapes_inst_id": 26,
         "cityscapes_name": "car",
         "cityscapes_pano_id": 26,
         "coco_boxable_name": "car",
+        "coco_inst_id": 3,
         "coco_pano_id": 3,
         "coco_pano_name": "car",
         "context": "vehicle",
@@ -1410,6 +1430,7 @@
     },
     "carrot": {
         "coco_boxable_name": "carrot",
+        "coco_inst_id": 57,
         "coco_pano_id": 57,
         "coco_pano_name": "carrot",
         "freebase_mid": "/m/0fj52s",
@@ -1454,6 +1475,7 @@
     },
     "cat": {
         "coco_boxable_name": "cat",
+        "coco_inst_id": 17,
         "coco_pano_id": 17,
         "coco_pano_name": "cat",
         "freebase_mid": "/m/01yrx",
@@ -1560,6 +1582,7 @@
     },
     "chair": {
         "coco_boxable_name": "chair",
+        "coco_inst_id": 62,
         "coco_pano_id": 62,
         "coco_pano_name": "chair",
         "freebase_mid": "/m/01mzpv",
@@ -1677,6 +1700,7 @@
     },
     "clock": {
         "coco_boxable_name": "clock",
+        "coco_inst_id": 85,
         "coco_pano_id": 85,
         "coco_pano_name": "clock",
         "freebase_mid": "/m/01x3z",
@@ -1844,6 +1868,7 @@
     },
     "computer_keyboard": {
         "coco_boxable_name": "keyboard",
+        "coco_inst_id": 76,
         "coco_pano_id": 76,
         "coco_pano_name": "keyboard",
         "freebase_mid": "/m/01m2v",
@@ -1964,6 +1989,7 @@
     },
     "couch": {
         "coco_boxable_name": "couch",
+        "coco_inst_id": 63,
         "coco_pano_id": 63,
         "coco_pano_name": "couch",
         "freebase_mid": "/m/0703r8",
@@ -1999,6 +2025,7 @@
     },
     "cow": {
         "coco_boxable_name": "cow",
+        "coco_inst_id": 21,
         "coco_pano_id": 21,
         "coco_pano_name": "cow",
         "obj365_boxable_name": "Cow",
@@ -2131,6 +2158,7 @@
     },
     "cup": {
         "coco_boxable_name": "cup",
+        "coco_inst_id": 47,
         "coco_pano_id": 47,
         "coco_pano_name": "cup",
         "obj365_boxable_name": "Cup",
@@ -2306,6 +2334,7 @@
     },
     "dining_table": {
         "coco_boxable_name": "dining table",
+        "coco_inst_id": 67,
         "coco_pano_id": 67,
         "coco_pano_name": "dining table",
         "obj365_boxable_name": "Dinning Table",
@@ -2347,6 +2376,7 @@
     },
     "dog": {
         "coco_boxable_name": "dog",
+        "coco_inst_id": 18,
         "coco_pano_id": 18,
         "coco_pano_name": "dog",
         "context": "animal",
@@ -2404,6 +2434,7 @@
     },
     "donut": {
         "coco_boxable_name": "donut",
+        "coco_inst_id": 60,
         "coco_pano_id": 60,
         "coco_pano_name": "donut",
         "freebase_mid": "/m/0jy4k",
@@ -2652,6 +2683,7 @@
     },
     "elephant": {
         "coco_boxable_name": "elephant",
+        "coco_inst_id": 22,
         "coco_pano_id": 22,
         "coco_pano_name": "elephant",
         "freebase_mid": "/m/0bwd_0j",
@@ -2809,7 +2841,7 @@
     },
     "fence": {
         "cityscapes_id": 13,
-        "cityscapes_inst_name": 13,
+        "cityscapes_inst_id": 13,
         "cityscapes_name": "fence",
         "cityscapes_pano_id": 13,
         "coco_pano_id": 185,
@@ -2846,6 +2878,7 @@
     },
     "fire_hydrant": {
         "coco_boxable_name": "fire hydrant",
+        "coco_inst_id": 11,
         "coco_pano_id": 11,
         "coco_pano_name": "fire hydrant",
         "context": "object",
@@ -2936,7 +2969,7 @@
     },
     "flat_vegetation_soil": {
         "cityscapes_id": 22,
-        "cityscapes_inst_name": 22,
+        "cityscapes_inst_id": 22,
         "cityscapes_name": "terrain",
         "cityscapes_pano_id": 22,
         "context": "includes_grass",
@@ -3055,6 +3088,7 @@
     },
     "fork": {
         "coco_boxable_name": "fork",
+        "coco_inst_id": 48,
         "coco_pano_id": 48,
         "coco_pano_name": "fork",
         "freebase_mid": "/m/0dt3t",
@@ -3112,6 +3146,7 @@
     },
     "frisbee": {
         "coco_boxable_name": "frisbee",
+        "coco_inst_id": 34,
         "coco_pano_id": 34,
         "coco_pano_name": "frisbee",
         "freebase_mid": "/m/02wmf",
@@ -3207,6 +3242,7 @@
     },
     "giraffe": {
         "coco_boxable_name": "giraffe",
+        "coco_inst_id": 25,
         "coco_pano_id": 25,
         "coco_pano_name": "giraffe",
         "freebase_mid": "/m/03bk1",
@@ -3478,6 +3514,7 @@
     },
     "hair_dryer": {
         "coco_boxable_name": "hair drier",
+        "coco_inst_id": 89,
         "coco_pano_id": 89,
         "coco_pano_name": "hair drier",
         "freebase_mid": "/m/03wvsk",
@@ -3552,6 +3589,7 @@
     },
     "handbag": {
         "coco_boxable_name": "handbag",
+        "coco_inst_id": 31,
         "coco_pano_id": 31,
         "coco_pano_name": "handbag",
         "freebase_mid": "/m/080hkjn",
@@ -3778,6 +3816,7 @@
     },
     "horse": {
         "coco_boxable_name": "horse",
+        "coco_inst_id": 19,
         "coco_pano_id": 19,
         "coco_pano_name": "horse",
         "freebase_mid": "/m/03k3r",
@@ -3811,6 +3850,7 @@
     },
     "hot_dog": {
         "coco_boxable_name": "hot dog",
+        "coco_inst_id": 58,
         "coco_pano_id": 58,
         "coco_pano_name": "hot dog",
         "context": "bun",
@@ -4109,6 +4149,7 @@
     },
     "kite": {
         "coco_boxable_name": "kite",
+        "coco_inst_id": 38,
         "coco_pano_id": 38,
         "coco_pano_name": "kite",
         "freebase_mid": "/m/02zt3",
@@ -4133,6 +4174,7 @@
     },
     "knife": {
         "coco_boxable_name": "knife",
+        "coco_inst_id": 49,
         "coco_pano_id": 49,
         "coco_pano_name": "knife",
         "freebase_mid": "/m/04ctx",
@@ -4221,6 +4263,7 @@
     },
     "laptop": {
         "coco_boxable_name": "laptop",
+        "coco_inst_id": 73,
         "coco_pano_id": 73,
         "coco_pano_name": "laptop",
         "freebase_mid": "/m/01c648",
@@ -4629,6 +4672,7 @@
     },
     "microwave": {
         "coco_boxable_name": "microwave",
+        "coco_inst_id": 78,
         "coco_pano_id": 78,
         "coco_pano_name": "microwave",
         "context": "appliance",
@@ -4710,6 +4754,7 @@
     },
     "mobile_phone": {
         "coco_boxable_name": "cell phone",
+        "coco_inst_id": 77,
         "coco_pano_id": 77,
         "coco_pano_name": "cell phone",
         "freebase_mid": "/m/050k8",
@@ -4763,10 +4808,11 @@
     },
     "motorcycle": {
         "cityscapes_id": 32,
-        "cityscapes_inst_name": 32,
+        "cityscapes_inst_id": 32,
         "cityscapes_name": "motorcycle",
         "cityscapes_pano_id": 32,
         "coco_boxable_name": "motorcycle",
+        "coco_inst_id": 4,
         "coco_pano_id": 4,
         "coco_pano_name": "motorcycle",
         "context": "vehicle",
@@ -4813,6 +4859,7 @@
     },
     "mouse": {
         "coco_boxable_name": "mouse",
+        "coco_inst_id": 74,
         "coco_pano_id": 74,
         "coco_pano_name": "mouse",
         "context": "animal",
@@ -5033,6 +5080,7 @@
     },
     "orange": {
         "coco_boxable_name": "orange",
+        "coco_inst_id": 55,
         "coco_pano_id": 55,
         "coco_pano_name": "orange",
         "context": "fruit",
@@ -5089,6 +5137,7 @@
     },
     "oven": {
         "coco_boxable_name": "oven",
+        "coco_inst_id": 79,
         "coco_pano_id": 79,
         "coco_pano_name": "oven",
         "freebase_mid": "/m/029bxz",
@@ -5227,6 +5276,7 @@
     },
     "parking_meter": {
         "coco_boxable_name": "parking meter",
+        "coco_inst_id": 14,
         "coco_pano_id": 14,
         "coco_pano_name": "parking meter",
         "freebase_mid": "/m/015qbp",
@@ -5399,10 +5449,11 @@
     },
     "person": {
         "cityscapes_id": 24,
-        "cityscapes_inst_name": 24,
+        "cityscapes_inst_id": 24,
         "cityscapes_name": "person",
         "cityscapes_pano_id": 24,
         "coco_boxable_name": "person",
+        "coco_inst_id": 1,
         "coco_pano_id": 1,
         "coco_pano_name": "person",
         "context": "human",
@@ -5560,6 +5611,7 @@
     },
     "pizza": {
         "coco_boxable_name": "pizza",
+        "coco_inst_id": 59,
         "coco_pano_id": 59,
         "coco_pano_name": "pizza",
         "freebase_mid": "/m/0663v",
@@ -5699,7 +5751,7 @@
     },
     "pole": {
         "cityscapes_id": 17,
-        "cityscapes_inst_name": 17,
+        "cityscapes_inst_id": 17,
         "cityscapes_name": "pole",
         "cityscapes_pano_id": 17,
         "context": "object",
@@ -5815,6 +5867,7 @@
     },
     "potted_plant": {
         "coco_boxable_name": "potted plant",
+        "coco_inst_id": 64,
         "coco_pano_id": 64,
         "coco_pano_name": "potted plant",
         "freebase_mid": "/m/03fp41",
@@ -6070,6 +6123,7 @@
     },
     "refrigerator": {
         "coco_boxable_name": "refrigerator",
+        "coco_inst_id": 82,
         "coco_pano_id": 82,
         "coco_pano_name": "refrigerator",
         "freebase_mid": "/m/040b_t",
@@ -6084,6 +6138,7 @@
     },
     "remote": {
         "coco_boxable_name": "remote",
+        "coco_inst_id": 75,
         "coco_pano_id": 75,
         "coco_pano_name": "remote",
         "context": "device",
@@ -6144,7 +6199,7 @@
     },
     "rider": {
         "cityscapes_id": 25,
-        "cityscapes_inst_name": 25,
+        "cityscapes_inst_id": 25,
         "cityscapes_name": "rider",
         "cityscapes_pano_id": 25,
         "context": "human",
@@ -6199,7 +6254,7 @@
     },
     "road": {
         "cityscapes_id": 7,
-        "cityscapes_inst_name": 7,
+        "cityscapes_inst_id": 7,
         "cityscapes_name": "road",
         "cityscapes_pano_id": 7,
         "coco_pano_id": 149,
@@ -6399,6 +6454,7 @@
     },
     "sandwich": {
         "coco_boxable_name": "sandwich",
+        "coco_inst_id": 54,
         "coco_pano_id": 54,
         "coco_pano_name": "sandwich",
         "freebase_mid": "/m/0l515",
@@ -6472,6 +6528,7 @@
     },
     "scissors": {
         "coco_boxable_name": "scissors",
+        "coco_inst_id": 87,
         "coco_pano_id": 87,
         "coco_pano_name": "scissors",
         "freebase_mid": "/m/01lsmm",
@@ -6648,6 +6705,7 @@
     },
     "sheep": {
         "coco_boxable_name": "sheep",
+        "coco_inst_id": 20,
         "coco_pano_id": 20,
         "coco_pano_name": "sheep",
         "freebase_mid": "/m/07bgp",
@@ -6772,7 +6830,7 @@
     },
     "sidewalk": {
         "cityscapes_id": 8,
-        "cityscapes_inst_name": 8,
+        "cityscapes_inst_id": 8,
         "cityscapes_name": "sidewalk",
         "cityscapes_pano_id": 8,
         "coco_pano_id": 191,
@@ -6790,6 +6848,7 @@
     },
     "sink": {
         "coco_boxable_name": "sink",
+        "coco_inst_id": 81,
         "coco_pano_id": 81,
         "coco_pano_name": "sink",
         "context": "basin",
@@ -6805,6 +6864,7 @@
     },
     "skateboard": {
         "coco_boxable_name": "skateboard",
+        "coco_inst_id": 41,
         "coco_pano_id": 41,
         "coco_pano_name": "skateboard",
         "freebase_mid": "/m/06_fw",
@@ -6820,6 +6880,7 @@
     },
     "ski": {
         "coco_boxable_name": "skis",
+        "coco_inst_id": 35,
         "coco_pano_id": 35,
         "coco_pano_name": "skis",
         "freebase_mid": "/m/071p9",
@@ -6872,7 +6933,7 @@
     },
     "sky": {
         "cityscapes_id": 23,
-        "cityscapes_inst_name": 23,
+        "cityscapes_inst_id": 23,
         "cityscapes_name": "sky",
         "cityscapes_pano_id": 23,
         "coco_pano_id": 187,
@@ -6983,6 +7044,7 @@
     },
     "snowboard": {
         "coco_boxable_name": "snowboard",
+        "coco_inst_id": 36,
         "coco_pano_id": 36,
         "coco_pano_name": "snowboard",
         "freebase_mid": "/m/06__v",
@@ -7125,6 +7187,7 @@
     },
     "spoon": {
         "coco_boxable_name": "spoon",
+        "coco_inst_id": 50,
         "coco_pano_id": 50,
         "coco_pano_name": "spoon",
         "freebase_mid": "/m/0cmx8",
@@ -7297,6 +7360,7 @@
     },
     "stop_sign": {
         "coco_boxable_name": "stop sign",
+        "coco_inst_id": 13,
         "coco_pano_id": 13,
         "coco_pano_name": "stop sign",
         "freebase_mid": "/m/02pv19",
@@ -7411,6 +7475,7 @@
     },
     "suitcase": {
         "coco_boxable_name": "suitcase",
+        "coco_inst_id": 33,
         "coco_pano_id": 33,
         "coco_pano_name": "suitcase",
         "freebase_mid": "/m/01s55n",
@@ -7446,6 +7511,7 @@
     },
     "surfboard": {
         "coco_boxable_name": "surfboard",
+        "coco_inst_id": 42,
         "coco_pano_id": 42,
         "coco_pano_name": "surfboard",
         "freebase_mid": "/m/019w40",
@@ -7704,6 +7770,7 @@
     },
     "teddy_bear": {
         "coco_boxable_name": "teddy bear",
+        "coco_inst_id": 88,
         "coco_pano_id": 88,
         "coco_pano_name": "teddy bear",
         "freebase_mid": "/m/0kmg4",
@@ -7728,6 +7795,7 @@
     },
     "television_set": {
         "coco_boxable_name": "tv",
+        "coco_inst_id": 72,
         "coco_pano_id": 72,
         "coco_pano_name": "tv",
         "freebase_mid": "/m/0bx_y3w",
@@ -7753,6 +7821,7 @@
     },
     "tennis_racket": {
         "coco_boxable_name": "tennis racket",
+        "coco_inst_id": 43,
         "coco_pano_id": 43,
         "coco_pano_name": "tennis racket",
         "freebase_mid": "/m/0h8my_4",
@@ -7801,6 +7870,7 @@
     },
     "tie": {
         "coco_boxable_name": "tie",
+        "coco_inst_id": 32,
         "coco_pano_id": 32,
         "coco_pano_name": "tie",
         "freebase_mid": "/m/01rkbr",
@@ -7868,6 +7938,7 @@
     },
     "toaster": {
         "coco_boxable_name": "toaster",
+        "coco_inst_id": 80,
         "coco_pano_id": 80,
         "coco_pano_name": "toaster",
         "context": "appliance",
@@ -7884,6 +7955,7 @@
     },
     "toilet": {
         "coco_boxable_name": "toilet",
+        "coco_inst_id": 70,
         "coco_pano_id": 70,
         "coco_pano_name": "toilet",
         "freebase_mid": "/m/09g1w",
@@ -7940,6 +8012,7 @@
     },
     "toothbrush": {
         "coco_boxable_name": "toothbrush",
+        "coco_inst_id": 90,
         "coco_pano_id": 90,
         "coco_pano_name": "toothbrush",
         "freebase_mid": "/m/012xff",
@@ -8017,10 +8090,11 @@
     },
     "traffic_light": {
         "cityscapes_id": 19,
-        "cityscapes_inst_name": 19,
+        "cityscapes_inst_id": 19,
         "cityscapes_name": "traffic light",
         "cityscapes_pano_id": 19,
         "coco_boxable_name": "traffic light",
+        "coco_inst_id": 10,
         "coco_pano_id": 10,
         "coco_pano_name": "traffic light",
         "context": "object",
@@ -8059,7 +8133,7 @@
     },
     "traffic_sign_front": {
         "cityscapes_id": 20,
-        "cityscapes_inst_name": 20,
+        "cityscapes_inst_id": 20,
         "cityscapes_name": "traffic sign",
         "cityscapes_pano_id": 20,
         "context": "object",
@@ -8091,10 +8165,11 @@
     },
     "train": {
         "cityscapes_id": 31,
-        "cityscapes_inst_name": 31,
+        "cityscapes_inst_id": 31,
         "cityscapes_name": "on rails",
         "cityscapes_pano_id": 31,
         "coco_boxable_name": "train",
+        "coco_inst_id": 7,
         "coco_pano_id": 7,
         "coco_pano_name": "train",
         "context": "rail",
@@ -8204,10 +8279,11 @@
     },
     "truck": {
         "cityscapes_id": 27,
-        "cityscapes_inst_name": 27,
+        "cityscapes_inst_id": 27,
         "cityscapes_name": "truck",
         "cityscapes_pano_id": 27,
         "coco_boxable_name": "truck",
+        "coco_inst_id": 8,
         "coco_pano_id": 8,
         "coco_pano_name": "truck",
         "context": "vehicle",
@@ -8290,6 +8366,7 @@
     },
     "umbrella": {
         "coco_boxable_name": "umbrella",
+        "coco_inst_id": 28,
         "coco_pano_id": 28,
         "coco_pano_name": "umbrella",
         "freebase_mid": "/m/0hnnb",
@@ -8358,6 +8435,7 @@
     },
     "vase": {
         "coco_boxable_name": "vase",
+        "coco_inst_id": 86,
         "coco_pano_id": 86,
         "coco_pano_name": "vase",
         "freebase_mid": "/m/02s195",
@@ -8383,7 +8461,7 @@
     },
     "vegetation": {
         "cityscapes_id": 21,
-        "cityscapes_inst_name": 21,
+        "cityscapes_inst_id": 21,
         "cityscapes_name": "vegetation",
         "cityscapes_pano_id": 21,
         "context": "nature",
@@ -8452,7 +8530,7 @@
     },
     "wall": {
         "cityscapes_id": 12,
-        "cityscapes_inst_name": 12,
+        "cityscapes_inst_id": 12,
         "cityscapes_name": "wall",
         "cityscapes_pano_id": 12,
         "coco_pano_id": 199,
@@ -8672,6 +8750,7 @@
     },
     "wine_glass": {
         "coco_boxable_name": "wine glass",
+        "coco_inst_id": 46,
         "coco_pano_id": 46,
         "coco_pano_name": "wine glass",
         "freebase_mid": "/m/09tvcd",
@@ -8792,6 +8871,7 @@
     },
     "zebra": {
         "coco_boxable_name": "zebra",
+        "coco_inst_id": 24,
         "coco_pano_id": 24,
         "coco_pano_name": "zebra",
         "freebase_mid": "/m/0898b",

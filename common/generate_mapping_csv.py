@@ -5,7 +5,8 @@
 
 import os, sys, argparse, json, csv, time
 
-join_obj_det = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvs_boxable_name"]
+#join_obj_det = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvs_boxable_name"]
+join_inst = ["oid_inst_leaf","coco_inst_id","cityscapes_inst_id","mvs_boxable_name"] #TODO: KITTI,
 
 def solve_leaf_boxable(joined_label_space, oid_n, mid_to_key):
     if "Subcategory" in oid_n:
