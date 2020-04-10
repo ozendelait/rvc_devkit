@@ -690,7 +690,9 @@
         "mvs_name": "object--bike-rack",
         "wikidata_desc": "device used to park bicycles, not to be confused with a kick stand",
         "wikidata_name": "bicycle stand",
-        "wikidata_qid": "Q1392526"
+        "wikidata_qid": "Q1392526",
+        "wordnet_gloss": "a rack for parking bicycles",
+        "wordnet_pwn30": "n02835829"
     },
     "billboard": {
         "context": "object",
@@ -5202,7 +5204,8 @@
         "mvs_name": "construction--flat--pedestrian-area",
         "wikidata_desc": "area of a city or town reserved for pedestrian-only use",
         "wikidata_name": "pedestrian zone",
-        "wikidata_qid": "Q369730"
+        "wikidata_qid": "Q369730",
+        "wordnet_pwn30": ""
     },
     "pedestrian_crossing": {
         "context": "striped_and_plain_crosswalk",
@@ -7162,7 +7165,8 @@
         "mvs_name": "marking--crosswalk-zebra",
         "wikidata_desc": "type of pedestrian crossing",
         "wikidata_name": "zebra crossing",
-        "wikidata_qid": "Q7328304"
+        "wikidata_qid": "Q7328304",
+        "wordnet_pwn30": ""
     },
     "stroller": {
         "freebase_mid": "/m/03ylns",
@@ -8151,7 +8155,9 @@
         "mvs_name": "nature--vegetation",
         "wikidata_desc": "total of plant formations and plant communities",
         "wikidata_name": "vegetation",
-        "wikidata_qid": "Q187997"
+        "wikidata_qid": "Q187997",
+        "wordnet_gloss": "all the plant life in a particular region or period; \"Pleistocene vegetation\"; \"the flora of southern California\"; \"the botany of China\"",
+        "wordnet_pwn30": "n08436759"
     },
     "vehicle": {
         "freebase_mid": "/m/07yv9",
