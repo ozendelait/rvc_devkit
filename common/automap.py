@@ -358,10 +358,11 @@ def main(argv=sys.argv[1:]):
             #mapillary-style json
             id_param = appendf["id_prefix"]+"_id"
             name_param = appendf["id_prefix"]+"_name"
-            id_param_eval = appendf["id_prefix"] + "_id"
+            id_param_eval = appendf["id_prefix_eval"] + "_id"
             possible_cat = None
+            is_inst = ("boxable" in id_param_eval or "inst" in id_param_eval)
             for idx0, vals in enumerate(appendf["labels"]):
-                if ("boxable" in id_param_eval or "inst" in id_param_eval) and vals.get('instances', False):
+                if is_inst and vals.get('instances', False):
                     continue # quick hack to add all instance classes as boxables / inst
                 if vals['name'] in check_dubl[name_param]:
                     key = check_dubl[name_param][vals['name']]
@@ -381,7 +382,10 @@ def main(argv=sys.argv[1:]):
                     print("Adding: "+key+ " for ", vals)
                     joined_label_space[key] = {}
                 trg_entry = joined_label_space[key]
-                vals_add = {id_param:idx0, name_param:vals['name']}
+                #uniqid = vals['name'] if is_inst else vals['name']
+                vals_add = {name_param:vals['name']}
+                if not is_inst:
+                    vals_add[id_param] = idx0
                 if vals.get("evaluate", True):
                     vals_add[id_param_eval] = idx0
                 if not possible_cat is None:
