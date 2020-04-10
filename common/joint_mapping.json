@@ -7013,8 +7013,7 @@
         "wikidata_desc": "mobile computer with display, circuitry and battery",
         "wikidata_name": "tablet computer",
         "wikidata_qid": "Q155972",
-        "wordnet_gloss": "a dose of medicine in the form of a small pellet",
-        "wordnet_pwn30": "n03936568"
+        "wordnet_pwn30": ""
     },
     "tableware": {
         "freebase_mid": "/m/04brg2",
@@ -7043,8 +7042,7 @@
         "wikidata_desc": "heavy armored fighting vehicle",
         "wikidata_name": "tank",
         "wikidata_qid": "Q12876",
-        "wordnet_gloss": "a cell for violent prisoners",
-        "wordnet_pwn30": "n03102771"
+        "wordnet_pwn30": "n04389033"
     },
     "tap": {
         "freebase_mid": "/m/02jz0l",
@@ -7055,8 +7053,7 @@
         "wikidata_desc": "regulated inflow of water, for example for drinking water",
         "wikidata_name": "tap",
         "wikidata_qid": "Q656656",
-        "wordnet_gloss": "a plug for a bunghole in a cask",
-        "wordnet_pwn30": "n04390977"
+        "wordnet_pwn30": "n03325088"
     },
     "target": {
         "freebase_mid": "/m/04_z0s",
@@ -7098,8 +7095,7 @@
         "wikidata_desc": "drink made from infusing boiling water with the leaves of the tea plant",
         "wikidata_name": "tea",
         "wikidata_qid": "Q6097",
-        "wordnet_gloss": "a light midafternoon meal of tea and sandwiches or cakes; \"an Englishman would interrupt a war to have his afternoon tea\"",
-        "wordnet_pwn30": "n07575510"
+        "wordnet_pwn30": "n12929783"
     },
     "teapot": {
         "freebase_mid": "/m/01fh4r",
@@ -7137,15 +7133,15 @@
         "wordnet_gloss": "electronic equipment that converts sound into electrical signals that can be transmitted over distances and then converts received signals back into sounds; \"I talked to him on the telephone\"",
         "wordnet_pwn30": "n04401088"
     },
-    "television": {
+    "television_set": {
+        "coco_boxable_name": "tv",
+        "coco_pano_id": 72,
+        "coco_pano_name": "tv",
         "freebase_mid": "/m/07c52",
         "oid_boxable_leaf": "/m/07c52",
         "oid_name": "Television",
-        "wikidata_desc": "telecommunication medium for transmitting and receiving moving images",
-        "wikidata_name": "television",
-        "wikidata_qid": "Q289",
-        "wordnet_gloss": "a telecommunication system that transmits images of objects (stationary or moving) between distant points",
-        "wordnet_pwn30": "n04404412"
+        "wikidata_qid": "Q8075",
+        "wordnet_pwn30": "n04405907"
     },
     "tennis_ball": {
         "freebase_mid": "/m/05ctyq",
@@ -7204,8 +7200,7 @@
         "wikidata_desc": "superfamily of arachnids",
         "wikidata_name": "Ixodoidea",
         "wikidata_qid": "Q82645",
-        "wordnet_gloss": "a light mattress",
-        "wordnet_pwn30": "n04432308"
+        "wordnet_pwn30": "n01776313"
     },
     "tie": {
         "coco_boxable_name": "tie",
@@ -7219,8 +7214,7 @@
         "wikidata_desc": "clothing item, traditionally worn by boys and men with dress shirt",
         "wikidata_name": "necktie",
         "wikidata_qid": "Q44416",
-        "wordnet_gloss": "a fastener that serves to join or connect; \"the walls are held together with metal links placed in the wet mortar during construction\"",
-        "wordnet_pwn30": "n03673971"
+        "wordnet_pwn30": "n03815615"
     },
     "tiger": {
         "freebase_mid": "/m/07dm6",
@@ -7239,7 +7233,8 @@
         "freebase_mid": "/m/021w6f",
         "wikidata_desc": "manufactured piece of hard-wearing material",
         "wikidata_name": "tile",
-        "wikidata_qid": "Q468402"
+        "wikidata_qid": "Q468402",
+		"wordnet_pwn30": "n04435180"
     },
     "tin_can": {
         "freebase_mid": "/m/02jnhm",
@@ -7300,8 +7295,7 @@
         "wikidata_desc": "sanitation fixture",
         "wikidata_name": "toilet",
         "wikidata_qid": "Q7857",
-        "wordnet_gloss": "a room or building equipped with one or more toilets",
-        "wordnet_pwn30": "n04446276"
+        "wordnet_pwn30": "n04446521"
     },
     "toilet_paper": {
         "freebase_mid": "/m/09gtd",
@@ -7365,8 +7359,7 @@
         "wikidata_desc": "stick with a flaming end used as a source of light",
         "wikidata_name": "torch",
         "wikidata_qid": "Q327954",
-        "wordnet_gloss": "a burner that mixes air and gas to produce a very hot flame",
-        "wordnet_pwn30": "n02855390"
+        "wordnet_pwn30": "n04456115"
     },
     "tortoise": {
         "freebase_mid": "/m/011k07",
@@ -7410,8 +7403,7 @@
         "wikidata_desc": "thing to be played with",
         "wikidata_name": "toy",
         "wikidata_qid": "Q11422",
-        "wordnet_gloss": "a copy that reproduces a person or thing in greatly reduced size",
-        "wordnet_pwn30": "n03769235"
+        "wordnet_pwn30": "n03964744"
     },
     "traffic_cone": {
         "freebase_mid": "/m/03sy7v",
@@ -7419,6 +7411,7 @@
         "wikidata_desc": "Traffick Cone",
         "wikidata_name": "traffic cone",
         "wikidata_qid": "Q694547"
+		"wordnet_pwn30": ""
     },
     "traffic_light": {
         "coco_boxable_name": "traffic light",
@@ -7465,7 +7458,8 @@
         "oid_name": "Training bench",
         "wikidata_desc": "weight training apparatus",
         "wikidata_name": "bench",
-        "wikidata_qid": "Q1422097"
+        "wikidata_qid": "Q1422097",
+		"wordnet_pwn30": "n03360622"
     },
     "treadmill": {
         "freebase_mid": "/m/030610",
@@ -7476,7 +7470,7 @@
         "wikidata_name": "treadmill",
         "wikidata_qid": "Q839144",
         "wordnet_gloss": "a mill that is powered by men or animals walking on a circular belt or climbing steps",
-        "wordnet_pwn30": "n04477219"
+        "wordnet_pwn30": "n04477387"
     },
     "tree": {
         "coco_pano_id": 184,
@@ -7559,8 +7553,7 @@
         "wikidata_desc": "freight motor vehicle",
         "wikidata_name": "truck",
         "wikidata_qid": "Q43193",
-        "wordnet_gloss": "a handcart that has a frame with two low wheels and a ledge at the bottom and handles at the top; used to move crates or other heavy objects",
-        "wordnet_pwn30": "n03490119"
+        "wordnet_pwn30": "n04490091"
     },
     "trumpet": {
         "freebase_mid": "/m/07gql",
@@ -7599,15 +7592,7 @@
         "wikidata_name": "turtle",
         "wikidata_qid": "Q223044",
         "wordnet_gloss": "a sweater or jersey with a high close-fitting collar",
-        "wordnet_pwn30": "n04502197"
-    },
-    "tv": {
-        "coco_boxable_name": "tv",
-        "coco_pano_id": 72,
-        "coco_pano_name": "tv",
-        "wikidata_qid": "Q80752",
-        "wordnet_gloss": "an electronic device that receives television signals and displays them on a screen; \"the British call a tv set a telly\"",
-        "wordnet_pwn30": "n04405907"
+        "wordnet_pwn30": "n01662784"
     },
     "umbrella": {
         "coco_boxable_name": "umbrella",
@@ -7876,8 +7861,7 @@
         "wikidata_desc": "kitchen utensil used for mixing and/or whipping ingredients",
         "wikidata_name": "whisk",
         "wikidata_qid": "Q263057",
-        "wordnet_gloss": "a small short-handled broom used to brush clothes",
-        "wordnet_pwn30": "n04578801"
+        "wordnet_pwn30": "n04578934"
     },
     "whiteboard": {
         "freebase_mid": "/m/02d9qx",
@@ -7898,8 +7882,7 @@
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Salix",
         "wikidata_qid": "Q36050",
-        "wordnet_gloss": "a textile machine having a system of revolving spikes for opening and cleaning raw textile fibers",
-        "wordnet_pwn30": "n04584794"
+        "wordnet_pwn30": "n12724942"
     },
     "window": {
         "coco_pano_id": 181,
@@ -7955,6 +7938,7 @@
         "oid_name": "Wine rack",
         "wikidata_name": "Wine rack",
         "wikidata_qid": "Q2941029"
+		"wordnet_pwn30": ""
     },
     "winter_melon": {
         "freebase_mid": "/m/02cvgx",
@@ -7986,8 +7970,7 @@
         "wikidata_desc": "female adult human",
         "wikidata_name": "woman",
         "wikidata_qid": "Q467",
-        "wordnet_gloss": "women as a class; \"it's an insult to American womanhood\"; \"woman is the glory of creation\"; \"the fair sex gathered on the veranda\"",
-        "wordnet_pwn30": "n08477634"
+        "wordnet_pwn30": "n10787470"
     },
     "wood-burning_stove": {
         "freebase_mid": "/m/04169hn",
@@ -7995,7 +7978,8 @@
         "oid_name": "Wood-burning stove",
         "wikidata_desc": "type of stove",
         "wikidata_name": "wood-burning stove",
-        "wikidata_qid": "Q1370219"
+        "wikidata_qid": "Q1370219",
+		"wordnet_pwn30": "n03102371"
     },
     "wooden_floor": {
         "coco_pano_id": 118,
@@ -8006,6 +7990,7 @@
     "wooden_wall": {
         "coco_pano_id": 177,
         "coco_pano_name": "wall-wood",
+		"wikidata_qid": "Q838828",
         "wordnet_gloss": "paneling that forms part of a wall",
         "wordnet_pwn30": "n04548503"
     },
@@ -8026,8 +8011,7 @@
         "wikidata_desc": "animal that typically has a long tube-like body and no legs",
         "wikidata_name": "worm",
         "wikidata_qid": "Q47253",
-        "wordnet_gloss": "screw thread on a gear with the teeth of a worm wheel or rack",
-        "wordnet_pwn30": "n04604513"
+        "wordnet_pwn30": "n01922303"
     },
     "wrench": {
         "freebase_mid": "/m/01j5ks",
