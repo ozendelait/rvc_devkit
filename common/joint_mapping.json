@@ -318,6 +318,9 @@
     "banner": {
         "coco_pano_id": 92,
         "coco_pano_name": "banner",
+        "context": "object",
+        "mvs_id": 32,
+        "mvs_name": "object--banner",
         "wikidata_desc": "flag or other piece of cloth bearing a symbol, logo, slogan or other message",
         "wikidata_name": "banner",
         "wikidata_qid": "Q806880",
@@ -373,6 +376,12 @@
         "wikidata_qid": "Q10289",
         "wordnet_gloss": "a cylindrical container that holds liquids",
         "wordnet_pwn30": "n02795169"
+    },
+    "barrier": {
+        "context": "construction",
+        "freebase_mid": "/m/0ckn6l",
+        "mvs_id": 5,
+        "mvs_name": "construction--barrier--other-barrier",
     },
     "baseball": {
         "freebase_mid": "/m/03v6wp",
@@ -589,7 +598,10 @@
         "coco_boxable_name": "bench",
         "coco_pano_id": 15,
         "coco_pano_name": "bench",
+        "context": "object",
         "freebase_mid": "/m/0cvnqh",
+        "mvs_id": 33,
+        "mvs_name": "object--bench",
         "obj365_boxable_name": "Bench",
         "oid_boxable_leaf": "/m/0cvnqh",
         "oid_name": "Bench",
@@ -603,7 +615,10 @@
         "coco_boxable_name": "bicycle",
         "coco_pano_id": 2,
         "coco_pano_name": "bicycle",
+        "context": "object",
         "freebase_mid": "/m/0199g",
+        "mvs_id": 52,
+        "mvs_name": "object--vehicle--bicycle",
         "obj365_boxable_name": "Bicycle",
         "oid_boxable_leaf": "/m/0199g",
         "oid_name": "Bicycle",
@@ -634,6 +649,14 @@
         "wordnet_gloss": "the wheel of a bicycle",
         "wordnet_pwn30": "n02836035"
     },
+    "bicyclist": {
+        "context": "human",
+        "mvs_id": 20,
+        "mvs_name": "human--rider--bicyclist",
+        "wikidata_desc": "person who rides a bike",
+        "wikidata_name": "cyclist",
+        "wikidata_qid": "Q2125610"
+    },
     "bidet": {
         "freebase_mid": "/m/01vbnl",
         "oid_boxable_leaf": "/m/01vbnl",
@@ -644,8 +667,28 @@
         "wordnet_gloss": "a basin for washing genitals and anal area",
         "wordnet_pwn30": "n02836174"
     },
+    "bike_lane": {
+        "context": "construction",
+        "mvs_id": 7,
+        "mvs_name": "construction--flat--bike-lane",
+        "wikidata_desc": "road traffic lane for cyclists",
+        "wikidata_name": "cycle lane",
+        "wikidata_qid": "Q1378400"
+    },
+    "bike_rack": {
+        "context": "object",
+        "freebase_mid": "/m/01pch1",
+        "mvs_id": 34,
+        "mvs_name": "object--bike-rack",
+        "wikidata_desc": "device used to park bicycles, not to be confused with a kick stand",
+        "wikidata_name": "bicycle stand",
+        "wikidata_qid": "Q1392526"
+    },
     "billboard": {
+        "context": "object",
         "freebase_mid": "/m/01knjb",
+        "mvs_id": 35,
+        "mvs_name": "object--billboard",
         "oid_boxable_leaf": "/m/01knjb",
         "oid_name": "Billboard",
         "wikidata_desc": "advertising signage",
@@ -692,6 +735,8 @@
         "coco_pano_name": "bird",
         "context": "animal",
         "freebase_mid": "/m/015p6",
+        "mvs_id": 0,
+        "mvs_name": "animal--bird",
         "obj365_boxable_name": "Wild Bird",
         "oid_name": "Bird",
         "wikidata_desc": "class of tetrapods",
@@ -744,7 +789,10 @@
         "coco_boxable_name": "boat",
         "coco_pano_id": 9,
         "coco_pano_name": "boat",
+        "context": "object",
         "freebase_mid": "/m/019jd",
+        "mvs_id": 53,
+        "mvs_name": "object--vehicle--boat",
         "obj365_boxable_name": "Boat",
         "oid_name": "Boat",
         "wikidata_desc": "smaller watercraft",
@@ -941,6 +989,9 @@
     "bridge": {
         "coco_pano_id": 95,
         "coco_pano_name": "bridge",
+        "context": "construction",
+        "mvs_id": 16,
+        "mvs_name": "construction--structure--bridge",
         "wikidata_desc": "bridge",
         "wikidata_name": "Q147864",
         "wikidata_qid": "Q147864",
@@ -1017,7 +1068,10 @@
     "building": {
         "coco_pano_id": 197,
         "coco_pano_name": "building-other-merged",
+        "context": "construction",
         "freebase_mid": "/m/0cgh4",
+        "mvs_id": 17,
+        "mvs_name": "construction--structure--building",
         "oid_name": "Building",
         "wikidata_desc": "structure, typically with a roof and walls, standing more or less permanently in one place",
         "wikidata_name": "building",
@@ -1052,7 +1106,10 @@
         "coco_boxable_name": "bus",
         "coco_pano_id": 6,
         "coco_pano_name": "bus",
+        "context": "object",
         "freebase_mid": "/m/01bjv",
+        "mvs_id": 54,
+        "mvs_name": "object--vehicle--bus",
         "obj365_boxable_name": "Bus",
         "oid_boxable_leaf": "/m/01bjv",
         "oid_inst_leaf": "/m/01bjv",
@@ -1246,8 +1303,10 @@
         "coco_boxable_name": "car",
         "coco_pano_id": 3,
         "coco_pano_name": "car",
-        "context": "auto",
+        "context": "object",
         "freebase_mid": "/m/0k4j",
+        "mvs_id": 55,
+        "mvs_name": "object--vehicle--car",
         "obj365_boxable_name": "Car",
         "oid_name": "Car",
         "wikidata_desc": "road vehicle powered by a motor to carry driver and small number of passengers",
@@ -1255,6 +1314,15 @@
         "wikidata_qid": "Q1420",
         "wordnet_gloss": "a motor vehicle with four wheels; usually propelled by an internal combustion engine; \"he needs a car to get to work\"",
         "wordnet_pwn30": "n02958343"
+    },
+    "caravan": {
+        "context": "object",
+        "freebase_mid": "/m/043tzlr",
+        "mvs_id": 56,
+        "mvs_name": "object--vehicle--caravan",
+        "wikidata_desc": "group of people or animals traveling together in a row",
+        "wikidata_name": "caravan",
+        "wikidata_qid": "Q203494"
     },
     "cardboard": {
         "coco_pano_id": 100,
@@ -1339,6 +1407,11 @@
         "wikidata_name": "Cat tree",
         "wikidata_qid": "Q1014401",
         "wordnet_pwn30": ""
+    },
+    "catch_basin": {
+        "context": "object",
+        "mvs_id": 36,
+        "mvs_name": "object--catch-basin"
     },
     "caterpillar": {
         "freebase_mid": "/m/0cydv",
@@ -2004,6 +2077,20 @@
         "wordnet_gloss": "a small room (or recess) or cabinet used for storage space",
         "wordnet_pwn30": "n03148324"
     },
+    "curb": {
+        "context": "construction",
+        "mvs_id": 2,
+        "mvs_name": "construction--barrier--curb",
+    },
+    "curb_cut": {
+        "context": "construction",
+        "freebase_mid": "/m/0q5br",
+        "mvs_id": 9,
+        "mvs_name": "construction--flat--curb-cut",
+        "wikidata_desc": "Lowered road-edge allowing level acces from pavement to road surface",
+        "wikidata_name": "curb cut",
+        "wikidata_qid": "Q2891126"
+    },
     "curling_stone": {
         "obj365_boxable_name": "Curling",
         "wikidata_desc": "",
@@ -2621,7 +2708,9 @@
     "fence": {
         "coco_pano_id": 185,
         "coco_pano_name": "fence-merged",
-        "context": "barrier",
+        "context": "construction",
+        "mvs_id": 3,
+        "mvs_name": "construction--barrier--fence",
         "wikidata_desc": "fence or barrier consisting of one or more horizontal rails and vertical supports",
         "wikidata_name": "railing",
         "wikidata_qid": "Q3095365",
@@ -2652,7 +2741,10 @@
         "coco_boxable_name": "fire hydrant",
         "coco_pano_id": 11,
         "coco_pano_name": "fire hydrant",
+        "context": "object",
         "freebase_mid": "/m/01pns0",
+        "mvs_id": 38,
+        "mvs_name": "object--fire-hydrant",
         "obj365_boxable_name": "Fire Hydrant",
         "oid_boxable_leaf": "/m/01pns0",
         "oid_inst_leaf": "/m/01pns0",
@@ -3203,6 +3295,11 @@
         "wikidata_qid": "Q207968",
         "wordnet_gloss": "a dip made of mashed avocado mixed with chopped onions and other seasonings",
         "wordnet_pwn30": "n07583066"
+    },
+    "guard_rail": {
+        "context": "construction",
+        "mvs_id": 4,
+        "mvs_name": "construction--barrier--guard-rail"
     },
     "guitar": {
         "freebase_mid": "/m/0342h",
@@ -3767,6 +3864,12 @@
         "wordnet_gloss": "any of several liquids of the body; \"digestive juices\"",
         "wordnet_pwn30": "n05398609"
     },
+    "junction_box": {
+        "context": "object",
+        "freebase_mid": "/m/02p8q0k",
+        "mvs_id": 39,
+        "mvs_name": "object--junction-box",
+    },
     "kangaroo": {
         "freebase_mid": "/m/04c0y",
         "oid_boxable_leaf": "/m/04c0y",
@@ -3939,6 +4042,16 @@
         "wikidata_name": "land vehicle",
         "wikidata_qid": "Q1301433",
         "wordnet_pwn30": ""
+    },
+    "lane_marking_crosswalk": {
+        "context": "marking",
+        "mvs_id": 23,
+        "mvs_name": "marking--crosswalk-zebra"
+    },
+    "lane_marking_general": {
+        "context": "marking",
+        "mvs_id": 24,
+        "mvs_name": "marking--general"
     },
     "lantern": {
         "freebase_mid": "/m/01jfsr",
@@ -4194,6 +4307,15 @@
         "wordnet_gloss": "long-tailed black-and-white crow that utters a raucous chattering call",
         "wordnet_pwn30": "n01582220"
     },
+    "mailbox": {
+        "context": "object",
+        "freebase_mid": "/m/04w67_",
+        "mvs_id": 40,
+        "mvs_name": "object--mailbox",
+        "wikidata_desc": "post collection point",
+        "wikidata_name": "post box",
+        "wikidata_qid": "Q49844"
+    },
     "mammal": {
         "freebase_mid": "/m/04rky",
         "oid_name": "Mammal",
@@ -4225,6 +4347,15 @@
         "wikidata_qid": "Q169",
         "wordnet_gloss": "large oval tropical fruit having smooth skin, juicy aromatic pulp, and a large hairy seed",
         "wordnet_pwn30": "n07764155"
+    },
+    "manhole": {
+        "context": "object",
+        "freebase_mid": "/m/0250ff",
+        "mvs_id": 41,
+        "mvs_name": "object--manhole",
+        "wikidata_desc": "the top opening to an underground utility vault used to house an access point for making connections, inspection, valve adjustments or performing maintenance on underground and buried public utility and other services",
+        "wikidata_name": "manhole",
+        "wikidata_qid": "Q532998"
     },
     "maple": {
         "freebase_mid": "/m/0cffdh",
@@ -4473,7 +4604,10 @@
         "coco_boxable_name": "motorcycle",
         "coco_pano_id": 4,
         "coco_pano_name": "motorcycle",
+        "context": "object",
         "freebase_mid": "/m/04_sv",
+        "mvs_id": 57,
+        "mvs_name": "object--vehicle--motorcycle",
         "obj365_boxable_name": "Motorcycle",
         "oid_boxable_leaf": "/m/04_sv",
         "oid_inst_leaf": "/m/04_sv",
@@ -4484,11 +4618,18 @@
         "wordnet_gloss": "a motor vehicle with two wheels and a strong frame",
         "wordnet_pwn30": "n03790512"
     },
+    "motorcyclist": {
+        "context": "human",
+        "mvs_id": 21,
+        "mvs_name": "human--rider--motorcyclist",
+    },
     "mountain": {
         "coco_pano_id": 192,
         "coco_pano_name": "mountain-merged",
-        "context": "land",
+        "context": "nature",
         "freebase_mid": "/m/09d_r",
+        "mvs_id": 25,
+        "mvs_name": "nature--mountain",
         "wikidata_desc": "large landform that stretches above the surrounding land",
         "wikidata_name": "mountain",
         "wikidata_qid": "Q8502",
@@ -4902,6 +5043,11 @@
         "wordnet_gloss": "rescue equipment consisting of a device that fills with air and retards your fall",
         "wordnet_pwn30": "n03888257"
     },
+    "parking_space": {
+        "context": "construction",
+        "mvs_id": 10,
+        "mvs_name": "construction--flat--parking",
+    },
     "parking_meter": {
         "coco_boxable_name": "parking meter",
         "coco_pano_id": 14,
@@ -4980,6 +5126,11 @@
         "wordnet_gloss": "sweet juicy gritty-textured fruit available in many varieties",
         "wordnet_pwn30": "n07767847"
     },
+    "pedestrian_area": {
+        "context": "construction",
+        "mvs_id": 11,
+        "mvs_name": "construction--flat--pedestrian-area"
+    },
     "pen": {
         "freebase_mid": "/m/0k1tl",
         "obj365_boxable_name": "Pen/Pencil",
@@ -5045,7 +5196,10 @@
         "coco_boxable_name": "person",
         "coco_pano_id": 1,
         "coco_pano_name": "person",
+        "context": "human",
         "freebase_mid": "/m/01g317",
+        "mvs_id": 19,
+        "mvs_name": "human--person",
         "obj365_boxable_name": "Person",
         "oid_name": "Person",
         "wikidata_desc": "being that has certain capacities or attributes constituting personhood (avoid use with P31; use Q5 for humans)",
@@ -5072,6 +5226,15 @@
         "wikidata_qid": "Q1262971",
         "wordnet_gloss": "rescue equipment consisting of a buoyant belt or jacket to keep a person from drowning",
         "wordnet_pwn30": "n03663531"
+    },
+    "phone_booth": {
+        "context": "object",
+        "freebase_mid": "/m/01x9x4",
+        "mvs_id": 42,
+        "mvs_name": "object--phone-booth",
+        "wikidata_desc": "small structure furnished with a payphone",
+        "wikidata_name": "telephone booth",
+        "wikidata_qid": "Q1143785"
     },
     "piano": {
         "freebase_mid": "/m/05r5c",
@@ -5311,6 +5474,14 @@
         "wordnet_gloss": "white bear of Arctic regions",
         "wordnet_pwn30": "n02134084"
     },
+    "pole": {
+        "context": "object",
+        "mvs_id": 45,
+        "mvs_name": "object--support--pole",
+        "wikidata_desc": "architectural structure",
+        "wikidata_name": "pole",
+        "wikidata_qid": "Q525800"
+    },
     "pomegranate": {
         "freebase_mid": "/m/0jwn_",
         "obj365_boxable_name": "Pomegranate",
@@ -5391,6 +5562,15 @@
         "wikidata_qid": "Q173265",
         "wordnet_gloss": "a thin crisp slice of potato fried in deep fat",
         "wordnet_pwn30": "n07712559"
+    },
+    "pothole": {
+        "context": "object",
+        "freebase_mid": "/m/03lfn5",
+        "mvs_id": 43,
+        "mvs_name": "object--pothole",
+        "wikidata_qid": "Q1485806",
+        "wordnet_gloss": "a pit or hole produced by wear or weathering (especially in a road surface)",
+        "wordnet_pwn30": "n09398076"
     },
     "potted_plant": {
         "coco_boxable_name": "potted plant",
@@ -5569,13 +5749,12 @@
         "wordnet_gloss": "pungent fleshy edible root",
         "wordnet_pwn30": "n07735687"
     },
-    "railroad": {
+    "rail_track": {
         "coco_pano_id": 147,
-        "coco_pano_name": "railroad",
-        "freebase_mid": "/m/06d_3",
-        "wikidata_desc": "conveyance of passengers and goods by way of wheeled vehicles running on rail tracks",
-        "wikidata_name": "rail transport",
-        "wikidata_qid": "Q3565868",
+        "coco_pano_name": "railroad"
+        "context": "construction",
+        "mvs_id": 12,
+        "mvs_name": "construction--flat--rail-track",
         "wordnet_gloss": "a line of track providing a runway for wheels; \"he walked along the railroad track\"",
         "wordnet_pwn30": "n04048075"
     },
@@ -5751,7 +5930,10 @@
     "road": {
         "coco_pano_id": 149,
         "coco_pano_name": "road",
+        "context": "construction",
         "freebase_mid": "/m/06gfj",
+        "mvs_id": 13,
+        "mvs_name": "construction--flat--road",
         "wikidata_desc": "way on land between two places",
         "wikidata_name": "road",
         "wikidata_qid": "Q34442",
@@ -5895,7 +6077,10 @@
     "sand": {
         "coco_pano_id": 154,
         "coco_pano_name": "sand",
+        "context": "nature",
         "freebase_mid": "/m/099fz",
+        "mvs_id": 26,
+        "mvs_name": "nature--sand",
         "wikidata_desc": "granular material composed of finely divided rock and mineral particles, sand particles range in diameter from 0.063 to 2 mm (per ISO 14688)",
         "wikidata_name": "sand",
         "wikidata_qid": "Q34679",
@@ -6131,6 +6316,11 @@
         "wordnet_gloss": "(trademark) a self-balancing personal transportation device with two wheels; can operate in any level pedestrian environment",
         "wordnet_pwn30": "n04168199"
     },
+    "service_lane": {
+        "context": "construction",
+        "mvs_id": 14,
+        "mvs_name": "construction--flat--service-lane"
+    },
     "serving_tray": {
         "freebase_mid": "/m/0h8n27j",
         "oid_boxable_leaf": "/m/0h8n27j",
@@ -6289,7 +6479,10 @@
     "sidewalk": {
         "coco_pano_id": 191,
         "coco_pano_name": "pavement-merged",
+        "context": "construction",
         "freebase_mid": "/m/0dnhy",
+        "mvs_id": 15,
+        "mvs_name": "construction--flat--sidewalk",
         "wikidata_desc": "pedestrian path along the side of a road",
         "wikidata_name": "sidewalk",
         "wikidata_qid": "Q177749",
@@ -6381,7 +6574,10 @@
     "sky": {
         "coco_pano_id": 187,
         "coco_pano_name": "sky-other-merged",
+        "context": "nature",
         "freebase_mid": "/m/01bqvp",
+        "mvs_id": 27,
+        "mvs_name": "nature--sky",
         "wikidata_desc": "everything that is above the surface of the Earth",
         "wikidata_name": "sky",
         "wikidata_qid": "Q527",
@@ -6470,7 +6666,10 @@
     "snow": {
         "coco_pano_id": 159,
         "coco_pano_name": "snow",
+        "context": "nature",
         "freebase_mid": "/m/06_dn",
+        "mvs_id": 28,
+        "mvs_name": "nature--snow",
         "wikidata_desc": "precipitation in the form of flakes of crystalline water ice",
         "wikidata_name": "snow",
         "wikidata_qid": "Q7561",
@@ -6810,7 +7009,10 @@
         "wordnet_pwn30": "n07745940"
     },
     "street_light": {
+        "context": "object",
         "freebase_mid": "/m/033rq4",
+        "mvs_id": 44,
+        "mvs_name": "object--street-light",
         "obj365_boxable_name": "Street Lights",
         "oid_boxable_leaf": "/m/033rq4",
         "oid_name": "Street light",
@@ -7246,6 +7448,11 @@
         "wordnet_gloss": "a portable shelter (usually of canvas stretched over supporting poles and fastened to the ground with ropes and pegs); \"he pitched his tent near the creek\"",
         "wordnet_pwn30": "n04411264"
     },
+    "terrain": {
+        "context": "nature",
+        "mvs_id": 29,
+        "mvs_name": "nature--terrain",
+    },
     "tiara": {
         "freebase_mid": "/m/01krhy",
         "oid_boxable_leaf": "/m/01krhy",
@@ -7486,7 +7693,10 @@
         "coco_boxable_name": "traffic light",
         "coco_pano_id": 10,
         "coco_pano_name": "traffic light",
+        "context": "object",
         "freebase_mid": "/m/015qff",
+        "mvs_id": 48,
+        "mvs_name": "object--traffic-light",
         "obj365_boxable_name": "Traffic Light",
         "oid_boxable_leaf": "/m/015qff",
         "oid_inst_leaf": "/m/015qff",
@@ -7497,7 +7707,7 @@
         "wordnet_gloss": "a visual signal to control the flow of traffic at intersections",
         "wordnet_pwn30": "n06874185"
     },
-    "traffic_sign": {
+    "traffic_sign_front": {
         "freebase_mid": "/m/01mqdt",
         "obj365_boxable_name": "Traffic Sign",
         "oid_name": "Traffic sign",
@@ -7506,7 +7716,27 @@
         "wikidata_qid": "Q170285",
         "wordnet_pwn30": ""
     },
+    "traffic_sign_backside": {
+        "context": "object",
+        "mvs_id": 49,
+        "mvs_name": "object--traffic-sign--back"
+    },
+    "traffic_sign_frame": {
+        "context": "object",
+        "mvs_id": 46,
+        "mvs_name": "object--support--traffic-sign-frame"
+    },
+    "trailer": {
+        "context": "object",
+        "mvs_id": 60,
+        "mvs_name": "object--vehicle--trailer",
+        "wikidata_desc": "trailer",
+        "wikidata_name": "Trailer",
+        "wikidata_qid": "Q7832787"
+    },
     "train": {
+        "mvs_id": 58,
+        "mvs_name": "object--vehicle--on-rails"
         "coco_boxable_name": "train",
         "coco_pano_id": 7,
         "coco_pano_name": "train",
@@ -7616,7 +7846,10 @@
         "coco_boxable_name": "truck",
         "coco_pano_id": 8,
         "coco_pano_name": "truck",
+        "context": "object",
         "freebase_mid": "/m/07r04",
+        "mvs_id": 61,
+        "mvs_name": "object--vehicle--truck",
         "obj365_boxable_name": "Truck",
         "oid_boxable_leaf": "/m/07r04",
         "oid_inst_leaf": "/m/07r04",
@@ -7654,6 +7887,11 @@
         "wikidata_qid": "Q131168",
         "wordnet_gloss": "the lowest brass wind instrument",
         "wordnet_pwn30": "n02804252"
+    },
+    "tunnel": {
+        "context": "construction",
+        "mvs_id": 18,
+        "mvs_name": "construction--structure--tunnel",
     },
     "turkey": {
         "freebase_mid": "/m/0jly1",
@@ -7698,6 +7936,11 @@
         "wordnet_gloss": "a vehicle with a single wheel that is driven by pedals",
         "wordnet_pwn30": "n04509417"
     },
+    "unlabeled": {
+        "context": "void",
+        "mvs_id": 65,
+        "mvs_name": "void--unlabeled"
+    },
     "urinal": {
         "freebase_mid": "/m/033qwb",
         "obj365_boxable_name": "Urinal",
@@ -7706,6 +7949,15 @@
         "wikidata_qid": "Q152285",
         "wordnet_gloss": "a plumbing fixture (usually attached to the wall) used by men to urinate",
         "wordnet_pwn30": "n04515991"
+    },
+    "utility_pole": {
+        "context": "object",
+        "freebase_mid": "/m/04stwn",
+        "mvs_id": 47,
+        "mvs_name": "object--support--utility-pole",
+        "wikidata_desc": "column or post used by public utilities to support overhead electrical cables/wires, and/or communication cables, and related equipment",
+        "wikidata_name": "utility pole",
+        "wikidata_qid": "Q1144084"
     },
     "van": {
         "freebase_mid": "/m/0h2r6",
@@ -7743,6 +7995,15 @@
         "wikidata_qid": "Q11004",
         "wordnet_gloss": "edible seeds or roots or stems or leaves or bulbs or tubers or nonsweet fruits of any of numerous herbaceous plant",
         "wordnet_pwn30": "n07707451"
+    },
+    "vegetation": {
+        "context": "nature",
+        "freebase_mid": "/m/01fnns",
+        "mvs_id": 30,
+        "mvs_name": "nature--vegetation",
+        "wikidata_desc": "total of plant formations and plant communities",
+        "wikidata_name": "vegetation",
+        "wikidata_qid": "Q187997"
     },
     "vehicle": {
         "freebase_mid": "/m/07yv9",
@@ -7800,7 +8061,10 @@
     "wall": {
         "coco_pano_id": 199,
         "coco_pano_name": "wall-other-merged",
+        "context": "construction",
         "freebase_mid": "/m/09qqq",
+        "mvs_id": 6,
+        "mvs_name": "construction--barrier--wall",
         "wikidata_desc": "vertical structure, usually solid, that defines and sometimes protects an area",
         "wikidata_name": "wall",
         "wikidata_qid": "Q42948",
@@ -7865,8 +8129,10 @@
     "water": {
         "coco_pano_id": 178,
         "coco_pano_name": "water-other",
-        "context": "surface",
+        "context": "nature",
         "freebase_mid": "/m/0838f",
+        "mvs_id": 31,
+        "mvs_name": "nature--water",
         "wikidata_desc": "chemical compound",
         "wikidata_name": "water",
         "wikidata_qid": "Q283",
@@ -7936,6 +8202,7 @@
         "wordnet_gloss": "a movable chair mounted on large wheels; for invalids or those who cannot walk; frequently propelled by the occupant",
         "wordnet_pwn30": "n04576002"
     },
+
     "whisk": {
         "freebase_mid": "/m/02vwcm",
         "oid_name": "Whisk",
