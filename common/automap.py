@@ -272,7 +272,7 @@ def wikidata_from_name(name, context = None):
     return d0
 
 unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
-                    'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_pano_name','cityscapes_pano_name']
+                    'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_name','cityscapes_name']
 check_dubl = {p:{} for p in unique_id_params}
 
 def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True):
@@ -363,18 +363,20 @@ def main(argv=sys.argv[1:]):
             for idx0, vals in enumerate(appendf["labels"]):
                 if ("boxable" in id_param_eval or "inst" in id_param_eval) and vals.get('instances', False):
                     continue # quick hack to add all instance classes as boxables / inst
-                key = vals["readable"]
-                possible_cat = None
-                context = vals["readable"].split('(')
-                if len(context) > 1 and context[1][-1] == ')':
-                    key = context[0].replace('_', '')
-                    possible_cat = context[1][:-1]
-                pos_dd = vals['name'].find('--')
-                if pos_dd > 0:
-                    possible_cat = vals['name'][:pos_dd]
-                key = unify_namings(key)
-                if key in joined_label_space and id_param in joined_label_space[key]:
-                    continue
+                if vals['name'] in check_dubl[name_param]:
+                    key = check_dubl[name_param][vals['name']]
+                else:
+                    key = vals["readable"]
+                    possible_cat = None
+                    context = vals["readable"].split('(')
+                    if len(context) > 1 and context[1][-1] == ')':
+                        key = context[0].replace('_', '')
+                        possible_cat = context[1][:-1]
+                    pos_dd = vals['name'].find('--')
+                    if pos_dd > 0:
+                        possible_cat = vals['name'][:pos_dd]
+                    key = unify_namings(key)
+
                 if not key in joined_label_space:
                     print("Adding: "+key+ " for ", vals)
                     joined_label_space[key] = {}

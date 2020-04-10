@@ -381,7 +381,12 @@
         "context": "construction",
         "freebase_mid": "/m/0ckn6l",
         "mvs_id": 5,
-        "mvs_name": "construction--barrier--other-barrier"
+        "mvs_name": "construction--barrier--other-barrier",
+        "wikidata_desc": "barrier installed within medians of and next to roads to prevent vehicle collisions",
+        "wikidata_name": "traffic barrier",
+        "wikidata_qid": "Q1344551",
+        "wordnet_gloss": "a structure or object that impedes free movement",
+        "wordnet_pwn30": "n02796623"
     },
     "baseball": {
         "freebase_mid": "/m/03v6wp",
@@ -656,7 +661,8 @@
         "wikidata_desc": "person who rides a bike",
         "wikidata_name": "cyclist",
         "wikidata_qid": "Q2125610",
-		"wordnet_pwn30": "n09986189"
+        "wordnet_gloss": "a person who rides a bicycle",
+        "wordnet_pwn30": "n09986189"
     },
     "bidet": {
         "freebase_mid": "/m/01vbnl",
@@ -674,7 +680,8 @@
         "mvs_name": "construction--flat--bike-lane",
         "wikidata_desc": "road traffic lane for cyclists",
         "wikidata_name": "cycle lane",
-        "wikidata_qid": "Q1378400"
+        "wikidata_qid": "Q1378400",
+        "wordnet_pwn30": ""
     },
     "bike_rack": {
         "context": "object",
@@ -1316,6 +1323,13 @@
         "wordnet_gloss": "a motor vehicle with four wheels; usually propelled by an internal combustion engine; \"he needs a car to get to work\"",
         "wordnet_pwn30": "n02958343"
     },
+    "car_mount": {
+        "context": "void",
+        "mvs_id": 63,
+        "mvs_name": "void--car-mount",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
     "caravan": {
         "context": "object",
         "freebase_mid": "/m/043tzlr",
@@ -1323,7 +1337,9 @@
         "mvs_name": "object--vehicle--caravan",
         "wikidata_desc": "group of people or animals traveling together in a row",
         "wikidata_name": "caravan",
-        "wikidata_qid": "Q203494"
+        "wikidata_qid": "Q203494",
+        "wordnet_gloss": "a camper equipped with living quarters",
+        "wordnet_pwn30": "n04520382"
     },
     "cardboard": {
         "coco_pano_id": 100,
@@ -1411,8 +1427,13 @@
     },
     "catch_basin": {
         "context": "object",
+        "freebase_mid": "/m/025cll",
         "mvs_id": 36,
-        "mvs_name": "object--catch-basin"
+        "mvs_name": "object--catch-basin",
+        "wikidata_desc": "rainwater harvesting infrastructure",
+        "wikidata_name": "storm drain",
+        "wikidata_qid": "Q1139766",
+        "wordnet_pwn30": ""
     },
     "caterpillar": {
         "freebase_mid": "/m/0cydv",
@@ -2081,7 +2102,12 @@
     "curb": {
         "context": "construction",
         "mvs_id": 2,
-        "mvs_name": "construction--barrier--curb"
+        "mvs_name": "construction--barrier--curb",
+        "wikidata_desc": "",
+        "wikidata_name": "curb",
+        "wikidata_qid": "Q3007621",
+        "wordnet_gloss": "an edge between a sidewalk and a roadway consisting of a line of curbstones (usually forming part of a gutter)",
+        "wordnet_pwn30": "n03148920"
     },
     "curb_cut": {
         "context": "construction",
@@ -2090,7 +2116,8 @@
         "mvs_name": "construction--flat--curb-cut",
         "wikidata_desc": "Lowered road-edge allowing level acces from pavement to road surface",
         "wikidata_name": "curb cut",
-        "wikidata_qid": "Q2891126"
+        "wikidata_qid": "Q2891126",
+        "wordnet_pwn30": ""
     },
     "curling_stone": {
         "obj365_boxable_name": "Curling",
@@ -2527,6 +2554,16 @@
         "wordnet_gloss": "egg-shaped vegetable having a shiny skin typically dark purple but occasionally white or yellow",
         "wordnet_pwn30": "n07713074"
     },
+    "ego": {
+        "context": "void",
+        "mvs_id": 64,
+        "mvs_name": "void--ego-vehicle",
+        "wikidata_desc": "self-identity in the psyche",
+        "wikidata_name": "Ego",
+        "wikidata_qid": "Q5348142",
+        "wordnet_gloss": "your consciousness of your own identity",
+        "wordnet_pwn30": "n05675601"
+    },
     "electric_drill": {
         "context": "tool",
         "freebase_mid": "/m/01d380",
@@ -2825,6 +2862,14 @@
         "wikidata_qid": "Q335201",
         "wordnet_gloss": "bottle that has a narrow neck",
         "wordnet_pwn30": "n03359566"
+    },
+    "flat_vegetation_soil": {
+        "context": "includes_grass",
+        "mvs_id": 29,
+        "mvs_name": "nature--terrain",
+        "wikidata_name": "terrain",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "floor": {
         "coco_pano_id": 190,
@@ -3286,6 +3331,16 @@
         "wordnet_gloss": "a machine tool that polishes metal",
         "wordnet_pwn30": "n03460040"
     },
+    "ground_animal": {
+        "context": "animal",
+        "freebase_mid": "/m/0fbf1m",
+        "mvs_id": 1,
+        "mvs_name": "animal--ground-animal",
+        "wikidata_desc": "animals living on land",
+        "wikidata_name": "Terrestrial animal",
+        "wikidata_qid": "Q3248864",
+        "wordnet_pwn30": ""
+    },
     "guacamole": {
         "freebase_mid": "/m/02g30s",
         "oid_boxable_leaf": "/m/02g30s",
@@ -3300,7 +3355,12 @@
     "guard_rail": {
         "context": "construction",
         "mvs_id": 4,
-        "mvs_name": "construction--barrier--guard-rail"
+        "mvs_name": "construction--barrier--guard-rail",
+        "wikidata_desc": "broad category of barriers in roads that keep vehicles from straying into dangerous areas",
+        "wikidata_name": "guard rail",
+        "wikidata_qid": "Q1188866",
+        "wordnet_gloss": "a railing placed alongside a stairway or road for safety",
+        "wordnet_pwn30": "n04127395"
     },
     "guitar": {
         "freebase_mid": "/m/0342h",
@@ -3415,9 +3475,9 @@
         "wordnet_pwn30": "n02774152"
     },
     "handcart": {
-        "obj365_boxable_name": "Trolley",
         "mvs_id": 62,
         "mvs_name": "object--vehicle--wheeled-slow",
+        "obj365_boxable_name": "Trolley",
         "wikidata_qid": "",
         "wordnet_gloss": "wheeled vehicle that can be pushed by a person; may have one or two or four wheels; \"he used a handcart to carry the rocks away\"; \"their pushcart was piled high with groceries\"",
         "wordnet_pwn30": "n03484083"
@@ -3871,7 +3931,10 @@
         "context": "object",
         "freebase_mid": "/m/02p8q0k",
         "mvs_id": 39,
-        "mvs_name": "object--junction-box"
+        "mvs_name": "object--junction-box",
+        "wikidata_name": "junction box",
+        "wikidata_qid": "Q336757",
+        "wordnet_pwn30": ""
     },
     "kangaroo": {
         "freebase_mid": "/m/04c0y",
@@ -4039,24 +4102,14 @@
         "wordnet_pwn30": "n03636248"
     },
     "land_vehicle": {
+        "freebase_mid": "/m/01prls",
         "mvs_id": 59,
         "mvs_name": "object--vehicle--other-vehicle",
-        "freebase_mid": "/m/01prls",
         "oid_name": "Land vehicle",
         "wikidata_desc": "vehicle mainly meant to move on land",
         "wikidata_name": "land vehicle",
         "wikidata_qid": "Q1301433",
         "wordnet_pwn30": ""
-    },
-    "lane_marking_crosswalk": {
-        "context": "marking",
-        "mvs_id": 23,
-        "mvs_name": "marking--crosswalk-zebra"
-    },
-    "lane_marking_general": {
-        "context": "marking",
-        "mvs_id": 24,
-        "mvs_name": "marking--general"
     },
     "lantern": {
         "freebase_mid": "/m/01jfsr",
@@ -4313,13 +4366,14 @@
         "wordnet_pwn30": "n01582220"
     },
     "mailbox": {
-        "context": "object",
         "freebase_mid": "/m/04w67_",
         "mvs_id": 40,
         "mvs_name": "object--mailbox",
         "wikidata_desc": "post collection point",
         "wikidata_name": "post box",
-        "wikidata_qid": "Q49844"
+        "wikidata_qid": "Q49844",
+        "wordnet_gloss": "a private box for delivery of mail",
+        "wordnet_pwn30": "n03710193"
     },
     "mammal": {
         "freebase_mid": "/m/04rky",
@@ -4354,13 +4408,14 @@
         "wordnet_pwn30": "n07764155"
     },
     "manhole": {
-        "context": "object",
         "freebase_mid": "/m/0250ff",
         "mvs_id": 41,
         "mvs_name": "object--manhole",
         "wikidata_desc": "the top opening to an underground utility vault used to house an access point for making connections, inspection, valve adjustments or performing maintenance on underground and buried public utility and other services",
         "wikidata_name": "manhole",
-        "wikidata_qid": "Q532998"
+        "wikidata_qid": "Q532998",
+        "wordnet_gloss": "a hole (usually with a flush cover) through which a person can gain access to an underground structure",
+        "wordnet_pwn30": "n03717447"
     },
     "maple": {
         "freebase_mid": "/m/0cffdh",
@@ -4623,17 +4678,15 @@
         "wordnet_gloss": "a motor vehicle with two wheels and a strong frame",
         "wordnet_pwn30": "n03790512"
     },
-	"rider": {
-		"context": "human",
-        "mvs_id": 22,
-        "mvs_name": "human--rider--other-rider",
-		"wordnet_pwn30": "n10530150"
-	},
     "motorcyclist": {
         "context": "human",
         "mvs_id": 21,
         "mvs_name": "human--rider--motorcyclist",
-		"wordnet_pwn30": "n10334009"
+        "wikidata_desc": "person who drives a motorbike",
+        "wikidata_name": "motorcyclist",
+        "wikidata_qid": "Q45787133",
+        "wordnet_gloss": "a traveler who rides a motorcycle",
+        "wordnet_pwn30": "n10334009"
     },
     "mountain": {
         "coco_pano_id": 192,
@@ -5055,11 +5108,6 @@
         "wordnet_gloss": "rescue equipment consisting of a device that fills with air and retards your fall",
         "wordnet_pwn30": "n03888257"
     },
-    "parking_space": {
-        "context": "construction",
-        "mvs_id": 10,
-        "mvs_name": "construction--flat--parking"
-    },
     "parking_meter": {
         "coco_boxable_name": "parking meter",
         "coco_pano_id": 14,
@@ -5072,6 +5120,16 @@
         "wikidata_qid": "Q953960",
         "wordnet_gloss": "a coin-operated timer located next to a parking space; depositing money into it entitles you to park your car there for a specified length of time",
         "wordnet_pwn30": "n03891332"
+    },
+    "parking_space": {
+        "freebase_mid": "/m/03pb_0",
+        "mvs_id": 10,
+        "mvs_name": "construction--flat--parking",
+        "wikidata_desc": "designated location for parking a vehicle",
+        "wikidata_name": "parking space",
+        "wikidata_qid": "Q1433633",
+        "wordnet_gloss": "a space where an automobile can be parked",
+        "wordnet_pwn30": "n08615810"
     },
     "parrot": {
         "freebase_mid": "/m/0gv1x",
@@ -5139,9 +5197,21 @@
         "wordnet_pwn30": "n07767847"
     },
     "pedestrian_area": {
-        "context": "construction",
+        "freebase_mid": "/m/02751w",
         "mvs_id": 11,
-        "mvs_name": "construction--flat--pedestrian-area"
+        "mvs_name": "construction--flat--pedestrian-area",
+        "wikidata_desc": "area of a city or town reserved for pedestrian-only use",
+        "wikidata_name": "pedestrian zone",
+        "wikidata_qid": "Q369730"
+    },
+    "pedestrian_crossing": {
+        "context": "striped_and_plain_crosswalk",
+        "freebase_mid": "/m/014xcs",
+        "wikidata_desc": "point on a road at which some means are employed to assist pedestrians wishing to cross",
+        "wikidata_name": "crosswalk",
+        "wikidata_qid": "Q8010",
+        "wordnet_gloss": "street crossing where pedestrians have right of way; often marked in some way (especially with diagonal stripes)",
+        "wordnet_pwn30": "n03904183"
     },
     "pen": {
         "freebase_mid": "/m/0k1tl",
@@ -5240,13 +5310,14 @@
         "wordnet_pwn30": "n03663531"
     },
     "phone_booth": {
-        "context": "object",
         "freebase_mid": "/m/01x9x4",
         "mvs_id": 42,
         "mvs_name": "object--phone-booth",
         "wikidata_desc": "small structure furnished with a payphone",
         "wikidata_name": "telephone booth",
-        "wikidata_qid": "Q1143785"
+        "wikidata_qid": "Q1143785",
+        "wordnet_gloss": "booth for using a telephone",
+        "wordnet_pwn30": "n04401680"
     },
     "piano": {
         "freebase_mid": "/m/05r5c",
@@ -5379,6 +5450,13 @@
         "wikidata_qid": "Q1546715",
         "wordnet_pwn30": ""
     },
+    "plain_crosswalk": {
+        "context": "construction",
+        "mvs_id": 8,
+        "mvs_name": "construction--flat--crosswalk-plain",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
     "plant": {
         "freebase_mid": "/m/05s2s",
         "oid_name": "Plant",
@@ -5492,7 +5570,9 @@
         "mvs_name": "object--support--pole",
         "wikidata_desc": "architectural structure",
         "wikidata_name": "pole",
-        "wikidata_qid": "Q525800"
+        "wikidata_qid": "Q525800",
+        "wordnet_gloss": "a long (usually round) rod of wood or metal or plastic",
+        "wordnet_pwn30": "n03976657"
     },
     "pomegranate": {
         "freebase_mid": "/m/0jwn_",
@@ -5577,9 +5657,11 @@
     },
     "pothole": {
         "context": "object",
-        "freebase_mid": "/m/03lfn5",
+        "freebase_mid": "/m/0327g3",
         "mvs_id": 43,
         "mvs_name": "object--pothole",
+        "wikidata_desc": "a type of disruption in the surface of a roadway where a portion of the road material has broken away, leaving a hole",
+        "wikidata_name": "pothole",
         "wikidata_qid": "Q1485806",
         "wordnet_gloss": "a pit or hole produced by wear or weathering (especially in a road surface)",
         "wordnet_pwn30": "n09398076"
@@ -5767,6 +5849,9 @@
         "context": "construction",
         "mvs_id": 12,
         "mvs_name": "construction--flat--rail-track",
+        "wikidata_desc": "",
+        "wikidata_name": "",
+        "wikidata_qid": "Q57498564",
         "wordnet_gloss": "a line of track providing a runway for wheels; \"he walked along the railroad track\"",
         "wordnet_pwn30": "n04048075"
     },
@@ -5900,6 +5985,16 @@
         "wordnet_gloss": "a small two-wheeled cart for one passenger; pulled by one person",
         "wordnet_pwn30": "n03599486"
     },
+    "rider": {
+        "context": "human",
+        "mvs_id": 22,
+        "mvs_name": "human--rider--other-rider",
+        "wikidata_desc": "person who rides an animal or vehicle, either as an operator or a passenger",
+        "wikidata_name": "rider",
+        "wikidata_qid": "Q11998775",
+        "wordnet_gloss": "a traveler who actively rides a vehicle (as a bicycle or motorcycle)",
+        "wordnet_pwn30": "n10530150"
+    },
     "rifle": {
         "freebase_mid": "/m/06c54",
         "oid_boxable_leaf": "/m/06c54",
@@ -5951,6 +6046,27 @@
         "wikidata_qid": "Q34442",
         "wordnet_gloss": "an open way (generally public) for travel or transportation",
         "wordnet_pwn30": "n04096066"
+    },
+    "road_shoulder": {
+        "context": "construction",
+        "freebase_mid": "/m/02mgm6",
+        "mvs_id": 14,
+        "mvs_name": "construction--flat--service-lane",
+        "wikidata_desc": "reserve lane by the verge of a roadway",
+        "wikidata_name": "shoulder",
+        "wikidata_qid": "Q1408712",
+        "wordnet_gloss": "a narrow edge of land (usually unpaved) along the side of a road; \"the car pulled off onto the shoulder\"",
+        "wordnet_pwn30": "n04206948"
+    },
+    "road_surface_marking": {
+        "context": "marking",
+        "freebase_mid": "/m/05j85l",
+        "mvs_id": 24,
+        "mvs_name": "marking--general",
+        "wikidata_desc": "any kind of device or material used on a road surface to convey official information",
+        "wikidata_name": "road surface marking",
+        "wikidata_qid": "Q1392287",
+        "wordnet_pwn30": ""
     },
     "rock": {
         "coco_pano_id": 198,
@@ -6327,11 +6443,6 @@
         "wikidata_qid": "Q214893",
         "wordnet_gloss": "(trademark) a self-balancing personal transportation device with two wheels; can operate in any level pedestrian environment",
         "wordnet_pwn30": "n04168199"
-    },
-    "service_lane": {
-        "context": "construction",
-        "mvs_id": 14,
-        "mvs_name": "construction--flat--service-lane"
     },
     "serving_tray": {
         "freebase_mid": "/m/0h8n27j",
@@ -7044,6 +7155,15 @@
         "wordnet_gloss": "a litter for transporting people who are ill or wounded or dead; usually consists of a sheet of canvas stretched between two poles",
         "wordnet_pwn30": "n04336792"
     },
+    "striped_crosswalk": {
+        "context": "marking",
+        "freebase_mid": "/m/014v7p",
+        "mvs_id": 23,
+        "mvs_name": "marking--crosswalk-zebra",
+        "wikidata_desc": "type of pedestrian crossing",
+        "wikidata_name": "zebra crossing",
+        "wikidata_qid": "Q7328304"
+    },
     "stroller": {
         "freebase_mid": "/m/03ylns",
         "obj365_boxable_name": "Stroller",
@@ -7145,9 +7265,9 @@
         "wordnet_pwn30": "n04363559"
     },
     "surveillance_camera": {
-        "obj365_boxable_name": "Surveillance Camera",
         "mvs_id": 37,
         "mvs_name": "object--cctv-camera",
+        "obj365_boxable_name": "Surveillance Camera",
         "wikidata_desc": "video or still camera used to secure an area",
         "wikidata_name": "security camera",
         "wikidata_qid": "Q334415",
@@ -7462,11 +7582,6 @@
         "wordnet_gloss": "a portable shelter (usually of canvas stretched over supporting poles and fastened to the ground with ropes and pegs); \"he pitched his tent near the creek\"",
         "wordnet_pwn30": "n04411264"
     },
-    "terrain": {
-        "context": "nature",
-        "mvs_id": 29,
-        "mvs_name": "nature--terrain"
-    },
     "tiara": {
         "freebase_mid": "/m/01krhy",
         "oid_boxable_leaf": "/m/01krhy",
@@ -7721,8 +7836,25 @@
         "wordnet_gloss": "a visual signal to control the flow of traffic at intersections",
         "wordnet_pwn30": "n06874185"
     },
+    "traffic_sign_backside": {
+        "context": "object",
+        "mvs_id": 49,
+        "mvs_name": "object--traffic-sign--back",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
+    "traffic_sign_frame": {
+        "context": "object",
+        "mvs_id": 46,
+        "mvs_name": "object--support--traffic-sign-frame",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
+    },
     "traffic_sign_front": {
+        "context": "object",
         "freebase_mid": "/m/01mqdt",
+        "mvs_id": 50,
+        "mvs_name": "object--traffic-sign--front",
         "obj365_boxable_name": "Traffic Sign",
         "oid_name": "Traffic sign",
         "wikidata_desc": "plate with instructions (warning, prohibitory, mandatory, ...) used to control traffic on the road",
@@ -7730,32 +7862,23 @@
         "wikidata_qid": "Q170285",
         "wordnet_pwn30": ""
     },
-    "traffic_sign_backside": {
-        "context": "object",
-        "mvs_id": 49,
-        "mvs_name": "object--traffic-sign--back"
-    },
-    "traffic_sign_frame": {
-        "context": "object",
-        "mvs_id": 46,
-        "mvs_name": "object--support--traffic-sign-frame"
-    },
     "trailer": {
-        "context": "object",
         "mvs_id": 60,
         "mvs_name": "object--vehicle--trailer",
         "wikidata_desc": "trailer",
         "wikidata_name": "Trailer",
-        "wikidata_qid": "Q7832787"
+        "wikidata_qid": "Q7832787",
+        "wordnet_gloss": "a wheeled vehicle that can be pulled by a car or truck and is equipped for occupancy",
+        "wordnet_pwn30": "n04467099"
     },
     "train": {
-        "mvs_id": 58,
-        "mvs_name": "object--vehicle--on-rails",
         "coco_boxable_name": "train",
         "coco_pano_id": 7,
         "coco_pano_name": "train",
         "context": "rail",
         "freebase_mid": "/m/07jdr",
+        "mvs_id": 58,
+        "mvs_name": "object--vehicle--on-rails",
         "obj365_boxable_name": "Train",
         "oid_boxable_leaf": "/m/07jdr",
         "oid_inst_leaf": "/m/07jdr",
@@ -7904,8 +8027,14 @@
     },
     "tunnel": {
         "context": "construction",
+        "freebase_mid": "/m/0158vt",
         "mvs_id": 18,
-        "mvs_name": "construction--structure--tunnel"
+        "mvs_name": "construction--structure--tunnel",
+        "wikidata_desc": "underground passage",
+        "wikidata_name": "tunnel",
+        "wikidata_qid": "Q44377",
+        "wordnet_gloss": "a passageway through or under something, usually underground (especially one for trains or cars); \"the tunnel reduced congestion at that intersection\"",
+        "wordnet_pwn30": "n04497962"
     },
     "turkey": {
         "freebase_mid": "/m/0jly1",
@@ -7953,7 +8082,11 @@
     "unlabeled": {
         "context": "void",
         "mvs_id": 65,
-        "mvs_name": "void--unlabeled"
+        "mvs_name": "void--unlabeled",
+        "wikidata_desc": "entity whose identity is not known",
+        "wikidata_name": "unknown",
+        "wikidata_qid": "Q24238356",
+        "wordnet_pwn30": "a01379844"
     },
     "urinal": {
         "freebase_mid": "/m/033qwb",
@@ -7971,7 +8104,8 @@
         "mvs_name": "object--support--utility-pole",
         "wikidata_desc": "column or post used by public utilities to support overhead electrical cables/wires, and/or communication cables, and related equipment",
         "wikidata_name": "utility pole",
-        "wikidata_qid": "Q1144084"
+        "wikidata_qid": "Q1144084",
+        "wordnet_pwn30": ""
     },
     "van": {
         "freebase_mid": "/m/0h2r6",
@@ -8218,7 +8352,6 @@
         "wordnet_gloss": "a movable chair mounted on large wheels; for invalids or those who cannot walk; frequently propelled by the occupant",
         "wordnet_pwn30": "n04576002"
     },
-
     "whisk": {
         "freebase_mid": "/m/02vwcm",
         "oid_name": "Whisk",
