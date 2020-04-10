@@ -381,7 +381,7 @@
         "context": "construction",
         "freebase_mid": "/m/0ckn6l",
         "mvs_id": 5,
-        "mvs_name": "construction--barrier--other-barrier",
+        "mvs_name": "construction--barrier--other-barrier"
     },
     "baseball": {
         "freebase_mid": "/m/03v6wp",
@@ -655,7 +655,8 @@
         "mvs_name": "human--rider--bicyclist",
         "wikidata_desc": "person who rides a bike",
         "wikidata_name": "cyclist",
-        "wikidata_qid": "Q2125610"
+        "wikidata_qid": "Q2125610",
+		"wordnet_pwn30": "n09986189"
     },
     "bidet": {
         "freebase_mid": "/m/01vbnl",
@@ -2080,7 +2081,7 @@
     "curb": {
         "context": "construction",
         "mvs_id": 2,
-        "mvs_name": "construction--barrier--curb",
+        "mvs_name": "construction--barrier--curb"
     },
     "curb_cut": {
         "context": "construction",
@@ -3415,6 +3416,8 @@
     },
     "handcart": {
         "obj365_boxable_name": "Trolley",
+        "mvs_id": 62,
+        "mvs_name": "object--vehicle--wheeled-slow",
         "wikidata_qid": "",
         "wordnet_gloss": "wheeled vehicle that can be pushed by a person; may have one or two or four wheels; \"he used a handcart to carry the rocks away\"; \"their pushcart was piled high with groceries\"",
         "wordnet_pwn30": "n03484083"
@@ -3868,7 +3871,7 @@
         "context": "object",
         "freebase_mid": "/m/02p8q0k",
         "mvs_id": 39,
-        "mvs_name": "object--junction-box",
+        "mvs_name": "object--junction-box"
     },
     "kangaroo": {
         "freebase_mid": "/m/04c0y",
@@ -4036,6 +4039,8 @@
         "wordnet_pwn30": "n03636248"
     },
     "land_vehicle": {
+        "mvs_id": 59,
+        "mvs_name": "object--vehicle--other-vehicle",
         "freebase_mid": "/m/01prls",
         "oid_name": "Land vehicle",
         "wikidata_desc": "vehicle mainly meant to move on land",
@@ -4618,10 +4623,17 @@
         "wordnet_gloss": "a motor vehicle with two wheels and a strong frame",
         "wordnet_pwn30": "n03790512"
     },
+	"rider": {
+		"context": "human",
+        "mvs_id": 22,
+        "mvs_name": "human--rider--other-rider",
+		"wordnet_pwn30": "n10530150"
+	},
     "motorcyclist": {
         "context": "human",
         "mvs_id": 21,
         "mvs_name": "human--rider--motorcyclist",
+		"wordnet_pwn30": "n10334009"
     },
     "mountain": {
         "coco_pano_id": 192,
@@ -5046,7 +5058,7 @@
     "parking_space": {
         "context": "construction",
         "mvs_id": 10,
-        "mvs_name": "construction--flat--parking",
+        "mvs_name": "construction--flat--parking"
     },
     "parking_meter": {
         "coco_boxable_name": "parking meter",
@@ -5751,7 +5763,7 @@
     },
     "rail_track": {
         "coco_pano_id": 147,
-        "coco_pano_name": "railroad"
+        "coco_pano_name": "railroad",
         "context": "construction",
         "mvs_id": 12,
         "mvs_name": "construction--flat--rail-track",
@@ -7134,6 +7146,8 @@
     },
     "surveillance_camera": {
         "obj365_boxable_name": "Surveillance Camera",
+        "mvs_id": 37,
+        "mvs_name": "object--cctv-camera",
         "wikidata_desc": "video or still camera used to secure an area",
         "wikidata_name": "security camera",
         "wikidata_qid": "Q334415",
@@ -7451,7 +7465,7 @@
     "terrain": {
         "context": "nature",
         "mvs_id": 29,
-        "mvs_name": "nature--terrain",
+        "mvs_name": "nature--terrain"
     },
     "tiara": {
         "freebase_mid": "/m/01krhy",
@@ -7736,7 +7750,7 @@
     },
     "train": {
         "mvs_id": 58,
-        "mvs_name": "object--vehicle--on-rails"
+        "mvs_name": "object--vehicle--on-rails",
         "coco_boxable_name": "train",
         "coco_pano_id": 7,
         "coco_pano_name": "train",
@@ -7891,7 +7905,7 @@
     "tunnel": {
         "context": "construction",
         "mvs_id": 18,
-        "mvs_name": "construction--structure--tunnel",
+        "mvs_name": "construction--structure--tunnel"
     },
     "turkey": {
         "freebase_mid": "/m/0jly1",
@@ -8104,6 +8118,8 @@
     },
     "waste_container": {
         "freebase_mid": "/m/0bjyj5",
+        "mvs_id": 51,
+        "mvs_name": "object--trash-can",
         "obj365_boxable_name": "Trash bin Can",
         "oid_boxable_leaf": "/m/0bjyj5",
         "oid_inst_leaf": "/m/0bjyj5",
