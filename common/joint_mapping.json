@@ -622,10 +622,13 @@
         "wordnet_pwn30": "n02828884"
     },
     "bicycle": {
+        "cityscapes_id": 33,
+        "cityscapes_name": "bicycle",
+        "cityscapes_pano_id": 33,
         "coco_boxable_name": "bicycle",
         "coco_pano_id": 2,
         "coco_pano_name": "bicycle",
-        "context": "object",
+        "context": "vehicle",
         "freebase_mid": "/m/0199g",
         "mvs_boxable_name": "object--vehicle--bicycle",
         "mvs_id": 52,
@@ -1015,6 +1018,8 @@
         "wordnet_pwn30": "n02898369"
     },
     "bridge": {
+        "cityscapes_id": 15,
+        "cityscapes_name": "bridge",
         "coco_pano_id": 95,
         "coco_pano_name": "bridge",
         "context": "construction",
@@ -1095,6 +1100,9 @@
         "wordnet_pwn30": "n02908217"
     },
     "building": {
+        "cityscapes_id": 11,
+        "cityscapes_name": "building",
+        "cityscapes_pano_id": 11,
         "coco_pano_id": 197,
         "coco_pano_name": "building-other-merged",
         "context": "construction",
@@ -1133,10 +1141,13 @@
         "wordnet_pwn30": "n07880968"
     },
     "bus": {
+        "cityscapes_id": 28,
+        "cityscapes_name": "bus",
+        "cityscapes_pano_id": 28,
         "coco_boxable_name": "bus",
         "coco_pano_id": 6,
         "coco_pano_name": "bus",
-        "context": "object",
+        "context": "vehicle",
         "freebase_mid": "/m/01bjv",
         "mvs_boxable_name": "object--vehicle--bus",
         "mvs_id": 54,
@@ -1332,10 +1343,13 @@
         "wordnet_pwn30": "n07755929"
     },
     "car": {
+        "cityscapes_id": 26,
+        "cityscapes_name": "car",
+        "cityscapes_pano_id": 26,
         "coco_boxable_name": "car",
         "coco_pano_id": 3,
         "coco_pano_name": "car",
-        "context": "object",
+        "context": "vehicle",
         "freebase_mid": "/m/0k4j",
         "mvs_boxable_name": "object--vehicle--car",
         "mvs_id": 55,
@@ -1358,7 +1372,9 @@
         "wordnet_pwn30": ""
     },
     "caravan": {
-        "context": "object",
+        "cityscapes_id": 29,
+        "cityscapes_name": "caravan",
+        "context": "vehicle",
         "freebase_mid": "/m/043tzlr",
         "mvs_boxable_name": "object--vehicle--caravan",
         "mvs_id": 56,
@@ -2527,6 +2543,13 @@
         "wordnet_gloss": "huge fruit native to southeastern Asia `smelling like Hell and tasting like Heaven'; seeds are roasted and eaten like nuts",
         "wordnet_pwn30": "n07762913"
     },
+    "dynamic": {
+        "cityscapes_id": 5,
+        "cityscapes_name": "dynamic",
+        "context": "void",
+        "wikidata_qid": "",
+        "wordnet_pwn30": "01523724"
+    },
     "eagle": {
         "freebase_mid": "/m/09csl",
         "oid_boxable_leaf": "/m/09csl",
@@ -2588,6 +2611,9 @@
         "wordnet_pwn30": "n07713074"
     },
     "ego": {
+        "cityscapes_id": 1,
+        "cityscapes_name": "ego vehicle",
+        "context": "void"
         "context": "void",
         "mvs_id": 64,
         "mvs_name": "void--ego-vehicle",
@@ -2778,6 +2804,9 @@
         "wordnet_pwn30": "n03325941"
     },
     "fence": {
+        "cityscapes_id": 13,
+        "cityscapes_name": "fence",
+        "cityscapes_pano_id": 13,
         "coco_pano_id": 185,
         "coco_pano_name": "fence-merged",
         "context": "construction",
@@ -2907,7 +2936,10 @@
         "mvs_pano_id": 29,
         "wikidata_name": "terrain",
         "wikidata_qid": "",
-        "wordnet_pwn30": ""
+        "wordnet_pwn30": "",
+        "cityscapes_id": 22,
+        "cityscapes_name": "terrain",
+        "cityscapes_pano_id": 22
     },
     "floor": {
         "coco_pano_id": 190,
@@ -3369,6 +3401,13 @@
         "wordnet_gloss": "a machine tool that polishes metal",
         "wordnet_pwn30": "n03460040"
     },
+    "ground": {
+        "cityscapes_id": 6,
+        "cityscapes_name": "ground",
+        "context": "void",
+        "wikidata_qid": "Q11081619",
+         "wordnet_pwn30": "n09334396"
+    },
     "ground_animal": {
         "context": "animal",
         "freebase_mid": "/m/0fbf1m",
@@ -3393,6 +3432,8 @@
         "wordnet_pwn30": "n07583066"
     },
     "guard_rail": {
+        "cityscapes_id": 14,
+        "cityscapes_name": "guard rail",
         "context": "construction",
         "mvs_id": 4,
         "mvs_name": "construction--barrier--guard-rail",
@@ -4712,10 +4753,13 @@
         "wordnet_pwn30": "n02273545"
     },
     "motorcycle": {
+        "cityscapes_id": 32,
+        "cityscapes_name": "motorcycle",
+        "cityscapes_pano_id": 32,
         "coco_boxable_name": "motorcycle",
         "coco_pano_id": 4,
         "coco_pano_name": "motorcycle",
-        "context": "object",
+        "context": "vehicle",
         "freebase_mid": "/m/04_sv",
         "mvs_boxable_name": "object--vehicle--motorcycle",
         "mvs_id": 57,
@@ -5178,6 +5222,9 @@
         "wordnet_pwn30": "n03891332"
     },
     "parking_space": {
+        "cityscapes_id": 9,
+        "cityscapes_name": "parking",
+        "context": "flat",
         "freebase_mid": "/m/03pb_0",
         "mvs_id": 10,
         "mvs_name": "construction--flat--parking",
@@ -5334,6 +5381,9 @@
         "wordnet_pwn30": "n03916031"
     },
     "person": {
+        "cityscapes_id": 24,
+        "cityscapes_name": "person",
+        "cityscapes_pano_id": 24,
         "coco_boxable_name": "person",
         "coco_pano_id": 1,
         "coco_pano_name": "person",
@@ -5630,6 +5680,9 @@
         "wordnet_pwn30": "n02134084"
     },
     "pole": {
+        "cityscapes_id": 17,
+        "cityscapes_name": "pole",
+        "cityscapes_pano_id": 17,
         "context": "object",
         "mvs_boxable_name": "object--support--pole",
         "mvs_id": 45,
@@ -5640,6 +5693,13 @@
         "wikidata_qid": "Q525800",
         "wordnet_gloss": "a long (usually round) rod of wood or metal or plastic",
         "wordnet_pwn30": "n03976657"
+    },
+    "polegroup": {
+        "cityscapes_id": 18,
+        "cityscapes_name": "polegroup",
+        "context": "object"
+        "wikidata_qid": ""
+        "wordnet_pwn30": ""
     },
     "pomegranate": {
         "freebase_mid": "/m/0jwn_",
@@ -5912,9 +5972,11 @@
         "wordnet_pwn30": "n07735687"
     },
     "rail_track": {
+        "cityscapes_id": 10,
+        "cityscapes_name": "rail track",
         "coco_pano_id": 147,
         "coco_pano_name": "railroad",
-        "context": "construction",
+        "context": "flat",
         "mvs_id": 12,
         "mvs_name": "construction--flat--rail-track",
         "mvs_pano_id": 12,
@@ -6055,6 +6117,9 @@
         "wordnet_pwn30": "n03599486"
     },
     "rider": {
+        "cityscapes_id": 25,
+        "cityscapes_name": "rider",
+        "cityscapes_pano_id": 25,
         "context": "human",
         "mvs_boxable_name": "human--rider--other-rider",
         "mvs_id": 22,
@@ -6106,9 +6171,12 @@
         "wordnet_pwn30": "n09411430"
     },
     "road": {
+        "cityscapes_id": 7,
+        "cityscapes_name": "road",
+        "cityscapes_pano_id": 7,
         "coco_pano_id": 149,
         "coco_pano_name": "road",
-        "context": "construction",
+        "context": "flat",
         "freebase_mid": "/m/06gfj",
         "mvs_id": 13,
         "mvs_name": "construction--flat--road",
@@ -6675,9 +6743,12 @@
         "wordnet_pwn30": ""
     },
     "sidewalk": {
+        "cityscapes_id": 8,
+        "cityscapes_name": "sidewalk",
+        "cityscapes_pano_id": 8,
         "coco_pano_id": 191,
         "coco_pano_name": "pavement-merged",
-        "context": "construction",
+        "context": "flat",
         "freebase_mid": "/m/0dnhy",
         "mvs_id": 15,
         "mvs_name": "construction--flat--sidewalk",
@@ -6771,9 +6842,12 @@
         "wordnet_pwn30": "n02445715"
     },
     "sky": {
+        "cityscapes_id": 23,
+        "cityscapes_name": "sky",
+        "cityscapes_pano_id": 23,
         "coco_pano_id": 187,
         "coco_pano_name": "sky-other-merged",
-        "context": "nature",
+        "context": "sky",
         "freebase_mid": "/m/01bqvp",
         "mvs_id": 27,
         "mvs_name": "nature--sky",
@@ -7134,6 +7208,13 @@
         "wikidata_qid": "Q25349",
         "wordnet_gloss": "echinoderms characterized by five arms extending from a central disk",
         "wordnet_pwn30": "n02317335"
+    },
+    "static": {
+        "cityscapes_id": 4,
+        "cityscapes_name": "static",
+        "context": "void",
+        "wikidata_qid": "",
+        "wordnet_pwn30": "s00347707"
     },
     "stationary_bicycle": {
         "freebase_mid": "/m/03kt2w",
@@ -7904,6 +7985,9 @@
         "wordnet_pwn30": ""
     },
     "traffic_light": {
+        "cityscapes_id": 19,
+        "cityscapes_name": "traffic light",
+        "cityscapes_pano_id": 19,
         "coco_boxable_name": "traffic light",
         "coco_pano_id": 10,
         "coco_pano_name": "traffic light",
@@ -7943,6 +8027,9 @@
     },
     "traffic_sign_front": {
         "context": "object",
+        "cityscapes_id": 20,
+        "cityscapes_name": "traffic sign",
+        "cityscapes_pano_id": 20,
         "freebase_mid": "/m/01mqdt",
         "mvs_boxable_name": "object--traffic-sign--front",
         "mvs_id": 50,
@@ -7956,6 +8043,9 @@
         "wordnet_pwn30": ""
     },
     "trailer": {
+        "cityscapes_id": 30,
+        "cityscapes_name": "trailer",
+        "context": "vehicle",
         "mvs_boxable_name": "object--vehicle--trailer",
         "mvs_id": 60,
         "mvs_name": "object--vehicle--trailer",
@@ -7983,7 +8073,10 @@
         "wikidata_name": "train",
         "wikidata_qid": "Q870",
         "wordnet_gloss": "public transport provided by a line of railway cars coupled together and drawn by a locomotive; \"express trains don't stop at Princeton Junction\"",
-        "wordnet_pwn30": "n04468005"
+        "wordnet_pwn30": "n04468005",
+        "cityscapes_id": 31,
+        "cityscapes_name": "on rails",
+        "cityscapes_pano_id": 31
     },
     "training_bench": {
         "freebase_mid": "/m/076lb9",
@@ -8076,10 +8169,13 @@
         "wordnet_pwn30": "n04489008"
     },
     "truck": {
+        "cityscapes_id": 27,
+        "cityscapes_name": "truck",
+        "cityscapes_pano_id": 27,
         "coco_boxable_name": "truck",
         "coco_pano_id": 8,
         "coco_pano_name": "truck",
-        "context": "object",
+        "context": "vehicle",
         "freebase_mid": "/m/07r04",
         "mvs_boxable_name": "object--vehicle--truck",
         "mvs_id": 61,
@@ -8124,6 +8220,8 @@
         "wordnet_pwn30": "n02804252"
     },
     "tunnel": {
+        "cityscapes_id": 16,
+        "cityscapes_name": "tunnel",
         "context": "construction",
         "freebase_mid": "/m/0158vt",
         "mvs_id": 18,
@@ -8179,6 +8277,8 @@
         "wordnet_pwn30": "n04509417"
     },
     "unlabeled": {
+        "cityscapes_id": 0,
+        "cityscapes_name": "unlabeled",
         "context": "void",
         "mvs_id": 65,
         "mvs_name": "void--unlabeled",
@@ -8246,6 +8346,9 @@
         "wordnet_pwn30": "n07707451"
     },
     "vegetation": {
+        "cityscapes_id": 21,
+        "cityscapes_name": "vegetation",
+        "cityscapes_pano_id": 21,
         "context": "nature",
         "freebase_mid": "/m/01fnns",
         "mvs_id": 30,
@@ -8311,6 +8414,9 @@
         "wordnet_pwn30": "n04542943"
     },
     "wall": {
+        "cityscapes_id": 12,
+        "cityscapes_name": "wall",
+        "cityscapes_pano_id": 12,
         "coco_pano_id": 199,
         "coco_pano_name": "wall-other-merged",
         "context": "construction",
