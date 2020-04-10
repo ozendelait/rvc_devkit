@@ -291,7 +291,7 @@ def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--append_file', type=str, default="./label_definitions/mapillary-config.json",
+    parser.add_argument('--append_file', type=str, default="./label_definitions/cityscapes-full-config.json",
                         help='Path to csv or json file containing additional mappings') #./label_definitions/panoptic_coco_categories.json
     parser.add_argument('--input', type=str, default="joint_mapping.json",
                         help="Input json file path, set to empty string to generate anew")
@@ -358,11 +358,13 @@ def main(argv=sys.argv[1:]):
             #mapillary-style json
             id_param = appendf["id_prefix"]+"_id"
             name_param = appendf["id_prefix"]+"_name"
-            id_param_eval = appendf["id_prefix_eval"] + "_id"
+            id_is_idx = "pano" in appendf["id_prefix_eval"]
+            id_param_eval = appendf["id_prefix_eval"]
+            id_param_eval += "_id" if id_is_idx else "_name"
             possible_cat = None
-            is_inst = ("boxable" in id_param_eval or "inst" in id_param_eval)
+            id_is_idx = "pano" in id_param_eval
             for idx0, vals in enumerate(appendf["labels"]):
-                if is_inst and vals.get('instances', False):
+                if not id_is_idx and not vals.get('instances', True):
                     continue # quick hack to add all instance classes as boxables / inst
                 if vals['name'] in check_dubl[name_param]:
                     key = check_dubl[name_param][vals['name']]
@@ -371,7 +373,7 @@ def main(argv=sys.argv[1:]):
                     possible_cat = None
                     context = vals["readable"].split('(')
                     if len(context) > 1 and context[1][-1] == ')':
-                        key = context[0].replace('_', '')
+                        key = context[0].strip().replace('_', '')
                         possible_cat = context[1][:-1]
                     pos_dd = vals['name'].find('--')
                     if pos_dd > 0:
@@ -382,12 +384,11 @@ def main(argv=sys.argv[1:]):
                     print("Adding: "+key+ " for ", vals)
                     joined_label_space[key] = {}
                 trg_entry = joined_label_space[key]
-                #uniqid = vals['name'] if is_inst else vals['name']
                 vals_add = {name_param:vals['name']}
-                if not is_inst:
+                if id_is_idx:
                     vals_add[id_param] = idx0
                 if vals.get("evaluate", True):
-                    vals_add[id_param_eval] = idx0
+                    vals_add[id_param_eval] =  idx0 if id_is_idx else vals['name']
                 if not possible_cat is None:
                     vals_add['context'] = possible_cat
                 if not check_for_dublicates(key, vals_add, trg_entry):
