@@ -6,7 +6,7 @@
 import os, sys, argparse, json, csv, time
 
 #join_obj_det = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvs_boxable_name"]
-join_inst = ["oid_inst_leaf","coco_inst_id","cityscapes_inst_id","mvs_boxable_name"] #TODO: KITTI,
+join_inst = ["oid_inst_leaf", "coco_inst_id", "cityscapes_inst_id", "mvs_inst_id"] #TODO: Scannet, [KITTI, VIPER, WD] -> inst_segm of cityscapes
 
 def solve_leaf_boxable(joined_label_space, oid_n, mid_to_key):
     if "Subcategory" in oid_n:
@@ -31,11 +31,11 @@ def main(argv=sys.argv[1:]):
     #    super_cat_info = json.load(ifile)
     #solve_leaf_boxable(joined_label_space, super_cat_info, mid_to_key)
 
-    all_lines = [['key']+join_obj_det]
+    all_lines = [['key']+join_inst]
     for key, vals in joined_label_space.items():
         add_line = []
         is_valid_line = False
-        for j in join_obj_det:
+        for j in join_inst:
             add_val = ""
             if j in vals:
                 add_val = vals[j]

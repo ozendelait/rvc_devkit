@@ -9,4 +9,4 @@ segmentation/datasets_*/
 segmentation/algo_*/
 segmentation/temp_unpack_dir
 segmentation/archives
-objdet/objects365
+datasets/
