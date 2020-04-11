@@ -19,6 +19,9 @@ def download_file_from_google_drive(id, destination, try_resume_bytes=-1, total_
     if token:
         params = { 'id' : id, 'confirm' : token }
         response = session.get(URL, params = params, headers=resume_headers, stream = True)
+    if not response.encoding is None and '01 Jan 1990' in response.headers.get('Expires',''):
+        print("Download limit reached for file id "+id+ ", skipping. Please retry in 24h.")
+        return
     if os.path.isdir(destination):
         # based on https://github.com/wkentaro/gdown/blob/master/gdown/download.py
         fname = re.search('filename="(.*)"', response.headers.get("Content-Disposition",""))
