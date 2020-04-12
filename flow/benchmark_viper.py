@@ -170,16 +170,74 @@ class VIPER(Benchmark):
         for archive in archives_to_download:
             archive_dict = getattr(self, archive)
             for archive_id, gdrive_id in archive_dict.items():
-                archive_path = os.path.join(archive_dir_path, archive_id)
-                DownloadFileFromGDrive(gdrive_id, archive_path)
-                UnzipFile(archive_path, unzip_dir_path, overwrite=False)
+                archive_path = os.path.join(archive_dir_path, archive[9:] + '_' + archive_id + '.zip')
+                if not os.path.exists(archive_path):
+                    DownloadFileFromGDrive(gdrive_id, archive_path)
+                    pass
+                if os.path.exists(archive_path):
+                    UnzipFile(archive_path, unpack_dir_path, overwrite=False)
+                    pass
                 pass
+            pass
+        pass
     
     def CanConvertOriginalToFormat(self, dataset_format):
         return isinstance(dataset_format, MiddleburyFormat)# or isinstance(dataset_format, Kitti2015Format)
 
     def ConvertToKittiFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
-        raise NotImplementedError
+        # Convert downloaded files to Middlebury format
+        src_train_path = os.path.join(unpack_dir_path, 'train')
+        src_test_path  = os.path.join(unpack_dir_path, 'test')
+
+        # convert images
+        for subset_src_dir, subset_dst_dir in [(src_train_path, training_dir_path), (src_test_path, test_dir_path)]:
+            img_src_dir = os.path.join(subset_src_dir, 'img')
+            img_dst_dir = os.path.join(subset_dst_dir, 'image_2')
+
+            sequences = [d for d in os.listdir(img_src_dir) if os.path.isdir(os.path.join(img_src_dir, d))]
+            for seq in sequences:
+                seq_src_dir = os.path.join(img_src_dir, seq)
+                seq_dst_dir = os.path.join(img_dst_dir)
+
+                MakeDirsExistOk(seq_dst_dir)
+
+                images = [f for f in os.listdir(seq_src_dir) if f.endswith('.jpg') or f.endswith('.png')]
+                for img in images:
+                    frame = int(img[4:-4])
+                    shutil.move(os.path.join(seq_src_dir, f), os.path.join(seq_dst_dir, '%s_%04d.%s' % (seq, frame, img[-3:])))
+                    pass
+                pass
+
+            shutil.rmtree(subset_src_dir)
+            pass
+
+        # convert flow
+        flow_src_dir = os.path.join(src_train_path, 'flow')
+        flow_dst_dir = os.path.join(training_dir_path, 'flow_occ')
+
+        sequences = [d for d in os.listdir(flow_src_dir) if os.path.isdir(os.path.join(flow_src_dir, d))]
+        for seq in sequences:
+            seq_src_dir = os.path.join(flow_src_dir, seq)
+            seq_dst_dir = os.path.join(flow_dst_dir)
+
+            MakeDirsExistOk(seq_dst_dir)
+
+            flows = [f for f in os.listdir(seq_src_dir) if f.endswith('_bw.mat')]            
+            for flow in flows:
+                frame = int(flow[4:-7])
+                flow_src_path = os.path.join(seq_src_dir, flow)
+                flow_dst_path = os.path.join(seq_dst_dir, '%s_%04d.png' % (seq, frame))
+                
+                d   = scipy.io.loadmat(flow_src_path)
+                h,w = d['u'].shape[:2]
+                u   = array.array('f', np.asarray(-d['u']))
+                v   = array.array('f', np.asarray(-d['v']))
+                WriteKittiPngFile(flow_dst_path, w, h, u, v)
+                pass
+
+            shutil.rmtree(flow_src_dir)
+            pass
+        pass
 
     def ConvertToMiddleburyFormat(self, unpack_dir_path, metadata_dict, training_dir_path, test_dir_path):
         
@@ -210,8 +268,8 @@ class VIPER(Benchmark):
             pass
 
         # convert flow
-        flow_src_dir = os.path.join(subset_src_dir, 'flow')
-        flow_dst_dir = os.path.join(subset_dst_dir, 'flow')
+        flow_src_dir = os.path.join(src_train_path, 'flow')
+        flow_dst_dir = os.path.join(training_dir_path, 'flow')
 
         sequences = [d for d in os.listdir(flow_src_dir) if os.path.isdir(os.path.join(flow_src_dir, d))]
         for seq in sequences:
