@@ -17,6 +17,13 @@ parameters are used for all results).
 ## Getting started ##
 
 Prerequisites: Install `git` and `python` (both versions 2.7.x and 3.x should work) if they are not installed yet.
+For downloading data from GDrive automatically, the ```requests``` module is required:
+```pip install requests```
+
+For converting between datasets, scipy and imageio are required:
+```pip install imageio```
+```pip install scipy```
+
 
 1. Clone this repository:
    ```git clone https://github.com/ozendelait/rvc_devkit.git```

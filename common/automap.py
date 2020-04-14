@@ -3,7 +3,7 @@
 # add missing mapping_wordnet.json from here:
 # https://github.com/ozendelait/wordnet-to-json/releases
 
-import sys, argparse, json, csv, time
+import os, sys, argparse, json, csv, time
 import requests
 
 retry_time_sleep_s = 1.0
@@ -19,7 +19,20 @@ fix_unified_labels = {'flying_disc':'frisbee', 'doughnut':'donut', 'keyboard': '
                  'maracas':'maraca', 'houseplant':'potted_plant', 'remote_control':'remote',
                  'hair_drier':'hair_dryer', 'earrings':'earring', 'band-aid': 'adhesive_bandage', 'ring-binder':'ring_binder',
                  'chopsticks':'chopstick', 'headphones':'headphone', 'vehicle_registration_plate':'license_plate', 'cosmetics':'cosmetic',
-                 'crash_helmet' : 'bicycle_helmet'
+                 'crash_helmet' : 'bicycle_helmet', 'shoes':'shoe', 'picture':'picture_frame', 'speaker':'loudspeaker',
+                 'monitor' : 'computer_monitor', 'gun' : 'handgun', 'luggage':'luggage_and_bags', 'table_tennis':'table_tennis_racket',
+                 "noddles":"noodle", 'asparagus' : 'garden_asparagus', 'drill' : 'electric_drill',
+                 'shower' : 'showerhead', 'tape' : 'adhesive_tape',
+                 'tablet' : 'tablet_computer', 'football' : 'american_football', 'formula_1_':'race_car',
+                 'carriage' : 'horse_carraige', 'bakset' : 'basket', 'barrel/bucket':'barrel', 'cigar/cigarette_':'roll_of_tobacco',
+                 'billards' : 'billard_ball', 'blackboard/whiteboard':'whiteboard', 'tennis' : 'tennis_ball',
+                 'cosmetics_brush/eyeliner_pencil' : 'eyeliner_pencil', 'wallet/purse':'purse', 'trolley':'handcart',
+                 'soccer' : 'soccer_ball', 'skating_and_skiing_shoes':'ski_boot', 'router/modem' : 'router', 'paint_brush' : 'paintbrush',
+                 'other_shoes' : 'shoes', "other_fish": "fish", 'Other_Balls' : 'ball', 'nuts' : 'nut', 'moniter/tv' : 'monitor_or_tv',
+                 'french' : 'french_horn', 'fan':'electric_fan', 'extractor' : 'exhaust_hood', 'extention_cord' : 'extension_cord',
+                 'curling' : 'curling_stone', 'converter' : 'power_brick', 'computer_box' : 'computer_housing',
+                 'table_teniis_paddle' : 'table_teniis_racket', 'table_tennis' : 'table_tennis_ball', 'chips' : 'potato_chip',
+                 'earphones':'in-ear-earphones', 'head_phone' : 'headphone', 'cd' : 'compact_disc'
                 }
 
 #faulty qid (corresp./data must be fixed on wikidata itself): "balance_beam"
@@ -41,7 +54,8 @@ oid_context_fixed = {"gondola": ("boat","n03447447"), "cucumber":("fruit","n0771
                      "apple":("fruit","n07739125"), "arm":("human","n05563770"), "banner":("cloth","n02788021"),
                      "bat":("animal", "n02139199"), "bathroom_cabinet":("toiletries","n03742115"), "bear":("mammal","n02131653"),
                      "beard":("human", "n05261566"), "pitcher":("spout", "n03950228"), "belt":("waist","n02827606"),  #"window_blind":("covering","n02851099"),
-                     "boot":("footwear","n02872752")
+                     "boot":("footwear","n02872752"), "beetle":("insect","n02164464"), "bird":("animal", "n01503061"),
+                     "bull":("cattle","n02403325"), "roll_of_tobacco":("smoke", "n04103491")
                      }
 
 def unify_namings(name0):
@@ -49,7 +63,7 @@ def unify_namings(name0):
     return fix_unified_labels.get(unif_name,unif_name)
 
 def get_wordnet_gloss(pwn30, retries = 0):
-    res0 = None
+    res0, res0_r = None, None
     try:
         res0_r = requests.get(
         "http://wordnet-rdf.princeton.edu/json/pwn30/%s"%(pwn30[1:]+'-'+pwn30[0]), params={"format": "json"})
@@ -58,7 +72,7 @@ def get_wordnet_gloss(pwn30, retries = 0):
     except:
         print("Unexpected error:", sys.exc_info()[0], res0_r)
         res0 = None
-    if res0 == None or len(res0) < 1 or 'n'+res0[0]['old_keys']['pwn30'][0][:-2] != pwn30:
+    if res0 == None or len(res0) < 1 or res0[0]['old_keys']['pwn30'][0][-1]+res0[0]['old_keys']['pwn30'][0][:-2] != pwn30:
         if retries <= 0:
             print("Warning: bad request:", pwn30, res0_r)
             return {}
@@ -69,6 +83,8 @@ def get_wordnet_gloss(pwn30, retries = 0):
 
 def get_wordnet(str0, context = None, retries = 0):
     res0 = None
+    if not context is None and len(context) == 1 and len(context[0]) == 0:
+        context = None
     try:
         res0_r = requests.get(
         "http://wordnet-rdf.princeton.edu/json/lemma/%s"%str0.replace('_','%20'), params={"format": "json"})
@@ -104,8 +120,11 @@ def get_wordnet(str0, context = None, retries = 0):
                     continue
         if best_r is None:
             best_r = r
-        if context is None and best_r['subject'] == 'noun.artifact' and r['subject'] != 'noun.artifact':
-            continue #usually man-made objects are the best represenation for COCo/OID representations
+        if context is None:
+            if r['subject'] == 'noun.artifact' and best_r['subject'] != 'noun.artifact':
+                best_r = r #usually man-made objects are the best represenation for COCo/OID representations
+            if best_r['subject'] == 'noun.artifact' and r['subject'] != 'noun.artifact':
+                continue
         min_pwn = int(best_r['old_keys']['pwn30'][0][:-2])
         if curr_pwn < min_pwn:  # smaller q usually stands for a more general entry (vs. an instance)
             best_r = r
@@ -117,7 +136,7 @@ def get_wordnet(str0, context = None, retries = 0):
     return {}
 
 def get_wikidata(str0, context = None, retries = 0):
-    res0 = None
+    res0, res0_r = None, None
     try:
         res0_r = requests.get(
         "https://query.wikidata.org/sparql", params={"query": str0, "format": "json"})
@@ -139,9 +158,15 @@ def get_wikidata(str0, context = None, retries = 0):
     best_b = None
     for b in bindings[:min(16, len(bindings))]:
         qid = b['item']['value'].split('/')[-1]
-        if not 'itemDescription' in b or len(qid) > 16:
+        if len(qid) > 16:
             continue
         prev_has_wn3 = False
+        if best_b is None:
+            best_b = b
+        else:
+            prev_has_wn3 = 'WN3' in best_b and best_b['WN3']['value'].find('/wn30/') > 0
+        if not 'itemDescription' in b:
+            continue
         if not context is None:
             #check if context words are in the first sentence
             pos_context = min([b['itemDescription']['value'].find(c) for c in context])
@@ -151,15 +176,12 @@ def get_wikidata(str0, context = None, retries = 0):
             if pos_fullstop > 0 and pos_context > pos_fullstop:
                 continue
         curr_q = int(b['item']['value'].split('/')[-1][1:])
-        if best_b is None:
-            best_b = b
-        else:
-            prev_has_wn3 = 'WN3' in best_b
+
         min_q = int(best_b['item']['value'].split('/')[-1][1:])
         if curr_q < min_q: #smaller q usually stands for a more general entry (vs. an instance)
             best_b = b
             break
-        has_wn3 = 'WN3' in b
+        has_wn3 = 'WN3' in b and b['WN3']['value'].find('/wn30/') > 0
         has_frn = 'FREEN' in b
         if has_wn3 and has_frn:
             best_b = b
@@ -168,7 +190,11 @@ def get_wikidata(str0, context = None, retries = 0):
             best_b = b
 
     if not best_b is None:
-        ret_b = {'wikidata_qid': best_b['item']['value'].split('/')[-1], 'wikidata_name': best_b['itemLabel']['value'], 'wikidata_desc': best_b['itemDescription']['value']}
+        ret_b = {'wikidata_qid': best_b['item']['value'].split('/')[-1], 'wikidata_name': "", 'wikidata_desc': ""}
+        if 'itemLabel' in  best_b:
+            ret_b['wikidata_name'] = best_b['itemLabel']['value']
+        if 'itemDescription' in best_b:
+            ret_b['wikidata_desc'] = best_b['itemDescription']['value']
         if 'WN3' in best_b and best_b['WN3']['value'].find('wordnet-rdf.princeton.edu/wn30/') >= 0:
             wn3_conv = best_b['WN3']['value'].split('/')[-1]
             ret_b['wordnet_pwn30'] = wn3_conv[-1]+wn3_conv[:-2]
@@ -187,7 +213,31 @@ def wikidata_from_freebaseid(freebaseid):
     """
     return get_wikidata(sparql_query%freebaseid,retries=max_retries_wikidata)
 
+def wikidata_from_qid(qid):
+    sparql_query0 = """
+    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
+      ?article schema:about ?item .
+      OPTIONAL { ?item  wdt:P2888  ?WN3 }
+      OPTIONAL { ?item  wdt:P646  ?FREEN }
+      BIND(wd:%s AS ?item).
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+    }
+    """
+    sparql_query1 = """
+        SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
+          ?item ?label "%s"@en
+          OPTIONAL { ?item  wdt:P2888  ?WN3 }
+          OPTIONAL { ?item  wdt:P646  ?FREEN }   
+        }
+        """
+    d0 = get_wikidata(sparql_query0 % qid, retries=max_retries_wikidata)
+    if len(d0) == 0:
+        d0 = get_wikidata(sparql_query1 % qid, retries=max_retries_wikidata)
+    return d0
+
 def wikidata_from_wordnet3p0(wordnetid):
+    if len(wordnetid) < 3:
+        return {}
     conv_wn = wordnetid[1:]+'-'+ wordnetid[0]
     sparql_query = """
     SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 WHERE{  
@@ -200,21 +250,19 @@ def wikidata_from_wordnet3p0(wordnetid):
 
 def wikidata_from_name(name, context = None):
     sparql_query0 = """
-    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 WHERE{  
+    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
       ?item ?label "%s"@en.  
       ?article schema:about ?item .
-      ?article schema:inLanguage "en" .
       OPTIONAL { ?item  wdt:P2888  ?WN3 }
       OPTIONAL { ?item  wdt:P646  ?FREEN }
       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
     }
     """
     sparql_query1 = """
-    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 WHERE{  
-      ?item ?label "%s"
+    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
+      ?item ?label "%s"@en
       OPTIONAL { ?item  wdt:P2888  ?WN3 }
-      OPTIONAL { ?item  wdt:P646  ?FREEN }
-      SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }    
+      OPTIONAL { ?item  wdt:P646  ?FREEN }   
     }
     """
     label_check = name.replace('_', ' ')
@@ -223,93 +271,166 @@ def wikidata_from_name(name, context = None):
         d0 = get_wikidata(sparql_query1 % label_check, context=context, retries=max_retries_wikidata)
     return d0
 
+unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
+                    'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_name','cityscapes_name']
+check_dubl = {p:{} for p in unique_id_params}
+
+def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True):
+    for p in unique_id_params:
+        if not p in add_entry or add_entry[p] == '':
+            continue
+        if add_entry[p] in check_dubl[p] and check_dubl[p][add_entry[p]] != key:
+            print(p + ' id for ' + key + ' already exists at key: ' + check_dubl[p][add_entry[p]])
+            return False
+        if p in cmp_entry and cmp_entry[p] != add_entry[p]:
+            print(p+' collision for ' + key + ': ' + cmp_entry[p] + ' vs ' + add_entry[p])
+            return False
+        if append_dubl_data:
+            check_dubl[p][add_entry[p]] = key
+    return True
+
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--limit_labels', type=str, default="./label_definitions/panoptic_coco_categories.json",
-                    help='Path to json file containing subset of names for relevant imagenet labels')
-    parser.add_argument('--freebase_src', type=str, default="./label_definitions/oid-class-descriptions-boxable.csv",
-                    help='Path to json file containing source freebase labels')
-    parser.add_argument('--output', type=str, default="joint_mapping.json",
+    parser.add_argument('--append_file', type=str, default="./label_definitions/cityscapes-full-config.json",
+                        help='Path to csv or json file containing additional mappings') #./label_definitions/panoptic_coco_categories.json
+    parser.add_argument('--input', type=str, default="joint_mapping.json",
+                        help="Input json file path, set to empty string to generate anew")
+    parser.add_argument('--output', type=str, default="joint_mapping_tmp.json",
                         help="Output json file path")
     args = parser.parse_args(argv)
 
-    #imagenet_labels_raw = {'synset':{}}
-    #with open(args.imagenet_src, 'r') as ifile:
-    #    imagenet_labels_raw = json.load(ifile)
-    
     inv_fix_unified_labels = {v: k for k, v in fix_unified_labels.items()}
-    #overwrite/fix defined wids
-    #for w, (context, wid) in oid_context_fixed.items():
-    #    imagenet_labels[w] = wid
 
-    with open(args.limit_labels, 'r') as ifile:
-        limit_labels_raw = json.load(ifile)
-    joined_label_space = {unify_namings(entry['name']) : {'coco_pano_id':entry['id'], 'coco_pano_name':entry['name']} for entry in limit_labels_raw}
+    if os.path.exists(args.input):
+        with open(args.input, 'r') as ifile:
+            joined_label_space = json.load(ifile)
+        for key, vals in joined_label_space.items():
+            check_for_dublicates(key, vals)
 
-    with open(args.freebase_src, newline='') as ifile:
-        freebase_labels_raw = list(csv.reader(ifile))
-
-
-    all_qids = {}
-    for (fid, name) in freebase_labels_raw:
-        key = unify_namings(name)
-        if not key in joined_label_space:
-            key = key.replace('-stuff','').replace('-merged','').replace('-other','')
-        add_entry = {'oid_name': name, 'freebase_mid': fid}
-        context = key.split('(')
-        if len(context) > 1 and context[1][-1] == ')':
-            key = context[0].replace('_', '')
-            add_entry['context'] = context[1][:-1]
-        elif key.find('human_') == 0:
-            key = key.split('_')[-1]
-            add_entry['context'] = 'human'
-        if key in oid_context_fixed:
-            add_entry['context'] = oid_context_fixed[key][0]
-            add_entry.update(get_wordnet_gloss(oid_context_fixed[key][1], retries=0))
-
-        f_wd = wikidata_from_freebaseid(fid)
-        if 'wordnet_pwn30' in add_entry and 'wordnet_pwn30' in f_wd and f_wd['wordnet_pwn30'] != add_entry['wordnet_pwn30']:
-            print('Wordnet clash for '+ key +': ' + f_wd['wordnet_pwn30'] + ' vs ' + add_entry['wordnet_pwn30'])
-            continue
-        add_entry.update(f_wd)
-        if 'wikidata_qid' in add_entry:
-            qid = add_entry['wikidata_qid']
-            if qid in all_qids:
-                print("Warning: dublicate qid: ", all_qids[qid], key)
-            all_qids[qid] = key
-        if key in joined_label_space:
-            joined_label_space[key].update(add_entry)
+    if len(args.append_file) > 0 and os.path.exists(args.append_file):
+        is_freebase_src = False
+        if args.append_file[-3:] == "csv":
+            with open(args.append_file, newline='') as ifile:
+                appendf = list(csv.reader(ifile))
+            is_freebase_src = True
         else:
-            joined_label_space[key] = add_entry
-    
+            with open(args.append_file, 'r') as ifile:
+                appendf = json.load(ifile)
+        if is_freebase_src:
+            #oid_file
+            for (mid, name) in appendf:
+                if mid in check_dubl['freebase_mid']:
+                    continue
+                key = unify_namings(name)
+                add_entry = {'oid_name': name, 'freebase_mid': mid}
+                context = key.split('(')
+                if len(context) > 1 and context[1][-1] == ')':
+                    key = context[0].replace('_', '')
+                    add_entry['context'] = context[1][:-1]
+                elif key.find('human_') == 0:
+                    key = key.split('_')[-1]
+                    add_entry['context'] = 'human'
+                f_wd = wikidata_from_freebaseid(mid)
+                if not check_for_dublicates(key,f_wd):
+                    continue
+                add_entry.update(f_wd)
+                joined_label_space.setdefault(key, {}).append(add_entry)
+        elif isinstance(appendf, dict) and "Person" in appendf:
+            #obj365 file
+            for key, vals in appendf.items():
+                if key in check_dubl['obj365_boxable_name']:
+                    continue
+                fitting_key = unify_namings(key)
+                if "wordnet_pwn30" in vals and vals["wordnet_pwn30"] in check_dubl['wordnet_pwn30']:
+                    fitting_key = check_dubl['wordnet_pwn30'][vals["wordnet_pwn30"]]
+                elif not fitting_key in joined_label_space and "wordnet_name" in vals and unify_namings(vals["wordnet_name"]) in joined_label_space:
+                    fitting_key = unify_namings(vals["wordnet_name"])
+                if not fitting_key in joined_label_space:
+                    print("Adding: "+fitting_key+ " for "+ key + "("+vals.get("wordnet_gloss",'')+")")
+                    joined_label_space[fitting_key] = {'obj365_boxable_name':key}
+                trg_entry = joined_label_space[fitting_key]
+                if not check_for_dublicates(fitting_key, vals, trg_entry):
+                    continue
+                if "wordnet_pwn30" in vals:
+                    trg_entry["wordnet_pwn30"] = vals["wordnet_pwn30"]
+                trg_entry['obj365_boxable_name'] = key
+        elif isinstance(appendf, dict) and "labels" in appendf and "id_prefix" in appendf:
+            #mapillary-style json
+            id_param = appendf["id_prefix"]+"_id"
+            name_param = appendf["id_prefix"]+"_name"
+            id_is_idx = "pano" in appendf["id_prefix_eval"]
+            id_param_eval = appendf["id_prefix_eval"]
+            id_param_eval += "_id" if id_is_idx else "_name"
+            possible_cat = None
+            id_is_idx = not "boxable" in id_param_eval
+            for idx0, vals in enumerate(appendf["labels"]):
+                if not id_is_idx and not vals.get('instances', True):
+                    continue # quick hack to add all instance classes as boxables / inst
+                if vals['name'] in check_dubl[name_param]:
+                    key = check_dubl[name_param][vals['name']]
+                else:
+                    key = vals["readable"]
+                    possible_cat = None
+                    context = vals["readable"].split('(')
+                    if len(context) > 1 and context[1][-1] == ')':
+                        key = context[0].strip().replace('_', '')
+                        possible_cat = context[1][:-1]
+                    pos_dd = vals['name'].find('--')
+                    if pos_dd > 0:
+                        possible_cat = vals['name'][:pos_dd]
+                    key = unify_namings(key)
+
+                if not key in joined_label_space:
+                    print("Adding: "+key+ " for ", vals)
+                    joined_label_space[key] = {}
+                trg_entry = joined_label_space[key]
+                vals_add = {name_param:vals['name']}
+                if id_is_idx:
+                    vals_add[id_param] = idx0
+                if vals.get("evaluate", True):
+                    vals_add[id_param_eval] =  idx0 if id_is_idx else vals['name']
+                if not possible_cat is None:
+                    vals_add['context'] = possible_cat
+                if not check_for_dublicates(key, vals_add, trg_entry):
+                    continue
+                trg_entry.update(vals_add)
+        elif isinstance(appendf, list) and isinstance(appendf[0], dict) and "supercategory" in appendf[0]:
+            # coco panoptic file
+            coco_pano = {
+                unify_namings(entry['name']): {'coco_pano_id': entry['id'], 'coco_pano_name': entry['name']} for entry
+                in appendf}
+            joined_label_space.update(coco_pano)
+
+    #automatically adds qids
     for key, vals in joined_label_space.items():
         if 'wikidata_qid' in vals:
+            if len(vals['wikidata_qid']) > 0 and not 'wikidata_name' in vals:
+                w1 = wikidata_from_qid(vals['wikidata_qid'])
+                if not check_for_dublicates(key, w1, vals):
+                    continue
+                vals.update(w1)
             continue
         n_qid = wikidata_from_name(key, context=vals.get('context','').split('_'))
         if len(n_qid) == 0:
+            print("Did not find a qid for "+key)
             continue
-        qid = n_qid['wikidata_qid']
-        if qid in all_qids:
-            vals.update(joined_label_space[all_qids[qid]])
-            joined_label_space[all_qids[qid]].update(vals)
-            print("Warning: dublicate qid: ", all_qids[qid], key)
-        else:
-            vals.update(n_qid)
-            
+        if not check_for_dublicates(key, n_qid,vals):
+            continue
+        vals.update(n_qid)
 
-    #no wordnet: stop_sign sports_ball potted_plant floor-wood playingfield wall-brick wall-stone wall-tile wall-wood window-blind
     for key, vals in joined_label_space.items():
+        #find missing wordnet entries
         if 'wordnet_pwn30' in vals:
-            if not 'wordnet_gloss' in vals:
-                vals.update(get_wordnet_gloss(vals['wordnet_pwn30'], retries=0))
-            r_wn = vals
+            if len(vals['wordnet_pwn30']) == 0:
+                continue
+            add_entry = vals
         else:
             key0 = key.replace('-stuff','').replace('-merged','').replace('-other','')
             key0 = fix_unified_labels.get(key0, key0)
             if key0 in joined_label_space and 'wordnet_pwn30' in joined_label_space[key0]:
                 continue
-            r_wn = get_wordnet(key0, context=vals.get('context','').split('_'), retries=max_retries_wikidata)
-            if len(r_wn) == 0:
+            add_entry = get_wordnet(key0, context=vals.get('context','').split('_'), retries=max_retries_wikidata)
+            if len(add_entry) == 0:
                 if key0 in inv_fix_unified_labels:
                     key0 = inv_fix_unified_labels[key0]
                 else:
@@ -317,25 +438,20 @@ def main(argv=sys.argv[1:]):
                 key0 = fix_unified_labels.get(key0, key0)
                 if key0 in joined_label_space and 'wordnet_pwn30' in joined_label_space[key0]:
                     continue
-                r_wn = get_wordnet(key0, context=vals.get('context', '').split('_'), retries=max_retries_wikidata)
-
-        if not 'wordnet_pwn30' in r_wn:
-            print('Not found in wordnet: '+key)
+                add_entry = get_wordnet(key0, context=vals.get('context', '').split('_'), retries=max_retries_wikidata)
+        if not 'wordnet_pwn30' in add_entry:
+            print('Not found in wordnet: ' + key)
             continue
-        if 'wordnet_pwn30' in vals and vals['wordnet_pwn30'] != r_wn['wordnet_pwn30']:
-            print('Wordnet clash for '+ key +': ' + vals['wordnet_pwn30'] + ' vs ' + r_wn['wordnet_pwn30'])
+        if not 'wordnet_gloss' in add_entry:
+            g0 = get_wordnet_gloss(add_entry['wordnet_pwn30'], retries=0)
+            add_entry.update(g0)
+        if not check_for_dublicates(key, add_entry, vals):
             continue
-        vals.update(r_wn)
-
-        if not 'freebase_mid' in vals or not 'wikidata_qid' in vals:
+        vals.update(add_entry)
+        #find wikidata via pwn30
+        if not 'wikidata_qid' in vals:
             w1 = wikidata_from_wordnet3p0(vals['wordnet_pwn30'])
-            if 'wikidata_qid' in w1:
-                qid = w1['wikidata_qid']
-                if qid in all_qids:
-                    print("Warning: dublicate qid: ", all_qids[qid], key)
-                all_qids[qid] = key
-            if 'freebase_mid' in w1 and 'freebase_mid' in vals and vals['freebase_mid'] != w1['freebase_mid']:
-                print('Freebase clash for ' + key + ': ' + w1['freebase_mid']  + ' vs ' + vals['freebase_mid'])
+            if not check_for_dublicates(key, w1, vals):
                 continue
             vals.update(w1)
 
@@ -347,9 +463,9 @@ def main(argv=sys.argv[1:]):
         if 'wikidata_qid' in vals:
             cnt_qid += 1
     
-    print("Found mappings for %i entries and %i have qids of %i" % (cnt_both , cnt_qid,len(joined_label_space)))
+    print("Found mappings for %i entries and %i have qids of %i" % (cnt_both , cnt_qid, len(joined_label_space)))
     
-    with open(args.output, 'w') as ofile:
+    with open(args.output, 'w', newline='\n') as ofile:
         json.dump(joined_label_space, ofile, sort_keys=True, indent=4)
         
     return 0

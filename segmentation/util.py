@@ -64,6 +64,40 @@ def MakeCleanDirectory(folder_path):
         MakeDirsExistOk(folder_path)
 
 
+# Downloads the file with given GDrive ID to the given destination path.
+# https://stackoverflow.com/a/39225039
+def DownloadFileFromGDrive(gdrive_id, dest_file_path):
+    import requests
+
+    def get_confirm_token(response):
+        for key, value in response.cookies.items():
+            if key.startswith('download_warning'):
+                return value
+
+        return None
+
+    def save_response_content(response, destination):
+        CHUNK_SIZE = 32768
+
+        with open(dest_file_path, "wb") as f:
+            for chunk in response.iter_content(CHUNK_SIZE):
+                if chunk: # filter out keep-alive new chunks
+                    f.write(chunk)
+
+    URL = "https://drive.google.com/uc?export=download"
+
+    session = requests.Session()
+
+    response = session.get(URL, params = { 'id' : gdrive_id }, stream = True)
+    token = get_confirm_token(response)
+
+    if token:
+        params = { 'id' : gdrive_id, 'confirm' : token }
+        response = session.get(URL, params = params, stream = True)
+
+    save_response_content(response, dest_file_path)    
+    pass
+
 # Downloads the given URL to a file in the given directory. Returns the
 # path to the downloaded file.
 # In part adapted from: https://stackoverflow.com/questions/22676

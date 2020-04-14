@@ -1,15 +1,12 @@
-# Robust Vision Challenge 2020 - Single Image Depth Prediction Devkit #
+# Robust Vision Challenge 2020 - Single Image Depth Prediction Devkit
 
 
-###########################
-## Required Pip Packages ##
-###########################
-
+## Required Pip Packages
+```
 pip install argparse numpy imageio
+```
 
-######################
-## Dataset Download ##
-######################
+## Dataset Download
 
 For the Robust Vision Challenge 2020, we propose three single-image
 depth datasets:
@@ -32,10 +29,7 @@ The process requires roughly 300GB of space!
 The download script will not delete any data, to free space again,
 remove all files you don't need.
 
-
-######################
-## Format/Layout ##
-######################
+## Short Format and Layout Description
 
 The rabbitAI data set as well as the data created by the download script
 are structured as follows:
@@ -55,10 +49,39 @@ image_? contains the color images for depth prediction, and
 proj_depth/groundtruth/image_0? the corresponding depth imgs.
 
 The depth GT images are encoded as 16bit png, which encode 
-depth as depth/256.  
+depth as depth/256.
 
 The script clamps depth at 100m (e.g. max val is 25600).
 Invalid values are encoded as zero!
 
 We recommend training in a way that allows values >=100 for GT values of 100m.
 Note that MPI Sintel also supports larger depths (run get_datasets.sh --clamprange [meter]).
+
+## Detailed Description (from KITTI)
+
+We use the original KITTI depth prediction format, compare KITTI/readme.txt.
+A short summary:
+
+Depth maps (annotated and raw Velodyne scans) are saved as uint16 PNG images,
+which can be opened with either MATLAB, libpng++ or the latest version of
+Python's pillow (from PIL import Image). A 0 value indicates an invalid pixel
+(ie, no ground truth exists, or the estimation algorithm didn't produce an
+estimate for that pixel). Otherwise, the depth for a pixel can be computed
+in meters by converting the uint16 value to float and dividing it by 256.0:
+
+```
+depth(u,v) = ((float)I(u,v))/256.0;
+valid(u,v) = I(u,v)>0;
+```
+
+RGB images are stored as 3-channel RGB images, and intrinsics are stored in
+txt file containing 9 float values, that, if cast to a 3x3 matrix represent:
+
+```
+f_x     0   o_x
+  0   f_y   o_y
+  0     0     1
+```
+
+Where focal length in horizontal and vertical axis are given by f_x and f_y,
+and the focal point by (o_x, o_y).
