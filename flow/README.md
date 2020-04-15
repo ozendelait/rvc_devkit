@@ -131,14 +131,14 @@ The resulting archives must be submitted to the respective benchmarks:
 * [Kitti2015](<http://www.cvlibs.net/datasets/kitti/user_login.php>
 )
 * [Middlebury](http://vision.middlebury.edu/flow/submit/)
-* [HCI2015](http://hci-benchmark.org/submit)
+* [HD1K](http://hci-benchmark.org/submit)
 
 To signify that your method is part of a submission to the Robust Vision
 Challenge, please add the postfix ``_RVC`` to your algorithm name for all
 submissions.
 
 Furthermore, the submission must be completed by filling a short form on the
-Robust Vision Challenge website: TODO
+Robust Vision Challenge website: [submission form](http://robustvision.net/submit.php#register).
 
 
 ## Command Line Interface ##
