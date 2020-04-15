@@ -273,7 +273,7 @@ def wikidata_from_name(name, context = None):
 
 unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
                     'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_name','cityscapes_name',
-                    'scannet_name', 'ade20k_id']
+                    'scannet_name', 'ade20k_id', 'wilddash_name', 'wilddash_pano_id']
 check_dubl = {p:{} for p in unique_id_params}
 
 def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True):
@@ -292,7 +292,7 @@ def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--append_file', type=str, default="./label_definitions/ade20k_objectInfo150.csv",
+    parser.add_argument('--append_file', type=str, default="./label_definitions/wilddash-config.json",
                         help='Path to csv or json file containing additional mappings') #./label_definitions/panoptic_coco_categories.json
     parser.add_argument('--input', type=str, default="joint_mapping.json",
                         help="Input json file path, set to empty string to generate anew")

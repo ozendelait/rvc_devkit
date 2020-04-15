@@ -1,0 +1,438 @@
+{
+    "id_prefix": "wilddash",
+    "id_prefix_eval": "wilddash_pano",
+    "labels": [
+        {
+            "color": [
+                0, 
+                0, 
+                0
+            ], 
+            "instances": false, 
+            "readable": "unlabeled(void)", 
+            "name": "unlabeled", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                0, 
+                20, 
+                50
+            ], 
+            "instances": true, 
+            "readable": "ego vehicle(void)", 
+            "name": "ego vehicle", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                20, 
+                20, 
+                20
+            ], 
+            "instances": false, 
+            "readable": "rectification border(void)", 
+            "name": "rectification border", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                0, 
+                0, 
+                0
+            ], 
+            "instances": false, 
+            "readable": "out of roi(void)", 
+            "name": "out of roi", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                0, 
+                0, 
+                0
+            ], 
+            "instances": false, 
+            "readable": "static(void)", 
+            "name": "static", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                111, 
+                74, 
+                0
+            ], 
+            "instances": false, 
+            "readable": "dynamic(void)", 
+            "name": "dynamic", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                81, 
+                0, 
+                81
+            ], 
+            "instances": false, 
+            "readable": "ground(void)", 
+            "name": "ground", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                128, 
+                64, 
+                128
+            ], 
+            "instances": false, 
+            "readable": "road(flat)", 
+            "name": "road", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                244, 
+                35, 
+                232
+            ], 
+            "instances": false, 
+            "readable": "sidewalk(flat)", 
+            "name": "sidewalk", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                250, 
+                170, 
+                160
+            ], 
+            "instances": false, 
+            "readable": "parking(flat)", 
+            "name": "parking", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                230, 
+                150, 
+                140
+            ], 
+            "instances": false, 
+            "readable": "rail track(flat)", 
+            "name": "rail track", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                70, 
+                70, 
+                70
+            ], 
+            "instances": false, 
+            "readable": "building(construction)", 
+            "name": "building", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                102, 
+                102, 
+                156
+            ], 
+            "instances": false, 
+            "readable": "wall(construction)", 
+            "name": "wall", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                190, 
+                153, 
+                153
+            ], 
+            "instances": false, 
+            "readable": "fence(construction)", 
+            "name": "fence", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                180, 
+                165, 
+                180
+            ], 
+            "instances": false, 
+            "readable": "guard rail(construction)", 
+            "name": "guard rail", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                150, 
+                100, 
+                100
+            ], 
+            "instances": false, 
+            "readable": "bridge(construction)", 
+            "name": "bridge", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                150, 
+                120, 
+                90
+            ], 
+            "instances": false, 
+            "readable": "tunnel(construction)", 
+            "name": "tunnel", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                153, 
+                153, 
+                153
+            ], 
+            "instances": false, 
+            "readable": "pole(object)", 
+            "name": "pole", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                153, 
+                153, 
+                153
+            ], 
+            "instances": false, 
+            "readable": "polegroup(object)", 
+            "name": "polegroup", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                250, 
+                170, 
+                30
+            ], 
+            "instances": false, 
+            "readable": "traffic light(object)", 
+            "name": "traffic light", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                220, 
+                220, 
+                0
+            ], 
+            "instances": false, 
+            "readable": "traffic sign(object)", 
+            "name": "traffic sign", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                107, 
+                142, 
+                35
+            ], 
+            "instances": false, 
+            "readable": "vegetation(nature)", 
+            "name": "vegetation", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                152, 
+                251, 
+                152
+            ], 
+            "instances": false, 
+            "readable": "terrain(nature)", 
+            "name": "terrain", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                70, 
+                130, 
+                180
+            ], 
+            "instances": false, 
+            "readable": "sky(sky)", 
+            "name": "sky", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                220, 
+                20, 
+                60
+            ], 
+            "instances": true, 
+            "readable": "person(human)", 
+            "name": "person", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                255, 
+                0, 
+                0
+            ], 
+            "instances": true, 
+            "readable": "rider(human)", 
+            "name": "rider", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                0, 
+                0, 
+                142
+            ], 
+            "instances": true, 
+            "readable": "car(vehicle)", 
+            "name": "car", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                0, 
+                0, 
+                70
+            ], 
+            "instances": true, 
+            "readable": "truck(vehicle)", 
+            "name": "truck", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                0, 
+                60, 
+                100
+            ], 
+            "instances": true, 
+            "readable": "bus(vehicle)", 
+            "name": "bus", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                0, 
+                0, 
+                90
+            ], 
+            "instances": true, 
+            "readable": "caravan(vehicle)", 
+            "name": "caravan", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                0, 
+                0, 
+                110
+            ], 
+            "instances": true, 
+            "readable": "trailer(vehicle)", 
+            "name": "trailer", 
+            "evaluate": false
+        }, 
+        {
+            "color": [
+                0, 
+                80, 
+                100
+            ], 
+            "instances": true, 
+            "readable": "on rails (vehicle)", 
+            "name": "on rails", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                0, 
+                0, 
+                230
+            ], 
+            "instances": true, 
+            "readable": "motorcycle (vehicle)", 
+            "name": "motorcycle", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                119, 
+                11, 
+                32
+            ], 
+            "instances": true, 
+            "readable": "bicycle (vehicle)", 
+            "name": "bicycle", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                40, 
+                0, 
+                100
+            ], 
+            "instances": true, 
+            "readable": "pickup-truck (vehicle)", 
+            "name": "pickup", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                0, 
+                40, 
+                120
+            ], 
+            "instances": true, 
+            "readable": "van (vehicle)", 
+            "name": "van", 
+            "evaluate": true
+        },
+        {
+            "color": [
+                174, 
+                64, 
+                67
+            ], 
+            "instances": false, 
+            "readable": "billboard(object)", 
+            "name": "billboard", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                210, 
+                170, 
+                100
+            ], 
+            "instances": false, 
+            "readable": "street-light(object)", 
+            "name": "street-light", 
+            "evaluate": true
+        }, 
+        {
+            "color": [
+                196, 
+                176, 
+                128
+            ], 
+            "instances": false, 
+            "readable": "road-marking (flat)", 
+            "name": "road-marking", 
+            "evaluate": true
+        }
+    ],
+    "version": 2.0,
+    "mapping": "public", 
+    "folder_structure": "{split}/{content}/{key:.{22}}.{ext}"
+}
