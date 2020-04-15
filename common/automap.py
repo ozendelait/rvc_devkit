@@ -272,7 +272,8 @@ def wikidata_from_name(name, context = None):
     return d0
 
 unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
-                    'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_name','cityscapes_name']
+                    'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_name','cityscapes_name',
+                    'scannet_name', 'ade20k_id']
 check_dubl = {p:{} for p in unique_id_params}
 
 def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True):
@@ -291,7 +292,7 @@ def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--append_file', type=str, default="./label_definitions/cityscapes-full-config.json",
+    parser.add_argument('--append_file', type=str, default="./label_definitions/ade20k_objectInfo150.csv",
                         help='Path to csv or json file containing additional mappings') #./label_definitions/panoptic_coco_categories.json
     parser.add_argument('--input', type=str, default="joint_mapping.json",
                         help="Input json file path, set to empty string to generate anew")
@@ -308,15 +309,14 @@ def main(argv=sys.argv[1:]):
             check_for_dublicates(key, vals)
 
     if len(args.append_file) > 0 and os.path.exists(args.append_file):
-        is_freebase_src = False
-        if args.append_file[-3:] == "csv":
+        is_csv_format =  args.append_file[-4:] == ".csv"
+        if is_csv_format:
             with open(args.append_file, newline='') as ifile:
                 appendf = list(csv.reader(ifile))
-            is_freebase_src = True
         else:
             with open(args.append_file, 'r') as ifile:
                 appendf = json.load(ifile)
-        if is_freebase_src:
+        if is_csv_format and "/m/" in appendf[0][0]:
             #oid_file
             for (mid, name) in appendf:
                 if mid in check_dubl['freebase_mid']:
@@ -400,6 +400,22 @@ def main(argv=sys.argv[1:]):
                 unify_namings(entry['name']): {'coco_pano_id': entry['id'], 'coco_pano_name': entry['name']} for entry
                 in appendf}
             joined_label_space.update(coco_pano)
+        elif is_csv_format and isinstance(appendf, list) and "Ratio" in appendf[0]:
+            # ade20k format
+            for idx0,ratio,train_num, val_num, is_stuff, names in appendf[1:]:
+                names_s = names.split(';')
+                key = names_s[0]
+                for n in names_s:
+                    check_key = unify_namings(n)
+                    if check_key in joined_label_space:
+                        key = check_key
+                        break
+                if not key in joined_label_space:
+                    print("Adding: "+key+ " for ", names)
+                    joined_label_space[key] = {}
+                trg_entry = joined_label_space[key]
+                trg_entry.update({'ade20k_names':names,'ade20k_id':idx0})
+
 
     #automatically adds qids
     for key, vals in joined_label_space.items():
