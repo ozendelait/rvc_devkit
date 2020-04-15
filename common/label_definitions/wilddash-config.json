@@ -1,6 +1,6 @@
 {
     "id_prefix": "wilddash",
-    "id_prefix_eval": "wilddash_pano",
+    "id_prefix_eval": "wilddash_inst",
     "labels": [
         {
             "color": [
@@ -416,8 +416,8 @@
                 100
             ], 
             "instances": false, 
-            "readable": "street-light(object)", 
-            "name": "street-light", 
+            "readable": "streetlight(object)", 
+            "name": "streetlight", 
             "evaluate": true
         }, 
         {
