@@ -6,13 +6,13 @@
 import os, sys, argparse, json, csv, time
 
 #boxable
-join_data = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvs_boxable_name"]
+#join_data = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvs_boxable_name"]
 #instance
-#join_data = ["oid_inst_leaf", "coco_inst_id", "cityscapes_inst_id", "mvs_inst_id", 'scannet_pano_id', 'cityscapes_inst_id', 'cityscapes_inst_id', 'wilddash_inst_id']
+join_data = ["oid_inst_leaf", "coco_inst_id", "cityscapes_inst_id", "mvs_inst_id", 'scannet_pano_id', 'cityscapes_inst_id', 'cityscapes_inst_id', 'wilddash_inst_id']
 #panoptic
 #join_data = ["coco_pano_id", "cityscapes_pano_id", "cityscapes_pano_id", "mvs_pano_id", 'cityscapes_pano_id', 'wilddash_pano_id']
 #semseg
-#join_data = ["ade20k_pano_id", "coco_pano_id", "cityscapes_pano_id", "cityscapes_pano_id", "mvs_pano_id", 'scannet_pano_id', 'cityscapes_pano_id', 'wilddash_pano_id']
+#join_data = ["ade20k_id", "coco_pano_id", "cityscapes_pano_id", "cityscapes_pano_id", "mvs_pano_id", 'scannet_pano_id', 'cityscapes_pano_id', 'wilddash_pano_id']
 
 def solve_leaf_boxable(joined_label_space, oid_n, mid_to_key):
     if "Subcategory" in oid_n:
