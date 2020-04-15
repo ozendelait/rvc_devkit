@@ -2168,6 +2168,13 @@
         "wordnet_gloss": "a piece of furniture that stands at the side of a dining room; has shelves and drawers",
         "wordnet_pwn30": "n02912065"
     },
+    "counter_table": {
+        "ade20k_id": "46",
+        "ade20k_names": "counter",
+        "wikidata_qid": "Q21550499",
+        "wordnet_gloss": "table consisting of a horizontal surface over which business is transacted",
+        "wordnet_pwn30": "n03116530"
+    },
     "countertop": {
         "ade20k_id": "71",
         "ade20k_names": "countertop",
@@ -3712,8 +3719,8 @@
         "wordnet_pwn30": "n03460040"
     },
     "ground": {
-        "ade20k_id": "95",
-        "ade20k_names": "land;ground;soil",
+        "ade20k_id": "14",
+        "ade20k_names": "earth;ground",
         "cityscapes_id": 6,
         "cityscapes_name": "ground",
         "context": "void",
@@ -7655,6 +7662,16 @@
         "wikidata_qid": "Q2894990",
         "wordnet_gloss": "a sofa that can be converted into a bed",
         "wordnet_pwn30": "n03100346"
+    },
+    "soil": {
+        "ade20k_id": "95",
+        "ade20k_names": "land;ground;soil",
+        "freebase_mid": "/m/09dv7",
+        "wikidata_desc": "natural body consisting of layers that are primarily composed of minerals",
+        "wikidata_name": "soil",
+        "wikidata_qid": "Q36133",
+        "wordnet_gloss": "the geographical area under the jurisdiction of a sovereign state; \"American troops were stationed on Japanese soil\"",
+        "wordnet_pwn30": "n08493064"
     },
     "sombrero": {
         "context": "hat",
