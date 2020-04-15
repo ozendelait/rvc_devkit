@@ -3056,7 +3056,7 @@
         "ade20k_id": "30",
         "ade20k_names": "field",
         "context": "cleared",
-        "wordnet_pwn30": "08569998"
+        "wordnet_pwn30": "n08569998"
     },
     "fig": {
         "freebase_mid": "/m/043nyj",
@@ -4664,7 +4664,7 @@
     },
     "light_source": {
         "ade20k_id": "83",
-        "ade20k_names": "light;light;source",
+        "ade20k_names": "light;light;source"
     },
     "light_bulb": {
         "coco_pano_id": 130,
