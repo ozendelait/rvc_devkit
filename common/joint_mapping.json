@@ -169,7 +169,7 @@
         "wikidata_desc": "coin-operated entertainment machine",
         "wikidata_name": "arcade game machine",
         "wikidata_qid": "Q192851",
-"wordnet_pwn30": ""
+        "wordnet_pwn30": ""
     },
     "arm": {
         "context": "human",
@@ -372,7 +372,9 @@
     },
     "bar_counter": {
         "ade20k_id": "78",
-        "ade20k_names": "bar"
+        "ade20k_names": "bar",
+        "wikidata_name": "bar counter",
+        "wikidata_qid": "Q12302883"
     },
     "bar_soap": {
         "freebase_mid": "/m/0fw68",
@@ -641,6 +643,10 @@
         "wordnet_gloss": "large bell-shaped sweet pepper in green or red or yellow or orange or black varieties",
         "wordnet_pwn30": "n07720875"
     },
+    "conveyer_belt":{
+        "ade20k_id": "106",
+        "ade20k_names": "conveyer;belt;conveyor;belt;conveyer;conveyor;transporter"
+    },
     "belt": {
         "context": "waist",
         "freebase_mid": "/m/0176mf",
@@ -774,6 +780,8 @@
         "wordnet_pwn30": "n02835829"
     },
     "billboard": {
+        "ade20k_id": "124",
+        "ade20k_names": "trade;name;brand;name;brand;marque",
         "context": "object",
         "freebase_mid": "/m/01knjb",
         "mvs_boxable_name": "object--billboard",
@@ -1236,6 +1244,9 @@
     "bulletin_board": {
         "ade20k_id": "145",
         "ade20k_names": "bulletin;board;notice;board",
+        "freebase_mid": "/m/01nvr_",
+        "wikidata_desc": "a board, usually cork, for pinning notices to",
+        "wikidata_name": "bulletin board",
         "wikidata_qid": "Q183398",
         "wordnet_gloss": "a board that hangs on a wall; displays announcements",
         "wordnet_pwn30": "n02916538"
@@ -1698,10 +1709,6 @@
         "wordnet_gloss": "portable power saw; teeth linked to form an endless chain",
         "wordnet_pwn30": "n03000684"
     },
-    "swivel_chair": {
-        "ade20k_id": "76",
-        "ade20k_names": "swivel;chair"
-     },
     "chair": {
         "ade20k_id": "20",
         "ade20k_names": "chair",
@@ -2141,8 +2148,8 @@
         "wordnet_pwn30": "n03115762"
     },
     "counter": {
-        "ade20k_id": "46",
-        "ade20k_names": "counter",
+        "ade20k_id": "100",
+        "ade20k_names": "buffet;counter;sideboard",
         "coco_pano_id": 107,
         "coco_pano_name": "counter",
         "context": "furniture",
@@ -2613,9 +2620,15 @@
         "wordnet_gloss": "a small ring-shaped friedcake",
         "wordnet_pwn30": "n07639069"
     },
-    "door": {
+    "double_door": {
         "ade20k_id": "15",
         "ade20k_names": "door;double;door",
+    },
+    "screen_door": {
+        "ade20k_id": "59",
+        "ade20k_names": "screen;door;screen",
+    },
+    "door": {
         "coco_pano_id": 112,
         "coco_pano_name": "door-stuff",
         "context": "entrance",
@@ -3056,6 +3069,10 @@
         "ade20k_id": "30",
         "ade20k_names": "field",
         "context": "cleared",
+        "freebase_mid": "/m/0brn2d",
+        "wikidata_desc": "area of land used for agricultural purposes",
+        "wikidata_name": "field",
+        "wikidata_qid": "Q188869",
         "wordnet_pwn30": "n08569998"
     },
     "fig": {
@@ -3688,8 +3705,7 @@
         "wordnet_pwn30": "n03460040"
     },
     "ground": {
-        "ade20k_id": "14",
-        "ade20k_names": "earth;ground",
+
         "cityscapes_id": 6,
         "cityscapes_name": "ground",
         "context": "void",
@@ -4406,7 +4422,7 @@
     "kitchen_island": {
         "ade20k_id": "74",
         "ade20k_names": "kitchen;island",
-		"wikidata_qid": "",
+        "wikidata_qid": "",
         "wordnet_gloss": "an unattached counter in a kitchen that permits access from all sides",
         "wordnet_pwn30": "n03620600"
     },
@@ -4662,10 +4678,6 @@
         "wordnet_gloss": "a life preserver in the form of a ring of buoyant material",
         "wordnet_pwn30": "n03662719"
     },
-    "light_source": {
-        "ade20k_id": "83",
-        "ade20k_names": "light;light;source"
-    },
     "light_bulb": {
         "coco_pano_id": 130,
         "coco_pano_name": "light",
@@ -4677,6 +4689,13 @@
         "wikidata_qid": "Q47616",
         "wordnet_gloss": "electric lamp consisting of a transparent or translucent glass housing containing a wire filament (usually tungsten) that emits light when heated by electricity",
         "wordnet_pwn30": "n03665924"
+    },
+    "light_source": {
+        "ade20k_id": "83",
+        "ade20k_names": "light;light;source",
+        "wikidata_qid": "Q1146001",
+        "wordnet_gloss": "any device serving as a source of illumination; \"he stopped the car and turned off the lights\"",
+        "wordnet_pwn30": "n03665366"
     },
     "light_switch": {
         "freebase_mid": "/m/03jbxj",
@@ -5093,9 +5112,12 @@
         "wordnet_gloss": "a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver",
         "wordnet_pwn30": "n02992529"
     },
-    "monitor_or_tv": {
+"display_device":{
         "ade20k_id": "142",
         "ade20k_names": "crt;screen",
+},
+    "monitor_or_tv": {
+
         "obj365_boxable_name": "Moniter/TV",
         "wikidata_desc": "electrically controlled display with no moving parts",
         "wikidata_name": "electronic visual display",
@@ -6351,6 +6373,16 @@
         "wordnet_gloss": "(computer science) an output device that prints the results of data processing",
         "wordnet_pwn30": "n04004767"
     },
+    "projection_screen": {
+        "ade20k_id": "131",
+        "ade20k_names": "screen;silver;screen;projection;screen",
+        "freebase_mid": "/m/06ycgh",
+        "wikidata_desc": "",
+        "wikidata_name": "projection screen",
+        "wikidata_qid": "Q1152429",
+        "wordnet_gloss": "a white or silvered surface where pictures can be projected for viewing",
+        "wordnet_pwn30": "n04152829"
+    },
     "projector": {
         "freebase_mid": "/m/0crf4xx",
         "obj365_boxable_name": "Projector",
@@ -7007,10 +7039,6 @@
         "wordnet_gloss": "arachnid of warm dry regions having a long segmented tail ending in a venomous stinger",
         "wordnet_pwn30": "n01770393"
     },
-    "projection_screen": {
-        "ade20k_id": "131",
-        "ade20k_names": "screen;silver;screen;projection;screen"
-    },
     "screwdriver": {
         "freebase_mid": "/m/01bms0",
         "obj365_boxable_name": "Screwdriver",
@@ -7110,6 +7138,8 @@
     "seating": {
         "ade20k_id": "32",
         "ade20k_names": "seat",
+        "wikidata_desc": "object for sitting on",
+        "wikidata_name": "seat",
         "wikidata_qid": "Q2207370",
         "wordnet_gloss": "any support where you can sit (especially the part of a chair or bench etc. on which you sit); \"he dusted off the seat before sitting down\"",
         "wordnet_pwn30": "n04161358"
@@ -7762,8 +7792,9 @@
         "wordnet_pwn30": "n02355227"
     },
     "stairs": {
-        "ade20k_id": "54",
-        "ade20k_names": "stairs;steps",
+        "ade20k_id": "60",
+        "ade20k_names": "stairway;staircase",
+
         "coco_pano_id": 161,
         "coco_pano_name": "stairs",
         "freebase_mid": "/m/01lynh",
@@ -7775,16 +7806,18 @@
         "wordnet_gloss": "a flight of stairs or a flight of steps",
         "wordnet_pwn30": "n04298171"
     },
+	"stairstep2": {
+	        "ade20k_id": "54",
+	        "ade20k_names": "stairs;steps",
+            "wikidata_qid": "",
+            "wordnet_pwn30": ""
+	},
     "stairstep": {
         "ade20k_id": "122",
         "ade20k_names": "step;stair",
         "wikidata_desc": "horizontal or weakly inclined part of a stairway",
         "wikidata_name": "tread",
         "wikidata_qid": "Q3289701"
-    },
-    "staircase": {
-        "ade20k_id": "60",
-        "ade20k_names": "stairway;staircase"
     },
     "stapler": {
         "freebase_mid": "/m/025fsf",
@@ -8143,6 +8176,16 @@
         "wikidata_qid": "Q188688",
         "wordnet_gloss": "mechanical device used as a plaything to support someone swinging back and forth",
         "wordnet_pwn30": "n04371774"
+    },
+    "swivel_chair": {
+        "ade20k_id": "76",
+        "ade20k_names": "swivel;chair",
+        "freebase_mid": "/m/0gq6kx",
+        "wikidata_desc": "rotating chair",
+        "wikidata_name": "swivel chair",
+        "wikidata_qid": "Q3954162",
+        "wordnet_gloss": "a chair that swivels on its base",
+        "wordnet_pwn30": "n04373704"
     },
     "sword": {
         "freebase_mid": "/m/06y5r",
