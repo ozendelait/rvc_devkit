@@ -164,7 +164,12 @@
     },
     "arcade_machine": {
         "ade20k_id": "79",
-        "ade20k_names": "arcade;machine"
+        "ade20k_names": "arcade;machine",
+        "freebase_mid": "/m/0d76r",
+        "wikidata_desc": "coin-operated entertainment machine",
+        "wikidata_name": "arcade game machine",
+        "wikidata_qid": "Q192851",
+"wordnet_pwn30": ""
     },
     "arm": {
         "context": "human",
@@ -356,15 +361,6 @@
         "wordnet_gloss": "long strip of cloth or paper used for decoration or advertising",
         "wordnet_pwn30": "n02788021"
     },
-    "handrail": {
-        "ade20k_id": "96",
-        "ade20k_names": "bannister;banister;balustrade;balusters;handrail",
-        "wikidata_desc": "A type of railing that is designed to be grasped by the hand, commonly found in stairways and escalators",
-        "wikidata_name": "handrail",
-        "wikidata_qid": "Q2051212",
-        "wordnet_gloss": "a railing at the side of a staircase or balcony to prevent people from falling",
-        "wordnet_pwn30": "n02788148"
-    },
     "baozi": {
         "freebase_mid": "/m/0659_7",
         "obj365_boxable_name": "Baozi",
@@ -373,6 +369,10 @@
         "wikidata_qid": "Q1137679",
         "wordnet_gloss": "small rounded bread either plain or sweet",
         "wordnet_pwn30": "n07680932"
+    },
+    "bar_counter": {
+        "ade20k_id": "78",
+        "ade20k_names": "bar"
     },
     "bar_soap": {
         "freebase_mid": "/m/0fw68",
@@ -404,6 +404,8 @@
         "wordnet_pwn30": "n02792552"
     },
     "barrel": {
+        "ade20k_id": "112",
+        "ade20k_names": "barrel;cask",
         "freebase_mid": "/m/02zn6n",
         "obj365_boxable_name": "Barrel/bucket",
         "oid_boxable_leaf": "/m/02zn6n",
@@ -426,12 +428,6 @@
         "wikidata_qid": "Q1344551",
         "wordnet_gloss": "a structure or object that impedes free movement",
         "wordnet_pwn30": "n02796623"
-    },
-    "pedestal": {
-        "ade20k_id": "41",
-        "ade20k_names": "base;pedestal;stand",
-        "wordnet_gloss": "a support or foundation; \"the base of the lamp\"",
-        "wordnet_pwn30": "n02797692"
     },
     "baseball": {
         "freebase_mid": "/m/03v6wp",
@@ -803,6 +799,8 @@
         "wordnet_pwn30": "n02839351"
     },
     "billiard_table": {
+        "ade20k_id": "57",
+        "ade20k_names": "pool;table;billiard;table;snooker;table",
         "freebase_mid": "/m/04p0qw",
         "oid_boxable_leaf": "/m/04p0qw",
         "oid_inst_leaf": "/m/04p0qw",
@@ -1054,6 +1052,8 @@
         "wordnet_pwn30": "n02882483"
     },
     "box": {
+        "ade20k_id": "42",
+        "ade20k_names": "box",
         "freebase_mid": "/m/025dyy",
         "obj365_boxable_name": "Storage box",
         "oid_boxable_leaf": "/m/025dyy",
@@ -1235,7 +1235,10 @@
     },
     "bulletin_board": {
         "ade20k_id": "145",
-        "ade20k_names": "bulletin;board;notice;board"
+        "ade20k_names": "bulletin;board;notice;board",
+        "wikidata_qid": "Q183398",
+        "wordnet_gloss": "a board that hangs on a wall; displays announcements",
+        "wordnet_pwn30": "n02916538"
     },
     "burrito": {
         "freebase_mid": "/m/01j3zr",
@@ -1566,10 +1569,6 @@
         "wordnet_gloss": "a heavy open wagon usually having two wheels and drawn by an animal",
         "wordnet_pwn30": "n02970849"
     },
-    "vitrine": {
-        "ade20k_id": "56",
-        "ade20k_names": "case;display;case;showcase;vitrine"
-    },
     "cassette_deck": {
         "freebase_mid": "/m/01432t",
         "oid_name": "Cassette deck",
@@ -1699,9 +1698,13 @@
         "wordnet_gloss": "portable power saw; teeth linked to form an endless chain",
         "wordnet_pwn30": "n03000684"
     },
-    "chair": {
+    "swivel_chair": {
         "ade20k_id": "76",
-        "ade20k_names": "swivel;chair",
+        "ade20k_names": "swivel;chair"
+     },
+    "chair": {
+        "ade20k_id": "20",
+        "ade20k_names": "chair",
         "coco_boxable_name": "chair",
         "coco_inst_id": 62,
         "coco_pano_id": 62,
@@ -1966,16 +1969,6 @@
         "wordnet_gloss": "a flat metal piece (usually a disc) used as money",
         "wordnet_pwn30": "n13388245"
     },
-    "pillar": {
-        "ade20k_id": "43",
-        "ade20k_names": "column;pillar",
-        "freebase_mid": "/m/01_m7",
-        "wikidata_desc": "structural element sustaining the weight of a building",
-        "wikidata_name": "column",
-        "wikidata_qid": "Q4817",
-        "wordnet_gloss": "(architecture) a tall vertical cylindrical structure standing upright and used to support a structure",
-        "wordnet_pwn30": "n03073977"
-    },
     "comb": {
         "freebase_mid": "/m/020sdj",
         "obj365_boxable_name": "Comb",
@@ -1984,28 +1977,6 @@
         "wikidata_qid": "Q23834",
         "wordnet_gloss": "a flat device with narrow pointed teeth on one edge; disentangles or arranges hair",
         "wordnet_pwn30": "n03074855"
-    },
-    "fig": {
-        "freebase_mid": "/m/043nyj",
-        "oid_boxable_leaf": "/m/043nyj",
-        "oid_inst_leaf": "/m/043nyj",
-        "oid_name": "Common fig",
-        "wikidata_desc": "species of plant",
-        "wikidata_name": "Ficus carica",
-        "wikidata_qid": "Q36146",
-        "wordnet_gloss": "Mediterranean tree widely cultivated for its edible fruit",
-        "wordnet_pwn30": "n12401684"
-    },
-    "sunflower": {
-        "freebase_mid": "/m/0ftb8",
-        "oid_boxable_leaf": "/m/0ftb8",
-        "oid_inst_leaf": "/m/0ftb8",
-        "oid_name": "Common sunflower",
-        "wikidata_desc": "species or type of flowering plant",
-        "wikidata_name": "sunflower",
-        "wikidata_qid": "Q171497",
-        "wordnet_gloss": "annual sunflower grown for silage and for its seeds which are a source of oil; common throughout United States and much of North America",
-        "wordnet_pwn30": "n11978713"
     },
     "compact_disc": {
         "freebase_mid": "/m/01www",
@@ -2170,8 +2141,8 @@
         "wordnet_pwn30": "n03115762"
     },
     "counter": {
-        "ade20k_id": "100",
-        "ade20k_names": "buffet;counter;sideboard",
+        "ade20k_id": "46",
+        "ade20k_names": "counter",
         "coco_pano_id": 107,
         "coco_pano_name": "counter",
         "context": "furniture",
@@ -2395,6 +2366,16 @@
         "wikidata_qid": "Q49005",
         "wordnet_gloss": "hanging cloth used as a blind (especially for a window)",
         "wordnet_pwn30": "n03151077"
+    },
+    "cushion": {
+        "ade20k_id": "40",
+        "ade20k_names": "cushion",
+        "freebase_mid": "/m/0174g1",
+        "wikidata_desc": "soft bag of some ornamental material, stuffed with wool, hair, feathers, polyester staple fiber, non-woven material, or even paper torn into fragments",
+        "wikidata_name": "cushion",
+        "wikidata_qid": "Q10971235",
+        "wordnet_gloss": "a soft bag filled with air or a mass of padding such as feathers or foam rubber etc.",
+        "wordnet_pwn30": "n03151500"
     },
     "cutting_board": {
         "freebase_mid": "/m/02pdsw",
@@ -2633,8 +2614,8 @@
         "wordnet_pwn30": "n07639069"
     },
     "door": {
-        "ade20k_id": "59",
-        "ade20k_names": "screen;door;screen",
+        "ade20k_id": "15",
+        "ade20k_names": "door;double;door",
         "coco_pano_id": 112,
         "coco_pano_name": "door-stuff",
         "context": "entrance",
@@ -2688,6 +2669,7 @@
         "wikidata_desc": "garment for women, children, or infants consisting of a bodice and skirt made in one or more pieces",
         "wikidata_name": "dress",
         "wikidata_qid": "Q200539",
+        "wordnet_gloss": "a one-piece garment for a woman; has skirt and bodice",
         "wordnet_pwn30": "n03236735"
     },
     "drink": {
@@ -2698,6 +2680,16 @@
         "wikidata_qid": "Q40050",
         "wordnet_gloss": "the act of drinking alcoholic beverages to excess; \"drink was his downfall\"",
         "wordnet_pwn30": "n00748515"
+    },
+    "drinking_glass": {
+        "ade20k_id": "148",
+        "ade20k_names": "glass;drinking;glass",
+        "freebase_mid": "/m/02q68d8",
+        "wikidata_desc": "drinking glass",
+        "wikidata_name": "champagne stemware",
+        "wikidata_qid": "Q1635923",
+        "wordnet_gloss": "a container made of glass for holding liquids while drinking",
+        "wordnet_pwn30": "n03438257"
     },
     "drinking_straw": {
         "freebase_mid": "/m/03v5tg",
@@ -2908,6 +2900,16 @@
         "wordnet_gloss": "an implement used to erase something",
         "wordnet_pwn30": "n03294833"
     },
+    "escalator": {
+        "ade20k_id": "97",
+        "ade20k_names": "escalator;moving;staircase;moving;stairway",
+        "freebase_mid": "/m/02r1p",
+        "wikidata_desc": "moving staircase",
+        "wikidata_name": "escalator",
+        "wikidata_qid": "Q15003",
+        "wordnet_gloss": "a stairway whose steps move continuously on a circulating belt",
+        "wordnet_pwn30": "n03295773"
+    },
     "exhaust_hood": {
         "ade20k_id": "134",
         "ade20k_names": "hood;exhaust;hood",
@@ -3051,9 +3053,21 @@
         "wordnet_pwn30": "n03327234"
     },
     "field": {
-        "context": "agriculture",
         "ade20k_id": "30",
-        "ade20k_names": "field"
+        "ade20k_names": "field",
+        "context": "cleared",
+        "wordnet_pwn30": "08569998"
+    },
+    "fig": {
+        "freebase_mid": "/m/043nyj",
+        "oid_boxable_leaf": "/m/043nyj",
+        "oid_inst_leaf": "/m/043nyj",
+        "oid_name": "Common fig",
+        "wikidata_desc": "species of plant",
+        "wikidata_name": "Ficus carica",
+        "wikidata_qid": "Q36146",
+        "wordnet_gloss": "Mediterranean tree widely cultivated for its edible fruit",
+        "wordnet_pwn30": "n12401684"
     },
     "filing_cabinet": {
         "freebase_mid": "/m/047j0r",
@@ -3486,10 +3500,6 @@
         "wordnet_gloss": "a female human offspring; \"her daughter cared for her in her old age\"",
         "wordnet_pwn30": "n09992837"
     },
-    "drinking_glass": {
-        "ade20k_id": "148",
-        "ade20k_names": "glass;drinking;glass"
-    },
     "globe": {
         "freebase_mid": "/m/01q_cy",
         "obj365_boxable_name": "Globe",
@@ -3678,8 +3688,8 @@
         "wordnet_pwn30": "n03460040"
     },
     "ground": {
-        "ade20k_id": "95",
-        "ade20k_names": "land;ground;soil",
+        "ade20k_id": "14",
+        "ade20k_names": "earth;ground",
         "cityscapes_id": 6,
         "cityscapes_name": "ground",
         "context": "void",
@@ -3714,10 +3724,10 @@
         "wordnet_pwn30": "n07583066"
     },
     "guard_rail": {
-        "cityscapes_id": 14,
-        "cityscapes_name": "guard rail",
         "ade20k_id": "39",
         "ade20k_names": "railing;rail",
+        "cityscapes_id": 14,
+        "cityscapes_name": "guard rail",
         "context": "construction",
         "mvs_id": 4,
         "mvs_name": "construction--barrier--guard-rail",
@@ -3864,6 +3874,15 @@
         "wikidata_qid": "Q514203",
         "wordnet_gloss": "a firearm that is held and fired with one hand",
         "wordnet_pwn30": "n03948459"
+    },
+    "handrail": {
+        "ade20k_id": "96",
+        "ade20k_names": "bannister;banister;balustrade;balusters;handrail",
+        "wikidata_desc": "A type of railing that is designed to be grasped by the hand, commonly found in stairways and escalators",
+        "wikidata_name": "handrail",
+        "wikidata_qid": "Q2051212",
+        "wordnet_gloss": "a railing at the side of a staircase or balcony to prevent people from falling",
+        "wordnet_pwn30": "n02788148"
     },
     "hanger": {
         "freebase_mid": "/m/0ksls",
@@ -4015,6 +4034,7 @@
         "wikidata_desc": "landform that extends above the surrounding terrain",
         "wikidata_name": "hill",
         "wikidata_qid": "Q54050",
+        "wordnet_gloss": "a local and well-defined elevation of the land; \"they loved to roam the hills of West Virginia\"",
         "wordnet_pwn30": "n09303008"
     },
     "hippopotamus": {
@@ -4137,12 +4157,6 @@
         "wordnet_gloss": "a dwelling that serves as living quarters for one or more families; \"he has a house on Cape Cod\"; \"she felt she had to get out of the house\"",
         "wordnet_pwn30": "n03544360"
     },
-    "hut": {
-        "ade20k_id": "80",
-        "ade20k_names": "hovel;hut;hutch;shack;shanty",
-        "wordnet_gloss": "small crude shelter used as a dwelling",
-        "wordnet_pwn30": "n03547054"
-    },
     "hoverboard": {
         "obj365_boxable_name": "Hoverboard",
         "wikidata_desc": "battery-powered electric vehicle",
@@ -4165,6 +4179,16 @@
         "wikidata_qid": "Q1031196",
         "wordnet_gloss": "the act of jumping over an obstacle",
         "wordnet_pwn30": "n00120515"
+    },
+    "hut": {
+        "ade20k_id": "80",
+        "ade20k_names": "hovel;hut;hutch;shack;shanty",
+        "freebase_mid": "/m/08yp1s",
+        "wikidata_desc": "dwelling",
+        "wikidata_name": "hut",
+        "wikidata_qid": "Q5784097",
+        "wordnet_gloss": "small crude shelter used as a dwelling",
+        "wordnet_pwn30": "n03547054"
     },
     "ice_cream": {
         "freebase_mid": "/m/0cxn2",
@@ -4363,10 +4387,6 @@
         "wordnet_gloss": "metal device shaped in such a way that when it is inserted into the appropriate lock the lock's mechanism can be rotated",
         "wordnet_pwn30": "n03613294"
     },
-    "kitchen_island": {
-        "ade20k_id": "74",
-        "ade20k_names": "kitchen;island"
-    },
     "kitchen_and_dining_room_table": {
         "freebase_mid": "/m/0h8n5zk",
         "oid_boxable_leaf": "/m/0h8n5zk",
@@ -4382,6 +4402,13 @@
         "wikidata_qid": "Q331001",
         "wordnet_gloss": "a home appliance used in preparing food",
         "wordnet_pwn30": "n03620052"
+    },
+    "kitchen_island": {
+        "ade20k_id": "74",
+        "ade20k_names": "kitchen;island",
+		"wikidata_qid": "",
+        "wordnet_gloss": "an unattached counter in a kitchen that permits access from all sides",
+        "wordnet_pwn30": "n03620600"
     },
     "kitchen_knife": {
         "freebase_mid": "/m/058qzx",
@@ -4494,11 +4521,16 @@
     "lake": {
         "ade20k_id": "129",
         "ade20k_names": "lake",
+        "freebase_mid": "/m/04h4w",
+        "wikidata_desc": "body of relatively still water, localized in a basin",
+        "wikidata_name": "lake",
         "wikidata_qid": "Q23397",
         "wordnet_gloss": "a body of (usually fresh) water surrounded by land",
         "wordnet_pwn30": "n09328904"
     },
     "lamp": {
+        "ade20k_id": "37",
+        "ade20k_names": "lamp",
         "freebase_mid": "/m/0dtln",
         "obj365_boxable_name": "Lamp",
         "oid_boxable_leaf": "/m/0dtln",
@@ -4630,6 +4662,10 @@
         "wordnet_gloss": "a life preserver in the form of a ring of buoyant material",
         "wordnet_pwn30": "n03662719"
     },
+    "light_source": {
+        "ade20k_id": "83",
+        "ade20k_names": "light;light;source",
+    },
     "light_bulb": {
         "coco_pano_id": 130,
         "coco_pano_name": "light",
@@ -4748,6 +4784,8 @@
         "wordnet_pwn30": "n03691459"
     },
     "luggage_and_bags": {
+        "ade20k_id": "116",
+        "ade20k_names": "bag",
         "freebase_mid": "/m/0hf58v5",
         "obj365_boxable_name": "Luggage",
         "oid_name": "Luggage and bags",
@@ -5500,6 +5538,8 @@
         "wordnet_pwn30": "n03876231"
     },
     "palm_tree": {
+        "ade20k_id": "73",
+        "ade20k_names": "palm;palm;tree",
         "freebase_mid": "/m/0cdl1",
         "oid_boxable_leaf": "/m/0cdl1",
         "oid_name": "Palm tree",
@@ -5652,6 +5692,8 @@
     "pathway": {
         "ade20k_id": "53",
         "ade20k_names": "path",
+        "wikidata_desc": "small thoroughfare",
+        "wikidata_name": "path",
         "wikidata_qid": "Q5004679",
         "wordnet_gloss": "a way especially designed for a particular use",
         "wordnet_pwn30": "n03899328"
@@ -5679,6 +5721,16 @@
         "wikidata_qid": "Q434",
         "wordnet_gloss": "sweet juicy gritty-textured fruit available in many varieties",
         "wordnet_pwn30": "n07767847"
+    },
+    "pedestal": {
+        "ade20k_id": "41",
+        "ade20k_names": "base;pedestal;stand",
+        "freebase_mid": "/m/05607t",
+        "wikidata_desc": "term generally applied to the support of a statue or a vase",
+        "wikidata_name": "pedestal",
+        "wikidata_qid": "Q12014132",
+        "wordnet_gloss": "a support or foundation; \"the base of the lamp\"",
+        "wordnet_pwn30": "n02797692"
     },
     "pedestrian_area": {
         "freebase_mid": "/m/02751w",
@@ -5903,6 +5955,16 @@
         "wikidata_qid": "Q42326",
         "wordnet_gloss": "wild and domesticated birds having a heavy body and short legs",
         "wordnet_pwn30": "n01811909"
+    },
+    "pillar": {
+        "ade20k_id": "43",
+        "ade20k_names": "column;pillar",
+        "freebase_mid": "/m/01_m7",
+        "wikidata_desc": "structural element sustaining the weight of a building",
+        "wikidata_name": "column",
+        "wikidata_qid": "Q4817",
+        "wordnet_gloss": "(architecture) a tall vertical cylindrical structure standing upright and used to support a structure",
+        "wordnet_pwn30": "n03073977"
     },
     "pillow": {
         "ade20k_id": "58",
@@ -6918,12 +6980,6 @@
         "wordnet_gloss": "an edge tool having two crossed pivoting blades",
         "wordnet_pwn30": "n04148054"
     },
-    "wall_bracket": {
-        "ade20k_id": "135",
-        "ade20k_names": "sconce",
-        "wordnet_gloss": "a decorative wall bracket for holding candles or other sources of light",
-        "wordnet_pwn30": "n04148579"
-    },
     "scooter": {
         "freebase_mid": "/m/0dmq2",
         "obj365_boxable_name": "Scooter",
@@ -6950,6 +7006,10 @@
         "wikidata_qid": "Q19125",
         "wordnet_gloss": "arachnid of warm dry regions having a long segmented tail ending in a venomous stinger",
         "wordnet_pwn30": "n01770393"
+    },
+    "projection_screen": {
+        "ade20k_id": "131",
+        "ade20k_names": "screen;silver;screen;projection;screen"
     },
     "screwdriver": {
         "freebase_mid": "/m/01bms0",
@@ -7036,12 +7096,6 @@
         "wordnet_gloss": "any of numerous marine mammals that come on shore to breed; chiefly of cold regions",
         "wordnet_pwn30": "n02076196"
     },
-    "seating": {
-        "ade20k_id": "32",
-        "ade20k_names": "seat",
-        "wordnet_gloss": "any support where you can sit (especially the part of a chair or bench etc. on which you sit); \"he dusted off the seat before sitting down\"",
-        "wordnet_pwn30": "n04161358"
-    },
     "seat_belt": {
         "freebase_mid": "/m/0dkzw",
         "oid_boxable_leaf": "/m/0dkzw",
@@ -7052,6 +7106,13 @@
         "wikidata_qid": "Q200403",
         "wordnet_gloss": "a safety belt used in a car or plane to hold you in your seat in case of an accident",
         "wordnet_pwn30": "n04162706"
+    },
+    "seating": {
+        "ade20k_id": "32",
+        "ade20k_names": "seat",
+        "wikidata_qid": "Q2207370",
+        "wordnet_gloss": "any support where you can sit (especially the part of a chair or bench etc. on which you sit); \"he dusted off the seat before sitting down\"",
+        "wordnet_pwn30": "n04161358"
     },
     "segway": {
         "freebase_mid": "/m/076bq",
@@ -7714,9 +7775,16 @@
         "wordnet_gloss": "a flight of stairs or a flight of steps",
         "wordnet_pwn30": "n04298171"
     },
-    "escalator": {
-        "ade20k_id": "97",
-        "ade20k_names": "escalator;moving;staircase;moving;stairway"
+    "stairstep": {
+        "ade20k_id": "122",
+        "ade20k_names": "step;stair",
+        "wikidata_desc": "horizontal or weakly inclined part of a stairway",
+        "wikidata_name": "tread",
+        "wikidata_qid": "Q3289701"
+    },
+    "staircase": {
+        "ade20k_id": "60",
+        "ade20k_names": "stairway;staircase"
     },
     "stapler": {
         "freebase_mid": "/m/025fsf",
@@ -7765,13 +7833,6 @@
         "wikidata_qid": "Q213062",
         "wordnet_gloss": "a slice of meat cut from the fleshy part of an animal or large fish",
         "wordnet_pwn30": "n07657903"
-    },
-    "stairstep": {
-        "ade20k_id": "122",
-        "ade20k_names": "step;stair",
-        "wikidata_desc": "horizontal or weakly inclined part of a stairway",
-        "wikidata_name": "tread",
-        "wikidata_qid": "Q3289701"
     },
     "stethoscope": {
         "freebase_mid": "/m/073g6",
@@ -7958,6 +8019,17 @@
         "wordnet_gloss": "a hat with a broad brim that protects the face from direct exposure to the sun",
         "wordnet_pwn30": "n04356595"
     },
+    "sunflower": {
+        "freebase_mid": "/m/0ftb8",
+        "oid_boxable_leaf": "/m/0ftb8",
+        "oid_inst_leaf": "/m/0ftb8",
+        "oid_name": "Common sunflower",
+        "wikidata_desc": "species or type of flowering plant",
+        "wikidata_name": "sunflower",
+        "wikidata_qid": "Q171497",
+        "wordnet_gloss": "annual sunflower grown for silage and for its seeds which are a source of oil; common throughout United States and much of North America",
+        "wordnet_pwn30": "n11978713"
+    },
     "sunglasses": {
         "freebase_mid": "/m/017ftj",
         "oid_boxable_leaf": "/m/017ftj",
@@ -8093,8 +8165,8 @@
         "wordnet_pwn30": "n04376876"
     },
     "table": {
-        "ade20k_id": "57",
-        "ade20k_names": "pool;table;billiard;table;snooker;table",
+        "ade20k_id": "16",
+        "ade20k_names": "table",
         "coco_pano_id": 189,
         "coco_pano_name": "table-merged",
         "freebase_mid": "/m/04bcr3",
@@ -8571,11 +8643,11 @@
         "wordnet_pwn30": ""
     },
     "traffic_light": {
+        "ade20k_id": "137",
+        "ade20k_names": "traffic;light;traffic;signal;stoplight",
         "cityscapes_id": 19,
         "cityscapes_inst_id": 19,
         "cityscapes_inst_name": 19,
-        "ade20k_id": "137",
-        "ade20k_names": "traffic;light;traffic;signal;stoplight",
         "cityscapes_name": "traffic light",
         "cityscapes_pano_id": 19,
         "coco_boxable_name": "traffic light",
@@ -8701,8 +8773,8 @@
         "wordnet_pwn30": "n04477387"
     },
     "tree": {
-        "ade20k_id": "73",
-        "ade20k_names": "palm;palm;tree",
+        "ade20k_id": "5",
+        "ade20k_names": "tree",
         "coco_pano_id": 184,
         "coco_pano_name": "tree-merged",
         "freebase_mid": "/m/07j7r",
@@ -8999,6 +9071,16 @@
         "wordnet_gloss": "bowed stringed instrument that is the highest member of the violin family; this instrument has four strings and a hollow body and an unfretted fingerboard and is played with a bow",
         "wordnet_pwn30": "n04536866"
     },
+    "vitrine": {
+        "ade20k_id": "56",
+        "ade20k_names": "case;display;case;showcase;vitrine",
+        "freebase_mid": "/m/05b5b_f",
+        "wikidata_desc": "furniture for display of objects",
+        "wikidata_name": "vitrine",
+        "wikidata_qid": "Q3561331",
+        "wordnet_gloss": "a glass container used to store and display items in a shop or museum or home",
+        "wordnet_pwn30": "n02975212"
+    },
     "volleyball": {
         "context": "ball",
         "freebase_mid": "/m/02rgn06",
@@ -9055,6 +9137,12 @@
         "wordnet_gloss": "an embankment built around a space for defensive purposes; \"they stormed the ramparts of the city\"; \"they blew the trumpet and the walls came tumbling down\"",
         "wordnet_pwn30": "n04051825"
     },
+    "wall_bracket": {
+        "ade20k_id": "135",
+        "ade20k_names": "sconce",
+        "wordnet_gloss": "a decorative wall bracket for holding candles or other sources of light",
+        "wordnet_pwn30": "n04148579"
+    },
     "wall_clock": {
         "freebase_mid": "/m/0h8mzrc",
         "oid_boxable_leaf": "/m/0h8mzrc",
@@ -9091,14 +9179,14 @@
         "wordnet_pwn30": "n04554684"
     },
     "waste_container": {
+        "ade20k_id": "139",
+        "ade20k_names": "ashcan;trash;can;garbage;can;wastebin;ash;bin;ash-bin;ashbin;dustbin;trash;barrel;trash;bin",
         "freebase_mid": "/m/0bjyj5",
         "mvs_boxable_name": "object--trash-can",
         "mvs_id": 51,
         "mvs_inst_id": 51,
         "mvs_name": "object--trash-can",
         "mvs_pano_id": 51,
-        "ade20k_id": "139",
-        "ade20k_names": "ashcan;trash;can;garbage;can;wastebin;ash;bin;ash-bin;ashbin;dustbin;trash;barrel;trash;bin",
         "obj365_boxable_name": "Trash bin Can",
         "oid_boxable_leaf": "/m/0bjyj5",
         "oid_inst_leaf": "/m/0bjyj5",
@@ -9149,6 +9237,9 @@
     "waterfall": {
         "ade20k_id": "114",
         "ade20k_names": "waterfall;falls",
+        "freebase_mid": "/m/0j2kx",
+        "wikidata_desc": "place where water flows over a vertical drop",
+        "wikidata_name": "waterfall",
         "wikidata_qid": "Q34038",
         "wordnet_gloss": "a steep descent of the water of a river",
         "wordnet_pwn30": "n09475292"
@@ -9255,10 +9346,10 @@
         "wordnet_pwn30": "n04587648"
     },
     "window_blind": {
-        "coco_pano_id": 180,
-        "coco_pano_name": "window-blind",
         "ade20k_id": "64",
         "ade20k_names": "blind;screen",
+        "coco_pano_id": 180,
+        "coco_pano_name": "window-blind",
         "freebase_mid": "/m/031b6r",
         "oid_boxable_leaf": "/m/031b6r",
         "oid_name": "Window blind",
