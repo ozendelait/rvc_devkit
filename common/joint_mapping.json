@@ -643,10 +643,6 @@
         "wordnet_gloss": "large bell-shaped sweet pepper in green or red or yellow or orange or black varieties",
         "wordnet_pwn30": "n07720875"
     },
-    "conveyer_belt":{
-        "ade20k_id": "106",
-        "ade20k_names": "conveyer;belt;conveyor;belt;conveyer;conveyor;transporter"
-    },
     "belt": {
         "context": "waist",
         "freebase_mid": "/m/0176mf",
@@ -2070,6 +2066,15 @@
         "wordnet_gloss": "a store selling a limited variety of food and pharmaceutical items; open long hours for the convenience of customers",
         "wordnet_pwn30": "n03099274"
     },
+    "conveyer_belt": {
+        "ade20k_id": "106",
+        "ade20k_names": "conveyer;belt;conveyor;belt;conveyer;conveyor;transporter",
+        "wikidata_desc": "",
+        "wikidata_name": "conveyer",
+        "wikidata_qid": "Q2346241",
+        "wordnet_gloss": "a moving belt that transports objects (as in a factory)",
+        "wordnet_pwn30": "n03100897"
+    },
     "cookie": {
         "freebase_mid": "/m/021mn",
         "obj365_boxable_name": "Cookies",
@@ -2148,8 +2153,8 @@
         "wordnet_pwn30": "n03115762"
     },
     "counter": {
-        "ade20k_id": "100",
-        "ade20k_names": "buffet;counter;sideboard",
+        "ade20k_id": "46",
+        "ade20k_names": "counter",
         "coco_pano_id": 107,
         "coco_pano_name": "counter",
         "context": "furniture",
@@ -2546,6 +2551,14 @@
         "wordnet_gloss": "a machine for washing dishes",
         "wordnet_pwn30": "n03207941"
     },
+    "display_device": {
+        "ade20k_id": "142",
+        "ade20k_names": "crt;screen",
+        "freebase_mid": "/m/029zz6",
+        "wikidata_desc": "output device for presentation of information in visual form",
+        "wikidata_name": "display device",
+        "wikidata_qid": "Q327065"
+    },
     "dog": {
         "coco_boxable_name": "dog",
         "coco_inst_id": 18,
@@ -2620,14 +2633,6 @@
         "wordnet_gloss": "a small ring-shaped friedcake",
         "wordnet_pwn30": "n07639069"
     },
-    "double_door": {
-        "ade20k_id": "15",
-        "ade20k_names": "door;double;door",
-    },
-    "screen_door": {
-        "ade20k_id": "59",
-        "ade20k_names": "screen;door;screen",
-    },
     "door": {
         "coco_pano_id": 112,
         "coco_pano_name": "door-stuff",
@@ -2653,6 +2658,13 @@
         "wikidata_qid": "Q23009",
         "wordnet_gloss": "a knob used to release the catch when opening a door (often called `doorhandle' in Great Britain)",
         "wordnet_pwn30": "n03222959"
+    },
+    "double_door": {
+        "ade20k_id": "15",
+        "ade20k_names": "door;double;door",
+        "wikidata_qid": "",
+        "wordnet_gloss": "two vertical doors that meet in the middle of the door frame when closed",
+        "wordnet_pwn30": "n03226880"
     },
     "dragonfly": {
         "freebase_mid": "/m/0ft9s",
@@ -3073,6 +3085,7 @@
         "wikidata_desc": "area of land used for agricultural purposes",
         "wikidata_name": "field",
         "wikidata_qid": "Q188869",
+        "wordnet_gloss": "a piece of land cleared of trees and usually enclosed; \"he planted a field of wheat\"",
         "wordnet_pwn30": "n08569998"
     },
     "fig": {
@@ -3705,7 +3718,8 @@
         "wordnet_pwn30": "n03460040"
     },
     "ground": {
-
+        "ade20k_id": "14",
+        "ade20k_names": "earth;ground",
         "cityscapes_id": 6,
         "cityscapes_name": "ground",
         "context": "void",
@@ -4693,6 +4707,8 @@
     "light_source": {
         "ade20k_id": "83",
         "ade20k_names": "light;light;source",
+        "wikidata_desc": "object or device that emits light",
+        "wikidata_name": "light source",
         "wikidata_qid": "Q1146001",
         "wordnet_gloss": "any device serving as a source of illumination; \"he stopped the car and turned off the lights\"",
         "wordnet_pwn30": "n03665366"
@@ -5112,12 +5128,7 @@
         "wordnet_gloss": "a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver",
         "wordnet_pwn30": "n02992529"
     },
-"display_device":{
-        "ade20k_id": "142",
-        "ade20k_names": "crt;screen",
-},
     "monitor_or_tv": {
-
         "obj365_boxable_name": "Moniter/TV",
         "wikidata_desc": "electrically controlled display with no moving parts",
         "wikidata_name": "electronic visual display",
@@ -7039,6 +7050,15 @@
         "wordnet_gloss": "arachnid of warm dry regions having a long segmented tail ending in a venomous stinger",
         "wordnet_pwn30": "n01770393"
     },
+    "screen_door": {
+        "ade20k_id": "59",
+        "ade20k_names": "screen;door;screen",
+        "wikidata_desc": "door that lets lets air pass through",
+        "wikidata_name": "screen door",
+        "wikidata_qid": "Q3908884",
+        "wordnet_gloss": "a door that consists of a frame holding metallic or plastic netting; used to allow ventilation and to keep insects from entering a building through the open door; \"he heard the screen door slam as she left\"",
+        "wordnet_pwn30": "n04153025"
+    },
     "screwdriver": {
         "freebase_mid": "/m/01bms0",
         "obj365_boxable_name": "Screwdriver",
@@ -7794,7 +7814,6 @@
     "stairs": {
         "ade20k_id": "60",
         "ade20k_names": "stairway;staircase",
-
         "coco_pano_id": 161,
         "coco_pano_name": "stairs",
         "freebase_mid": "/m/01lynh",
@@ -7806,18 +7825,18 @@
         "wordnet_gloss": "a flight of stairs or a flight of steps",
         "wordnet_pwn30": "n04298171"
     },
-	"stairstep2": {
-	        "ade20k_id": "54",
-	        "ade20k_names": "stairs;steps",
-            "wikidata_qid": "",
-            "wordnet_pwn30": ""
-	},
     "stairstep": {
         "ade20k_id": "122",
         "ade20k_names": "step;stair",
         "wikidata_desc": "horizontal or weakly inclined part of a stairway",
         "wikidata_name": "tread",
         "wikidata_qid": "Q3289701"
+    },
+    "stairstep2": {
+        "ade20k_id": "54",
+        "ade20k_names": "stairs;steps",
+        "wikidata_qid": "",
+        "wordnet_pwn30": ""
     },
     "stapler": {
         "freebase_mid": "/m/025fsf",
