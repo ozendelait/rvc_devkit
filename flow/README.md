@@ -134,7 +134,7 @@ The resulting archives must be submitted to the respective benchmarks:
 * [HCI2015](http://hci-benchmark.org/submit)
 
 To signify that your method is part of a submission to the Robust Vision
-Challenge, please add the prefix ``ROB_`` to your algorithm name for all
+Challenge, please add the postfix ``_RVC`` to your algorithm name for all
 submissions.
 
 Furthermore, the submission must be completed by filling a short form on the
