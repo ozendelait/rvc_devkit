@@ -374,7 +374,9 @@
         "ade20k_id": "78",
         "ade20k_names": "bar",
         "wikidata_name": "bar counter",
-        "wikidata_qid": "Q12302883"
+        "wikidata_qid": "Q12302883",
+        "wordnet_gloss": "a counter where you can obtain food or drink; \"he bought a hot dog and a coke at the bar\"",
+        "wordnet_pwn30": "n02789487"
     },
     "bar_soap": {
         "freebase_mid": "/m/0fw68",
@@ -2153,8 +2155,8 @@
         "wordnet_pwn30": "n03115762"
     },
     "counter": {
-        "ade20k_id": "46",
-        "ade20k_names": "counter",
+        "ade20k_id": "100",
+        "ade20k_names": "buffet;counter;sideboard",
         "coco_pano_id": 107,
         "coco_pano_name": "counter",
         "context": "furniture",
@@ -2550,14 +2552,6 @@
         "wikidata_qid": "Q186263",
         "wordnet_gloss": "a machine for washing dishes",
         "wordnet_pwn30": "n03207941"
-    },
-    "display_device": {
-        "ade20k_id": "142",
-        "ade20k_names": "crt;screen",
-        "freebase_mid": "/m/029zz6",
-        "wikidata_desc": "output device for presentation of information in visual form",
-        "wikidata_name": "display device",
-        "wikidata_qid": "Q327065"
     },
     "dog": {
         "coco_boxable_name": "dog",
@@ -3718,8 +3712,8 @@
         "wordnet_pwn30": "n03460040"
     },
     "ground": {
-        "ade20k_id": "14",
-        "ade20k_names": "earth;ground",
+        "ade20k_id": "95",
+        "ade20k_names": "land;ground;soil",
         "cityscapes_id": 6,
         "cityscapes_name": "ground",
         "context": "void",
@@ -5127,14 +5121,6 @@
         "wikidata_qid": "Q17517",
         "wordnet_gloss": "a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver",
         "wordnet_pwn30": "n02992529"
-    },
-    "monitor_or_tv": {
-        "obj365_boxable_name": "Moniter/TV",
-        "wikidata_desc": "electrically controlled display with no moving parts",
-        "wikidata_name": "electronic visual display",
-        "wikidata_qid": "Q6021804",
-        "wordnet_gloss": "an electronic device that represents information in visual form",
-        "wordnet_pwn30": "n03211117"
     },
     "monkey": {
         "freebase_mid": "/m/08pbxl",
@@ -7811,11 +7797,20 @@
         "wordnet_gloss": "a kind of arboreal rodent having a long bushy tail",
         "wordnet_pwn30": "n02355227"
     },
-    "stairs": {
+    "staircase": {
         "ade20k_id": "60",
         "ade20k_names": "stairway;staircase",
+        "context": "railings_and_stairs",
+        "wikidata_qid": "",
+        "wordnet_gloss": "a way of access (upward and downward) consisting of a set of steps",
+        "wordnet_pwn30": "n04298308"
+    },
+    "stairs": {
+        "ade20k_id": "54",
+        "ade20k_names": "stairs;steps",
         "coco_pano_id": 161,
         "coco_pano_name": "stairs",
+        "context": "part_of_staircase",
         "freebase_mid": "/m/01lynh",
         "oid_boxable_leaf": "/m/01lynh",
         "oid_name": "Stairs",
@@ -7828,15 +7823,12 @@
     "stairstep": {
         "ade20k_id": "122",
         "ade20k_names": "step;stair",
+        "context": "part_of_stairs",
         "wikidata_desc": "horizontal or weakly inclined part of a stairway",
         "wikidata_name": "tread",
-        "wikidata_qid": "Q3289701"
-    },
-    "stairstep2": {
-        "ade20k_id": "54",
-        "ade20k_names": "stairs;steps",
-        "wikidata_qid": "",
-        "wordnet_pwn30": ""
+        "wikidata_qid": "Q3289701",
+        "wordnet_gloss": "support consisting of a place to rest the foot while ascending or descending a stairway; \"he paused on the bottom step\"",
+        "wordnet_pwn30": "n04314914"
     },
     "stapler": {
         "freebase_mid": "/m/025fsf",
@@ -9122,6 +9114,16 @@
         "wordnet_gloss": "a conveyance that transports people or objects",
         "wordnet_pwn30": "n04524313"
     },
+    "video_display": {
+        "ade20k_id": "142",
+        "ade20k_names": "crt;screen",
+        "obj365_boxable_name": "Moniter/TV",
+        "wikidata_desc": "electrically controlled display with no moving parts",
+        "wikidata_name": "electronic visual display",
+        "wikidata_qid": "Q6021804",
+        "wordnet_gloss": "an electronic device that represents information in visual form",
+        "wordnet_pwn30": "n03211117"
+    },
     "violin": {
         "freebase_mid": "/m/07y_7",
         "obj365_boxable_name": "Violin",
@@ -9202,6 +9204,9 @@
     "wall_bracket": {
         "ade20k_id": "135",
         "ade20k_names": "sconce",
+        "wikidata_desc": "type of light fixture affixed to a wall",
+        "wikidata_name": "sconce",
+        "wikidata_qid": "Q6653030",
         "wordnet_gloss": "a decorative wall bracket for holding candles or other sources of light",
         "wordnet_pwn30": "n04148579"
     },
