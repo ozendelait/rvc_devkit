@@ -1568,7 +1568,7 @@
     },
     "vitrine": {
         "ade20k_id": "56",
-        "ade20k_names": "case;display;case;showcase;vitrine",
+        "ade20k_names": "case;display;case;showcase;vitrine"
     },
     "cassette_deck": {
         "freebase_mid": "/m/01432t",
@@ -3051,9 +3051,9 @@
         "wordnet_pwn30": "n03327234"
     },
     "field": {
-        "context": "agriculture"
+        "context": "agriculture",
         "ade20k_id": "30",
-        "ade20k_names": "field",
+        "ade20k_names": "field"
     },
     "filing_cabinet": {
         "freebase_mid": "/m/047j0r",
@@ -5057,7 +5057,7 @@
     },
     "monitor_or_tv": {
         "ade20k_id": "142",
-        "ade20k_names": "crt;screen"
+        "ade20k_names": "crt;screen",
         "obj365_boxable_name": "Moniter/TV",
         "wikidata_desc": "electrically controlled display with no moving parts",
         "wikidata_name": "electronic visual display",
@@ -7716,7 +7716,7 @@
     },
     "escalator": {
         "ade20k_id": "97",
-        "ade20k_names": "escalator;moving;staircase;moving;stairway
+        "ade20k_names": "escalator;moving;staircase;moving;stairway"
     },
     "stapler": {
         "freebase_mid": "/m/025fsf",
@@ -9078,7 +9078,7 @@
     },
     "washing_machine": {
         "ade20k_id": "108",
-        "ade20k_names": "washer;automatic;washer;washing;machine"
+        "ade20k_names": "washer;automatic;washer;washing;machine",
         "freebase_mid": "/m/0174k2",
         "obj365_boxable_name": "Washing Machine/Drying Machine",
         "oid_boxable_leaf": "/m/0174k2",

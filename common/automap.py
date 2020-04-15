@@ -403,6 +403,8 @@ def main(argv=sys.argv[1:]):
         elif is_csv_format and isinstance(appendf, list) and "Ratio" in appendf[0]:
             # ade20k format
             for idx0,ratio,train_num, val_num, is_stuff, names in appendf[1:]:
+                if idx0 in check_dubl['ade20k_id']:
+                    continue
                 names_s = names.split(';')
                 key = names_s[0]
                 for n in names_s:
