@@ -18,9 +18,13 @@ parameters are used for all results).
 
 Prerequisites: Install `git` and `python` (both versions 2.7.x and 3.x should work) if they are not installed yet.
 These python packages are required for automatic dataset downloading and data conversions:
-```pip install requests```
-```pip install imageio```
-```pip install scipy```
+
+ ```   
+   pip install requests
+   pip install imageio
+   pip install scipy
+   pip install awscli
+```
 
 1. Clone this repository:
    ```git clone https://github.com/ozendelait/rvc_devkit.git```
