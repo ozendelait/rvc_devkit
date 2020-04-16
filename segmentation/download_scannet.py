@@ -4,8 +4,13 @@
 # -*- coding: utf-8 -*-
 import argparse
 import os
-import urllib
 import tempfile
+import sys
+
+common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../common/"))
+if common_rvc_subfolder not in sys.path:
+    sys.path.insert(0, common_rvc_subfolder)
+from rvc_download_helper import download_file_with_resume
 
 BASE_URL = 'http://kaldir.vc.in.tum.de/scannet/'
 TOS_URL = BASE_URL + 'ScanNet_TOS.pdf'
@@ -16,11 +21,10 @@ RELEASE_SIZE = '1.2TB'
 
 
 def get_release_scans(release_file):
-    scan_lines = urllib.urlopen(release_file)
-    scans = []
-    for scan_line in scan_lines:
-        scan_id = scan_line.rstrip('\n')
-        scans.append(scan_id)
+    dstname = tempfile.mktemp(suffix='_rvc_scannet')
+    download_file_with_resume(release_file, dstname)
+    with open(dstname, 'r', newline='\n') as release_scan_fo:
+        scans = [s.rstrip('\n') for s in release_scan_fo.readlines() if len(s) > 3]
     return scans
 
 
@@ -33,16 +37,7 @@ def download_release(release_scans, out_dir, file_types):
 
 
 def download_file(url, out_file):
-    out_dir = os.path.dirname(out_file)
-    if not os.path.isfile(out_file):
-        print('\t' + url + ' > ' + out_file)
-        fh, out_file_tmp = tempfile.mkstemp(dir=out_dir)
-        f = os.fdopen(fh, 'w')
-        f.close()
-        urllib.urlretrieve(url, out_file_tmp)
-        os.rename(out_file_tmp, out_file)
-    else:
-        print('WARNING: skipping download of existing file ' + out_file)
+    download_file_with_resume(url, out_file, try_resume_bytes=-1, total_sz = None, params={})
 
 def download_scan(scan_id, out_dir, file_types):
     print('Downloading ScanNet scan ' + scan_id + ' ...')
@@ -90,6 +85,8 @@ def download_rob_task_data(out_dir, scan_ids=[]):
     print('Downloading ScanNet Robust Vision task data for ' + type + ' scans...')
     if not os.path.isdir(out_dir):
         os.makedirs(out_dir)
+        
+    download_file(TOS_URL, out_dir + '/ScanNet_TOS.pdf')
     if len(scan_ids) == 0: # download all
         url = BASE_URL + RELEASE_TASKS + '/rob_tasks/scenes_all.zip'
         out_file = out_dir + '/scenes_all.zip'
@@ -115,11 +112,11 @@ def main():
     parser.add_argument('--type', help='specific file type to download (.aggregation.json, .sens, .txt, _vh_clean.ply, _vh_clean_2.0.010000.segs.json, _vh_clean_2.ply, _vh_clean.segs.json, _vh_clean.aggregation.json, _vh_clean_2.labels.ply, _2d-instance.zip, _2d-instance-filt.zip, _2d-label.zip, _2d-label-filt.zip)')
     args = parser.parse_args()
 
-    print('By pressing any key to continue you confirm that you have agreed to the ScanNet terms of use as described at:')
+    print('By executing this script you confirm that you have agreed to the ScanNet terms of use as described at:')
     print(TOS_URL)
-    print('***')
-    print('Press any key to continue, or CTRL-C to exit.')
-    key = raw_input('')
+    #print('***')
+    #print('Press any key to continue, or CTRL-C to exit.')
+    #key = raw_input('')
 
     release_file = BASE_URL + RELEASE + '.txt'
     release_scans = get_release_scans(release_file)
@@ -154,8 +151,8 @@ def main():
             print('WARNING: You are downloading all ScanNet scans of type ' + file_types[0])
         print('Note that existing scan directories will be skipped. Delete partially downloaded directories to re-download.')
         print('***')
-        print('Press any key to continue, or CTRL-C to exit.')
-        key = raw_input('')
+        #print('Press any key to continue, or CTRL-C to exit.')
+        #key = raw_input('')
         download_release(release_scans, args.out_dir, file_types)
 
 

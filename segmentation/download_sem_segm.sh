@@ -18,7 +18,7 @@ mseg_download_cocopanoptic.sh  ${RVC_DOWNL_SEM_TRG_DIR}/coco
 mseg_download_cityscapes.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
 mseg_download_kitti.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
 echo "TODO: MVS"
-python ${RVC_DOWNL_SEM_SCRIPT_DIR}/download_scannet.py
+python ${RVC_DOWNL_SEM_SCRIPT_DIR}/download_scannet.py -o ${RVC_DOWNL_SEM_TRG_DIR}/scannet --rob_task_data
 python ${RVC_DOWNL_SEM_SCRIPT_DIR}/download_viper.py ${RVC_DOWNL_SEM_TRG_DIR}/viper
 
 mseg_download_wilddash.sh ${RVC_DOWNL_SEM_TRG_DIR}/wilddash
