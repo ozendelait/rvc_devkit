@@ -10,6 +10,10 @@ from dataset_format_kitti2015 import *
 from util import *
 from util_segmentation import *
 
+common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../common/"))
+if common_rvc_subfolder not in sys.path:
+    sys.path.insert(0, common_rvc_subfolder)
+from rvc_download_helper import download_file_from_google_drive
 
 
 class VIPER(Benchmark):
@@ -138,12 +142,11 @@ class VIPER(Benchmark):
             for archive_id, gdrive_id in archive_dict.items():
                 archive_path = os.path.join(archive_dir_path, archive[9:] + '_' + archive_id + '.zip')
                 if not os.path.exists(archive_path):
-                    DownloadFileFromGDrive(gdrive_id, archive_path)
+                    download_file_from_google_drive(gdrive_id, archive_path, try_resume_bytes=-1, total_sz = None)
+                    if os.path.exists(archive_path):
+                        UnzipFile(archive_path, unpack_dir_path)
+                        pass
                     pass
-                if os.path.exists(archive_path):
-                    UnzipFile(archive_path, unpack_dir_path)
-                    pass
-                pass
             pass
         pass
 

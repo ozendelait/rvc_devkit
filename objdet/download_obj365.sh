@@ -31,7 +31,7 @@ mkdir -p ${RVC_OBJ365_TRG_DIR}
 cd ${RVC_OBJ365_TRG_DIR}
 
 while read l; do
-  python  ${RVC_OBJ365_SCRIPT_DIR}/../common/downloader.py --id "$l"
+  python  ${RVC_OBJ365_SCRIPT_DIR}/../common/rvc_download_helper.py --id "$l"
 done <${RVC_OBJ365_SCRIPT_DIR}/obj365_gdrive_ids.txt
 
 RVC_OBJ365_TRG_DIR=

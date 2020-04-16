@@ -5,7 +5,6 @@
 import argparse
 import os, sys
 from benchmark_viper import VIPER
-#from ../common/downloader.py import download_file_from_google_drive
 
 if __name__ == "__main__":
     unpack_dir_path = archive_dir_path = sys.argv[1]
