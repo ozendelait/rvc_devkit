@@ -1,6 +1,6 @@
 #!/bin/sh
 # Remaps individual boxable ground truth of RVC datasets into a joint dataset
-# requires git and python3 and pycocotools which can be installed via:
+# requires git, python and pycocotools which can be installed via:
 # pip install pycocotools
 # (use gitbash for MS Windows)
 
@@ -27,7 +27,23 @@ git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco pull origin
 echo "Joining dataset from ${RVC_DATA_SRC_DIR} to ${RVC_DATA_TRG_DIR}"
 mkdir -p ${RVC_DATA_TRG_DIR}
 
-#TODO execute remapping
+#TODO execute remapping for OID
+#TODO execute remapping for Obj365
+#TODO execute remapping for MVS
+
+python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_val2017.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
+                        --mapping_row coco_boxable_name \
+                        --image_root ../coco/images \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/joined_boxable_val.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_train2017.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
+                        --mapping_row coco_boxable_name \
+                        --image_root ../coco/images \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/joined_boxable_train.json
 
 RVC_DATA_TRG_DIR=
 RVC_DATA_SRC_DIR=
