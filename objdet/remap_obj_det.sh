@@ -19,6 +19,7 @@ else
 fi
 
 if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
+  mkdir -p $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco
   git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco clone https://github.com/bethgelab/openimages2coco.git 
 fi
 #update repo (master currently under development; will fix a tag later)

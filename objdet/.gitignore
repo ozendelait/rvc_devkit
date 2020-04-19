@@ -2,4 +2,4 @@
 .p*
 .settings
 .idea
-label_definitions/wordnet.json
+openimages2coco/*
