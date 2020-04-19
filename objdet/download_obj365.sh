@@ -1,6 +1,6 @@
 #!/bin/sh
 # Downloads the objects365 dataset
-# The Google Drive stored version is provided for participants of RVC 2020 
+# The AWS-stored version is provided for participants of RVC 2020 
 # and may be taken down afterwards without warning!
 #
 # See the enclosed license.txt for license terms
