@@ -40,6 +40,13 @@ aws s3 --no-sign-request cp s3://open-images-dataset/tar/test.tar.gz ${RVC_OID_T
 wget https://storage.googleapis.com/openimages/v6/oidv6-train-annotations-bbox.csv -P ${RVC_OID_TRG_DIR}
 wget https://storage.googleapis.com/openimages/v5/validation-annotations-bbox.csv -P ${RVC_OID_TRG_DIR}
 wget https://storage.googleapis.com/openimages/v5/test-annotations-bbox.csv -P ${RVC_OID_TRG_DIR}
+wget https://storage.googleapis.com/openimages/v5/train-annotations-human-imagelabels-boxable.csv -P ${RVC_OID_TRG_DIR}
+wget https://storage.googleapis.com/openimages/v5/validation-annotations-human-imagelabels-boxable.csv -P ${RVC_OID_TRG_DIR}
+wget https://storage.googleapis.com/openimages/v5/test-annotations-human-imagelabels-boxable.csv -P ${RVC_OID_TRG_DIR}
+wget https://storage.googleapis.com/openimages/2018_04/train/train-images-boxable-with-rotation.csv -P ${RVC_OID_TRG_DIR}
+wget https://storage.googleapis.com/openimages/2018_04/validation/validation-images-with-rotation.csv -P ${RVC_OID_TRG_DIR}
+wget https://storage.googleapis.com/openimages/2018_04/test/test-images-with-rotation.csv -P ${RVC_OID_TRG_DIR}
+
 
 RVC_OID_TRG_DIR=
 RVC_OID_SCRIPT_DIR=
