@@ -21,7 +21,7 @@ fi
 mkdir -p $RVC_COCO_TRG_DIR
 cd $RVC_COCO_TRG_DIR
 echo "Downloading COCO boxable dataset..."
-# Get the annotations.
+# Get the annotations; 0.25GB
 COCOP_ANNOT_URL="http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
 wget $COCOP_ANNOT_URL
 
@@ -32,6 +32,7 @@ mkdir -p images
 unzip train2017.zip -d images
 rm train2017.zip
 
+# val2017.zip will be 19GB.
 VAL_IMGS_URL="http://images.cocodataset.org/zips/val2017.zip"
 wget $VAL_IMGS_URL
 

@@ -1,0 +1,5 @@
+*.pyc
+.p*
+.settings
+.idea
+label_definitions/wordnet.json
