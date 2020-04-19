@@ -10,10 +10,9 @@
 # Objects365: A Large-scale, High-quality Dataset for Object Detection
 # Shuai Shao, Zeming Li, Tianyuan Zhang, Chao Peng, Gang Yu, Jing Li, Xiangyu Zhang, Jian Sun ICCV, 2019
 
-# This script requires the python packages requests and tqdm to work; 
+# This script requires the awscli packages to work; 
 # If missing, they can be installed via:   
-#   pip install requests 
-#   pip install tqdm
+#   pip install awscli 
 # (use gitbash for MS Windows)
 
 RVC_OBJ365_SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -26,13 +25,8 @@ fi
 
 echo "Downloading objects365 to ${RVC_OBJ365_TRG_DIR}"
 
-
 mkdir -p ${RVC_OBJ365_TRG_DIR}
-cd ${RVC_OBJ365_TRG_DIR}
-
-while read l; do
-  python  ${RVC_OBJ365_SCRIPT_DIR}/../common/rvc_download_helper.py --id "$l"
-done <${RVC_OBJ365_SCRIPT_DIR}/obj365_gdrive_ids.txt
+aws s3 --no-sign-request sync s3://objects365/objects365-v2-released/ ${RVC_OBJ365_TRG_DIR}
 
 RVC_OBJ365_TRG_DIR=
 RVC_OBJ365_SCRIPT_DIR=
