@@ -3,24 +3,23 @@
 ## Dataset Download ##
 
 We provide a devkit to download, extract, and convert the challenge datasets into a unified format.
-However, some object detection benchmarks require users to register and to confirm the license terms before granting access to their data.
-Therefore, you need to manually download the following datasets:
+This is done by first specifying the target root directory for all RVC datasets using a environment variabdownload_sem_segm.sh
+ ``` export RVC_DATA_DIR=/path/to/rvc_dataroot  ```
 
-### Objects365:
-access https://drive.google.com/open?id=1xdIbCNoMbDi3hiXrmGcbsNlNmTKfj0Ok and download the content the individual files to $RVC_DATA_ROOT/objdet/Objects365.
-Please be sure to understand the license agreement which is on the Google drive folder and applies to this dataset.
+Now you can execute the download script download_obj_det.sh which will download and extract most of the RVC datasets.
 
-## Dataset Format ##
+You need to manually register and download the follow dataset:
 
-#### Input ####
+Mapillary Vistas Boxable Version (Research Edition):
+https://www.mapillary.com/dataset/vistas
 
-TODO
+You will receive an Email with download instructions. Extract the content of the received file TODO into the folder ${RVC_DATA_DIR}/mvs.
 
-#### Output ####
+### Dataset remapping ###
 
-TODO
+RVC does not not force you to remap the datasets in a certain way. We do provide a "best-effort" mapping, which can be a good starting point. This mapping will contain overlapping classes and some dataset entries might miss relevant labels (as they were annotated using different policies). To create the best effort combined and remapped dataset, execute the script remap_obj_det.sh
 
-#### Running ####
+## Dataset Format / Training ##
 
 TODO
 
