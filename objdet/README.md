@@ -26,6 +26,8 @@ The above step creates a joint training and a seperate joint validation json fil
 
 http://cocodataset.org/#format-data
 
+The image filenames contain relative paths calculated from RVC_DATA_DIR.
+These files can directly be used in your object detector training framework.
 
 ## Result Submission ##
 
