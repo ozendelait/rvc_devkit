@@ -20,13 +20,16 @@ def main(argv=sys.argv[1:]):
                         help="Output json file path for result.")
     parser.add_argument('--do_merging', dest='do_merging', action='store_true',
                         help="Merge new data to existing data in output file (both must share same target label space).")
+    parser.add_argument('--reduce_size', dest='reduce_size', action='store_true',
+                        help="Only keep minimum of annotation data needed for boxable training.")
 
-    parser.set_defaults(do_merging=False)
+    parser.set_defaults(do_merging=False, reduce_size=False)
     args = parser.parse_args(argv)
 
     print("Loading source annotation file " + args.input + "...")
     with open(args.input, 'r') as ifile:
         annot = json.load(ifile)
+
 
     # load pre-defined mapping; first row is target label name, row from --mapping_row
     # defines source row for this input data; use semicolon from N->1 mappings
@@ -42,15 +45,14 @@ def main(argv=sys.argv[1:]):
         trg_labels = {m[0]:m[idx_use] for m in mapping0[1:]}
         cats_sorted = list(sorted(trg_labels.keys()))
         trg_cats = {c:{'supercategory':'rvc_jls', 'id': id0+1, 'name':c} for id0, c in enumerate(cats_sorted)}
-        src_cats = {c['name']:c  for c in annot['categories']}
+        src_cats = {c['name'].lower().strip():c  for c in annot['categories']}
         src_to_trg = {}
         for t, src_all in trg_labels.items():
             t_id = trg_cats[t]['id']
             for s in src_all.split(';'): #allows multi-to-one mappings
                 if len(s)  == 0:
                     continue
-                if not s in src_cats:
-                    s = s.strip() #retry without whitespaces
+                s = s.lower().strip()
                 if not s in src_cats:
                     print("Warning: Unknown source cat "+s+" requested. Skipping.")
                     continue
@@ -64,11 +66,17 @@ def main(argv=sys.argv[1:]):
             args.image_root += '/'
         for i in annot['images']:
             i['file_name'] += args.image_root
+    if args.reduce_size:
+        reduce_size_entries = ["date_captured","coco_url","url","flickr_url"]
+        for i in annot['images']:
+            for e in reduce_size_entries:
+                i.pop(e,None)
 
     if 'annotations' in annot:
-        new_l = []
         for a in tqdm.tqdm(annot['annotations'], desc='Remapping annotations '):
             a['category_id'] = src_to_trg.get(a['category_id'],args.void_id)
+            if args.reduce_size:
+                a.pop('segmentation',None)
 
     if args.do_merging and os.path.exists(args.output):
         print("\nLoading existing target annotation file " + args.output + " for merging...")
