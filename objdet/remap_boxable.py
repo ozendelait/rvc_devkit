@@ -14,6 +14,8 @@ def main(argv=sys.argv[1:]):
                         help="Row header from row in csv file to use; default: second row")
     parser.add_argument('--image_root', type=str, default=None,
                         help="adds image root to each filepath")
+    parser.add_argument('--image_root_rel', type=str, default=None,
+                        help="adds relative path between output json dir and this directory each filepath")
     parser.add_argument('--void_id', type=int, default=0,
                         help="Void id for labels not found in mapping csv")
     parser.add_argument('--output', type=str, 
@@ -25,6 +27,9 @@ def main(argv=sys.argv[1:]):
 
     parser.set_defaults(do_merging=False, reduce_size=False)
     args = parser.parse_args(argv)
+
+    if not args.image_root_rel is None:
+        args.image_root = os.path.relpath(args.image_root_rel, os.path.dirname(args.output)).replace('\\','/')+'/' #use only unix-style slashes
 
     print("Loading source annotation file " + args.input + "...")
     with open(args.input, 'r') as ifile:
