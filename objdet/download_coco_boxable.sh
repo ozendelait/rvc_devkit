@@ -21,25 +21,20 @@ fi
 mkdir -p $RVC_COCO_TRG_DIR
 cd $RVC_COCO_TRG_DIR
 echo "Downloading COCO boxable dataset..."
-# Get the annotations; 0.25GB
-COCOP_ANNOT_URL="http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
-wget $COCOP_ANNOT_URL
+# Get the annotations; 0.25GB for boxable 0.9GB for panoptic
+COCOP_ANNOT_BOX_URL="http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
+wget --no-check-certificate --continue $COCOP_ANNOT_BOX_URL -P ${RVC_COCO_TRG_DIR}
+#COCOP_ANNOT_PANO_URL="http://images.cocodataset.org/annotations/panoptic_annotations_trainval2017.zip"
+#wget --no-check-certificate --continue $COCOP_ANNOT_PANO_URL -P ${RVC_COCO_TRG_DIR}
 
 # train2017.zip will be 19GB.
 TRAIN_IMGS_URL="http://images.cocodataset.org/zips/train2017.zip"
-wget $TRAIN_IMGS_URL
-mkdir -p images
-unzip train2017.zip -d images
-rm train2017.zip
-
-# val2017.zip will be 19GB.
+wget --no-check-certificate --continue $TRAIN_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
+# val2017.zip will be 1GB.
 VAL_IMGS_URL="http://images.cocodataset.org/zips/val2017.zip"
-wget $VAL_IMGS_URL
+wget --no-check-certificate --continue $VAL_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
+# test2017.zip will be 6GB.
+VAL_IMGS_URL="http://images.cocodataset.org/zips/test2017.zip"
+wget --no-check-certificate --continue $VAL_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
 
-unzip val2017.zip -d images
-rm val2017.zip
-
-unzip annotations_trainval2017.zip
-rm annotations_trainval2017.zip
-
-echo "COCO boxable dataset extracted."
+echo "COCO boxable dataset downloaded."

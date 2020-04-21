@@ -28,14 +28,7 @@ echo "Downloading objects365 to ${RVC_OBJ365_TRG_DIR}"
 mkdir -p ${RVC_OBJ365_TRG_DIR}
 aws s3 --no-sign-request sync s3://objects365/objects365-v2-released/ ${RVC_OBJ365_TRG_DIR}
 
-for onetarfile in ${RVC_OBJ365_TRG_DIR}/*.tar.gz
-do
-  echo "Extracting tar file $onetarfile..."
-  tar zxf $onetarfile -C ${RVC_OBJ365_TRG_DIR}/../
-  rm $onetarfile
-done
-
 RVC_OBJ365_TRG_DIR=
 RVC_OBJ365_SCRIPT_DIR=
 
-echo "Finished donwloading objects365."
+echo "Finished downloading objects365."
