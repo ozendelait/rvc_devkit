@@ -31,6 +31,7 @@ These python packages are required for automatic dataset downloading and data co
 2. See the README in the subfolder of the task you are interested in (depth,
    flow, etc.) for further task-specific instructions.
 
+Note: Windows support is experimental and not recommended. Use an Anaconda environment and gitbash to execute the scripts. The required wget can be installed with  ```conda install -c menpo wget```
 
 ## Participating ##
 
