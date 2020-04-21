@@ -16,7 +16,7 @@ parameters are used for all results).
 
 ## Getting started ##
 
-Prerequisites: Install `git` and `python` (both versions 2.7.x and 3.x should work) if they are not installed yet.
+Prerequisites: Install `wget`, `git`, and `python` (both versions 2.7.x and 3.x should work) if they are not installed yet.
 These python packages are required for automatic dataset downloading and data conversions:
 
  ```   
