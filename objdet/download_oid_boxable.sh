@@ -35,17 +35,13 @@ aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_d.tar.gz ${RVC_OI
 aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_e.tar.gz ${RVC_OID_TRG_DIR}
 aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_f.tar.gz ${RVC_OID_TRG_DIR}
 aws s3 --no-sign-request cp s3://open-images-dataset/tar/validation.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/test.tar.gz ${RVC_OID_TRG_DIR}
 
-wget --no-check-certificate https://storage.googleapis.com/openimages/v6/oidv6-train-annotations-bbox.csv -P ${RVC_OID_TRG_DIR}
-wget --no-check-certificate https://storage.googleapis.com/openimages/v5/validation-annotations-bbox.csv -P ${RVC_OID_TRG_DIR}
-wget --no-check-certificate https://storage.googleapis.com/openimages/v5/test-annotations-bbox.csv -P ${RVC_OID_TRG_DIR}
-wget --no-check-certificate https://storage.googleapis.com/openimages/v5/train-annotations-human-imagelabels-boxable.csv -P ${RVC_OID_TRG_DIR}
-wget --no-check-certificate https://storage.googleapis.com/openimages/v5/validation-annotations-human-imagelabels-boxable.csv -P ${RVC_OID_TRG_DIR}
-wget --no-check-certificate https://storage.googleapis.com/openimages/v5/test-annotations-human-imagelabels-boxable.csv -P ${RVC_OID_TRG_DIR}
+wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-train-detection-bbox.csv -P ${RVC_OID_TRG_DIR}
+wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-validation-detection-bbox.csv -P ${RVC_OID_TRG_DIR}
+wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-train-detection-human-imagelabels.csv -P ${RVC_OID_TRG_DIR}
+wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-validation-detection-human-imagelabels.csv -P ${RVC_OID_TRG_DIR}
 wget --no-check-certificate https://storage.googleapis.com/openimages/2018_04/train/train-images-boxable-with-rotation.csv -P ${RVC_OID_TRG_DIR}
 wget --no-check-certificate https://storage.googleapis.com/openimages/2018_04/validation/validation-images-with-rotation.csv -P ${RVC_OID_TRG_DIR}
-wget --no-check-certificate https://storage.googleapis.com/openimages/2018_04/test/test-images-with-rotation.csv -P ${RVC_OID_TRG_DIR}
 
 RVC_OID_TRG_DIR=
 RVC_OID_SCRIPT_DIR=
