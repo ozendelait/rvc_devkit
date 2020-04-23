@@ -18,15 +18,18 @@ else
   RVC_DATA_TRG_DIR=${RVC_JOINED_TRG_DIR}/
 fi
 
-if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
-# getting openimages2coco repo, applying patch until repo is fixed
-  git -C $RVC_OBJ_DET_SCRIPT_DIR clone https://github.com/bethgelab/openimages2coco.git 
-  git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout 5d354bd2d29b6d6177743f070931e21e4fbfa0e3
-  git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco apply ${RVC_OBJ_DET_SCRIPT_DIR}/openimages2coco-oid6.patch
+#check if oid has already been converted 
+if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_val_bbox.json" ]; then
+  echo "Converting OID to COCO format..."
+  if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
+  # getting defined version of openimages2coco repo
+    git -C $RVC_OBJ_DET_SCRIPT_DIR clone https://github.com/bethgelab/openimages2coco.git 
+    git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout aebb4d128007f04579d18e32c49c3de0013834be
+  fi
+  
+  #remapping OID format to COCO
+  python $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/convert.py --path $RVC_DATA_SRC_DIR/oid/
 fi
-
-#remapping OID format to COCO
-python $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/convert.py --path $RVC_DATA_SRC_DIR/oid/
 
 echo "Joining dataset from ${RVC_DATA_SRC_DIR} to ${RVC_DATA_TRG_DIR}"
 mkdir -p ${RVC_DATA_TRG_DIR}
@@ -51,6 +54,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/coco/a
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/objects365/objects365v2_val_0422.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row obj365_boxable_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/objects365/
                         --void_id 0 \
                         --do_merging \
                         --reduce_size \
@@ -59,6 +63,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/object
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/objects365/objects365v2_train_0422.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row obj365_boxable_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/objects365/
                         --void_id 0 \
                         --do_merging \
                         --reduce_size \
@@ -67,7 +72,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/object
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_val_bbox.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row oid_boxable_leaf \
-                        --image_root_rel $RVC_DATA_SRC_DIR/oid/ \
+                        --image_root_rel $RVC_DATA_SRC_DIR/oid/val/ \
                         --void_id 0 \
                         --do_merging \
                         --reduce_size \
@@ -76,7 +81,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/an
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_train_bbox.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row oid_boxable_leaf \
-                        --image_root_rel $RVC_DATA_SRC_DIR/oid/ \
+                        --image_root_rel "$RVC_DATA_SRC_DIR/oid/train_{file_name[0]}/" \
                         --void_id 0 \
                         --do_merging \
                         --reduce_size \
@@ -85,14 +90,14 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/an
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_test_bbox.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row oid_boxable_leaf \
-                        --image_root_rel $RVC_DATA_SRC_DIR/oid/ \
+                        --image_root_rel $RVC_DATA_SRC_DIR/oid/test/ \
                         --void_id 0 \
                         --reduce_size \
                         --output $RVC_DATA_TRG_DIR/joined_boxable_test.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/validation.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
-                        --mapping_row mvs_boxable_leaf \
+                        --mapping_row mvs_boxable_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/mvs/validation/images \
                         --void_id 0 \
                         --do_merging \
@@ -101,9 +106,10 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/mvs/pa
 
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/training.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
-                        --mapping_row mvs_boxable_leaf \
+                        --mapping_row mvs_boxable_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/mvs/training/images  \
                         --void_id 0 \
+                        --do_merging \
                         --reduce_size \
                         --output $RVC_DATA_TRG_DIR/joined_boxable_train.json
 
