@@ -105,11 +105,14 @@ def main(argv=sys.argv[1:]):
         for i in annot_exists['images']:
             max_image_id = max(max_image_id, i['id'])
 
-        for i in annot['images']:
-            i['id'] += max_image_id
+        old_id_to_new = {}
+        for idx0,i in enumerate(annot['images']):
+            newid = max_image_id + 1 + idx0
+            old_id_to_new[i['id']] = newid
+            i['id'] = newid
         annot_exists['images'] += annot.pop('images')
         for a in annot['annotations']:
-            a['image_id'] += max_image_id
+            a['image_id'] = old_id_to_new[a['image_id']]
         annot_exists['annotations'] += annot.pop('annotations')
 
         #TODO fix annotation's ids

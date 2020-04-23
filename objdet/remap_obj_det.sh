@@ -90,7 +90,24 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/an
                         --reduce_size \
                         --output $RVC_DATA_TRG_DIR/joined_boxable_test.json
 
-#TODO execute remapping for MVS
+python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/validation.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
+                        --mapping_row mvs_boxable_leaf \
+                        --image_root_rel $RVC_DATA_SRC_DIR/mvs/validation/images \
+                        --void_id 0 \
+                        --do_merging \
+                        --reduce_size \
+                        --output $RVC_DATA_TRG_DIR/joined_boxable_val.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/training.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
+                        --mapping_row mvs_boxable_leaf \
+                        --image_root_rel $RVC_DATA_SRC_DIR/mvs/training/images  \
+                        --void_id 0 \
+                        --reduce_size \
+                        --output $RVC_DATA_TRG_DIR/joined_boxable_train.json
+
+
 
 RVC_DATA_TRG_DIR=
 RVC_DATA_SRC_DIR=
