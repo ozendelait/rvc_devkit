@@ -70,7 +70,7 @@ def main(argv=sys.argv[1:]):
         if args.image_root[-1] != '/' and args.image_root[-1] != '\\':
             args.image_root += '/'
         for i in annot['images']:
-            i['file_name'] += args.image_root
+            i['file_name'] = args.image_root + i['file_name']
     if args.reduce_size:
         reduce_size_entries = ["date_captured","coco_url","url","flickr_url"]
         for i in annot['images']:
