@@ -29,7 +29,13 @@ def main(argv=sys.argv[1:]):
     args = parser.parse_args(argv)
 
     if not args.image_root_rel is None:
-        args.image_root = os.path.relpath(args.image_root_rel, os.path.dirname(args.output)).replace('\\','/')+'/' #use only unix-style slashes
+        pos_curly = args.image_root_rel.find('{')
+        pos_slash = args.image_root_rel.rfind('/',pos_curly) if pos_curly > 0 else -1
+        recover_curly = ""
+        if pos_slash >= 0:
+            recover_curly = args.image_root_rel[pos_slash:]
+            args.image_root_rel = args.image_root_rel[:pos_slash]
+        args.image_root = os.path.relpath(args.image_root_rel, os.path.dirname(args.output)).replace('\\','/') + recover_curly + '/' #use only unix-style slashes
 
     print("Loading source annotation file " + args.input + "...")
     with open(args.input, 'r') as ifile:
@@ -70,7 +76,7 @@ def main(argv=sys.argv[1:]):
         if args.image_root[-1] != '/' and args.image_root[-1] != '\\':
             args.image_root += '/'
         for i in annot['images']:
-            i['file_name'] += args.image_root
+            i['file_name'] = args.image_root.format(file_name=i['file_name']) + i['file_name']
     if args.reduce_size:
         reduce_size_entries = ["date_captured","coco_url","url","flickr_url"]
         for i in annot['images']:
@@ -105,11 +111,14 @@ def main(argv=sys.argv[1:]):
         for i in annot_exists['images']:
             max_image_id = max(max_image_id, i['id'])
 
-        for i in annot['images']:
-            i['id'] += max_image_id
+        old_id_to_new = {}
+        for idx0,i in enumerate(annot['images']):
+            newid = max_image_id + 1 + idx0
+            old_id_to_new[i['id']] = newid
+            i['id'] = newid
         annot_exists['images'] += annot.pop('images')
         for a in annot['annotations']:
-            a['image_id'] += max_image_id
+            a['image_id'] = old_id_to_new[a['image_id']]
         annot_exists['annotations'] += annot.pop('annotations')
 
         #TODO fix annotation's ids
