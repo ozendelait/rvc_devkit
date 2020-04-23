@@ -87,13 +87,13 @@ python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/an
                         --reduce_size \
                         --output $RVC_DATA_TRG_DIR/joined_boxable_train.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_test_bbox.json \
-                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
-                        --mapping_row oid_boxable_leaf \
-                        --image_root_rel $RVC_DATA_SRC_DIR/oid/test/ \
-                        --void_id 0 \
-                        --reduce_size \
-                        --output $RVC_DATA_TRG_DIR/joined_boxable_test.json
+#python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_test_bbox.json \
+#                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
+#                        --mapping_row oid_boxable_leaf \
+#                        --image_root_rel $RVC_DATA_SRC_DIR/oid/test/ \
+#                        --void_id 0 \
+#                        --reduce_size \
+#                        --output $RVC_DATA_TRG_DIR/joined_boxable_test.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/remap_boxable.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/validation.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
