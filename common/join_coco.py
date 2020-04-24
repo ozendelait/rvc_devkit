@@ -1,0 +1,78 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# remap boxable COCO annotations using a supplied mapping csv file
+
+import os, sys, argparse, json, csv, datetime
+
+def join_info(old_info, add_info = None):
+    initialize = add_info is None
+    if initialize:
+        description = "Joint dataset for RVC, contains: " + old_info['description'] + " Version " + old_info['version']
+        contributor = old_info['contributor']
+    else:
+        description = old_info['description'] + "; " + add_info['description'] + " Version " + add_info['version']
+        contributor = old_info['contributor'] +"; "+ add_info['contributor']
+    ret_info = {"year":2020, "version":"0.1", "description": description,
+                "contributor": contributor,
+                "url":"robustvision.net", "date_created": str(datetime.datetime.now())}
+    return ret_info
+
+def main(argv=sys.argv[1:]):
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--join', type=str,
+                        help="Coco json file(s) to join, seperate list entries by semicolon, merging is done in order from first to last")
+    parser.add_argument('--output', type=str, 
+                        help="Output json file path for result.")
+    args = parser.parse_args(argv)
+
+    annot = {}
+    joint_image_id = 0
+    for j in args.join.split(';'):
+        src_id = os.path.basename(j).split('.')[0]
+        if not os.path.exists(j):
+            print("Error: file "+j+" not found!")
+            return 1
+        print("Loading coco annotation file " + j + "...")
+        with open(j, 'r') as ifile:
+            annot_add = json.load(ifile)
+        if len(annot) == 0:
+            annot['info'] = join_info(annot_add)
+            annot['categories'] = len(annot_add['categories'])
+        else:
+            #quick check if annot['categories'] is correct
+            versions_match = len(annot['categories']) == len(annot_add['categories'])
+            if versions_match:
+                for id0, a in enumerate(annot_add['categories']):
+                    a_cmp = annot['categories'][id0]
+                    if a_cmp['name'] != a['name'] or a_cmp['id'] != a['id']:
+                        print("Category mismatch at entry %i:"%id0, a_cmp, a)
+                        versions_match = False
+                        break
+            if not versions_match:
+                print("Cannot merge new data to existing file; incompatible formats")
+                return -3
+        #TODO fix license merging
+        #find maximum image id
+
+        old_id_to_new = {}
+        for i in annot_add['images']:
+            #save original ids for reference
+            i['id0'] = i['id']
+            i['src0'] = src_id
+            old_id_to_new[i['id']] = joint_image_id
+            i['id'] = joint_image_id
+            joint_image_id += 1
+        annot['images'] = annot.get('images',[]) + annot_add.pop('images')
+        for a in annot_add['annotations']:
+            a['image_id'] = old_id_to_new[a['image_id']]
+        annot['annotations'] = annot.get('annotations', []) + annot_add.pop('annotations')
+        del annot_add
+
+    print("Saving result joint annotations to file "+args.output+"...")
+    with open(args.output, 'w', newline='\n') as ofile:
+        json.dump(annot, ofile)
+        
+    return 0
+    
+if __name__ == "__main__":
+    sys.exit(main())

@@ -20,9 +20,7 @@ def main(argv=sys.argv[1:]):
                         help="Void id for labels not found in mapping csv")
     parser.add_argument('--output', type=str, 
                         help="Output json file path for result.")
-    parser.add_argument('--do_merging', dest='do_merging', action='store_true',
-                        help="Merge new data to existing data in output file (both must share same target label space).")
-    parser.add_argument('--reduce_size', dest='reduce_size', action='store_true',
+    parser.add_argument('--reduce_boxable', dest='reduce_size', action='store_true',
                         help="Only keep minimum of annotation data needed for boxable training.")
 
     parser.set_defaults(do_merging=False, reduce_size=False)
@@ -88,41 +86,6 @@ def main(argv=sys.argv[1:]):
             a['category_id'] = src_to_trg.get(a['category_id'],args.void_id)
             if args.reduce_size:
                 a.pop('segmentation',None)
-
-    if args.do_merging and os.path.exists(args.output):
-        print("\nLoading existing target annotation file " + args.output + " for merging...")
-        with open(args.output, 'r') as ifile:
-            annot_exists = json.load(ifile)
-        #quick check if annot['categories'] is correct
-        versions_match = len(annot['categories']) == len(annot_exists['categories'])
-        if versions_match:
-            for id0, a in enumerate(annot_exists['categories']):
-                a_cmp = annot['categories'][id0]
-                if a_cmp['name'] != a['name'] or a_cmp['id'] != a['id']:
-                    print("Category mismatch at entry %i:"%id0, a_cmp, a)
-                    versions_match = False
-                    break
-        if not versions_match:
-            print("Cannot merge new data to existing file; incompatible formats")
-            return -3
-        #TODO fix info and license merging
-        #find maximum image id
-        max_image_id = -1
-        for i in annot_exists['images']:
-            max_image_id = max(max_image_id, i['id'])
-
-        old_id_to_new = {}
-        for idx0,i in enumerate(annot['images']):
-            newid = max_image_id + 1 + idx0
-            old_id_to_new[i['id']] = newid
-            i['id'] = newid
-        annot_exists['images'] += annot.pop('images')
-        for a in annot['annotations']:
-            a['image_id'] = old_id_to_new[a['image_id']]
-        annot_exists['annotations'] += annot.pop('annotations')
-
-        #TODO fix annotation's ids
-        annot = annot_exists
 
     print("Saving target annotation file "+args.output+"...")
     with open(args.output, 'w', newline='\n') as ofile:
