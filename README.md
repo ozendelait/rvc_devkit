@@ -9,10 +9,7 @@ The devkits make it easy to participate in the challenge by:
 
 Any updates to the devkits will be provided via this repository.
 
-Support in development:
-*) Semantic Segmentation
-*) OID for Instance Segmentation
-*) KITTI for Instance Segmentation and Panoptic Segmentation
+Still unsupport and under development: Semantic Segmentation Task; OID for Instance Segmentation; KITTI for Instance Segmentation and Panoptic Segmentation
 
 Notice that using the devkits is not required for participating in the
 challenge: alternatively, algorithms can be manually run on each dataset and
