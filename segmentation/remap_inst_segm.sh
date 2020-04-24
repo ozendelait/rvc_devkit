@@ -47,7 +47,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --image_root_rel $RVC_DATA_SRC_DIR/oid/val/ \
                         --void_id 0 \
                         --reduce_boxable \
-                        --output $RVC_DATA_TRG_DIR/oid.rvc_val.json
+                        --output $RVC_DATA_TRG_DIR/oid_inst.rvc_val.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_train_bbox.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
@@ -55,7 +55,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --image_root_rel "$RVC_DATA_SRC_DIR/oid/train_{file_name[0]}/" \
                         --void_id 0 \
                         --reduce_boxable \
-                        --output $RVC_DATA_TRG_DIR/oid.rvc_train.json
+                        --output $RVC_DATA_TRG_DIR/oid_inst.rvc_train.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/validation/panoptic/panoptic_2018.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
@@ -63,7 +63,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --image_root_rel $RVC_DATA_SRC_DIR/mvs/validation/images \
                         --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/validation/panoptic \
                         --void_id 0 \
-                        --output $RVC_DATA_TRG_DIR/mvs_pano.rvc_val.json
+                        --output $RVC_DATA_TRG_DIR/mvs_inst.rvc_val.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/training/panoptic/panoptic_2018.json  \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
@@ -71,18 +71,26 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --image_root_rel $RVC_DATA_SRC_DIR/mvs/training/images  \
                         --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/training/panoptic \
                         --void_id 0 \
-                        --output $RVC_DATA_TRG_DIR/mvs_pano.rvc_train.json
+                        --output $RVC_DATA_TRG_DIR/mvs_inst.rvc_train.json
 
-#TODO: add train/val split for WildDash
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json \
+#Creates random split for train/val (currently no specific split supplied)
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/rvc_split_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json --split "80;20" --output $RVC_DATA_SRC_DIR/wilddash/instances.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/wilddash/instances_0.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
                         --mapping_row wilddash_inst_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/wilddash/images \
                         --annotation_root_rel $RVC_DATA_SRC_DIR/wilddash/panoptic \
                         --void_id 0 \
-                        --output $RVC_DATA_TRG_DIR/wd2_pano.rvc_train.json
+                        --output $RVC_DATA_TRG_DIR/wd2_inst.rvc_train.json
 
-
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/wilddash/instances_1.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row wilddash_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/wilddash/images \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/wilddash/panoptic \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/wd2_inst.rvc_val.json
                         
                         
 pushd $RVC_DATA_TRG_DIR
