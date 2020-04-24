@@ -18,21 +18,8 @@ else
   RVC_DATA_TRG_DIR=${RVC_JOINED_TRG_DIR}/
 fi
 
-#check if oid has already been converted 
-if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_val_bbox.json" ]; then
-  echo "Converting OID to COCO format..."
-  if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
-  # getting defined version of openimages2coco repo
-    git -C $RVC_OBJ_DET_SCRIPT_DIR clone https://github.com/bethgelab/openimages2coco.git 
-    git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout aebb4d128007f04579d18e32c49c3de0013834be
-  fi
-  
-  #remapping OID format to COCO
-  python $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/convert.py --path $RVC_DATA_SRC_DIR/oid/
-fi
-
-echo "Joining dataset from ${RVC_DATA_SRC_DIR} to ${RVC_DATA_TRG_DIR}"
-mkdir -p ${RVC_DATA_TRG_DIR}
+#convert oid gt
+$RVC_OBJ_DET_SCRIPT_DIR/convert_oid_coco.sh
 
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_val2017.json \
