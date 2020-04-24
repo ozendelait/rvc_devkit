@@ -92,7 +92,7 @@ def main(argv=sys.argv[1:]):
         if args.image_root[-1] != '/' and args.image_root[-1] != '\\':
             args.image_root += '/'
         for i in annot['images']:
-            i['file_name'] = args.image_root.format(file_name=i['file_name']) + i['file_name']
+            i['file_name'] = args.image_root.format(file_name=i['file_name'], file_name_su = i['file_name'].split('_')) + i['file_name']
     if args.reduce_pano or args.reduce_boxable:
         reduce_size_entries = ["date_captured","coco_url","url","flickr_url"]
         for i in annot['images']:
@@ -109,7 +109,7 @@ def main(argv=sys.argv[1:]):
             if args.reduce_boxable or args.reduce_pano:
                 a.pop('segmentation',None)
             if not args.annotation_root is None and 'file_name' in a:
-                a['file_name'] = args.annotation_root.format(file_name=a['file_name']) + a['file_name']
+                a['file_name'] = args.annotation_root.format(file_name=a['file_name'], file_name_su = a['file_name'].split('_')) + a['file_name']
 
     print("Saving target annotation file "+args.output+"...")
     rvc_json_helper.save_json(annot, args.output)
