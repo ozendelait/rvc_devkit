@@ -13,5 +13,20 @@ The resulting mappings have been generated in part from existing mappings:
 
 [TODO: all contributions]
 
+Official ADE20K label list:
+https://github.com/CSAILVision/sceneparsing/blob/master/objectInfo150.csv
+Official OID label lists: https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-label300-segmentable-hierarchy.json
+and https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-label500-hierarchy.json
+Boxable COCO labels compiled by github user amikelive: https://github.com/amikelive/coco-labels/blob/master/coco-labels-2014_2017.txt
+Official COCO panoptic label list: https://raw.githubusercontent.com/cocodataset/panopticapi/master/panoptic_coco_categories.json
 
-
+Label merging efforts supported by:
+**MSeg: A Composite Dataset for Multi-domain Semantic Segmentation** [[PDF]](http://vladlen.info/papers/MSeg.pdf)
+<br>
+[John Lambert*](https://johnwlambert.github.io/),
+[Zhuang Liu*](https://liuzhuang13.github.io/),
+[Ozan Sener](http://ozansener.net/),
+[James Hays](https://www.cc.gatech.edu/~hays/),
+[Vladlen Koltun](http://vladlen.info/)
+<br>
+Presented at [CVPR 2020](http://cvpr2018.thecvf.com/)
