@@ -16,9 +16,15 @@ https://www.mapillary.com/dataset/vistas
 
 You will receive an Email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvs.
 
+After successfully downloading all datasets, execute this script to extract and cleanup archive files:
+
+ ``` extract_and_cleanup.sh ``` 
+
 ### Dataset remapping ###
 
-RVC does not not force you to remap the datasets in a certain way. We do provide a "best-effort" mapping, which can be a good starting point. This mapping will contain overlapping classes and some dataset entries might miss relevant labels (as they were annotated using different policies). Combine and remappe datasets by execute the script remap_obj_det.sh
+RVC does not not force you to remap the datasets in a certain way. We do provide a "best-effort" mapping, which can be a good starting point. This mapping will contain overlapping classes and some dataset entries might miss relevant labels (as they were annotated using different policies). Combine and remappe datasets by execute the script 
+
+ ``` remap_obj_det.sh ```
 
 ## Dataset Format / Training ##
 
