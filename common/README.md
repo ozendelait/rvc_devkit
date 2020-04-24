@@ -23,7 +23,9 @@ Labels for MVS, Cityscapes, Scannet, WildDash v2 supplied by respective dataset 
 Special thanks for supporting label merging efforts go to:
 
 Alina Kuznetsova, https://scholar.google.ch/citations?user=p3q_mlUAAAAJ
+
 Rodrigo Benenson, https://research.google/people/RodrigoBenenson/
+
 Claudio Michaelis, https://scholar.google.de/citations?user=ORqsx1YAAAAJ
 
 and the authors of MSeg:
