@@ -5,6 +5,15 @@
 import os, sys, argparse, csv, tqdm
 import rvc_json_helper
 
+def get_relative_path(root_rel, trg_dir):
+    pos_curly = root_rel.find('{')
+    pos_slash = root_rel.rfind('/',pos_curly) if pos_curly > 0 else -1
+    recover_curly = ""
+    if pos_slash >= 0:
+        recover_curly = root_rel[pos_slash:]
+        root_rel = root_rel[:pos_slash]
+    return  root_rel, os.path.relpath(root_rel, os.path.dirname(trg_dir)).replace('\\','/') + recover_curly + '/' #use only unix-style slashes
+
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', type=str, 
@@ -17,24 +26,30 @@ def main(argv=sys.argv[1:]):
                         help="adds image root to each filepath")
     parser.add_argument('--image_root_rel', type=str, default=None,
                         help="adds relative path between output json dir and this directory each filepath")
+    parser.add_argument('--annotation_root', type=str, default=None,
+                        help="adds annotation mask root to each filepath")
+    parser.add_argument('--annotation_root_rel', type=str, default=None,
+                        help="adds relative path between output json dir and annotation mask directory each filepath")
     parser.add_argument('--void_id', type=int, default=0,
                         help="Void id for labels not found in mapping csv")
     parser.add_argument('--output', type=str, 
                         help="Output json file path for result.")
-    parser.add_argument('--reduce_boxable', dest='reduce_size', action='store_true',
+    parser.add_argument('--reduce_boxable', dest='reduce_boxable', action='store_true',
                         help="Only keep minimum of annotation data needed for boxable training.")
+    parser.add_argument('--reduce_pano', dest='reduce_pano', action='store_true',
+                        help="Only keep minimum of annotation data needed for panoptic/instance segm. training.")
 
-    parser.set_defaults(do_merging=False, reduce_size=False)
+    parser.set_defaults(do_merging=False, reduce_boxable=False, reduce_pano=False)
     args = parser.parse_args(argv)
 
     if not args.image_root_rel is None:
-        pos_curly = args.image_root_rel.find('{')
-        pos_slash = args.image_root_rel.rfind('/',pos_curly) if pos_curly > 0 else -1
-        recover_curly = ""
-        if pos_slash >= 0:
-            recover_curly = args.image_root_rel[pos_slash:]
-            args.image_root_rel = args.image_root_rel[:pos_slash]
-        args.image_root = os.path.relpath(args.image_root_rel, os.path.dirname(args.output)).replace('\\','/') + recover_curly + '/' #use only unix-style slashes
+        args.image_root_rel, args.image_root = get_relative_path(args.image_root_rel, args.output)
+    if not args.annotation_root_rel is None:
+        args.annotation_root, args.image_root = get_relative_path(args.annotation_root_rel, args.output)
+
+    if not args.annotation_root is None:
+        if args.annotation_root[-1] != '/' and args.annotation_root[-1] != '\\':
+            args.annotation_root += '/'
 
     print("Loading source annotation file " + args.input + "...")
     annot = rvc_json_helper.load_json(args.input)
@@ -74,7 +89,7 @@ def main(argv=sys.argv[1:]):
             args.image_root += '/'
         for i in annot['images']:
             i['file_name'] = args.image_root.format(file_name=i['file_name']) + i['file_name']
-    if args.reduce_size:
+    if args.reduce_pano or args.reduce_boxable:
         reduce_size_entries = ["date_captured","coco_url","url","flickr_url"]
         for i in annot['images']:
             for e in reduce_size_entries:
@@ -82,9 +97,16 @@ def main(argv=sys.argv[1:]):
 
     if 'annotations' in annot:
         for a in tqdm.tqdm(annot['annotations'], desc='Remapping annotations '):
-            a['category_id'] = src_to_trg.get(a['category_id'],args.void_id)
-            if args.reduce_size:
+            if 'category_id' in a:
+                a['category_id'] = src_to_trg.get(a['category_id'],args.void_id)
+            if 'segments_info' in a:
+                for s in a['segment_info']:
+                    s["category_id"] = src_to_trg.get(a['category_id'],args.void_id)
+            if args.reduce_boxable or args.reduce_pano:
                 a.pop('segmentation',None)
+            if not args.annotation_root is None and 'file_name' in a:
+                a['file_name'] = args.annotation_root.format(file_name=a['file_name']) + a['file_name']
+                
 
     print("Saving target annotation file "+args.output+"...")
     rvc_json_helper.save_json(annot, args.output)
