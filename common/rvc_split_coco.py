@@ -19,6 +19,7 @@ def main(argv=sys.argv[1:]):
         args.output = args.input
     print("Loading source coco annotation file " + args.input + "...")
     annot = rvc_json_helper.load_json(args.input)
+
     num_imgs = len(annot['images'])
     img_to_idx = {}
     for im_idx, i in enumerate(annot['images']):

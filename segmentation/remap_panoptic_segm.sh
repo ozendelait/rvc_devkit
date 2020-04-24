@@ -53,14 +53,25 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/mvs_pano.rvc_train.json
 
-#TODO: add train/val split for WildDash
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json \
+
+#Creates random split for train/val (currently no specific split supplied)
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/rvc_split_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json --split "80;20"
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic_0.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
                         --mapping_row wilddash_pano_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/wilddash/images \
                         --annotation_root_rel $RVC_DATA_SRC_DIR/wilddash/panoptic \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/wd2_pano.rvc_train.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic_1.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
+                        --mapping_row wilddash_pano_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/wilddash/images \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/wilddash/panoptic \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/wd2_pano.rvc_val.json
 
 
                         
