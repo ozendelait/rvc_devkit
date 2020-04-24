@@ -106,7 +106,6 @@ def main(argv=sys.argv[1:]):
                 a.pop('segmentation',None)
             if not args.annotation_root is None and 'file_name' in a:
                 a['file_name'] = args.annotation_root.format(file_name=a['file_name']) + a['file_name']
-                
 
     print("Saving target annotation file "+args.output+"...")
     rvc_json_helper.save_json(annot, args.output)
