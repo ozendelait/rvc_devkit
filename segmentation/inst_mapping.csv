@@ -1,6 +1,6 @@
-key,oid_inst_leaf,coco_inst_name,cityscapes_inst_name,mvs_inst_name,scannet_inst_name,kitti_inst_name,viper_inst_name,wilddash_inst_id_name
+key,oid_inst_leaf,coco_inst_name,cityscapes_inst_name,mvs_inst_name,scannet_inst_name,viper_inst_name,kitti_inst_name,wilddash_inst_name
 adhesive_tape,/m/03m3vtv,,,,,,,
-airplane,/m/0cmf2,airplane,,,,,,
+airplane,/m/0cmf2,airplane,,,,plane,,
 alarm_clock,/m/046dlr,,,,,,,
 alpaca,/m/0pcr,,,,,,,
 ambulance,/m/012n7d,,,,,,,
@@ -34,7 +34,7 @@ billiard_table,/m/04p0qw,,,,,,,
 binoculars,/m/0lt4_,,,,,,,
 bird,,bird,,animal--bird,,,,
 blue_jay,/m/01f8m5,,,,,,,
-boat,,boat,,object--vehicle--boat,,,,
+boat,,boat,,object--vehicle--boat,,boat,,
 book,/m/0bt_c3,book,,,,,,
 bookcase,,,,,bookshelf,,,
 boot,/m/01b638,,,,,,,
@@ -48,7 +48,7 @@ briefcase,/m/0584n8,,,,,,,
 broccoli,/m/0hkxq,broccoli,,,,,,
 bronze_sculpture,/m/01yx86,,,,,,,
 brown_bear,/m/01dxs,,,,,,,
-building,,,building,,,building,building,building
+building,,,building,,,,building,building
 bull,/m/0cnyhnx,,,,,,,
 burrito,/m/01j3zr,,,,,,,
 bus,/m/01bjv,bus,bus,object--vehicle--bus,,bus,bus,bus
@@ -115,13 +115,13 @@ elephant,/m/0bwd_0j,elephant,,,,,,
 envelope,/m/0frqm,,,,,,,
 falcon,/m/0f6wt,,,,,,,
 fedora,/m/02fq_6,,,,,,,
-fence,,,fence,,,fence,fence,fence
+fence,,,fence,,,,fence,fence
 fig,/m/043nyj,,,,,,,
 filing_cabinet,/m/047j0r,,,,,,,
 fire_hydrant,/m/01pns0,fire hydrant,,object--fire-hydrant,,,,
 flag,/m/03120,,,,,,,
 flashlight,/m/01kb5b,,,,,,,
-flat_vegetation_soil,,,terrain,,,terrain,terrain,terrain
+flat_vegetation_soil,,,terrain,,,,terrain,terrain
 floor,,,,,floor,,,
 flowerpot,/m/0fm3zh,,,,,,,
 flute,/m/0l14j_,,,,,,,
@@ -222,7 +222,7 @@ plain_crosswalk,,,,construction--flat--crosswalk-plain,,,,
 plastic_bag,/m/05gqfk,,,,,,,
 platter,/m/099ssp,,,,,,,
 polar_bear,/m/0633h,,,,,,,
-pole,,,pole,object--support--pole,,pole,pole,pole
+pole,,,pole,object--support--pole,,,pole,pole
 pomegranate,/m/0jwn_,,,,,,,
 potato,/m/05vtc,,,,,,,
 potted_plant,,potted plant,,,,,,
@@ -239,8 +239,8 @@ raven,/m/06j2d,,,,,,,
 refrigerator,,refrigerator,,,refridgerator,,,
 remote,,remote,,,,,,
 rhinoceros,/m/03d443,,,,,,,
-rider,,,rider,human--rider--other-rider,,rider,rider,rider
-road,,,road,,,road,road,road
+rider,,,rider,human--rider--other-rider,,,rider,rider
+road,,,road,,,,road,road
 road_surface_marking,,,,,,,,road-marking
 rocket,/m/09rvcxw,,,,,,,
 roller_skates,/m/02p3w7d,,,,,,,
@@ -263,12 +263,12 @@ shirt,/m/01n4qj,,,,,,,
 shorts,/m/01bfm9,,,,,,,
 shower_curtain,,,,,shower curtain,,,
 showerhead,/m/02f9f_,,,,,,,
-sidewalk,,,sidewalk,,,sidewalk,sidewalk,sidewalk
+sidewalk,,,sidewalk,,,,sidewalk,sidewalk
 sink,,sink,,,sink,,,
 skateboard,/m/06_fw,skateboard,,,,,,
 ski,,skis,,,,,,
 skull,/m/016m2d,,,,,,,
-sky,,,sky,,,sky,sky,sky
+sky,,,sky,,,,sky,sky
 skyscraper,/m/079cl,,,,,,,
 slow_cooker,/m/02tsc9,,,,,,,
 snake,/m/078jl,,,,,,,
@@ -322,23 +322,23 @@ toothbrush,,toothbrush,,,,,,
 torch,/m/07dd4,,,,,,,
 tortoise,/m/011k07,,,,,,,
 towel,/m/0162_1,,,,,,,
-traffic_light,/m/015qff,traffic light,traffic light,object--traffic-light,,traffic light,traffic light,traffic light
+traffic_light,/m/015qff,traffic light,traffic light,object--traffic-light,,,traffic light,traffic light
 traffic_sign_backside,,,,object--traffic-sign--back,,,,
 traffic_sign_frame,,,,object--support--traffic-sign-frame,,,,
-traffic_sign_front,,,traffic sign,object--traffic-sign--front,,traffic sign,traffic sign,traffic sign
-trailer,,,,object--vehicle--trailer,,,,
-train,/m/07jdr,train,on rails,,,on rails,on rails,on rails
+traffic_sign_front,,,traffic sign,object--traffic-sign--front,,,traffic sign,traffic sign
+trailer,,,,object--vehicle--trailer,,trailer,,
+train,/m/07jdr,train,on rails,,,train,on rails,on rails
 truck,/m/07r04,truck,truck,object--vehicle--truck,,truck,truck,truck
 tunnel,,,,,,,,tunnel
 turkey,/m/0jly1,,,,,,,
 umbrella,,umbrella,,,,,,
 utility_pole,,,,object--support--utility-pole,,,,
-van,/m/0h2r6,,,,,,,van
+van,/m/0h2r6,,,,,van,,van
 vase,/m/02s195,vase,,,,,,
-vegetation,,,vegetation,,,vegetation,vegetation,vegetation
+vegetation,,,vegetation,,,,vegetation,vegetation
 volleyball,/m/02rgn06,,,,,,,
 waffle,/m/01dwsz,,,,,,,
-wall,,,wall,,wall,wall,wall,wall
+wall,,,wall,,wall,,wall,wall
 washing_machine,/m/0174k2,,,,,,,
 waste_container,/m/0bjyj5,,,object--trash-can,,,,
 watch,/m/0gjkl,,,,,,,

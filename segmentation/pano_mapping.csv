@@ -1,11 +1,12 @@
 key,coco_pano_name,cityscapes_pano_name,kitti_pano_name,mvs_pano_name,viper_pano_name,wilddash_pano_name
-airplane,airplane,,,,,
+airplane,airplane,,,,plane,
+animal,,,,,animal,
 apple,apple,,,,,
 backpack,backpack,,,,,
 ball,sports ball,,,,,
 banana,banana,,,,,
 banner,banner,,,object--banner,,
-barrier,,,,construction--barrier--other-barrier,,
+barrier,,,,construction--barrier--other-barrier,mobilebarrier,
 baseball_bat,baseball bat,,,,,
 baseball_glove,baseball glove,,,,,
 bear,bear,,,,,
@@ -15,10 +16,10 @@ bicycle,bicycle,bicycle,bicycle,object--vehicle--bicycle,bicycle,bicycle
 bicyclist,,,,human--rider--bicyclist,,
 bike_lane,,,,construction--flat--bike-lane,,
 bike_rack,,,,object--bike-rack,,
-billboard,,,,object--billboard,,billboard
+billboard,,,,object--billboard,billboard,billboard
 bird,bird,,,animal--bird,,
 blanket,blanket,,,,,
-boat,boat,,,object--vehicle--boat,,
+boat,boat,,,object--vehicle--boat,boat,
 book,book,,,,,
 bottle,bottle,,,,,
 bowl,bowl,,,,,
@@ -37,7 +38,7 @@ carrot,carrot,,,,,
 cat,cat,,,,,
 catch_basin,,,,object--catch-basin,,
 ceiling,ceiling-merged,,,,,
-chair,chair,,,,,
+chair,chair,,,,chair,
 clock,clock,,,,,
 computer_keyboard,keyboard,,,,,
 couch,couch,,,,,
@@ -52,11 +53,11 @@ dirt,dirt-merged,,,,,
 dog,dog,,,,,
 donut,donut,,,,,
 door,door-stuff,,,,,
-dynamic,,,,,,dynamic
+dynamic,,,,,ambiguous,dynamic
 ego,,,,void--ego-vehicle,,ego vehicle
 elephant,elephant,,,,,
 fence,fence-merged,fence,fence,construction--barrier--fence,fence,fence
-fire_hydrant,fire hydrant,,,object--fire-hydrant,,
+fire_hydrant,fire hydrant,,,object--fire-hydrant,firehydrant,
 flat_vegetation_soil,,terrain,terrain,nature--terrain,terrain,terrain
 floor,floor-other-merged,,,,,
 flower,flower,,,,,
@@ -76,6 +77,7 @@ handcart,,,,object--vehicle--wheeled-slow,,
 horse,horse,,,,,
 hot_dog,hot dog,,,,,
 house,house,,,,,
+infrastructure,,,,,infrastructure,
 junction_box,,,,object--junction-box,,
 kite,kite,,,,,
 knife,knife,,,,,
@@ -106,13 +108,13 @@ pizza,pizza,,,,,
 plain_crosswalk,,,,construction--flat--crosswalk-plain,,
 platform,platform,,,,,
 playing_field,playingfield,,,,,
-pole,,pole,pole,object--support--pole,pole,pole
+pole,,pole,pole,object--support--pole,,pole
 pothole,,,,object--pothole,,
 potted_plant,potted plant,,,,,
-rail_track,railroad,,,construction--flat--rail-track,,
+rail_track,railroad,,,construction--flat--rail-track,railtrack,
 refrigerator,refrigerator,,,,,
 remote,remote,,,,,
-rider,,rider,rider,human--rider--other-rider,rider,rider
+rider,,rider,rider,human--rider--other-rider,,rider
 river,river,,,,,
 road,road,road,road,construction--flat--road,road,road
 road_shoulder,,,,construction--flat--service-lane,,
@@ -154,22 +156,24 @@ toaster,toaster,,,,,
 toilet,toilet,,,,,
 toothbrush,toothbrush,,,,,
 towel,towel,,,,,
-traffic_light,traffic light,traffic light,traffic light,object--traffic-light,traffic light,traffic light
+traffic_light,traffic light,traffic light,traffic light,object--traffic-light,trafficlight,traffic light
 traffic_sign_backside,,,,object--traffic-sign--back,,
 traffic_sign_frame,,,,object--support--traffic-sign-frame,,
-traffic_sign_front,,traffic sign,traffic sign,object--traffic-sign--front,traffic sign,traffic sign
-trailer,,,,object--vehicle--trailer,,
-train,train,on rails,on rails,object--vehicle--on-rails,on rails,on rails
-tree,tree-merged,,,,,
+traffic_sign_front,,traffic sign,traffic sign,object--traffic-sign--front,trafficsign,traffic sign
+trailer,,,,object--vehicle--trailer,trailer,
+train,train,on rails,on rails,object--vehicle--on-rails,train,on rails
+trash,,,,,trash,
+tree,tree-merged,,,,tree,
 truck,truck,truck,truck,object--vehicle--truck,truck,truck
 tunnel,,,,construction--structure--tunnel,,tunnel
 umbrella,umbrella,,,,,
+unlabeled,,,,,unlabeled,
 utility_pole,,,,object--support--utility-pole,,
-van,,,,,,van
+van,,,,,van,van
 vase,vase,,,,,
 vegetation,,vegetation,vegetation,nature--vegetation,vegetation,vegetation
-wall,wall-other-merged,wall,wall,construction--barrier--wall,wall,wall
-waste_container,,,,object--trash-can,,
+wall,wall-other-merged,wall,wall,construction--barrier--wall,,wall
+waste_container,,,,object--trash-can,trashcan,
 water,water-other,,,nature--water,,
 window,window-other,,,,,
 window_blind,window-blind,,,,,

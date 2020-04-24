@@ -8,9 +8,9 @@ import os, sys, argparse, json, csv, time
 #boxable
 #join_data = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvs_boxable_name"]
 #instance
-join_data = ["oid_inst_leaf", "coco_inst_id_name", "cityscapes_inst_id_name", "mvs_inst_id_name", 'scannet_pano_id_name', 'cityscapes_inst_id_name', 'cityscapes_inst_id_name', 'wilddash_inst_id_name']
+join_data = ["oid_inst_leaf", "coco_inst_id_name", "cityscapes_inst_id_name", "mvs_inst_id_name", 'scannet_pano_id_name', 'viper_inst_id_name', 'cityscapes_inst_id_name', 'wilddash_inst_id_name']
 #panoptic
-#join_data = ["coco_pano_id_name", "cityscapes_pano_id_name", "cityscapes_pano_id_name", "mvs_pano_id_name", 'cityscapes_pano_id_name', 'wilddash_pano_id_name']
+#join_data = ["coco_pano_id_name", "cityscapes_pano_id_name", "cityscapes_pano_id_name", "mvs_pano_id_name", 'viper_name', 'wilddash_pano_id_name']
 #semseg
 #join_data = ["ade20k_id", "coco_pano_id", "cityscapes_pano_id", "cityscapes_pano_id", "mvs_pano_id", 'scannet_pano_id', 'cityscapes_pano_id', 'wilddash_pano_id']
 
