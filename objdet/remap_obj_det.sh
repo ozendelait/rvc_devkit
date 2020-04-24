@@ -54,14 +54,14 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/objects365/objects365v2_val_0422.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row obj365_boxable_name \
-                        --image_root_rel $RVC_DATA_SRC_DIR/objects365/
+                        --image_root_rel $RVC_DATA_SRC_DIR/objects365/ \
                         --reduce_boxable \
                         --output $RVC_DATA_TRG_DIR/obj365.rvc_val.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/objects365/objects365v2_train_0422.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row obj365_boxable_name \
-                        --image_root_rel $RVC_DATA_SRC_DIR/objects365/
+                        --image_root_rel $RVC_DATA_SRC_DIR/objects365/ \
                         --void_id 0 \
                         --reduce_boxable \
                         --output $RVC_DATA_TRG_DIR/obj365.rvc_train.json
