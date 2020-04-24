@@ -9,7 +9,7 @@ The devkits make it easy to participate in the challenge by:
 
 Any updates to the devkits will be provided via this repository.
 
-Still unsupport and under development: Semantic Segmentation Task; OID for Instance Segmentation; KITTI for Instance Segmentation and Panoptic Segmentation
+Still unsupport and under development: Semantic Segmentation Task; OID & ScanNet for Instance Segmentation; KITTI & VIPER for Instance Segmentation and Panoptic Segmentation
 
 Notice that using the devkits is not required for participating in the
 challenge: alternatively, algorithms can be manually run on each dataset and
@@ -26,6 +26,7 @@ These python packages are required for automatic dataset downloading and data co
    pip install imageio
    pip install scipy
    pip install awscli
+   pip install ujson
 ```
 
 1. Clone this repository:
