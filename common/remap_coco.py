@@ -77,7 +77,7 @@ def main(argv=sys.argv[1:]):
                     continue
                 s = s.lower().strip()
                 if not s in src_cats: #quick fix mix of supercategory and name tag in some mvs json file
-                    pot_supcat = [c['name'].lower().strip() for c in annot['categories'] if c['supercategory'] == s]
+                    pot_supcat = [c['name'].lower().strip() for c in annot['categories'] if c.get('supercategory','') == s]
                     if len(pot_supcat) == 1:
                         s = pot_supcat[0]
                 if not s in src_cats:
