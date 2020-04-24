@@ -4,18 +4,29 @@
 
 import os, sys, argparse, json, csv, datetime
 
-def join_info(old_info, add_info = None):
-    initialize = add_info is None
+def join_info(old_info, add_info = {}):
+    initialize = len(add_info) > 0
     if initialize:
-        description = "Joint dataset for RVC, contains: " + old_info['description'] + " Version " + old_info['version']
-        contributor = old_info['contributor']
+        contributor = old_info['contributor'] 
     else:
-        description = old_info['description'] + "; " + add_info['description'] + " Version " + add_info['version']
         contributor = old_info['contributor'] +"; "+ add_info['contributor']
-    ret_info = {"year":2020, "version":"0.1", "description": description,
+    ret_info = {"year":2020, "version":"0.1", "description": 'Joint dataset for RVC, see element "datasets" for included datasets; original root element "licenses" is added to "info"; individual image entries contain a ds_id which references the original dataset within this table. The license field refers to the original license idx.',
                 "contributor": contributor,
+                "datasets": old_info.get("datasets",[])+add_info,
                 "url":"robustvision.net", "date_created": str(datetime.datetime.now())}
     return ret_info
+
+def check_versions_match(annot, annot_add):
+    #quick check if annot['categories'] is correct
+    versions_match = len(annot['categories']) == len(annot_add['categories'])
+    if versions_match:
+        for id0, a in enumerate(annot_add['categories']):
+            a_cmp = annot['categories'][id0]
+            if a_cmp['name'] != a['name'] or a_cmp['id'] != a['id']:
+                print("Category mismatch at entry %i:"%id0, a_cmp, a)
+                versions_match = False
+                break
+    return versions_match:
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
@@ -35,30 +46,22 @@ def main(argv=sys.argv[1:]):
         print("Loading coco annotation file " + j + "...")
         with open(j, 'r') as ifile:
             annot_add = json.load(ifile)
-        if len(annot) == 0:
+            
+        src_info_idx = len(annot_add.get("info",{}).get("datasets",[]))
+        if src_info_idx == 0:
             annot['info'] = join_info(annot_add)
             annot['categories'] = len(annot_add['categories'])
         else:
-            #quick check if annot['categories'] is correct
-            versions_match = len(annot['categories']) == len(annot_add['categories'])
-            if versions_match:
-                for id0, a in enumerate(annot_add['categories']):
-                    a_cmp = annot['categories'][id0]
-                    if a_cmp['name'] != a['name'] or a_cmp['id'] != a['id']:
-                        print("Category mismatch at entry %i:"%id0, a_cmp, a)
-                        versions_match = False
-                        break
-            if not versions_match:
-                print("Cannot merge new data to existing file; incompatible formats")
+            annot['info'] = join_info(annot['info'], annot_add['info'])
+            if not check_versions_match(annot, annot_add):
+                print("Cannot merge new data to existing file; incompatible formats!")
                 return -3
-        #TODO fix license merging
-        #find maximum image id
 
         old_id_to_new = {}
         for i in annot_add['images']:
             #save original ids for reference
-            i['id0'] = i['id']
-            i['src0'] = src_id
+            i['ds_id'] = i['id']
+            i['ds_id'] = src_info_idx # idx from src_info
             old_id_to_new[i['id']] = joint_image_id
             i['id'] = joint_image_id
             joint_image_id += 1
