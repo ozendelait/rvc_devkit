@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 # Load/ Save json efficiently with a progress bar
 
-#import json
-import ujson as json
+#ujson can be installed via pip install ujson
+try:
+    import ujson as json
+except:
+    import json
 
 def load_json(inp_path):
     with open(inp_path, 'r') as ifile:

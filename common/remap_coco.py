@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 # remap boxable COCO annotations using a supplied mapping csv file
 
-import os, sys, argparse, json, csv, tqdm
+import os, sys, argparse, csv, tqdm
+import rvc_json_helper
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
@@ -36,9 +37,7 @@ def main(argv=sys.argv[1:]):
         args.image_root = os.path.relpath(args.image_root_rel, os.path.dirname(args.output)).replace('\\','/') + recover_curly + '/' #use only unix-style slashes
 
     print("Loading source annotation file " + args.input + "...")
-    with open(args.input, 'r') as ifile:
-        annot = json.load(ifile)
-
+    annot = rvc_json_helper.load_json(args.input)
 
     # load pre-defined mapping; first row is target label name, row from --mapping_row
     # defines source row for this input data; use semicolon from N->1 mappings
@@ -88,9 +87,8 @@ def main(argv=sys.argv[1:]):
                 a.pop('segmentation',None)
 
     print("Saving target annotation file "+args.output+"...")
-    with open(args.output, 'w', newline='\n') as ofile:
-        json.dump(annot, ofile)
-        
+    rvc_json_helper.save_json(annot, args.output)
+
     return 0
     
 if __name__ == "__main__":
