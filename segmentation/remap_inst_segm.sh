@@ -57,28 +57,28 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --reduce_boxable \
                         --output $RVC_DATA_TRG_DIR/oid.rvc_train.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/validation.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/validation/panoptic/panoptic_2018.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
                         --mapping_row mvs_inst_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/mvs/validation/images \
-                        --annot_root_rel $RVC_DATA_SRC_DIR/mvs/validation/panoptic \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/validation/panoptic \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/mvs_pano.rvc_val.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/training.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/training/panoptic/panoptic_2018.json  \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
                         --mapping_row mvs_inst_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/mvs/training/images  \
-                        --annot_root_rel $RVC_DATA_SRC_DIR/mvs/training/panoptic \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/training/panoptic \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/mvs_pano.rvc_train.json
 
 #TODO: add train/val split for WildDash
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
-                        --mapping_row mvs_inst_name \
+                        --mapping_row wilddash_inst_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/wilddash/images \
-                        --annot_root_rel $RVC_DATA_SRC_DIR/wilddash/panoptic \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/wilddash/panoptic \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/wd2_pano.rvc_train.json
 
