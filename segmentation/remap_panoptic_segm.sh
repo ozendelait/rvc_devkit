@@ -23,17 +23,19 @@ fi
 #TODO: KITTI
 #TODO: VIPER
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_val2017.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/panoptic_val2017.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
                         --mapping_row coco_pano_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/coco/images \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/coco/annotations/panoptic_val2017/ \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/coco_pano.rvc_val.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_train2017.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/panoptic_train2017.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
                         --mapping_row coco_pano_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/coco/images \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/coco/annotations/panoptic_train2017/ \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/coco_pano.rvc_train.json
 

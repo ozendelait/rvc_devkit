@@ -1,0 +1,8 @@
+*.pyc
+.p*
+.settings
+.idea
+archives
+__pycache__
+datasets_kitti2015
+temp_unpack_dir

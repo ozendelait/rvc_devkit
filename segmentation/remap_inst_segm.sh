@@ -27,17 +27,19 @@ fi
 #convert oid gt
 $RVC_OBJ_DET_SCRIPT_DIR/../objdet/convert_oid_coco.sh
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_val2017.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/panoptic_val2017.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
                         --mapping_row coco_inst_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/coco/images \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/coco/annotations/panoptic_val2017/ \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/coco_inst.rvc_val.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_train2017.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/panoptic_train2017.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
                         --mapping_row coco_inst_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/coco/images \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/coco/annotations/panoptic_train2017/ \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/coco_inst.rvc_train.json
 
