@@ -1,7 +1,6 @@
 #!/bin/sh
-# Converts GT from OID into COCO format
-# requires git, python and cityscapesscripts which can be installed via:
-# pip install cityscapesscripts
+# Converts GT from cityscapes into COCO format
+# requires git, python
 # (use gitbash for MS Windows)
 
 RVC_SEGM_SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -19,7 +18,7 @@ else
 fi
 
 #check if cityscapes has already been converted 
-if [ ! -f "$RVC_DATA_SRC_DIR/cityscapes/panoptic.json" ]; then
+if [ ! -f "$RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_test.json" ]; then
   echo "Converting Cityscapes to COCO format..."
   if [ ! -d $RVC_SEGM_SCRIPT_DIR/cityscapesScripts ]; then
   # getting defined version of cityscapesScripts repo
@@ -29,7 +28,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/cityscapes/panoptic.json" ]; then
   
   #remap cityscapes format to COCO
   mkdir -p "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
-  python $RVC_SEGM_SCRIPT_DIR/cityscapesScripts/cityscapesscripts/preparation/createPanopticImgs.py --dataset-folder $RVC_DATA_SRC_DIR/cityscapes/gtFine/ --output-folder "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
+  PYTHONPATH=$RVC_SEGM_SCRIPT_DIR/cityscapesScripts python $RVC_SEGM_SCRIPT_DIR/cityscapesScripts/cityscapesscripts/preparation/createPanopticImgs.py --dataset-folder "$RVC_DATA_SRC_DIR/cityscapes/gtFine/" --output-folder "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
 fi
 
 RVC_DATA_TRG_DIR=
