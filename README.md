@@ -30,7 +30,7 @@ These python packages are required for automatic dataset downloading and data co
 ```
 
 1. Clone this repository:
-   ```git clone https://github.com/ozendelait/rvc_devkit.git```
+   ```git clone  --single-branch --branch release https://github.com/ozendelait/rvc_devkit.git```
 2. See the README in the subfolder of the task you are interested in (depth,
    flow, etc.) for further task-specific instructions.
 
