@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 # Load/ Save json efficiently with a progress bar
 
-import os, sys, json
+#import json
+import ujson as json
 
 def load_json(inp_path):
     with open(inp_path, 'r') as ifile:

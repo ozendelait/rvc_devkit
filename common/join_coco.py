@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # remap boxable COCO annotations using a supplied mapping csv file
 
-import os, sys, argparse, json, csv, datetime
+import os, sys, argparse, datetime
 import rvc_json_helper
 
 def join_info(old_info, add_info = {}):
