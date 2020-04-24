@@ -7,7 +7,7 @@ This is done by first specifying the target root directory for all RVC datasets 
 
  ``` export RVC_DATA_DIR=/path/to/rvc_dataroot  ```
 
-Now you can execute the download script ``` download_obj_det.sh ``` which will download and extract most of the RVC datasets.
+Now you can execute the download script ``` download_obj_det.sh ``` which will download most of the RVC datasets.
 
 You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
 https://www.mapillary.com/dataset/vistas

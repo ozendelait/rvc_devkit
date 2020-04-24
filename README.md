@@ -9,6 +9,8 @@ The devkits make it easy to participate in the challenge by:
 
 Any updates to the devkits will be provided via this repository.
 
+Still unsupport and under development: Semantic Segmentation Task; OID for Instance Segmentation; KITTI for Instance Segmentation and Panoptic Segmentation
+
 Notice that using the devkits is not required for participating in the
 challenge: alternatively, algorithms can be manually run on each dataset and
 results submitted to all benchmarks individually (as long as the same method and
@@ -42,6 +44,9 @@ The process for participating in the challenge is as follows.
   See the README in the task subfolder for instructions on this.
 * Most datasets come with ground truth data and can be used for training
   your algorithm.
+
+These steps will be supported by the dev kit soon:
+
 * Once you are happy with the results of your algorithm based on the training datasets,
   run your algorithm on all datasets. See the README for the specific task for
   information on the expected result format.
