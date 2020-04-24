@@ -33,8 +33,8 @@ rm ${RVC_EXTR_ROOT_DIR}/coco/test2017.zip
 
 unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations_trainval2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
 rm ${RVC_EXTR_ROOT_DIR}/coco/annotations_trainval2017.zip
-#unzip ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
-#rm ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip
+unzip ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
+rm ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip
 
 mseg_extract_cityscapes.sh ${RVC_EXTR_ROOT_DIR}/cityscapes
 #kitti is extracted by mseg_download_kitti.sh

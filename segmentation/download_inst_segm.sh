@@ -13,7 +13,7 @@ else
   RVC_DOWNL_SEM_TRG_DIR=${RVC_DATA_DIR}/
 fi
 
-${RVC_DOWNL_SEM_SCRIPT_DIR}/../objdet/download_coco_boxable.sh
+$RVC_COCO_SCRIPT_DIR/../objdet/download_coco_boxable.sh
 mseg_download_cityscapes.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
 mseg_download_kitti.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
 

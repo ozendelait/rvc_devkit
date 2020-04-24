@@ -24,8 +24,6 @@ echo "Downloading COCO boxable dataset..."
 # Get the annotations; 0.25GB for boxable 0.9GB for panoptic
 COCOP_ANNOT_BOX_URL="http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
 wget --no-check-certificate --continue $COCOP_ANNOT_BOX_URL -P ${RVC_COCO_TRG_DIR}
-#COCOP_ANNOT_PANO_URL="http://images.cocodataset.org/annotations/panoptic_annotations_trainval2017.zip"
-#wget --no-check-certificate --continue $COCOP_ANNOT_PANO_URL -P ${RVC_COCO_TRG_DIR}
 
 # train2017.zip will be 19GB.
 TRAIN_IMGS_URL="http://images.cocodataset.org/zips/train2017.zip"
