@@ -2,43 +2,34 @@
 
 ## Dataset Download ##
 
-We provide a devkit to download, extract, and convert the challenge datasets into a unified format.
-However, some segmentation benchmarks require users to register and to confirm the license terms before granting access to their data.
-Therefore, you need to manually download the following datasets:
+We provide a devkit to download, extract, and convert the challenge datasets into a unified format. First specifying the target root directory for all RVC datasets using an environment variable
 
-Please register on [Cityscapes](https://www.cityscapes-dataset.com/login/) and download the following archives: "leftImg8bit_trainvaltest.zip" and "gtFine_trainvaltest.zip".
-Similarly, signup on [WildDash](http://wilddash.cc/accounts/login?next=/download) and download the archive "wd_val_01.zip".
+export RVC_DATA_DIR=/path/to/rvc_dataroot
 
-Please prepare the following file structure before running the devkit (Kitti2015 and ScanNet will be downloaded automatically).
-```
-- devkit/instance/archives/
-   - Cityscapes_archives/leftImg8bit_trainvaltest.zip
-   - Cityscapes_archives/gtFine_trainvaltest.zip
-   - WildDash_archives/wd_val_01.zip
-```
+Some segmentation benchmarks require users to register and to confirm the license terms before granting access to their data.
+For the Cityscapes dataset, please register at: https://www.cityscapes-dataset.com 
 
-The simplest way to use the devkit is to run the main script without any program
-arguments:
-```
-python instance_devkit.py
-```
-On Windows, one may double-click instance_devkit.py if Python is installed.
-The script may ask about a few settings and then download the datasets into a
-folder in the current working directory. The folder layout is as follows:
+For the WildDash dataset, please register at: https://www.wilddash.cc (Note: RVC users can already use a alpha version of WildDash v2; see the downloaded readme/license for details).
+
+To use the automatic download script, define these environment variables using 
 
 ```
-datasets_<format_name>/
-   metadata
-   test
-   training
+# Copy Cityscapes credentials here
+export CITYSCAPES_USERNAME="your_cs_username"
+export CITYSCAPES_PASSWORD="your_cs_passwd"
+# Copy WildDash credentials here
+export WILDDASH_USERNAME="your_wd_username"
+export WILDDASH_PASSWORD="your_wd_passwd"
 ```
 
-If the optional program argument `--keep_archives` is given, the downloaded
-archive files will not be deleted after the datasets are extracted
-and converted.
+Now you can execute the download script ``` download_obj_det.sh ``` which will download most of the RVC datasets.
 
+You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
+https://www.mapillary.com/dataset/vistas
 
+You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvs.
 
+After successfully downloading all datasets, execute this script to extract and delete clean up files:  ``` extract_and_cleanup.sh ``` 
 
 ## Dataset Format ##
 
