@@ -26,6 +26,7 @@ These python packages are required for automatic dataset downloading and data co
    pip install imageio
    pip install scipy
    pip install awscli
+   pip install ujson
 ```
 
 1. Clone this repository:
