@@ -19,7 +19,6 @@ else
 fi
 
 
-#TODO: cityscapes
 #TODO: KITTI
 #TODO: VIPER
 
