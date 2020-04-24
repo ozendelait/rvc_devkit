@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Load/ Save json efficiently with a progress bar
+# Load/ Save json efficiently TODO: with a progress bar
 
 #ujson can be installed via pip install ujson
 try:
-    import ujson as json
+    import hyperjson as json
 except:
     import json
 
@@ -15,4 +15,4 @@ def load_json(inp_path):
 
 def save_json(savej, outp_path):
     with open(outp_path, 'w', newline='\n') as ofile:
-        json.dump(savej, ofile)
+        json.dump(savej, ofile, ensure_ascii=True)
