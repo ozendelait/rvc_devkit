@@ -3,6 +3,7 @@
 # remap boxable COCO annotations using a supplied mapping csv file
 
 import os, sys, argparse, json, csv, datetime
+import rvc_json_helper
 
 def join_info(old_info, add_info = {}):
     initialize = len(add_info) == 0
@@ -44,8 +45,7 @@ def main(argv=sys.argv[1:]):
             print("Error: file "+j+" not found!")
             return 1
         print("Loading coco annotation file " + j + "...")
-        with open(j, 'r') as ifile:
-            annot_add = json.load(ifile)
+        annot_add = rvc_json_helper.load_json(j)
             
         src_info_idx = len(annot_add.get("info",{}).get("datasets",[]))
         if not 'info' in annot_add:
@@ -76,9 +76,7 @@ def main(argv=sys.argv[1:]):
         del annot_add
 
     print("Saving result joint annotations to file "+args.output+"...")
-    with open(args.output, 'w', newline='\n') as ofile:
-        json.dump(annot, ofile)
-        
+    rvc_json_helper.save_json(annot, args.output)
     return 0
     
 if __name__ == "__main__":
