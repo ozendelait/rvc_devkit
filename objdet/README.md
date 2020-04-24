@@ -11,7 +11,7 @@ Now you can execute the download script download_obj_det.sh which will download 
 
 You need to manually register and download the follow dataset:
 
-Mapillary Vistas Boxable Version (Research Edition):
+Mapillary Vistas (Research Edition):
 https://www.mapillary.com/dataset/vistas
 
 You will receive an Email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvs.
