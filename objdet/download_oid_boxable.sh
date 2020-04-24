@@ -43,6 +43,7 @@ wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_
 wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-validation-detection-human-imagelabels.csv -P ${RVC_OID_TRG_DIR}/annotations
 wget --no-check-certificate https://storage.googleapis.com/openimages/2018_04/train/train-images-boxable-with-rotation.csv -P ${RVC_OID_TRG_DIR}/annotations
 wget --no-check-certificate https://storage.googleapis.com/openimages/2018_04/validation/validation-images-with-rotation.csv -P ${RVC_OID_TRG_DIR}/annotations
+wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-classes-description-500.csv -P ${RVC_OID_TRG_DIR}/annotations
 
 RVC_OID_TRG_DIR=
 RVC_OID_SCRIPT_DIR=

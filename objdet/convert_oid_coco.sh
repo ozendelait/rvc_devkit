@@ -24,11 +24,13 @@ if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_val_bbox.json" ]; the
   if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
   # getting defined version of openimages2coco repo
     git -C $RVC_OBJ_DET_SCRIPT_DIR clone https://github.com/bethgelab/openimages2coco.git 
-    git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout aebb4d128007f04579d18e32c49c3de0013834be
+    git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout 15e708ee8f803c09e5154094645c15e7001365a0
   fi
   
   #remapping OID format to COCO
-  python $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/convert.py --path $RVC_DATA_SRC_DIR/oid/
+  pushd $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/
+  python convert.py --path $RVC_DATA_SRC_DIR/oid/ --version challenge_2019
+  popd
 fi
 
 RVC_DATA_TRG_DIR=
