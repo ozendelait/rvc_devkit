@@ -14,7 +14,7 @@ You need to manually register and download the follow dataset:
 Mapillary Vistas Boxable Version (Research Edition):
 https://www.mapillary.com/dataset/vistas
 
-You will receive an Email with download instructions. Extract the content of the received file into the folder ${RVC_DATA_DIR}/mvs.
+You will receive an Email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvs.
 
 ### Dataset remapping ###
 
