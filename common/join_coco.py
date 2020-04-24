@@ -5,14 +5,15 @@
 import os, sys, argparse, json, csv, datetime
 
 def join_info(old_info, add_info = {}):
-    initialize = len(add_info) > 0
+    initialize = len(add_info) == 0
     if initialize:
-        contributor = old_info['contributor'] 
+        contributor = old_info.get('contributor','')
+        add_info = old_info
     else:
-        contributor = old_info['contributor'] +"; "+ add_info['contributor']
+        contributor = old_info.get('contributor','') +"; "+ add_info.get('contributor','')
     ret_info = {"year":2020, "version":"0.1", "description": 'Joint dataset for RVC, see element "datasets" for included datasets; original root element "licenses" is added to "info"; individual image entries contain a ds_id which references the original dataset within this table. The license field refers to the original license idx.',
                 "contributor": contributor,
-                "datasets": old_info.get("datasets",[])+add_info,
+                "datasets": old_info.get("datasets",[])+[add_info],
                 "url":"robustvision.net", "date_created": str(datetime.datetime.now())}
     return ret_info
 
@@ -26,7 +27,7 @@ def check_versions_match(annot, annot_add):
                 print("Category mismatch at entry %i:"%id0, a_cmp, a)
                 versions_match = False
                 break
-    return versions_match:
+    return versions_match
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
@@ -39,7 +40,6 @@ def main(argv=sys.argv[1:]):
     annot = {}
     joint_image_id = 0
     for j in args.join.split(';'):
-        src_id = os.path.basename(j).split('.')[0]
         if not os.path.exists(j):
             print("Error: file "+j+" not found!")
             return 1
@@ -48,6 +48,10 @@ def main(argv=sys.argv[1:]):
             annot_add = json.load(ifile)
             
         src_info_idx = len(annot_add.get("info",{}).get("datasets",[]))
+        if not 'info' in annot_add:
+            annot_add["info"]={"description":" loaded "+j}
+        if "licenses" in annot_add:
+            annot_add["info"]["licenses"] =  annot_add["licenses"]
         if src_info_idx == 0:
             annot['info'] = join_info(annot_add)
             annot['categories'] = len(annot_add['categories'])
