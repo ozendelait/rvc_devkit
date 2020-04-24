@@ -8,9 +8,9 @@ import os, sys, argparse, json, csv, time
 #boxable
 #join_data = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvs_boxable_name"]
 #instance
-join_data = ["oid_inst_leaf", "coco_inst_id", "cityscapes_inst_id", "mvs_inst_id", 'scannet_pano_id', 'cityscapes_inst_id', 'cityscapes_inst_id', 'wilddash_inst_id']
+join_data = ["oid_inst_leaf", "coco_inst_id_name", "cityscapes_inst_id_name", "mvs_inst_id_name", 'scannet_pano_id_name', 'cityscapes_inst_id_name', 'cityscapes_inst_id_name', 'wilddash_inst_id_name']
 #panoptic
-#join_data = ["coco_pano_id", "cityscapes_pano_id", "cityscapes_pano_id", "mvs_pano_id", 'cityscapes_pano_id', 'wilddash_pano_id']
+#join_data = ["coco_pano_id_name", "cityscapes_pano_id_name", "cityscapes_pano_id_name", "mvs_pano_id_name", 'cityscapes_pano_id_name', 'wilddash_pano_id_name']
 #semseg
 #join_data = ["ade20k_id", "coco_pano_id", "cityscapes_pano_id", "cityscapes_pano_id", "mvs_pano_id", 'scannet_pano_id', 'cityscapes_pano_id', 'wilddash_pano_id']
 
@@ -43,8 +43,15 @@ def main(argv=sys.argv[1:]):
         is_valid_line = False
         for j in join_data:
             add_val = ""
-            if j in vals:
-                add_val = vals[j]
+            j_in_vals = j in vals
+            j_use = j
+            if not j_in_vals and j.find("_id_name") > 0:
+                j_in_vals = j.replace("_name","") in vals
+                j_use = j.split('_')[0]+"_name"
+                if not j_use in vals:
+                    j_use = j_use.replace("_name","_pano_name")
+            if j_in_vals:
+                add_val = vals[j_use]
                 is_valid_line = True
             add_line.append(add_val)
         if is_valid_line:
