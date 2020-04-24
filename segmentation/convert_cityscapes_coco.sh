@@ -1,7 +1,7 @@
 #!/bin/sh
 # Converts GT from OID into COCO format
-# requires git, python and pycocotools which can be installed via:
-# pip install pycocotools
+# requires git, python and cityscapesscripts which can be installed via:
+# pip install cityscapesscripts
 # (use gitbash for MS Windows)
 
 RVC_SEGM_SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -29,7 +29,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/cityscapes/panoptic.json" ]; then
   
   #remap cityscapes format to COCO
   mkdir -p "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
-  python $RVC_SEGM_SCRIPT_DIR/cityscapesScripts/preparation/createPanopticImgs.py --dataset-folder $RVC_DATA_SRC_DIR/oid/ --output-folder "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
+  python $RVC_SEGM_SCRIPT_DIR/cityscapesScripts/cityscapesscripts/preparation/createPanopticImgs.py --dataset-folder $RVC_DATA_SRC_DIR/cityscapes/gtFine/ --output-folder "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
 fi
 
 RVC_DATA_TRG_DIR=
