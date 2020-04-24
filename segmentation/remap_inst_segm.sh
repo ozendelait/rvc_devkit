@@ -92,11 +92,26 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/wd2_inst.rvc_val.json
                         
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_val.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row cityscapes_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/cityscapes/leftImg8bit_sequence/val/{frame_name_su[0]}/ \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_val/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/cs_inst.rvc_train.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_train.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row cityscapes_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/cityscapes/leftImg8bit_sequence/train/{frame_name_su[0]}/ \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_train/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/cs_inst.rvc_val.json
                         
 pushd $RVC_DATA_TRG_DIR
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;oid.rvc_train.json;wd2_inst.rvc_val.json;mvs_inst.rvc_val.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;oid.rvc_train.json;wd2_inst.rvc_val.json;cs_inst.rvc_train.json;mvs_inst.rvc_val.json" \
        --output joined_val_inst.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;oid.rvc_train.json;wd2_inst.rvc_train.json;mvs_inst.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;oid.rvc_train.json;wd2_inst.rvc_train.json;cs_inst.rvc_val.json;mvs_inst.rvc_train.json" \
        --output joined_train_inst.json
 popd
 

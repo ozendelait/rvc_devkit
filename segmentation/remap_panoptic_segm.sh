@@ -71,13 +71,28 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --annotation_root_rel $RVC_DATA_SRC_DIR/wilddash/panoptic \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/wd2_pano.rvc_val.json
+                        
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_val.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
+                        --mapping_row cityscapes_pano_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/cityscapes/leftImg8bit_sequence/val/{frame_name_su[0]}/ \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_val/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/cs_pano.rvc_train.json
 
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_train.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
+                        --mapping_row cityscapes_pano_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/cityscapes/leftImg8bit_sequence/train/{frame_name_su[0]}/ \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_train/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/cs_pano.rvc_val.json
 
                         
 pushd $RVC_DATA_TRG_DIR
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_val.json;wd2_pano.rvc_val.json;mvs_pano.rvc_val.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_val.json;wd2_pano.rvc_val.json;cs_pano.rvc_val.json;mvs_pano.rvc_val.json" \
        --output joined_val_pano.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_train.json;wd2_pano.rvc_train.json;mvs_pano.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_train.json;wd2_pano.rvc_train.json;cs_pano.rvc_train.json;mvs_pano.rvc_train.json" \
        --output joined_train_pano.json
 popd
 
