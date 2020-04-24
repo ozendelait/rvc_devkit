@@ -76,6 +76,10 @@ def main(argv=sys.argv[1:]):
                 if len(s)  == 0:
                     continue
                 s = s.lower().strip()
+                if not s in src_cats: #quick fix mix of supercategory and name tag in some mvs json file
+                    pot_supcat = [c['name'].lower().strip() for c in annot['categories'] if c['supercategory'] == s]
+                    if len(pot_supcat) == 1:
+                        s = pot_supcat[0]
                 if not s in src_cats:
                     print("Warning: Unknown source cat "+s+" requested. Skipping.")
                     continue
@@ -100,8 +104,8 @@ def main(argv=sys.argv[1:]):
             if 'category_id' in a:
                 a['category_id'] = src_to_trg.get(a['category_id'],args.void_id)
             if 'segments_info' in a:
-                for s in a['segment_info']:
-                    s["category_id"] = src_to_trg.get(a['category_id'],args.void_id)
+                for s in a['segments_info']:
+                    s["category_id"] = src_to_trg.get(s['category_id'],args.void_id)
             if args.reduce_boxable or args.reduce_pano:
                 a.pop('segmentation',None)
             if not args.annotation_root is None and 'file_name' in a:

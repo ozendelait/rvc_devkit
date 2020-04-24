@@ -15,4 +15,5 @@ def load_json(inp_path):
 
 def save_json(savej, outp_path):
     with open(outp_path, 'w', newline='\n') as ofile:
-        json.dump(savej, ofile, ensure_ascii=True)
+        json.dump(savej, ofile) #hyperjson is missing ensure_ascii=True
+        #json.dump(savej, ofile, ensure_ascii=True)
