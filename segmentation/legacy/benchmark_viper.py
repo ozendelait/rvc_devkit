@@ -10,7 +10,7 @@ from dataset_format_kitti2015 import *
 from util import *
 from util_segmentation import *
 
-common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../common/"))
+common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../../common/"))
 if common_rvc_subfolder not in sys.path:
     sys.path.insert(0, common_rvc_subfolder)
 from rvc_download_helper import download_file_from_google_drive

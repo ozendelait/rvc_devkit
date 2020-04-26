@@ -7,7 +7,7 @@ import os
 import tempfile
 import sys
 
-common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../common/"))
+common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../../common/"))
 if common_rvc_subfolder not in sys.path:
     sys.path.insert(0, common_rvc_subfolder)
 from rvc_download_helper import download_file_with_resume
