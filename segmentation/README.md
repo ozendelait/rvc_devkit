@@ -24,7 +24,7 @@ export WILDDASH_PASSWORD="your_wd_passwd"
 
 Now you can execute the download script ``` download_inst_segm.sh ``` or ``` download_panoptic_segm.sh ``` which will download most of the RVC datasets.
 
-You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
+You need to manually register and download the Mapillary Vistas (Research Edition) dataset, and we will base our evaluation on version 1.3 (blurred faces and license plates):
 https://www.mapillary.com/dataset/vistas
 
 You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvs.
