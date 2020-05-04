@@ -5,9 +5,9 @@
 import argparse
 import os
 import tempfile
-import sys
+import sys, time
 
-common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../common/"))
+common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../../common/"))
 if common_rvc_subfolder not in sys.path:
     sys.path.insert(0, common_rvc_subfolder)
 from rvc_download_helper import download_file_with_resume
@@ -37,7 +37,14 @@ def download_release(release_scans, out_dir, file_types):
 
 
 def download_file(url, out_file):
-    download_file_with_resume(url, out_file, try_resume_bytes=-1, total_sz = None, params={})
+    conn_reset_retry = 3 #needed for some http connection resets; typically at ~828MB
+    for _ in range(conn_reset_retry):
+        try:
+            download_file_with_resume(url, out_file, try_resume_bytes=0, total_sz = None, params={})
+        except:
+            time.sleep(1.2) #prevent connection overload
+            continue
+        break
 
 def download_scan(scan_id, out_dir, file_types):
     print('Downloading ScanNet scan ' + scan_id + ' ...')

@@ -1,6 +1,7 @@
-import requests, os, sys, argparse, re, tqdm
+import requests, os, sys, argparse, re, time, tqdm
 
-CHUNK_SIZE = 512 * 1024
+CHUNK_SIZE = 32 * 1024
+RESUME_SIZE_MAX =  CHUNK_SIZE * 16352 # little less than 0.5GB
 
 def quick_url_encode(url):
     return url.split('/')[-1].replace('?','%3F').replace('&','%26')
@@ -18,63 +19,86 @@ def download_file_from_google_drive(id, destination, try_resume_bytes=-1, total_
 # try_resume_bytes <0: fails if target file exists of wrong size
 
 def download_file_with_resume(url, destination, try_resume_bytes=-1, total_sz = None, params={}):
-    session = requests.Session()
-    resume_headers = {}
-    if try_resume_bytes > 0:
-        resume_headers =  {'Range': 'bytes=%d-' % try_resume_bytes}
-    response = session.get(url, params = params, headers=resume_headers, stream = True)
-    if "docs.google.com" in url:
-        token = get_confirm_token(response)
-        if token:
-            params_with_token = {'confirm' : token }
-            params_with_token.update(params)
-            response = session.get(url, params = params_with_token, headers=resume_headers, stream = True)
-    if not response.encoding is None and '01 Jan 1990' in response.headers.get('Expires',''):
-        print("Download limit reached for file "+params.get('id',url)+ ", skipping. Please retry in 24h.")
-        session.close()
-        return
-    dest_dir = os.path.dirname(os.path.realpath(destination))
-    if not os.path.exists(dest_dir):
-        os.makedirs(dest_dir)
-    if os.path.isdir(destination):
-        # based on https://github.com/wkentaro/gdown/blob/master/gdown/download.py
-        fname = re.search('filename="(.*)"', response.headers.get("Content-Disposition",""))
-        if not fname is None:
-            fname = fname.groups()[0]
-        if not fname is None and len(fname) > 0:
-            destination = os.path.join(destination, fname)
-        else:
-            filename_part = params['id']+'.bin' if 'id' in params else quick_url_encode(url)
-            destination = os.path.join(destination, filename_part)
+    while True: # iterate sessions until file downloaded or failure:
+        with requests.Session() as session:
+            resume_headers = {}
+            try_resume_bytes_next = 0
+            if try_resume_bytes > 0:
+                if total_sz is None:
+                    resume_headers =  {'Range': 'bytes=%d-' % try_resume_bytes}
+                else:
+                    open_sz = (total_sz - try_resume_bytes)
+                    if open_sz > RESUME_SIZE_MAX:
+                        open_sz = RESUME_SIZE_MAX
+                        try_resume_bytes_next = try_resume_bytes + open_sz
+                    resume_headers =  {'Range': 'bytes=%d-%d' % (try_resume_bytes, try_resume_bytes+open_sz)}
+        
+            response = session.get(url, params = params, headers=resume_headers, stream = True)
+            if "docs.google.com" in url:
+                token = get_confirm_token(response)
+                if token:
+                    params_with_token = {'confirm' : token }
+                    params_with_token.update(params)
+                    response = session.get(url, params = params_with_token, headers=resume_headers, stream = True)
+            if not response.encoding is None and '01 Jan 1990' in response.headers.get('Expires',''):
+                print("Download limit reached for file "+params.get('id',url)+ ", skipping. Please retry in 24h.")
+                session.close()
+                return
+            dest_dir = os.path.dirname(os.path.realpath(destination))
+            if not os.path.exists(dest_dir):
+                os.makedirs(dest_dir)
+            if os.path.isdir(destination):
+                # based on https://github.com/wkentaro/gdown/blob/master/gdown/download.py
+                fname = re.search('filename="(.*)"', response.headers.get("Content-Disposition",""))
+                if not fname is None:
+                    fname = fname.groups()[0]
+                if not fname is None and len(fname) > 0:
+                    destination = os.path.join(destination, fname)
+                else:
+                    filename_part = params['id']+'.bin' if 'id' in params else quick_url_encode(url)
+                    destination = os.path.join(destination, filename_part)
+    
+            if total_sz is None:
+                try:
+                    total_sz = response.headers.get("Content-Length")
+                    if total_sz is not None:
+                        total_sz = int(total_sz)
+                except:
+                    total_sz = None
+                    
+            if try_resume_bytes <= 0 and os.path.exists(destination):
+                loc_sz = os.stat(destination).st_size
+                if loc_sz > 0 and loc_sz == total_sz:  # file already downloaded
+                    print("Info: target file " + destination + " already exists and is of correct size. Skipping")
+                    session.close()
+                    return
+                if try_resume_bytes < 0:
+                    print("Error: Target file "+destination+" already exists. ")
+                    session.close()
+                    return
+                else:
+                    resume_start = max(0,(loc_sz//CHUNK_SIZE)-2) * CHUNK_SIZE #make sure we redownload the last two chunks completely (these could have been corruptes)
+                    if resume_start == 0:
+                        os.remove(destination) #do a regular download
+                    else:
+                        session.close() # we need a new session that has seeked to the resume-byte position
+                        time.sleep(0.5)#prevent connection spamming
+                        try_resume_bytes=resume_start
+                        continue # retry with new resume download connection 
+            try:
+                save_response_content(response, destination, resume_bytes = try_resume_bytes, total_sz = total_sz)
+            except Exception as rethrow_execption:
+                raise rethrow_execption
+            finally:
+                session.close()
+            if try_resume_bytes_next <= 0 or try_resume_bytes_next < try_resume_bytes:
+                break # finished download
+            
+            #still more chunks need to be downloaded
+            time.sleep(0.5)#prevent connection spamming 
+            try_resume_bytes=try_resume_bytes_next # retry with new resume download connection
+            
 
-    if total_sz is None:
-        try:
-            total_sz = response.headers.get("Content-Length")
-            if total_sz is not None:
-                total_sz = int(total_sz)
-        except:
-            total_sz = None
-
-    if try_resume_bytes <= 0 and os.path.exists(destination):
-        loc_sz = os.stat(destination).st_size
-        if loc_sz > 0 and loc_sz == total_sz:  # file already downloaded
-            print("Info: target file " + destination + " already exists and is of correct size. Skipping")
-            session.close()
-            return
-        if try_resume_bytes < 0:
-            print("Error: Target file "+destination+" already exists. ")
-            session.close()
-            return
-        else:
-            resume_start = max(0,(loc_sz//CHUNK_SIZE)-2) * CHUNK_SIZE #make sure we redownload the last two chunks completely (these could have been corruptes)
-            if resume_start == 0:
-                os.remove(destination) #do a regular download
-            else:
-                session.close() # we need a new session that has seeked to the resume-byte position
-                return download_file_with_resume(url, destination, try_resume_bytes=resume_start, total_sz = total_sz, params=params)
-
-    save_response_content(response, destination, resume_bytes = try_resume_bytes, total_sz = total_sz)
-    session.close()
 
 def get_confirm_token(response):
     for key, value in response.cookies.items():
