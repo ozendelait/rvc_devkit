@@ -19,7 +19,7 @@ else
 fi
 
 #check if oid has already been converted 
-if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_train_bbox.json" ]; then
+if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_train_panoptic.json" ]; then
   echo "Converting OID to COCO format..."
   if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
   # getting defined version of openimages2coco repo
