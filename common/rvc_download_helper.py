@@ -95,7 +95,7 @@ def download_file_with_resume(url, destination, try_resume_bytes=-1, total_sz = 
                 break # finished download
             
             #still more chunks need to be downloaded
-            time.sleep(0.5)#prevent connection spamming 
+            time.sleep(0.3)#prevent connection spamming 
             try_resume_bytes=try_resume_bytes_next # retry with new resume download connection
             
 
@@ -108,7 +108,7 @@ def get_confirm_token(response):
 
 def save_response_content(response, destination, resume_bytes = 0, total_sz = None):
     file_mode = "wb" if resume_bytes <= 0 else "r+b"
-    pbar = tqdm.tqdm(total=total_sz, initial=max(0,resume_bytes), unit="B", unit_scale=True)
+    pbar = tqdm.tqdm(total=total_sz, initial=max(0,resume_bytes), unit="B", unit_scale=True, mininterval=0.7)
     with open(destination, file_mode) as f:
         if resume_bytes > 0:
             f.seek(resume_bytes)
