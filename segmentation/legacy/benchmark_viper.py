@@ -21,27 +21,24 @@ class VIPER(Benchmark):
     def __init__(self):
         self.archives_imgjpg_train = {
         '00-77_0':'1-O7vWiMa3mDNFXUoYxE3vkKZQpiDXUCf',
-        '00-77_1':'1alD_fZja9qD7PUnk4AkD6l-jBhlCnzKr',
         }
         self.archives_inst_train = {
         '00-77_0':'1HOG-vQTgeLYzDILAlvekeMbUoB-EtcRM',
-        '00-77_1':'1fsCADztE5jkjJVNHzHPmug_mwIpcHQoG'
         }
         self.archives_cls_train = {
         '00-77_0':'1lAbmIVuQTLZu4-hNKD20wmGn1SThvFtv',
-        '00-77_1':'1KEDYhQeGQ5qOPY2RoTP1btkWmupdR2Sr'
         }
         self.archives_imgjpg_val = {
         '00-47_0':'1951O6Eu-VuMHaL1vJ9V35njcj30GjPiN',
-        '00-47_1':'1OqEjlrx97ThCMlQePEZPSBjqhRqPwOEd',
         }
         self.archives_inst_val = {
+        '00-47_0':'1ow37dljI0KfEQ9kbOvb-qQsjSpGTOnz2',
         }
         self.archives_cls_val = {
+        '00-47_0':'1QN2OSXTDsXPXntNrY-ojDpj-vFWjBZlK',
         }
         self.archives_imgjpg_test = {
         '00-60_0':'1KYSsgv-hp5BGU0EOfvX3gajr00wwSmFc', 
-        '00_60_1':'1D-WbX5TOTuzwaqnJmPoCVc0Owa0y-Buk', 
         }
 
     def Name(self):
@@ -77,7 +74,7 @@ class VIPER(Benchmark):
     
     
     def DownloadAndUnpack(self, archive_dir_path, unpack_dir_path, metadata_dict):
-        archives_to_download = ['archives_imgjpg_train', 'archives_inst_train', 'archives_cls_train', 'archives_imgjpg_test']
+        archives_to_download = ['archives_imgjpg_train', 'archives_inst_train', 'archives_cls_train', 'archives_imgjpg_val', 'archives_inst_val', 'archives_cls_val', 'archives_imgjpg_test']
         
         for archive in archives_to_download:
             archive_dict = getattr(self, archive)
