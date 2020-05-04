@@ -14,7 +14,7 @@ else
 fi
 
 echo "Downloading Open Images Train And Validation to ${RVC_OID_TRG_DIR}"
-echo "WARNING: the size of the full dataset is around 500GB, make sure you have enough space on the harddrive"
+echo "WARNING: the size of the full dataset is around 550GB, make sure you have enough space on the harddrive"
 
 mkdir -p ${RVC_OID_TRG_DIR}
 cd ${RVC_OID_TRG_DIR}
@@ -27,12 +27,14 @@ for (( i=0; i<${#rvc_hexendings}; i++ )); do
   rvc_target_zip_dir=${RVC_OID_TRG_DIR}/challenge_2019_train_masks/train_${rvc_hexendings:$i:1}
   rvc_target_zip_file=${rvc_target_zip_dir}/challenge-2019-train-masks-${rvc_hexendings:$i:1}.zip
   wget -N --no-check-certificate  https://storage.googleapis.com/openimages/challenge_2019/train-masks/challenge-2019-train-masks-${rvc_hexendings:$i:1}.zip -P ${rvc_target_zip_dir}
+  echo "Extracting ${rvc_target_zip_file}, this may take a while..."
   unzip -q ${rvc_target_zip_file} -d ${rvc_target_zip_dir}
   rm ${rvc_target_zip_file}
   #get validation instance masks (downloads, extracts & removes old archive)
   rvc_target_zip_dir=${RVC_OID_TRG_DIR}/challenge_2019_validation_masks/
   rvc_target_zip_file=${rvc_target_zip_dir}/challenge-2019-validation-masks-${rvc_hexendings:$i:1}.zip
   wget -N --no-check-certificate  https://storage.googleapis.com/openimages/challenge_2019/validation-masks/challenge-2019-validation-masks-${rvc_hexendings:$i:1}.zip -P ${rvc_target_zip_dir}
+  echo "Extracting ${rvc_target_zip_file}, this may take a while..."
   unzip -q ${rvc_target_zip_file} -d ${rvc_target_zip_dir}
   rm ${rvc_target_zip_file}
 done
@@ -52,5 +54,4 @@ wget -N --no-check-certificate https://storage.googleapis.com/openimages/challen
 RVC_OID_TRG_DIR=
 RVC_OID_SCRIPT_DIR=
 
-echo "Finished donwloading oid."
-
+echo "Finished downloading oid."
