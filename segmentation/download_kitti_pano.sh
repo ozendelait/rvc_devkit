@@ -10,7 +10,7 @@
 RVC_KITTI_SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 # All data is downloaded to subfolders of RVC_DATA_DIR; if this is not defined: use this script's dir
 if [ -z "${RVC_DATA_DIR}" ]; then
-  RVC_KITTI_TRG_DIR=${RVC_OBJ365_SCRIPT_DIR}/../datasets/kitti
+  RVC_KITTI_TRG_DIR=${RVC_KITTI_SCRIPT_DIR}/../datasets/kitti
 else
   RVC_KITTI_TRG_DIR=${RVC_DATA_DIR}/kitti
 fi
