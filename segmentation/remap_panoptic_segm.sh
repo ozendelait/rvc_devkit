@@ -19,7 +19,6 @@ else
 fi
 
 
-#TODO: KITTI
 #TODO: VIPER
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/panoptic_val2017.json \
@@ -53,6 +52,14 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/training/panoptic \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/mvs_pano.rvc_train.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/kitti/data_panoptic/training.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
+                        --mapping_row kitti_pano_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/kitti/training/image_2 \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/kitti/data_panoptic/training/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/kitti_pano.rvc_train.json
 
 #Creates random split for train/val (currently no specific split supplied)
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/rvc_split_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json --split "80;20"
@@ -93,7 +100,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
 pushd $RVC_DATA_TRG_DIR
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_val.json;wd2_pano.rvc_val.json;cs_pano.rvc_val.json;mvs_pano.rvc_val.json" \
        --output joined_val_pano.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_train.json;wd2_pano.rvc_train.json;cs_pano.rvc_train.json;mvs_pano.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_train.json;wd2_pano.rvc_train.json;cs_pano.rvc_train.json;kitti_pano.rvc_train.json;mvs_pano.rvc_train.json" \
        --output joined_train_pano.json
 popd
 
