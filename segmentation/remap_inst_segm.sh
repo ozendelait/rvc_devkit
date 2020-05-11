@@ -42,21 +42,21 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/coco_inst.rvc_train.json
 
-#python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_val_bbox.json #\
-#                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
-#                        --mapping_row oid_boxable_leaf \
-#                        --image_root_rel $RVC_DATA_SRC_DIR/oid/val/ \
-#                        --void_id 0 \
-#                        --reduce_boxable \
-#                        --output $RVC_DATA_TRG_DIR/oid_inst.rvc_val.json
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_val_panoptic.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row oid_inst_leaf \
+                        --image_root_rel $RVC_DATA_SRC_DIR/oid/val/ \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/coco/annotations/panoptic_val_challenge_2019/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/oid_inst.rvc_val.json
 
-#python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input #$RVC_DATA_SRC_DIR/oid/annotations/openimages_v6_train_bbox.json \
-#                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
-#                        --mapping_row oid_boxable_leaf \
-#                        --image_root_rel "$RVC_DATA_SRC_DIR/oid/train_{file_name[0]}/" \
-#                        --void_id 0 \
-#                        --reduce_boxable \
-#                        --output $RVC_DATA_TRG_DIR/oid_inst.rvc_train.json
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_train_panoptic.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row oid_inst_leaf \
+                        --image_root_rel "$RVC_DATA_SRC_DIR/oid/train_{file_name[0]}/" \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/coco/annotations/panoptic_train_challenge_2019/train_{file_name[0]}/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/oid_inst.rvc_train.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/validation/panoptic/panoptic_2018.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
@@ -110,9 +110,9 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --output $RVC_DATA_TRG_DIR/cs_inst.rvc_val.json
                         
 pushd $RVC_DATA_TRG_DIR
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;wd2_inst.rvc_val.json;cs_inst.rvc_train.json;mvs_inst.rvc_val.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;wd2_inst.rvc_val.json;cs_inst.rvc_train.json;mvs_inst.rvc_val.json;oid_inst.rvc_val.json" \
        --output joined_val_inst.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;cs_inst.rvc_val.json;mvs_inst.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;cs_inst.rvc_val.json;mvs_inst.rvc_train.json;oid_inst.rvc_train.json" \
        --output joined_train_inst.json
 popd
 
