@@ -50,7 +50,10 @@ done
 popd
 
 mseg_extract_cityscapes.sh ${RVC_EXTR_ROOT_DIR}/cityscapes
-#kitti is extracted by mseg_download_kitti.sh
+unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
+rm ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip
+unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
+rm ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip
 
 unzip ${RVC_EXTR_ROOT_DIR}/mvs/mapillary-vistas-dataset_public_v1.1.zip -d ${RVC_EXTR_ROOT_DIR}/mvs/
 rm ${RVC_EXTR_ROOT_DIR}/mvs/mapillary-vistas-dataset_public_v1.1.zip

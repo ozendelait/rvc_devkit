@@ -19,7 +19,6 @@ else
 fi
 
 
-#TODO: KITTI
 #TODO: VIPER
 #TODO: Scannet
 
@@ -41,7 +40,15 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --annotation_root_rel $RVC_DATA_SRC_DIR/coco/annotations/panoptic_train2017/ \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/coco_inst.rvc_train.json
-
+                        
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/kitti/data_panoptic/training.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row kitti_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/kitti/training/image_2 \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/kitti/data_panoptic/training/ \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/kitti_inst.rvc_train.json
+                        
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_val_panoptic.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
                         --mapping_row oid_inst_leaf \
@@ -112,7 +119,7 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
 pushd $RVC_DATA_TRG_DIR
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;wd2_inst.rvc_val.json;cs_inst.rvc_train.json;mvs_inst.rvc_val.json;oid_inst.rvc_val.json" \
        --output joined_val_inst.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;cs_inst.rvc_val.json;mvs_inst.rvc_train.json;oid_inst.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;kitti_inst.rvc_train.json;cs_inst.rvc_val.json;mvs_inst.rvc_train.json;oid_inst.rvc_train.json" \
        --output joined_train_inst.json
 popd
 
