@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Downloads the COCO dataset with boxable GT. (7GB of input images and 0.24GB of annotations)
-# Based on https://github.com/mseg-dataset/mseg-api-staging/blob/master/download_scripts/mseg_download_cocopanoptic.sh
+# Downloads the KITTI dataset with panoptic GT. (~0.5GB of input images and annotations)
+# Based on https://github.com/mseg-dataset/mseg-api/blob/master/download_scripts/mseg_download_cocopanoptic.sh
 
 # By using this script, you agree to all terms
 # and conditions set forth by the creators of the

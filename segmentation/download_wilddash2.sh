@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Based on https://github.com/mseg-dataset/mseg-api-staging/blob/master/download_scripts/mseg_download_wilddash.sh
+# Based on https://github.com/mseg-dataset/mseg-api/blob/master/download_scripts/mseg_download_wilddash.sh
 # Downloads the Wilddash dataset.
 
 # By using this script, you agree to the
