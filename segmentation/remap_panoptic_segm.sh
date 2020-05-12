@@ -19,8 +19,6 @@ else
 fi
 
 
-#TODO: VIPER
-
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/panoptic_val2017.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
                         --mapping_row coco_pano_name \
@@ -52,6 +50,22 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/training/panoptic \
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/mvs_pano.rvc_train.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/viper/train/pano.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
+                        --mapping_row viper_pano_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/viper/train/img/{file_name[0]}{file_name[1]}{file_name[2]} \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/viper/train/pano/{file_name[0]}{file_name[1]}{file_name[2]} \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/viper_pano.rvc_train.json
+                        
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/viper/val/pano.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
+                        --mapping_row viper_pano_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/viper/val/img/{file_name[0]}{file_name[1]}{file_name[2]} \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/viper/val/pano/{file_name[0]}{file_name[1]}{file_name[2]} \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/viper_pano.rvc_val.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/kitti/data_panoptic/training.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
@@ -98,9 +112,9 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
 
                         
 pushd $RVC_DATA_TRG_DIR
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_val.json;wd2_pano.rvc_val.json;cs_pano.rvc_val.json;mvs_pano.rvc_val.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_val.json;wd2_pano.rvc_val.json;viper_pano.rvc_val.json;cs_pano.rvc_val.json;mvs_pano.rvc_val.json" \
        --output joined_val_pano.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_train.json;wd2_pano.rvc_train.json;cs_pano.rvc_train.json;kitti_pano.rvc_train.json;mvs_pano.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_pano.rvc_train.json;wd2_pano.rvc_train.json;viper_pano.rvc_train.json;cs_pano.rvc_train.json;kitti_pano.rvc_train.json;mvs_pano.rvc_train.json" \
        --output joined_train_pano.json
 popd
 

@@ -102,7 +102,8 @@ if __name__ == '__main__':
 		images.append({'id': id, 'file_name':imageid_paths[id], 'width': 1920, 'height': 1080})
 	d = {'annotations': annotations, 'categories': categories, 'images': images}
 
-	with open(pano_path /  '/../pano.json', 'w') as f:
+	pano_json_dir = pathlib.Path(args.dataset_dir) / args.subset
+	with open(pano_json_dir /  'pano.json', 'w') as f:
 		json.dump(d, f, ensure_ascii=False)
 		pass
 	pass
