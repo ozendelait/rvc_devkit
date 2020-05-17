@@ -88,7 +88,7 @@ fence,33,185,13,13,3,,13,13
 fire_hydrant,,11,,,38,,,
 fireplace,50,,,,,,,
 flag,150,,,,,,,
-flat_vegetation_soil,,,22,22,29,,22,22
+flat_vegetation_soil,10,193,22,22,29,,22,22
 floor,4,190,,,,35,,
 flower,67,119,,,,,,
 flowerpot,126,,,,,,,
@@ -100,7 +100,6 @@ fruit,,122,,,,,,
 furniture,,,,,,72,,
 giraffe,,25,,,,,,
 grandstand,52,,,,,,,
-grass,10,193,,,,,,
 gravel,,125,,,,,,
 ground,14;30,,,,,,,6
 guard_rail,39,,,,4,,,
