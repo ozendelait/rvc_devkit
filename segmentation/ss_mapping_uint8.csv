@@ -22,7 +22,7 @@ bicycle,128,2,33,33,52,,33,33
 bicyclist,,,,,20,,,
 bike_lane,,,,,7,,,
 bike_rack,,,,,34,,,
-billboard,124,,,,35,,,36
+billboard,124,,,,35,,12,36
 billiard_table,57,,,,,,,
 bird,,16,,,0,,,
 blanket,132,93,,,,,,
@@ -166,7 +166,7 @@ radiator,147,,,,,,,
 rail_track,,147,,,12,,,
 refrigerator,51,82,,,,57,,
 remote,,75,,,,,,
-rider,,,25,25,22,,25,25
+rider,,,25,25,22,,,25
 river,61,148,,,,,,
 road,7,149,7,7,13,,7,7
 road_shoulder,,,,,14,,,
@@ -236,12 +236,12 @@ tree,5,184,,,,,,
 truck,84,8,27,27,61,,27,27
 tunnel,,,,,18,,,16
 umbrella,,28,,,,,,
-van,103,,,,,,,35
+van,103,,,,,,25,35
 vase,136,86,,,,,,
 vegetation,,,21,21,30,,21,21
 video_display,142,,,,,,,
 vitrine,56,,,,,,,
-wall,1,199,12,12,6,34,12,12
+wall,1,199,12,12,6,34,,12
 wall_bracket,135,,,,,,,
 wardrobe,36,,,,,,,
 washing_machine,108,,,,,,,
