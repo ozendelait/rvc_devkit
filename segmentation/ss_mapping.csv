@@ -1,4 +1,5 @@
 key,ade20k_id,coco_pano_id,cityscapes_pano_id,kitti_pano_id,mvs_pano_id,scannet_pano_id,viper_pano_id,wilddash_pano_id
+unlabeled,,,,,,,,
 airplane,91,5,,,,,30,
 animal,127,,,,,,21,
 apple,,53,,,,,,
