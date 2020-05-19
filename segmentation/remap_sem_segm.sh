@@ -24,6 +24,7 @@ if [ ! -d $RVC_SEM_SEG_SCRIPT_DIR/mseg_api ]; then
   git -C $RVC_SEM_SEG_SCRIPT_DIR clone https://github.com/mseg-dataset/mseg-api.git $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
   git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api checkout 29f40956abd227aa7d454f05cd8f007de0d12a09
   git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api apply $RVC_SEM_SEG_SCRIPT_DIR/mseg_api.patch
+  pip install -e $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
 fi
 
 pushd $RVC_SEM_SEG_SCRIPT_DIR/
@@ -32,7 +33,7 @@ pushd $RVC_SEM_SEG_SCRIPT_DIR/
     cp ./rvc_uint8_names.txt $RVC_SEM_SEG_SCRIPT_DIR/mseg_api/mseg/dataset_lists/rvc_uint8
   fi
 
-  python ./mseg-api/mseg/label_preparation/remap_dataset.py --orig_dname ade20k-151 --remapped_dname rvc_uint8 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv
+  python ./mseg-api/mseg/label_preparation/remap_dataset.py --orig_dname ade20k-151 --remapped_dname rvc_uint8 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv
 popd
 
 RVC_DATA_TRG_DIR=

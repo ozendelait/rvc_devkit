@@ -61,7 +61,7 @@ computer_keyboard	unlabeled	keyboard	unlabeled	unlabeled	unlabeled	unlabeled	unl
 computer_monitor	monitor	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 conveyer_belt	conveyer belt	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 couch	sofa	couch	unlabeled	unlabeled	unlabeled	sofa	unlabeled	unlabeled
-counter	buffet	counter	unlabeled	unlabeled	unlabeled	counter	unlabeled	unlabeled
+counter	{buffet, bar}	counter	unlabeled	unlabeled	unlabeled	counter	unlabeled	unlabeled
 counter_table	counter	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 countertop	countertop	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 cow	unlabeled	cow	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled

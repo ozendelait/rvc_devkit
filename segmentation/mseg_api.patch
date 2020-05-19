@@ -1,8 +1,50 @@
 diff --git a/mseg/label_preparation/remap_dataset.py b/mseg/label_preparation/remap_dataset.py
-index 27b16a0..2a039de 100755
+index 27b16a0..b46d63c 100755
 --- a/mseg/label_preparation/remap_dataset.py
 +++ b/mseg/label_preparation/remap_dataset.py
-@@ -186,16 +186,21 @@ if __name__ == '__main__':
+@@ -1,6 +1,6 @@
+ #!/usr/bin/python3
+ 
+-import argparse
++import argparse, os
+ import imageio
+ import numpy as np
+ from pathlib import Path
+@@ -75,9 +75,13 @@ def remap_dataset(
+ 	class_idx_remapping_dict = convert_dictionaries(oldid_to_oldname, old_name_to_newid)
+ 	label_mapping_arr = form_label_mapping_array(class_idx_remapping_dict)
+ 
+-	for split in ['train', 'val']: #'trainval']:# 'val']: # 
++	for split in ['train', 'val']: #'trainval']:# 'val']: #
++		basedirs = ['images/' + split + '/'+dname,'annotations/' + split + '/'+dname]
+ 		orig_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(dname, split)
+-		remapped_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(remapped_dname, split)
++		if remapped_dname[0:3] == "rvc":
++			remapped_relative_img_label_pairs = [(basedirs[0] + os.path.basename(p[0]), basedirs[1] + os.path.basename(p[1])) for p in orig_relative_img_label_pairs]
++		else:
++			remapped_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(remapped_dname, split)
+ 
+ 		send_list_to_workers(
+ 			num_processes=num_processes, 
+@@ -153,8 +157,15 @@ def relabel_pair(
+ 		Returns:
+ 		-	None
+ 	"""
+-	_, orig_rel_label_fpath = orig_pair
+-	_, remapped_rel_label_fpath = remapped_pair
++	orig_rel_rgb, orig_rel_label_fpath = orig_pair
++	remapped_rel_rgb, remapped_rel_label_fpath = remapped_pair
++
++	new_rgb_fpath = f'{new_dataroot}/{remapped_rel_rgb}'
++	if not os.path.exists(new_rgb_fpath):
++		old_rgb_fpath = f'{old_dataroot}/{orig_rel_rgb}'
++		if not os.path.exists(os.path.dirname(new_rgb_fpath)):
++			os.makedirs(os.path.dirname(new_rgb_fpath))
++		copyfile(old_rgb_fpath,new_rgb_fpath)
+ 
+ 	old_label_fpath = f'{old_dataroot}/{orig_rel_label_fpath}'
+ 	
+@@ -186,16 +197,21 @@ if __name__ == '__main__':
  	parser.add_argument("--remapped_dataroot", type=str, required=True, 
  		help="data root where remapped dataset will be saved")
  	parser.add_argument("--include_ignore_idx_cls", action="store_false", 
@@ -26,3 +68,21 @@ index 27b16a0..2a039de 100755
  	
  	print('Remapping Parameters: ', args)
  	remap_dataset(
+diff --git a/mseg/utils/tsv_utils.py b/mseg/utils/tsv_utils.py
+index 8266d81..9f47332 100755
+--- a/mseg/utils/tsv_utils.py
++++ b/mseg/utils/tsv_utils.py
+@@ -60,7 +60,12 @@ def read_label_mapping(filename: str,
+ 		for row in reader:
+ 			source_val = row[label_from]
+ 			sink_val = row[label_to]
+-			mapping[source_val] = sink_val
++			if "{" in source_val:
++				source_vals = [s.strip() for s in source_val.replace('{','').replace('}','').split(',')]
++				for source_val in source_vals:
++					mapping[source_val] = sink_val
++			else:
++				mapping[source_val] = sink_val
+ 	# if ints convert 
+ 	if represents_int(list(mapping.keys())[0]):
+ 		mapping = {int(k):v for k,v in mapping.items()}
