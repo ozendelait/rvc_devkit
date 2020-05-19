@@ -163,7 +163,7 @@ plant,18,,,,,,,
 plate,143,,,,,,,
 platform,102,144,,,,,,
 playing_field,,145,,,,,,
-pole,94,,17,17,45,,,17
+pole,94,,17,17,45,,10,17
 poster,101,,,,,,,
 pothole,,,,,43,,,
 potted_plant,,64,,,,,,
@@ -240,6 +240,7 @@ traffic_sign_frame,,,,,46,,,
 traffic_sign_front,,,20,20,50,,14,20
 trailer,,,,,60,,28,
 train,,7,31,31,58,,29,31
+trash,,,,,,,18,
 tree,5,184,,,,,7,
 truck,84,8,27,27,61,,27,27
 tunnel,,,,,18,,,16
