@@ -58,7 +58,7 @@ def main(argv=sys.argv[1:]):
             all_lines.append([key]+add_line)
 
     with open(args.output, mode='w', newline='\n', encoding='utf-8') as ofile:
-        cvswr = csv.writer(ofile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        cvswr = csv.writer(ofile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, lineterminator='\n',)
         for l in all_lines:
             cvswr.writerow(l)
 
