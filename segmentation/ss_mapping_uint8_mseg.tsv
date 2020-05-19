@@ -1,0 +1,257 @@
+rvc_uint8	ade20k-151	coco-panoptic-201	cityscapes_pano_id	kitti-34	mapillary-public66	scannet-20	viper_pano_id	wilddash_pano_id
+airplane	airplane	airplane	unlabeled	unlabeled	unlabeled	unlabeled	plane	unlabeled
+animal	animal	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	animal	unlabeled
+apple	unlabeled	apple	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+arcade_machine	arcade machine	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+armchair	armchair	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+awning	awning	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+backpack	unlabeled	backpack	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+ball	ball	sports ball	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+banana	unlabeled	banana	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+banner	unlabeled	banner	unlabeled	unlabeled	object--banner	unlabeled	unlabeled	unlabeled
+barrel	barrel	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+barrier	unlabeled	unlabeled	unlabeled	unlabeled	construction--barrier--other-barrier	unlabeled	mobilebarrier	unlabeled
+baseball_bat	unlabeled	baseball bat	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+baseball_glove	unlabeled	baseball glove	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+basket	basket	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bathtub	bathtub	unlabeled	unlabeled	unlabeled	unlabeled	bathtub	unlabeled	unlabeled
+bear	unlabeled	bear	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bed	bed	bed	unlabeled	unlabeled	unlabeled	bed	unlabeled	unlabeled
+bench	bench	bench	unlabeled	unlabeled	object--bench	unlabeled	unlabeled	unlabeled
+bicycle	bicycle	bicycle	bicycle	bicycle	object--vehicle--bicycle	unlabeled	bicycle	bicycle
+bicyclist	unlabeled	unlabeled	unlabeled	unlabeled	human--rider--bicyclist	unlabeled	unlabeled	unlabeled
+bike_lane	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--bike-lane	unlabeled	unlabeled	unlabeled
+bike_rack	unlabeled	unlabeled	unlabeled	unlabeled	object--bike-rack	unlabeled	unlabeled	unlabeled
+billboard	trade name	unlabeled	unlabeled	unlabeled	object--billboard	unlabeled	billboard	billboard
+billiard_table	pool table	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bird	unlabeled	bird	unlabeled	unlabeled	animal--bird	unlabeled	unlabeled	unlabeled
+blanket	blanket	blanket	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+boat	boat	boat	unlabeled	unlabeled	object--vehicle--boat	unlabeled	boat	unlabeled
+book	book	book	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bookcase	bookcase	unlabeled	unlabeled	unlabeled	unlabeled	bookshelf	unlabeled	unlabeled
+booth	booth	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bottle	bottle	bottle	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bowl	unlabeled	bowl	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+box	box	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+brickwall	unlabeled	wall-brick	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bridge	bridge	bridge	unlabeled	unlabeled	construction--structure--bridge	unlabeled	unlabeled	bridge
+broccoli	unlabeled	broccoli	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+building	building	building-other-merged	building	building	construction--structure--building	unlabeled	building	building
+bulletin_board	bulletin board	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+bus	bus	bus	bus	bus	object--vehicle--bus	unlabeled	bus	bus
+cabinetry	cabinet	cabinet-merged	unlabeled	unlabeled	unlabeled	cabinet	unlabeled	unlabeled
+cake	unlabeled	cake	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+canopy	canopy	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+car	car	car	car	car	object--vehicle--car	unlabeled	car	car
+car_mount	unlabeled	unlabeled	unlabeled	unlabeled	void--car-mount	unlabeled	unlabeled	unlabeled
+caravan	unlabeled	unlabeled	unlabeled	unlabeled	object--vehicle--caravan	unlabeled	unlabeled	unlabeled
+cardboard	unlabeled	cardboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+carrot	unlabeled	carrot	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+cat	unlabeled	cat	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+catch_basin	unlabeled	unlabeled	unlabeled	unlabeled	object--catch-basin	unlabeled	unlabeled	unlabeled
+ceiling	ceiling	ceiling-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+chair	chair	chair	unlabeled	unlabeled	unlabeled	chair	chair	unlabeled
+chandelier	chandelier	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+chest_of_drawers	chest of drawers	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+clock	clock	clock	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+clothing	apparel	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+coffee_table	coffee table	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+computer	computer	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+computer_keyboard	unlabeled	keyboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+computer_monitor	monitor	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+conveyer_belt	conveyer belt	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+couch	sofa	couch	unlabeled	unlabeled	unlabeled	sofa	unlabeled	unlabeled
+counter	buffet	counter	unlabeled	unlabeled	unlabeled	counter	unlabeled	unlabeled
+counter_table	counter	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+countertop	countertop	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+cow	unlabeled	cow	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+cup	unlabeled	cup	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+curb	unlabeled	unlabeled	unlabeled	unlabeled	construction--barrier--curb	unlabeled	unlabeled	unlabeled
+curb_cut	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--curb-cut	unlabeled	unlabeled	unlabeled
+curtain	curtain	curtain	unlabeled	unlabeled	unlabeled	curtain	unlabeled	unlabeled
+cushion	cushion	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+desk	desk	unlabeled	unlabeled	unlabeled	unlabeled	desk	unlabeled	unlabeled
+dirt	dirt track	dirt-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+dishwasher	dishwasher	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+dog	unlabeled	dog	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+donut	unlabeled	donut	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+door	unlabeled	door-stuff	unlabeled	unlabeled	unlabeled	door	unlabeled	unlabeled
+double_door	door	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+drinking_glass	glass	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+dynamic	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	ambiguous	dynamic
+ego	unlabeled	unlabeled	unlabeled	unlabeled	void--ego-vehicle	unlabeled	unlabeled	ego vehicle
+electric_fan	fan	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+elephant	unlabeled	elephant	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+escalator	escalator	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+exhaust_hood	hood	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+fence	fence	fence-merged	fence	fence	construction--barrier--fence	unlabeled	fence	fence
+fire_hydrant	unlabeled	fire hydrant	unlabeled	unlabeled	object--fire-hydrant	unlabeled	firehydrant	unlabeled
+fireplace	fireplace	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+flag	flag	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+flat_vegetation_soil	grass	grass-merged	terrain	terrain	nature--terrain	unlabeled	terrain	terrain
+floor	floor	floor-other-merged	unlabeled	unlabeled	unlabeled	floor	unlabeled	unlabeled
+flower	flower	flower	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+flowerpot	pot	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+food	food	food-other-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+fork	unlabeled	fork	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+fountain	fountain	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+frisbee	unlabeled	frisbee	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+fruit	unlabeled	fruit	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+furniture	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	otherfurniture	unlabeled	unlabeled
+giraffe	unlabeled	giraffe	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+grandstand	grandstand	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+gravel	unlabeled	gravel	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+ground	{earth, field}	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	ground
+guard_rail	railing	unlabeled	unlabeled	unlabeled	construction--barrier--guard-rail	unlabeled	unlabeled	unlabeled
+hair_dryer	unlabeled	hair drier	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+handbag	unlabeled	handbag	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+handcart	unlabeled	unlabeled	unlabeled	unlabeled	object--vehicle--wheeled-slow	unlabeled	unlabeled	unlabeled
+handrail	bannister	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+hill	hill	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+horse	unlabeled	horse	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+hot_dog	unlabeled	hot dog	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+house	house	house	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+hut	hovel	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+infant_bed	cradle	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+junction_box	unlabeled	unlabeled	unlabeled	unlabeled	object--junction-box	unlabeled	unlabeled	unlabeled
+kitchen_island	kitchen island	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+kite	unlabeled	kite	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+knife	unlabeled	knife	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+lamp	lamp	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+land_vehicle	unlabeled	unlabeled	unlabeled	unlabeled	object--vehicle--other-vehicle	unlabeled	unlabeled	unlabeled
+laptop	unlabeled	laptop	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+light_bulb	unlabeled	light	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+light_source	light	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+luggage_and_bags	bag	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+mailbox	unlabeled	unlabeled	unlabeled	unlabeled	object--mailbox	unlabeled	unlabeled	unlabeled
+manhole	unlabeled	unlabeled	unlabeled	unlabeled	object--manhole	unlabeled	unlabeled	unlabeled
+microwave	microwave	microwave	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+minibike	minibike	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+mirror	mirror	mirror-stuff	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+mobile_phone	unlabeled	cell phone	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+motorcycle	unlabeled	motorcycle	motorcycle	motorcycle	object--vehicle--motorcycle	unlabeled	motorcycle	motorcycle
+motorcyclist	unlabeled	unlabeled	unlabeled	unlabeled	human--rider--motorcyclist	unlabeled	unlabeled	unlabeled
+mountain	mountain	mountain-merged	unlabeled	unlabeled	nature--mountain	unlabeled	unlabeled	unlabeled
+mouse	unlabeled	mouse	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+net	unlabeled	net	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+orange	unlabeled	orange	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+ottoman	ottoman	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+oven	oven	oven	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+palm_tree	palm	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+paper	unlabeled	paper-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+parking_meter	unlabeled	parking meter	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+parking_space	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--parking	unlabeled	unlabeled	unlabeled
+pathway	path	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pedestal	base	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pedestrian_area	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--pedestrian-area	unlabeled	unlabeled	unlabeled
+person	person	person	person	person	human--person	unlabeled	person	person
+phone_booth	unlabeled	unlabeled	unlabeled	unlabeled	object--phone-booth	unlabeled	unlabeled	unlabeled
+pickup_truck	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	pickup
+picture_frame	painting	unlabeled	unlabeled	unlabeled	unlabeled	picture	unlabeled	unlabeled
+pier	pier	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pillar	column	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pillow	pillow	pillow	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pizza	unlabeled	pizza	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+plain_crosswalk	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--crosswalk-plain	unlabeled	unlabeled	unlabeled
+plant	plant	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+plate	plate	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+platform	stage	platform	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+playing_field	unlabeled	playingfield	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pole	pole	unlabeled	pole	pole	{object--support--pole, object--support--utility-pole}	unlabeled	infrastructure	pole
+poster	poster	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pothole	unlabeled	unlabeled	unlabeled	unlabeled	object--pothole	unlabeled	unlabeled	unlabeled
+potted_plant	unlabeled	potted plant	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+projection_screen	screen	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+radiator	radiator	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+rail_track	unlabeled	railroad	unlabeled	unlabeled	construction--flat--rail-track	unlabeled	railtrack	unlabeled
+refrigerator	refrigerator	refrigerator	unlabeled	unlabeled	unlabeled	refridgerator	unlabeled	unlabeled
+remote	unlabeled	remote	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+rider	unlabeled	unlabeled	rider	rider	human--rider--other-rider	unlabeled	unlabeled	rider
+river	river	river	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+road	road	road	road	road	construction--flat--road	unlabeled	road	road
+road_shoulder	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--service-lane	unlabeled	unlabeled	unlabeled
+road_surface_marking	unlabeled	unlabeled	unlabeled	unlabeled	marking--general	unlabeled	unlabeled	road-marking
+rock	rock	rock-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+roof	unlabeled	roof	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+rug	rug	rug-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+runway	runway	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+sand	sand	sand	unlabeled	unlabeled	nature--sand	unlabeled	unlabeled	unlabeled
+sandwich	unlabeled	sandwich	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+scissors	unlabeled	scissors	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+screen_door	screen door	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+sculpture	sculpture	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+sea	sea	sea	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+seating	seat	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+serving_tray	tray	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+sheep	unlabeled	sheep	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+shelf	shelf	shelf	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+ship	ship	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+shower_curtain	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	shower curtain	unlabeled	unlabeled
+showerhead	shower	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+sidewalk	sidewalk	pavement-merged	sidewalk	sidewalk	construction--flat--sidewalk	unlabeled	sidewalk	sidewalk
+signboard	signboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+sink	sink	sink	unlabeled	unlabeled	unlabeled	sink	unlabeled	unlabeled
+skateboard	unlabeled	skateboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+ski	unlabeled	skis	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+sky	sky	sky-other-merged	sky	sky	nature--sky	unlabeled	sky	sky
+skyscraper	skyscraper	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+snow	unlabeled	snow	unlabeled	unlabeled	nature--snow	unlabeled	unlabeled	unlabeled
+snowboard	unlabeled	snowboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+soil	land	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+spoon	unlabeled	spoon	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+stairs	{stairs, stairway, step}	stairs	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+static	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	static
+stone_wall	unlabeled	wall-stone	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+stool	stool	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+stop_sign	unlabeled	stop sign	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+stove	stove	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+streetlight	streetlight	unlabeled	unlabeled	unlabeled	object--street-light	unlabeled	unlabeled	streetlight
+striped_crosswalk	unlabeled	unlabeled	unlabeled	unlabeled	marking--crosswalk-zebra	unlabeled	unlabeled	unlabeled
+suitcase	unlabeled	suitcase	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+surfboard	unlabeled	surfboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+surveillance_camera	unlabeled	unlabeled	unlabeled	unlabeled	object--cctv-camera	unlabeled	unlabeled	unlabeled
+swimming_pool	swimming pool	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+swivel_chair	swivel chair	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+table	table	{table-merged, dining table}	unlabeled	unlabeled	unlabeled	table	unlabeled	unlabeled
+tank	tank	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+teddy_bear	unlabeled	teddy bear	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+television_set	television receiver	tv	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+tennis_racket	unlabeled	tennis racket	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+tent	tent	tent	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+tie	unlabeled	tie	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+tiles	unlabeled	wall-tile	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+toaster	unlabeled	toaster	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+toilet	toilet	toilet	unlabeled	unlabeled	unlabeled	toilet	unlabeled	unlabeled
+toothbrush	unlabeled	toothbrush	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+towel	towel	towel	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+tower	tower	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+toy	plaything	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+traffic_light	traffic light	traffic light	traffic light	traffic light	object--traffic-light	unlabeled	trafficlight	traffic light
+traffic_sign_backside	unlabeled	unlabeled	unlabeled	unlabeled	object--traffic-sign--back	unlabeled	unlabeled	unlabeled
+traffic_sign_frame	unlabeled	unlabeled	unlabeled	unlabeled	object--support--traffic-sign-frame	unlabeled	unlabeled	unlabeled
+traffic_sign_front	unlabeled	unlabeled	traffic sign	traffic sign	object--traffic-sign--front	unlabeled	trafficsign	traffic sign
+trailer	unlabeled	unlabeled	unlabeled	unlabeled	object--vehicle--trailer	unlabeled	trailer	unlabeled
+train	unlabeled	train	on rails	on rails	object--vehicle--on-rails	unlabeled	train	on rails
+trash	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	trash	unlabeled
+tree	tree	tree-merged	unlabeled	unlabeled	unlabeled	unlabeled	tree	unlabeled
+truck	truck	truck	truck	truck	object--vehicle--truck	unlabeled	truck	truck
+tunnel	unlabeled	unlabeled	unlabeled	unlabeled	construction--structure--tunnel	unlabeled	unlabeled	tunnel
+umbrella	unlabeled	umbrella	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+van	van	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	van	van
+vase	vase	vase	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+vegetation	unlabeled	unlabeled	vegetation	vegetation	nature--vegetation	unlabeled	vegetation	vegetation
+video_display	crt screen	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+vitrine	case	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+wall	wall	wall-other-merged	wall	wall	construction--barrier--wall	wall	unlabeled	wall
+wall_bracket	sconce	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+wardrobe	wardrobe	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+washing_machine	washer	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+waste_container	ashcan	unlabeled	unlabeled	unlabeled	object--trash-can	unlabeled	trashcan	unlabeled
+water	{water, lake}	water-other	unlabeled	unlabeled	nature--water	unlabeled	unlabeled	unlabeled
+waterfall	waterfall	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+window	windowpane	window-other	unlabeled	unlabeled	unlabeled	window	unlabeled	unlabeled
+window_blind	blind	window-blind	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+wooden_floor	unlabeled	floor-wood	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+wooden_wall	unlabeled	wall-wood	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+zebra	unlabeled	zebra	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
