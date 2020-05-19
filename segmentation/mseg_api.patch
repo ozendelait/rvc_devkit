@@ -1,0 +1,28 @@
+diff --git a/mseg/label_preparation/remap_dataset.py b/mseg/label_preparation/remap_dataset.py
+index 27b16a0..2a039de 100755
+--- a/mseg/label_preparation/remap_dataset.py
++++ b/mseg/label_preparation/remap_dataset.py
+@@ -186,16 +186,21 @@ if __name__ == '__main__':
+ 	parser.add_argument("--remapped_dataroot", type=str, required=True, 
+ 		help="data root where remapped dataset will be saved")
+ 	parser.add_argument("--include_ignore_idx_cls", action="store_false", 
+-		help="data root where remapped dataset will be saved")
++		help="include explicit labels for the 'unlabeled' class")
+ 	parser.add_argument("--convert_label_from_rgb", action="store_true", 
+ 		help="If original dataset labels are stored as RGB images.")
+ 	parser.add_argument("--num_processes", type=int, default=4, 
+ 		help="Number of cores available on machine (more->faster remapping)")
++	parser.add_argument("--mapping_tsv", type=str, default=None, 
++		help="data root where remapped dataset will be saved")
+ 
+ 	args = parser.parse_args()
+ 
+ 	# prepare the 'tsv_fpath' according to names.
+-	tsv_fpath = _ROOT / 'class_remapping_files' / f'{args.orig_dname}_to_{args.remapped_dname}.tsv'
++	if args.mapping_tsv is None:
++		tsv_fpath = _ROOT / 'class_remapping_files' / f'{args.orig_dname}_to_{args.remapped_dname}.tsv'
++	else:
++		tsv_fpath = args.mapping_tsv
+ 	
+ 	print('Remapping Parameters: ', args)
+ 	remap_dataset(
