@@ -1,32 +1,88 @@
 diff --git a/mseg/label_preparation/remap_dataset.py b/mseg/label_preparation/remap_dataset.py
-index 27b16a0..b46d63c 100755
+index 27b16a0..f817121 100755
 --- a/mseg/label_preparation/remap_dataset.py
 +++ b/mseg/label_preparation/remap_dataset.py
 @@ -1,6 +1,6 @@
  #!/usr/bin/python3
  
 -import argparse
-+import argparse, os
++import argparse, os, sys, subprocess
  import imageio
  import numpy as np
  from pathlib import Path
-@@ -75,9 +75,13 @@ def remap_dataset(
+@@ -30,6 +30,16 @@ from mseg.utils.dir_utils import create_leading_fpath_dirs
+ 
+ _ROOT = Path(__file__).resolve().parent.parent
+ 
++def unpriv_symb_link(src, dst):
++	if os.path.exists(dst):
++		return
++	parent_dir = os.path.dirname(dst)
++	if not os.path.exists(parent_dir):
++		os.makedirs(parent_dir)
++	if sys.platform.startswith('win'): #symlinks need admin rights, junctions don't
++		subprocess.check_call('mklink /J "%s" "%s"' % (dst, src), shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
++	else:
++		os.symlink(src, dst)
+ 
+ def remap_dataset(
+ 	dname: str, 
+@@ -39,7 +49,8 @@ def remap_dataset(
+ 	remapped_dataroot: str,
+ 	include_ignore_idx_cls: bool = True,
+ 	convert_label_from_rgb: bool = False,
+-	num_processes: int = 4):
++	num_processes: int = 4,
++    create_symlink_cpy = False):
+ 	"""
+ 	Given path to a dataset, given names of _names.txt
+ 	Remap according to the provided tsv.
+@@ -60,24 +71,39 @@ def remap_dataset(
+ 	"""
+ 	# load colors ordered with class indices, if labels encoded as RGB
+ 	dataset_colors = load_dataset_colors_arr(dname) if convert_label_from_rgb else None
+-
++	result_is_mixed = remapped_dname[0:3] == "rvc" #TODO: find better mechanic for mixed result datasets
+ 	# load up the dictionary from the tsv
+ 	classname_remapping_dict = read_label_mapping(
+ 		filename=tsv_fpath, 
+ 		label_from=dname, 
+ 		label_to=remapped_dname,
+-		convert_val_to_int=False
++		convert_val_to_int=False,
++		return_sink_class_names= result_is_mixed
+ 	)
+ 	oldid_to_oldname = get_dataloader_id_to_classname_map(dname)
++	if result_is_mixed:
++		classname_remapping_dict,  new_classnames = classname_remapping_dict
++		newname_tonewid_map = {n:i for i,n in enumerate(new_classnames)}
+ 	newname_tonewid_map = get_classname_to_dataloaderid_map(remapped_dname, include_ignore_idx_cls=include_ignore_idx_cls)
+ 	# form one-way mapping between IDs
+ 	old_name_to_newid = convert_dictionaries(classname_remapping_dict, newname_tonewid_map)
  	class_idx_remapping_dict = convert_dictionaries(oldid_to_oldname, old_name_to_newid)
  	label_mapping_arr = form_label_mapping_array(class_idx_remapping_dict)
- 
+-
 -	for split in ['train', 'val']: #'trainval']:# 'val']: # 
 +	for split in ['train', 'val']: #'trainval']:# 'val']: #
-+		basedirs = ['images/' + split + '/'+dname,'annotations/' + split + '/'+dname]
  		orig_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(dname, split)
 -		remapped_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(remapped_dname, split)
-+		if remapped_dname[0:3] == "rvc":
-+			remapped_relative_img_label_pairs = [(basedirs[0] + os.path.basename(p[0]), basedirs[1] + os.path.basename(p[1])) for p in orig_relative_img_label_pairs]
++		if result_is_mixed:
++			basedir = 'images/' + split + '/' + dname
++			img_subdirs = list(set([os.path.dirname(p[0]) for p in orig_relative_img_label_pairs]))
++			img_dir_remapping = {}
++			for d in img_subdirs:
++				img_dir_remapping[d] = basedir if len(img_subdirs) == 1 else basedir + '/' + d
++				if create_symlink_cpy:
++					unpriv_symb_link(old_dataroot + '/' + d, remapped_dataroot + '/' + img_dir_remapping[d])
++			remapped_relative_img_label_pairs = [
++				(img_dir_remapping[os.path.dirname(p[0])]+'/'+os.path.basename(p[0]), img_dir_remapping[os.path.dirname(p[0])].replace('images','annotations')+'/'+os.path.basename(p[0]).replace('.jpg','.png')) for p in
++				orig_relative_img_label_pairs]
 +		else:
 +			remapped_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(remapped_dname, split)
  
  		send_list_to_workers(
  			num_processes=num_processes, 
-@@ -153,8 +157,15 @@ def relabel_pair(
+@@ -153,8 +179,8 @@ def relabel_pair(
  		Returns:
  		-	None
  	"""
@@ -34,17 +90,10 @@ index 27b16a0..b46d63c 100755
 -	_, remapped_rel_label_fpath = remapped_pair
 +	orig_rel_rgb, orig_rel_label_fpath = orig_pair
 +	remapped_rel_rgb, remapped_rel_label_fpath = remapped_pair
-+
-+	new_rgb_fpath = f'{new_dataroot}/{remapped_rel_rgb}'
-+	if not os.path.exists(new_rgb_fpath):
-+		old_rgb_fpath = f'{old_dataroot}/{orig_rel_rgb}'
-+		if not os.path.exists(os.path.dirname(new_rgb_fpath)):
-+			os.makedirs(os.path.dirname(new_rgb_fpath))
-+		copyfile(old_rgb_fpath,new_rgb_fpath)
  
  	old_label_fpath = f'{old_dataroot}/{orig_rel_label_fpath}'
  	
-@@ -186,16 +197,21 @@ if __name__ == '__main__':
+@@ -186,16 +212,23 @@ if __name__ == '__main__':
  	parser.add_argument("--remapped_dataroot", type=str, required=True, 
  		help="data root where remapped dataset will be saved")
  	parser.add_argument("--include_ignore_idx_cls", action="store_false", 
@@ -56,6 +105,8 @@ index 27b16a0..b46d63c 100755
  		help="Number of cores available on machine (more->faster remapping)")
 +	parser.add_argument("--mapping_tsv", type=str, default=None, 
 +		help="data root where remapped dataset will be saved")
++	parser.add_argument("--create_symlink_cpy", action="store_true",
++		help="Create symlink copy of images for relabeled dataset.")
  
  	args = parser.parse_args()
  
@@ -68,11 +119,45 @@ index 27b16a0..b46d63c 100755
  	
  	print('Remapping Parameters: ', args)
  	remap_dataset(
+@@ -206,6 +239,7 @@ if __name__ == '__main__':
+ 		args.remapped_dataroot,
+ 		args.include_ignore_idx_cls,
+ 		args.convert_label_from_rgb,
+-		args.num_processes
++		args.num_processes,
++		args.create_symlink_cpy
+ 	)
+ 	
 diff --git a/mseg/utils/tsv_utils.py b/mseg/utils/tsv_utils.py
-index 8266d81..9f47332 100755
+index 8266d81..0d40a4c 100755
 --- a/mseg/utils/tsv_utils.py
 +++ b/mseg/utils/tsv_utils.py
-@@ -60,7 +60,12 @@ def read_label_mapping(filename: str,
+@@ -1,7 +1,7 @@
+ #!/usr/bin/python3
+ 
+ import csv
+-import os
++import os, collections
+ from typing import Mapping
+ 
+ """
+@@ -42,7 +42,8 @@ def represents_int(s: str) -> bool:
+ def read_label_mapping(filename: str, 
+ 						label_from: str = 'raw_category', 
+ 						label_to: str = 'nyu40id', 
+-						convert_val_to_int: bool = False) -> Mapping[int, str]:
++						convert_val_to_int: bool = False,
++					    return_sink_class_names: bool = False) -> Mapping[int, str]:
+ 	"""
+ 		Args:
+ 		-	filename: string representing
+@@ -55,12 +56,19 @@ def read_label_mapping(filename: str,
+ 	"""
+ 	assert os.path.isfile(filename)
+ 	mapping = dict()
++	sink_class_names = []
+ 	with open(filename) as csvfile:
+ 		reader = csv.DictReader(csvfile, delimiter='\t')
  		for row in reader:
  			source_val = row[label_from]
  			sink_val = row[label_to]
@@ -83,6 +168,19 @@ index 8266d81..9f47332 100755
 +					mapping[source_val] = sink_val
 +			else:
 +				mapping[source_val] = sink_val
++			sink_class_names.append(sink_val)
  	# if ints convert 
  	if represents_int(list(mapping.keys())[0]):
  		mapping = {int(k):v for k,v in mapping.items()}
+@@ -68,7 +76,10 @@ def read_label_mapping(filename: str,
+ 	if convert_val_to_int:
+ 		mapping = {k:int(v) for k,v in mapping.items()}
+ 
+-	return mapping
++	if return_sink_class_names:
++		return mapping, sink_class_names
++	else:
++		return mapping
+ 
+ 
+ def read_tsv_column_vals(tsv_fpath: str, col_name: str, convert_val_to_int: bool = False):
