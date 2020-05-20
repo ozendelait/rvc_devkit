@@ -29,14 +29,17 @@ else
 	#safe CSRF in variable
 	WILDDASH_CSRF=$(grep csrfmiddlewaretoken wd_resp_auth_token.html | sed "s/.*value='\(.*\)'.*/\1/")
 	rm wd_resp_auth_token.html
-	#escape @ symbol
+	#escape @,?,+,& symbol
 	WILDDASH_USERNAME_ESC=$(echo "$WILDDASH_USERNAME" | sed "s/@/%40/g")
+	WILDDASH_PASSWORD_ESC=$(echo "$WILDDASH_PASSWORD" | sed "s/@/%40/g" | sed "s/\\?/%3F/g" | sed "s/=/%3D/g" | sed "s/\\+/%2B/g" | sed "s/&/%26/g" | sed "s/\\$/%24/g")
 	#login to the WildDash webpage
-	USERDATA="username=$WILDDASH_USERNAME_ESC&password=$WILDDASH_PASSWORD&csrfmiddlewaretoken=$WILDDASH_CSRF&submit=Login"
-	wget --no-verbose --no-check-certificate --keep-session-cookies --load-cookies=wd_cookies_auth.txt --save-cookies=$WILDDASH_COOKIE_FILE -O wd_login_page.html --post-data $USERDATA https://wilddash.cc/accounts/login
+	WILDDASH_USERDATA="username=$WILDDASH_USERNAME_ESC&password=$WILDDASH_PASSWORD_ESC&csrfmiddlewaretoken=$WILDDASH_CSRF&submit=Login"
+	wget --no-verbose --no-check-certificate --keep-session-cookies --load-cookies=wd_cookies_auth.txt --save-cookies=$WILDDASH_COOKIE_FILE -O wd_login_page.html --post-data $WILDDASH_USERDATA https://wilddash.cc/accounts/login
 	#cleanup env
+	WILDDASH_USERDATA=
 	WILDDASH_CSRF=
 	WILDDASH_USERNAME_ESC=
+	WILDDASH_PASSWORD_ESC=
 	rm wd_cookies_auth.txt
 	rm wd_login_page.html
 fi
