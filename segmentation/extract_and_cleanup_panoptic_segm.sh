@@ -40,7 +40,14 @@ rm ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_val2017.zip
 unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_train2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/annotations/
 rm ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_train2017.zip
 
-mseg_extract_cityscapes.sh ${RVC_EXTR_ROOT_DIR}/cityscapes
+unzip ${RVC_EXTR_ROOT_DIR}/cityscapes/gtFine_trainvaltest.zip -d ${RVC_EXTR_ROOT_DIR}/cityscapes
+rm ${RVC_EXTR_ROOT_DIR}/cityscapes/gtFine_trainvaltest.zip
+# Note: README and license are found in both files
+rm ${RVC_EXTR_ROOT_DIR}/cityscapes/README
+rm ${RVC_EXTR_ROOT_DIR}/cityscapes/license.txt
+unzip ${RVC_EXTR_ROOT_DIR}/cityscapes/leftImg8bit_trainvaltest.zip -d ${RVC_EXTR_ROOT_DIR}/cityscapes
+rm ${RVC_EXTR_ROOT_DIR}/cityscapes/leftImg8bit_trainvaltest.zip
+
 unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
 rm ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip
 unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip -d ${RVC_EXTR_ROOT_DIR}/kitti

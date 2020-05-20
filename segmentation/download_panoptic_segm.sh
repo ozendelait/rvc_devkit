@@ -15,8 +15,8 @@ fi
 
 ${RVC_DOWNL_SEM_SCRIPT_DIR}/download_coco_pano.sh
 
-mseg_download_cityscapes.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
-$RVC_DOWNL_SEM_SCRIPT_DIR/download_kitti_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
+${RVC_DOWNL_SEM_SCRIPT_DIR}/download_cityscapes_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
+${RVC_DOWNL_SEM_SCRIPT_DIR}/download_kitti_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
 
 pushd ${RVC_DOWNL_SEM_SCRIPT_DIR}/legacy/
 python download_viper.py ${RVC_DOWNL_SEM_TRG_DIR}/viper

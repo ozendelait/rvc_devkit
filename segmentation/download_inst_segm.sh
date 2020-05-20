@@ -14,8 +14,8 @@ else
 fi
 
 $RVC_DOWNL_SEM_SCRIPT_DIR/../objdet/download_coco_boxable.sh
-mseg_download_cityscapes.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
-$RVC_DOWNL_SEM_SCRIPT_DIR/download_kitti_pano.sh ${RVC_DOWNL_SEM_SCRIPT_DIR}/kitti
+${RVC_DOWNL_SEM_SCRIPT_DIR}/download_cityscapes_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
+$RVC_DOWNL_SEM_SCRIPT_DIR/download_kitti_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
 
 pushd ${RVC_DOWNL_SEM_SCRIPT_DIR}/legacy/
 python download_scannet.py -o ${RVC_DOWNL_SEM_TRG_DIR}/scannet --rob_task_data
