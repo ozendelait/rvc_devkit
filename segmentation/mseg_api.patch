@@ -1,5 +1,5 @@
 diff --git a/mseg/label_preparation/remap_dataset.py b/mseg/label_preparation/remap_dataset.py
-index 27b16a0..f817121 100755
+index 27b16a0..4f7ef7e 100755
 --- a/mseg/label_preparation/remap_dataset.py
 +++ b/mseg/label_preparation/remap_dataset.py
 @@ -1,6 +1,6 @@
@@ -10,10 +10,11 @@ index 27b16a0..f817121 100755
  import imageio
  import numpy as np
  from pathlib import Path
-@@ -30,6 +30,16 @@ from mseg.utils.dir_utils import create_leading_fpath_dirs
+@@ -30,6 +30,17 @@ from mseg.utils.dir_utils import create_leading_fpath_dirs
  
  _ROOT = Path(__file__).resolve().parent.parent
  
++#creates a symbolic link / junction at dst pointing at directory src
 +def unpriv_symb_link(src, dst):
 +	if os.path.exists(dst):
 +		return
@@ -23,11 +24,11 @@ index 27b16a0..f817121 100755
 +	if sys.platform.startswith('win'): #symlinks need admin rights, junctions don't
 +		subprocess.check_call('mklink /J "%s" "%s"' % (dst, src), shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 +	else:
-+		os.symlink(src, dst)
++		os.symlink(src, dst, target_is_directory=True)
  
  def remap_dataset(
  	dname: str, 
-@@ -39,7 +49,8 @@ def remap_dataset(
+@@ -39,7 +50,8 @@ def remap_dataset(
  	remapped_dataroot: str,
  	include_ignore_idx_cls: bool = True,
  	convert_label_from_rgb: bool = False,
@@ -37,7 +38,7 @@ index 27b16a0..f817121 100755
  	"""
  	Given path to a dataset, given names of _names.txt
  	Remap according to the provided tsv.
-@@ -60,24 +71,39 @@ def remap_dataset(
+@@ -60,24 +72,39 @@ def remap_dataset(
  	"""
  	# load colors ordered with class indices, if labels encoded as RGB
  	dataset_colors = load_dataset_colors_arr(dname) if convert_label_from_rgb else None
@@ -82,18 +83,7 @@ index 27b16a0..f817121 100755
  
  		send_list_to_workers(
  			num_processes=num_processes, 
-@@ -153,8 +179,8 @@ def relabel_pair(
- 		Returns:
- 		-	None
- 	"""
--	_, orig_rel_label_fpath = orig_pair
--	_, remapped_rel_label_fpath = remapped_pair
-+	orig_rel_rgb, orig_rel_label_fpath = orig_pair
-+	remapped_rel_rgb, remapped_rel_label_fpath = remapped_pair
- 
- 	old_label_fpath = f'{old_dataroot}/{orig_rel_label_fpath}'
- 	
-@@ -186,16 +212,23 @@ if __name__ == '__main__':
+@@ -186,16 +213,23 @@ if __name__ == '__main__':
  	parser.add_argument("--remapped_dataroot", type=str, required=True, 
  		help="data root where remapped dataset will be saved")
  	parser.add_argument("--include_ignore_idx_cls", action="store_false", 
@@ -119,7 +109,7 @@ index 27b16a0..f817121 100755
  	
  	print('Remapping Parameters: ', args)
  	remap_dataset(
-@@ -206,6 +239,7 @@ if __name__ == '__main__':
+@@ -206,6 +240,7 @@ if __name__ == '__main__':
  		args.remapped_dataroot,
  		args.include_ignore_idx_cls,
  		args.convert_label_from_rgb,

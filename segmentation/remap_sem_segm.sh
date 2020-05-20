@@ -28,7 +28,8 @@ if [ ! -d $RVC_SEM_SEG_SCRIPT_DIR/mseg_api ]; then
 fi
 
 pushd $RVC_SEM_SEG_SCRIPT_DIR/
-  python ./mseg-api/mseg/label_preparation/remap_dataset.py --orig_dname ade20k-151 --remapped_dname rvc_uint8 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv
+  python ./mseg-api/mseg/label_preparation/remap_dataset.py --orig_dname ade20k-151 --remapped_dname rvc_uint8 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy
+  python ./mseg-api/mseg/label_preparation/remap_dataset.py --orig_dname kitti-34 --remapped_dname rvc_uint8 --orig_dataroot ${RVC_DATA_SRC_DIR}/kitti --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy
 popd
 
 RVC_DATA_TRG_DIR=
