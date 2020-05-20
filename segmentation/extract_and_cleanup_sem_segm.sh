@@ -22,6 +22,8 @@ if [[ ! $RVC_CONFIRM_EXTR =~ ^[Yy]$ ]]
   exit 1
 fi
 
+#ADE20K is extracted by the mseg download script
+
 echo "Extracting COCO"
 mkdir -p ${RVC_EXTR_ROOT_DIR}/coco/images
 unzip ${RVC_EXTR_ROOT_DIR}/coco/train2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/images
@@ -39,15 +41,6 @@ unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_val2017.zip -d ${RVC_EXTR_R
 rm ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_val2017.zip
 unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_train2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/annotations/
 rm ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_train2017.zip
-
-echo "Extracting OID"
-pushd ${RVC_EXTR_ROOT_DIR}/oid
-for onetarfile in *.tar
-do
-  echo "Extracting tar file $onetarfile..."
-  tar xf $onetarfile -C ${RVC_EXTR_ROOT_DIR}/oid && rm $onetarfile
-done
-popd
 
 unzip ${RVC_EXTR_ROOT_DIR}/cityscapes/gtFine_trainvaltest.zip -d ${RVC_EXTR_ROOT_DIR}/cityscapes
 rm ${RVC_EXTR_ROOT_DIR}/cityscapes/gtFine_trainvaltest.zip
