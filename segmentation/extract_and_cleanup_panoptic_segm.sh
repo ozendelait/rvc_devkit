@@ -16,7 +16,7 @@ fi
 echo "Extracting RVC files and removing archive files in the process. This can take 24h+ depending on your hdd/cpu configuration!"
 read -p "This process will remove archives (zip/tar/tar.gz) once they are extracted. Proceed? [y/n] " -n 1 -r RVC_CONFIRM_EXTR
 echo    # move to a new line
-if [[ ! $RVC_CONFIRM_EXTR =~ ^[Yy]$ ]]
+if [[ ! $RVC_CONFIRM_EXTR =~ ^[Yy]$ ]]; then
   RVC_EXTR_ROOT_DIR=
   RVC_CONFIRM_EXTR=
   exit 1
