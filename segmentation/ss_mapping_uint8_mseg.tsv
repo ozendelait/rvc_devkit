@@ -1,4 +1,4 @@
-rvc_uint8	ade20k-151	coco-panoptic-201	cityscapes_pano_id	kitti-34	mapillary-public66	scannet-20	viper_pano_id	wilddash_pano_id
+rvc_uint8	ade20k-151	coco-panoptic-201	cityscapes_pano_id	kitti-34	mapillary-public66	scannet-41	viper-32	wilddash_pano_id
 airplane	airplane	airplane	unlabeled	unlabeled	unlabeled	unlabeled	plane	unlabeled
 animal	animal	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	animal	unlabeled
 apple	unlabeled	apple	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -22,17 +22,17 @@ bicycle	bicycle	bicycle	bicycle	bicycle	object--vehicle--bicycle	unlabeled	bicyc
 bicyclist	unlabeled	unlabeled	unlabeled	unlabeled	human--rider--bicyclist	unlabeled	unlabeled	unlabeled
 bike_lane	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--bike-lane	unlabeled	unlabeled	unlabeled
 bike_rack	unlabeled	unlabeled	unlabeled	unlabeled	object--bike-rack	unlabeled	unlabeled	unlabeled
-billboard	trade name	unlabeled	unlabeled	unlabeled	object--billboard	unlabeled	billboard	billboard
+billboard	trade name	unlabeled	unlabeled	unlabeled	object--billboard	whiteboard	billboard	billboard
 billiard_table	pool table	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 bird	unlabeled	bird	unlabeled	unlabeled	animal--bird	unlabeled	unlabeled	unlabeled
 blanket	blanket	blanket	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 boat	boat	boat	unlabeled	unlabeled	object--vehicle--boat	unlabeled	boat	unlabeled
-book	book	book	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+book	book	book	unlabeled	unlabeled	unlabeled	books	unlabeled	unlabeled
 bookcase	bookcase	unlabeled	unlabeled	unlabeled	unlabeled	bookshelf	unlabeled	unlabeled
 booth	booth	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 bottle	bottle	bottle	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 bowl	unlabeled	bowl	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-box	box	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+box	box	unlabeled	unlabeled	unlabeled	unlabeled	box	unlabeled	unlabeled
 brickwall	unlabeled	wall-brick	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 bridge	bridge	bridge	bridge	bridge	construction--structure--bridge	unlabeled	unlabeled	bridge
 broccoli	unlabeled	broccoli	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -49,19 +49,19 @@ cardboard	unlabeled	cardboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	
 carrot	unlabeled	carrot	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 cat	unlabeled	cat	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 catch_basin	unlabeled	unlabeled	unlabeled	unlabeled	object--catch-basin	unlabeled	unlabeled	unlabeled
-ceiling	ceiling	ceiling-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+ceiling	ceiling	ceiling-merged	unlabeled	unlabeled	unlabeled	ceiling	unlabeled	unlabeled
 chair	chair	chair	unlabeled	unlabeled	unlabeled	chair	chair	unlabeled
 chandelier	chandelier	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-chest_of_drawers	chest of drawers	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+chest_of_drawers	chest of drawers	unlabeled	unlabeled	unlabeled	unlabeled	dresser	unlabeled	unlabeled
 clock	clock	clock	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-clothing	apparel	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+clothing	apparel	unlabeled	unlabeled	unlabeled	unlabeled	clothes	unlabeled	unlabeled
 coffee_table	coffee table	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 computer	computer	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 computer_keyboard	unlabeled	keyboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 computer_monitor	monitor	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 conveyer_belt	conveyer belt	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 couch	sofa	couch	unlabeled	unlabeled	unlabeled	sofa	unlabeled	unlabeled
-counter	"{buffet, bar}"	counter	unlabeled	unlabeled	unlabeled	counter	unlabeled	unlabeled
+counter	"{buffet, bar}"	counter	unlabeled	unlabeled	unlabeled	"{counter, night stand}"	unlabeled	unlabeled
 counter_table	counter	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 countertop	countertop	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 cow	unlabeled	cow	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -117,17 +117,17 @@ junction_box	unlabeled	unlabeled	unlabeled	unlabeled	object--junction-box	unlabe
 kitchen_island	kitchen island	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 kite	unlabeled	kite	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 knife	unlabeled	knife	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-lamp	lamp	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+lamp	lamp	unlabeled	unlabeled	unlabeled	unlabeled	lamp	unlabeled	unlabeled
 land_vehicle	unlabeled	unlabeled	unlabeled	unlabeled	object--vehicle--other-vehicle	unlabeled	unlabeled	unlabeled
 laptop	unlabeled	laptop	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 light_bulb	unlabeled	light	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 light_source	light	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-luggage_and_bags	bag	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+luggage_and_bags	bag	unlabeled	unlabeled	unlabeled	unlabeled	bag	unlabeled	unlabeled
 mailbox	unlabeled	unlabeled	unlabeled	unlabeled	object--mailbox	unlabeled	unlabeled	unlabeled
 manhole	unlabeled	unlabeled	unlabeled	unlabeled	object--manhole	unlabeled	unlabeled	unlabeled
 microwave	microwave	microwave	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 minibike	minibike	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-mirror	mirror	mirror-stuff	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+mirror	mirror	mirror-stuff	unlabeled	unlabeled	unlabeled	mirror	unlabeled	unlabeled
 mobile_phone	unlabeled	cell phone	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 motorcycle	unlabeled	motorcycle	motorcycle	motorcycle	object--vehicle--motorcycle	unlabeled	motorcycle	motorcycle
 motorcyclist	unlabeled	unlabeled	unlabeled	unlabeled	human--rider--motorcyclist	unlabeled	unlabeled	unlabeled
@@ -138,19 +138,19 @@ orange	unlabeled	orange	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabe
 ottoman	ottoman	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 oven	oven	oven	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 palm_tree	palm	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-paper	unlabeled	paper-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+paper	unlabeled	paper-merged	unlabeled	unlabeled	unlabeled	paper	unlabeled	unlabeled
 parking_meter	unlabeled	parking meter	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 parking_space	unlabeled	unlabeled	parking	parking	construction--flat--parking	unlabeled	unlabeled	unlabeled
 pathway	path	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 pedestal	base	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 pedestrian_area	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--pedestrian-area	unlabeled	unlabeled	unlabeled
-person	person	person	person	person	human--person	unlabeled	person	person
+person	person	person	person	person	human--person	person	person	person
 phone_booth	unlabeled	unlabeled	unlabeled	unlabeled	object--phone-booth	unlabeled	unlabeled	unlabeled
 pickup_truck	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	pickup
 picture_frame	painting	unlabeled	unlabeled	unlabeled	unlabeled	picture	unlabeled	unlabeled
 pier	pier	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 pillar	column	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-pillow	pillow	pillow	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+pillow	pillow	pillow	unlabeled	unlabeled	unlabeled	pillow	unlabeled	unlabeled
 pizza	unlabeled	pizza	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 plain_crosswalk	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--crosswalk-plain	unlabeled	unlabeled	unlabeled
 plant	plant	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -173,7 +173,7 @@ road_shoulder	unlabeled	unlabeled	unlabeled	unlabeled	construction--flat--servic
 road_surface_marking	unlabeled	unlabeled	unlabeled	unlabeled	marking--general	unlabeled	unlabeled	road-marking
 rock	rock	rock-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 roof	unlabeled	roof	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-rug	rug	rug-merged	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+rug	rug	rug-merged	unlabeled	unlabeled	unlabeled	floor mat	unlabeled	unlabeled
 runway	runway	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 sand	sand	sand	unlabeled	unlabeled	nature--sand	unlabeled	unlabeled	unlabeled
 sandwich	unlabeled	sandwich	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -184,7 +184,7 @@ sea	sea	sea	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 seating	seat	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 serving_tray	tray	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 sheep	unlabeled	sheep	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-shelf	shelf	shelf	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+shelf	shelf	shelf	unlabeled	unlabeled	unlabeled	shelves	unlabeled	unlabeled
 ship	ship	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 shower_curtain	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	shower curtain	unlabeled	unlabeled
 showerhead	shower	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -215,7 +215,7 @@ swivel_chair	swivel chair	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unla
 table	table	"{table-merged, dining table}"	unlabeled	unlabeled	unlabeled	table	unlabeled	unlabeled
 tank	tank	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 teddy_bear	unlabeled	teddy bear	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-television_set	television receiver	tv	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+television_set	television receiver	tv	unlabeled	unlabeled	unlabeled	television	unlabeled	unlabeled
 tennis_racket	unlabeled	tennis racket	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 tent	tent	tent	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 tie	unlabeled	tie	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -223,7 +223,7 @@ tiles	unlabeled	wall-tile	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unla
 toaster	unlabeled	toaster	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 toilet	toilet	toilet	unlabeled	unlabeled	unlabeled	toilet	unlabeled	unlabeled
 toothbrush	unlabeled	toothbrush	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-towel	towel	towel	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+towel	towel	towel	unlabeled	unlabeled	unlabeled	towel	unlabeled	unlabeled
 tower	tower	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 toy	plaything	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 traffic_light	traffic light	traffic light	traffic light	traffic light	object--traffic-light	unlabeled	trafficlight	traffic light
@@ -250,8 +250,8 @@ waste_container	ashcan	unlabeled	unlabeled	unlabeled	object--trash-can	unlabeled
 water	"{water, lake}"	water-other	unlabeled	unlabeled	nature--water	unlabeled	unlabeled	unlabeled
 waterfall	waterfall	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 window	windowpane	window-other	unlabeled	unlabeled	unlabeled	window	unlabeled	unlabeled
-window_blind	blind	window-blind	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+window_blind	blind	window-blind	unlabeled	unlabeled	unlabeled	blinds	unlabeled	unlabeled
 wooden_floor	unlabeled	floor-wood	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 wooden_wall	unlabeled	wall-wood	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 zebra	unlabeled	zebra	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-unlabeled	unlabeled	unlabeled	"{unlabeled,rectification border,out of roi}"	"{unlabeled,rectification border,out of roi}"	unlabeled	unlabeled	unlabeled	unlabeled
+unlabeled	unlabeled	unlabeled	"{unlabeled,rectification border,out of roi}"	"{unlabeled,rectification border,out of roi}"	unlabeled	"{unlabeled, otherstructure, otherprop}"	unlabeled	unlabeled
