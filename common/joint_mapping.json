@@ -49,7 +49,7 @@
         "wordnet_pwn30": "n02686568"
     },
     "airplane": {
-        "ade20k_id": "91",
+        "ade20k_id": 91,
         "ade20k_name": "airplane",
         "ade20k_names": "airplane;aeroplane;plane",
         "coco_boxable_name": "airplane",
@@ -118,7 +118,7 @@
         "wordnet_pwn30": "n03378765"
     },
     "animal": {
-        "ade20k_id": "127",
+        "ade20k_id": 127,
         "ade20k_name": "animal",
         "ade20k_names": "animal;animate;being;beast;brute;creature;fauna",
         "freebase_mid": "/m/0jbk",
@@ -170,7 +170,7 @@
         "wordnet_pwn30": "n07739125"
     },
     "arcade_machine": {
-        "ade20k_id": "79",
+        "ade20k_id": 79,
         "ade20k_name": "arcade machine",
         "ade20k_names": "arcade;machine",
         "freebase_mid": "/m/0d76r",
@@ -200,7 +200,7 @@
         "wordnet_pwn30": "n02454379"
     },
     "armchair": {
-        "ade20k_id": "31",
+        "ade20k_id": 31,
         "ade20k_name": "armchair",
         "ade20k_names": "armchair",
         "wikidata_desc": "type of chair",
@@ -237,7 +237,7 @@
         "wordnet_pwn30": "n07764847"
     },
     "awning": {
-        "ade20k_id": "87",
+        "ade20k_id": 87,
         "ade20k_name": "awning",
         "ade20k_names": "awning;sunshade;sunblind",
         "freebase_mid": "/m/07vvqb",
@@ -303,7 +303,7 @@
         "wordnet_pwn30": "n02777292"
     },
     "ball": {
-        "ade20k_id": "120",
+        "ade20k_id": 120,
         "ade20k_name": "ball",
         "ade20k_names": "ball",
         "coco_boxable_name": "sports ball",
@@ -382,7 +382,7 @@
         "wordnet_pwn30": "n07680932"
     },
     "bar_counter": {
-        "ade20k_id": "78",
+        "ade20k_id": 78,
         "ade20k_name": "bar",
         "ade20k_names": "bar",
         "wikidata_name": "bar counter",
@@ -420,7 +420,7 @@
         "wordnet_pwn30": "n02792552"
     },
     "barrel": {
-        "ade20k_id": "112",
+        "ade20k_id": 112,
         "ade20k_name": "barrel",
         "ade20k_names": "barrel;cask",
         "freebase_mid": "/m/02zn6n",
@@ -490,7 +490,7 @@
         "wordnet_pwn30": "n02800213"
     },
     "basket": {
-        "ade20k_id": "113",
+        "ade20k_id": 113,
         "ade20k_name": "basket",
         "ade20k_names": "basket;handbasket",
         "freebase_mid": "/m/01z562",
@@ -540,7 +540,7 @@
         "wordnet_pwn30": "n03742115"
     },
     "bathtub": {
-        "ade20k_id": "38",
+        "ade20k_id": 38,
         "ade20k_name": "bathtub",
         "ade20k_names": "bathtub;bathing;tub;bath;tub",
         "freebase_mid": "/m/03dnzn",
@@ -593,7 +593,7 @@
         "wordnet_pwn30": "n05261566"
     },
     "bed": {
-        "ade20k_id": "8",
+        "ade20k_id": 8,
         "ade20k_name": "bed",
         "ade20k_names": "bed",
         "coco_boxable_name": "bed",
@@ -677,7 +677,7 @@
         "wordnet_pwn30": "n02827606"
     },
     "bench": {
-        "ade20k_id": "70",
+        "ade20k_id": 70,
         "ade20k_name": "bench",
         "ade20k_names": "bench",
         "coco_boxable_name": "bench",
@@ -701,7 +701,7 @@
         "wordnet_pwn30": "n02828884"
     },
     "bicycle": {
-        "ade20k_id": "128",
+        "ade20k_id": 128,
         "ade20k_name": "bicycle",
         "ade20k_names": "bicycle;bike;wheel;cycle",
         "cityscapes_id": 33,
@@ -805,7 +805,7 @@
         "wordnet_pwn30": "n02835829"
     },
     "billboard": {
-        "ade20k_id": "124",
+        "ade20k_id": 124,
         "ade20k_name": "trade name",
         "ade20k_names": "trade;name;brand;name;brand;marque",
         "context": "object",
@@ -839,7 +839,7 @@
         "wordnet_pwn30": "n02839351"
     },
     "billiard_table": {
-        "ade20k_id": "57",
+        "ade20k_id": 57,
         "ade20k_name": "pool table",
         "ade20k_names": "pool;table;billiard;table;snooker;table",
         "freebase_mid": "/m/04p0qw",
@@ -885,7 +885,7 @@
         "wordnet_pwn30": "n01503061"
     },
     "blanket": {
-        "ade20k_id": "132",
+        "ade20k_id": 132,
         "ade20k_name": "blanket",
         "ade20k_names": "blanket;cover",
         "coco_pano_id": 93,
@@ -928,7 +928,7 @@
         "wordnet_pwn30": "n02846619"
     },
     "boat": {
-        "ade20k_id": "77",
+        "ade20k_id": 77,
         "ade20k_name": "boat",
         "ade20k_names": "boat",
         "coco_boxable_name": "boat",
@@ -973,7 +973,7 @@
         "wordnet_pwn30": "n02866578"
     },
     "book": {
-        "ade20k_id": "68",
+        "ade20k_id": 68,
         "ade20k_name": "book",
         "ade20k_names": "book",
         "coco_boxable_name": "book",
@@ -992,7 +992,7 @@
         "wordnet_pwn30": "n02870092"
     },
     "bookcase": {
-        "ade20k_id": "63",
+        "ade20k_id": 63,
         "ade20k_name": "bookcase",
         "ade20k_names": "bookcase",
         "freebase_mid": "/m/03__z0",
@@ -1020,7 +1020,7 @@
         "wordnet_pwn30": "n02872752"
     },
     "booth": {
-        "ade20k_id": "89",
+        "ade20k_id": 89,
         "ade20k_name": "booth",
         "ade20k_names": "booth;cubicle;stall;kiosk",
         "wikidata_desc": "small and temporary structure",
@@ -1030,7 +1030,7 @@
         "wordnet_pwn30": "n02873839"
     },
     "bottle": {
-        "ade20k_id": "99",
+        "ade20k_id": 99,
         "ade20k_name": "bottle",
         "ade20k_names": "bottle",
         "coco_boxable_name": "bottle",
@@ -1102,7 +1102,7 @@
         "wordnet_pwn30": "n02882483"
     },
     "box": {
-        "ade20k_id": "42",
+        "ade20k_id": 42,
         "ade20k_name": "box",
         "ade20k_names": "box",
         "freebase_mid": "/m/025dyy",
@@ -1166,7 +1166,7 @@
         "wordnet_pwn30": "n02898369"
     },
     "bridge": {
-        "ade20k_id": "62",
+        "ade20k_id": 62,
         "ade20k_name": "bridge",
         "ade20k_names": "bridge;span",
         "cityscapes_id": 15,
@@ -1256,7 +1256,7 @@
         "wordnet_pwn30": "n02908217"
     },
     "building": {
-        "ade20k_id": "2",
+        "ade20k_id": 2,
         "ade20k_name": "building",
         "ade20k_names": "building;edifice",
         "cityscapes_id": 11,
@@ -1297,7 +1297,7 @@
         "wordnet_pwn30": "n02403325"
     },
     "bulletin_board": {
-        "ade20k_id": "145",
+        "ade20k_id": 145,
         "ade20k_name": "bulletin board",
         "ade20k_names": "bulletin;board;notice;board",
         "freebase_mid": "/m/01nvr_",
@@ -1319,7 +1319,7 @@
         "wordnet_pwn30": "n07880968"
     },
     "bus": {
-        "ade20k_id": "81",
+        "ade20k_id": 81,
         "ade20k_name": "bus",
         "ade20k_names": "bus;autobus;coach;charabanc;double-decker;jitney;motorbus;motorcoach;omnibus;passenger;vehicle",
         "cityscapes_id": 28,
@@ -1390,7 +1390,7 @@
         "wordnet_pwn30": "n07713895"
     },
     "cabinetry": {
-        "ade20k_id": "11",
+        "ade20k_id": 11,
         "ade20k_name": "cabinet",
         "ade20k_names": "cabinet",
         "coco_pano_id": 188,
@@ -1531,7 +1531,7 @@
         "wordnet_pwn30": "n02951358"
     },
     "canopy": {
-        "ade20k_id": "107",
+        "ade20k_id": 107,
         "ade20k_name": "canopy",
         "ade20k_names": "canopy",
         "freebase_mid": "/m/0b03ql",
@@ -1552,7 +1552,7 @@
         "wordnet_pwn30": "n07755929"
     },
     "car": {
-        "ade20k_id": "21",
+        "ade20k_id": 21,
         "ade20k_name": "car",
         "ade20k_names": "car;auto;automobile;machine;motorcar",
         "cityscapes_id": 26,
@@ -1733,7 +1733,7 @@
         "wordnet_pwn30": "n02402425"
     },
     "ceiling": {
-        "ade20k_id": "6",
+        "ade20k_id": 6,
         "ade20k_name": "ceiling",
         "ade20k_names": "ceiling",
         "coco_pano_id": 186,
@@ -1787,7 +1787,7 @@
         "wordnet_pwn30": "n03000684"
     },
     "chair": {
-        "ade20k_id": "20",
+        "ade20k_id": 20,
         "ade20k_name": "chair",
         "ade20k_names": "chair",
         "coco_boxable_name": "chair",
@@ -1809,7 +1809,7 @@
         "wordnet_pwn30": "n03001627"
     },
     "chandelier": {
-        "ade20k_id": "86",
+        "ade20k_id": 86,
         "ade20k_name": "chandelier",
         "ade20k_names": "chandelier;pendant;pendent",
         "wikidata_desc": "decorative ceiling-mounted light fixture",
@@ -1850,7 +1850,7 @@
         "wordnet_pwn30": "n07757132"
     },
     "chest_of_drawers": {
-        "ade20k_id": "45",
+        "ade20k_id": 45,
         "ade20k_name": "chest of drawers",
         "ade20k_names": "chest;of;drawers;chest;bureau;dresser",
         "freebase_mid": "/m/05kyg_",
@@ -1925,7 +1925,7 @@
         "wordnet_pwn30": "n03040587"
     },
     "clock": {
-        "ade20k_id": "149",
+        "ade20k_id": 149,
         "ade20k_name": "clock",
         "ade20k_names": "clock",
         "coco_boxable_name": "clock",
@@ -1951,7 +1951,7 @@
         "wordnet_pwn30": "n03049457"
     },
     "clothing": {
-        "ade20k_id": "93",
+        "ade20k_id": 93,
         "ade20k_name": "apparel",
         "ade20k_names": "apparel;wearing;apparel;dress;clothes",
         "freebase_mid": "/m/09j2d",
@@ -2026,7 +2026,7 @@
         "wordnet_pwn30": "n03063073"
     },
     "coffee_table": {
-        "ade20k_id": "65",
+        "ade20k_id": 65,
         "ade20k_name": "coffee table",
         "ade20k_names": "coffee;table;cocktail;table",
         "freebase_mid": "/m/078n6m",
@@ -2080,7 +2080,7 @@
         "wordnet_pwn30": "n03079230"
     },
     "computer": {
-        "ade20k_id": "75",
+        "ade20k_id": 75,
         "ade20k_name": "computer",
         "ade20k_names": "computer;computing;machine;computing;device;data;processor;electronic;computer;information;processing;system",
         "freebase_mid": "/m/04l518",
@@ -2107,7 +2107,7 @@
         "wordnet_pwn30": "n03085013"
     },
     "computer_monitor": {
-        "ade20k_id": "144",
+        "ade20k_id": 144,
         "ade20k_name": "monitor",
         "ade20k_names": "monitor;monitoring;device",
         "freebase_mid": "/m/02522",
@@ -2158,7 +2158,7 @@
         "wordnet_pwn30": "n03099274"
     },
     "conveyer_belt": {
-        "ade20k_id": "106",
+        "ade20k_id": 106,
         "ade20k_name": "conveyer belt",
         "ade20k_names": "conveyer;belt;conveyor;belt;conveyer;conveyor;transporter",
         "wikidata_desc": "",
@@ -2225,7 +2225,7 @@
         "wordnet_pwn30": "n03078995"
     },
     "couch": {
-        "ade20k_id": "24",
+        "ade20k_id": 24,
         "ade20k_name": "sofa",
         "ade20k_names": "sofa;couch;lounge",
         "coco_boxable_name": "couch",
@@ -2246,7 +2246,7 @@
         "wordnet_pwn30": "n03115762"
     },
     "counter": {
-        "ade20k_id": "100",
+        "ade20k_id": 100,
         "ade20k_name": "buffet",
         "ade20k_names": "buffet;counter;sideboard",
         "coco_pano_id": 107,
@@ -2261,7 +2261,7 @@
         "wordnet_pwn30": "n02912065"
     },
     "counter_table": {
-        "ade20k_id": "46",
+        "ade20k_id": 46,
         "ade20k_name": "counter",
         "ade20k_names": "counter",
         "wikidata_qid": "Q21550499",
@@ -2269,7 +2269,7 @@
         "wordnet_pwn30": "n03116530"
     },
     "countertop": {
-        "ade20k_id": "71",
+        "ade20k_id": 71,
         "ade20k_name": "countertop",
         "ade20k_names": "countertop",
         "freebase_mid": "/m/0b3fp9",
@@ -2467,7 +2467,7 @@
         "wordnet_pwn30": "n00461611"
     },
     "curtain": {
-        "ade20k_id": "19",
+        "ade20k_id": 19,
         "ade20k_name": "curtain",
         "ade20k_names": "curtain;drape;drapery;mantle;pall",
         "coco_pano_id": 109,
@@ -2484,7 +2484,7 @@
         "wordnet_pwn30": "n03151077"
     },
     "cushion": {
-        "ade20k_id": "40",
+        "ade20k_id": 40,
         "ade20k_name": "cushion",
         "ade20k_names": "cushion",
         "freebase_mid": "/m/0174g1",
@@ -2545,7 +2545,7 @@
         "wordnet_pwn30": "n02430045"
     },
     "desk": {
-        "ade20k_id": "34",
+        "ade20k_id": 34,
         "ade20k_name": "desk",
         "ade20k_names": "desk",
         "freebase_mid": "/m/01y9k5",
@@ -2634,7 +2634,7 @@
         "wordnet_pwn30": "n01699831"
     },
     "dirt": {
-        "ade20k_id": "92",
+        "ade20k_id": 92,
         "ade20k_name": "dirt track",
         "ade20k_names": "dirt;track",
         "coco_pano_id": 194,
@@ -2647,7 +2647,7 @@
         "wordnet_pwn30": "n07223811"
     },
     "dishwasher": {
-        "ade20k_id": "130",
+        "ade20k_id": 130,
         "ade20k_name": "dishwasher",
         "ade20k_names": "dishwasher;dish;washer;dishwashing;machine",
         "freebase_mid": "/m/0ky7b",
@@ -2760,7 +2760,7 @@
         "wordnet_pwn30": "n03222959"
     },
     "double_door": {
-        "ade20k_id": "15",
+        "ade20k_id": 15,
         "ade20k_name": "door",
         "ade20k_names": "door;double;door",
         "wikidata_qid": "",
@@ -2808,7 +2808,7 @@
         "wordnet_pwn30": "n00748515"
     },
     "drinking_glass": {
-        "ade20k_id": "148",
+        "ade20k_id": 148,
         "ade20k_name": "glass",
         "ade20k_names": "glass;drinking;glass",
         "freebase_mid": "/m/02q68d8",
@@ -2987,7 +2987,7 @@
         "wordnet_pwn30": "n03240140"
     },
     "electric_fan": {
-        "ade20k_id": "140",
+        "ade20k_id": 140,
         "ade20k_name": "fan",
         "ade20k_names": "fan",
         "freebase_mid": "/m/02x984l",
@@ -3039,7 +3039,7 @@
         "wordnet_pwn30": "n03294833"
     },
     "escalator": {
-        "ade20k_id": "97",
+        "ade20k_id": 97,
         "ade20k_name": "escalator",
         "ade20k_names": "escalator;moving;staircase;moving;stairway",
         "freebase_mid": "/m/02r1p",
@@ -3050,7 +3050,7 @@
         "wordnet_pwn30": "n03295773"
     },
     "exhaust_hood": {
-        "ade20k_id": "134",
+        "ade20k_id": 134,
         "ade20k_name": "hood",
         "ade20k_names": "hood;exhaust;hood",
         "freebase_mid": "/m/03mw1c",
@@ -3173,7 +3173,7 @@
         "wordnet_pwn30": "n03325941"
     },
     "fence": {
-        "ade20k_id": "33",
+        "ade20k_id": 33,
         "ade20k_name": "fence",
         "ade20k_names": "fence;fencing",
         "cityscapes_id": 13,
@@ -3200,7 +3200,7 @@
         "wordnet_pwn30": "n03327234"
     },
     "field": {
-        "ade20k_id": "30",
+        "ade20k_id": 30,
         "ade20k_name": "field",
         "ade20k_names": "field",
         "context": "cleared",
@@ -3276,7 +3276,7 @@
         "wordnet_pwn30": "n03345487"
     },
     "fireplace": {
-        "ade20k_id": "50",
+        "ade20k_id": 50,
         "ade20k_name": "fireplace",
         "ade20k_names": "fireplace;hearth;open;fireplace",
         "freebase_mid": "/m/03tw93",
@@ -3308,7 +3308,7 @@
         "wordnet_pwn30": "n03351979"
     },
     "flag": {
-        "ade20k_id": "150",
+        "ade20k_id": 150,
         "ade20k_name": "flag",
         "ade20k_names": "flag",
         "freebase_mid": "/m/03120",
@@ -3363,7 +3363,7 @@
         "wordnet_pwn30": ""
     },
     "floor": {
-        "ade20k_id": "4",
+        "ade20k_id": 4,
         "ade20k_name": "floor",
         "ade20k_names": "floor;flooring",
         "coco_pano_id": 190,
@@ -3378,7 +3378,7 @@
         "wordnet_pwn30": "n03365592"
     },
     "flower": {
-        "ade20k_id": "67",
+        "ade20k_id": 67,
         "ade20k_name": "flower",
         "ade20k_names": "flower",
         "coco_pano_id": 119,
@@ -3393,7 +3393,7 @@
         "wordnet_pwn30": "n11669335"
     },
     "flowerpot": {
-        "ade20k_id": "126",
+        "ade20k_id": 126,
         "ade20k_name": "pot",
         "ade20k_names": "pot;flowerpot",
         "freebase_mid": "/m/0fm3zh",
@@ -3428,7 +3428,7 @@
         "wordnet_pwn30": "n03376279"
     },
     "food": {
-        "ade20k_id": "121",
+        "ade20k_id": 121,
         "ade20k_name": "food",
         "ade20k_names": "food;solid;food",
         "coco_pano_id": 196,
@@ -3498,7 +3498,7 @@
         "wordnet_pwn30": "n03383948"
     },
     "fountain": {
-        "ade20k_id": "105",
+        "ade20k_id": 105,
         "ade20k_name": "fountain",
         "ade20k_names": "fountain",
         "freebase_mid": "/m/0220r2",
@@ -3774,7 +3774,7 @@
         "wordnet_pwn30": "n01855672"
     },
     "grandstand": {
-        "ade20k_id": "52",
+        "ade20k_id": 52,
         "ade20k_name": "grandstand",
         "ade20k_names": "grandstand;covered;stand",
         "wikidata_desc": "large and normally permanent structure for seating spectators",
@@ -3809,7 +3809,7 @@
         "wordnet_pwn30": "n07749969"
     },
     "grass": {
-        "ade20k_id": "10",
+        "ade20k_id": 10,
         "ade20k_name": "grass",
         "ade20k_names": "grass",
         "coco_pano_id": 193,
@@ -3858,7 +3858,7 @@
         "wordnet_pwn30": "n03460040"
     },
     "ground": {
-        "ade20k_id": "14",
+        "ade20k_id": 14,
         "ade20k_name": "earth",
         "ade20k_names": "earth;ground",
         "cityscapes_id": 6,
@@ -3899,7 +3899,7 @@
         "wordnet_pwn30": "n07583066"
     },
     "guard_rail": {
-        "ade20k_id": "39",
+        "ade20k_id": 39,
         "ade20k_name": "railing",
         "ade20k_names": "railing;rail",
         "cityscapes_id": 14,
@@ -4054,7 +4054,7 @@
         "wordnet_pwn30": "n03948459"
     },
     "handrail": {
-        "ade20k_id": "96",
+        "ade20k_id": 96,
         "ade20k_name": "bannister",
         "ade20k_names": "bannister;banister;balustrade;balusters;handrail",
         "wikidata_desc": "A type of railing that is designed to be grasped by the hand, commonly found in stairways and escalators",
@@ -4207,7 +4207,7 @@
         "wordnet_pwn30": ""
     },
     "hill": {
-        "ade20k_id": "69",
+        "ade20k_id": 69,
         "ade20k_name": "hill",
         "ade20k_names": "hill",
         "freebase_mid": "/m/04_5sg",
@@ -4324,7 +4324,7 @@
         "wordnet_pwn30": "n03543603"
     },
     "house": {
-        "ade20k_id": "26",
+        "ade20k_id": 26,
         "ade20k_name": "house",
         "ade20k_names": "house",
         "coco_pano_id": 128,
@@ -4362,7 +4362,7 @@
         "wordnet_pwn30": "n00120515"
     },
     "hut": {
-        "ade20k_id": "80",
+        "ade20k_id": 80,
         "ade20k_name": "hovel",
         "ade20k_names": "hovel;hut;hutch;shack;shanty",
         "freebase_mid": "/m/08yp1s",
@@ -4400,7 +4400,7 @@
         "wordnet_pwn30": ""
     },
     "infant_bed": {
-        "ade20k_id": "118",
+        "ade20k_id": 118,
         "ade20k_name": "cradle",
         "ade20k_names": "cradle",
         "freebase_mid": "/m/061hd_",
@@ -4597,7 +4597,7 @@
         "wordnet_pwn30": "n03620052"
     },
     "kitchen_island": {
-        "ade20k_id": "74",
+        "ade20k_id": 74,
         "ade20k_name": "kitchen island",
         "ade20k_names": "kitchen;island",
         "wikidata_qid": "",
@@ -4713,7 +4713,7 @@
         "wordnet_pwn30": "n02165456"
     },
     "lake": {
-        "ade20k_id": "129",
+        "ade20k_id": 129,
         "ade20k_name": "lake",
         "ade20k_names": "lake",
         "freebase_mid": "/m/04h4w",
@@ -4724,7 +4724,7 @@
         "wordnet_pwn30": "n09328904"
     },
     "lamp": {
-        "ade20k_id": "37",
+        "ade20k_id": 37,
         "ade20k_name": "lamp",
         "ade20k_names": "lamp",
         "freebase_mid": "/m/0dtln",
@@ -4871,7 +4871,7 @@
         "wordnet_pwn30": "n03665924"
     },
     "light_source": {
-        "ade20k_id": "83",
+        "ade20k_id": 83,
         "ade20k_name": "light",
         "ade20k_names": "light;light;source",
         "wikidata_desc": "object or device that emits light",
@@ -4986,7 +4986,7 @@
         "wordnet_pwn30": "n03691459"
     },
     "luggage_and_bags": {
-        "ade20k_id": "116",
+        "ade20k_id": 116,
         "ade20k_name": "bag",
         "ade20k_names": "bag",
         "freebase_mid": "/m/0hf58v5",
@@ -5186,7 +5186,7 @@
         "wordnet_pwn30": "n03759954"
     },
     "microwave": {
-        "ade20k_id": "125",
+        "ade20k_id": 125,
         "ade20k_name": "microwave",
         "ade20k_names": "microwave;microwave;oven",
         "coco_boxable_name": "microwave",
@@ -5215,7 +5215,7 @@
         "wordnet_pwn30": "n05399034"
     },
     "minibike": {
-        "ade20k_id": "117",
+        "ade20k_id": 117,
         "ade20k_name": "minibike",
         "ade20k_names": "minibike;motorbike",
         "freebase_mid": "/m/06bzjv",
@@ -5236,7 +5236,7 @@
         "wordnet_pwn30": "n03770439"
     },
     "mirror": {
-        "ade20k_id": "28",
+        "ade20k_id": 28,
         "ade20k_name": "mirror",
         "ade20k_names": "mirror",
         "coco_pano_id": 133,
@@ -5377,7 +5377,7 @@
         "wordnet_pwn30": "n10334009"
     },
     "mountain": {
-        "ade20k_id": "17",
+        "ade20k_id": 17,
         "ade20k_name": "mountain",
         "ade20k_names": "mountain;mount",
         "coco_pano_id": 192,
@@ -5665,7 +5665,7 @@
         "wordnet_pwn30": "n02444819"
     },
     "ottoman": {
-        "ade20k_id": "98",
+        "ade20k_id": 98,
         "ade20k_name": "ottoman",
         "ade20k_names": "ottoman;pouf;pouffe;puff;hassock",
         "freebase_mid": "/m/0416vkj",
@@ -5685,7 +5685,7 @@
         "wordnet_pwn30": ""
     },
     "oven": {
-        "ade20k_id": "119",
+        "ade20k_id": 119,
         "ade20k_name": "oven",
         "ade20k_names": "oven",
         "coco_boxable_name": "oven",
@@ -5746,7 +5746,7 @@
         "wordnet_pwn30": "n03876231"
     },
     "palm_tree": {
-        "ade20k_id": "73",
+        "ade20k_id": 73,
         "ade20k_name": "palm",
         "ade20k_names": "palm;palm;tree",
         "freebase_mid": "/m/0cdl1",
@@ -5901,7 +5901,7 @@
         "wordnet_pwn30": "n07622708"
     },
     "pathway": {
-        "ade20k_id": "53",
+        "ade20k_id": 53,
         "ade20k_name": "path",
         "ade20k_names": "path",
         "wikidata_desc": "small thoroughfare",
@@ -5935,7 +5935,7 @@
         "wordnet_pwn30": "n07767847"
     },
     "pedestal": {
-        "ade20k_id": "41",
+        "ade20k_id": 41,
         "ade20k_name": "base",
         "ade20k_names": "base;pedestal;stand",
         "freebase_mid": "/m/05607t",
@@ -6026,7 +6026,7 @@
         "wordnet_pwn30": "n03916031"
     },
     "person": {
-        "ade20k_id": "13",
+        "ade20k_id": 13,
         "ade20k_name": "person",
         "ade20k_names": "person;individual;someone;somebody;mortal;soul",
         "cityscapes_id": 24,
@@ -6126,7 +6126,7 @@
         "wordnet_pwn30": ""
     },
     "picture_frame": {
-        "ade20k_id": "23",
+        "ade20k_id": 23,
         "ade20k_name": "painting",
         "ade20k_names": "painting;picture",
         "freebase_mid": "/m/06z37_",
@@ -6152,7 +6152,7 @@
         "wordnet_pwn30": "n07625493"
     },
     "pier": {
-        "ade20k_id": "141",
+        "ade20k_id": 141,
         "ade20k_name": "pier",
         "ade20k_names": "pier;wharf;wharfage;dock",
         "freebase_mid": "/m/07wh57",
@@ -6184,7 +6184,7 @@
         "wordnet_pwn30": "n01811909"
     },
     "pillar": {
-        "ade20k_id": "43",
+        "ade20k_id": 43,
         "ade20k_name": "column",
         "ade20k_names": "column;pillar",
         "freebase_mid": "/m/01_m7",
@@ -6195,7 +6195,7 @@
         "wordnet_pwn30": "n03073977"
     },
     "pillow": {
-        "ade20k_id": "58",
+        "ade20k_id": 58,
         "ade20k_name": "pillow",
         "ade20k_names": "pillow",
         "coco_pano_id": 141,
@@ -6269,7 +6269,7 @@
         "wordnet_pwn30": ""
     },
     "plant": {
-        "ade20k_id": "18",
+        "ade20k_id": 18,
         "ade20k_name": "plant",
         "ade20k_names": "plant;flora;plant;life",
         "freebase_mid": "/m/05s2s",
@@ -6292,7 +6292,7 @@
         "wordnet_pwn30": "n03958227"
     },
     "plate": {
-        "ade20k_id": "143",
+        "ade20k_id": 143,
         "ade20k_name": "plate",
         "ade20k_names": "plate",
         "freebase_mid": "/m/050gv4",
@@ -6306,7 +6306,7 @@
         "wordnet_pwn30": "n03959485"
     },
     "platform": {
-        "ade20k_id": "102",
+        "ade20k_id": 102,
         "ade20k_name": "stage",
         "ade20k_names": "stage",
         "coco_pano_id": 144,
@@ -6385,7 +6385,7 @@
         "wordnet_pwn30": "n02134084"
     },
     "pole": {
-        "ade20k_id": "94",
+        "ade20k_id": 94,
         "ade20k_name": "pole",
         "ade20k_names": "pole",
         "cityscapes_id": 17,
@@ -6461,7 +6461,7 @@
         "wordnet_pwn30": "n02346627"
     },
     "poster": {
-        "ade20k_id": "101",
+        "ade20k_id": 101,
         "ade20k_name": "poster",
         "ade20k_names": "poster;posting;placard;notice;bill;card",
         "freebase_mid": "/m/01n5jq",
@@ -6592,7 +6592,7 @@
         "wordnet_pwn30": "n04004767"
     },
     "projection_screen": {
-        "ade20k_id": "131",
+        "ade20k_id": 131,
         "ade20k_name": "screen",
         "ade20k_names": "screen;silver;screen;projection;screen",
         "freebase_mid": "/m/06ycgh",
@@ -6684,7 +6684,7 @@
         "wordnet_pwn30": "n04039381"
     },
     "radiator": {
-        "ade20k_id": "147",
+        "ade20k_id": 147,
         "ade20k_name": "radiator",
         "ade20k_names": "radiator",
         "obj365_boxable_name": "Radiator",
@@ -6791,7 +6791,7 @@
         "wordnet_pwn30": "n02509815"
     },
     "refrigerator": {
-        "ade20k_id": "51",
+        "ade20k_id": 51,
         "ade20k_name": "refrigerator",
         "ade20k_names": "refrigerator;icebox",
         "coco_boxable_name": "refrigerator",
@@ -6923,7 +6923,7 @@
         "wordnet_pwn30": "n02840245"
     },
     "river": {
-        "ade20k_id": "61",
+        "ade20k_id": 61,
         "ade20k_name": "river",
         "ade20k_names": "river",
         "coco_pano_id": 148,
@@ -6936,7 +6936,7 @@
         "wordnet_pwn30": "n09411430"
     },
     "road": {
-        "ade20k_id": "7",
+        "ade20k_id": 7,
         "ade20k_name": "road",
         "ade20k_names": "road;route",
         "cityscapes_id": 7,
@@ -6991,7 +6991,7 @@
         "wordnet_pwn30": ""
     },
     "rock": {
-        "ade20k_id": "35",
+        "ade20k_id": 35,
         "ade20k_name": "rock",
         "ade20k_names": "rock;stone",
         "coco_pano_id": 198,
@@ -7064,7 +7064,7 @@
         "wordnet_pwn30": "n04114844"
     },
     "rug": {
-        "ade20k_id": "29",
+        "ade20k_id": 29,
         "ade20k_name": "rug",
         "ade20k_names": "rug;carpet;carpeting",
         "coco_pano_id": 200,
@@ -7102,7 +7102,7 @@
         "wordnet_pwn30": "n04118776"
     },
     "runway": {
-        "ade20k_id": "55",
+        "ade20k_id": 55,
         "ade20k_name": "runway",
         "ade20k_names": "runway",
         "freebase_mid": "/m/015zzv",
@@ -7142,7 +7142,7 @@
         "wordnet_pwn30": "n04183329"
     },
     "sand": {
-        "ade20k_id": "47",
+        "ade20k_id": 47,
         "ade20k_name": "sand",
         "ade20k_names": "sand",
         "coco_pano_id": 154,
@@ -7287,7 +7287,7 @@
         "wordnet_pwn30": "n01770393"
     },
     "screen_door": {
-        "ade20k_id": "59",
+        "ade20k_id": 59,
         "ade20k_name": "screen door",
         "ade20k_names": "screen;door;screen",
         "wikidata_desc": "door that lets lets air pass through",
@@ -7309,7 +7309,7 @@
         "wordnet_pwn30": "n04154565"
     },
     "sculpture": {
-        "ade20k_id": "133",
+        "ade20k_id": 133,
         "ade20k_name": "sculpture",
         "ade20k_names": "sculpture",
         "freebase_mid": "/m/06msq",
@@ -7321,7 +7321,7 @@
         "wordnet_pwn30": "n04157320"
     },
     "sea": {
-        "ade20k_id": "27",
+        "ade20k_id": 27,
         "ade20k_name": "sea",
         "ade20k_names": "sea",
         "coco_pano_id": 155,
@@ -7395,7 +7395,7 @@
         "wordnet_pwn30": "n04162706"
     },
     "seating": {
-        "ade20k_id": "32",
+        "ade20k_id": 32,
         "ade20k_name": "seat",
         "ade20k_names": "seat",
         "wikidata_desc": "object for sitting on",
@@ -7416,7 +7416,7 @@
         "wordnet_pwn30": "n04168199"
     },
     "serving_tray": {
-        "ade20k_id": "138",
+        "ade20k_id": 138,
         "ade20k_name": "tray",
         "ade20k_names": "tray",
         "freebase_mid": "/m/0h8n27j",
@@ -7466,7 +7466,7 @@
         "wordnet_pwn30": "n02411705"
     },
     "shelf": {
-        "ade20k_id": "25",
+        "ade20k_id": 25,
         "ade20k_name": "shelf",
         "ade20k_names": "shelf",
         "coco_pano_id": 156,
@@ -7490,7 +7490,7 @@
         "wordnet_pwn30": "n01940736"
     },
     "ship": {
-        "ade20k_id": "104",
+        "ade20k_id": 104,
         "ade20k_name": "ship",
         "ade20k_names": "ship",
         "freebase_mid": "/m/06q74",
@@ -7560,7 +7560,7 @@
         "wordnet_pwn30": "n04209239"
     },
     "showerhead": {
-        "ade20k_id": "146",
+        "ade20k_id": 146,
         "ade20k_name": "shower",
         "ade20k_names": "shower",
         "freebase_mid": "/m/02f9f_",
@@ -7593,7 +7593,7 @@
         "wordnet_pwn30": ""
     },
     "sidewalk": {
-        "ade20k_id": "12",
+        "ade20k_id": 12,
         "ade20k_name": "sidewalk",
         "ade20k_names": "sidewalk;pavement",
         "cityscapes_id": 8,
@@ -7621,7 +7621,7 @@
         "wordnet_pwn30": "n03900750"
     },
     "signboard": {
-        "ade20k_id": "44",
+        "ade20k_id": 44,
         "ade20k_name": "signboard",
         "ade20k_names": "signboard;sign",
         "freebase_mid": "/m/0bkqqh",
@@ -7632,7 +7632,7 @@
         "wordnet_pwn30": "n04217882"
     },
     "sink": {
-        "ade20k_id": "48",
+        "ade20k_id": 48,
         "ade20k_name": "sink",
         "ade20k_names": "sink",
         "coco_boxable_name": "sink",
@@ -7722,7 +7722,7 @@
         "wordnet_pwn30": "n02445715"
     },
     "sky": {
-        "ade20k_id": "3",
+        "ade20k_id": 3,
         "ade20k_name": "sky",
         "ade20k_names": "sky",
         "cityscapes_id": 23,
@@ -7750,7 +7750,7 @@
         "wordnet_pwn30": "n09436708"
     },
     "skyscraper": {
-        "ade20k_id": "49",
+        "ade20k_id": 49,
         "ade20k_name": "skyscraper",
         "ade20k_names": "skyscraper",
         "freebase_mid": "/m/079cl",
@@ -7932,7 +7932,7 @@
         "wordnet_pwn30": "n03100346"
     },
     "soil": {
-        "ade20k_id": "95",
+        "ade20k_id": 95,
         "ade20k_name": "land",
         "ade20k_names": "land;ground;soil",
         "freebase_mid": "/m/09dv7",
@@ -8084,7 +8084,7 @@
         "wordnet_pwn30": "n02355227"
     },
     "staircase": {
-        "ade20k_id": "60",
+        "ade20k_id": 60,
         "ade20k_name": "stairway",
         "ade20k_names": "stairway;staircase",
         "context": "railings_and_stairs",
@@ -8093,7 +8093,7 @@
         "wordnet_pwn30": "n04298308"
     },
     "stairs": {
-        "ade20k_id": "54",
+        "ade20k_id": 54,
         "ade20k_name": "stairs",
         "ade20k_names": "stairs;steps",
         "coco_pano_id": 161,
@@ -8109,7 +8109,7 @@
         "wordnet_pwn30": "n04298171"
     },
     "stairstep": {
-        "ade20k_id": "122",
+        "ade20k_id": 122,
         "ade20k_name": "step",
         "ade20k_names": "step;stair",
         "context": "part_of_stairs",
@@ -8190,7 +8190,7 @@
         "wordnet_pwn30": "n04326547"
     },
     "stool": {
-        "ade20k_id": "111",
+        "ade20k_id": 111,
         "ade20k_name": "stool",
         "ade20k_names": "stool",
         "freebase_mid": "/m/0fqt361",
@@ -8219,7 +8219,7 @@
         "wordnet_pwn30": ""
     },
     "stove": {
-        "ade20k_id": "72",
+        "ade20k_id": 72,
         "ade20k_name": "stove",
         "ade20k_names": "stove;kitchen;stove;range;kitchen;range;cooking;stove",
         "wikidata_desc": "kitchen appliance designed for the purpose of cooking food",
@@ -8241,7 +8241,7 @@
         "wordnet_pwn30": "n07745940"
     },
     "streetlight": {
-        "ade20k_id": "88",
+        "ade20k_id": 88,
         "ade20k_name": "streetlight",
         "ade20k_names": "streetlight;street;lamp",
         "context": "object",
@@ -8457,7 +8457,7 @@
         "wordnet_pwn30": "n02807133"
     },
     "swimming_pool": {
-        "ade20k_id": "110",
+        "ade20k_id": 110,
         "ade20k_name": "swimming pool",
         "ade20k_names": "swimming;pool;swimming;bath;natatorium",
         "freebase_mid": "/m/0b_rs",
@@ -8490,7 +8490,7 @@
         "wordnet_pwn30": "n04371774"
     },
     "swivel_chair": {
-        "ade20k_id": "76",
+        "ade20k_id": 76,
         "ade20k_name": "swivel chair",
         "ade20k_names": "swivel;chair",
         "freebase_mid": "/m/0gq6kx",
@@ -8521,7 +8521,7 @@
         "wordnet_pwn30": "n04376876"
     },
     "table": {
-        "ade20k_id": "16",
+        "ade20k_id": 16,
         "ade20k_name": "table",
         "ade20k_names": "table",
         "coco_pano_id": 189,
@@ -8586,7 +8586,7 @@
         "wordnet_pwn30": "n07880751"
     },
     "tank": {
-        "ade20k_id": "123",
+        "ade20k_id": 123,
         "ade20k_name": "tank",
         "ade20k_names": "tank;storage;tank",
         "freebase_mid": "/m/07cmd",
@@ -8692,7 +8692,7 @@
         "wordnet_pwn30": "n04401088"
     },
     "television_set": {
-        "ade20k_id": "90",
+        "ade20k_id": 90,
         "ade20k_name": "television receiver",
         "ade20k_names": "television;television;receiver;television;set;tv;tv;set;idiot;box;boob;tube;telly;goggle;box",
         "coco_boxable_name": "tv",
@@ -8737,7 +8737,7 @@
         "wordnet_pwn30": "n04409806"
     },
     "tent": {
-        "ade20k_id": "115",
+        "ade20k_id": 115,
         "ade20k_name": "tent",
         "ade20k_names": "tent;collapsible;shelter",
         "coco_pano_id": 166,
@@ -8858,7 +8858,7 @@
         "wordnet_pwn30": "n04442312"
     },
     "toilet": {
-        "ade20k_id": "66",
+        "ade20k_id": 66,
         "ade20k_name": "toilet",
         "ade20k_names": "toilet;can;commode;crapper;pot;potty;stool;throne",
         "coco_boxable_name": "toilet",
@@ -8956,7 +8956,7 @@
         "wordnet_pwn30": "n01670092"
     },
     "towel": {
-        "ade20k_id": "82",
+        "ade20k_id": 82,
         "ade20k_name": "towel",
         "ade20k_names": "towel",
         "coco_pano_id": 168,
@@ -8973,7 +8973,7 @@
         "wordnet_pwn30": "n04459362"
     },
     "tower": {
-        "ade20k_id": "85",
+        "ade20k_id": 85,
         "ade20k_name": "tower",
         "ade20k_names": "tower",
         "freebase_mid": "/m/01fdzj",
@@ -8986,7 +8986,7 @@
         "wordnet_pwn30": "n04460130"
     },
     "toy": {
-        "ade20k_id": "109",
+        "ade20k_id": 109,
         "ade20k_name": "plaything",
         "ade20k_names": "plaything;toy",
         "freebase_mid": "/m/0138tl",
@@ -9007,7 +9007,7 @@
         "wordnet_pwn30": ""
     },
     "traffic_light": {
-        "ade20k_id": "137",
+        "ade20k_id": 137,
         "ade20k_name": "traffic light",
         "ade20k_names": "traffic;light;traffic;signal;stoplight",
         "cityscapes_id": 19,
@@ -9171,7 +9171,7 @@
         "wordnet_pwn30": "n04477387"
     },
     "tree": {
-        "ade20k_id": "5",
+        "ade20k_id": 5,
         "ade20k_name": "tree",
         "ade20k_names": "tree",
         "coco_pano_id": 184,
@@ -9245,7 +9245,7 @@
         "wordnet_pwn30": "n04489008"
     },
     "truck": {
-        "ade20k_id": "84",
+        "ade20k_id": 84,
         "ade20k_name": "truck",
         "ade20k_names": "truck;motortruck",
         "cityscapes_id": 27,
@@ -9372,6 +9372,8 @@
         "wordnet_pwn30": "n04509417"
     },
     "unlabeled": {
+        "ade20k_id": 0,
+        "ade20k_name": "unlabeled",
         "cityscapes_id": 0,
         "cityscapes_name": "unlabeled",
         "context": "void",
@@ -9410,7 +9412,7 @@
         "wordnet_pwn30": ""
     },
     "van": {
-        "ade20k_id": "103",
+        "ade20k_id": 103,
         "ade20k_name": "van",
         "ade20k_names": "van",
         "context": "vehicle",
@@ -9433,7 +9435,7 @@
         "wordnet_pwn30": "n04520170"
     },
     "vase": {
-        "ade20k_id": "136",
+        "ade20k_id": 136,
         "ade20k_name": "vase",
         "ade20k_names": "vase",
         "coco_boxable_name": "vase",
@@ -9494,7 +9496,7 @@
         "wordnet_pwn30": "n04524313"
     },
     "video_display": {
-        "ade20k_id": "142",
+        "ade20k_id": 142,
         "ade20k_name": "crt screen",
         "ade20k_names": "crt;screen",
         "obj365_boxable_name": "Moniter/TV",
@@ -9516,7 +9518,7 @@
         "wordnet_pwn30": "n04536866"
     },
     "vitrine": {
-        "ade20k_id": "56",
+        "ade20k_id": 56,
         "ade20k_name": "case",
         "ade20k_names": "case;display;case;showcase;vitrine",
         "freebase_mid": "/m/05b5b_f",
@@ -9560,7 +9562,7 @@
         "wordnet_pwn30": "n04542943"
     },
     "wall": {
-        "ade20k_id": "1",
+        "ade20k_id": 1,
         "ade20k_name": "wall",
         "ade20k_names": "wall",
         "cityscapes_id": 12,
@@ -9588,7 +9590,7 @@
         "wordnet_pwn30": "n04051825"
     },
     "wall_bracket": {
-        "ade20k_id": "135",
+        "ade20k_id": 135,
         "ade20k_name": "sconce",
         "ade20k_names": "sconce",
         "wikidata_desc": "type of light fixture affixed to a wall",
@@ -9607,7 +9609,7 @@
         "wordnet_pwn30": "n04548280"
     },
     "wardrobe": {
-        "ade20k_id": "36",
+        "ade20k_id": 36,
         "ade20k_name": "wardrobe",
         "ade20k_names": "wardrobe;closet;press",
         "context": "furniture",
@@ -9620,7 +9622,7 @@
         "wordnet_pwn30": "n04550184"
     },
     "washing_machine": {
-        "ade20k_id": "108",
+        "ade20k_id": 108,
         "ade20k_name": "washer",
         "ade20k_names": "washer;automatic;washer;washing;machine",
         "freebase_mid": "/m/0174k2",
@@ -9635,7 +9637,7 @@
         "wordnet_pwn30": "n04554684"
     },
     "waste_container": {
-        "ade20k_id": "139",
+        "ade20k_id": 139,
         "ade20k_name": "ashcan",
         "ade20k_names": "ashcan;trash;can;garbage;can;wastebin;ash;bin;ash-bin;ashbin;dustbin;trash;barrel;trash;bin",
         "freebase_mid": "/m/0bjyj5",
@@ -9669,7 +9671,7 @@
         "wordnet_pwn30": "n04555897"
     },
     "water": {
-        "ade20k_id": "22",
+        "ade20k_id": 22,
         "ade20k_name": "water",
         "ade20k_names": "water",
         "coco_pano_id": 178,
@@ -9695,7 +9697,7 @@
         "wordnet_pwn30": "n04530566"
     },
     "waterfall": {
-        "ade20k_id": "114",
+        "ade20k_id": 114,
         "ade20k_name": "waterfall",
         "ade20k_names": "waterfall;falls",
         "freebase_mid": "/m/0j2kx",
@@ -9791,7 +9793,7 @@
         "wordnet_pwn30": "n12724942"
     },
     "window": {
-        "ade20k_id": "9",
+        "ade20k_id": 9,
         "ade20k_name": "windowpane",
         "ade20k_names": "windowpane;window",
         "coco_pano_id": 181,
@@ -9808,7 +9810,7 @@
         "wordnet_pwn30": "n04587648"
     },
     "window_blind": {
-        "ade20k_id": "64",
+        "ade20k_id": 64,
         "ade20k_name": "blind",
         "ade20k_names": "blind;screen",
         "coco_pano_id": 180,
