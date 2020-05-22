@@ -272,7 +272,7 @@ def wikidata_from_name(name, context = None):
     return d0
 
 unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
-                    'coco_pano_id','mvs_pano_id','cityscapes_pano_id', 'mvs_name','cityscapes_name',
+                    'coco_pano_id','mvd_pano_id','cityscapes_pano_id', 'mvd_name','cityscapes_name',
                     'scannet_name', 'ade20k_id', 'wilddash_name', 'wilddash_pano_id']
 check_dubl = {p:{} for p in unique_id_params}
 

@@ -43,7 +43,7 @@ else
 	rm wd_cookies_auth.txt
 	rm wd_login_page.html
 fi
-# will download "wd_val_01.zip (122MB)"
+# will download "wilddash2p0alpha_public.zip" (2.4GB)
 wget --no-check-certificate --continue --load-cookies $WILDDASH_COOKIE_FILE --content-disposition $WILDDASH_GT_ZIP_URL
 
 echo "WildDash v2 alpha dataset downloaded."

@@ -7,7 +7,7 @@ import os, sys, argparse, json, csv, time
 dataset_names = {"ade20k_id":"ade20k-151",
                  "coco_pano_id":"coco-panoptic-201",
                  "kitti_pano_id":"kitti-34",
-                 "mvs_pano_id":"mapillary-public66",
+                 "mvd_pano_id":"mapillary-public66",
                  "scannet_pano_id":"scannet-20",
                  "key":"rvc_uint8"}
 

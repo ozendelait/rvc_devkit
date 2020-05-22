@@ -27,7 +27,7 @@ Now you can execute the download script ``` download_inst_segm.sh ``` or ``` dow
 You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
 https://www.mapillary.com/dataset/vistas
 
-You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvs.
+You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvd.
 
 After successfully downloading all datasets, execute this script to extract and delete clean up files:  ``` extract_and_cleanup_inst_segm.sh ``` or ```extract_and_cleanup_panoptic_segm.sh ```
 

@@ -79,7 +79,7 @@ def main(argv=sys.argv[1:]):
                 if len(s)  == 0:
                     continue
                 s = s.lower().strip()
-                if not s in src_cats: #quick fix for mix of supercategory and name tag in some mvs json file; mix of name/id in oid cat. file
+                if not s in src_cats: #quick fix for mix of supercategory and name tag in some mvd json file; mix of name/id in oid cat. file
                     check_cat =  "freebase_id" if "freebase_id" in annot['categories'][0] else 'supercategory'
                     pot_supcat = [c['name'].lower().strip() for c in annot['categories'] if c.get(check_cat,'') == s]
                     if len(pot_supcat) == 1:

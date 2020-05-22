@@ -77,7 +77,7 @@ dog	unlabeled	dog	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 donut	unlabeled	donut	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 door	unlabeled	door-stuff	unlabeled	unlabeled	unlabeled	door	unlabeled	unlabeled
 double_door	door	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-drinking_glass	glass	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
+drinking_glass	glass	wine glass	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 dynamic	unlabeled	unlabeled	dynamic	dynamic		unlabeled	ambiguous	dynamic
 ego	unlabeled	unlabeled	ego vehicle	ego vehicle	void--ego-vehicle	unlabeled	unlabeled	ego vehicle
 electric_fan	fan	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled

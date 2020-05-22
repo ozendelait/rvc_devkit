@@ -18,7 +18,7 @@ and https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-labe
 Boxable COCO labels compiled by github user amikelive: https://github.com/amikelive/coco-labels/blob/master/coco-labels-2014_2017.txt
 Official COCO panoptic label list: https://raw.githubusercontent.com/cocodataset/panopticapi/master/panoptic_coco_categories.json
 
-Labels for MVS, Cityscapes, Scannet, WildDash v2 supplied by respective dataset providers.
+Labels for MVD, Cityscapes, Scannet, WildDash v2 supplied by respective dataset providers.
 
 Special thanks for supporting label merging efforts go to:
 

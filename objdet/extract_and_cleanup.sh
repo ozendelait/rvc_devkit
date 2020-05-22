@@ -55,8 +55,8 @@ do
 done
 popd
 
-unzip ${RVC_EXTR_ROOT_DIR}/mvs/mapillary-vistas-dataset_public_v1.1.zip -d ${RVC_EXTR_ROOT_DIR}/mvs/
-rm ${RVC_EXTR_ROOT_DIR}/mvs/mapillary-vistas-dataset_public_v1.1.zip
+unzip ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.2.zip -d ${RVC_EXTR_ROOT_DIR}/mvd/
+rm ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.2.zip
 
 RVC_EXTR_ROOT_DIR=
 RVC_CONFIRM_EXTR=

@@ -53,11 +53,11 @@ rm ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip
 unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
 rm ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip
 
-unzip ${RVC_EXTR_ROOT_DIR}/mvs/mapillary-vistas-dataset_public_v1.1.zip -d ${RVC_EXTR_ROOT_DIR}/mvs/
-rm ${RVC_EXTR_ROOT_DIR}/mvs/mapillary-vistas-dataset_public_v1.1.zip
+unzip ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.2.zip -d ${RVC_EXTR_ROOT_DIR}/mvd/
+rm ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.2.zip
 
 unzip ${RVC_EXTR_ROOT_DIR}/wilddash/wilddash2p0alpha_public.zip -d ${RVC_EXTR_ROOT_DIR}/wilddash/
-rm ${RVC_EXTR_ROOT_DIR}/mvs/wilddash2p0alpha_public.zip
+rm ${RVC_EXTR_ROOT_DIR}/wilddash/wilddash2p0alpha_public.zip
 
 RVC_EXTR_ROOT_DIR=
 RVC_CONFIRM_EXTR=

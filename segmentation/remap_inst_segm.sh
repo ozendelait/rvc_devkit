@@ -64,21 +64,21 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/oid_inst.rvc_train.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/validation/panoptic/panoptic_2018.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/validation/panoptic/panoptic_2018.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
-                        --mapping_row mvs_inst_name \
-                        --image_root_rel $RVC_DATA_SRC_DIR/mvs/validation/images \
-                        --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/validation/panoptic \
+                        --mapping_row mvd_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/mvd/validation/images \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/mvd/validation/panoptic \
                         --void_id 0 \
-                        --output $RVC_DATA_TRG_DIR/mvs_inst.rvc_val.json
+                        --output $RVC_DATA_TRG_DIR/mvd_inst.rvc_val.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/training/panoptic/panoptic_2018.json  \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/training/panoptic/panoptic_2018.json  \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
-                        --mapping_row mvs_inst_name \
-                        --image_root_rel $RVC_DATA_SRC_DIR/mvs/training/images  \
-                        --annotation_root_rel $RVC_DATA_SRC_DIR/mvs/training/panoptic \
+                        --mapping_row mvd_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/mvd/training/images  \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/mvd/training/panoptic \
                         --void_id 0 \
-                        --output $RVC_DATA_TRG_DIR/mvs_inst.rvc_train.json
+                        --output $RVC_DATA_TRG_DIR/mvd_inst.rvc_train.json
 
 python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/viper/train/pano.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
@@ -132,9 +132,9 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --output $RVC_DATA_TRG_DIR/cs_inst.rvc_val.json
                         
 pushd $RVC_DATA_TRG_DIR
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;wd2_inst.rvc_val.json;cs_inst.rvc_val.json;viper_inst.rvc_val.json;mvs_inst.rvc_val.json;oid_inst.rvc_val.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;wd2_inst.rvc_val.json;cs_inst.rvc_val.json;viper_inst.rvc_val.json;mvd_inst.rvc_val.json;oid_inst.rvc_val.json" \
        --output joined_val_inst.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;kitti_inst.rvc_train.json;cs_inst.rvc_train.json;viper_inst.rvc_train.json;mvs_inst.rvc_train.json;oid_inst.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;kitti_inst.rvc_train.json;cs_inst.rvc_train.json;viper_inst.rvc_train.json;mvd_inst.rvc_train.json;oid_inst.rvc_train.json" \
        --output joined_train_inst.json
 popd
 
