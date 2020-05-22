@@ -24,7 +24,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_train_pan
   if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
   # getting defined version of openimages2coco repo
     git -C $RVC_OBJ_DET_SCRIPT_DIR clone https://github.com/bethgelab/openimages2coco.git 
-    git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout 76511c894a20d095531facfea3de769d4b92e235
+    git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout f7fd8bca686146d8ecc4a6080a6c10756053f703
     git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco apply $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco.patch
   fi
   

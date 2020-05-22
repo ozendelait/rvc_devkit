@@ -1,5 +1,5 @@
 #!/bin/sh
-# Converts GT from VIPER into COCO format
+# Converts GT from MVD into COCO format
 # requires python and theses packages:
 # pip install numpy
 # pip install tqdm

@@ -1,5 +1,5 @@
 diff --git a/utils.py b/utils.py
-index ec678ee..5aec330 100644
+index b56aa35..67daed0 100644
 --- a/utils.py
 +++ b/utils.py
 @@ -230,9 +230,14 @@ def convert_segmentation_annotations(original_segmentations, images, categories,
@@ -15,10 +15,10 @@ index ec678ee..5aec330 100644
 +              subfolder_add = 'train_'+mask_file[pos_last_sl+1]
 +              mask_file = os.path.join(mask_file[:pos_last_sl],subfolder_add,mask_file[pos_last_sl+1:])
              mask = io.imread(mask_file)# load png
-             mask = mask // 255 # set to [0,1]
-             mask = mask * segment["SegmentID"]
-@@ -274,7 +279,12 @@ def convert_segmentation_annotations(original_segmentations, images, categories,
-             print("Not in pixel values: {}".format(not_in_values))
+             # exclude empty masks
+             if np.max(mask) == 0:
+@@ -279,7 +284,12 @@ def convert_segmentation_annotations(original_segmentations, images, categories,
+             continue
  
          combined_rgb_mask = _id_to_rgb(combined_binary_mask)
 -        out_file = os.path.join(segmentation_out_dir, "{}.png".format(ann['image_id']))
