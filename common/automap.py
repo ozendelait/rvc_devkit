@@ -272,8 +272,9 @@ def wikidata_from_name(name, context = None):
     return d0
 
 unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
-                    'coco_pano_id','mvd_pano_id','cityscapes_pano_id', 'mvd_name','cityscapes_name',
-                    'scannet_name', 'ade20k_id', 'wilddash_name', 'wilddash_pano_id']
+                    'coco_pano_id','mvd_pano_id','cityscapes_id', 'mvd_name','cityscapes_name',
+                    'scannet_name', 'ade20k_id', 'wilddash_name', 'wilddash_pano_id',
+                    'viper_id', 'viper_name', 'viper_inst_id', 'viper_pano_id', 'ade20k_name']
 check_dubl = {p:{} for p in unique_id_params}
 
 def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True):
@@ -309,14 +310,44 @@ def main(argv=sys.argv[1:]):
             check_for_dublicates(key, vals)
 
     if len(args.append_file) > 0 and os.path.exists(args.append_file):
-        is_csv_format =  args.append_file[-4:] == ".csv"
-        if is_csv_format:
+        is_names_txt_format = args.append_file[-9:] == "names.txt"
+        is_csv_format = args.append_file[-4:] == ".csv"
+        if is_names_txt_format:
+            with open(args.append_file, newline='\n') as ifile:
+                appendf = [l.strip() for l in ifile.readlines()]
+        elif is_csv_format:
             with open(args.append_file, newline='') as ifile:
                 appendf = list(csv.reader(ifile))
         else:
             with open(args.append_file, 'r') as ifile:
                 appendf = json.load(ifile)
-        if is_csv_format and "/m/" in appendf[0][0]:
+        if is_names_txt_format: #load/compare mseg supplied names
+            dsname_old = os.path.basename(args.append_file).split('-')[0].replace("mapillary","mvd")
+            dsname_new = os.path.basename(args.append_file).split('_')[0]
+            for idx0, name in enumerate(appendf):
+                key = None
+                corr_name = dsname_old+'_name' if dsname_old+'_name' in check_dubl else dsname_old+'_pano_name'
+                checkids = [dsname_old+'_id', dsname_old+'_inst_id', dsname_old+'_pano_id', corr_name]
+                for checkid in checkids:
+                    if not checkid in check_dubl or (not idx0 in check_dubl[checkid] and not name in check_dubl[checkid]):
+                        continue
+                    if key is None:
+                        key = check_dubl[checkid].get(idx0, check_dubl[checkid].get(name, None))
+                    elif key != check_dubl[checkid][idx0]:
+                        print("Warning: Multiple entries for same key!", key, check_dubl[checkid][idx0], name)
+                    checkentry = joined_label_space[key]
+                    if checkentry[corr_name] != name:
+                        print("Warning: Names mismatch:", check_dubl[checkid][idx0], checkentry[dsname_old+'_name'], name)
+                    continue
+                if key is None:
+                    key = unify_namings(name)
+                if not key in joined_label_space:
+                    print("Adding: "+key+ " for ", name)
+                    joined_label_space[key] = {}
+                trg_entry = joined_label_space[key]
+                #trg_entry.update({dsname_new+"_name":name})
+                trg_entry.update({corr_name:name, checkids[0]:idx0})
+        elif is_csv_format and "/m/" in appendf[0][0]:
             #oid_file
             for (mid, name) in appendf:
                 if mid in check_dubl['freebase_mid']:
@@ -417,7 +448,6 @@ def main(argv=sys.argv[1:]):
                     joined_label_space[key] = {}
                 trg_entry = joined_label_space[key]
                 trg_entry.update({'ade20k_names':names,'ade20k_id':idx0})
-
 
     #automatically adds qids
     for key, vals in joined_label_space.items():
