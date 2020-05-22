@@ -9,12 +9,7 @@
 
 
 RVC_SEGM_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-# All data is downloaded to subfolders of RVC_DATA_DIR; if this is not defined: use the root dir + /datasets
-if [ -z "${RVC_DATA_DIR}" ]; then
-  RVC_DATA_SRC_DIR=${RVC_SEGM_SCRIPT_DIR}/../datasets/
-else
-  RVC_DATA_SRC_DIR=${RVC_DATA_DIR}/
-fi
+RVC_MVD_SRC_DIR=${1}
   
 #check if MVD has already been converted 
 if [ ! -f "$RVC_DATA_SRC_DIR/mvd/panoptic/coco/training.json" ]; then
@@ -28,12 +23,12 @@ if [ ! -f "$RVC_DATA_SRC_DIR/mvd/panoptic/coco/training.json" ]; then
   fi
 
   pushd ${RVC_SEGM_SCRIPT_DIR}/seamseg/scripts/data_preparation
-    python prepare_vistas.py ${RVC_DATA_SRC_DIR}/mvd ${RVC_DATA_SRC_DIR}/mvd/panoptic
+    python prepare_vistas.py ${RVC_MVD_SRC_DIR} ${RVC_MVD_SRC_DIR}/panoptic
   popd
 fi
 
 
-RVC_DATA_SRC_DIR=
+RVC_MVD_SRC_DIR=
 RVC_SEGM_SCRIPT_DIR=
 
 echo "Finished converting."
