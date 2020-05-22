@@ -72,5 +72,4 @@ dependencies:
     - ujson==2.0.3
     - umsgpack==0.1.0
     - urllib3==1.25.9
-prefix: C:\Users\zendelo\AppData\Local\opt\ait\thirdparty\Miniconda3\envs\rvcseg
 
