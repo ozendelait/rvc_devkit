@@ -27,18 +27,25 @@ if [ ! -d $RVC_SEM_SEG_SCRIPT_DIR/mseg_api ]; then
   pip install -e $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
 fi
 
-if [ -f "$RVC_DATA_SRC_DIR/wilddash/panoptic_0.json" ]; then
-  #Creates random split for train/val (currently no specific split supplied)
-  python $RVC_OBJ_DET_SCRIPT_DIR/../common/rvc_split_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json --split "80;20"
-fi
+pushd $RVC_SEM_SEG_SCRIPT_DIR/../common
+  if [ -f "$RVC_DATA_SRC_DIR/wilddash/panoptic_0.json" ]; then
+    #Creates random split for train/val (currently no specific split supplied)
+    python rvc_split_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json --split "80;20"
+  fi
+
+  #add missing rvc datasets to mseg api
+  python rvc_add_dataset_mseg.py --panoptic_json ${RVC_DATA_SRC_DIR}/wilddash/panoptic_{split_idx}.json --orig_dname wilddash2-rvc --img_subfolder images --annot_subfolder panoptic
+  python rvc_add_dataset_mseg.py --panoptic_json ${RVC_DATA_SRC_DIR}/viper/{split}/pano.json --orig_dname viper-rvc --img_subfolder {split}/img/{file_name[0]}{file_name[1]}{file_name[2]}  --annot_subfolder panoptic {split}/pano/{file_name[0]}{file_name[1]}{file_name[2]}
 
 
-pushd $RVC_SEM_SEG_SCRIPT_DIR/
-  RVC_COMMON_CONV_PARAMS="--remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy"
-  python ./mseg_helpers/rvc_remap_dataset.py --orig_dname ade20k-151 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 $RVC_COMMON_CONV_PARAMS
-  python ./mseg_helpers/rvc_remap_dataset.py --orig_dname kitti-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/kitti $RVC_COMMON_CONV_PARAMS
-  python ./mseg_helpers/rvc_remap_dataset.py --orig_dname cityscapes-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/cityscapes $RVC_COMMON_CONV_PARAMS
-  python ./mseg_helpers/rvc_remap_dataset.py --orig_dname coco-panoptic-201 --orig_dataroot ${RVC_DATA_SRC_DIR}/coco --panoptic_json "${RVC_DATA_SRC_DIR}/coco/annotations/panoptic_{split}2017.json" $RVC_COMMON_CONV_PARAMS
+  RVC_COMMON_CONV_PARAMS="--remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ${RVC_SEM_SEG_SCRIPT_DIR}/ss_mapping_uint8_mseg.tsv --create_symlink_cpy"
+  python rvc_remap_dataset_mseg.py --orig_dname ade20k-151 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 $RVC_COMMON_CONV_PARAMS
+  python rvc_remap_dataset_mseg.py --orig_dname kitti-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/kitti $RVC_COMMON_CONV_PARAMS
+  python rvc_remap_dataset_mseg.py --orig_dname cityscapes-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/cityscapes $RVC_COMMON_CONV_PARAMS
+  python rvc_remap_dataset_mseg.py --orig_dname coco-panoptic-201 --orig_dataroot ${RVC_DATA_SRC_DIR}/coco --panoptic_json "${RVC_DATA_SRC_DIR}/coco/annotations/panoptic_{split}2017.json" $RVC_COMMON_CONV_PARAMS
+  python rvc_remap_dataset_mseg.py --orig_dname viper-rvc-32 --orig_dataroot ${RVC_DATA_SRC_DIR}/viper --panoptic_json "${RVC_DATA_SRC_DIR}/viper/{split}/pano.json" $RVC_COMMON_CONV_PARAMS
+  python rvc_remap_dataset_mseg.py --orig_dname wilddash2-rvc-39 --orig_dataroot ${RVC_DATA_SRC_DIR}/wilddash --panoptic_json "${RVC_DATA_SRC_DIR}/wilddash/panoptic_{split_idx}.json" $RVC_COMMON_CONV_PARAMS
+
 popd
 
 RVC_DATA_TRG_DIR=

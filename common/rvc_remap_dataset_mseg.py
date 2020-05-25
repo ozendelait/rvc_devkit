@@ -59,14 +59,14 @@ def remap_dataset(
 	"""
 	# form one-way mapping between IDs
 	tconv = TaxonomyConverter(train_datasets=[dname],test_datasets=[],tsv_fpath=tsv_fpath)
-	for split in ['train', 'val']:
+	for split_idx,split in enumerate(['train', 'val']):
 		panoptic_json_content = None
 		orig_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(dname, split)
 		if not panoptic_json_path is None:
-			with open(panoptic_json_path.format(split=split), 'r') as ifile:
+			with open(panoptic_json_path.format(split=split, split_idx=str(split_idx)), 'r') as ifile:
 				json_cont = json.load(ifile)
 			panoptic_json_content = {a["file_name"]:a for a in json_cont["annotations"]}
-			if dname[:4] == "coco":
+			if dname[:4] == "coco": #hacky  needed for inplace coco support
 				orig_relative_img_label_pairs = [[fix_path_coco_inplace(p[0]),fix_path_coco_inplace(p[1])] for p in orig_relative_img_label_pairs]
 		basedir = 'images/' + split + '/' + dname
 		img_subdirs = list(set([os.path.dirname(p[0]) for p in orig_relative_img_label_pairs]))

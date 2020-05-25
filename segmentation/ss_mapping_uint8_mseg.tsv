@@ -1,4 +1,4 @@
-universal	ade20k-151	coco-panoptic-201	cityscapes-34	kitti-34	mapillary-public66	scannet-41	viper-32	wilddash_pano_id
+universal	ade20k-151	coco-panoptic-201	cityscapes-34	kitti-34	mapillary-public66	scannet-41	viper-rvc-32	wilddash2-rvc-39
 airplane	airplane	airplane	unlabeled	unlabeled	unlabeled	unlabeled	plane	unlabeled
 animal	animal	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	animal	unlabeled
 apple	unlabeled	apple	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
@@ -205,7 +205,7 @@ stone_wall	unlabeled	wall-stone	unlabeled	unlabeled	unlabeled	unlabeled	unlabele
 stool	stool	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 stop_sign	unlabeled	stop sign	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 stove	stove	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
-streetlight	streetlight	unlabeled	unlabeled	unlabeled	object--street-light	unlabeled	unlabeled	streetlight
+streetlight	streetlight	unlabeled	unlabeled	unlabeled	object--street-light	unlabeled	unlabeled	street-light
 striped_crosswalk	unlabeled	unlabeled	unlabeled	unlabeled	marking--crosswalk-zebra	unlabeled	unlabeled	unlabeled
 suitcase	unlabeled	suitcase	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
 surfboard	unlabeled	surfboard	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled
