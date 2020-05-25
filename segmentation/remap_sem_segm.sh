@@ -27,6 +27,12 @@ if [ ! -d $RVC_SEM_SEG_SCRIPT_DIR/mseg_api ]; then
   pip install -e $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
 fi
 
+if [ -f "$RVC_DATA_SRC_DIR/wilddash/panoptic_0.json" ]; then
+  #Creates random split for train/val (currently no specific split supplied)
+  python $RVC_OBJ_DET_SCRIPT_DIR/../common/rvc_split_coco.py --input $RVC_DATA_SRC_DIR/wilddash/panoptic.json --split "80;20"
+fi
+
+
 pushd $RVC_SEM_SEG_SCRIPT_DIR/
   RVC_COMMON_CONV_PARAMS="--remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy"
   python ./mseg_helpers/rvc_remap_dataset.py --orig_dname ade20k-151 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 $RVC_COMMON_CONV_PARAMS
