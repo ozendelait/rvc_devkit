@@ -5,13 +5,16 @@ import argparse, os, sys, subprocess, json
 import imageio
 import numpy as np
 import torch
-from typing import Any, List, Mapping, Tuple
+from typing import Any, List, Mapping, Tuple, Optional
 
 
 from mseg.utils.multiprocessing_utils import send_list_to_workers
 from mseg.utils.txt_utils import generate_all_img_label_pair_relative_fpaths
 from mseg.utils.dir_utils import create_leading_fpath_dirs
 from mseg.taxonomy.taxonomy_converter import TaxonomyConverter
+from mseg.utils.names_utils import load_dataset_colors_arr
+from mseg.utils.cv2_utils import cv2_imread_rgb
+from mseg.utils.mask_utils import rgb_img_to_obj_cls_img
 
 segmentation_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../segmentation/"))
 RVC_TRAIN_DATASETS = ["ade20k-151", "kitti-34"]
@@ -39,7 +42,8 @@ def remap_dataset(
 	remapped_dataroot: str,
 	panoptic_json_path: str,
 	num_processes: int = 4,
-    create_symlink_cpy = False):
+	create_symlink_cpy:bool = False,
+	convert_label_from_rgb: bool = False):
 	"""
 	Given path to a dataset, given names of _names.txt
 	Remap according to the provided tsv.
@@ -59,6 +63,8 @@ def remap_dataset(
 	"""
 	# form one-way mapping between IDs
 	tconv = TaxonomyConverter(train_datasets=[dname],test_datasets=[],tsv_fpath=tsv_fpath)
+	dataset_colors = load_dataset_colors_arr(dname) if convert_label_from_rgb else None
+
 	for split_idx,split in enumerate(['train', 'val']):
 		panoptic_json_content = None
 		orig_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(dname, split)
@@ -88,7 +94,8 @@ def remap_dataset(
 			panoptic_json_content = panoptic_json_content,
 			old_dataroot=old_dataroot,
 			new_dataroot=remapped_dataroot,
-			dname = dname)
+			dname = dname,
+			dataset_colors=dataset_colors)
 
 def relabel_pair_worker(
 	orig_pairs: List[Tuple[str,str]], 
@@ -112,6 +119,7 @@ def relabel_pair_worker(
 	remapped_pairs = kwargs['remapped_relative_img_label_pairs']
 	dname = kwargs['dname']
 	tax_converter  = kwargs['tax_converter']
+	dataset_colors = kwargs['dataset_colors']
 	panoptic_json_content  = kwargs['panoptic_json_content']
 
 	chunk_sz = end_idx - start_idx
@@ -126,7 +134,7 @@ def relabel_pair_worker(
 		if not panoptic_json_content is None:
 			entry =  panoptic_json_content.get(orig_pair[1], panoptic_json_content[os.path.basename(orig_pair[1])])
 			segm_to_class = {s['id']:s['category_id'] for s in entry["segments_info"]}
-		relabel_pair(old_dataroot, new_dataroot, orig_pair, remapped_pair, dname, tax_converter, segm_to_class)
+		relabel_pair(old_dataroot, new_dataroot, orig_pair, remapped_pair, dname, tax_converter, segm_to_class, dataset_colors)
 
 def relabel_pair(
 	old_dataroot: str,
@@ -135,7 +143,8 @@ def relabel_pair(
 	remapped_pair: Tuple[str,str],
 	dname: str,
 	tax_converter: TaxonomyConverter,
-	segm_to_class: Mapping[int, int]):
+	segm_to_class: Mapping[int, int],
+	dataset_colors: Optional[np.ndarray] = None):
 	"""
 	No need to copy the RGB files again. We just update the label file paths.
 
@@ -158,7 +167,13 @@ def relabel_pair(
 		print("Warning: File "+old_label_fpath+" not found!")
 		return
 
-	label_img = imageio.imread(old_label_fpath)
+	if dataset_colors is None:
+		label_img = imageio.imread(old_label_fpath)
+	else:
+		# remap from RGB encoded labels to 1-channel class indices
+		label_img_rgb = cv2_imread_rgb(old_label_fpath)
+		label_img = rgb_img_to_obj_cls_img(label_img_rgb, dataset_colors)
+
 	if not segm_to_class is None:
 		label_img_id = label_img[:, :, 0] + (label_img[:, :, 1] * 256) + (label_img[:, :, 2] * 256 ** 2)
 		label_img = np.ones(label_img.shape[:2],dtype=np.uint8)*255 #initialize with unlabeled
@@ -193,6 +208,8 @@ if __name__ == '__main__':
 		help="data root where remapped dataset will be saved")
 	parser.add_argument("--create_symlink_cpy", action="store_true",
 		help="Create symlink copy of images for relabeled dataset.")
+	parser.add_argument("--convert_label_from_rgb", action="store_true",
+		help="If original dataset labels are stored as RGB images.")
 
 	args = parser.parse_args()
 
@@ -204,5 +221,6 @@ if __name__ == '__main__':
 		args.remapped_dataroot,
 		args.panoptic_json,
 		args.num_processes,
-		args.create_symlink_cpy
+		args.create_symlink_cpy,
+		args.convert_label_from_rgb
 	)
