@@ -1,4 +1,4 @@
-universal	ade20k-151	coco-panoptic-201	cityscapes_pano_id	kitti-34	mapillary-public66	scannet-41	viper-32	wilddash_pano_id
+universal	ade20k-151	coco-panoptic-201	cityscapes-34	kitti-34	mapillary-public66	scannet-41	viper-32	wilddash_pano_id
 airplane	airplane	airplane	unlabeled	unlabeled	unlabeled	unlabeled	plane	unlabeled
 animal	animal	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	animal	unlabeled
 apple	unlabeled	apple	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled	unlabeled

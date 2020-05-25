@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #based on https://github.com/mseg-dataset/mseg-api/blob/master/mseg/label_preparation/remap_dataset.py
 
-import argparse, os, sys, subprocess
+import argparse, os, sys, subprocess, json
 import imageio
 import numpy as np
 import torch
@@ -34,6 +34,7 @@ def remap_dataset(
 	tsv_fpath: str,
 	old_dataroot: str,
 	remapped_dataroot: str,
+	panoptic_json: str,
 	num_processes: int = 4,
     create_symlink_cpy = False):
 	"""
@@ -46,6 +47,7 @@ def remap_dataset(
 		-	tsv_fpath: string representing path to a .tsv file
 		-	old_dataroot: string representing path to original dataset
 		-	remapped_dataroot: string representing path at which to new dataset
+		-   panoptic_json: string representing path to coco-style json file
 		-	num_processes: integer representing number of workers to exploit
 		-   create_symlink_cpy: adds symbolic links for images in the same folder structure as annotations
 
@@ -149,12 +151,70 @@ def relabel_pair(
 	remapped_img  = remapped_img.numpy().astype(dtype=np.uint8)
 	imageio.imwrite(new_label_fpath, remapped_img)
 
+#tool called once per dataset and is added to mseg repo
+def json_to_namestxt(json_path, new_name, trg_root_dir, count_classes = True):
+	with open(json_path, 'r') as ifile:
+		loadedj = json.load(ifile)
+
+	if count_classes:
+		colors = {}
+		names = {}
+		for id0, lab0 in enumerate(loadedj["categories"]):
+			id0 = int(lab0["id"])
+			names[id0] = lab0["name"]
+			colors[id0] = lab0["color"]
+		maxnum = max(names.keys())+1
+		if not "unlabeled" in names.values():
+			maxnum+=1 #add one entry for unlabeled
+		trg_dir = os.path.join(trg_root_dir, new_name+"-%i"%maxnum)
+		if not os.path.exists(trg_dir):
+			os.makedirs(trg_dir)
+		names = [names.get(i,"unlabeled") for i in range(maxnum)]
+		colors = [colors.get(i,[0,0,0]) for i in range(maxnum)]
+		with open(os.path.join(trg_dir, new_name+"-%i_names.txt"%maxnum),'w', newline='\n') as savename:
+			savename.write('\n'.join(names) + '\n')
+		with open(os.path.join(trg_dir, new_name+"-%i_colors.txt"%maxnum),'w', newline='\n') as savecol:
+			savecol.write('\n'.join(['%i %i %i'%(c[0],c[1],c[2]) for c in colors]) + '\n')
+	else:
+		trg_dir = trg_root_dir
+
+	fn_images = {i['id']: i['file_name'] for i in loadedj["images"]}
+	annots = {}
+	subdirs_total = json_path.replace('\\','/').split('/')[:-1]
+	subdir_add_both = "" if subdirs_total[-1] == new_name else '/'.join(subdirs_total[subdirs_total.index(new_name)+1:])+'/'
+	subdir_annot = subdir_add_both+os.path.basename(json_path).replace(".json","")+'/'
+	subdir_img = subdir_add_both+'images/'
+	needs_added_folder = (new_name == "viper") #needs folder before underscore
+	if not os.path.exists(subdir_img):
+		subdir_img = subdir_add_both + 'img/'
+	for a in loadedj["annotations"]:
+		added_folder = ""
+		if needs_added_folder:
+			added_folder = a["file_name"].split('_')[0]+'/'
+		a_fn = subdir_annot+added_folder+a["file_name"]
+		i_fn = subdir_img+added_folder+fn_images[a["image_id"]]
+		annots[i_fn] = a_fn
+
+	trg_name = "train.txt" if "train" in json_path else "val.txt"
+	trg_path = os.path.join(trg_dir, "list", trg_name)
+	if not os.path.exists(os.path.dirname(trg_path)):
+		os.makedirs(os.path.dirname(trg_path))
+
+	with open(trg_path, 'w', newline='\n') as savelist:
+		savelist.write('\n'.join(['%s %s'% (p, annots[p]) for p in sorted(annots.keys())]) + '\n')
 
 if __name__ == '__main__':
 	"""
 	For PASCAL-Context-460, there is an explicit unlabeled class
 	(class 0) so we don't include unlabeled=255 from source.
 	"""
+	#trg_dir = json_to_namestxt(os.path.join(os.environ['RVC_DATA_DIR'], "viper", "train" ,"pano.json"), "viper",
+	#				 segmentation_rvc_subfolder + "/../mseg_api/mseg/dataset_lists")
+	#trg_dir = json_to_namestxt(os.path.join(os.environ['RVC_DATA_DIR'], "viper", "val", "pano.json"), "viper",
+	#							  trg_dir)
+
+	#json_to_namestxt(os.path.join(os.environ['RVC_DATA_DIR'],"wilddash","panoptic.json"), "wilddash2",
+	#				segmentation_rvc_subfolder+"/../mseg_api/mseg/dataset_lists")
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--orig_dname", type=str, required=True, 
 		help="original dataset's name")
@@ -162,6 +222,8 @@ if __name__ == '__main__':
 		help="path to original data root")
 	parser.add_argument("--remapped_dataroot", type=str, required=True, 
 		help="data root where remapped dataset will be saved")
+	parser.add_argument("--panoptic_json", type=str, default=None,
+		help="path to json containing the png segm. id -> class id mapping")
 	parser.add_argument("--num_processes", type=int, default=4,
 		help="Number of cores available on machine (more->faster remapping)")
 	parser.add_argument("--mapping_tsv", type=str, default=os.path.join(segmentation_rvc_subfolder,'ss_mapping_uint8_mseg.tsv'),
@@ -177,6 +239,7 @@ if __name__ == '__main__':
 		args.mapping_tsv,
 		args.orig_dataroot,
 		args.remapped_dataroot,
+		args.panoptic_json,
 		args.num_processes,
 		args.create_symlink_cpy
 	)
