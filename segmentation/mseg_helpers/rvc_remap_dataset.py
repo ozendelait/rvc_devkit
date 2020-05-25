@@ -1,0 +1,182 @@
+#!/usr/bin/python3
+#based on https://github.com/mseg-dataset/mseg-api/blob/master/mseg/label_preparation/remap_dataset.py
+
+import argparse, os, sys, subprocess
+import imageio
+import numpy as np
+import torch
+from typing import Any, List, Mapping, Tuple
+
+
+from mseg.utils.multiprocessing_utils import send_list_to_workers
+from mseg.utils.txt_utils import generate_all_img_label_pair_relative_fpaths
+from mseg.utils.dir_utils import create_leading_fpath_dirs
+from mseg.taxonomy.taxonomy_converter import TaxonomyConverter
+
+segmentation_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../segmentation/"))
+RVC_TRAIN_DATASETS = ["ade20k-151", "kitti-34"]
+
+#creates a symbolic link / junction at dst pointing at directory src
+def unpriv_symb_link(src, dst):
+	if not os.path.exists(src) or os.path.exists(dst):
+		return
+	parent_dir = os.path.dirname(dst)
+	if not os.path.exists(parent_dir):
+		os.makedirs(parent_dir)
+	if sys.platform.startswith('win'): #symlinks need admin rights, junctions don't
+		subprocess.check_call('mklink /J "%s" "%s"' % (dst, src), shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+	else:
+		os.symlink(src, dst, target_is_directory=True)
+
+
+def remap_dataset(
+	dname: str,
+	tsv_fpath: str,
+	old_dataroot: str,
+	remapped_dataroot: str,
+	num_processes: int = 4,
+    create_symlink_cpy = False):
+	"""
+	Given path to a dataset, given names of _names.txt
+	Remap according to the provided tsv.
+	(also account for the fact that 255 is always unlabeled)
+
+		Args:
+		-	dname: string representing name of taxonomy for original dataset
+		-	tsv_fpath: string representing path to a .tsv file
+		-	old_dataroot: string representing path to original dataset
+		-	remapped_dataroot: string representing path at which to new dataset
+		-	num_processes: integer representing number of workers to exploit
+		-   create_symlink_cpy: adds symbolic links for images in the same folder structure as annotations
+
+		Returns:
+		-	None
+	"""
+	# form one-way mapping between IDs
+	tconv = TaxonomyConverter(train_datasets=[dname],test_datasets=[],tsv_fpath=tsv_fpath)
+	for split in ['train', 'val']:
+		orig_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(dname, split)
+		basedir = 'images/' + split + '/' + dname
+		img_subdirs = list(set([os.path.dirname(p[0]) for p in orig_relative_img_label_pairs]))
+		img_dir_remapping = {}
+		for d in img_subdirs:
+			img_dir_remapping[d] = basedir if len(img_subdirs) == 1 else basedir + '/' + d.replace('/color','')
+			if create_symlink_cpy:
+				unpriv_symb_link(old_dataroot + '/' + d, remapped_dataroot + '/' + img_dir_remapping[d])
+		remapped_relative_img_label_pairs = [
+			(img_dir_remapping[os.path.dirname(p[0])]+'/'+os.path.basename(p[0]), img_dir_remapping[os.path.dirname(p[0])].replace('images','annotations')+'/'+os.path.basename(p[0]).replace('.jpg','.png')) for p in
+			orig_relative_img_label_pairs]
+
+		send_list_to_workers(
+			num_processes=num_processes, 
+			list_to_split=orig_relative_img_label_pairs, 
+			worker_func_ptr=relabel_pair_worker,
+			remapped_relative_img_label_pairs=remapped_relative_img_label_pairs,
+			tax_converter=tconv,
+			old_dataroot=old_dataroot,
+			new_dataroot=remapped_dataroot,
+			dname = dname)
+
+def relabel_pair_worker(
+	orig_pairs: List[Tuple[str,str]], 
+	start_idx: int, 
+	end_idx: int, 
+	kwargs: Mapping[str, Any] ) -> None:
+	"""	Given a list of (rgb image, label image) pairs to remap, call relabel_pair()
+		on each one of them.
+
+		Args:
+		-	orig_pairs: list of strings
+		-	start_idx: integer
+		-	end_idx: integer
+		-	kwargs: dictionary with argument names mapped to argument values
+
+		Returns:
+		-	None
+	"""
+	old_dataroot = kwargs['old_dataroot']
+	new_dataroot = kwargs['new_dataroot']
+	remapped_pairs = kwargs['remapped_relative_img_label_pairs']
+	dname = kwargs['dname']
+	tax_converter  = kwargs['tax_converter']
+
+	chunk_sz = end_idx - start_idx
+	# process each image between start_idx and end_idx
+	for idx in range(start_idx, end_idx):
+		if idx % 1000 == 0:
+			pct_completed = (idx-start_idx)/chunk_sz*100
+			print(f'Completed {pct_completed:.2f}%')
+		orig_pair = orig_pairs[idx]
+		remapped_pair = remapped_pairs[idx]
+		relabel_pair(old_dataroot, new_dataroot, orig_pair, remapped_pair, dname, tax_converter)
+
+
+def relabel_pair(
+	old_dataroot: str,
+	new_dataroot: str, 
+	orig_pair: Tuple[str,str], 
+	remapped_pair: Tuple[str,str],
+	dname: str,
+	tax_converter: TaxonomyConverter):
+	"""
+	No need to copy the RGB files again. We just update the label file paths.
+
+		Args:
+		-	old_dataroot:
+		-	new_dataroot: 
+		-	orig_pair: Tuple containing relative path to RGB image and label image
+		-	remapped_pair: Tuple containing relative path to RGB image and label image
+		-	label_mapping_arr: 
+		-	dataset_colors:
+
+		Returns:
+		-	None
+	"""
+	_, orig_rel_label_fpath = orig_pair
+	_, remapped_rel_label_fpath = remapped_pair
+
+	old_label_fpath = f'{old_dataroot}/{orig_rel_label_fpath}'
+	if not os.path.exists(old_label_fpath):
+		print("Warning: File "+old_label_fpath+" not found!")
+		return
+
+	label_img = imageio.imread(old_label_fpath)
+	labels = torch.tensor(label_img, dtype= torch.int64)
+	remapped_img = tax_converter.transform_label(labels, dname)
+
+	new_label_fpath = f'{new_dataroot}/{remapped_rel_label_fpath}'
+	create_leading_fpath_dirs(new_label_fpath)
+	remapped_img  = remapped_img.numpy().astype(dtype=np.uint8)
+	imageio.imwrite(new_label_fpath, remapped_img)
+
+
+if __name__ == '__main__':
+	"""
+	For PASCAL-Context-460, there is an explicit unlabeled class
+	(class 0) so we don't include unlabeled=255 from source.
+	"""
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--orig_dname", type=str, required=True, 
+		help="original dataset's name")
+	parser.add_argument("--orig_dataroot", type=str, required=True, 
+		help="path to original data root")
+	parser.add_argument("--remapped_dataroot", type=str, required=True, 
+		help="data root where remapped dataset will be saved")
+	parser.add_argument("--num_processes", type=int, default=4,
+		help="Number of cores available on machine (more->faster remapping)")
+	parser.add_argument("--mapping_tsv", type=str, default=os.path.join(segmentation_rvc_subfolder,'ss_mapping_uint8_mseg.tsv'),
+		help="data root where remapped dataset will be saved")
+	parser.add_argument("--create_symlink_cpy", action="store_true",
+		help="Create symlink copy of images for relabeled dataset.")
+
+	args = parser.parse_args()
+
+	print('Remapping Parameters: ', args)
+	remap_dataset(
+		args.orig_dname,
+		args.mapping_tsv,
+		args.orig_dataroot,
+		args.remapped_dataroot,
+		args.num_processes,
+		args.create_symlink_cpy
+	)

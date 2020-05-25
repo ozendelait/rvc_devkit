@@ -22,14 +22,15 @@ mkdir -p ${RVC_DATA_TRG_DIR}
 if [ ! -d $RVC_SEM_SEG_SCRIPT_DIR/mseg_api ]; then
   # getting defined version of mseg repo
   git -C $RVC_SEM_SEG_SCRIPT_DIR clone https://github.com/mseg-dataset/mseg-api.git $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
-  git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api checkout 29f40956abd227aa7d454f05cd8f007de0d12a09
+  git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api checkout 7e72a0f4cfb002786b10f2918ead916d0e2bc22d
   git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api apply $RVC_SEM_SEG_SCRIPT_DIR/mseg_api.patch
   pip install -e $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
 fi
 
 pushd $RVC_SEM_SEG_SCRIPT_DIR/
-  python ./mseg-api/mseg/label_preparation/remap_dataset.py --orig_dname ade20k-151 --remapped_dname rvc_uint8 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy
-  python ./mseg-api/mseg/label_preparation/remap_dataset.py --orig_dname kitti-34 --remapped_dname rvc_uint8 --orig_dataroot ${RVC_DATA_SRC_DIR}/kitti --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy
+  
+  python ./mseg-api/mseg/label_preparation/rvc_remap_dataset.py --orig_dname ade20k-151 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy
+  python ./mseg-api/mseg/label_preparation/rvc_remap_dataset.py --orig_dname kitti-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/kitti --remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ./ss_mapping_uint8_mseg.tsv --create_symlink_cpy
 popd
 
 RVC_DATA_TRG_DIR=
