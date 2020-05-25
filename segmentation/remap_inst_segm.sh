@@ -19,8 +19,6 @@ else
 fi
 
 
-#TODO: Scannet
-
 #convert oid gt
 $RVC_OBJ_DET_SCRIPT_DIR/../objdet/convert_oid_coco.sh
 
@@ -131,10 +129,30 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --void_id 0 \
                         --output $RVC_DATA_TRG_DIR/cs_inst.rvc_val.json
                         
+#Creates random split for train/val (currently no specific split supplied)
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/rvc_split_coco.py --input $RVC_DATA_SRC_DIR/scannet/scannet_panoptic.json --split "80;20" --output $RVC_DATA_SRC_DIR/scannet/instances.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/scannet/instances_0.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row wilddash_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/scannet/scannet_frames_25k \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/scannet/scannet_panoptic \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/scannet_inst.rvc_train.json
+
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/scannet/instances_1.json \
+                        --mapping $RVC_OBJ_DET_SCRIPT_DIR/inst_mapping.csv \
+                        --mapping_row wilddash_inst_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/scannet/scannet_frames_25k \
+                        --annotation_root_rel $RVC_DATA_SRC_DIR/scannet/scannet_panoptic \
+                        --void_id 0 \
+                        --output $RVC_DATA_TRG_DIR/scannet_inst.rvc_val.json
+
+                        
 pushd $RVC_DATA_TRG_DIR
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;wd2_inst.rvc_val.json;cs_inst.rvc_val.json;viper_inst.rvc_val.json;mvd_inst.rvc_val.json;oid_inst.rvc_val.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_val.json;wd2_inst.rvc_val.json;cs_inst.rvc_val.json;viper_inst.rvc_val.json;mvd_inst.rvc_val.json;oid_inst.rvc_val.json;scannet_inst.rvc_val.json" \
        --output joined_val_inst.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;kitti_inst.rvc_train.json;cs_inst.rvc_train.json;viper_inst.rvc_train.json;mvd_inst.rvc_train.json;oid_inst.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_inst.rvc_train.json;wd2_inst.rvc_train.json;kitti_inst.rvc_train.json;cs_inst.rvc_train.json;viper_inst.rvc_train.json;mvd_inst.rvc_train.json;oid_inst.rvc_train.json;scannet_inst.rvc_train.json" \
        --output joined_train_inst.json
 popd
 

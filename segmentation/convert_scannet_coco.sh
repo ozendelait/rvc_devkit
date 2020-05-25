@@ -27,7 +27,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_train_pan
   
   #remapping Scannet format to COCO
   pushd $RVC_SCANNET_CONV_SCRIPT_DIR
-    python convert2panoptic.py --dataset-folder ${RVC_DATA_SRC_DIR} --output-folder ${RVC_DATA_TRG_DIR}
+    python convert2panoptic.py --dataset-folder ${RVC_DATA_SRC_DIR}/scannet_frames_25k/ --output-folder ${RVC_DATA_TRG_DIR}
   popd
   RVC_SCANNET_CONV_SCRIPT_DIR=
 fi

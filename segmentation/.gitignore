@@ -6,3 +6,4 @@ cityscapesScripts
 openimages2coco
 mseg_api
 seamseg
+conv_scannet
