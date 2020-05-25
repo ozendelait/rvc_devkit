@@ -31,7 +31,7 @@ You will receive an email with download instructions. Save/Move the downloaded z
 
 After successfully downloading all datasets, execute this script to extract and delete clean up files: ```extract_and_cleanup_panoptic_segm.sh ```, ``` extract_and_cleanup_inst_segm.sh ```, or ```extract_and_cleanup_sem_segm.sh ```
 
-### Dataset remapping ###
+## Dataset remapping ###
 
 RVC does not force you to remap the datasets in a certain way. We do provide a "best-effort" mapping, which can be a good starting point. This mapping will contain overlapping classes and some dataset entries might miss relevant labels (as they were annotated using different policies/mixed hierarchical  levels). Combine and remap datasets by executing the script 
 
