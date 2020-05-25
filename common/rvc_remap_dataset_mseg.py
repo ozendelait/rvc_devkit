@@ -78,7 +78,7 @@ def remap_dataset(
 		img_subdirs = list(set([os.path.dirname(p[0]) for p in orig_relative_img_label_pairs]))
 		img_dir_remapping = {}
 		for d in img_subdirs:
-			img_dir_remapping[d] = basedir if len(img_subdirs) == 1 else basedir + '/' + d.replace('/color','')
+			img_dir_remapping[d] = basedir if len(img_subdirs) == 1 else basedir + '/' + d.replace('/color','').replace('/leftImg8bit','')
 			if create_symlink_cpy:
 				unpriv_symb_link(old_dataroot + '/' + d, remapped_dataroot + '/' + img_dir_remapping[d])
 		remapped_relative_img_label_pairs = [
