@@ -1,4 +1,4 @@
-key,coco_pano_name,cityscapes_pano_name,kitti_pano_name,mvs_pano_name,viper_pano_name,wilddash_pano_name
+key,coco_pano_name,cityscapes_pano_name,kitti_pano_name,mvd_pano_name,viper_pano_name,wilddash_pano_name
 airplane,airplane,,,,plane,
 animal,,,,,animal,
 apple,apple,,,,,

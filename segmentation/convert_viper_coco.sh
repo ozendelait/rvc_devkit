@@ -11,7 +11,7 @@ else
 fi
 
 #check if VIPER has already been converted 
-if [ ! -f "$RVC_DATA_SRC_DIR/viper/train/pano/annotations.json" ]; then
+if [ ! -f "$RVC_DATA_SRC_DIR/viper/train/pano.json" ]; then
   echo "Converting VIPER training data to COCO format..."
 
   pushd ${RVC_SEGM_SCRIPT_DIR}/legacy/
@@ -19,7 +19,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/viper/train/pano/annotations.json" ]; then
   popd
 fi
 
-if [ ! -f "$RVC_DATA_SRC_DIR/viper/val/pano/annotations.json" ]; then
+if [ ! -f "$RVC_DATA_SRC_DIR/viper/val/pano.json" ]; then
   echo "Converting VIPER validation data to COCO format..."
 
   pushd ${RVC_SEGM_SCRIPT_DIR}/legacy/

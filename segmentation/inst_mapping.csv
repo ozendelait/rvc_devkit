@@ -1,4 +1,4 @@
-key,oid_inst_leaf,coco_inst_name,cityscapes_inst_name,mvs_inst_name,scannet_inst_name,viper_inst_name,kitti_inst_name,wilddash_inst_name
+key,oid_inst_leaf,coco_inst_name,cityscapes_inst_name,mvd_inst_name,scannet_inst_name,viper_inst_name,kitti_inst_name,wilddash_inst_name
 adhesive_tape,/m/03m3vtv,,,,,,,
 airplane,/m/0cmf2,airplane,,,,plane,,
 alarm_clock,/m/046dlr,,,,,,,

@@ -1,0 +1,33 @@
+diff --git a/utils.py b/utils.py
+index b56aa35..67daed0 100644
+--- a/utils.py
++++ b/utils.py
+@@ -230,9 +230,14 @@ def convert_segmentation_annotations(original_segmentations, images, categories,
+         ann['image_id'] = img['id']
+         ann['segments_info'] = []
+         masks = []
++        subfolder_add = None
+         for segment in img_segment_map[img['id']]:
+             # collect mask
+             mask_file = _get_mask_file(segment, original_mask_dir)
++            if not os.path.exists(mask_file):
++              pos_last_sl = mask_file.rfind('/')
++              subfolder_add = 'train_'+mask_file[pos_last_sl+1]
++              mask_file = os.path.join(mask_file[:pos_last_sl],subfolder_add,mask_file[pos_last_sl+1:])
+             mask = io.imread(mask_file)# load png
+             # exclude empty masks
+             if np.max(mask) == 0:
+@@ -279,7 +284,12 @@ def convert_segmentation_annotations(original_segmentations, images, categories,
+             continue
+ 
+         combined_rgb_mask = _id_to_rgb(combined_binary_mask)
+-        out_file = os.path.join(segmentation_out_dir, "{}.png".format(ann['image_id']))
++        segmentation_out_dir_use = segmentation_out_dir
++        if not subfolder_add is None:
++          segmentation_out_dir_use = os.path.join(segmentation_out_dir, subfolder_add)
++          if not os.path.exists(segmentation_out_dir_use):
++            os.mkdir(segmentation_out_dir_use)
++        out_file = os.path.join(segmentation_out_dir_use, "{}.png".format(ann['image_id']))
+         with warnings.catch_warnings():
+             warnings.simplefilter("ignore")
+             io.imsave(out_file, combined_rgb_mask)

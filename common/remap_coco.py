@@ -14,6 +14,11 @@ def get_relative_path(root_rel, trg_dir):
         root_rel = root_rel[:pos_slash]
     return  root_rel, os.path.relpath(root_rel, os.path.dirname(trg_dir)).replace('\\','/') + recover_curly + '/' #use only unix-style slashes
 
+def fix_missing_slash(path0):
+    if not path0 is None and path0[-1] != '/' and path0[-1] != '\\':
+        path0 += '/'
+    return path0
+
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', type=str, 
@@ -41,15 +46,13 @@ def main(argv=sys.argv[1:]):
 
     parser.set_defaults(do_merging=False, reduce_boxable=False, reduce_pano=False)
     args = parser.parse_args(argv)
-
     if not args.image_root_rel is None:
         args.image_root_rel, args.image_root = get_relative_path(args.image_root_rel, args.output)
     if not args.annotation_root_rel is None:
-        args.annotation_root, args.image_root = get_relative_path(args.annotation_root_rel, args.output)
+        args.annotation_root_rel, args.annotation_root = get_relative_path(args.annotation_root_rel, args.output)
 
-    if not args.annotation_root is None:
-        if args.annotation_root[-1] != '/' and args.annotation_root[-1] != '\\':
-            args.annotation_root += '/'
+    fix_missing_slash(args.image_root)
+    fix_missing_slash(args.annotation_root)
 
     print("Loading source annotation file " + args.input + "...")
     annot = rvc_json_helper.load_json(args.input)
@@ -76,7 +79,7 @@ def main(argv=sys.argv[1:]):
                 if len(s)  == 0:
                     continue
                 s = s.lower().strip()
-                if not s in src_cats: #quick fix for mix of supercategory and name tag in some mvs json file; mix of name/id in oid cat. file
+                if not s in src_cats: #quick fix for mix of supercategory and name tag in some mvd json file; mix of name/id in oid cat. file
                     check_cat =  "freebase_id" if "freebase_id" in annot['categories'][0] else 'supercategory'
                     pot_supcat = [c['name'].lower().strip() for c in annot['categories'] if c.get(check_cat,'') == s]
                     if len(pot_supcat) == 1:
