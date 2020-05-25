@@ -19,14 +19,6 @@ else
 fi
 mkdir -p ${RVC_DATA_TRG_DIR}
 
-if [ ! -d $RVC_SEM_SEG_SCRIPT_DIR/mseg_api ]; then
-  # getting defined version of mseg repo
-  git -C $RVC_SEM_SEG_SCRIPT_DIR clone https://github.com/mseg-dataset/mseg-api.git $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
-  git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api checkout 7e72a0f4cfb002786b10f2918ead916d0e2bc22d
-  git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api apply $RVC_SEM_SEG_SCRIPT_DIR/mseg_api.patch
-  pip install -e $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
-fi
-
 pushd $RVC_SEM_SEG_SCRIPT_DIR/../common
   if [ -f "$RVC_DATA_SRC_DIR/wilddash/panoptic_0.json" ]; then
     #Creates random split for train/val (currently no specific split supplied)

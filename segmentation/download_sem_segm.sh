@@ -2,7 +2,7 @@
 # Downloads all semantic segmentation datasets for RVC
 # requires awscli, this can be installed using 
 # pip install awscli
-#
+# furthermore requires mseg-api ( https://github.com/mseg-dataset/mseg-api ) which needs amoung other things pytorch.
 # (use gitbash for MS Windows)
 
 RVC_DOWNL_SEM_SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -11,6 +11,14 @@ if [ -z "${RVC_DATA_DIR}" ]; then
   RVC_DOWNL_SEM_TRG_DIR=${RVC_OID_SCRIPT_DIR}/../datasets/
 else
   RVC_DOWNL_SEM_TRG_DIR=${RVC_DATA_DIR}/
+fi
+
+if [ ! -d $RVC_SEM_SEG_SCRIPT_DIR/mseg_api ]; then
+  # getting defined version of mseg repo
+  git -C $RVC_SEM_SEG_SCRIPT_DIR clone https://github.com/mseg-dataset/mseg-api.git $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
+  git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api checkout 7e72a0f4cfb002786b10f2918ead916d0e2bc22d
+  git -C $RVC_SEM_SEG_SCRIPT_DIR/mseg_api apply $RVC_SEM_SEG_SCRIPT_DIR/mseg_api.patch
+  pip install -e $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
 fi
 
 ${RVC_DOWNL_SEM_SCRIPT_DIR}/download_coco_pano.sh

@@ -1,4 +1,4 @@
-# Robust Vision Challenge 2020 - Panoptic and Instance Segmentation Devkit #
+# Robust Vision Challenge 2020 - Panoptic, Instance, and Semantic Segmentation Devkit #
 
 ## Dataset Download ##
 
@@ -22,24 +22,24 @@ export WILDDASH_USERNAME="your_wd_username"
 export WILDDASH_PASSWORD="your_wd_passwd"
 ```
 
-Now you can execute the download script ``` download_inst_segm.sh ``` or ``` download_panoptic_segm.sh ``` which will download most of the RVC datasets.
+Now you can execute the download script ``` download_panoptic_segm.sh ```, ``` download_inst_segm.sh ```, ``` download_sem_segm.sh ``` or which will download most of the RVC datasets.
 
 You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
 https://www.mapillary.com/dataset/vistas
 
 You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvd.
 
-After successfully downloading all datasets, execute this script to extract and delete clean up files:  ``` extract_and_cleanup_inst_segm.sh ``` or ```extract_and_cleanup_panoptic_segm.sh ```
+After successfully downloading all datasets, execute this script to extract and delete clean up files: ```extract_and_cleanup_panoptic_segm.sh ```, ``` extract_and_cleanup_inst_segm.sh ```, or ```extract_and_cleanup_sem_segm.sh ```
 
 ### Dataset remapping ###
 
 RVC does not force you to remap the datasets in a certain way. We do provide a "best-effort" mapping, which can be a good starting point. This mapping will contain overlapping classes and some dataset entries might miss relevant labels (as they were annotated using different policies/mixed hierarchical  levels). Combine and remap datasets by executing the script 
 
- ``` remap_inst_segm.sh ``` or  ``` remap_panoptic_segm.sh ```
+ ``` remap_panoptic_segm.sh ```,  ``` remap_inst_segm.sh ```, or ``` remap_sem_segm.sh ```
 
 ## Dataset Format ##
 
-The above step creates a joint training and a separate joint validation json file in COCO Panoptic format:
+For semantic segmentation, this creates two folders (train and val) at ``` ${RVC_DATA_DIR}/rvc_uint8 ``` with uint8 png annotation files and a symbolic-linked image folders with the same structure as the annotations. For the other two tasks, the above step creates a joint training and a separate joint validation json file in COCO Panoptic format:
 
 http://cocodataset.org/#format-data
 
