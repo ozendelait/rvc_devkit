@@ -9,8 +9,6 @@ The devkits make it easy to participate in the challenge by:
 
 Any updates to the devkits will be provided via this repository.
 
-Still unsupport and under development: Semantic Segmentation Task; OID & ScanNet for Instance Segmentation; KITTI & VIPER for Instance Segmentation and Panoptic Segmentation
-
 Notice that using the devkits is not required for participating in the
 challenge: alternatively, algorithms can be manually run on each dataset and
 results submitted to all benchmarks individually (as long as the same method and
