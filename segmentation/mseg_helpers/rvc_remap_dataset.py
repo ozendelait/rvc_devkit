@@ -28,13 +28,16 @@ def unpriv_symb_link(src, dst):
 	else:
 		os.symlink(src, dst, target_is_directory=True)
 
+#rvc uses in-place coco transformation
+def fix_path_coco_inplace(path0):
+	return path0.replace('semantic_annotations201/','annotations/panoptic_')
 
 def remap_dataset(
 	dname: str,
 	tsv_fpath: str,
 	old_dataroot: str,
 	remapped_dataroot: str,
-	panoptic_json: str,
+	panoptic_json_path: str,
 	num_processes: int = 4,
     create_symlink_cpy = False):
 	"""
@@ -47,7 +50,7 @@ def remap_dataset(
 		-	tsv_fpath: string representing path to a .tsv file
 		-	old_dataroot: string representing path to original dataset
 		-	remapped_dataroot: string representing path at which to new dataset
-		-   panoptic_json: string representing path to coco-style json file
+		-   panoptic_json_path: string representing path to coco-style json file
 		-	num_processes: integer representing number of workers to exploit
 		-   create_symlink_cpy: adds symbolic links for images in the same folder structure as annotations
 
@@ -57,7 +60,14 @@ def remap_dataset(
 	# form one-way mapping between IDs
 	tconv = TaxonomyConverter(train_datasets=[dname],test_datasets=[],tsv_fpath=tsv_fpath)
 	for split in ['train', 'val']:
+		panoptic_json_content = None
 		orig_relative_img_label_pairs = generate_all_img_label_pair_relative_fpaths(dname, split)
+		if not panoptic_json_path is None:
+			with open(panoptic_json_path.format(split=split), 'r') as ifile:
+				json_cont = json.load(ifile)
+			panoptic_json_content = {a["file_name"]:a for a in json_cont["annotations"]}
+			if dname[:4] == "coco":
+				orig_relative_img_label_pairs = [[fix_path_coco_inplace(p[0]),fix_path_coco_inplace(p[1])] for p in orig_relative_img_label_pairs]
 		basedir = 'images/' + split + '/' + dname
 		img_subdirs = list(set([os.path.dirname(p[0]) for p in orig_relative_img_label_pairs]))
 		img_dir_remapping = {}
@@ -75,6 +85,7 @@ def remap_dataset(
 			worker_func_ptr=relabel_pair_worker,
 			remapped_relative_img_label_pairs=remapped_relative_img_label_pairs,
 			tax_converter=tconv,
+			panoptic_json_content = panoptic_json_content,
 			old_dataroot=old_dataroot,
 			new_dataroot=remapped_dataroot,
 			dname = dname)
@@ -101,6 +112,7 @@ def relabel_pair_worker(
 	remapped_pairs = kwargs['remapped_relative_img_label_pairs']
 	dname = kwargs['dname']
 	tax_converter  = kwargs['tax_converter']
+	panoptic_json_content  = kwargs['panoptic_json_content']
 
 	chunk_sz = end_idx - start_idx
 	# process each image between start_idx and end_idx
@@ -110,8 +122,11 @@ def relabel_pair_worker(
 			print(f'Completed {pct_completed:.2f}%')
 		orig_pair = orig_pairs[idx]
 		remapped_pair = remapped_pairs[idx]
-		relabel_pair(old_dataroot, new_dataroot, orig_pair, remapped_pair, dname, tax_converter)
-
+		segm_to_class = None
+		if not panoptic_json_content is None:
+			entry =  panoptic_json_content.get(orig_pair[1], panoptic_json_content[os.path.basename(orig_pair[1])])
+			segm_to_class = {s['id']:s['category_id'] for s in entry["segments_info"]}
+		relabel_pair(old_dataroot, new_dataroot, orig_pair, remapped_pair, dname, tax_converter, segm_to_class)
 
 def relabel_pair(
 	old_dataroot: str,
@@ -119,7 +134,8 @@ def relabel_pair(
 	orig_pair: Tuple[str,str], 
 	remapped_pair: Tuple[str,str],
 	dname: str,
-	tax_converter: TaxonomyConverter):
+	tax_converter: TaxonomyConverter,
+	segm_to_class: Mapping[int, int]):
 	"""
 	No need to copy the RGB files again. We just update the label file paths.
 
@@ -143,6 +159,12 @@ def relabel_pair(
 		return
 
 	label_img = imageio.imread(old_label_fpath)
+	if not segm_to_class is None:
+		label_img_id = label_img[:, :, 0] + (label_img[:, :, 1] * 256) + (label_img[:, :, 2] * 256 ** 2)
+		label_img = np.ones(label_img.shape[:2],dtype=np.uint8)*255 #initialize with unlabeled
+		for src, dst in segm_to_class.items():
+			label_img[label_img_id == src] = dst
+
 	labels = torch.tensor(label_img, dtype= torch.int64)
 	remapped_img = tax_converter.transform_label(labels, dname)
 
