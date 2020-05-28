@@ -65,8 +65,8 @@ rm ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip
 unzip ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_25k.zip -d ${RVC_EXTR_ROOT_DIR}/scannet
 rm ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_25k.zip
 mkdir -p ${RVC_EXTR_ROOT_DIR}/scannet/bench
-unzip ${RVC_EXTR_ROOT_DIR}/scannet/scenes_test.zip -d ${RVC_EXTR_ROOT_DIR}/scannet/bench
-rm ${RVC_EXTR_ROOT_DIR}/scannet/scenes_test.zip
+unzip ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_test.zip -d ${RVC_EXTR_ROOT_DIR}/scannet/bench
+rm ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_test.zip
 
 unzip ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip -d ${RVC_EXTR_ROOT_DIR}/mvd/
 rm ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip
