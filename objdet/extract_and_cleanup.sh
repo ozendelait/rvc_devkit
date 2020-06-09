@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Downloads the open image dataset
 # requires awscli, this can be installed using 
 # pip install awscli
@@ -38,7 +38,7 @@ rm ${RVC_EXTR_ROOT_DIR}/coco/annotations_trainval2017.zip
 
 echo "Extracting OID"
 pushd ${RVC_EXTR_ROOT_DIR}/oid
-for onetarfile in *.tar
+for onetarfile in *.tar.gz
 do
   echo "Extracting tar file $onetarfile..."
   tar xf $onetarfile -C ${RVC_EXTR_ROOT_DIR}/oid && rm $onetarfile
@@ -47,10 +47,10 @@ popd
 
 echo "Extracting Obj365"
 pushd ${RVC_EXTR_ROOT_DIR}/objects365
-for onetarfile in *.tar
+for onetarfile in *.tar.gz
 do
   echo "Extracting tar file $onetarfile..."
-  # tar file comes with a objects365 root folder
+  # tar file comes with an objects365 root folder
   tar xf $onetarfile -C ${RVC_EXTR_ROOT_DIR} && rm $onetarfile
 done
 popd
