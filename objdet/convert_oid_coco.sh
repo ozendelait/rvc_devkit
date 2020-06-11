@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Converts GT from OID into COCO format
 # requires git, python and pycocotools which can be installed via:
 # pip install pycocotools
