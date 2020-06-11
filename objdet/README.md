@@ -1,5 +1,11 @@
 # Robust Vision Challenge 2020 - Object Detection Devkit #
 
+The Object detection challenge consists of four datasets:
+- [MS COCO](cocodataset.org/)
+- [OpenImages](https://storage.googleapis.com/openimages/web/index.html) (OID)
+- [Objects365](objects365.org)
+- [Mapillary Vistas](https://www.mapillary.com/dataset/vistas) (MVD)
+
 ## Dataset Download ##
 
 We provide a devkit to download, extract, and convert the challenge datasets into a unified format.
@@ -7,20 +13,21 @@ This is done by first specifying the target root directory for all RVC datasets 
 
  ``` export RVC_DATA_DIR=/path/to/rvc_dataroot  ```
 
-Now you can execute the download script ``` download_obj_det.sh ``` which will download most of the RVC datasets.
+Now you can execute the download script ``` bash download_obj_det.sh ``` which will download most of the RVC datasets.
+The extracted dataset needs xxxx GB of disk space (COCO: 26GB, OID: 527GB, Objects365: 394GB, MVD: 25GB). Please note that up to 50% more disc space is required during the extraction process.
 
 You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
 https://www.mapillary.com/dataset/vistas
 
 You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvd.
 
-After successfully downloading all datasets, execute this script to extract and delete clean up files:  ``` extract_and_cleanup.sh ``` 
+After successfully downloading all datasets, execute this script to extract and delete clean up files:  ``` bash extract_and_cleanup.sh ``` 
 
 ### Dataset remapping ###
 
 RVC does not force you to remap the datasets in a certain way. We do provide a "best-effort" mapping, which can be a good starting point. This mapping will contain overlapping classes and some dataset entries might miss relevant labels (as they were annotated using different policies/mixed hierarchical  levels). Combine and remap datasets by executing the script 
 
- ``` remap_obj_det.sh ```
+ ```bash remap_obj_det.sh ```
 
 ## Dataset Format / Training ##
 
