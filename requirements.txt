@@ -1,0 +1,6 @@
+requests
+imageio
+scipy
+awscli
+ujson
+tqdm

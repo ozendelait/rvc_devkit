@@ -6,6 +6,11 @@ The Object detection challenge consists of four datasets:
 - [Objects365](objects365.org)
 - [Mapillary Vistas](https://www.mapillary.com/dataset/vistas) (MVD)
 
+## Requirements ##
+Install additional requirements with:
+    ``` pip install -r requirements.txt ```
+
+
 ## Dataset Download ##
 
 We provide a devkit to download, extract, and convert the challenge datasets into a unified format.
