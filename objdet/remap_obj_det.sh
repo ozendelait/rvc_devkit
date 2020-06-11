@@ -69,7 +69,7 @@ python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DI
                         --reduce_boxable \
                         --output $RVC_DATA_TRG_DIR/oid_boxable.rvc_train.json
 
-python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/validationpanoptic/panoptic_2018.json \
+python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/validation/panoptic/panoptic_2018.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                         --mapping_row mvd_boxable_name \
                         --image_root_rel $RVC_DATA_SRC_DIR/mvd/validation/images \
