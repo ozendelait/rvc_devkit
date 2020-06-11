@@ -29,7 +29,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_train_bbo
   
   #remapping OID format to COCO
   pushd $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/
-  python convert.py --path $RVC_DATA_SRC_DIR/oid/ --version challenge_2019
+  python3 convert.py --path $RVC_DATA_SRC_DIR/oid/ --version challenge_2019
   popd
 fi
 
