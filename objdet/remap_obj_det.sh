@@ -80,8 +80,14 @@ if [ ! -f "$RVC_DATA_TRG_DIR/oid_boxable.rvc_train.json" ]; then
                             --output $RVC_DATA_TRG_DIR/oid_boxable.rvc_train.json
 fi
 
+
+if [ ! -f "$RVC_DATA_SRC_DIR/mvd/annotations/boxes_val_2018.json" ]; then
+    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/convert_coco_panoptic_bbox.py --input $RVC_DATA_SRC_DIR/mvd/validation/panoptic/panoptic_2018.json \
+                            --output $RVC_DATA_SRC_DIR/mvd/annotations/boxes_val_2018.json
+fi
+
 if [ ! -f "$RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json" ]; then
-    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/validation/panoptic/panoptic_2018.json \
+    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR//mvd/annotations/boxes_val_2018.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row mvd_boxable_name \
                             --image_root_rel $RVC_DATA_SRC_DIR/mvd/validation/images \
@@ -90,8 +96,13 @@ if [ ! -f "$RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json" ]; then
                             --output $RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json
 fi
 
+if [ ! -f "$RVC_DATA_SRC_DIR/mvd/annotations/boxes_train_2018.json" ]; then
+    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/convert_coco_panoptic_bbox.py --input $RVC_DATA_SRC_DIR/mvd/training/panoptic/panoptic_2018.json \
+                            --output $RVC_DATA_SRC_DIR/mvd/annotations/boxes_train_2018.json
+fi
+
 if [ ! -f "$RVC_DATA_TRG_DIR/mvd_boxable.rvc_train.json" ]; then
-    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/training/panoptic/panoptic_2018.json \
+    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/annotations/boxes_train_2018.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row mvd_boxable_name \
                             --image_root_rel $RVC_DATA_SRC_DIR/mvd/training/images  \
