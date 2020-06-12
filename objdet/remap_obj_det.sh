@@ -21,25 +21,25 @@ fi
 #convert oid gt
 $RVC_OBJ_DET_SCRIPT_DIR/convert_oid_coco.sh
 
-if [ ! -f "$RVC_DATA_TRG_DIR/coco_boxable.rvc_val.json" ]; then
+#if [ ! -f "$RVC_DATA_TRG_DIR/coco_boxable.rvc_val.json" ]; then
     python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_val2017.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row coco_boxable_name \
-                            --image_root_rel $RVC_DATA_SRC_DIR/coco/images \
+                            --image_root_rel $RVC_DATA_SRC_DIR/coco/images/val2017 \
                             --void_id 0 \
                             --reduce_boxable \
                             --output $RVC_DATA_TRG_DIR/coco_boxable.rvc_val.json
-    fi
+#fi
 
-if [ ! -f "$RVC_DATA_TRG_DIR/coco_boxable.rvc_train.json" ]; then
+#if [ ! -f "$RVC_DATA_TRG_DIR/coco_boxable.rvc_train.json" ]; then
     python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_train2017.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row coco_boxable_name \
-                            --image_root_rel $RVC_DATA_SRC_DIR/coco/images \
+                            --image_root_rel $RVC_DATA_SRC_DIR/coco/images/train2017 \
                             --void_id 0 \
                             --reduce_boxable \
                             --output $RVC_DATA_TRG_DIR/coco_boxable.rvc_train.json
-fi
+#fi
 
 if [ ! -f "$RVC_DATA_TRG_DIR/obj365_boxable.rvc_val.json" ]; then
     python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/objects365/objects365v2_val_0422.json \
