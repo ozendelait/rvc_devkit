@@ -40,7 +40,7 @@ if __name__ == '__main__':
 	with open(args.label_definition, newline='') as csvfile:
 		csv = csv.DictReader(csvfile)
 		for row in csv:
-			c = {'id':row['id'], 'name':row['classname'], 'supercategory':'', 'isthing': int(row['instance_eval'])==1, 'color':[int(row['red']), int(row['green']), int(row['blue'])]}
+			c = {'id':int(row['id']), 'name':row['classname'], 'supercategory':'', 'isthing': int(row['instance_eval'])==1, 'color':[int(row['red']), int(row['green']), int(row['blue'])]}
 			categories.append(c)
 			pass
 		pass
@@ -54,9 +54,15 @@ if __name__ == '__main__':
 	
 	for sequence_path in inst_path.iterdir():
 
+		if not sequence_path.is_dir():
+			continue
+
 		(pano_path / sequence_path.name).mkdir(parents=False, exist_ok=True)
 
 		for inst_label_path in sequence_path.iterdir():
+
+			if not inst_label_path.suffix == '.png':
+				continue
 
 			# corresponding class map
 			cls_label_path  = cls_path  / sequence_path.name / inst_label_path.name
@@ -96,7 +102,7 @@ if __name__ == '__main__':
 			pass
 		pass
 
-	d = {'annotation': annotations, 'categories': categories}
+	d = {'annotations': annotations, 'categories': categories}
 
 	with open(pano_path / 'annotations.json', 'w') as f:
 		json.dump(d, f, ensure_ascii=False)
