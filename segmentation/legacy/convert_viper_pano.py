@@ -46,7 +46,7 @@ if __name__ == '__main__':
 		pass
 
 	annotations = []
-
+	imageid_paths = {}
 	cls_path  = pathlib.Path(args.dataset_dir) / args.subset / 'cls'
 	inst_path = pathlib.Path(args.dataset_dir) / args.subset / 'inst'
 	pano_path = pathlib.Path(args.dataset_dir) / args.subset / 'pano'
@@ -96,15 +96,21 @@ if __name__ == '__main__':
 				pass
 
 			imageio.imwrite(pano_label_path, coco_img(coco_map))
-
-			annotation = {'image_id':image_id(args.subset, inst_label_path.name), 'file_name':inst_label_path.name, 'segments_info':segments_info}
+			img_id = int(image_id(args.subset, inst_label_path.name))
+			imageid_paths[img_id] = inst_label_path.name
+			annotation = {'image_id':img_id, 'file_name':inst_label_path.name, 'segments_info':segments_info}
 			annotations.append(annotation)
 			pass
 		pass
 
-	d = {'annotations': annotations, 'categories': categories}
+	#now create images array (one entry per intensity rgb input image)
+	images = []
+	for id in sorted(imageid_paths.keys()):
+		images.append({'id': id, 'file_name':imageid_paths[id], 'width': 1920, 'height': 1080})
+	d = {'annotations': annotations, 'categories': categories, 'images': images}
 
-	with open(pano_path / 'annotations.json', 'w') as f:
+	pano_json_dir = pathlib.Path(args.dataset_dir) / args.subset
+	with open(pano_json_dir /  'pano.json', 'w') as f:
 		json.dump(d, f, ensure_ascii=False)
 		pass
 	pass

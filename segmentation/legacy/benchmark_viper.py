@@ -13,32 +13,39 @@ from util_segmentation import *
 common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../../common/"))
 if common_rvc_subfolder not in sys.path:
     sys.path.insert(0, common_rvc_subfolder)
-from rvc_download_helper import download_file_from_google_drive
+from rvc_download_helper import download_file_from_google_drive, download_file_with_resume
 
 
 class VIPER(Benchmark):
 
     def __init__(self):
         self.archives_imgjpg_train = {
-        '00-77_0':'1-O7vWiMa3mDNFXUoYxE3vkKZQpiDXUCf',
+        # '00-77_0':'1-O7vWiMa3mDNFXUoYxE3vkKZQpiDXUCf', # GDrive
+        '00-77_0':'train_img_00-77_0_jpg.zip',
         }
         self.archives_inst_train = {
-        '00-77_0':'1HOG-vQTgeLYzDILAlvekeMbUoB-EtcRM',
+        # '00-77_0':'1HOG-vQTgeLYzDILAlvekeMbUoB-EtcRM',
+        '00-77_0':'train_inst_00-77_0.zip'
         }
         self.archives_cls_train = {
-        '00-77_0':'1lAbmIVuQTLZu4-hNKD20wmGn1SThvFtv',
+        # '00-77_0':'1lAbmIVuQTLZu4-hNKD20wmGn1SThvFtv',
+        '00-77_0':'train_cls_00-77_0.zip'
         }
         self.archives_imgjpg_val = {
-        '00-47_0':'1951O6Eu-VuMHaL1vJ9V35njcj30GjPiN',
+        # '00-47_0':'1951O6Eu-VuMHaL1vJ9V35njcj30GjPiN',
+        '00-47_0':'val_img_00-47_0_jpg.zip'
         }
         self.archives_inst_val = {
-        '00-47_0':'1ow37dljI0KfEQ9kbOvb-qQsjSpGTOnz2',
+        # '00-47_0':'1ow37dljI0KfEQ9kbOvb-qQsjSpGTOnz2',
+        '00-47_0':'val_inst_00-47_0.zip'
         }
         self.archives_cls_val = {
-        '00-47_0':'1QN2OSXTDsXPXntNrY-ojDpj-vFWjBZlK',
+        # '00-47_0':'1QN2OSXTDsXPXntNrY-ojDpj-vFWjBZlK',
+        '00-47_0':'val_cls_00-47_0.zip'
         }
         self.archives_imgjpg_test = {
-        '00-60_0':'1KYSsgv-hp5BGU0EOfvX3gajr00wwSmFc', 
+        # '00-60_0':'1KYSsgv-hp5BGU0EOfvX3gajr00wwSmFc', 
+        '00-60_0':'test_img_00-60_0_jpg.zip'
         }
 
     def Name(self):
@@ -81,7 +88,12 @@ class VIPER(Benchmark):
             for archive_id, gdrive_id in archive_dict.items():
                 archive_path = os.path.join(archive_dir_path, archive[9:] + '_' + archive_id + '.zip')
                 if not os.path.exists(archive_path):
-                    download_file_from_google_drive(gdrive_id, archive_path, try_resume_bytes=-1, total_sz = None)
+
+                    url = 'https://viper-dataset.s3.amazonaws.com/' + gdrive_id
+                    download_file_with_resume(url, archive_path, try_resume_bytes=-1, total_sz = None)
+
+                    # original viper website (GDrive)
+                    # download_file_from_google_drive(gdrive_id, archive_path, try_resume_bytes=-1, total_sz = None)
                     if os.path.exists(archive_path):
                         UnzipFile(archive_path, unpack_dir_path)
                         pass

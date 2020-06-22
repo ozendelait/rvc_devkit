@@ -95,8 +95,8 @@ def download_rob_task_data(out_dir, scan_ids=[]):
         
     download_file(TOS_URL, out_dir + '/ScanNet_TOS.pdf')
     if len(scan_ids) == 0: # download all
-        url = BASE_URL + RELEASE_TASKS + '/rob_tasks/scenes_all.zip'
-        out_file = out_dir + '/scenes_all.zip'
+        url = BASE_URL + '/v2/tasks/scannet_frames_25k.zip'
+        out_file = out_dir + '/scannet_frames_25k.zip'
         download_file(url, out_file)
         url = BASE_URL + RELEASE_TASKS + '/rob_tasks/scenes_test.zip'
         out_file = out_dir + '/scenes_test.zip'

@@ -14,32 +14,44 @@ else
 fi
 
 echo "Downloading Open Images Train And Validation to ${RVC_OID_TRG_DIR}"
-echo "WARNING: the size of the full dataset is around 500GB, make sure you have enough space on the harddrive"
+echo "WARNING: the size of the full dataset is around 550GB, make sure you have enough space on the harddrive"
 
 mkdir -p ${RVC_OID_TRG_DIR}
 cd ${RVC_OID_TRG_DIR}
 
+rvc_hexendings=0123456789abcdef
+for (( i=0; i<${#rvc_hexendings}; i++ )); do
+  #get rgb images
+  aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_${rvc_hexendings:$i:1}.tar.gz ${RVC_OID_TRG_DIR}
+  #get training instance masks (downloads, extracts & removes old archive)
+  rvc_target_zip_dir=${RVC_OID_TRG_DIR}/annotations/challenge_2019_train_masks/train_${rvc_hexendings:$i:1}
+  rvc_target_zip_file=${rvc_target_zip_dir}/challenge-2019-train-masks-${rvc_hexendings:$i:1}.zip
+  wget -N --no-check-certificate  https://storage.googleapis.com/openimages/challenge_2019/train-masks/challenge-2019-train-masks-${rvc_hexendings:$i:1}.zip -P ${rvc_target_zip_dir}
+  echo "Extracting ${rvc_target_zip_file}, this may take a while..."
+  unzip -q ${rvc_target_zip_file} -d ${rvc_target_zip_dir}
+  rm ${rvc_target_zip_file}
+  #get validation instance masks (downloads, extracts & removes old archive)
+  rvc_target_zip_dir=${RVC_OID_TRG_DIR}/annotations/challenge_2019_validation_masks/
+  rvc_target_zip_file=${rvc_target_zip_dir}/challenge-2019-validation-masks-${rvc_hexendings:$i:1}.zip
+  wget -N --no-check-certificate  https://storage.googleapis.com/openimages/challenge_2019/validation-masks/challenge-2019-validation-masks-${rvc_hexendings:$i:1}.zip -P ${rvc_target_zip_dir}
+  echo "Extracting ${rvc_target_zip_file}, this may take a while..."
+  unzip -q ${rvc_target_zip_file} -d ${rvc_target_zip_dir}
+  rm ${rvc_target_zip_file}
+done
 
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_0.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_1.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_2.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_3.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_4.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_5.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_6.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_7.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_8.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_9.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_a.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_b.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_c.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_d.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_e.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_f.tar.gz ${RVC_OID_TRG_DIR}
-aws s3 --no-sign-request cp s3://open-images-dataset/tar/validation.tar.gz ${RVC_OID_TRG_DIR}
+rvc_target_zip_file=
+rvc_target_zip_dir=
+rvc_hexendings=
+
+wget -N --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-train-detection-human-imagelabels.csv -P ${RVC_OID_TRG_DIR}/annotations
+wget -N --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-validation-detection-human-imagelabels.csv -P ${RVC_OID_TRG_DIR}/annotations
+wget -N --no-check-certificate https://storage.googleapis.com/openimages/2018_04/train/train-images-boxable-with-rotation.csv -P ${RVC_OID_TRG_DIR}/annotations
+wget -N --no-check-certificate https://storage.googleapis.com/openimages/2018_04/validation/validation-images-with-rotation.csv -P ${RVC_OID_TRG_DIR}/annotations
+wget -N --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-classes-description-500.csv -P ${RVC_OID_TRG_DIR}/annotations
+wget -N --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-train-segmentation-masks.csv -P ${RVC_OID_TRG_DIR}/annotations
+wget -N --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-validation-segmentation-masks.csv -P ${RVC_OID_TRG_DIR}/annotations
 
 RVC_OID_TRG_DIR=
 RVC_OID_SCRIPT_DIR=
 
-echo "Finished donwloading oid."
-
+echo "Finished downloading oid."

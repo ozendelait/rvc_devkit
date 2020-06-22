@@ -13,9 +13,9 @@ else
   RVC_DOWNL_SEM_TRG_DIR=${RVC_DATA_DIR}/
 fi
 
-$RVC_COCO_SCRIPT_DIR/../objdet/download_coco_boxable.sh
-mseg_download_cityscapes.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
-mseg_download_kitti.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
+$RVC_DOWNL_SEM_SCRIPT_DIR/../objdet/download_coco_boxable.sh
+${RVC_DOWNL_SEM_SCRIPT_DIR}/download_cityscapes_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
+$RVC_DOWNL_SEM_SCRIPT_DIR/download_kitti_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
 
 pushd ${RVC_DOWNL_SEM_SCRIPT_DIR}/legacy/
 python download_scannet.py -o ${RVC_DOWNL_SEM_TRG_DIR}/scannet --rob_task_data
@@ -23,6 +23,6 @@ python download_viper.py ${RVC_DOWNL_SEM_TRG_DIR}/viper
 popd
 
 ${RVC_DOWNL_SEM_SCRIPT_DIR}/../objdet/download_oid_boxable.sh
-${RVC_DOWNL_SEM_SCRIPT_DIR}/download_wilddash2.sh
+${RVC_DOWNL_SEM_SCRIPT_DIR}/download_wilddash2.sh ${RVC_DOWNL_SEM_SCRIPT_DIR}/wilddash
 echo "Downloaded instance segm. datasets to subfolders at ${RVC_DOWNL_SEM_TRG_DIR}"
 

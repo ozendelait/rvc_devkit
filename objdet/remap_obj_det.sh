@@ -69,26 +69,26 @@ python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR
                         --reduce_boxable \
                         --output $RVC_DATA_TRG_DIR/oid_boxable.rvc_train.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/validation.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/panoptic/coco/validation.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
-                        --mapping_row mvs_boxable_name \
-                        --image_root_rel $RVC_DATA_SRC_DIR/mvs/validation/images \
+                        --mapping_row mvd_boxable_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/mvd/validation/images \
                         --void_id 0 \
                         --reduce_boxable \
-                        --output $RVC_DATA_TRG_DIR/mvs_boxable.rvc_val.json
+                        --output $RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json
 
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvs/panoptic/coco/training.json \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/panoptic/coco/training.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
-                        --mapping_row mvs_boxable_name \
-                        --image_root_rel $RVC_DATA_SRC_DIR/mvs/training/images  \
+                        --mapping_row mvd_boxable_name \
+                        --image_root_rel $RVC_DATA_SRC_DIR/mvd/training/images  \
                         --void_id 0 \
                         --reduce_boxable \
-                        --output $RVC_DATA_TRG_DIR/mvs_boxable.rvc_train.json
+                        --output $RVC_DATA_TRG_DIR/mvd_boxable.rvc_train.json
 						
 pushd $RVC_DATA_TRG_DIR
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_boxable.rvc_val.json;obj365_boxable.rvc_val.json;oid_boxable.rvc_val.json;mvs_boxable.rvc_val.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_boxable.rvc_val.json;obj365_boxable.rvc_val.json;oid_boxable.rvc_val.json;mvd_boxable.rvc_val.json" \
        --output joined_val_boxable.json
-python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_boxable.rvc_train.json;obj365_boxable.rvc_train.json;oid_boxable.rvc_train.json;mvs_boxable.rvc_train.json" \
+python $RVC_OBJ_DET_SCRIPT_DIR/../common/join_coco.py --join "coco_boxable.rvc_train.json;obj365_boxable.rvc_train.json;oid_boxable.rvc_train.json;mvd_boxable.rvc_train.json" \
        --output joined_train_boxable.json
 popd
 
