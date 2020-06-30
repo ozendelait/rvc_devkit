@@ -13,34 +13,56 @@ from dataset_format_kitti2015 import *
 from util import *
 from util_flow import *
 
+common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../../common/"))
+if common_rvc_subfolder not in sys.path:
+    sys.path.insert(0, common_rvc_subfolder)
+from rvc_download_helper import download_file_with_resume
 
 
 class VIPER(Benchmark):
     def __init__(self):
         self.archives_imgjpg_train = {
-        '00-77_0':'1-O7vWiMa3mDNFXUoYxE3vkKZQpiDXUCf',
-        '00-77_1':'1alD_fZja9qD7PUnk4AkD6l-jBhlCnzKr',
+        # '00-77_0':'1-O7vWiMa3mDNFXUoYxE3vkKZQpiDXUCf',
+        '00-77_0':'train_img_00-77_0_jpg.zip',
+        # '00-77_1':'1alD_fZja9qD7PUnk4AkD6l-jBhlCnzKr',
+        '00-77_1':'train_img_00-77_1_jpg.zip',
         }
         self.archives_flow_train = {
-        '00-09_0':'1rXF2FuCTBrGymo3UXT2KnSyJ8OXO_Y_y',
-        '10-19_0':'1HbyFrvZBNdPN7GxvKN11gFwrQHhRE94m',
-        '20-29_0':'1xB9Vg5Jp8-XHvjEaFKpjzQXpoERUoTZB',
-        '30-39_0':'1vZ83ji8woRjoBPGwQciRsRTSZq3lhqyq',
-        '40-49_0':'1-DA6SFtJjEtaAAfu4yi1yHU4mIkf2lyH',
-        '50-59_0':'1RsY8yaFlNNcP49wyZX2UI34MZx3va7EK',
-        '60-69_0':'19vKpozdNFZPNK19OocEXtx8awcpSoRU7',
-        '70-77_0':'1r1wBC2asa-E4E7U59A2Dwhetz8rV_hr-',
+        # '00-09_0':'1rXF2FuCTBrGymo3UXT2KnSyJ8OXO_Y_y',
+        '00-09_0':'train_flow_00-09_0_npz16.zip',
+        # '10-19_0':'1HbyFrvZBNdPN7GxvKN11gFwrQHhRE94m',
+        '10-19_0':'train_flow_10-19_0_npz16.zip',
+        # '20-29_0':'1xB9Vg5Jp8-XHvjEaFKpjzQXpoERUoTZB',
+        '20-29_0':'train_flow_20-29_0_npz16.zip',
+        # '30-39_0':'1vZ83ji8woRjoBPGwQciRsRTSZq3lhqyq',
+        '30-39_0':'train_flow_30-39_0_npz16.zip',
+        # '40-49_0':'1-DA6SFtJjEtaAAfu4yi1yHU4mIkf2lyH',
+        '40-49_0':'train_flow_40-49_0_npz16.zip',
+        # '50-59_0':'1RsY8yaFlNNcP49wyZX2UI34MZx3va7EK',
+        '50-59_0':'train_flow_50-59_0_npz16.zip',
+        # '60-69_0':'19vKpozdNFZPNK19OocEXtx8awcpSoRU7',
+        '60-69_0':'train_flow_60-69_0_npz16.zip',
+        # '70-77_0':'1r1wBC2asa-E4E7U59A2Dwhetz8rV_hr-',
+        '70-77_0':'train_flow_70-77_0_npz16.zip',
         }
         self.archives_imgjpg_val = {
-        '00-47_0':'1951O6Eu-VuMHaL1vJ9V35njcj30GjPiN',
-        '00-47_1':'1OqEjlrx97ThCMlQePEZPSBjqhRqPwOEd',
+        # '00-47_0':'1951O6Eu-VuMHaL1vJ9V35njcj30GjPiN',
+        '00-47_0':'val_img_00-47_0_jpg.zip',
+        # '00-47_1':'1OqEjlrx97ThCMlQePEZPSBjqhRqPwOEd',
+        '00-47_1':'val_img_00-47_1_jpg.zip',
         }
         self.archives_flow_val = {
-        
+        '00-09_0':'val_flow_00-09_0_npz16.zip',
+        '10-19_0':'val_flow_10-19_0_npz16.zip',
+        '20-29_0':'val_flow_20-29_0_npz16.zip',
+        '30-39_0':'val_flow_30-39_0_npz16.zip',
+        '40-47_0':'val_flow_40-47_0_npz16.zip',        
         }
         self.archives_imgjpg_test = {
-        '00-60_0':'1KYSsgv-hp5BGU0EOfvX3gajr00wwSmFc', 
-        '00_60_1':'1D-WbX5TOTuzwaqnJmPoCVc0Owa0y-Buk', 
+        # '00-60_0':'1KYSsgv-hp5BGU0EOfvX3gajr00wwSmFc', 
+        '00-60_0':'test_img_00-60_0_jpg.zip',
+        # '00_60_1':'1D-WbX5TOTuzwaqnJmPoCVc0Owa0y-Buk', 
+        '00_60_1':'test_img_00_60_1_jpg.zip',
         }
 
 
@@ -77,7 +99,10 @@ class VIPER(Benchmark):
             for archive_id, gdrive_id in archive_dict.items():
                 archive_path = os.path.join(archive_dir_path, archive[9:] + '_' + archive_id + '.zip')
                 if not os.path.exists(archive_path):
-                    DownloadFileFromGDrive(gdrive_id, archive_path)
+                    url = 'https://viper-dataset.s3.amazonaws.com/' + gdrive_id
+                    download_file_with_resume(url, archive_path, try_resume_bytes=-1, total_sz = None)
+
+                    # DownloadFileFromGDrive(gdrive_id, archive_path)
                     pass
                 if os.path.exists(archive_path):
                     UnzipFile(archive_path, unpack_dir_path, overwrite=False)
