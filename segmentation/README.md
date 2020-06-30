@@ -24,6 +24,8 @@ export WILDDASH_PASSWORD="your_wd_passwd"
 
 Now you can execute the download script ``` download_panoptic_segm.sh ```, ``` download_inst_segm.sh ```, ``` download_sem_segm.sh ``` or which will download most of the RVC datasets.
 
+The semantic segmentation task uses [MSeg](http://vladlen.info/publications/mseg-composite-dataset-multi-domain-semantic-segmentation). Please see the [paper](http://vladlen.info/papers/MSeg.pdf) & [repo](https://github.com/mseg-dataset) regarding requirements and tips on how to start a unified training. 
+
 You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
 https://www.mapillary.com/dataset/vistas
 
@@ -31,7 +33,7 @@ You will receive an email with download instructions. Save/Move the downloaded z
 
 After successfully downloading all datasets, execute this script to extract and delete clean up files: ```extract_and_cleanup_panoptic_segm.sh ```, ``` extract_and_cleanup_inst_segm.sh ```, or ```extract_and_cleanup_sem_segm.sh ```
 
-### Dataset remapping ###
+## Dataset remapping ###
 
 RVC does not force you to remap the datasets in a certain way. We do provide a "best-effort" mapping, which can be a good starting point. This mapping will contain overlapping classes and some dataset entries might miss relevant labels (as they were annotated using different policies/mixed hierarchical  levels). Combine and remap datasets by executing the script 
 

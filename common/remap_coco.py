@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 # remap boxable COCO annotations using a supplied mapping csv file
 
-import os, sys, argparse, csv, tqdm
+import os
+import sys
+import argparse
+import csv
+from tqdm import tqdm
 import rvc_json_helper
 
 def get_relative_path(root_rel, trg_dir):
@@ -104,7 +108,7 @@ def main(argv=sys.argv[1:]):
                 i.pop(e,None)
 
     if 'annotations' in annot:
-        for a in tqdm.tqdm(annot['annotations'], desc='Remapping annotations '):
+        for a in tqdm(annot['annotations'], desc='Remapping annotations '):
             if 'category_id' in a:
                 a['category_id'] = src_to_trg.get(a['category_id'],args.void_id)
             if 'segments_info' in a:

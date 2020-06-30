@@ -54,7 +54,7 @@ def main(argv=sys.argv[1:]):
             annot_add["info"]["licenses"] =  annot_add["licenses"]
         if src_info_idx == 0:
             annot['info'] = join_info(annot_add)
-            annot['categories'] = len(annot_add['categories'])
+            annot['categories'] = annot_add['categories']
         else:
             annot['info'] = join_info(annot['info'], annot_add['info'])
             if not check_versions_match(annot, annot_add):
