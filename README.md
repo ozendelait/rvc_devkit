@@ -17,19 +17,12 @@ parameters are used for all results).
 ## Getting started ##
 
 Prerequisites: Install `wget`, `git`, and `python` (both versions 2.7.x and 3.x should work) if they are not installed yet.
-These python packages are required for automatic dataset downloading and data conversions:
-
- ```   
-   pip install requests
-   pip install imageio
-   pip install scipy
-   pip install awscli
-   pip install ujson
-```
 
 1. Clone this repository:
    ```git clone  --single-branch --branch release https://github.com/ozendelait/rvc_devkit.git```
-2. See the README in the subfolder of the task you are interested in (depth,
+2. Install required python packages:
+    ```pip install -r requirements.txt```
+3. See the README in the subfolder of the task you are interested in (depth,
    flow, etc.) for further task-specific instructions.
 
 Note: Windows support is experimental and not recommended. Use an Anaconda environment and gitbash to execute the scripts. The required wget can be installed with  ```conda install -c menpo wget```

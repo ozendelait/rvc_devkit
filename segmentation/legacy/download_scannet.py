@@ -98,8 +98,8 @@ def download_rob_task_data(out_dir, scan_ids=[]):
         url = BASE_URL + '/v2/tasks/scannet_frames_25k.zip'
         out_file = out_dir + '/scannet_frames_25k.zip'
         download_file(url, out_file)
-        url = BASE_URL + RELEASE_TASKS + '/rob_tasks/scenes_test.zip'
-        out_file = out_dir + '/scenes_test.zip'
+        url = BASE_URL + '/v2/tasks/scannet_frames_test.zip'
+        out_file = out_dir + '/scannet_frames_test.zip'
         download_file(url, out_file)
     else:
         for scan_id in scan_ids:

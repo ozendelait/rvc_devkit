@@ -16,7 +16,7 @@ fi
 echo "Extracting RVC files and removing archive files in the process. This can take 24h+ depending on your hdd/cpu configuration!"
 read -p "This process will remove archives (zip/tar/tar.gz) once they are extracted. Proceed? [y/n] " -n 1 -r RVC_CONFIRM_EXTR
 echo    # move to a new line
-if [[ ! $RVC_CONFIRM_EXTR =~ ^[Yy]$ ]]
+if [[ ! $RVC_CONFIRM_EXTR =~ ^[Yy]$ ]]; then
   RVC_EXTR_ROOT_DIR=
   RVC_CONFIRM_EXTR=
   exit 1
@@ -58,14 +58,14 @@ rm ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip
 unzip ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_25k.zip -d ${RVC_EXTR_ROOT_DIR}/scannet
 rm ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_25k.zip
 mkdir -p ${RVC_EXTR_ROOT_DIR}/scannet/bench
-unzip ${RVC_EXTR_ROOT_DIR}/scannet/scenes_test.zip -d ${RVC_EXTR_ROOT_DIR}/scannet/bench
-rm ${RVC_EXTR_ROOT_DIR}/scannet/scenes_test.zip
+unzip ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_test.zip -d ${RVC_EXTR_ROOT_DIR}/scannet/bench
+rm ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_test.zip
 
 unzip ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip -d ${RVC_EXTR_ROOT_DIR}/mvd/
 rm ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip
 
-unzip ${RVC_EXTR_ROOT_DIR}/wilddash/wilddash2p0alpha_public.zip -d ${RVC_EXTR_ROOT_DIR}/wilddash/
-rm ${RVC_EXTR_ROOT_DIR}/wilddash/wilddash2p0alpha_public.zip
+unzip ${RVC_EXTR_ROOT_DIR}/wilddash/wd_public_02.zip -d ${RVC_EXTR_ROOT_DIR}/wilddash/
+rm ${RVC_EXTR_ROOT_DIR}/wilddash/wd_public_02.zip
 
 RVC_EXTR_ROOT_DIR=
 RVC_CONFIRM_EXTR=

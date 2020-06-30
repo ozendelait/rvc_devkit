@@ -23,6 +23,7 @@ export WILDDASH_PASSWORD="your_wd_passwd"
 ```
 
 Now you can execute the download script ``` download_panoptic_segm.sh ```, ``` download_inst_segm.sh ```, ``` download_sem_segm.sh ``` or which will download most of the RVC datasets.
+The semantic segmentation task uses [MSeg](http://vladlen.info/publications/mseg-composite-dataset-multi-domain-semantic-segmentation). Please see the [paper](http://vladlen.info/papers/MSeg.pdf) & [repo](https://github.com/mseg-dataset) regarding requirements and tips on how to start a unified training. 
 
 You need to manually register and download the Mapillary Vistas (Research Edition) dataset, and we will base our evaluation on version 1.2 (blurred faces and license plates):
 https://www.mapillary.com/dataset/vistas
