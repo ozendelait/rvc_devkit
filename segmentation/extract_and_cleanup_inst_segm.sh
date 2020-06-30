@@ -72,8 +72,8 @@ unzip ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip -d ${RVC
 rm ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip
 $RVC_OID_SCRIPT_DIR/convert_mvd_coco.sh ${RVC_EXTR_ROOT_DIR}/mvd
 
-unzip ${RVC_EXTR_ROOT_DIR}/wilddash/wilddash2p0alpha_public.zip -d ${RVC_EXTR_ROOT_DIR}/wilddash/
-rm ${RVC_EXTR_ROOT_DIR}/wilddash/wilddash2p0alpha_public.zip
+unzip ${RVC_EXTR_ROOT_DIR}/wilddash/wd_public_02.zip -d ${RVC_EXTR_ROOT_DIR}/wilddash/
+rm ${RVC_EXTR_ROOT_DIR}/wilddash/wd_public_02.zip
 
 RVC_EXTR_ROOT_DIR=
 RVC_CONFIRM_EXTR=

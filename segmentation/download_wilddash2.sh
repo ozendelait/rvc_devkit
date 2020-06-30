@@ -11,9 +11,9 @@
 # -------------------------------------------------------------------
 
 # wd benchmark images download URL
-#WILDDASH_BENCH_ZIP_URL="https://wilddash.cc/download/wd_bench_01.zip"
+WILDDASH_BENCH_ZIP_URL="https://wilddash.cc/download/wd_both_02.zip"
 # wd ground truth download URL
-WILDDASH_GT_ZIP_URL="https://wilddash.cc/download/wilddash2p0alpha_public.zip"
+WILDDASH_GT_ZIP_URL="https://wilddash.cc/download/wd_public_02.zip"
 WILDDASH_COOKIE_FILE=wd_cookies_downl.txt
 WILDDASH_DST_FOLDER=$1
 
@@ -43,7 +43,8 @@ else
 	rm wd_cookies_auth.txt
 	rm wd_login_page.html
 fi
-# will download "wilddash2p0alpha_public.zip" (2.4GB)
+# will download "wd_public_02.zip" (3.2GB) and "wd_both_02.zip" (0.4GB)
 wget --no-check-certificate --continue --load-cookies $WILDDASH_COOKIE_FILE --content-disposition $WILDDASH_GT_ZIP_URL
+wget --no-check-certificate --continue --load-cookies $WILDDASH_COOKIE_FILE --content-disposition $WILDDASH_BENCH_ZIP_URL
 
 echo "WildDash v2 alpha dataset downloaded."
