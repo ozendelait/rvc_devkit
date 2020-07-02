@@ -26,8 +26,8 @@ pushd $RVC_SEM_SEG_SCRIPT_DIR/../common
   fi
 
   #add missing rvc datasets to mseg api
-  python rvc_add_dataset_mseg.py --panoptic_json ${RVC_DATA_SRC_DIR}/wilddash/panoptic_{split_idx}.json --orig_dname wilddash2-rvc --img_subfolder images --annot_subfolder panoptic
-  python rvc_add_dataset_mseg.py --panoptic_json ${RVC_DATA_SRC_DIR}/viper/{split}/pano.json --orig_dname viper-rvc --img_subfolder {split}/img/{file_name[0]}{file_name[1]}{file_name[2]}  --annot_subfolder panoptic {split}/pano/{file_name[0]}{file_name[1]}{file_name[2]}
+  python rvc_add_dataset_mseg.py --panoptic_json "${RVC_DATA_SRC_DIR}/wilddash/panoptic_{split_idx}.json" --orig_dname wilddash2-rvc --img_subfolder images --annot_subfolder panoptic
+  python rvc_add_dataset_mseg.py --panoptic_json "${RVC_DATA_SRC_DIR}/viper/{split}/pano.json" --orig_dname viper-rvc --img_subfolder "{split}/img/{file_name[0]}{file_name[1]}{file_name[2]}"  --annot_subfolder "{split}/pano/{file_name[0]}{file_name[1]}{file_name[2]}"
 
 
   RVC_COMMON_CONV_PARAMS="--remapped_dataroot ${RVC_DATA_TRG_DIR} --mapping_tsv ${RVC_SEM_SEG_SCRIPT_DIR}/ss_mapping_uint8_mseg.tsv --create_symlink_cpy"
