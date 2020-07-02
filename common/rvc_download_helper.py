@@ -1,4 +1,5 @@
 import requests, os, sys, argparse, re, time, tqdm
+import certifi
 
 CHUNK_SIZE = 32 * 1024
 RESUME_SIZE_MAX =  CHUNK_SIZE * 16352 # little less than 0.5GB
@@ -20,6 +21,7 @@ def download_file_from_google_drive(id, destination, try_resume_bytes=-1, total_
 
 def download_file_with_resume(url, destination, try_resume_bytes=-1, total_sz = None, params={}):
     while True: # iterate sessions until file downloaded or failure:
+        needs_ssl = url.startswith("https://")
         with requests.Session() as session:
             resume_headers = {}
             try_resume_bytes_next = 0
@@ -32,8 +34,20 @@ def download_file_with_resume(url, destination, try_resume_bytes=-1, total_sz = 
                         open_sz = RESUME_SIZE_MAX
                         try_resume_bytes_next = try_resume_bytes + open_sz
                     resume_headers =  {'Range': 'bytes=%d-%d' % (try_resume_bytes, try_resume_bytes+open_sz)}
-        
-            response = session.get(url, params = params, headers=resume_headers, stream = True)
+            try:
+                response = session.get(url, params = params, headers=resume_headers, stream = True)
+            except requests.exceptions.SSLError as ssl_execption:
+                if not needs_ssl: #redirected http to https
+                    return download_file_with_resume(url.replace("http://","https://"), destination, try_resume_bytes, total_sz, params)
+                if "RVC_CUSTOM_SSL_SKIP_VERIFY" in os.environ:
+                    #many python openssl requests lib setups installed via pip or conda seem to be broken in 2020; until this is fixed allow user to skip verification
+                    requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+                    response = session.get(url, params=params, headers=resume_headers, stream=True, verify=False)
+                else:
+                    print("Error: it looks like your python requests SSL verification is broken.",file=sys.stderr)
+                    print("Try to update certifi: \nconda install -c anaconda certifi\nOtherwise you can skip ssl verifications by using: export RVC_CUSTOM_SSL_SKIP_VERIFY=1",file=sys.stderr)
+                    raise ssl_execption
+
             if "docs.google.com" in url:
                 token = get_confirm_token(response)
                 if token:
