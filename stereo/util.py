@@ -5,11 +5,10 @@ import sys
 import traceback
 import zipfile
 
-if sys.version_info[0] == 2:
-    import urllib2
-else:
-    import urllib.request
-
+common_rvc_subfolder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(os.path.abspath(__file__))),"../common/"))
+if common_rvc_subfolder not in sys.path:
+    sys.path.insert(0, common_rvc_subfolder)
+from rvc_download_helper import download_file_with_resume
 
 # Converts a string to bytes (for writing the string into a file). Provided for
 # compatibility with Python 2 and 3.
@@ -70,48 +69,7 @@ def MakeCleanDirectory(folder_path):
 def DownloadFile(url, dest_dir_path):
     file_name = url.split('/')[-1]
     dest_file_path = os.path.join(dest_dir_path, file_name)
-    
-    if os.path.isfile(dest_file_path):
-        print('The following file already exists:')
-        print(dest_file_path)
-        print('Please choose whether to re-download and overwrite the file [o] or to skip downloading this file [s] by entering o or s.')
-        while True:
-            response = GetUserInput("> ")
-            if response == 's':
-                return dest_file_path
-            elif response == 'o':
-                break
-            else:
-                print('Please enter o or s.')
-    
-    url_object = None
-    if sys.version_info[0] == 2:
-        url_object = urllib2.urlopen(url)
-    else:
-        url_object = urllib.request.urlopen(url)
-    
-    with open(dest_file_path, 'wb') as outfile:
-        meta = url_object.info()
-        file_size = 0
-        if sys.version_info[0] == 2:
-            file_size = int(meta.getheaders("Content-Length")[0])
-        else:
-            file_size = int(meta["Content-Length"])
-        print("Downloading: %s (size [bytes]: %s)" % (url, file_size))
-        
-        file_size_downloaded = 0
-        block_size = 8192
-        while True:
-            buffer = url_object.read(block_size)
-            if not buffer:
-                break
-            
-            file_size_downloaded += len(buffer)
-            outfile.write(buffer)
-            
-            sys.stdout.write("%d / %d  (%3f%%)\r" % (file_size_downloaded, file_size, file_size_downloaded * 100. / file_size))
-            sys.stdout.flush()
-    
+    download_file_with_resume(url, dest_file_path, try_resume_bytes=0)
     return dest_file_path
 
 
