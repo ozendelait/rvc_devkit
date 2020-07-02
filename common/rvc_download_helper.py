@@ -1,5 +1,4 @@
 import requests, os, sys, argparse, re, time, tqdm
-import certifi
 
 CHUNK_SIZE = 32 * 1024
 RESUME_SIZE_MAX =  CHUNK_SIZE * 16352 # little less than 0.5GB
