@@ -64,7 +64,7 @@ if [ ! -f "$RVC_DATA_TRG_DIR/oid_boxable.rvc_val.json" ]; then
     python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/oid/annotations/openimages_challenge_2019_val_bbox.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row oid_boxable_leaf \
-                            --image_root_rel $RVC_DATA_SRC_DIR/oid/val/ \
+                            --image_root_rel $RVC_DATA_SRC_DIR/oid/validation/ \
                             --void_id 0 \
                             --reduce_boxable \
                             --output $RVC_DATA_TRG_DIR/oid_boxable.rvc_val.json
