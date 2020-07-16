@@ -347,6 +347,7 @@
         "parents_pwn30": [
             "n03081021"
         ],
+        "parents_qid": [],
         "wikidata_desc": "",
         "wikidata_name": "",
         "wikidata_qid": "Q46765731",
@@ -1395,6 +1396,7 @@
         "parents_pwn30": [
             "n03294833"
         ],
+        "parents_qid": [],
         "wikidata_name": "Chalkboard eraser",
         "wikidata_qid": "Q2553927",
         "wordnet_gloss": "an eraser that removes chalk marks from blackboard",
@@ -1757,6 +1759,7 @@
         "parents_pwn30": [
             "n03725717"
         ],
+        "parent_name": "wall",
         "wikidata_qid": "Q29731012",
         "wordnet_gloss": "masonry done with bricks and mortar",
         "wordnet_pwn30": "n02898369"
@@ -2533,6 +2536,7 @@
     "cat_furniture": {
         "freebase_mid": "/m/026v7pc",
         "oid_name": "Cat furniture",
+        "parents_qid": [],
         "wikidata_name": "Cat tree",
         "wikidata_qid": "Q1014401",
         "wordnet_pwn30": ""
@@ -3142,6 +3146,7 @@
         "parents_pwn30": [
             "n03699975"
         ],
+        "parents_qid": [],
         "wikidata_desc": "computer",
         "wikidata_name": "Z22",
         "wikidata_qid": "Q230807",
@@ -3290,6 +3295,7 @@
     "cooking_spray": {
         "freebase_mid": "/m/07mcwg",
         "oid_name": "Cooking spray",
+        "parents_qid": [],
         "wikidata_name": "Cooking spray",
         "wikidata_qid": "Q5167151",
         "wordnet_pwn30": ""
@@ -3414,6 +3420,7 @@
         "parents_pwn30": [
             "n04379243"
         ],
+        "parents_qid": [],
         "wikidata_qid": "Q21550499",
         "wordnet_gloss": "table consisting of a horizontal surface over which business is transacted",
         "wordnet_pwn30": "n03116530"
@@ -3693,6 +3700,7 @@
         "parents_pwn30": [
             "n03264136"
         ],
+        "parents_qid": [],
         "wikidata_desc": "",
         "wikidata_name": "curb",
         "wikidata_qid": "Q3007621",
@@ -4386,6 +4394,7 @@
         "cityscapes_id": 5,
         "cityscapes_name": "dynamic",
         "context": "void",
+        "parent_name": "unlabeled",
         "scannet_id": 40,
         "scannet_name": "otherprop",
         "viper_name": "ambiguous",
@@ -4440,6 +4449,7 @@
         "parents_pwn30": [
             "n03261776"
         ],
+        "parents_qid": [],
         "wikidata_qid": "Q50184015",
         "wordnet_gloss": "an earphone that is inserted into the ear canal",
         "wordnet_pwn30": "n03262248"
@@ -4550,6 +4560,7 @@
         "parents_pwn30": [
             "n03320046"
         ],
+        "parents_qid": [],
         "wikidata_desc": "machine powered by electricity used to create airflow",
         "wikidata_name": "electric fan",
         "wikidata_qid": "Q25841836",
@@ -6656,6 +6667,7 @@
     "humidifier": {
         "freebase_mid": "/m/04lvq_",
         "oid_name": "Humidifier",
+        "parents_qid": [],
         "wikidata_desc": "device that increases humidity",
         "wikidata_name": "humidifier",
         "wikidata_qid": "Q1073283",
@@ -6666,6 +6678,7 @@
         "parents_pwn30": [
             "n00119568"
         ],
+        "parents_qid": [],
         "wikidata_desc": "obstacle used in track and field hurdles",
         "wikidata_name": "hurdle",
         "wikidata_qid": "Q1031196",
@@ -7431,6 +7444,7 @@
         "parents_pwn30": [
             "n03663531"
         ],
+        "parents_qid": [],
         "wikidata_desc": "buoy designed to be thrown to person in water, to prevent drowning",
         "wikidata_name": "lifebuoy",
         "wikidata_qid": "Q587334",
@@ -7820,6 +7834,7 @@
     "marine_invertebrates": {
         "freebase_mid": "/m/03hl4l9",
         "oid_name": "Marine invertebrates",
+        "parent_name": "animal",
         "wikidata_name": "Marine invertebrates",
         "wikidata_qid": "Q3737872",
         "wordnet_pwn30": ""
@@ -10003,6 +10018,7 @@
         "parents_pwn30": [
             "n09304750"
         ],
+        "parent_name": "road",
         "wikidata_desc": "a type of disruption in the surface of a roadway where a portion of the road material has broken away, leaving a hole",
         "wikidata_name": "pothole",
         "wikidata_qid": "Q1485806",
@@ -10328,6 +10344,7 @@
         "parents_pwn30": [
             "n04463983"
         ],
+        "parents_qid": [],
         "viper_name": "railtrack",
         "viper_pano_id": 5,
         "wikidata_desc": "",
@@ -10345,6 +10362,7 @@
         "parents_pwn30": [
             "n03736970"
         ],
+        "parents_qid": [],
         "wikidata_desc": "mechanical device that allows continuous linear or rotary motion in only one direction",
         "wikidata_name": "ratchet",
         "wikidata_qid": "Q11171014",
@@ -11625,6 +11643,7 @@
         "parents_pwn30": [
             "n03151077"
         ],
+        "parents_qid": [],
         "scannet_id": 28,
         "scannet_name": "shower curtain",
         "scannet_pano_id": 61,
@@ -12525,6 +12544,7 @@
         "cityscapes_id": 4,
         "cityscapes_name": "static",
         "context": "void",
+        "parent_name": "unlabeled",
         "scannet_id": 38,
         "scannet_name": "otherstructure",
         "wikidata_qid": "",
@@ -13953,6 +13973,7 @@
         "parents_pwn30": [
             "n04576211"
         ],
+        "parents_qid": [],
         "viper_inst_id": 28,
         "viper_name": "trailer",
         "viper_pano_id": 28,
@@ -14365,10 +14386,7 @@
         "mapillary-public66_name": "Unlabeled",
         "mvd_id": 65,
         "mvd_name": "void--unlabeled",
-        "parents_qid": [
-            "Q35120",
-            "Q2995644"
-        ],
+        "parent_name": "unlabeled",
         "scannet_id": 0,
         "scannet_name": "unlabeled",
         "viper_name": "unlabeled",
@@ -15078,6 +15096,7 @@
     "wine_rack": {
         "freebase_mid": "/m/0271qf7",
         "oid_name": "Wine rack",
+        "parents_qid": [],
         "wikidata_name": "Wine rack",
         "wikidata_qid": "Q2941029",
         "wordnet_pwn30": ""
