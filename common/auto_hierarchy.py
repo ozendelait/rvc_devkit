@@ -51,12 +51,11 @@ def add_parent_as_tmp(joined_label_space, key, addtmp):
         return None,None
     keyparent = None
     if "wordnet_name" in addtmp:
-        keyparent = "_tmp_"+addtmp["wordnet_name"].lower().replace(" ","_").replace("class_of_","")
-        keyparent = fix_unified_labels.get(keyparent,keyparent)
-    if "wikidata_name" in addtmp:
-        keyparent = addtmp["wikidata_name"].lower().replace(" ","_").replace("class_of_","")
-        keyparent = fix_unified_labels.get(keyparent,keyparent)
+        keyparent = addtmp["wordnet_name"]
+    if keyparent is None and "wikidata_name" in addtmp:
+        keyparent = addtmp["wikidata_name"]  
     if not keyparent is None:
+        keyparent = fix_unified_labels.get(keyparent.lower().replace(" ","_").replace("class_of_",""),keyparent)
         if not keyparent in joined_label_space and len(keyparent) > 5 and fix_unified_labels.get(keyparent[:-1],keyparent[:-1]) in joined_label_space:
             keyparent = fix_unified_labels.get(keyparent[:-1],keyparent[:-1])
         if keyparent == key:
@@ -78,14 +77,21 @@ def main(argv=sys.argv[1:]):
     parser.add_argument('--output', type=str, default="joint_mapping_tmp.json",
                         help="Output json file path")
     args = parser.parse_args(argv)
-
     with open(args.input, 'r') as ifile:
         joined_label_space = json.load(ifile)
 
-    #automatically adds parent candidates 
-    for key, vals in joined_label_space.items():
+    #automatically adds missing parent candidates 
+    remove_keys = []
+    for key,vals in joined_label_space.items():
+        if key.find('_tmp_') >= 0 and key.replace('_tmp_','') in joined_label_space:
+            remove_keys.append(key)
+        if 'parent_name' in vals and vals['parent_name'].find('_tmp_') >= 0 and vals['parent_name'].replace('_tmp_','') in joined_label_space:
+            vals['parent_name'] = vals['parent_name'].replace('_tmp_','')#fix connection            
         get_parents(vals)
-        
+    
+    for r in remove_keys:
+        joined_label_space.pop(r)
+    
     #find direct parents
     link_pwn30 = {vals['wordnet_pwn30']:key  for key,vals in joined_label_space.items() if 'wordnet_pwn30' in vals}
     link_qid = {vals['wikidata_qid']:key  for  key,vals in joined_label_space.items() if 'wikidata_qid' in vals}
@@ -106,7 +112,8 @@ def main(argv=sys.argv[1:]):
             vals['parent_name'] = key_parent
         elif len(found_link0) > 1:
             print("Warning: Multiple parents found for "+key+':', found_link0)
-        else:
+        #else:
+        if False:
             #add temporary jump nodes
             for p in vals.get('parents_qid',[]):
                 addtmp = wikidata_from_qid(p)
