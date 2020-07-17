@@ -11,6 +11,7 @@
         "wordnet_pwn30": "n01776192"
     },
     "_tmp_accentor": {
+        "parent_name": "_tmp_oscine",
         "parents_pwn30": [
             "n01525720"
         ],
@@ -29,7 +30,18 @@
         "wikidata_name": "Accipitridae",
         "wikidata_qid": "Q25510"
     },
+    "_tmp_accumulation": {
+        "parents_pwn30": [
+            "n13258362"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "(finance) profits that are not paid out as dividends but are added to the capital base of the corporation",
+        "wordnet_name": "accumulation",
+        "wordnet_pwn30": "n13366693"
+    },
     "_tmp_acme": {
+        "parent_name": "_tmp_extreme",
         "parents_pwn30": [
             "n08569165"
         ],
@@ -38,6 +50,35 @@
         "wordnet_gloss": "the highest point (of something); \"at the peak of the pyramid\"",
         "wordnet_name": "acme",
         "wordnet_pwn30": "n08677801"
+    },
+    "_tmp_activity": {
+        "freebase_mid": "/m/0d0mg",
+        "parents_qid": [
+            "Q20937557"
+        ],
+        "wikidata_desc": "event; actions that result in changes of state",
+        "wikidata_name": "activity",
+        "wikidata_qid": "Q1914636"
+    },
+    "_tmp_actuation": {
+        "parents_pwn30": [
+            "n00030358"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "the act of propelling",
+        "wordnet_name": "actuation",
+        "wordnet_pwn30": "n00045250"
+    },
+    "_tmp_adornment": {
+        "parents_pwn30": [
+            "n03169390"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a decoration of color or interest that is added to relieve plainness",
+        "wordnet_name": "adornment",
+        "wordnet_pwn30": "n02681518"
     },
     "_tmp_adult": {
         "parent_name": "person",
@@ -59,6 +100,7 @@
         "wikidata_qid": "Q62447"
     },
     "_tmp_aerodyne": {
+        "parent_name": "aircraft",
         "parents_qid": [
             "Q20026879",
             "Q11436"
@@ -67,8 +109,20 @@
         "wikidata_name": "aerodyne",
         "wikidata_qid": "Q154503"
     },
+    "_tmp_aerophone": {
+        "freebase_mid": "/m/011_g9",
+        "parents_qid": [
+            "Q53424891",
+            "Q34379",
+            "Q1254773"
+        ],
+        "wikidata_desc": "class of musical instruments",
+        "wikidata_name": "aerophone",
+        "wikidata_qid": "Q659216"
+    },
     "_tmp_aerostat": {
         "freebase_mid": "/m/03469q",
+        "parent_name": "aircraft",
         "parents_qid": [
             "Q20026879",
             "Q11436"
@@ -78,6 +132,7 @@
         "wikidata_qid": "Q1299477"
     },
     "_tmp_aid": {
+        "parent_name": "_tmp_work",
         "parents_pwn30": [
             "n00575741"
         ],
@@ -95,6 +150,17 @@
         "wikidata_desc": "",
         "wikidata_name": "airport infrastructure",
         "wikidata_qid": "Q1433344"
+    },
+    "_tmp_alcohol": {
+        "parents_pwn30": [
+            "n03248958",
+            "n07881800"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a liquor or brew containing alcohol as the active agent; \"alcohol (or drink) ruined him\"",
+        "wordnet_name": "alcohol",
+        "wordnet_pwn30": "n07884567"
     },
     "_tmp_alcoholic_beverage": {
         "freebase_mid": "/m/012mj",
@@ -128,7 +194,19 @@
         "wordnet_name": "amphibian",
         "wordnet_pwn30": "n01627424"
     },
+    "_tmp_anapsid": {
+        "parent_name": "reptile",
+        "parents_pwn30": [
+            "n01661091"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "primitive reptile having no opening in the temporal region of the skull; all extinct except turtles",
+        "wordnet_name": "anapsid",
+        "wordnet_pwn30": "n01661592"
+    },
     "_tmp_animal_order": {
+        "parent_name": "_tmp_order",
         "parents_pwn30": [
             "n08106934"
         ],
@@ -139,6 +217,7 @@
         "wordnet_pwn30": "n01342529"
     },
     "_tmp_anseriform_bird": {
+        "parent_name": "_tmp_waterbird",
         "parents_pwn30": [
             "n01845132"
         ],
@@ -149,6 +228,7 @@
         "wordnet_pwn30": "n01845477"
     },
     "_tmp_appliance": {
+        "parent_name": "_tmp_durables",
         "parents_pwn30": [
             "n03257877"
         ],
@@ -160,6 +240,7 @@
     },
     "_tmp_aquatic_mammal": {
         "freebase_mid": "/m/05h5mnj",
+        "parent_name": "mammal",
         "parents_qid": [
             "Q7377"
         ],
@@ -197,7 +278,40 @@
         "wikidata_name": "architectural structure",
         "wikidata_qid": "Q811979"
     },
+    "_tmp_architecture": {
+        "freebase_mid": "/m/03nfmq",
+        "parents_qid": [
+            "Q89358787",
+            "Q3875186",
+            "Q56055944"
+        ],
+        "wikidata_desc": "both the process and product of planning, designing and construction",
+        "wikidata_name": "architecture",
+        "wikidata_qid": "Q12271"
+    },
+    "_tmp_area": {
+        "parents_pwn30": [
+            "n04341686"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a part of a structure having some specific characteristic or function; \"the spacious cooking area provided plenty of room for servants\"",
+        "wordnet_name": "area",
+        "wordnet_pwn30": "n02735688"
+    },
+    "_tmp_armament": {
+        "parent_name": "_tmp_arms",
+        "parents_pwn30": [
+            "n04566257"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "weaponry used by military or naval force",
+        "wordnet_name": "armament",
+        "wordnet_pwn30": "n02738031"
+    },
     "_tmp_arms": {
+        "parent_name": "_tmp_instrumentation",
         "parents_pwn30": [
             "n03575240"
         ],
@@ -206,6 +320,23 @@
         "wordnet_gloss": "weapons considered collectively",
         "wordnet_name": "arms",
         "wordnet_pwn30": "n04566257"
+    },
+    "_tmp_art": {
+        "freebase_mid": "/m/0jjw",
+        "parents_pwn30": [
+            "n03129123"
+        ],
+        "parents_qid": [
+            "Q4671286",
+            "Q11042",
+            "Q3249551"
+        ],
+        "wikidata_desc": "expressive work intended to be appreciated for its beauty or emotional power; or the process of creating such a work",
+        "wikidata_name": "art",
+        "wikidata_qid": "Q735",
+        "wordnet_gloss": "the products of human creativity; works of art collectively; \"an art exhibition\"; \"a collection of fine art\"",
+        "wordnet_name": "art",
+        "wordnet_pwn30": "n02743547"
     },
     "_tmp_arthropod": {
         "parent_name": "invertebrate",
@@ -218,7 +349,19 @@
         "wordnet_name": "arthropod",
         "wordnet_pwn30": "n01767661"
     },
+    "_tmp_article": {
+        "parent_name": "_tmp_artifact",
+        "parents_pwn30": [
+            "n00021939"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "one of a class of artifacts; \"an article of clothing\"",
+        "wordnet_name": "article",
+        "wordnet_pwn30": "n00022903"
+    },
     "_tmp_artifact": {
+        "parent_name": "_tmp_unit",
         "parents_pwn30": [
             "n00003553"
         ],
@@ -238,6 +381,7 @@
     },
     "_tmp_artillery": {
         "freebase_mid": "/m/0_1c",
+        "parent_name": "weapon",
         "parents_qid": [
             "Q15142889",
             "Q728"
@@ -256,6 +400,7 @@
         "wikidata_qid": "Q1246258"
     },
     "_tmp_artiodactyl": {
+        "parent_name": "_tmp_ungulate",
         "parents_pwn30": [
             "n02370806"
         ],
@@ -277,6 +422,7 @@
         "wordnet_pwn30": "n02389346"
     },
     "_tmp_assemblage": {
+        "parent_name": "_tmp_group",
         "parents_pwn30": [
             "n00031264"
         ],
@@ -287,6 +433,7 @@
         "wordnet_pwn30": "n07951464"
     },
     "_tmp_athletic_facility": {
+        "parent_name": "_tmp_facility",
         "parents_pwn30": [
             "n03315023"
         ],
@@ -297,6 +444,7 @@
         "wordnet_pwn30": "n02752311"
     },
     "_tmp_atmosphere": {
+        "parent_name": "_tmp_gas",
         "parents_pwn30": [
             "n14877585"
         ],
@@ -345,14 +493,30 @@
         "wikidata_name": "axial skeleton",
         "wikidata_qid": "Q1377526"
     },
+    "_tmp_baccy": {
+        "parents_pwn30": [
+            "n03248958",
+            "n14991927"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "leaves of the tobacco plant dried and prepared for smoking or ingestion",
+        "wordnet_name": "baccy",
+        "wordnet_pwn30": "n04442831"
+    },
     "_tmp_bag": {
         "freebase_mid": "/m/0n5v01m",
-        "parents_qid": [
-            "Q1065579"
+        "parent_name": "container",
+        "parents_pwn30": [
+            "n03094503"
         ],
+        "parents_qid": [],
         "wikidata_desc": "simple tool in the form of a non-rigid container",
         "wikidata_name": "bag",
-        "wikidata_qid": "Q1323314"
+        "wikidata_qid": "",
+        "wordnet_gloss": "a flexible container with a single opening; \"he stuffed his laundry into a large bag\"",
+        "wordnet_name": "bag",
+        "wordnet_pwn30": "n02773037"
     },
     "_tmp_ball_game": {
         "freebase_mid": "/m/020m7t",
@@ -377,13 +541,16 @@
     },
     "_tmp_bedding": {
         "freebase_mid": "/m/03mcr3",
-        "parents_qid": [
-            "Q796635",
-            "Q3578714"
+        "parents_pwn30": [
+            "n03050026"
         ],
+        "parents_qid": [],
         "wikidata_desc": "the materials laid above the mattress of a bed for hygiene, warmth, to protect the mattress, and for decorative effect",
         "wikidata_name": "bedding",
-        "wikidata_qid": "Q1762457"
+        "wikidata_qid": "",
+        "wordnet_gloss": "coverings that are used on a bed",
+        "wordnet_name": "bedding",
+        "wordnet_pwn30": "n02820210"
     },
     "_tmp_bedroom_furniture": {
         "parent_name": "furniture",
@@ -418,14 +585,15 @@
         "wordnet_pwn30": "n00004475"
     },
     "_tmp_berry": {
-        "freebase_mid": "/m/0dxb5",
-        "parents_qid": [
-            "Q15197056",
-            "Q28149961"
+        "parent_name": "_tmp_edible_fruit",
+        "parents_pwn30": [
+            "n07705931"
         ],
-        "wikidata_desc": "botanical fruit with fleshy pericarp, containing one or many seeds",
-        "wikidata_name": "berry",
-        "wikidata_qid": "Q13184"
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any of numerous small and pulpy edible fruits; used as desserts or in making jams and jellies and preserves",
+        "wordnet_name": "berry",
+        "wordnet_pwn30": "n07742704"
     },
     "_tmp_bicycle_parking": {
         "parents_qid": [
@@ -445,6 +613,7 @@
     },
     "_tmp_bike_path": {
         "freebase_mid": "/m/0450s8",
+        "parent_name": "road",
         "parents_qid": [
             "Q34442"
         ],
@@ -453,6 +622,7 @@
         "wikidata_qid": "Q221722"
     },
     "_tmp_bin": {
+        "parent_name": "container",
         "parents_qid": [
             "Q987767"
         ],
@@ -479,6 +649,16 @@
         "wikidata_desc": "reusable writing surface",
         "wikidata_name": "blackboard",
         "wikidata_qid": "Q235585"
+    },
+    "_tmp_blessing": {
+        "parents_pwn30": [
+            "n01212519"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "the formal act of approving; \"he gave the project his blessing\"; \"his decision merited the approval of any sensible person\"",
+        "wordnet_name": "blessing",
+        "wordnet_pwn30": "n01215392"
     },
     "_tmp_blind": {
         "parent_name": "_tmp_protection",
@@ -567,6 +747,7 @@
         "wordnet_pwn30": "n02891788"
     },
     "_tmp_brew": {
+        "parent_name": "_tmp_alcohol",
         "parents_pwn30": [
             "n07884567"
         ],
@@ -597,6 +778,7 @@
         "wordnet_pwn30": "n13112664"
     },
     "_tmp_cabinet": {
+        "parent_name": "furniture",
         "parents_qid": [
             "Q14745"
         ],
@@ -622,7 +804,17 @@
         "wikidata_name": "candelabra",
         "wikidata_qid": "Q548275"
     },
+    "_tmp_candlestick": {
+        "freebase_mid": "/m/03b8t3",
+        "parents_qid": [
+            "Q8205328"
+        ],
+        "wikidata_desc": "device used to hold a candle in place",
+        "wikidata_name": "candlestick",
+        "wikidata_qid": "Q151771"
+    },
     "_tmp_canid": {
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02075296"
         ],
@@ -633,12 +825,17 @@
         "wordnet_pwn30": "n02083346"
     },
     "_tmp_cap": {
-        "parents_qid": [
-            "Q58914721"
+        "parent_name": "_tmp_headgear",
+        "parents_pwn30": [
+            "n03502509"
         ],
+        "parents_qid": [],
         "wikidata_desc": "brimless head covering, sometimes made with a visor",
         "wikidata_name": "cap",
-        "wikidata_qid": "Q6147804"
+        "wikidata_qid": "",
+        "wordnet_gloss": "a tight-fitting headdress",
+        "wordnet_name": "cap",
+        "wordnet_pwn30": "n02954340"
     },
     "_tmp_card": {
         "parent_name": "paper",
@@ -669,6 +866,36 @@
         "wikidata_name": "carriageway",
         "wikidata_qid": "Q1645474"
     },
+    "_tmp_cephalopod": {
+        "parent_name": "shellfish",
+        "parents_pwn30": [
+            "n01940736"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "marine mollusk characterized by well-developed head and eyes and sucker-bearing tentacles",
+        "wordnet_name": "cephalopod",
+        "wordnet_pwn30": "n01968315"
+    },
+    "_tmp_certificate": {
+        "parents_qid": [
+            "Q618779"
+        ],
+        "wikidata_desc": "document that confirms something",
+        "wikidata_name": "certificate",
+        "wikidata_qid": "Q196756"
+    },
+    "_tmp_channel": {
+        "parent_name": "_tmp_passage",
+        "parents_pwn30": [
+            "n03895293"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a passage for water (or other fluids) to flow through; \"the fields were crossed with irrigation channels\"; \"gutters carried off the rainwater into a series of channels under the street\"",
+        "wordnet_name": "channel",
+        "wordnet_pwn30": "n03006105"
+    },
     "_tmp_charcuterie": {
         "parents_qid": [
             "Q1427887"
@@ -678,6 +905,7 @@
         "wikidata_qid": "Q260568"
     },
     "_tmp_chelonian": {
+        "parent_name": "_tmp_anapsid",
         "parents_pwn30": [
             "n01661592"
         ],
@@ -690,12 +918,23 @@
     "_tmp_child": {
         "freebase_mid": "/m/0ytgt",
         "parents_qid": [
-            "Q5932254",
-            "Q1516282"
+            "Q1516282",
+            "Q5932254"
         ],
         "wikidata_desc": "human between the stages of birth and puberty",
         "wikidata_name": "child",
         "wikidata_qid": "Q7569"
+    },
+    "_tmp_chordate": {
+        "parent_name": "animal",
+        "parents_pwn30": [
+            "n00015388"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any animal of the phylum Chordata having a notochord or spinal column",
+        "wordnet_name": "chordate",
+        "wordnet_pwn30": "n01466257"
     },
     "_tmp_citrus": {
         "parent_name": "_tmp_edible_fruit",
@@ -707,6 +946,16 @@
         "wordnet_gloss": "any of numerous fruits of the genus Citrus having thick rind and juicy pulp; grown in warm regions",
         "wordnet_name": "citrus",
         "wordnet_pwn30": "n07747055"
+    },
+    "_tmp_class": {
+        "parents_qid": [
+            "Q324254",
+            "Q5127848",
+            "Q19478619"
+        ],
+        "wikidata_desc": "group of items sharing common characteristics",
+        "wikidata_name": "class",
+        "wikidata_qid": "Q16889133"
     },
     "_tmp_cleaning_device": {
         "parent_name": "_tmp_implement",
@@ -720,6 +969,7 @@
         "wordnet_pwn30": "n03039947"
     },
     "_tmp_cleaning_tool": {
+        "parent_name": "tool",
         "parents_qid": [
             "Q39546"
         ],
@@ -728,6 +978,7 @@
         "wikidata_qid": "Q26270576"
     },
     "_tmp_closed-circuit_television": {
+        "parent_name": "_tmp_television",
         "parents_pwn30": [
             "n04404412"
         ],
@@ -736,6 +987,17 @@
         "wordnet_gloss": "a television system that is not used for broadcasting but is connected by cables to designated monitors (as in a factory or theater)",
         "wordnet_name": "closed-circuit television",
         "wordnet_pwn30": "n03049066"
+    },
+    "_tmp_cloth": {
+        "parent_name": "_tmp_artifact",
+        "parents_pwn30": [
+            "n00021939"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "artifact made by weaving or felting or knitting or crocheting natural or synthetic fibers; \"the fabric in the curtains was light and semitransparent\"; \"woven cloth originated in Mesopotamia around 5000 BC\"; \"she measured off enough material for a dress\"",
+        "wordnet_name": "cloth",
+        "wordnet_pwn30": "n03309808"
     },
     "_tmp_clothing_industry": {
         "parents_qid": [
@@ -769,6 +1031,7 @@
     },
     "_tmp_cocktail_garnish": {
         "freebase_mid": "/m/027ct3y",
+        "parent_name": "cocktail",
         "parents_qid": [
             "Q134768",
             "Q59541"
@@ -786,6 +1049,14 @@
         "wikidata_name": "collectible",
         "wikidata_qid": "Q2342494"
     },
+    "_tmp_collection": {
+        "parents_qid": [
+            "Q386724"
+        ],
+        "wikidata_desc": "set of purposefully collected or gathered objects with some common characteristics (should be qualified with P642 for more precision)",
+        "wikidata_name": "collection",
+        "wikidata_qid": "Q2668072"
+    },
     "_tmp_colonnade": {
         "freebase_mid": "/m/028vdh",
         "parents_qid": [
@@ -796,6 +1067,7 @@
         "wikidata_qid": "Q657100"
     },
     "_tmp_columbiform_bird": {
+        "parent_name": "_tmp_gallinacean",
         "parents_pwn30": [
             "n01789386"
         ],
@@ -823,6 +1095,19 @@
         "wikidata_name": "Commons gallery",
         "wikidata_qid": "Q21167233"
     },
+    "_tmp_communication": {
+        "freebase_mid": "/m/01lhf",
+        "parents_pwn30": [
+            "n00002137"
+        ],
+        "parents_qid": [],
+        "wikidata_desc": "act of conveying intended meanings from one entity or group to another through the use of mutually understood signs and rules",
+        "wikidata_name": "communication",
+        "wikidata_qid": "",
+        "wordnet_gloss": "something that is communicated by or to or between people or groups",
+        "wordnet_name": "communication",
+        "wordnet_pwn30": "n00033020"
+    },
     "_tmp_communication_medium": {
         "freebase_mid": "/m/03qh03g",
         "parents_qid": [
@@ -832,6 +1117,24 @@
         "wikidata_desc": "storage and delivering agent of information or data",
         "wikidata_name": "communication medium",
         "wikidata_qid": "Q340169"
+    },
+    "_tmp_component": {
+        "parents_qid": [
+            "Q337060"
+        ],
+        "wikidata_desc": "smaller, self-contained part of technical entity consisting of components",
+        "wikidata_name": "component",
+        "wikidata_qid": "Q1310239"
+    },
+    "_tmp_compound": {
+        "parents_pwn30": [
+            "n14806838"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight",
+        "wordnet_name": "compound",
+        "wordnet_pwn30": "n14818238"
     },
     "_tmp_computer_form_factor": {
         "parents_qid": [
@@ -843,6 +1146,7 @@
     },
     "_tmp_computer_hardware": {
         "freebase_mid": "/m/01mfj",
+        "parent_name": "computer",
         "parents_qid": [
             "Q68",
             "Q2858615"
@@ -881,6 +1185,28 @@
         "wikidata_name": "concrete object",
         "wikidata_qid": "Q4406616"
     },
+    "_tmp_conductor": {
+        "parent_name": "_tmp_device",
+        "parents_pwn30": [
+            "n03183080"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a device designed to transmit electricity, heat, etc.",
+        "wordnet_name": "conductor",
+        "wordnet_pwn30": "n03088707"
+    },
+    "_tmp_conduit": {
+        "parent_name": "_tmp_passage",
+        "parents_pwn30": [
+            "n03895293"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a passage (a pipe or tunnel) through which water or electric wires can pass; \"the computers were connected through a system of conduits\"",
+        "wordnet_name": "conduit",
+        "wordnet_pwn30": "n03089014"
+    },
     "_tmp_confection": {
         "freebase_mid": "/m/0c5yy",
         "parents_qid": [
@@ -909,6 +1235,7 @@
         "wikidata_qid": "Q811430"
     },
     "_tmp_consumer_goods": {
+        "parent_name": "_tmp_good",
         "parents_pwn30": [
             "n03076708"
         ],
@@ -917,6 +1244,17 @@
         "wordnet_gloss": "goods (as food or clothing) intended for direct use or consumption",
         "wordnet_name": "consumer goods",
         "wordnet_pwn30": "n03093574"
+    },
+    "_tmp_control": {
+        "parent_name": "_tmp_mechanism",
+        "parents_pwn30": [
+            "n03738472"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a mechanism that controls the operation of a machine; \"the speed controller on his turntable was not working properly\"; \"I turned the controls over to her\"",
+        "wordnet_name": "control",
+        "wordnet_pwn30": "n03096960"
     },
     "_tmp_conveyor_system": {
         "freebase_mid": "/m/03bz2zv",
@@ -928,6 +1266,7 @@
         "wikidata_qid": "Q577998"
     },
     "_tmp_cooker": {
+        "parent_name": "_tmp_cookware",
         "parents_pwn30": [
             "n03101986"
         ],
@@ -937,7 +1276,19 @@
         "wordnet_name": "cooker",
         "wordnet_pwn30": "n03101156"
     },
+    "_tmp_cookware": {
+        "parent_name": "kitchen_utensil",
+        "parents_pwn30": [
+            "n03621049"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a kitchen utensil made of material that does not melt easily; used for cooking",
+        "wordnet_name": "cookware",
+        "wordnet_pwn30": "n03101986"
+    },
     "_tmp_copier": {
+        "parent_name": "_tmp_setup",
         "parents_pwn30": [
             "n02727825"
         ],
@@ -948,6 +1299,7 @@
         "wordnet_pwn30": "n03257586"
     },
     "_tmp_cord": {
+        "parent_name": "_tmp_conductor",
         "parents_pwn30": [
             "n03088707"
         ],
@@ -959,6 +1311,7 @@
     },
     "_tmp_corrective_lens": {
         "freebase_mid": "/m/0jyct",
+        "parent_name": "medical_equipment",
         "parents_qid": [
             "Q6554101"
         ],
@@ -967,6 +1320,7 @@
         "wikidata_qid": "Q2143661"
     },
     "_tmp_corvine_bird": {
+        "parent_name": "_tmp_oscine",
         "parents_pwn30": [
             "n01525720"
         ],
@@ -977,13 +1331,15 @@
         "wordnet_pwn30": "n01578575"
     },
     "_tmp_course": {
-        "parents_qid": [
-            "Q15989253",
-            "Q657221"
+        "parent_name": "_tmp_aliment",
+        "parents_pwn30": [
+            "n07570720"
         ],
-        "wikidata_desc": "specific set of food items that are served together during a meal, all at the same time",
-        "wikidata_name": "course",
-        "wikidata_qid": "Q14915034"
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "part of a meal served at one time; \"she prepared a three course meal\"",
+        "wordnet_name": "course",
+        "wordnet_pwn30": "n07556970"
     },
     "_tmp_court_game": {
         "parents_pwn30": [
@@ -1029,6 +1385,7 @@
         "wordnet_pwn30": "n03125870"
     },
     "_tmp_craniate": {
+        "parent_name": "_tmp_chordate",
         "parents_pwn30": [
             "n01466257"
         ],
@@ -1070,6 +1427,17 @@
         "wordnet_name": "cruciferous vegetable",
         "wordnet_pwn30": "n07713395"
     },
+    "_tmp_crustacean": {
+        "parent_name": "_tmp_arthropod",
+        "parents_pwn30": [
+            "n01767661"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any mainly aquatic arthropod usually having a segmented body and chitinous exoskeleton",
+        "wordnet_name": "crustacean",
+        "wordnet_pwn30": "n01974773"
+    },
     "_tmp_cube": {
         "parent_name": "_tmp_block",
         "parents_pwn30": [
@@ -1081,13 +1449,32 @@
         "wordnet_name": "cube",
         "wordnet_pwn30": "n03144592"
     },
+    "_tmp_cuisine": {
+        "freebase_mid": "/m/01ykh",
+        "parents_qid": [
+            "Q82821"
+        ],
+        "wikidata_desc": "characteristic style of cooking practices and traditions",
+        "wikidata_name": "cuisine",
+        "wikidata_qid": "Q1778821"
+    },
     "_tmp_cultivated_edible_plant": {
+        "parent_name": "plant",
         "parents_qid": [
             "Q756"
         ],
         "wikidata_desc": "",
         "wikidata_name": "cultivated edible plant",
         "wikidata_qid": "Q1086824"
+    },
+    "_tmp_culture": {
+        "freebase_mid": "/m/01ws5",
+        "parents_qid": [
+            "Q3769299"
+        ],
+        "wikidata_desc": "society's way of life within anthropology",
+        "wikidata_name": "culture",
+        "wikidata_qid": "Q11042"
     },
     "_tmp_cup_with_stem": {
         "parents_qid": [
@@ -1097,14 +1484,40 @@
         "wikidata_name": "cup with stem",
         "wikidata_qid": "Q2100893"
     },
+    "_tmp_currency": {
+        "parents_pwn30": [
+            "n13372961"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "the metal or paper medium of exchange that is presently used",
+        "wordnet_name": "currency",
+        "wordnet_pwn30": "n13385913"
+    },
     "_tmp_cutlery": {
         "freebase_mid": "/m/023pjk",
-        "parents_qid": [
-            "Q3773693"
+        "parent_name": "tableware",
+        "parents_pwn30": [
+            "n04381994"
         ],
+        "parents_qid": [],
         "wikidata_desc": "kitchen utensil used for eating food",
         "wikidata_name": "cutlery",
-        "wikidata_qid": "Q81944"
+        "wikidata_qid": "",
+        "wordnet_gloss": "tableware implements for cutting and eating food",
+        "wordnet_name": "cutlery",
+        "wordnet_pwn30": "n03153375"
+    },
+    "_tmp_cutter": {
+        "parent_name": "_tmp_cutting_implement",
+        "parents_pwn30": [
+            "n03154446"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a cutting implement; a tool for cutting",
+        "wordnet_name": "cutter",
+        "wordnet_pwn30": "n03154073"
     },
     "_tmp_cutting_implement": {
         "parent_name": "tool",
@@ -1119,6 +1532,7 @@
     },
     "_tmp_cutting_tool": {
         "freebase_mid": "/m/09c4c1",
+        "parent_name": "tool",
         "parents_qid": [
             "Q39546"
         ],
@@ -1137,6 +1551,7 @@
         "wordnet_pwn30": "n01439121"
     },
     "_tmp_dark_red": {
+        "parent_name": "_tmp_red",
         "parents_pwn30": [
             "n04962784"
         ],
@@ -1147,16 +1562,18 @@
         "wordnet_pwn30": "n04963740"
     },
     "_tmp_decapod": {
+        "parent_name": "_tmp_crustacean",
         "parents_pwn30": [
-            "n01968315"
+            "n01974773"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "cephalopods having eight short tentacles plus two long ones",
+        "wordnet_gloss": "crustaceans characteristically having five pairs of locomotor appendages each joined to a segment of the thorax",
         "wordnet_name": "decapod",
-        "wordnet_pwn30": "n01971094"
+        "wordnet_pwn30": "n01976146"
     },
     "_tmp_dental_appliance": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -1165,6 +1582,16 @@
         "wordnet_gloss": "a device to repair teeth or replace missing teeth",
         "wordnet_name": "dental appliance",
         "wordnet_pwn30": "n03175604"
+    },
+    "_tmp_design": {
+        "parents_pwn30": [
+            "n03169390"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a decorative or artistic work; \"the coach had a design on the doors\"",
+        "wordnet_name": "design",
+        "wordnet_pwn30": "n03178782"
     },
     "_tmp_detergent": {
         "freebase_mid": "/m/0m_b4",
@@ -1177,12 +1604,30 @@
         "wikidata_qid": "Q334637"
     },
     "_tmp_device": {
+        "parent_name": "_tmp_instrumentation",
+        "parents_pwn30": [
+            "n03575240"
+        ],
         "parents_qid": [
             "Q16798631"
         ],
         "wikidata_desc": "complex equipment, such as with a motor or powered by electricity or another source of energy that it converts",
         "wikidata_name": "device",
-        "wikidata_qid": "Q1183543"
+        "wikidata_qid": "Q1183543",
+        "wordnet_gloss": "an instrumentality invented for a particular purpose; \"the device is small enough to wear on your wrist\"; \"a device intended to conserve water\"",
+        "wordnet_name": "device",
+        "wordnet_pwn30": "n03183080"
+    },
+    "_tmp_diapsid": {
+        "parent_name": "reptile",
+        "parents_pwn30": [
+            "n01661091"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "reptile having a pair of openings in the skull behind each eye",
+        "wordnet_name": "diapsid",
+        "wordnet_pwn30": "n01661818"
     },
     "_tmp_dihydrogen_chalcogenide": {
         "parents_qid": [
@@ -1193,32 +1638,64 @@
         "wikidata_name": "dihydrogen chalcogenide",
         "wikidata_qid": "Q11723014"
     },
+    "_tmp_dinner": {
+        "freebase_mid": "/m/0jffp",
+        "parents_qid": [
+            "Q6460735"
+        ],
+        "wikidata_desc": "main meal of the day, or sometimes to the noon, early afternoon or evening meal",
+        "wikidata_name": "dinner",
+        "wikidata_qid": "Q657221"
+    },
     "_tmp_dip": {
         "freebase_mid": "/m/05wgx5",
-        "parents_qid": [
-            "Q178359",
-            "Q19861951"
+        "parents_pwn30": [
+            "n07810907"
         ],
+        "parents_qid": [],
         "wikidata_desc": "type of condiment",
         "wikidata_name": "dip",
-        "wikidata_qid": "Q2046560"
+        "wikidata_qid": "",
+        "wordnet_gloss": "tasty mixture or liquid into which bite-sized foods are dipped",
+        "wordnet_name": "dip",
+        "wordnet_pwn30": "n07582609"
     },
     "_tmp_dish": {
         "freebase_mid": "/m/02q08p0",
-        "parents_qid": [
-            "Q8205328"
+        "parent_name": "_tmp_aliment",
+        "parents_pwn30": [
+            "n07570720"
         ],
+        "parents_qid": [],
         "wikidata_desc": "specific food preparation with cooking finished, and ready to eat, or be served",
         "wikidata_name": "dish",
-        "wikidata_qid": "Q746549"
+        "wikidata_qid": "",
+        "wordnet_gloss": "a particular item of prepared food; \"she prepared a special dish for dinner\"",
+        "wordnet_name": "dish",
+        "wordnet_pwn30": "n07557434"
     },
     "_tmp_dispenser": {
-        "parents_qid": [
-            "Q987767"
+        "parent_name": "container",
+        "parents_pwn30": [
+            "n03094503"
         ],
+        "parents_qid": [],
         "wikidata_desc": "storage container designed for dispensing items or material within, usually in constrained quanitites",
         "wikidata_name": "dispenser",
-        "wikidata_qid": "Q27098499"
+        "wikidata_qid": "",
+        "wordnet_gloss": "a container so designed that the contents can be used in prescribed amounts",
+        "wordnet_name": "dispenser",
+        "wordnet_pwn30": "n03210683"
+    },
+    "_tmp_document": {
+        "freebase_mid": "/m/015bv3",
+        "parents_qid": [
+            "Q234460",
+            "Q199655"
+        ],
+        "wikidata_desc": "preserved information",
+        "wikidata_name": "document",
+        "wikidata_qid": "Q49848"
     },
     "_tmp_domestic_animal": {
         "parent_name": "animal",
@@ -1232,6 +1709,7 @@
         "wordnet_pwn30": "n01317541"
     },
     "_tmp_double_reed": {
+        "parent_name": "_tmp_reed",
         "parents_pwn30": [
             "n02817799"
         ],
@@ -1251,6 +1729,16 @@
         "wikidata_name": "drainage system",
         "wikidata_qid": "Q285451"
     },
+    "_tmp_dressing": {
+        "parents_pwn30": [
+            "n03050026"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a cloth covering for a wound or sore",
+        "wordnet_name": "dressing",
+        "wordnet_pwn30": "n03237639"
+    },
     "_tmp_drinking_vessel": {
         "parent_name": "_tmp_vessel",
         "parents_pwn30": [
@@ -1262,6 +1750,15 @@
         "wordnet_name": "drinking vessel",
         "wordnet_pwn30": "n03241496"
     },
+    "_tmp_drug": {
+        "freebase_mid": "/m/02kjb_",
+        "parents_qid": [
+            "Q409205"
+        ],
+        "wikidata_desc": "chemical substance having an effect on the body",
+        "wikidata_name": "drug",
+        "wikidata_qid": "Q8386"
+    },
     "_tmp_dry_bulk_cargo": {
         "parents_qid": [
             "Q1359395"
@@ -1269,6 +1766,17 @@
         "wikidata_desc": "",
         "wikidata_name": "dry bulk cargo",
         "wikidata_qid": "Q2259909"
+    },
+    "_tmp_durables": {
+        "parent_name": "_tmp_consumer_goods",
+        "parents_pwn30": [
+            "n03093574"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "consumer goods that are not destroyed by use",
+        "wordnet_name": "durables",
+        "wordnet_pwn30": "n03257877"
     },
     "_tmp_dynamometer": {
         "parents_qid": [
@@ -1321,16 +1829,18 @@
         "wordnet_pwn30": "n02453611"
     },
     "_tmp_edge": {
+        "parent_name": "_tmp_side",
         "parents_pwn30": [
-            "n08592656"
+            "n04213626"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "the outside limit of an object or area or surface; a place farthest away from the center of something; \"the edge of the leaf is wavy\"; \"she sat on the edge of the bed\"; \"the water's edge\"",
+        "wordnet_gloss": "a sharp side formed by the intersection of two surfaces of an object; \"he rounded the edges of the box\"",
         "wordnet_name": "edge",
-        "wordnet_pwn30": "n03264542"
+        "wordnet_pwn30": "n03264136"
     },
     "_tmp_edge_tool": {
+        "parent_name": "_tmp_cutter",
         "parents_pwn30": [
             "n03154073"
         ],
@@ -1341,6 +1851,7 @@
         "wordnet_pwn30": "n03265032"
     },
     "_tmp_edible_fruit": {
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705711",
             "n13134947"
@@ -1374,6 +1885,7 @@
         "wordnet_pwn30": "n03272383"
     },
     "_tmp_electrical_device": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -1392,6 +1904,7 @@
         "wikidata_qid": "Q3749263"
     },
     "_tmp_electro-acoustic_transducer": {
+        "parent_name": "_tmp_transducer",
         "parents_pwn30": [
             "n04470953"
         ],
@@ -1411,6 +1924,7 @@
         "wikidata_qid": "Q11653"
     },
     "_tmp_electronic_device": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -1430,6 +1944,7 @@
     },
     "_tmp_electronic_machine": {
         "freebase_mid": "/m/0bs7_0t",
+        "parent_name": "home_appliance",
         "parents_qid": [
             "Q2425052"
         ],
@@ -1438,6 +1953,7 @@
         "wikidata_qid": "Q2858615"
     },
     "_tmp_electronic_visual_display": {
+        "parent_name": "computer_monitor",
         "parents_qid": [
             "Q5290",
             "Q178648"
@@ -1447,6 +1963,7 @@
         "wikidata_qid": "Q6021804"
     },
     "_tmp_element": {
+        "parent_name": "_tmp_part",
         "parents_pwn30": [
             "n03892891"
         ],
@@ -1457,6 +1974,7 @@
         "wordnet_pwn30": "n03081021"
     },
     "_tmp_elevation": {
+        "parent_name": "_tmp_formation",
         "parents_pwn30": [
             "n09287968"
         ],
@@ -1467,6 +1985,7 @@
         "wordnet_pwn30": "n09366317"
     },
     "_tmp_embankment": {
+        "parent_name": "hill",
         "parents_pwn30": [
             "n03792048"
         ],
@@ -1477,6 +1996,7 @@
         "wordnet_pwn30": "n03282060"
     },
     "_tmp_emblem": {
+        "parent_name": "_tmp_design",
         "parents_pwn30": [
             "n03178782"
         ],
@@ -1485,6 +2005,17 @@
         "wordnet_gloss": "special design or visual object representing a quality, type, group, etc.",
         "wordnet_name": "emblem",
         "wordnet_pwn30": "n03282591"
+    },
+    "_tmp_enclosure": {
+        "parent_name": "_tmp_area",
+        "parents_pwn30": [
+            "n02735688"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a structure consisting of an area that has been enclosed for some purpose",
+        "wordnet_name": "enclosure",
+        "wordnet_pwn30": "n03285912"
     },
     "_tmp_equid": {
         "parent_name": "_tmp_perissodactyl",
@@ -1499,6 +2030,7 @@
     },
     "_tmp_equidae": {
         "freebase_mid": "/m/02s3y",
+        "parent_name": "animal",
         "parents_qid": [
             "Q729",
             "Q16521"
@@ -1508,12 +2040,19 @@
         "wikidata_qid": "Q165115"
     },
     "_tmp_equipment": {
+        "parent_name": "_tmp_instrumentation",
+        "parents_pwn30": [
+            "n03575240"
+        ],
         "parents_qid": [
             "Q2424752"
         ],
         "wikidata_desc": "collective term for all items that are required to exercise a certain activity",
         "wikidata_name": "equipment",
-        "wikidata_qid": "Q16798631"
+        "wikidata_qid": "Q16798631",
+        "wordnet_gloss": "an instrumentality needed for an undertaking or to perform a service",
+        "wordnet_name": "equipment",
+        "wordnet_pwn30": "n03294048"
     },
     "_tmp_ergometer": {
         "parents_qid": [
@@ -1552,7 +2091,19 @@
         "wikidata_name": "everyday life",
         "wikidata_qid": "Q1129653"
     },
+    "_tmp_excavation": {
+        "parent_name": "_tmp_artifact",
+        "parents_pwn30": [
+            "n00021939"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a hole in the ground made by excavating",
+        "wordnet_name": "excavation",
+        "wordnet_pwn30": "n03302121"
+    },
     "_tmp_exercise_device": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -1574,6 +2125,7 @@
         "wordnet_pwn30": "n03472232"
     },
     "_tmp_explosive_device": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -1584,12 +2136,23 @@
         "wordnet_pwn30": "n03305522"
     },
     "_tmp_explosive_weapon": {
+        "parent_name": "weapon",
         "parents_qid": [
             "Q728"
         ],
         "wikidata_desc": "high explosive used to project blast and/or fragmentation",
         "wikidata_name": "explosive weapon",
         "wikidata_qid": "Q1384616"
+    },
+    "_tmp_extreme": {
+        "parents_pwn30": [
+            "n08568978"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "the point located farthest from the middle of something",
+        "wordnet_name": "extreme",
+        "wordnet_pwn30": "n08569165"
     },
     "_tmp_extremity": {
         "parents_pwn30": [
@@ -1602,6 +2165,7 @@
         "wordnet_pwn30": "n05566919"
     },
     "_tmp_facial_hair": {
+        "parent_name": "hair",
         "parents_pwn30": [
             "n05254795"
         ],
@@ -1611,7 +2175,23 @@
         "wordnet_name": "facial hair",
         "wordnet_pwn30": "n05261404"
     },
+    "_tmp_facility": {
+        "parent_name": "_tmp_artifact",
+        "parents_pwn30": [
+            "n00021939"
+        ],
+        "parents_qid": [
+            "Q2221906"
+        ],
+        "wikidata_desc": "place for doing something",
+        "wikidata_name": "facility",
+        "wikidata_qid": "Q13226383",
+        "wordnet_gloss": "a building or place that provides a particular service or is used for a particular industry; \"the assembly plant is an enormous facility\"",
+        "wordnet_name": "facility",
+        "wordnet_pwn30": "n03315023"
+    },
     "_tmp_fan": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -1652,6 +2232,16 @@
         "wordnet_name": "female offspring",
         "wordnet_pwn30": "n10084043"
     },
+    "_tmp_fiber": {
+        "freebase_mid": "/m/011jng",
+        "parents_qid": [
+            "Q214609",
+            "Q19361238"
+        ],
+        "wikidata_desc": "natural or synthetic substance made of long, thin filaments",
+        "wikidata_name": "fiber",
+        "wikidata_qid": "Q161"
+    },
     "_tmp_fig_tree": {
         "parent_name": "tree",
         "parents_pwn30": [
@@ -1664,17 +2254,17 @@
         "wordnet_pwn30": "n12401335"
     },
     "_tmp_figure": {
-        "parent_name": "_tmp_model",
         "parents_pwn30": [
-            "n03777283"
+            "n00027807"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "a model of a bodily form (especially of a person); \"he made a figure of Santa Claus\"",
+        "wordnet_gloss": "a combination of points and lines and planes that form a visible palpable shape",
         "wordnet_name": "figure",
-        "wordnet_pwn30": "n03335600"
+        "wordnet_pwn30": "n13862780"
     },
     "_tmp_filum": {
+        "parent_name": "_tmp_structure",
         "parents_pwn30": [
             "n05225602"
         ],
@@ -1685,6 +2275,7 @@
         "wordnet_pwn30": "n05229468"
     },
     "_tmp_finch": {
+        "parent_name": "_tmp_oscine",
         "parents_pwn30": [
             "n01525720"
         ],
@@ -1712,6 +2303,21 @@
         "wikidata_name": "finished good",
         "wikidata_qid": "Q3245975"
     },
+    "_tmp_firearm": {
+        "freebase_mid": "/m/032rk",
+        "parent_name": "weapon",
+        "parents_pwn30": [
+            "n04565375"
+        ],
+        "parents_qid": [
+            "Q15142889",
+            "Q1194773"
+        ],
+        "wikidata_desc": "weapon that launches a projectile at high velocity through the confined burning of a propellant",
+        "wikidata_name": "firearm",
+        "wikidata_qid": "Q12796",
+        "wordnet_pwn30": "n03467984"
+    },
     "_tmp_fishing_tackle": {
         "freebase_mid": "/m/0fwy6j",
         "parents_qid": [
@@ -1720,6 +2326,17 @@
         "wikidata_desc": "equipment used for fishing",
         "wikidata_name": "fishing tackle",
         "wikidata_qid": "Q2604618"
+    },
+    "_tmp_fixings": {
+        "parent_name": "_tmp_foodstuff",
+        "parents_pwn30": [
+            "n07566340"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "food that is a component of a mixture in cooking; \"the recipe lists all the fixings for a salad\"",
+        "wordnet_name": "fixings",
+        "wordnet_pwn30": "n07809096"
     },
     "_tmp_fixture": {
         "parent_name": "_tmp_artifact",
@@ -1733,6 +2350,7 @@
         "wordnet_pwn30": "n03354613"
     },
     "_tmp_flavorer": {
+        "parent_name": "_tmp_fixings",
         "parents_pwn30": [
             "n07809096"
         ],
@@ -1775,6 +2393,15 @@
         "wordnet_name": "flowering tree",
         "wordnet_pwn30": "n13109733"
     },
+    "_tmp_fluid": {
+        "freebase_mid": "/m/02yfx",
+        "parents_qid": [
+            "Q27166344"
+        ],
+        "wikidata_desc": "substance which continuously deforms under an applied shear stress, including liquids and gases",
+        "wikidata_name": "fluid",
+        "wikidata_qid": "Q102205"
+    },
     "_tmp_flying_machine": {
         "parents_qid": [
             "Q11019"
@@ -1784,6 +2411,7 @@
         "wikidata_qid": "Q7194062"
     },
     "_tmp_food_ingredient": {
+        "parent_name": "food",
         "parents_qid": [
             "Q10675206",
             "Q2095",
@@ -1804,7 +2432,18 @@
         "wordnet_name": "foodstuff",
         "wordnet_pwn30": "n07566340"
     },
+    "_tmp_formation": {
+        "parents_pwn30": [
+            "n00002684"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "(geology) the geological features of the earth",
+        "wordnet_name": "formation",
+        "wordnet_pwn30": "n09287968"
+    },
     "_tmp_fowl": {
+        "parent_name": "_tmp_gallinacean",
         "parents_pwn30": [
             "n01789386"
         ],
@@ -1836,6 +2475,7 @@
         "wordnet_pwn30": "n03393324"
     },
     "_tmp_front": {
+        "parent_name": "_tmp_side",
         "parents_pwn30": [
             "n04213626"
         ],
@@ -1846,6 +2486,7 @@
         "wordnet_pwn30": "n03398467"
     },
     "_tmp_fruit_vegetable": {
+        "parent_name": "fruit",
         "parents_qid": [
             "Q3314483"
         ],
@@ -1862,6 +2503,7 @@
         "wikidata_qid": "Q21925565"
     },
     "_tmp_fund": {
+        "parent_name": "_tmp_accumulation",
         "parents_pwn30": [
             "n13366693"
         ],
@@ -1872,6 +2514,7 @@
         "wordnet_pwn30": "n13367070"
     },
     "_tmp_furnishing": {
+        "parent_name": "_tmp_instrumentation",
         "parents_pwn30": [
             "n03575240"
         ],
@@ -1881,6 +2524,17 @@
         "wordnet_name": "furnishing",
         "wordnet_pwn30": "n03405265"
     },
+    "_tmp_gallinacean": {
+        "parent_name": "bird",
+        "parents_pwn30": [
+            "n01503061"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "heavy-bodied largely ground-feeding domestic or game birds",
+        "wordnet_name": "gallinacean",
+        "wordnet_pwn30": "n01789386"
+    },
     "_tmp_gallus_gallus_domesticus": {
         "parents_qid": [
             "Q16521"
@@ -1889,7 +2543,18 @@
         "wikidata_name": "Gallus gallus domesticus",
         "wikidata_qid": "Q29533959"
     },
+    "_tmp_game": {
+        "freebase_mid": "/m/034s7",
+        "parents_qid": [
+            "Q17538258",
+            "Q11042"
+        ],
+        "wikidata_desc": "recreational activity",
+        "wikidata_name": "game",
+        "wikidata_qid": "Q11410"
+    },
     "_tmp_game_equipment": {
+        "parent_name": "_tmp_equipment",
         "parents_pwn30": [
             "n03294048"
         ],
@@ -1920,6 +2585,16 @@
         "wordnet_name": "garment",
         "wordnet_pwn30": "n03419014"
     },
+    "_tmp_gas": {
+        "parents_pwn30": [
+            "n14939445"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a fluid in the gaseous state having neither independent shape nor volume and being able to expand indefinitely",
+        "wordnet_name": "gas",
+        "wordnet_pwn30": "n14877585"
+    },
     "_tmp_gassosa_al_caff\u00e8": {
         "parents_qid": [
             "Q147538"
@@ -1930,6 +2605,7 @@
     },
     "_tmp_gastropoda": {
         "freebase_mid": "/m/018g8j",
+        "parent_name": "animal",
         "parents_qid": [
             "Q729",
             "Q16521"
@@ -1939,6 +2615,7 @@
         "wikidata_qid": "Q4867740"
     },
     "_tmp_geographic_area": {
+        "parent_name": "_tmp_region",
         "parents_pwn30": [
             "n08630985"
         ],
@@ -1979,18 +2656,30 @@
         "wordnet_name": "golf equipment",
         "wordnet_pwn30": "n03446832"
     },
+    "_tmp_good": {
+        "parent_name": "_tmp_artifact",
+        "parents_pwn30": [
+            "n00021939"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "articles of commerce",
+        "wordnet_name": "good",
+        "wordnet_pwn30": "n03076708"
+    },
     "_tmp_goods": {
         "freebase_mid": "/m/02s26t",
         "parents_qid": [
-            "Q29028649",
+            "Q337060",
             "Q2897903",
-            "Q337060"
+            "Q29028649"
         ],
         "wikidata_desc": "tangible and intangible thing, except labor tied services, that satisfies human wants and provides utility",
         "wikidata_name": "goods",
         "wikidata_qid": "Q28877"
     },
     "_tmp_gossip": {
+        "parent_name": "_tmp_report",
         "parents_pwn30": [
             "n07217924"
         ],
@@ -2012,6 +2701,7 @@
         "wordnet_pwn30": "n07802417"
     },
     "_tmp_gramineous_plant": {
+        "parent_name": "_tmp_herb",
         "parents_pwn30": [
             "n12205694"
         ],
@@ -2021,8 +2711,20 @@
         "wordnet_name": "gramineous plant",
         "wordnet_pwn30": "n12101870"
     },
+    "_tmp_green": {
+        "parent_name": "vegetable",
+        "parents_pwn30": [
+            "n07707451"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any of various leafy plants or their leaves and stems eaten as vegetables",
+        "wordnet_name": "green",
+        "wordnet_pwn30": "n07709333"
+    },
     "_tmp_grocery_store": {
         "freebase_mid": "/m/01jpn4",
+        "parent_name": "_tmp_mart",
         "parents_pwn30": [
             "n03722288"
         ],
@@ -2034,6 +2736,16 @@
         "wikidata_qid": "Q1295201",
         "wordnet_pwn30": "n03461385"
     },
+    "_tmp_group": {
+        "parents_pwn30": [
+            "n00002137"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any number of entities (members) considered as a unit",
+        "wordnet_name": "group",
+        "wordnet_pwn30": "n00031264"
+    },
     "_tmp_group_of_humans": {
         "parents_qid": [
             "Q16334298"
@@ -2043,6 +2755,7 @@
         "wikidata_qid": "Q16334295"
     },
     "_tmp_gun": {
+        "parent_name": "_tmp_armament",
         "parents_pwn30": [
             "n02738031"
         ],
@@ -2053,6 +2766,7 @@
         "wordnet_pwn30": "n02746365"
     },
     "_tmp_gutter": {
+        "parent_name": "_tmp_channel",
         "parents_pwn30": [
             "n03006105"
         ],
@@ -2062,7 +2776,17 @@
         "wordnet_name": "gutter",
         "wordnet_pwn30": "n03471473"
     },
+    "_tmp_habit": {
+        "freebase_mid": "/m/02z8pxn",
+        "parents_qid": [
+            "Q36529775"
+        ],
+        "wikidata_desc": "routine of behavior that is repeated regularly and tends to occur subconsciously",
+        "wikidata_name": "habit",
+        "wikidata_qid": "Q1299714"
+    },
     "_tmp_hand_tool": {
+        "parent_name": "tool",
         "parents_qid": [
             "Q39546"
         ],
@@ -2113,13 +2837,17 @@
     },
     "_tmp_headgear": {
         "freebase_mid": "/m/01443y",
-        "parents_qid": [
-            "Q11460",
-            "Q2424752"
+        "parent_name": "clothing",
+        "parents_pwn30": [
+            "n03051540"
         ],
+        "parents_qid": [],
         "wikidata_desc": "any covering for the head; element of clothing which is worn on one's head",
         "wikidata_name": "headgear",
-        "wikidata_qid": "Q14952"
+        "wikidata_qid": "",
+        "wordnet_gloss": "clothing for the head",
+        "wordnet_name": "headgear",
+        "wordnet_pwn30": "n03502509"
     },
     "_tmp_heavier-than-air_craft": {
         "parent_name": "aircraft",
@@ -2132,6 +2860,16 @@
         "wordnet_name": "heavier-than-air craft",
         "wordnet_pwn30": "n03510583"
     },
+    "_tmp_herb": {
+        "parents_pwn30": [
+            "n13083586"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a plant lacking a permanent woody stem; many are flowering garden plants or potherbs; some having medicinal properties; some are pests",
+        "wordnet_name": "herb",
+        "wordnet_pwn30": "n12205694"
+    },
     "_tmp_heterogeneous_mixture": {
         "parents_qid": [
             "Q44240072",
@@ -2142,14 +2880,17 @@
         "wikidata_qid": "Q11780457"
     },
     "_tmp_hole": {
-        "parents_qid": [
-            "Q4406616"
+        "parents_pwn30": [
+            "n03848729"
         ],
-        "wikidata_desc": "opening in the surface of an object",
-        "wikidata_name": "hole",
-        "wikidata_qid": "Q20204151"
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an opening deliberately made in or through something",
+        "wordnet_name": "hole",
+        "wordnet_pwn30": "n03526198"
     },
     "_tmp_honor": {
+        "parent_name": "_tmp_symbol",
         "parents_pwn30": [
             "n06806469"
         ],
@@ -2180,6 +2921,7 @@
         "wikidata_qid": "Q235356"
     },
     "_tmp_hose": {
+        "parent_name": "footwear",
         "parents_pwn30": [
             "n03381126"
         ],
@@ -2191,6 +2933,7 @@
     },
     "_tmp_hosiery": {
         "freebase_mid": "/m/09j70",
+        "parent_name": "fashion_accessory",
         "parents_qid": [
             "Q1065579"
         ],
@@ -2201,9 +2944,9 @@
     "_tmp_human": {
         "freebase_mid": "/m/0dgw9r",
         "parents_qid": [
-            "Q55983715",
+            "Q1156970",
             "Q215627",
-            "Q1156970"
+            "Q55983715"
         ],
         "wikidata_desc": "common name of Homo sapiens, unique extant species of the genus Homo",
         "wikidata_name": "human",
@@ -2220,12 +2963,16 @@
         "wordnet_pwn30": "n05397468"
     },
     "_tmp_hydrant": {
-        "parents_qid": [
-            "Q1183543"
+        "parents_pwn30": [
+            "n03206158"
         ],
+        "parents_qid": [],
         "wikidata_desc": "outlet from a fluid main often consisting of an upright pipe with a valve attached from which fluid (e.g. water or fuel) can be tapped",
         "wikidata_name": "hydrant",
-        "wikidata_qid": "Q11191576"
+        "wikidata_qid": "",
+        "wordnet_gloss": "a discharge pipe with a valve and spout at which water may be drawn from the mains of waterworks",
+        "wordnet_name": "hydrant",
+        "wordnet_pwn30": "n03550916"
     },
     "_tmp_hydraulic_machine": {
         "freebase_mid": "/m/04xkfc",
@@ -2236,7 +2983,19 @@
         "wikidata_name": "hydraulic machine",
         "wikidata_qid": "Q1972552"
     },
+    "_tmp_hygiene": {
+        "freebase_mid": "/m/012sj0",
+        "parents_qid": [
+            "Q22692489",
+            "Q101072",
+            "Q31207"
+        ],
+        "wikidata_desc": "set of practices performed for the preservation of health",
+        "wikidata_name": "hygiene",
+        "wikidata_qid": "Q162297"
+    },
     "_tmp_implement": {
+        "parent_name": "_tmp_instrumentation",
         "parents_pwn30": [
             "n03575240"
         ],
@@ -2258,8 +3017,8 @@
     "_tmp_industry": {
         "freebase_mid": "/m/03rnh",
         "parents_qid": [
-            "Q1914636",
-            "Q3958441"
+            "Q3958441",
+            "Q1914636"
         ],
         "wikidata_desc": "production of goods or service of a given field within an economy",
         "wikidata_name": "industry",
@@ -2285,6 +3044,16 @@
         "wordnet_name": "ingot",
         "wordnet_pwn30": "n03570526"
     },
+    "_tmp_ingredient": {
+        "freebase_mid": "/m/07xgrh",
+        "parents_qid": [
+            "Q169336",
+            "Q15989253"
+        ],
+        "wikidata_desc": "substance which is part of some product",
+        "wikidata_name": "ingredient",
+        "wikidata_qid": "Q10675206"
+    },
     "_tmp_insectivore": {
         "parent_name": "_tmp_eutherian",
         "parents_pwn30": [
@@ -2296,7 +3065,30 @@
         "wordnet_name": "insectivore",
         "wordnet_pwn30": "n01889074"
     },
+    "_tmp_instrument": {
+        "parent_name": "_tmp_device",
+        "parents_pwn30": [
+            "n03183080"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a device that requires skill for proper use",
+        "wordnet_name": "instrument",
+        "wordnet_pwn30": "n03574816"
+    },
+    "_tmp_instrumentation": {
+        "parent_name": "_tmp_artifact",
+        "parents_pwn30": [
+            "n00021939"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an artifact (or system of artifacts) that is instrumental in accomplishing some end",
+        "wordnet_name": "instrumentation",
+        "wordnet_pwn30": "n03575240"
+    },
     "_tmp_intemperance": {
+        "parent_name": "_tmp_vice",
         "parents_pwn30": [
             "n00747029"
         ],
@@ -2315,6 +3107,7 @@
         "wikidata_qid": "Q1425971"
     },
     "_tmp_island": {
+        "parent_name": "_tmp_zone",
         "parents_pwn30": [
             "n08688247"
         ],
@@ -2344,6 +3137,17 @@
         "wordnet_name": "jar",
         "wordnet_pwn30": "n03593526"
     },
+    "_tmp_jay": {
+        "parent_name": "_tmp_corvine_bird",
+        "parents_pwn30": [
+            "n01578575"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "crested largely blue bird",
+        "wordnet_name": "jay",
+        "wordnet_pwn30": "n01580077"
+    },
     "_tmp_jet_engine": {
         "parents_pwn30": [
             "n04057435"
@@ -2355,6 +3159,7 @@
         "wordnet_pwn30": "n03596285"
     },
     "_tmp_jeweled_headdress": {
+        "parent_name": "_tmp_headgear",
         "parents_pwn30": [
             "n03502509"
         ],
@@ -2364,7 +3169,17 @@
         "wordnet_name": "jeweled headdress",
         "wordnet_pwn30": "n03597317"
     },
+    "_tmp_jewellery": {
+        "freebase_mid": "/m/0404d",
+        "parents_qid": [
+            "Q1065579"
+        ],
+        "wikidata_desc": "form of personal adornment",
+        "wikidata_name": "jewellery",
+        "wikidata_qid": "Q161439"
+    },
     "_tmp_jewelry": {
+        "parent_name": "_tmp_adornment",
         "parents_pwn30": [
             "n02681518"
         ],
@@ -2375,6 +3190,7 @@
         "wordnet_pwn30": "n03597469"
     },
     "_tmp_jump": {
+        "parent_name": "_tmp_actuation",
         "parents_pwn30": [
             "n00045250"
         ],
@@ -2384,7 +3200,18 @@
         "wordnet_name": "jump",
         "wordnet_pwn30": "n00119568"
     },
+    "_tmp_juvenile": {
+        "freebase_mid": "/m/0d1yjn",
+        "parents_qid": [
+            "Q1811014",
+            "Q7239"
+        ],
+        "wikidata_desc": "individual organism that has not yet reached its adult form, sexual maturity, size;if transition from juvenile to fully mature is a more prolonged process (puberty for example), then juveniles during this transformation are sometimes called subadults",
+        "wikidata_name": "juvenile",
+        "wikidata_qid": "Q1516282"
+    },
     "_tmp_keyboard": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -2396,6 +3223,7 @@
     },
     "_tmp_keyboard_instrument": {
         "freebase_mid": "/m/05148p4",
+        "parent_name": "musical_instrument",
         "parents_qid": [
             "Q34379",
             "Q1254773"
@@ -2405,6 +3233,7 @@
         "wikidata_qid": "Q52954"
     },
     "_tmp_kitchen_stove": {
+        "parent_name": "stove",
         "parents_qid": [
             "Q203789"
         ],
@@ -2432,6 +3261,17 @@
         "wikidata_desc": "type of pretzel",
         "wikidata_name": "kringle",
         "wikidata_qid": "Q2098139"
+    },
+    "_tmp_lagomorph": {
+        "parent_name": "_tmp_eutherian",
+        "parents_pwn30": [
+            "n01886756"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "relative large gnawing animals; distinguished from rodents by having two pairs of upper incisors specialized for gnawing",
+        "wordnet_name": "lagomorph",
+        "wordnet_pwn30": "n02323449"
     },
     "_tmp_landmass": {
         "parents_qid": [
@@ -2473,6 +3313,7 @@
     },
     "_tmp_leaf_vegetable": {
         "freebase_mid": "/m/05f725",
+        "parent_name": "vegetable",
         "parents_qid": [
             "Q11004"
         ],
@@ -2489,6 +3330,7 @@
         "wikidata_qid": "Q28319"
     },
     "_tmp_leporid": {
+        "parent_name": "_tmp_lagomorph",
         "parents_pwn30": [
             "n02323449"
         ],
@@ -2531,6 +3373,7 @@
         "wordnet_pwn30": "n04125853"
     },
     "_tmp_lifting_device": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -2592,6 +3435,7 @@
         "wordnet_pwn30": "n12425281"
     },
     "_tmp_limb": {
+        "parent_name": "_tmp_member",
         "parents_pwn30": [
             "n05559908"
         ],
@@ -2600,6 +3444,26 @@
         "wordnet_gloss": "one of the jointed appendages of an animal used for locomotion or grasping: arm; leg; wing; flipper",
         "wordnet_name": "limb",
         "wordnet_pwn30": "n05560244"
+    },
+    "_tmp_limit": {
+        "parents_pwn30": [
+            "n08512259"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "the boundary of a specific area",
+        "wordnet_name": "limit",
+        "wordnet_pwn30": "n08592656"
+    },
+    "_tmp_linen": {
+        "parents_pwn30": [
+            "n04580298"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "white goods or clothing made with linen cloth",
+        "wordnet_name": "linen",
+        "wordnet_pwn30": "n03672352"
     },
     "_tmp_linens": {
         "parents_qid": [
@@ -2639,14 +3503,29 @@
         "wordnet_name": "llama",
         "wordnet_pwn30": "n02437616"
     },
+    "_tmp_logistics": {
+        "freebase_mid": "/m/0k9sx",
+        "parents_qid": [
+            "Q29017603",
+            "Q336"
+        ],
+        "wikidata_desc": "management of the flow of resources",
+        "wikidata_name": "logistics",
+        "wikidata_qid": "Q177777"
+    },
     "_tmp_machine": {
         "freebase_mid": "/m/0dkw5",
-        "parents_qid": [
-            "Q1183543"
+        "parent_name": "_tmp_mechanical_device",
+        "parents_pwn30": [
+            "n03736970"
         ],
+        "parents_qid": [],
         "wikidata_desc": "tool containing one or more parts that uses energy to perform an intended action",
         "wikidata_name": "machine",
-        "wikidata_qid": "Q11019"
+        "wikidata_qid": "",
+        "wordnet_gloss": "a device for overcoming resistance at one point by applying force at some other point",
+        "wordnet_name": "machine",
+        "wordnet_pwn30": "n03700963"
     },
     "_tmp_machine-readable_medium": {
         "parents_qid": [
@@ -2686,6 +3565,7 @@
         "wordnet_pwn30": "n03714235"
     },
     "_tmp_malacostracan_crustacean": {
+        "parent_name": "_tmp_crustacean",
         "parents_pwn30": [
             "n01974773"
         ],
@@ -2694,6 +3574,14 @@
         "wordnet_gloss": "a major subclass of crustaceans",
         "wordnet_name": "malacostracan crustacean",
         "wordnet_pwn30": "n01975687"
+    },
+    "_tmp_manifestation": {
+        "parents_qid": [
+            "Q2424752"
+        ],
+        "wikidata_desc": "physical embodiment of an information artifact",
+        "wikidata_name": "manifestation",
+        "wikidata_qid": "Q286583"
     },
     "_tmp_maritime_transport": {
         "freebase_mid": "/m/08rrcl",
@@ -2706,13 +3594,25 @@
         "wikidata_qid": "Q155930"
     },
     "_tmp_marsupial": {
-        "freebase_mid": "/m/052bc",
-        "parents_qid": [
-            "Q16521"
+        "parents_pwn30": [
+            "n01873982"
         ],
-        "wikidata_desc": "infraclass of mammals",
-        "wikidata_name": "marsupial",
-        "wikidata_qid": "Q25336"
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "mammals of which the females have a pouch (the marsupium) containing the teats where the young are fed and carried",
+        "wordnet_name": "marsupial",
+        "wordnet_pwn30": "n01874434"
+    },
+    "_tmp_mart": {
+        "parent_name": "_tmp_outlet",
+        "parents_pwn30": [
+            "n03748162"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an area in a town where a public mercantile establishment is set up",
+        "wordnet_name": "mart",
+        "wordnet_pwn30": "n03722288"
     },
     "_tmp_material-handling_equipment": {
         "parents_qid": [
@@ -2722,18 +3622,29 @@
         "wikidata_name": "material-handling equipment",
         "wikidata_qid": "Q15984860"
     },
-    "_tmp_measure": {
-        "parent_name": "_tmp_measuring_device",
+    "_tmp_matter": {
         "parents_pwn30": [
-            "n03733925"
+            "n06362953"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "measuring instrument having a sequence of marks at regular intervals; used as a reference in making measurements",
+        "wordnet_gloss": "written works (especially in books or magazines); \"he always took some reading matter with him on the plane\"",
+        "wordnet_name": "matter",
+        "wordnet_pwn30": "n06365467"
+    },
+    "_tmp_measure": {
+        "parent_name": "container",
+        "parents_pwn30": [
+            "n03094503"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a container of some standard capacity that is used to obtain fixed amounts of a substance",
         "wordnet_name": "measure",
-        "wordnet_pwn30": "n03735637"
+        "wordnet_pwn30": "n03733644"
     },
     "_tmp_measuring_device": {
+        "parent_name": "_tmp_instrument",
         "parents_pwn30": [
             "n03574816"
         ],
@@ -2754,6 +3665,7 @@
         "wikidata_qid": "Q2041172"
     },
     "_tmp_meat": {
+        "parent_name": "food",
         "parents_pwn30": [
             "n07555863"
         ],
@@ -2764,6 +3676,7 @@
         "wordnet_pwn30": "n07649854"
     },
     "_tmp_mechanical_device": {
+        "parent_name": "_tmp_mechanism",
         "parents_pwn30": [
             "n03738472"
         ],
@@ -2773,7 +3686,25 @@
         "wordnet_name": "mechanical device",
         "wordnet_pwn30": "n03736970"
     },
+    "_tmp_mechanism": {
+        "parent_name": "_tmp_device",
+        "parents_pwn30": [
+            "n03183080"
+        ],
+        "parents_qid": [
+            "Q1183543",
+            "Q58778",
+            "Q11019"
+        ],
+        "wikidata_desc": "device designed to transform input forces and movement into a desired set of output forces and movement",
+        "wikidata_name": "mechanism",
+        "wikidata_qid": "Q517596",
+        "wordnet_gloss": "device consisting of a piece of machinery; has moving parts that perform some function",
+        "wordnet_name": "mechanism",
+        "wordnet_pwn30": "n03738472"
+    },
     "_tmp_medical_instrument": {
+        "parent_name": "_tmp_instrument",
         "parents_pwn30": [
             "n03574816"
         ],
@@ -2782,6 +3713,37 @@
         "wordnet_gloss": "instrument used in the practice of medicine",
         "wordnet_name": "medical instrument",
         "wordnet_pwn30": "n03739693"
+    },
+    "_tmp_melon": {
+        "parent_name": "_tmp_edible_fruit",
+        "parents_pwn30": [
+            "n07705931"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any of numerous fruits of the gourd family having a hard rind and sweet juicy flesh",
+        "wordnet_name": "melon",
+        "wordnet_pwn30": "n07755411"
+    },
+    "_tmp_member": {
+        "parents_pwn30": [
+            "n05225090"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an external body part that projects from the body; \"it is important to keep the extremities warm\"",
+        "wordnet_name": "member",
+        "wordnet_pwn30": "n05559908"
+    },
+    "_tmp_metaclass": {
+        "parents_qid": [
+            "Q324254",
+            "Q23958852",
+            "Q5127848"
+        ],
+        "wikidata_desc": "in knowledge representation, a class the instances of which are themselves classes",
+        "wikidata_name": "metaclass",
+        "wikidata_qid": "Q19478619"
     },
     "_tmp_metrological_mechanism": {
         "parents_qid": [
@@ -2795,14 +3757,15 @@
     "_tmp_mixture": {
         "freebase_mid": "/m/01q0j8",
         "parents_qid": [
-            "Q41014950",
-            "Q79529"
+            "Q79529",
+            "Q41014950"
         ],
         "wikidata_desc": "substance formed when two or more constituents are physically combined together",
         "wikidata_name": "mixture",
         "wikidata_qid": "Q169336"
     },
     "_tmp_mobile_computer": {
+        "parent_name": "computer",
         "parents_qid": [
             "Q68"
         ],
@@ -2839,6 +3802,7 @@
         "wikidata_qid": "Q334166"
     },
     "_tmp_model": {
+        "parent_name": "_tmp_representation",
         "parents_pwn30": [
             "n04076846"
         ],
@@ -2867,6 +3831,16 @@
         "wordnet_name": "monitor",
         "wordnet_pwn30": "n03782190"
     },
+    "_tmp_monument": {
+        "freebase_mid": "/m/02ljgl",
+        "parents_qid": [
+            "Q210272",
+            "Q811979"
+        ],
+        "wikidata_desc": "type of structure either explicitly created to commemorate a person or important event, or used for that purpose",
+        "wikidata_name": "monument",
+        "wikidata_qid": "Q4989906"
+    },
     "_tmp_motor_vehicle": {
         "freebase_mid": "/m/012f08",
         "parents_qid": [
@@ -2889,6 +3863,7 @@
         "wordnet_pwn30": "n03795580"
     },
     "_tmp_muskmelon": {
+        "parent_name": "_tmp_melon",
         "parents_pwn30": [
             "n07755411"
         ],
@@ -2899,6 +3874,7 @@
         "wordnet_pwn30": "n07755707"
     },
     "_tmp_mussel": {
+        "parent_name": "seafood",
         "parents_qid": [
             "Q192935"
         ],
@@ -2907,6 +3883,7 @@
         "wikidata_qid": "Q13042834"
     },
     "_tmp_mustelid": {
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02075296"
         ],
@@ -2916,7 +3893,18 @@
         "wordnet_name": "mustelid",
         "wordnet_pwn30": "n02441326"
     },
+    "_tmp_name": {
+        "freebase_mid": "/m/015vq3",
+        "parents_qid": [
+            "Q3695082",
+            "Q315"
+        ],
+        "wikidata_desc": "word or term used for identification; see also proper noun (Q147276) and personal name (Q1071027)",
+        "wikidata_name": "name",
+        "wikidata_qid": "Q82799"
+    },
     "_tmp_napery": {
+        "parent_name": "_tmp_linen",
         "parents_pwn30": [
             "n03672352"
         ],
@@ -2935,6 +3923,7 @@
         "wikidata_qid": "Q3300024"
     },
     "_tmp_natural_object": {
+        "parent_name": "_tmp_unit",
         "parents_pwn30": [
             "n00003553"
         ],
@@ -2945,14 +3934,20 @@
         "wordnet_pwn30": "n00019128"
     },
     "_tmp_neckwear": {
-        "parents_qid": [
-            "Q1065579"
+        "parent_name": "_tmp_garment",
+        "parents_pwn30": [
+            "n03419014"
         ],
+        "parents_qid": [],
         "wikidata_desc": "any of various fashion accessories worn at or around  the neck",
         "wikidata_name": "neckwear",
-        "wikidata_qid": "Q6985603"
+        "wikidata_qid": "",
+        "wordnet_gloss": "articles of clothing worn about the neck",
+        "wordnet_name": "neckwear",
+        "wordnet_pwn30": "n03816005"
     },
     "_tmp_new_world_jay": {
+        "parent_name": "_tmp_jay",
         "parents_pwn30": [
             "n01580077"
         ],
@@ -2963,6 +3958,7 @@
         "wordnet_pwn30": "n01580772"
     },
     "_tmp_niche": {
+        "parent_name": "_tmp_enclosure",
         "parents_pwn30": [
             "n03285912"
         ],
@@ -2992,14 +3988,15 @@
         "wordnet_pwn30": "n03837422"
     },
     "_tmp_object": {
-        "parents_pwn30": [
-            "n00001930"
+        "freebase_mid": "/m/0cqwz",
+        "parents_qid": [
+            "Q33104279",
+            "Q35120",
+            "Q41798914"
         ],
-        "parents_qid": [],
-        "wikidata_qid": "",
-        "wordnet_gloss": "a tangible and visible entity; an entity that can cast a shadow; \"it was full of rackets, balls and other objects\"",
-        "wordnet_name": "object",
-        "wordnet_pwn30": "n00002684"
+        "wikidata_desc": "technical term in modern philosophy often used in contrast to the term subject",
+        "wikidata_name": "object",
+        "wikidata_qid": "Q488383"
     },
     "_tmp_obstacle": {
         "parents_qid": [
@@ -3057,6 +4054,16 @@
         "wikidata_name": "optical instrument",
         "wikidata_qid": "Q1751850"
     },
+    "_tmp_order": {
+        "parents_pwn30": [
+            "n07992450"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "(biology) taxonomic group containing one or more families",
+        "wordnet_name": "order",
+        "wordnet_pwn30": "n08106934"
+    },
     "_tmp_organism": {
         "freebase_mid": "/m/05nnm",
         "parents_qid": [
@@ -3066,6 +4073,15 @@
         "wikidata_desc": "any contiguous alive physical entity; entity or being that is living; an individual living thing, such as one animal, plant, fungus, or bacterium",
         "wikidata_name": "organism",
         "wikidata_qid": "Q7239"
+    },
+    "_tmp_organization": {
+        "freebase_mid": "/m/0qb7t",
+        "parents_qid": [
+            "Q24229398"
+        ],
+        "wikidata_desc": "social entity (not necessarily commercial) uniting people into a structured group managing shared means to meet some needs, or to pursue collective goals",
+        "wikidata_name": "organization",
+        "wikidata_qid": "Q43229"
     },
     "_tmp_os": {
         "parents_pwn30": [
@@ -3077,14 +4093,35 @@
         "wordnet_name": "os",
         "wordnet_pwn30": "n05269901"
     },
+    "_tmp_oscine": {
+        "parents_pwn30": [
+            "n01524359"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "passerine bird having specialized vocal apparatus",
+        "wordnet_name": "oscine",
+        "wordnet_pwn30": "n01525720"
+    },
     "_tmp_outerwear": {
         "freebase_mid": "/m/047vlmn",
+        "parent_name": "clothing",
         "parents_qid": [
             "Q11460"
         ],
         "wikidata_desc": "clothing worn over street dress for warmth and protection",
         "wikidata_name": "outerwear",
         "wikidata_qid": "Q4388799"
+    },
+    "_tmp_outlet": {
+        "parents_pwn30": [
+            "n03953020"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a place of business for retailing goods",
+        "wordnet_name": "outlet",
+        "wordnet_pwn30": "n03748162"
     },
     "_tmp_overgarment": {
         "parent_name": "_tmp_garment",
@@ -3128,6 +4165,7 @@
         "wikidata_qid": "Q3300034"
     },
     "_tmp_pane": {
+        "parent_name": "_tmp_panel",
         "parents_pwn30": [
             "n03882058"
         ],
@@ -3137,7 +4175,40 @@
         "wordnet_name": "pane",
         "wordnet_pwn30": "n03882611"
     },
+    "_tmp_panel": {
+        "parent_name": "_tmp_sheet",
+        "parents_pwn30": [
+            "n04188643"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "sheet that forms a distinct (usually flat and rectangular) section or component of something",
+        "wordnet_name": "panel",
+        "wordnet_pwn30": "n03882058"
+    },
+    "_tmp_part": {
+        "parents_pwn30": [
+            "n00002684"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "something less than the whole of a human artifact; \"the rear part of the house\"; \"glue the two parts together\"",
+        "wordnet_name": "part",
+        "wordnet_pwn30": "n03892891"
+    },
+    "_tmp_passage": {
+        "parent_name": "_tmp_way",
+        "parents_pwn30": [
+            "n04564698"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a way through or along which someone or something may pass",
+        "wordnet_name": "passage",
+        "wordnet_pwn30": "n03895293"
+    },
     "_tmp_passageway": {
+        "parent_name": "_tmp_passage",
         "parents_pwn30": [
             "n03895293"
         ],
@@ -3148,6 +4219,7 @@
         "wordnet_pwn30": "n03895585"
     },
     "_tmp_patch": {
+        "parent_name": "_tmp_dressing",
         "parents_pwn30": [
             "n03237639"
         ],
@@ -3179,6 +4251,7 @@
         "wordnet_pwn30": "n03918480"
     },
     "_tmp_pedaler": {
+        "parent_name": "rider",
         "parents_pwn30": [
             "n10529965"
         ],
@@ -3187,6 +4260,15 @@
         "wordnet_gloss": "a person who rides a pedal-driven vehicle (as a bicycle)",
         "wordnet_name": "pedaler",
         "wordnet_pwn30": "n10411163"
+    },
+    "_tmp_penstock": {
+        "freebase_mid": "/m/054kc6",
+        "parents_qid": [
+            "Q58917"
+        ],
+        "wikidata_desc": "enclosed pipes that delivers water to hydroelectric turbines or sewerage systems",
+        "wikidata_name": "penstock",
+        "wikidata_qid": "Q1260995"
     },
     "_tmp_percussive_instrument": {
         "parent_name": "musical_instrument",
@@ -3210,6 +4292,7 @@
         "wordnet_pwn30": "n03916720"
     },
     "_tmp_perissodactyl": {
+        "parent_name": "_tmp_ungulate",
         "parents_pwn30": [
             "n02370806"
         ],
@@ -3221,6 +4304,7 @@
     },
     "_tmp_personal_computer": {
         "freebase_mid": "/m/0643t",
+        "parent_name": "computer",
         "parents_qid": [
             "Q68"
         ],
@@ -3238,6 +4322,7 @@
     },
     "_tmp_pet": {
         "freebase_mid": "/m/068hy",
+        "parent_name": "animal",
         "parents_qid": [
             "Q26401003",
             "Q729"
@@ -3256,6 +4341,7 @@
         "wikidata_qid": "Q1649770"
     },
     "_tmp_photographic_equipment": {
+        "parent_name": "_tmp_equipment",
         "parents_pwn30": [
             "n03294048"
         ],
@@ -3277,14 +4363,15 @@
         "wordnet_pwn30": "n01838038"
     },
     "_tmp_piece": {
+        "parent_name": "_tmp_part",
         "parents_pwn30": [
-            "n03467984"
+            "n03892891"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "a portable gun; \"he wore his firearm in a shoulder holster\"",
+        "wordnet_gloss": "a separate part of a whole; \"an important piece of the evidence\"",
         "wordnet_name": "piece",
-        "wordnet_pwn30": "n03343853"
+        "wordnet_pwn30": "n03932203"
     },
     "_tmp_piece_of_cloth": {
         "parents_pwn30": [
@@ -3308,6 +4395,7 @@
         "wordnet_pwn30": "n04970916"
     },
     "_tmp_pipefish": {
+        "parent_name": "_tmp_teleost",
         "parents_pwn30": [
             "n02528163"
         ],
@@ -3317,7 +4405,16 @@
         "wordnet_name": "pipefish",
         "wordnet_pwn30": "n01455778"
     },
+    "_tmp_pistol": {
+        "parents_qid": [
+            "Q1574963"
+        ],
+        "wikidata_desc": "type of handgun where the firing chamber is integral to the barrel",
+        "wikidata_name": "pistol",
+        "wikidata_qid": "Q1907525"
+    },
     "_tmp_plastic_art": {
+        "parent_name": "_tmp_art",
         "parents_pwn30": [
             "n02743547"
         ],
@@ -3326,6 +4423,15 @@
         "wordnet_gloss": "the arts of shaping or modeling; carving and sculpture",
         "wordnet_name": "plastic art",
         "wordnet_pwn30": "n03958097"
+    },
+    "_tmp_playground": {
+        "freebase_mid": "/m/01h_1n",
+        "parents_qid": [
+            "Q811430"
+        ],
+        "wikidata_desc": "place with a specific design for children to be able to play there",
+        "wikidata_name": "playground",
+        "wikidata_qid": "Q11875349"
     },
     "_tmp_playground_equipment": {
         "parents_qid": [
@@ -3346,6 +4452,7 @@
         "wikidata_qid": "Q184824"
     },
     "_tmp_pool": {
+        "parent_name": "_tmp_excavation",
         "parents_pwn30": [
             "n03302121"
         ],
@@ -3375,6 +4482,7 @@
         "wikidata_qid": "Q10872571"
     },
     "_tmp_possum": {
+        "parent_name": "_tmp_marsupial",
         "parents_pwn30": [
             "n01874434"
         ],
@@ -3428,6 +4536,7 @@
     },
     "_tmp_precipitation": {
         "freebase_mid": "/m/01q18m",
+        "parent_name": "water",
         "parents_qid": [
             "Q283",
             "Q81041"
@@ -3448,6 +4557,7 @@
         "wordnet_pwn30": "n02152740"
     },
     "_tmp_preparation": {
+        "parent_name": "_tmp_compound",
         "parents_pwn30": [
             "n14818238"
         ],
@@ -3485,6 +4595,7 @@
     },
     "_tmp_priority_signs": {
         "freebase_mid": "/m/02pcdt",
+        "parent_name": "traffic_sign_front",
         "parents_qid": [
             "Q170285"
         ],
@@ -3493,6 +4604,7 @@
         "wikidata_qid": "Q4122263"
     },
     "_tmp_procyonid": {
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02075296"
         ],
@@ -3503,21 +4615,28 @@
         "wordnet_pwn30": "n02507649"
     },
     "_tmp_produce": {
-        "freebase_mid": "/m/036qh8",
-        "parents_qid": [
-            "Q11661912"
+        "parents_pwn30": [
+            "n07555863"
         ],
-        "wikidata_desc": "group of farm-produced crops and goods",
-        "wikidata_name": "produce",
-        "wikidata_qid": "Q1913301"
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "fresh fruits and vegetable grown for the market",
+        "wordnet_name": "produce",
+        "wordnet_pwn30": "n07705711"
     },
     "_tmp_product": {
+        "parents_pwn30": [
+            "n03129123"
+        ],
         "parents_qid": [
             "Q28877"
         ],
         "wikidata_desc": "result of work that can be offered to a market",
         "wikidata_name": "product",
-        "wikidata_qid": "Q2424752"
+        "wikidata_qid": "Q2424752",
+        "wordnet_gloss": "an artifact that has been created by someone or some process; \"they improve their product every year\"; \"they export most of their agricultural production\"",
+        "wordnet_name": "product",
+        "wordnet_pwn30": "n04007894"
     },
     "_tmp_product_category": {
         "parents_qid": [
@@ -3528,12 +4647,23 @@
         "wikidata_qid": "Q63981612"
     },
     "_tmp_productive_animal": {
+        "parent_name": "animal",
         "parents_qid": [
             "Q729"
         ],
         "wikidata_desc": "animal that is used by the people economically",
         "wikidata_name": "productive animal",
         "wikidata_qid": "Q1797813"
+    },
+    "_tmp_propulsion": {
+        "freebase_mid": "/m/026lqwj",
+        "parents_qid": [
+            "Q42889",
+            "Q58778"
+        ],
+        "wikidata_desc": "means of creating force leading to movement",
+        "wikidata_name": "propulsion",
+        "wikidata_qid": "Q2583685"
     },
     "_tmp_protection": {
         "parent_name": "_tmp_covering",
@@ -3583,6 +4713,13 @@
         "wordnet_name": "public transport",
         "wordnet_pwn30": "n04019101"
     },
+    "_tmp_purpose": {
+        "freebase_mid": "/m/01b5ms",
+        "parents_qid": [],
+        "wikidata_desc": "formal: academic study of the fields of aesthetics, ethics, epistemology, logic, metaphysics, as well as social and political philosophy",
+        "wikidata_name": "purpose",
+        "wikidata_qid": "Q231823"
+    },
     "_tmp_q21372553": {
         "parents_qid": [
             "Q796635"
@@ -3609,6 +4746,7 @@
     },
     "_tmp_race_track": {
         "freebase_mid": "/m/01r_pn",
+        "parent_name": "road",
         "parents_qid": [
             "Q878123",
             "Q34442"
@@ -3617,16 +4755,25 @@
         "wikidata_name": "race track",
         "wikidata_qid": "Q1777138"
     },
+    "_tmp_racing": {
+        "freebase_mid": "/m/0dfbw",
+        "parents_qid": [
+            "Q13406554"
+        ],
+        "wikidata_desc": "competitive activity where the goal is to complete the course as fast as possible",
+        "wikidata_name": "racing",
+        "wikidata_qid": "Q878123"
+    },
     "_tmp_rack": {
-        "parent_name": "_tmp_support",
+        "parent_name": "_tmp_frame",
         "parents_pwn30": [
-            "n04359589"
+            "n03391770"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "a support for displaying various articles; \"the newspapers were arranged on a rack\"",
+        "wordnet_gloss": "framework for holding objects",
         "wordnet_name": "rack",
-        "wordnet_pwn30": "n04038440"
+        "wordnet_pwn30": "n04038727"
     },
     "_tmp_radiophone": {
         "parent_name": "telephone",
@@ -3673,6 +4820,7 @@
         "wordnet_pwn30": "n01517565"
     },
     "_tmp_receiver": {
+        "parent_name": "_tmp_set",
         "parents_pwn30": [
             "n04176528"
         ],
@@ -3694,6 +4842,7 @@
         "wordnet_pwn30": "n04060904"
     },
     "_tmp_receptor": {
+        "parent_name": "organ",
         "parents_pwn30": [
             "n05297523"
         ],
@@ -3702,6 +4851,16 @@
         "wordnet_gloss": "an organ having nerve endings (in the skin or viscera or eye or ear or nose or mouth) that respond to stimulation",
         "wordnet_name": "receptor",
         "wordnet_pwn30": "n05299178"
+    },
+    "_tmp_recognition": {
+        "parents_qid": [
+            "Q133500",
+            "Q781413",
+            "Q3265221"
+        ],
+        "wikidata_desc": "act of recognizing or the condition of being recognized",
+        "wikidata_name": "recognition",
+        "wikidata_qid": "Q21142755"
     },
     "_tmp_recording": {
         "parents_pwn30": [
@@ -3713,7 +4872,28 @@
         "wordnet_name": "recording",
         "wordnet_pwn30": "n04063868"
     },
+    "_tmp_red": {
+        "parents_pwn30": [
+            "n04959672"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "red color or pigment; the chromatic color resembling the hue of blood",
+        "wordnet_name": "red",
+        "wordnet_pwn30": "n04962784"
+    },
+    "_tmp_reed": {
+        "parents_pwn30": [
+            "n04598582"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a musical instrument that sounds by means of a vibrating reed",
+        "wordnet_name": "reed",
+        "wordnet_pwn30": "n02817799"
+    },
     "_tmp_reflector": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -3722,6 +4902,16 @@
         "wordnet_gloss": "device that reflects radiation",
         "wordnet_name": "reflector",
         "wordnet_pwn30": "n04069276"
+    },
+    "_tmp_region": {
+        "parents_pwn30": [
+            "n00027167"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a large indefinite location on the surface of the Earth; \"penguins inhabit the polar regions\"",
+        "wordnet_name": "region",
+        "wordnet_pwn30": "n08630985"
     },
     "_tmp_registration_number": {
         "parents_qid": [
@@ -3732,14 +4922,33 @@
         "wikidata_qid": "Q4392007"
     },
     "_tmp_regulator": {
+        "freebase_mid": "/m/06cd7h",
+        "parents_qid": [
+            "Q1183543"
+        ],
+        "wikidata_desc": "device with the function of maintaining a designated characteristic",
+        "wikidata_name": "regulator",
+        "wikidata_qid": "Q3771881"
+    },
+    "_tmp_report": {
         "parents_pwn30": [
-            "n03096960"
+            "n07212190"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "any of various controls or devices for regulating or controlling fluid flow, pressure, temperature, etc.",
-        "wordnet_name": "regulator",
-        "wordnet_pwn30": "n04072193"
+        "wordnet_gloss": "the act of informing by verbal report; \"he heard reports that they were causing trouble\"; \"by all accounts they were a happy couple\"",
+        "wordnet_name": "report",
+        "wordnet_pwn30": "n07217924"
+    },
+    "_tmp_representation": {
+        "parents_pwn30": [
+            "n03129123"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a creation that is a visual or tangible rendering of someone or something",
+        "wordnet_name": "representation",
+        "wordnet_pwn30": "n04076846"
     },
     "_tmp_reproductive_structure": {
         "parents_pwn30": [
@@ -3752,6 +4961,7 @@
         "wordnet_pwn30": "n11675842"
     },
     "_tmp_rescue_equipment": {
+        "parent_name": "_tmp_equipment",
         "parents_pwn30": [
             "n03294048"
         ],
@@ -3771,6 +4981,7 @@
         "wikidata_qid": "Q699405"
     },
     "_tmp_reward": {
+        "parent_name": "_tmp_blessing",
         "parents_pwn30": [
             "n01215392"
         ],
@@ -3801,6 +5012,7 @@
         "wikidata_qid": "Q1049667"
     },
     "_tmp_road_vehicle": {
+        "parent_name": "land_vehicle",
         "parents_qid": [
             "Q1301433"
         ],
@@ -3830,7 +5042,17 @@
         "wordnet_name": "rodent",
         "wordnet_pwn30": "n02329401"
     },
+    "_tmp_role": {
+        "freebase_mid": "/m/016tj2",
+        "parents_qid": [
+            "Q4897819"
+        ],
+        "wikidata_desc": "set of behaviours, rights, obligations, beliefs, and norms expected from an individual that has a certain social status",
+        "wikidata_name": "role",
+        "wikidata_qid": "Q214339"
+    },
     "_tmp_row": {
+        "parent_name": "_tmp_sport",
         "parents_pwn30": [
             "n00523513"
         ],
@@ -3872,6 +5094,7 @@
         "wordnet_pwn30": "n04128837"
     },
     "_tmp_salad_green": {
+        "parent_name": "_tmp_green",
         "parents_pwn30": [
             "n07709333"
         ],
@@ -3883,6 +5106,7 @@
     },
     "_tmp_sandwich_wrap": {
         "freebase_mid": "/m/06x5sp",
+        "parent_name": "sandwich",
         "parents_qid": [
             "Q28803"
         ],
@@ -3890,7 +5114,18 @@
         "wikidata_name": "sandwich wrap",
         "wikidata_qid": "Q1599125"
     },
+    "_tmp_sauce": {
+        "freebase_mid": "/m/0grqz",
+        "parents_qid": [
+            "Q6460735",
+            "Q2596997"
+        ],
+        "wikidata_desc": "liquid, creaming or semi-solid food served on or used in preparing other foods",
+        "wikidata_name": "sauce",
+        "wikidata_qid": "Q178359"
+    },
     "_tmp_saurian": {
+        "parent_name": "_tmp_diapsid",
         "parents_pwn30": [
             "n01661818"
         ],
@@ -3909,6 +5144,16 @@
         "wordnet_gloss": "a power tool for cutting wood",
         "wordnet_name": "saw",
         "wordnet_pwn30": "n03996145"
+    },
+    "_tmp_seabird": {
+        "parents_pwn30": [
+            "n01844917"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a bird that frequents coastal waters and the open ocean: gulls; pelicans; gannets; cormorants; albatrosses; petrels; etc.",
+        "wordnet_name": "seabird",
+        "wordnet_pwn30": "n02021795"
     },
     "_tmp_seat": {
         "parent_name": "furniture",
@@ -3956,6 +5201,26 @@
         "wikidata_name": "semi-automatic pistol",
         "wikidata_qid": "Q3389302"
     },
+    "_tmp_service": {
+        "parents_qid": [
+            "Q3958441",
+            "Q58415929",
+            "Q1200977"
+        ],
+        "wikidata_desc": "transaction in which no physical goods are transferred from the seller to the buyer",
+        "wikidata_name": "service",
+        "wikidata_qid": "Q7406919"
+    },
+    "_tmp_set": {
+        "parents_pwn30": [
+            "n03278248"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any electronic equipment that receives or transmits radio or tv signals; \"the early sets ran on storage batteries\"",
+        "wordnet_name": "set",
+        "wordnet_pwn30": "n04176528"
+    },
     "_tmp_sets_of_free_reeds": {
         "parents_qid": [
             "Q399597",
@@ -3965,6 +5230,17 @@
         "wikidata_desc": "class of musical instruments",
         "wikidata_name": "sets of free reeds",
         "wikidata_qid": "Q19650003"
+    },
+    "_tmp_setup": {
+        "parent_name": "_tmp_equipment",
+        "parents_pwn30": [
+            "n03294048"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "equipment designed to serve a specific function",
+        "wordnet_name": "setup",
+        "wordnet_pwn30": "n02727825"
     },
     "_tmp_sewer": {
         "freebase_mid": "/m/0250fv",
@@ -3987,6 +5263,7 @@
         "wordnet_pwn30": "n04188643"
     },
     "_tmp_shelf_stable_food": {
+        "parent_name": "food",
         "parents_qid": [
             "Q2095"
         ],
@@ -3995,12 +5272,16 @@
         "wikidata_qid": "Q7493597"
     },
     "_tmp_shelter": {
-        "parents_qid": [
-            "Q811979"
+        "parents_pwn30": [
+            "n04341686"
         ],
+        "parents_qid": [],
         "wikidata_desc": "basic architectural structure or building that provides cover from the elements",
         "wikidata_name": "shelter",
-        "wikidata_qid": "Q7493941"
+        "wikidata_qid": "",
+        "wordnet_gloss": "a structure that provides privacy and protection from danger",
+        "wordnet_name": "shelter",
+        "wordnet_pwn30": "n04191595"
     },
     "_tmp_ship_type": {
         "parents_qid": [
@@ -4033,24 +5314,31 @@
         "wikidata_qid": "Q220869"
     },
     "_tmp_shop": {
+        "parents_qid": [
+            "Q43229"
+        ],
+        "wikidata_desc": "place where items or services are sold",
+        "wikidata_name": "shop",
+        "wikidata_qid": "Q213441"
+    },
+    "_tmp_side": {
+        "parent_name": "_tmp_surface",
         "parents_pwn30": [
-            "n03748162"
+            "n04362025"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "a mercantile establishment for the retail sale of goods or services; \"he bought it at a shop on Cape Cod\"",
-        "wordnet_name": "shop",
-        "wordnet_pwn30": "n04202417"
+        "wordnet_gloss": "an extended outer surface of an object; \"he turned the box over to examine the bottom side\"; \"they painted all four sides of the house\"",
+        "wordnet_name": "side",
+        "wordnet_pwn30": "n04213626"
     },
     "_tmp_sign": {
-        "parents_pwn30": [
-            "n00033020"
+        "parents_qid": [
+            "Q9081"
         ],
-        "parents_qid": [],
-        "wikidata_qid": "",
-        "wordnet_gloss": "a public display of a message; \"he posted signs in all the shop windows\"",
-        "wordnet_name": "sign",
-        "wordnet_pwn30": "n06793231"
+        "wikidata_desc": "semiotic concept; object, quality, event, or entity whose presence or occurrence indicates the probable presence or occurrence of something else; includes words, punctuation, expressions, gestures, notices, road signs, symbols, pictures, etc.",
+        "wikidata_name": "sign",
+        "wikidata_qid": "Q3695082"
     },
     "_tmp_simple_machine": {
         "freebase_mid": "/m/06z77",
@@ -4062,6 +5350,7 @@
         "wikidata_qid": "Q186713"
     },
     "_tmp_single-reed_woodwind": {
+        "parent_name": "_tmp_reed",
         "parents_pwn30": [
             "n02817799"
         ],
@@ -4070,6 +5359,16 @@
         "wordnet_gloss": "a beating-reed instrument with a single reed (as a clarinet or saxophone)",
         "wordnet_name": "single-reed woodwind",
         "wordnet_pwn30": "n04222847"
+    },
+    "_tmp_skeleton": {
+        "freebase_mid": "/m/06w6h",
+        "parents_qid": [
+            "Q188193",
+            "Q729"
+        ],
+        "wikidata_desc": "body part that forms the supporting structure of an organism",
+        "wikidata_name": "skeleton",
+        "wikidata_qid": "Q7881"
     },
     "_tmp_slab": {
         "parent_name": "_tmp_block",
@@ -4082,6 +5381,17 @@
         "wordnet_name": "slab",
         "wordnet_pwn30": "n04233405"
     },
+    "_tmp_slip": {
+        "parent_name": "_tmp_artifact",
+        "parents_pwn30": [
+            "n00021939"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "artifact consisting of a narrow flat piece of material",
+        "wordnet_name": "slip",
+        "wordnet_pwn30": "n04339291"
+    },
     "_tmp_small_monument": {
         "parents_qid": [
             "Q4989906"
@@ -4091,6 +5401,7 @@
         "wikidata_qid": "Q1746392"
     },
     "_tmp_smoke": {
+        "parent_name": "_tmp_baccy",
         "parents_pwn30": [
             "n04442831"
         ],
@@ -4101,6 +5412,7 @@
         "wordnet_pwn30": "n04103491"
     },
     "_tmp_snack_food": {
+        "parent_name": "_tmp_dish",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -4112,6 +5424,7 @@
     },
     "_tmp_snow_sculpture": {
         "freebase_mid": "/m/05fcps",
+        "parent_name": "sculpture",
         "parents_qid": [
             "Q860861"
         ],
@@ -4153,6 +5466,7 @@
         "wordnet_pwn30": "n07710007"
     },
     "_tmp_solid_figure": {
+        "parent_name": "_tmp_figure",
         "parents_pwn30": [
             "n13862780"
         ],
@@ -4163,6 +5477,7 @@
         "wordnet_pwn30": "n13863473"
     },
     "_tmp_source_of_illumination": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -4173,15 +5488,14 @@
         "wordnet_pwn30": "n04263760"
     },
     "_tmp_space": {
-        "freebase_mid": "/m/06wqb",
-        "parents_qid": [
-            "Q133327",
-            "Q21550639",
-            "Q3054889"
+        "parents_pwn30": [
+            "n08497294"
         ],
-        "wikidata_desc": "general framework of distances and directions according to a physical observer in its proper time",
-        "wikidata_name": "space",
-        "wikidata_qid": "Q107"
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an area reserved for some particular purpose; \"the laboratory's floor space\"",
+        "wordnet_name": "space",
+        "wordnet_pwn30": "n08652970"
     },
     "_tmp_spacecraft_propulsion": {
         "freebase_mid": "/m/071w7",
@@ -4192,7 +5506,18 @@
         "wikidata_name": "spacecraft propulsion",
         "wikidata_qid": "Q609089"
     },
+    "_tmp_spacetime": {
+        "freebase_mid": "/m/073wh",
+        "parents_qid": [
+            "Q1",
+            "Q1704572"
+        ],
+        "wikidata_desc": "mathematical model combining space and time",
+        "wikidata_name": "spacetime",
+        "wikidata_qid": "Q133327"
+    },
     "_tmp_specie": {
+        "parent_name": "_tmp_currency",
         "parents_pwn30": [
             "n13385913"
         ],
@@ -4203,6 +5528,7 @@
         "wordnet_pwn30": "n13387877"
     },
     "_tmp_sphenisciform_seabird": {
+        "parent_name": "_tmp_seabird",
         "parents_pwn30": [
             "n02021795"
         ],
@@ -4223,6 +5549,16 @@
         "wordnet_name": "sphere",
         "wordnet_pwn30": "n04274530"
     },
+    "_tmp_sport": {
+        "parents_pwn30": [
+            "n00426928"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an active diversion requiring physical exertion and competition",
+        "wordnet_name": "sport",
+        "wordnet_pwn30": "n00523513"
+    },
     "_tmp_sports_field": {
         "freebase_mid": "/m/0fdnns",
         "parents_qid": [
@@ -4234,6 +5570,7 @@
     },
     "_tmp_sportswear": {
         "freebase_mid": "/m/025xryy",
+        "parent_name": "clothing",
         "parents_qid": [
             "Q11460"
         ],
@@ -4250,6 +5587,7 @@
         "wikidata_qid": "Q1514280"
     },
     "_tmp_staff": {
+        "parent_name": "_tmp_stick",
         "parents_pwn30": [
             "n04317420"
         ],
@@ -4270,6 +5608,7 @@
         "wordnet_pwn30": "n04300741"
     },
     "_tmp_starter": {
+        "parent_name": "_tmp_course",
         "parents_pwn30": [
             "n07556970"
         ],
@@ -4280,17 +5619,18 @@
         "wordnet_pwn30": "n07581346"
     },
     "_tmp_stick": {
-        "parent_name": "sports_equipment",
+        "parent_name": "_tmp_implement",
         "parents_pwn30": [
-            "n04285146"
+            "n03563967"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "a long implement (usually made of wood) that is shaped so that hockey or polo players can hit a puck or ball",
+        "wordnet_gloss": "an implement consisting of a length of wood; \"he collected dry sticks for a campfire\"; \"the kid had a candied apple on a stick\"",
         "wordnet_name": "stick",
-        "wordnet_pwn30": "n04318131"
+        "wordnet_pwn30": "n04317420"
     },
     "_tmp_storage_space": {
+        "parent_name": "_tmp_area",
         "parents_pwn30": [
             "n02735688"
         ],
@@ -4350,6 +5690,16 @@
         "wordnet_name": "stringed instrument",
         "wordnet_pwn30": "n04338517"
     },
+    "_tmp_stroke": {
+        "parents_pwn30": [
+            "n00283127"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any one of the repeated movements of the limbs and body used for locomotion in swimming or rowing",
+        "wordnet_name": "stroke",
+        "wordnet_pwn30": "n00569898"
+    },
     "_tmp_structural_element": {
         "freebase_mid": "/m/0h3mh1l",
         "parents_qid": [
@@ -4361,17 +5711,17 @@
         "wikidata_qid": "Q811679"
     },
     "_tmp_structure": {
-        "parent_name": "_tmp_artifact",
         "parents_pwn30": [
-            "n00021939"
+            "n05220461"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "a thing constructed; a complex entity constructed of many parts; \"the structure consisted of a series of arches\"; \"she wore her hair in an amazing construction of whirls and ribbons\"",
+        "wordnet_gloss": "a particular complex anatomical part of a living thing and its construction and arrangement; \"he has good bone structure\"",
         "wordnet_name": "structure",
-        "wordnet_pwn30": "n04341686"
+        "wordnet_pwn30": "n05225602"
     },
     "_tmp_stuff": {
+        "parent_name": "_tmp_substance",
         "parents_pwn30": [
             "n00019613"
         ],
@@ -4382,6 +5732,7 @@
         "wordnet_pwn30": "n14580897"
     },
     "_tmp_submersible": {
+        "parent_name": "_tmp_warship",
         "parents_pwn30": [
             "n04552696"
         ],
@@ -4393,13 +5744,14 @@
     },
     "_tmp_substance": {
         "parents_pwn30": [
+            "n13809207",
             "n00020827"
         ],
         "parents_qid": [],
         "wikidata_qid": "",
-        "wordnet_gloss": "a particular kind or species of matter with uniform properties; \"shigella is one of the most toxic substances known to man\"",
+        "wordnet_gloss": "the real physical matter of which a person or thing consists; \"DNA is the substance of our genes\"",
         "wordnet_name": "substance",
-        "wordnet_pwn30": "n00020090"
+        "wordnet_pwn30": "n00019613"
     },
     "_tmp_summer_squash": {
         "parent_name": "squash",
@@ -4413,6 +5765,7 @@
         "wordnet_pwn30": "n07715721"
     },
     "_tmp_support": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -4434,6 +5787,7 @@
         "wordnet_pwn30": "n04362025"
     },
     "_tmp_sweet": {
+        "parent_name": "_tmp_treat",
         "parents_pwn30": [
             "n07557165"
         ],
@@ -4463,6 +5817,7 @@
         "wikidata_qid": "Q12004466"
     },
     "_tmp_swimming_stroke": {
+        "parent_name": "_tmp_stroke",
         "parents_pwn30": [
             "n00569898"
         ],
@@ -4473,13 +5828,14 @@
         "wordnet_pwn30": "n00570066"
     },
     "_tmp_symbol": {
-        "freebase_mid": "/m/09ddf",
-        "parents_qid": [
-            "Q3695082"
+        "parents_pwn30": [
+            "n06791372"
         ],
-        "wikidata_desc": "something that represents an idea, a process, or a physical entity",
-        "wikidata_name": "symbol",
-        "wikidata_qid": "Q80071"
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an arbitrary sign (written or printed) that has acquired a conventional significance",
+        "wordnet_name": "symbol",
+        "wordnet_pwn30": "n06806469"
     },
     "_tmp_synonym": {
         "freebase_mid": "/m/026tzwd",
@@ -4499,6 +5855,7 @@
         "wikidata_qid": "Q2378396"
     },
     "_tmp_tape": {
+        "parent_name": "_tmp_slip",
         "parents_pwn30": [
             "n04339291"
         ],
@@ -4534,8 +5891,8 @@
     "_tmp_taxon": {
         "freebase_mid": "/m/01cbjg",
         "parents_qid": [
-            "Q16889133",
-            "Q24017414"
+            "Q24017414",
+            "Q16889133"
         ],
         "wikidata_desc": "group of one or more organism(s), which a taxonomist adjudges to be a unit",
         "wikidata_name": "taxon",
@@ -4549,6 +5906,26 @@
         "wikidata_name": "technological component",
         "wikidata_qid": "Q811909"
     },
+    "_tmp_teleost": {
+        "parents_pwn30": [
+            "n02514825"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a bony fish of the subclass Teleostei",
+        "wordnet_name": "teleost",
+        "wordnet_pwn30": "n02528163"
+    },
+    "_tmp_television": {
+        "parents_pwn30": [
+            "n04400289"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a telecommunication system that transmits images of objects (stationary or moving) between distant points",
+        "wordnet_name": "television",
+        "wordnet_pwn30": "n04404412"
+    },
     "_tmp_terminal": {
         "freebase_mid": "/m/02c8v9",
         "parents_qid": [
@@ -4559,6 +5936,7 @@
         "wikidata_qid": "Q3518405"
     },
     "_tmp_text": {
+        "parent_name": "_tmp_matter",
         "parents_pwn30": [
             "n06365467"
         ],
@@ -4600,6 +5978,7 @@
         "wordnet_pwn30": "n04438304"
     },
     "_tmp_toiletry": {
+        "parent_name": "_tmp_instrumentation",
         "parents_pwn30": [
             "n03575240"
         ],
@@ -4619,6 +5998,14 @@
         "wordnet_gloss": "any of several whales having simple conical teeth and feeding on fish etc.",
         "wordnet_name": "toothed whale",
         "wordnet_pwn30": "n02066707"
+    },
+    "_tmp_topic": {
+        "parents_qid": [
+            "Q1979154"
+        ],
+        "wikidata_desc": "in Freudian psychology, a psychological model",
+        "wikidata_name": "topic",
+        "wikidata_qid": "Q20820433"
     },
     "_tmp_track": {
         "parent_name": "_tmp_artifact",
@@ -4670,7 +6057,19 @@
         "wikidata_name": "traffic sign",
         "wikidata_qid": "Q17480810"
     },
+    "_tmp_transducer": {
+        "parent_name": "_tmp_electrical_device",
+        "parents_pwn30": [
+            "n03269401"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an electrical device that converts one form of energy into another",
+        "wordnet_name": "transducer",
+        "wordnet_pwn30": "n04470953"
+    },
     "_tmp_transport": {
+        "parent_name": "_tmp_instrumentation",
         "parents_pwn30": [
             "n03575240"
         ],
@@ -4681,6 +6080,7 @@
         "wordnet_pwn30": "n03100490"
     },
     "_tmp_transport_infrastructure": {
+        "parent_name": "infrastructure",
         "parents_qid": [
             "Q121359"
         ],
@@ -4689,6 +6089,7 @@
         "wikidata_qid": "Q376799"
     },
     "_tmp_trap": {
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -4708,6 +6109,17 @@
         "wordnet_gloss": "a person who changes location",
         "wordnet_name": "traveler",
         "wordnet_pwn30": "n09629752"
+    },
+    "_tmp_treat": {
+        "parent_name": "_tmp_aliment",
+        "parents_pwn30": [
+            "n07570720"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "something considered choice to eat",
+        "wordnet_name": "treat",
+        "wordnet_pwn30": "n07557165"
     },
     "_tmp_true_board_zithers_with_resonator_box": {
         "parents_qid": [
@@ -4739,6 +6151,7 @@
         "wikidata_qid": "Q215760"
     },
     "_tmp_tube": {
+        "parent_name": "_tmp_conduit",
         "parents_pwn30": [
             "n03089014"
         ],
@@ -4775,6 +6188,27 @@
         "wikidata_name": "undergarment",
         "wikidata_qid": "Q198763"
     },
+    "_tmp_ungulate": {
+        "parent_name": "_tmp_eutherian",
+        "parents_pwn30": [
+            "n01886756"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "any of a number of mammals with hooves that are superficially similar but not necessarily closely related taxonomically",
+        "wordnet_name": "ungulate",
+        "wordnet_pwn30": "n02370806"
+    },
+    "_tmp_unit": {
+        "parents_pwn30": [
+            "n00002684"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "an assemblage of parts that is regarded as a single entity; \"how big is that part compared to the whole?\"; \"the team is a unit\"",
+        "wordnet_name": "unit",
+        "wordnet_pwn30": "n00003553"
+    },
     "_tmp_univalve": {
         "parent_name": "shellfish",
         "parents_pwn30": [
@@ -4805,6 +6239,7 @@
         "wikidata_qid": "Q1724915"
     },
     "_tmp_vehicle_operator": {
+        "parent_name": "person",
         "parents_qid": [
             "Q214339",
             "Q215627"
@@ -4823,6 +6258,16 @@
         "wordnet_gloss": "an object used as a container (especially for liquids)",
         "wordnet_name": "vessel",
         "wordnet_pwn30": "n04531098"
+    },
+    "_tmp_vice": {
+        "parents_pwn30": [
+            "n00745005"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a specific form of evildoing; \"vice offends the moral standards of the community\"",
+        "wordnet_name": "vice",
+        "wordnet_pwn30": "n00747029"
     },
     "_tmp_violin_family": {
         "freebase_mid": "/m/08wxk8",
@@ -4853,6 +6298,7 @@
         "wordnet_pwn30": "n04543158"
     },
     "_tmp_ware": {
+        "parent_name": "_tmp_article",
         "parents_pwn30": [
             "n00022903"
         ],
@@ -4862,14 +6308,31 @@
         "wordnet_name": "ware",
         "wordnet_pwn30": "n04550840"
     },
+    "_tmp_warship": {
+        "parent_name": "ship",
+        "parents_pwn30": [
+            "n03764276",
+            "n04194289"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a government ship that is available for waging war",
+        "wordnet_name": "warship",
+        "wordnet_pwn30": "n04552696"
+    },
     "_tmp_waste": {
         "freebase_mid": "/m/01fnck",
-        "parents_qid": [
-            "Q214609"
+        "parent_name": "_tmp_stuff",
+        "parents_pwn30": [
+            "n14580897"
         ],
+        "parents_qid": [],
         "wikidata_desc": "unwanted or unusable material",
         "wikidata_name": "waste",
-        "wikidata_qid": "Q45701"
+        "wikidata_qid": "",
+        "wordnet_gloss": "any materials unused and rejected as worthless or unwanted; \"they collect the waste once a week\"; \"much of the waste material is carried off in the sewers\"",
+        "wordnet_name": "waste",
+        "wordnet_pwn30": "n14856263"
     },
     "_tmp_water_hemisphere": {
         "freebase_mid": "/m/04d7k8",
@@ -4890,6 +6353,16 @@
         "wikidata_desc": "provision of water by public utilities, commercial organisations, community endeavors or by individuals",
         "wikidata_name": "water supply",
         "wikidata_qid": "Q1061108"
+    },
+    "_tmp_waterbird": {
+        "parents_pwn30": [
+            "n01844917"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "freshwater aquatic bird",
+        "wordnet_name": "waterbird",
+        "wordnet_pwn30": "n01845132"
     },
     "_tmp_way": {
         "parent_name": "_tmp_artifact",
@@ -4914,6 +6387,7 @@
         "wordnet_pwn30": "n04571292"
     },
     "_tmp_wheeled_vehicle": {
+        "parent_name": "land_vehicle",
         "parents_qid": [
             "Q1301433"
         ],
@@ -4933,6 +6407,7 @@
         "wordnet_pwn30": "n04580493"
     },
     "_tmp_wildcat": {
+        "parent_name": "cat",
         "parents_pwn30": [
             "n02121620"
         ],
@@ -4972,25 +6447,30 @@
         "wikidata_name": "wind instrument",
         "wikidata_qid": "Q173453"
     },
-    "_tmp_woman's_clothing": {
-        "parent_name": "clothing",
-        "parents_pwn30": [
-            "n03051540"
-        ],
-        "parents_qid": [],
-        "wikidata_qid": "",
-        "wordnet_gloss": "clothing that is designed for women to wear",
-        "wordnet_name": "woman's clothing",
-        "wordnet_pwn30": "n04596852"
-    },
     "_tmp_woody_plant": {
         "freebase_mid": "/m/02hnx9",
+        "parent_name": "plant",
         "parents_qid": [
             "Q756"
         ],
         "wikidata_desc": "plant",
         "wikidata_name": "woody plant",
         "wikidata_qid": "Q757163"
+    },
+    "_tmp_work": {
+        "parents_pwn30": [
+            "n00407535"
+        ],
+        "parents_qid": [
+            "Q2668072",
+            "Q15401930"
+        ],
+        "wikidata_desc": "physical or virtual object made by humans",
+        "wikidata_name": "work",
+        "wikidata_qid": "Q386724",
+        "wordnet_gloss": "activity directed toward making or doing something; \"she checked several points needing further work\"",
+        "wordnet_name": "work",
+        "wordnet_pwn30": "n00575741"
     },
     "_tmp_work_of_art": {
         "freebase_mid": "/m/07ppk6",
@@ -5010,6 +6490,16 @@
         "wikidata_desc": "tool used to writing",
         "wikidata_name": "writing implement",
         "wikidata_qid": "Q121916"
+    },
+    "_tmp_zone": {
+        "parents_pwn30": [
+            "n08664443"
+        ],
+        "parents_qid": [],
+        "wikidata_qid": "",
+        "wordnet_gloss": "a locally circumscribed place characterized by some distinctive features",
+        "wordnet_name": "zone",
+        "wordnet_pwn30": "n08688247"
     },
     "accordion": {
         "freebase_mid": "/m/0mkg",
@@ -5445,6 +6935,7 @@
         "oid_boxable_leaf": "/m/01940j",
         "oid_inst_leaf": "/m/01940j",
         "oid_name": "Backpack",
+        "parent_name": "_tmp_bag",
         "parents_pwn30": [
             "n02773037"
         ],
@@ -5479,6 +6970,7 @@
     "baked_goods": {
         "freebase_mid": "/m/052lwg6",
         "oid_name": "Baked goods",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07555863"
         ],
@@ -5940,6 +7432,7 @@
         "freebase_mid": "/m/01dws",
         "obj365_boxable_name": "Bear",
         "oid_name": "Bear",
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02075296"
         ],
@@ -6280,6 +7773,7 @@
         "mvd_inst_id": 34,
         "mvd_name": "object--bike-rack",
         "mvd_pano_id": 34,
+        "parent_name": "_tmp_rack",
         "parents_pwn30": [
             "n04038727"
         ],
@@ -6418,6 +7912,7 @@
         "coco_pano_id": 93,
         "coco_pano_name": "blanket",
         "freebase_mid": "/m/03mcpy",
+        "parent_name": "_tmp_bedding",
         "parents_pwn30": [
             "n02820210"
         ],
@@ -6561,6 +8056,7 @@
         "oid_boxable_leaf": "/m/0bt_c3",
         "oid_inst_leaf": "/m/0bt_c3",
         "oid_name": "Book",
+        "parent_name": "_tmp_product",
         "parents_pwn30": [
             "n04007894"
         ],
@@ -6777,6 +8273,7 @@
         "oid_boxable_leaf": "/m/01bl7v",
         "oid_inst_leaf": "/m/01bl7v",
         "oid_name": "Boy",
+        "parent_name": "man",
         "parents_pwn30": [
             "n10287213"
         ],
@@ -6809,7 +8306,6 @@
         "freebase_mid": "/m/01gmv2",
         "oid_boxable_leaf": "/m/01gmv2",
         "oid_name": "Brassiere",
-        "parent_name": "_tmp_woman's_clothing",
         "parents_pwn30": [
             "n04508163",
             "n04596852"
@@ -7077,6 +8573,7 @@
         "oid_boxable_leaf": "/m/01j3zr",
         "oid_inst_leaf": "/m/01j3zr",
         "oid_name": "Burrito",
+        "parent_name": "_tmp_dish",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -7879,6 +9376,7 @@
         "oid_boxable_leaf": "/m/0cd4d",
         "oid_inst_leaf": "/m/0cd4d",
         "oid_name": "Cheetah",
+        "parent_name": "cat",
         "parents_pwn30": [
             "n02127808"
         ],
@@ -8264,6 +9762,7 @@
     "comb": {
         "freebase_mid": "/m/020sdj",
         "obj365_boxable_name": "Comb",
+        "parent_name": "_tmp_device",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -8422,6 +9921,7 @@
         "ade20k_id": 106,
         "ade20k_name": "conveyer belt",
         "ade20k_names": "conveyer;belt;conveyor;belt;conveyer;conveyor;transporter",
+        "parent_name": "belt",
         "parents_pwn30": [
             "n02827883"
         ],
@@ -8880,6 +10380,7 @@
         "mvd_id": 2,
         "mvd_name": "construction--barrier--curb",
         "mvd_pano_id": 2,
+        "parent_name": "_tmp_edge",
         "parents_pwn30": [
             "n03264136"
         ],
@@ -9003,6 +10504,7 @@
         "oid_boxable_leaf": "/m/02gzp",
         "oid_inst_leaf": "/m/02gzp",
         "oid_name": "Dagger",
+        "parent_name": "knife",
         "parents_pwn30": [
             "n03624134"
         ],
@@ -9094,6 +10596,7 @@
         "freebase_mid": "/m/0270h",
         "obj365_boxable_name": "Dessert",
         "oid_name": "Dessert",
+        "parent_name": "_tmp_course",
         "parents_pwn30": [
             "n07556970"
         ],
@@ -9448,7 +10951,6 @@
         "oid_boxable_leaf": "/m/01d40f",
         "oid_inst_leaf": "/m/01d40f",
         "oid_name": "Dress",
-        "parent_name": "_tmp_woman's_clothing",
         "parents_pwn30": [
             "n04596852"
         ],
@@ -10202,6 +11704,7 @@
         "oid_boxable_leaf": "/m/01pns0",
         "oid_inst_leaf": "/m/01pns0",
         "oid_name": "Fire hydrant",
+        "parent_name": "_tmp_hydrant",
         "parents_pwn30": [
             "n03550916"
         ],
@@ -10587,6 +12090,7 @@
         "obj365_boxable_name": "Fork",
         "oid_boxable_leaf": "/m/0dt3t",
         "oid_name": "Fork",
+        "parent_name": "_tmp_cutlery",
         "parents_pwn30": [
             "n03153375"
         ],
@@ -10828,6 +12332,7 @@
         "obj365_boxable_name": "Gas stove",
         "oid_boxable_leaf": "/m/02wv84t",
         "oid_name": "Gas stove",
+        "parent_name": "stove",
         "parents_pwn30": [
             "n04330340"
         ],
@@ -11142,6 +12647,7 @@
     "gravel": {
         "coco_pano_id": 125,
         "coco_pano_name": "gravel",
+        "parent_name": "rock",
         "parents_pwn30": [
             "n14696793"
         ],
@@ -11250,6 +12756,7 @@
         "oid_boxable_leaf": "/m/02g30s",
         "oid_inst_leaf": "/m/02g30s",
         "oid_name": "Guacamole",
+        "parent_name": "_tmp_dip",
         "parents_pwn30": [
             "n07582609"
         ],
@@ -11619,6 +13126,7 @@
         "freebase_mid": "/m/02dl1y",
         "obj365_boxable_name": "Hat",
         "oid_name": "Hat",
+        "parent_name": "_tmp_headgear",
         "parents_pwn30": [
             "n03502509"
         ],
@@ -12327,6 +13835,7 @@
         "oid_boxable_leaf": "/m/04c0y",
         "oid_inst_leaf": "/m/04c0y",
         "oid_name": "Kangaroo",
+        "parent_name": "_tmp_marsupial",
         "parents_pwn30": [
             "n01874434"
         ],
@@ -12798,6 +14307,7 @@
         "oid_boxable_leaf": "/m/01jfm_",
         "oid_inst_leaf": "/m/01jfm_",
         "oid_name": "Vehicle registration plate",
+        "parent_name": "plate",
         "parents_pwn30": [
             "n03959936"
         ],
@@ -13008,6 +14518,7 @@
         "obj365_boxable_name": "Lobster",
         "oid_boxable_leaf": "/m/0cjq5",
         "oid_name": "Lobster",
+        "parent_name": "_tmp_decapod",
         "parents_pwn30": [
             "n01976146"
         ],
@@ -13178,6 +14689,7 @@
         "mvd_inst_id": 41,
         "mvd_name": "object--manhole",
         "mvd_pano_id": 41,
+        "parent_name": "_tmp_hole",
         "parents_pwn30": [
             "n03526198"
         ],
@@ -13280,6 +14792,7 @@
         "freebase_mid": "/m/07v9_z",
         "oid_boxable_leaf": "/m/07v9_z",
         "oid_name": "Measuring cup",
+        "parent_name": "_tmp_measure",
         "parents_pwn30": [
             "n03733644"
         ],
@@ -14454,6 +15967,7 @@
         "mvd_id": 10,
         "mvd_name": "construction--flat--parking",
         "mvd_pano_id": 10,
+        "parent_name": "_tmp_space",
         "parents_pwn30": [
             "n08652970"
         ],
@@ -15242,6 +16756,7 @@
         "coco_pano_id": 145,
         "coco_pano_name": "playingfield",
         "freebase_mid": "/m/0f01p7",
+        "parent_name": "field",
         "parents_pwn30": [
             "n08570758"
         ],
@@ -15927,6 +17442,7 @@
     },
     "recorder": {
         "obj365_boxable_name": "Recorder",
+        "parent_name": "_tmp_equipment",
         "parents_pwn30": [
             "n03294048"
         ],
@@ -16554,6 +18070,7 @@
         "mvd_id": 26,
         "mvd_name": "nature--sand",
         "mvd_pano_id": 26,
+        "parent_name": "soil",
         "parents_pwn30": [
             "n14844693"
         ],
@@ -17769,6 +19286,7 @@
     "soap_dispenser": {
         "freebase_mid": "/m/0c3mkw",
         "oid_name": "Soap dispenser",
+        "parent_name": "_tmp_dispenser",
         "parents_pwn30": [
             "n03210683"
         ],
@@ -18320,6 +19838,7 @@
         "oid_boxable_leaf": "/m/07fbm7",
         "oid_inst_leaf": "/m/07fbm7",
         "oid_name": "Strawberry",
+        "parent_name": "_tmp_berry",
         "parents_pwn30": [
             "n07742704"
         ],
@@ -18663,6 +20182,7 @@
         "oid_boxable_leaf": "/m/04tn4x",
         "oid_inst_leaf": "/m/04tn4x",
         "oid_name": "Swim cap",
+        "parent_name": "_tmp_cap",
         "parents_pwn30": [
             "n02954340"
         ],
@@ -19143,6 +20663,7 @@
         "obj365_boxable_name": "Tent",
         "oid_boxable_leaf": "/m/01j61q",
         "oid_name": "Tent",
+        "parent_name": "_tmp_shelter",
         "parents_pwn30": [
             "n04191595"
         ],
@@ -19199,6 +20720,7 @@
         "oid_boxable_leaf": "/m/01rkbr",
         "oid_inst_leaf": "/m/01rkbr",
         "oid_name": "Tie",
+        "parent_name": "_tmp_neckwear",
         "parents_pwn30": [
             "n03816005"
         ],
@@ -19748,6 +21270,7 @@
         "wordnet_pwn30": "n03360622"
     },
     "trash": {
+        "parent_name": "_tmp_waste",
         "parents_pwn30": [
             "n14856263"
         ],
@@ -20360,6 +21883,7 @@
         "oid_boxable_leaf": "/m/01dwsz",
         "oid_inst_leaf": "/m/01dwsz",
         "oid_name": "Waffle",
+        "parent_name": "cake",
         "parents_pwn30": [
             "n07628870"
         ],
@@ -20671,6 +22195,7 @@
         "oid_boxable_leaf": "/m/083wq",
         "oid_inst_leaf": "/m/083wq",
         "oid_name": "Wheel",
+        "parent_name": "_tmp_machine",
         "parents_pwn30": [
             "n03700963"
         ],

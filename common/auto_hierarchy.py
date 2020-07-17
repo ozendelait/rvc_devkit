@@ -52,10 +52,11 @@ def add_parent_as_tmp(joined_label_space, key, addtmp):
     keyparent = None
     if "wordnet_name" in addtmp:
         keyparent = addtmp["wordnet_name"]
-    if keyparent is None and "wikidata_name" in addtmp:
+    if keyparent is None and "wikidata_name" in addtmp and len("wikidata_name") > 0:
         keyparent = addtmp["wikidata_name"]  
     if not keyparent is None:
-        keyparent = fix_unified_labels.get(keyparent.lower().replace(" ","_").replace("class_of_",""),keyparent)
+        keyparent = keyparent.lower().replace("'","").replace(" ","_").replace("class_of_","")
+        keyparent = fix_unified_labels.get(keyparent, keyparent)
         if not keyparent in joined_label_space and len(keyparent) > 5 and fix_unified_labels.get(keyparent[:-1],keyparent[:-1]) in joined_label_space:
             keyparent = fix_unified_labels.get(keyparent[:-1],keyparent[:-1])
         if keyparent == key:
@@ -83,8 +84,11 @@ def main(argv=sys.argv[1:]):
     #automatically adds missing parent candidates 
     remove_keys = []
     for key,vals in joined_label_space.items():
-        if key.find('_tmp_') >= 0 and key.replace('_tmp_','') in joined_label_space:
+        if key.find(' ') > 0 or key.find("'") > 0 or (key.find('_tmp_') >= 0 and key.replace('_tmp_','') in joined_label_space):
             remove_keys.append(key)
+            continue
+        if 'parent_name' in vals and not vals['parent_name'] in joined_label_space:
+            vals.pop('parent_name') #invalid parent
         if 'parent_name' in vals and vals['parent_name'].find('_tmp_') >= 0 and vals['parent_name'].replace('_tmp_','') in joined_label_space:
             vals['parent_name'] = vals['parent_name'].replace('_tmp_','')#fix connection            
         get_parents(vals)
@@ -112,8 +116,7 @@ def main(argv=sys.argv[1:]):
             vals['parent_name'] = key_parent
         elif len(found_link0) > 1:
             print("Warning: Multiple parents found for "+key+':', found_link0)
-        #else:
-        if False:
+        else:
             #add temporary jump nodes
             for p in vals.get('parents_qid',[]):
                 addtmp = wikidata_from_qid(p)
