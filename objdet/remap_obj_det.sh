@@ -21,6 +21,16 @@ fi
 #convert oid gt
 $RVC_OBJ_DET_SCRIPT_DIR/convert_oid_coco.sh
 
+if [ ! -f "$RVC_DATA_TRG_DIR/coco_boxable.rvc_test.json" ]; then
+    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/image_info_test2017.json \
+                            --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
+                            --mapping_row coco_boxable_name \
+                            --image_root_rel $RVC_DATA_SRC_DIR/coco/images/test2017 \
+                            --void_id 0 \
+                            --reduce_boxable \
+                            --output $RVC_DATA_TRG_DIR/coco_boxable.rvc_test.json
+fi
+
 if [ ! -f "$RVC_DATA_TRG_DIR/coco_boxable.rvc_val.json" ]; then
     python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/coco/annotations/instances_val2017.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
