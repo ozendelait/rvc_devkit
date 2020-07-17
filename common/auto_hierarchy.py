@@ -89,7 +89,7 @@ def main(argv=sys.argv[1:]):
         if key.find(' ') > 0 or key.find("'") > 0 or (is_tmp_key and key.replace('_tmp_','') in joined_label_space):
             remove_keys.append(key)
             continue
-        if 'parent_name' in vals and not vals['parent_name'] in joined_label_space:
+        if 'parent_name' in vals and len(vals["parent_name"]) > 0 and not vals['parent_name'] in joined_label_space:
             vals.pop('parent_name') #invalid parent
         if 'parent_name' in vals and vals['parent_name'].find('_tmp_') >= 0 and vals['parent_name'].replace('_tmp_','') in joined_label_space:
             vals['parent_name'] = vals['parent_name'].replace('_tmp_','')#fix connection            
