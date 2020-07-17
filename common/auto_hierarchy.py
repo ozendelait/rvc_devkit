@@ -108,17 +108,21 @@ def main(argv=sys.argv[1:]):
             print("Warning: Found no parent for "+key)
             cnt_no_parent += 1
         elif not is_tmp_key:
+            vals.pop("parents_pwn30", None)
+            vals.pop("parents_qid", None)
             pkeys = get_possible_keys(joined_label_space, key)
             if vals['parent_name'].find("_tmp") >= 0:
                 for p in pkeys[1:]:
                     if p.find("_tmp") < 0:
                         vals['parent_name'] = p
                         break
-                
+            if  vals['parent_name'].find("_tmp") >= 0:
+                print("Warning: temporary entry as parent: ",pkeys)
+                cnt_no_parent += 1
             possible_keys += pkeys
-     
+    print("Open entries: ", cnt_no_parent)
     possible_keys = set(possible_keys)   
-    cleanup_keys = [key for key in joined_label_space.keys() if key.find('_tmp_') >= 0 and not key in possible_keys and not "parent_name" in joined_label_space[key]]
+    cleanup_keys = [key for key in joined_label_space.keys() if key.find('_tmp_') >= 0 and not key in possible_keys]
     remove_keys = list(set(remove_keys+cleanup_keys))
     for r in remove_keys:
         joined_label_space.pop(r)
