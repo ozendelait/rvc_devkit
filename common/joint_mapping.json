@@ -6710,7 +6710,7 @@
     "aircraft": {
         "freebase_mid": "/m/0k5j",
         "oid_name": "Aircraft",
-        "parent_name": "_tmp_craft",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03125870"
         ],
@@ -6737,7 +6737,7 @@
         "oid_boxable_leaf": "/m/0cmf2",
         "oid_inst_leaf": "/m/0cmf2",
         "oid_name": "Airplane",
-        "parent_name": "_tmp_heavier-than-air_craft",
+        "parent_name": "aircraft",
         "parents_pwn30": [
             "n03510583"
         ],
@@ -6950,7 +6950,7 @@
     "armadillo": {
         "freebase_mid": "/m/0xfy",
         "oid_name": "Armadillo",
-        "parent_name": "_tmp_edentate",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n02453611"
         ],
@@ -7013,7 +7013,7 @@
     },
     "avocado": {
         "obj365_boxable_name": "Avocado",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -7048,7 +7048,7 @@
     "axe": {
         "freebase_mid": "/m/0c2jj",
         "oid_name": "Axe",
-        "parent_name": "_tmp_edge_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03265032"
         ],
@@ -7071,7 +7071,7 @@
         "oid_boxable_leaf": "/m/01940j",
         "oid_inst_leaf": "/m/01940j",
         "oid_name": "Backpack",
-        "parent_name": "_tmp_bag",
+        "parent_name": "container",
         "parents_pwn30": [
             "n02773037"
         ],
@@ -7122,7 +7122,7 @@
     "balance_beam": {
         "freebase_mid": "/m/0l3ms",
         "oid_name": "Balance beam",
-        "parent_name": "_tmp_exerciser",
+        "parent_name": "sports_equipment",
         "parents_pwn30": [
             "n03472232"
         ],
@@ -7186,7 +7186,7 @@
         "oid_boxable_leaf": "/m/09qck",
         "oid_inst_leaf": "/m/09qck",
         "oid_name": "Banana",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -7202,7 +7202,7 @@
     "banjo": {
         "freebase_mid": "/m/018j2",
         "oid_name": "Banjo",
-        "parent_name": "_tmp_stringed_instrument",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n04338517"
         ],
@@ -7278,7 +7278,7 @@
     "bar_soap": {
         "freebase_mid": "/m/0fw68",
         "obj365_boxable_name": "Soap",
-        "parent_name": "_tmp_soap",
+        "parent_name": "cleaning_products",
         "parents_pwn30": [
             "n04253437"
         ],
@@ -7421,7 +7421,7 @@
         "oid_boxable_leaf": "/m/03grzl",
         "oid_inst_leaf": "/m/03grzl",
         "oid_name": "Baseball glove",
-        "parent_name": "_tmp_baseball_equipment",
+        "parent_name": "sports_equipment",
         "parents_pwn30": [
             "n02799897"
         ],
@@ -7476,7 +7476,7 @@
         "oid_boxable_leaf": "/m/01h44",
         "oid_inst_leaf": "/m/01h44",
         "oid_name": "Bat (Animal)",
-        "parent_name": "_tmp_eutherian",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n01886756"
         ],
@@ -7611,7 +7611,7 @@
         "freebase_mid": "/m/03ssj5",
         "obj365_boxable_name": "Bed",
         "oid_name": "Bed",
-        "parent_name": "_tmp_bedroom_furniture",
+        "parent_name": "furniture",
         "parents_pwn30": [
             "n02821943"
         ],
@@ -7649,7 +7649,7 @@
         "freebase_mid": "/m/01gllr",
         "oid_boxable_leaf": "/m/01gllr",
         "oid_name": "Beehive",
-        "parent_name": "_tmp_receptacle",
+        "parent_name": "container",
         "parents_pwn30": [
             "n04060904"
         ],
@@ -7667,7 +7667,7 @@
         "oid_boxable_leaf": "/m/01599",
         "oid_inst_leaf": "/m/01599",
         "oid_name": "Beer",
-        "parent_name": "_tmp_brew",
+        "parent_name": "drink",
         "parents_pwn30": [
             "n07886572"
         ],
@@ -7702,7 +7702,7 @@
         "oid_boxable_leaf": "/m/0jg57",
         "oid_inst_leaf": "/m/0jg57",
         "oid_name": "Bell pepper",
-        "parent_name": "_tmp_sweet_pepper",
+        "parent_name": "pepper",
         "parents_pwn30": [
             "n07720615"
         ],
@@ -7754,7 +7754,7 @@
         "obj365_boxable_name": "Bench",
         "oid_boxable_leaf": "/m/0cvnqh",
         "oid_name": "Bench",
-        "parent_name": "_tmp_seat",
+        "parent_name": "furniture",
         "parents_pwn30": [
             "n04161981"
         ],
@@ -7791,7 +7791,7 @@
         "obj365_boxable_name": "Bicycle",
         "oid_boxable_leaf": "/m/0199g",
         "oid_name": "Bicycle",
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211"
         ],
@@ -7857,7 +7857,7 @@
         "mvd_inst_id": 20,
         "mvd_name": "human--rider--bicyclist",
         "mvd_pano_id": 20,
-        "parent_name": "_tmp_pedaler",
+        "parent_name": "rider",
         "parents_pwn30": [
             "n10411163"
         ],
@@ -8004,7 +8004,7 @@
         "oid_boxable_leaf": "/m/0lt4_",
         "oid_inst_leaf": "/m/0lt4_",
         "oid_name": "Binoculars",
-        "parent_name": "_tmp_optical_instrument",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03852280"
         ],
@@ -8032,7 +8032,7 @@
         "mvd_pano_id": 0,
         "obj365_boxable_name": "Wild Bird",
         "oid_name": "Bird",
-        "parent_name": "_tmp_craniate",
+        "parent_name": "animal",
         "parents_pwn30": [
             "n01471682"
         ],
@@ -8088,7 +8088,7 @@
         "oid_boxable_leaf": "/m/01f8m5",
         "oid_inst_leaf": "/m/01f8m5",
         "oid_name": "Blue jay",
-        "parent_name": "_tmp_new_world_jay",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01580772"
         ],
@@ -8170,7 +8170,7 @@
     "bomb": {
         "freebase_mid": "/m/0ct4f",
         "oid_name": "Bomb",
-        "parent_name": "_tmp_explosive_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03305522",
             "n04566257"
@@ -8285,7 +8285,7 @@
         "oid_boxable_leaf": "/m/04dr76w",
         "oid_inst_leaf": "/m/04dr76w",
         "oid_name": "Bottle",
-        "parent_name": "_tmp_vessel",
+        "parent_name": "container",
         "parents_pwn30": [
             "n04531098"
         ],
@@ -8715,7 +8715,7 @@
         "oid_boxable_leaf": "/m/01j3zr",
         "oid_inst_leaf": "/m/01j3zr",
         "oid_name": "Burrito",
-        "parent_name": "_tmp_dish",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -8816,7 +8816,7 @@
         "oid_boxable_leaf": "/m/0fbw6",
         "oid_inst_leaf": "/m/0fbw6",
         "oid_name": "Cabbage",
-        "parent_name": "_tmp_cruciferous_vegetable",
+        "parent_name": "vegetable",
         "parents_pwn30": [
             "n07713395"
         ],
@@ -8968,7 +8968,7 @@
         "oid_boxable_leaf": "/m/0ccs93",
         "oid_inst_leaf": "/m/0ccs93",
         "oid_name": "Canary",
-        "parent_name": "_tmp_finch",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01529672"
         ],
@@ -9020,7 +9020,7 @@
         "obj365_boxable_name": "Candy",
         "oid_boxable_leaf": "/m/0gm28",
         "oid_name": "Candy",
-        "parent_name": "_tmp_sweet",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07596684"
         ],
@@ -9092,7 +9092,7 @@
         "freebase_mid": "/m/0kpt_",
         "obj365_boxable_name": "Hamimelon",
         "oid_name": "Cantaloupe",
-        "parent_name": "_tmp_muskmelon",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07755707"
         ],
@@ -9128,7 +9128,7 @@
         "mvd_pano_id": 55,
         "obj365_boxable_name": "Car",
         "oid_name": "Car",
-        "parent_name": "_tmp_motor_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03791235"
         ],
@@ -9204,7 +9204,7 @@
     "carnivore": {
         "freebase_mid": "/m/01lrl",
         "oid_name": "Carnivore",
-        "parent_name": "_tmp_predator",
+        "parent_name": "animal",
         "parents_pwn30": [
             "n02152740"
         ],
@@ -9262,7 +9262,7 @@
     "cassette_deck": {
         "freebase_mid": "/m/01432t",
         "oid_name": "Cassette deck",
-        "parent_name": "_tmp_tape_deck",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n04392526"
         ],
@@ -9302,7 +9302,7 @@
         "oid_boxable_leaf": "/m/01yrx",
         "oid_inst_leaf": "/m/01yrx",
         "oid_name": "Cat",
-        "parent_name": "_tmp_tracked_vehicle",
+        "parent_name": "train",
         "parents_pwn30": [
             "n04464852"
         ],
@@ -9347,7 +9347,7 @@
         "freebase_mid": "/m/0cydv",
         "oid_boxable_leaf": "/m/0cydv",
         "oid_name": "Caterpillar",
-        "parent_name": "_tmp_larva",
+        "parent_name": "animal",
         "parents_pwn30": [
             "n02311060"
         ],
@@ -9421,7 +9421,7 @@
         "oid_boxable_leaf": "/m/01xqw",
         "oid_inst_leaf": "/m/01xqw",
         "oid_name": "Cello",
-        "parent_name": "_tmp_string",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n02880546"
         ],
@@ -9439,7 +9439,7 @@
         "freebase_mid": "/m/019h78",
         "oid_boxable_leaf": "/m/019h78",
         "oid_name": "Centipede",
-        "parent_name": "_tmp_arthropod",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01767661"
         ],
@@ -9456,7 +9456,7 @@
         "freebase_mid": "/m/01j4z9",
         "obj365_boxable_name": "Chainsaw",
         "oid_name": "Chainsaw",
-        "parent_name": "_tmp_saw",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03996145"
         ],
@@ -9481,7 +9481,7 @@
         "obj365_boxable_name": "Chair",
         "oid_boxable_leaf": "/m/01mzpv",
         "oid_name": "Chair",
-        "parent_name": "_tmp_seat",
+        "parent_name": "furniture",
         "parents_pwn30": [
             "n04161981"
         ],
@@ -9556,7 +9556,7 @@
         "context": "fruit",
         "freebase_mid": "/m/0f8sw",
         "obj365_boxable_name": "Cherry",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931",
             "n13138308"
@@ -9599,7 +9599,7 @@
         "oid_boxable_leaf": "/m/09b5t",
         "oid_inst_leaf": "/m/09b5t",
         "oid_name": "Chicken",
-        "parent_name": "_tmp_fowl",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01789740"
         ],
@@ -9616,7 +9616,7 @@
     "chime": {
         "freebase_mid": "/m/0f8s22",
         "oid_name": "Chime",
-        "parent_name": "_tmp_percussive_instrument",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n03915437"
         ],
@@ -9632,7 +9632,7 @@
     "chisel": {
         "freebase_mid": "/m/0_dqb",
         "oid_name": "Chisel",
-        "parent_name": "_tmp_edge_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03265032"
         ],
@@ -9764,7 +9764,7 @@
         "freebase_mid": "/m/01xygc",
         "oid_boxable_leaf": "/m/01xygc",
         "oid_name": "Coat",
-        "parent_name": "_tmp_overgarment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03863923"
         ],
@@ -9816,7 +9816,7 @@
         "obj365_boxable_name": "Coconut",
         "oid_boxable_leaf": "/m/0djtd",
         "oid_name": "Coconut",
-        "parent_name": "_tmp_edible_nut",
+        "parent_name": "nut",
         "parents_pwn30": [
             "n07737081"
         ],
@@ -9926,7 +9926,7 @@
     "comb": {
         "freebase_mid": "/m/020sdj",
         "obj365_boxable_name": "Comb",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -10004,7 +10004,7 @@
         "freebase_mid": "/m/02522",
         "oid_boxable_leaf": "/m/02522",
         "oid_name": "Computer monitor",
-        "parent_name": "_tmp_monitor",
+        "parent_name": "video_display",
         "parents_pwn30": [
             "n03782190"
         ],
@@ -10023,7 +10023,7 @@
         "oid_boxable_leaf": "/m/020lf",
         "oid_inst_leaf": "/m/020lf",
         "oid_name": "Computer mouse",
-        "parent_name": "_tmp_electronic_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03277771"
         ],
@@ -10145,7 +10145,7 @@
     "corn": {
         "freebase_mid": "/m/0mgg8",
         "obj365_boxable_name": "Corn",
-        "parent_name": "_tmp_grain",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07802417"
         ],
@@ -10281,7 +10281,7 @@
         "coco_pano_id": 21,
         "coco_pano_name": "cow",
         "obj365_boxable_name": "Cow",
-        "parent_name": "_tmp_eutherian",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n01886756"
         ],
@@ -10333,7 +10333,7 @@
     "crane": {
         "freebase_mid": "/m/01v50j",
         "obj365_boxable_name": "Crane",
-        "parent_name": "_tmp_lifting_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03664675"
         ],
@@ -10649,7 +10649,7 @@
     },
     "cymbal": {
         "obj365_boxable_name": "Cymbal",
-        "parent_name": "_tmp_percussive_instrument",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n03915437"
         ],
@@ -10685,7 +10685,7 @@
     "dairy_product": {
         "freebase_mid": "/m/0284d",
         "oid_name": "Dairy Product",
-        "parent_name": "_tmp_foodstuff",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07566340"
         ],
@@ -10744,7 +10744,7 @@
     "desktop_computer": {
         "freebase_mid": "/m/0dvvc",
         "obj365_boxable_name": "Computer Box",
-        "parent_name": "_tmp_pc",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03918480"
         ],
@@ -10779,7 +10779,7 @@
         "context": "garment ",
         "freebase_mid": "/m/0f571",
         "oid_name": "Diaper",
-        "parent_name": "_tmp_garment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03419014"
         ],
@@ -10969,7 +10969,7 @@
         "oid_boxable_leaf": "/m/02hj4",
         "oid_inst_leaf": "/m/02hj4",
         "oid_name": "Dolphin",
-        "parent_name": "_tmp_toothed_whale",
+        "parent_name": "whale",
         "parents_pwn30": [
             "n02066707"
         ],
@@ -11029,7 +11029,7 @@
         "freebase_mid": "/m/02dgv",
         "oid_boxable_leaf": "/m/02dgv",
         "oid_name": "Door",
-        "parent_name": "_tmp_movable_barrier",
+        "parent_name": "barrier",
         "parents_pwn30": [
             "n03795580"
         ],
@@ -11080,7 +11080,7 @@
         "freebase_mid": "/m/0ft9s",
         "oid_boxable_leaf": "/m/0ft9s",
         "oid_name": "Dragonfly",
-        "parent_name": "_tmp_odonate",
+        "parent_name": "insect",
         "parents_pwn30": [
             "n02268148"
         ],
@@ -11117,7 +11117,7 @@
         "oid_boxable_leaf": "/m/01d40f",
         "oid_inst_leaf": "/m/01d40f",
         "oid_name": "Dress",
-        "parent_name": "_tmp_womans_clothing",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n04596852"
         ],
@@ -11189,7 +11189,7 @@
         "obj365_boxable_name": "Drum",
         "oid_boxable_leaf": "/m/026t6",
         "oid_name": "Drum",
-        "parent_name": "_tmp_percussive_instrument",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n03915437"
         ],
@@ -11209,7 +11209,7 @@
         "oid_boxable_leaf": "/m/09ddx",
         "oid_inst_leaf": "/m/09ddx",
         "oid_name": "Duck",
-        "parent_name": "_tmp_anseriform_bird",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01845477"
         ],
@@ -11262,7 +11262,7 @@
     "durian": {
         "freebase_mid": "/m/02dx0",
         "obj365_boxable_name": "Durian",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -11298,7 +11298,7 @@
         "oid_boxable_leaf": "/m/09csl",
         "oid_inst_leaf": "/m/09csl",
         "oid_name": "Eagle",
-        "parent_name": "_tmp_raptor",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01604330"
         ],
@@ -11366,7 +11366,7 @@
         "obj365_boxable_name": "Egg",
         "oid_boxable_leaf": "/m/033cnk",
         "oid_name": "Egg (Food)",
-        "parent_name": "_tmp_foodstuff",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07566340"
         ],
@@ -11384,7 +11384,7 @@
     "eggplant": {
         "freebase_mid": "/m/0cdk2",
         "obj365_boxable_name": "Eggplant",
-        "parent_name": "_tmp_solanaceous_vegetable",
+        "parent_name": "vegetable",
         "parents_pwn30": [
             "n07710007"
         ],
@@ -11451,7 +11451,7 @@
         "obj365_boxable_name": "Fan",
         "oid_boxable_leaf": "/m/02x984l",
         "oid_name": "Mechanical fan",
-        "parent_name": "_tmp_fan",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03320046"
         ],
@@ -11600,7 +11600,7 @@
         "obj365_boxable_name": "Glasses",
         "oid_boxable_leaf": "/m/0jyfg",
         "oid_name": "Glasses",
-        "parent_name": "_tmp_optical_instrument",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03852280"
         ],
@@ -11615,7 +11615,7 @@
     },
     "eyeliner_pencil": {
         "obj365_boxable_name": "Cosmetics Brush/Eyeliner Pencil",
-        "parent_name": "_tmp_makeup",
+        "parent_name": "cosmetic",
         "wikidata_qid": "",
         "wordnet_pwn30": ""
     },
@@ -11642,7 +11642,7 @@
     "face_powder": {
         "freebase_mid": "/m/02xb7qb",
         "oid_name": "Face powder",
-        "parent_name": "_tmp_makeup",
+        "parent_name": "cosmetic",
         "parents_pwn30": [
             "n03994008",
             "n03714235"
@@ -11668,7 +11668,7 @@
         "oid_boxable_leaf": "/m/0f6wt",
         "oid_inst_leaf": "/m/0f6wt",
         "oid_name": "Falcon",
-        "parent_name": "_tmp_hawk",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01605630"
         ],
@@ -11700,7 +11700,7 @@
     "fast_food": {
         "freebase_mid": "/m/01_bhs",
         "oid_name": "Fast food",
-        "parent_name": "_tmp_aliment",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07570720"
         ],
@@ -11810,7 +11810,7 @@
         "oid_boxable_leaf": "/m/043nyj",
         "oid_inst_leaf": "/m/043nyj",
         "oid_name": "Common fig",
-        "parent_name": "_tmp_fig_tree",
+        "parent_name": "tree",
         "parents_pwn30": [
             "n12401335"
         ],
@@ -11844,7 +11844,7 @@
     "fire_extinguisher": {
         "freebase_mid": "/m/01nl4x",
         "obj365_boxable_name": "Fire Extinguisher",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -11988,7 +11988,7 @@
         "oid_boxable_leaf": "/m/01kb5b",
         "oid_inst_leaf": "/m/01kb5b",
         "oid_name": "Flashlight",
-        "parent_name": "_tmp_electric_lamp",
+        "parent_name": "lamp",
         "parents_pwn30": [
             "n03272383"
         ],
@@ -12261,7 +12261,7 @@
         "obj365_boxable_name": "Fork",
         "oid_boxable_leaf": "/m/0dt3t",
         "oid_name": "Fork",
-        "parent_name": "_tmp_cutlery",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n03153375"
         ],
@@ -12299,7 +12299,7 @@
         "oid_boxable_leaf": "/m/0306r",
         "oid_inst_leaf": "/m/0306r",
         "oid_name": "Fox",
-        "parent_name": "_tmp_canid",
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02083346"
         ],
@@ -12378,7 +12378,7 @@
         "oid_boxable_leaf": "/m/09ld4",
         "oid_inst_leaf": "/m/09ld4",
         "oid_name": "Frog",
-        "parent_name": "_tmp_amphibian",
+        "parent_name": "animal",
         "parents_pwn30": [
             "n01627424"
         ],
@@ -12485,7 +12485,7 @@
     "garlic": {
         "freebase_mid": "/m/0dbrl",
         "obj365_boxable_name": "Garlic",
-        "parent_name": "_tmp_flavorer",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07809368"
         ],
@@ -12543,7 +12543,7 @@
         "oid_boxable_leaf": "/m/05r655",
         "oid_inst_leaf": "/m/05r655",
         "oid_name": "Girl",
-        "parent_name": "_tmp_female_offspring",
+        "parent_name": "person",
         "parents_pwn30": [
             "n10084043"
         ],
@@ -12578,7 +12578,7 @@
         "freebase_mid": "/m/0174n1",
         "obj365_boxable_name": "Gloves",
         "oid_name": "Glove",
-        "parent_name": "_tmp_handwear",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03490324"
         ],
@@ -12633,7 +12633,7 @@
         "oid_boxable_leaf": "/m/03fj2",
         "oid_inst_leaf": "/m/03fj2",
         "oid_name": "Goldfish",
-        "parent_name": "_tmp_cyprinid",
+        "parent_name": "fish",
         "parents_pwn30": [
             "n01439121"
         ],
@@ -12669,7 +12669,7 @@
         "freebase_mid": "/m/0323sq",
         "oid_boxable_leaf": "/m/0323sq",
         "oid_name": "Golf cart",
-        "parent_name": "_tmp_motor_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03791235",
             "n03446832"
@@ -12686,7 +12686,7 @@
     "golf_club": {
         "freebase_mid": "/m/03gzqq",
         "obj365_boxable_name": "Golf Club",
-        "parent_name": "_tmp_golf_equipment",
+        "parent_name": "sports_equipment",
         "parents_pwn30": [
             "n03446832"
         ],
@@ -12724,7 +12724,7 @@
         "oid_boxable_leaf": "/m/0dbvp",
         "oid_inst_leaf": "/m/0dbvp",
         "oid_name": "Goose",
-        "parent_name": "_tmp_anseriform_bird",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01845477"
         ],
@@ -12762,7 +12762,7 @@
         "oid_boxable_leaf": "/m/0388q",
         "oid_inst_leaf": "/m/0388q",
         "oid_name": "Grape",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -12782,7 +12782,7 @@
         "oid_boxable_leaf": "/m/0hqkz",
         "oid_inst_leaf": "/m/0hqkz",
         "oid_name": "Grapefruit",
-        "parent_name": "_tmp_citrus",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07747055"
         ],
@@ -12803,7 +12803,7 @@
         "coco_pano_name": "grass-merged",
         "context": "lawn",
         "freebase_mid": "/m/0fkrk",
-        "parent_name": "_tmp_gramineous_plant",
+        "parent_name": "plant",
         "parents_pwn30": [
             "n12101870"
         ],
@@ -12929,7 +12929,7 @@
         "oid_boxable_leaf": "/m/02g30s",
         "oid_inst_leaf": "/m/02g30s",
         "oid_name": "Guacamole",
-        "parent_name": "_tmp_dip",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07582609"
         ],
@@ -12953,7 +12953,7 @@
         "mvd_id": 4,
         "mvd_name": "construction--barrier--guard-rail",
         "mvd_pano_id": 4,
-        "parent_name": "_tmp_rail",
+        "parent_name": "barrier",
         "parents_pwn30": [
             "n04047401"
         ],
@@ -12974,7 +12974,7 @@
         "oid_boxable_leaf": "/m/0342h",
         "oid_inst_leaf": "/m/0342h",
         "oid_name": "Guitar",
-        "parent_name": "_tmp_stringed_instrument",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n04338517"
         ],
@@ -13051,7 +13051,7 @@
         "oid_boxable_leaf": "/m/0cdn1",
         "oid_inst_leaf": "/m/0cdn1",
         "oid_name": "Hamburger",
-        "parent_name": "_tmp_beef",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07663592"
         ],
@@ -13069,7 +13069,7 @@
         "freebase_mid": "/m/03l9g",
         "obj365_boxable_name": "Hammer",
         "oid_name": "Hammer",
-        "parent_name": "_tmp_hand_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03489162"
         ],
@@ -13087,7 +13087,7 @@
         "oid_boxable_leaf": "/m/03qrc",
         "oid_inst_leaf": "/m/03qrc",
         "oid_name": "Hamster",
-        "parent_name": "_tmp_rodent",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n02329401"
         ],
@@ -13123,7 +13123,7 @@
     "hand_dryer": {
         "freebase_mid": "/m/0c3m8g",
         "oid_name": "Hand dryer",
-        "parent_name": "_tmp_electrical_device",
+        "parent_name": "dynamic",
         "parents_qid": [
             "Q3749263"
         ],
@@ -13163,7 +13163,7 @@
         "mvd_name": "object--vehicle--wheeled-slow",
         "mvd_pano_id": 62,
         "obj365_boxable_name": "Trolley",
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211"
         ],
@@ -13229,7 +13229,7 @@
         "oid_boxable_leaf": "/m/02l8p9",
         "oid_inst_leaf": "/m/02l8p9",
         "oid_name": "Harbor seal",
-        "parent_name": "_tmp_true_seal",
+        "parent_name": "seal",
         "parents_pwn30": [
             "n02079389"
         ],
@@ -13283,7 +13283,7 @@
         "oid_boxable_leaf": "/m/03q5t",
         "oid_inst_leaf": "/m/03q5t",
         "oid_name": "Harpsichord",
-        "parent_name": "_tmp_klavier",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n03039015"
         ],
@@ -13301,7 +13301,7 @@
         "freebase_mid": "/m/02dl1y",
         "obj365_boxable_name": "Hat",
         "oid_name": "Hat",
-        "parent_name": "_tmp_headgear",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03502509"
         ],
@@ -13354,7 +13354,7 @@
     "heater": {
         "freebase_mid": "/m/03qhv5",
         "oid_name": "Heater",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -13370,7 +13370,7 @@
     "hedgehog": {
         "freebase_mid": "/m/0cl4p",
         "oid_name": "Hedgehog",
-        "parent_name": "_tmp_insectivore",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n01889074"
         ],
@@ -13388,7 +13388,7 @@
         "obj365_boxable_name": "Helicopter",
         "oid_boxable_leaf": "/m/09ct_",
         "oid_name": "Helicopter",
-        "parent_name": "_tmp_heavier-than-air_craft",
+        "parent_name": "aircraft",
         "parents_pwn30": [
             "n03510583"
         ],
@@ -13407,7 +13407,7 @@
         "freebase_mid": "/m/0zvk5",
         "obj365_boxable_name": "Helmet",
         "oid_name": "Helmet",
-        "parent_name": "_tmp_headgear",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03502509"
         ],
@@ -13544,7 +13544,7 @@
     "horizontal_bar": {
         "freebase_mid": "/m/0cqn2",
         "oid_name": "Horizontal bar",
-        "parent_name": "_tmp_exerciser",
+        "parent_name": "sports_equipment",
         "parents_pwn30": [
             "n03472232"
         ],
@@ -13576,7 +13576,7 @@
         "oid_boxable_leaf": "/m/03k3r",
         "oid_inst_leaf": "/m/03k3r",
         "oid_name": "Horse",
-        "parent_name": "_tmp_exerciser",
+        "parent_name": "sports_equipment",
         "parents_pwn30": [
             "n03472232"
         ],
@@ -13609,7 +13609,7 @@
         "context": "aerostat",
         "freebase_mid": "/m/03dk1w",
         "obj365_boxable_name": "Hotair ballon",
-        "parent_name": "_tmp_lighter-than-air_craft",
+        "parent_name": "aircraft",
         "parents_pwn30": [
             "n03666917"
         ],
@@ -13701,7 +13701,7 @@
     "humidifier": {
         "freebase_mid": "/m/04lvq_",
         "oid_name": "Humidifier",
-        "parent_name": "_tmp_electrical_device",
+        "parent_name": "dynamic",
         "parents_qid": [],
         "wikidata_desc": "device that increases humidity",
         "wikidata_name": "humidifier",
@@ -13822,7 +13822,7 @@
     "insect": {
         "freebase_mid": "/m/03vt0",
         "oid_name": "Insect",
-        "parent_name": "_tmp_arthropod",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01767661"
         ],
@@ -13854,7 +13854,7 @@
     "ipod": {
         "freebase_mid": "/m/0mcx2",
         "oid_name": "Ipod",
-        "parent_name": "_tmp_electrical_device",
+        "parent_name": "dynamic",
         "parents_qid": [
             "Q811701",
             "Q10872571"
@@ -13867,7 +13867,7 @@
     "isopod": {
         "freebase_mid": "/m/035vxb",
         "oid_name": "Isopod",
-        "parent_name": "_tmp_malacostracan_crustacean",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01975687"
         ],
@@ -13884,7 +13884,7 @@
         "freebase_mid": "/m/032b3c",
         "oid_boxable_leaf": "/m/032b3c",
         "oid_name": "Jacket",
-        "parent_name": "_tmp_dental_appliance",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03175604"
         ],
@@ -13942,7 +13942,7 @@
         "obj365_boxable_name": "Jellyfish",
         "oid_boxable_leaf": "/m/0d8zb",
         "oid_name": "Jellyfish",
-        "parent_name": "_tmp_cnidarian",
+        "parent_name": "animal",
         "parents_pwn30": [
             "n01909422"
         ],
@@ -13960,7 +13960,7 @@
         "oid_boxable_leaf": "/m/01xs3r",
         "oid_inst_leaf": "/m/01xs3r",
         "oid_name": "Jet ski",
-        "parent_name": "_tmp_powerboat",
+        "parent_name": "boat",
         "parents_pwn30": [
             "n03790230"
         ],
@@ -14033,7 +14033,7 @@
         "oid_boxable_leaf": "/m/04c0y",
         "oid_inst_leaf": "/m/04c0y",
         "oid_name": "Kangaroo",
-        "parent_name": "_tmp_marsupial",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n01874434"
         ],
@@ -14068,7 +14068,7 @@
     "key": {
         "freebase_mid": "/m/0dxyr",
         "obj365_boxable_name": "Key",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -14192,7 +14192,7 @@
     "kiwi_fruit": {
         "freebase_mid": "/m/04f8p",
         "obj365_boxable_name": "Kiwi fruit",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -14216,7 +14216,7 @@
         "oid_boxable_leaf": "/m/04ctx",
         "oid_inst_leaf": "/m/04ctx",
         "oid_name": "Knife",
-        "parent_name": "_tmp_edge_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03265032"
         ],
@@ -14232,7 +14232,7 @@
     "koala": {
         "freebase_mid": "/m/04cp_",
         "oid_name": "Koala",
-        "parent_name": "_tmp_possum",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n01881171"
         ],
@@ -14267,7 +14267,7 @@
     "ladle": {
         "freebase_mid": "/m/027rl48",
         "oid_name": "Ladle",
-        "parent_name": "_tmp_vessel",
+        "parent_name": "container",
         "parents_pwn30": [
             "n04531098"
         ],
@@ -14323,7 +14323,7 @@
         "obj365_boxable_name": "Lamp",
         "oid_boxable_leaf": "/m/0dtln",
         "oid_name": "Lamp",
-        "parent_name": "_tmp_source_of_illumination",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n04263760"
         ],
@@ -14384,7 +14384,7 @@
         "oid_boxable_leaf": "/m/01c648",
         "oid_inst_leaf": "/m/01c648",
         "oid_name": "Laptop",
-        "parent_name": "_tmp_portable_computer",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03985232"
         ],
@@ -14403,7 +14403,7 @@
         "freebase_mid": "/m/04gth",
         "oid_boxable_leaf": "/m/04gth",
         "oid_name": "Lavender (Plant)",
-        "parent_name": "_tmp_bush",
+        "parent_name": "plant",
         "parents_pwn30": [
             "n13112664"
         ],
@@ -14488,7 +14488,7 @@
     "lettuce": {
         "freebase_mid": "/m/0fqlj",
         "obj365_boxable_name": "Lettuce",
-        "parent_name": "_tmp_salad_green",
+        "parent_name": "vegetable",
         "parents_pwn30": [
             "n07723330"
         ],
@@ -14557,7 +14557,7 @@
         "ade20k_id": 83,
         "ade20k_name": "light",
         "ade20k_names": "light;light;source",
-        "parent_name": "_tmp_source_of_illumination",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n04263760"
         ],
@@ -14591,7 +14591,7 @@
     "lighter": {
         "freebase_mid": "/m/01ypq8",
         "obj365_boxable_name": "Lighter",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -14626,7 +14626,7 @@
         "freebase_mid": "/m/0jqgx",
         "oid_boxable_leaf": "/m/0jqgx",
         "oid_name": "Lily",
-        "parent_name": "_tmp_liliaceous_plant",
+        "parent_name": "plant",
         "parents_pwn30": [
             "n12425281"
         ],
@@ -14681,7 +14681,7 @@
         "freebase_mid": "/m/06c7f7",
         "obj365_boxable_name": "Lipstick",
         "oid_name": "Lipstick",
-        "parent_name": "_tmp_makeup",
+        "parent_name": "cosmetic",
         "parents_pwn30": [
             "n03714235"
         ],
@@ -14700,7 +14700,7 @@
         "oid_boxable_leaf": "/m/04m9y",
         "oid_inst_leaf": "/m/04m9y",
         "oid_name": "Lizard",
-        "parent_name": "_tmp_saurian",
+        "parent_name": "reptile",
         "parents_pwn30": [
             "n01674216"
         ],
@@ -14718,7 +14718,7 @@
         "obj365_boxable_name": "Lobster",
         "oid_boxable_leaf": "/m/0cjq5",
         "oid_name": "Lobster",
-        "parent_name": "_tmp_decapod",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01976146"
         ],
@@ -14776,7 +14776,7 @@
         "oid_boxable_leaf": "/m/04g2r",
         "oid_inst_leaf": "/m/04g2r",
         "oid_name": "Lynx",
-        "parent_name": "_tmp_wildcat",
+        "parent_name": "cat",
         "parents_pwn30": [
             "n02124623"
         ],
@@ -14792,7 +14792,7 @@
     "magpie": {
         "freebase_mid": "/m/012074",
         "oid_name": "Magpie",
-        "parent_name": "_tmp_corvine_bird",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01578575"
         ],
@@ -14829,7 +14829,7 @@
     "mammal": {
         "freebase_mid": "/m/04rky",
         "oid_name": "Mammal",
-        "parent_name": "_tmp_craniate",
+        "parent_name": "animal",
         "parents_pwn30": [
             "n01471682"
         ],
@@ -14868,7 +14868,7 @@
         "oid_boxable_leaf": "/m/0fldg",
         "oid_inst_leaf": "/m/0fldg",
         "oid_name": "Mango",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -14907,7 +14907,7 @@
         "freebase_mid": "/m/0cffdh",
         "oid_boxable_leaf": "/m/0cffdh",
         "oid_name": "Maple",
-        "parent_name": "_tmp_flowering_tree",
+        "parent_name": "tree",
         "parents_pwn30": [
             "n13109733"
         ],
@@ -14923,7 +14923,7 @@
     "maraca": {
         "freebase_mid": "/m/0xzly",
         "oid_name": "Maracas",
-        "parent_name": "_tmp_percussive_instrument",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n03915437"
         ],
@@ -14994,7 +14994,7 @@
         "freebase_mid": "/m/07v9_z",
         "oid_boxable_leaf": "/m/07v9_z",
         "oid_name": "Measuring cup",
-        "parent_name": "_tmp_measure",
+        "parent_name": "container",
         "parents_pwn30": [
             "n03733644"
         ],
@@ -15011,7 +15011,7 @@
     "meatball": {
         "freebase_mid": "/m/01bzmc",
         "obj365_boxable_name": "Meat ball",
-        "parent_name": "_tmp_dish",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -15182,7 +15182,7 @@
         "obj365_boxable_name": "Mirror",
         "oid_boxable_leaf": "/m/054_l",
         "oid_name": "Mirror",
-        "parent_name": "_tmp_reflector",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n04069276"
         ],
@@ -15260,7 +15260,7 @@
         "oid_boxable_leaf": "/m/050k8",
         "oid_inst_leaf": "/m/050k8",
         "oid_name": "Mobile phone",
-        "parent_name": "_tmp_radiophone",
+        "parent_name": "telephone",
         "parents_pwn30": [
             "n04044498"
         ],
@@ -15347,7 +15347,7 @@
         "oid_boxable_leaf": "/m/04_sv",
         "oid_inst_leaf": "/m/04_sv",
         "oid_name": "Motorcycle",
-        "parent_name": "_tmp_motor_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03791235"
         ],
@@ -15425,7 +15425,7 @@
         "oid_boxable_leaf": "/m/04rmv",
         "oid_inst_leaf": "/m/04rmv",
         "oid_name": "Mouse",
-        "parent_name": "_tmp_rodent",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n02329401"
         ],
@@ -15481,7 +15481,7 @@
         "oid_boxable_leaf": "/m/02jvh9",
         "oid_inst_leaf": "/m/02jvh9",
         "oid_name": "Mug",
-        "parent_name": "_tmp_drinking_vessel",
+        "parent_name": "drinking_glass",
         "parents_pwn30": [
             "n03241496"
         ],
@@ -15536,7 +15536,7 @@
     "musical_instrument": {
         "freebase_mid": "/m/04szw",
         "oid_name": "Musical instrument",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -15553,7 +15553,7 @@
         "freebase_mid": "/m/057cc",
         "oid_boxable_leaf": "/m/057cc",
         "oid_name": "Musical keyboard",
-        "parent_name": "_tmp_keyboard",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03614007"
         ],
@@ -15803,7 +15803,7 @@
         "oid_boxable_leaf": "/m/0cyhj_",
         "oid_inst_leaf": "/m/0cyhj_",
         "oid_name": "Orange",
-        "parent_name": "_tmp_citrus",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07747055"
         ],
@@ -15840,7 +15840,7 @@
         "oid_boxable_leaf": "/m/05n4y",
         "oid_inst_leaf": "/m/05n4y",
         "oid_name": "Ostrich",
-        "parent_name": "_tmp_ratite",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01517565"
         ],
@@ -15858,7 +15858,7 @@
         "oid_boxable_leaf": "/m/0cn6p",
         "oid_inst_leaf": "/m/0cn6p",
         "oid_name": "Otter",
-        "parent_name": "_tmp_mustelid",
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02441326"
         ],
@@ -15930,7 +15930,7 @@
         "oid_boxable_leaf": "/m/09d5_",
         "oid_inst_leaf": "/m/09d5_",
         "oid_name": "Owl",
-        "parent_name": "_tmp_raptor",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01604330"
         ],
@@ -15949,7 +15949,7 @@
         "oid_boxable_leaf": "/m/0_cp5",
         "oid_inst_leaf": "/m/0_cp5",
         "oid_name": "Oyster",
-        "parent_name": "_tmp_bivalve",
+        "parent_name": "shellfish",
         "parents_pwn30": [
             "n01955933"
         ],
@@ -16041,7 +16041,7 @@
         "context": "giant",
         "freebase_mid": "/m/03bj1",
         "oid_name": "Panda",
-        "parent_name": "_tmp_procyonid",
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02507649"
         ],
@@ -16057,7 +16057,7 @@
     "papaya": {
         "freebase_mid": "/m/0g4fr",
         "obj365_boxable_name": "Papaya",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -16093,7 +16093,7 @@
     "paper_cutter": {
         "freebase_mid": "/m/080n7g",
         "oid_name": "Paper cutter",
-        "parent_name": "_tmp_cutting_implement",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03154446"
         ],
@@ -16150,7 +16150,7 @@
         "freebase_mid": "/m/015qbp",
         "obj365_boxable_name": "Parking meter",
         "oid_name": "Parking meter",
-        "parent_name": "_tmp_timer",
+        "parent_name": "clock",
         "parents_pwn30": [
             "n04438304"
         ],
@@ -16299,7 +16299,7 @@
         "oid_boxable_leaf": "/m/061_f",
         "oid_inst_leaf": "/m/061_f",
         "oid_name": "Pear",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n13138842",
             "n07705931"
@@ -16349,7 +16349,7 @@
     "pedestrian_crossing": {
         "context": "striped_and_plain_crosswalk",
         "freebase_mid": "/m/014xcs",
-        "parent_name": "_tmp_crossing",
+        "parent_name": "pathway",
         "parents_pwn30": [
             "n03137228"
         ],
@@ -16421,7 +16421,7 @@
         "oid_boxable_leaf": "/m/05z6w",
         "oid_inst_leaf": "/m/05z6w",
         "oid_name": "Penguin",
-        "parent_name": "_tmp_sphenisciform_seabird",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n02055658"
         ],
@@ -16436,7 +16436,7 @@
     },
     "pepper": {
         "obj365_boxable_name": "Pepper",
-        "parent_name": "_tmp_solanaceous_vegetable",
+        "parent_name": "vegetable",
         "parents_pwn30": [
             "n07710007"
         ],
@@ -16574,7 +16574,7 @@
         "oid_boxable_leaf": "/m/05r5c",
         "oid_inst_leaf": "/m/05r5c",
         "oid_name": "Piano",
-        "parent_name": "_tmp_keyboard_instrument",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n03915437",
             "n04338517",
@@ -16704,7 +16704,7 @@
     "pigeon": {
         "freebase_mid": "/m/01c08f",
         "obj365_boxable_name": "Pigeon",
-        "parent_name": "_tmp_columbiform_bird",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01810700"
         ],
@@ -16767,7 +16767,7 @@
         "obj365_boxable_name": "Pineapple",
         "oid_boxable_leaf": "/m/0fp6w",
         "oid_name": "Pineapple",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -16786,7 +16786,7 @@
         "oid_boxable_leaf": "/m/054fyh",
         "oid_inst_leaf": "/m/054fyh",
         "oid_name": "Pitcher (Container)",
-        "parent_name": "_tmp_vessel",
+        "parent_name": "container",
         "parents_pwn30": [
             "n04531098"
         ],
@@ -16809,7 +16809,7 @@
         "oid_boxable_leaf": "/m/0663v",
         "oid_inst_leaf": "/m/0663v",
         "oid_name": "Pizza",
-        "parent_name": "_tmp_dish",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -16872,7 +16872,7 @@
         "oid_boxable_leaf": "/m/05gqfk",
         "oid_inst_leaf": "/m/05gqfk",
         "oid_name": "Plastic bag",
-        "parent_name": "_tmp_bag",
+        "parent_name": "container",
         "parents_pwn30": [
             "n02773037"
         ],
@@ -16981,7 +16981,7 @@
     "pliers": {
         "freebase_mid": "/m/02qtr5",
         "obj365_boxable_name": "Pliers",
-        "parent_name": "_tmp_hand_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03082127",
             "n03489162"
@@ -16998,7 +16998,7 @@
     "plum": {
         "freebase_mid": "/m/0hs32",
         "obj365_boxable_name": "Plum",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931",
             "n13138308"
@@ -17095,7 +17095,7 @@
         "oid_boxable_leaf": "/m/0jwn_",
         "oid_inst_leaf": "/m/0jwn_",
         "oid_name": "Pomegranate",
-        "parent_name": "_tmp_edible_fruit",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07705931"
         ],
@@ -17148,7 +17148,7 @@
         "freebase_mid": "/m/0c568",
         "oid_boxable_leaf": "/m/0c568",
         "oid_name": "Porcupine",
-        "parent_name": "_tmp_rodent",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n02329401"
         ],
@@ -17184,7 +17184,7 @@
     },
     "pot": {
         "obj365_boxable_name": "Pot",
-        "parent_name": "_tmp_vessel",
+        "parent_name": "container",
         "parents_pwn30": [
             "n04531098",
             "n03101986"
@@ -17204,7 +17204,7 @@
         "oid_boxable_leaf": "/m/05vtc",
         "oid_inst_leaf": "/m/05vtc",
         "oid_name": "Potato",
-        "parent_name": "_tmp_solanaceous_vegetable",
+        "parent_name": "vegetable",
         "parents_pwn30": [
             "n07710283",
             "n07566863",
@@ -17276,7 +17276,7 @@
     },
     "power_brick": {
         "obj365_boxable_name": "Converter",
-        "parent_name": "_tmp_electrical_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03269401"
         ],
@@ -17309,7 +17309,7 @@
         "oid_boxable_leaf": "/m/03bbps",
         "oid_inst_leaf": "/m/03bbps",
         "oid_name": "Power plugs and sockets",
-        "parent_name": "_tmp_electrical_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03269401"
         ],
@@ -17327,7 +17327,7 @@
         "oid_boxable_leaf": "/m/0h8ntjv",
         "oid_inst_leaf": "/m/0h8ntjv",
         "oid_name": "Pressure cooker",
-        "parent_name": "_tmp_autoclave",
+        "parent_name": "container",
         "parents_pwn30": [
             "n02758960"
         ],
@@ -17345,7 +17345,7 @@
         "oid_boxable_leaf": "/m/01f91_",
         "oid_inst_leaf": "/m/01f91_",
         "oid_name": "Pretzel",
-        "parent_name": "_tmp_cracker",
+        "parent_name": "bread",
         "parents_pwn30": [
             "n07681926"
         ],
@@ -17366,7 +17366,7 @@
         "oid_boxable_leaf": "/m/01m4t",
         "oid_inst_leaf": "/m/01m4t",
         "oid_name": "Printer",
-        "parent_name": "_tmp_peripheral",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n04004475",
             "n03916720"
@@ -17401,7 +17401,7 @@
     "projector": {
         "freebase_mid": "/m/0crf4xx",
         "obj365_boxable_name": "Projector",
-        "parent_name": "_tmp_optical_instrument",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03852280"
         ],
@@ -17472,7 +17472,7 @@
         "oid_boxable_leaf": "/m/06mf6",
         "oid_inst_leaf": "/m/06mf6",
         "oid_name": "Rabbit",
-        "parent_name": "_tmp_leporid",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n02323902"
         ],
@@ -17491,7 +17491,7 @@
         "oid_boxable_leaf": "/m/0dq75",
         "oid_inst_leaf": "/m/0dq75",
         "oid_name": "Raccoon",
-        "parent_name": "_tmp_procyonid",
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02507649"
         ],
@@ -17562,7 +17562,7 @@
         "oid_boxable_leaf": "/m/015x5n",
         "oid_inst_leaf": "/m/015x5n",
         "oid_name": "Radish",
-        "parent_name": "_tmp_cruciferous_vegetable",
+        "parent_name": "vegetable",
         "parents_pwn30": [
             "n07710283",
             "n07713395"
@@ -17621,7 +17621,7 @@
         "oid_boxable_leaf": "/m/06j2d",
         "oid_inst_leaf": "/m/06j2d",
         "oid_name": "Raven",
-        "parent_name": "_tmp_corvine_bird",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01578575"
         ],
@@ -17678,7 +17678,7 @@
     "red_cabbage": {
         "freebase_mid": "/m/06vm6n",
         "obj365_boxable_name": "Red Cabbage",
-        "parent_name": "_tmp_head_cabbage",
+        "parent_name": "cabbage",
         "parents_pwn30": [
             "n07714571"
         ],
@@ -17694,7 +17694,7 @@
     "red_panda": {
         "freebase_mid": "/m/06l9r",
         "oid_name": "Red panda",
-        "parent_name": "_tmp_procyonid",
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02507649"
         ],
@@ -17744,7 +17744,7 @@
         "freebase_mid": "/m/0qjjc",
         "obj365_boxable_name": "Remote",
         "oid_name": "Remote control",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -17760,7 +17760,7 @@
     "reptile": {
         "freebase_mid": "/m/06bt6",
         "oid_name": "Reptile",
-        "parent_name": "_tmp_craniate",
+        "parent_name": "animal",
         "parents_pwn30": [
             "n01471682"
         ],
@@ -17794,7 +17794,7 @@
     "rice": {
         "freebase_mid": "/m/0l_yh",
         "obj365_boxable_name": "Rice",
-        "parent_name": "_tmp_grain",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07566863",
             "n07802417"
@@ -17849,7 +17849,7 @@
         "mvd_inst_id": 22,
         "mvd_name": "human--rider--other-rider",
         "mvd_pano_id": 22,
-        "parent_name": "_tmp_traveler",
+        "parent_name": "person",
         "parents_pwn30": [
             "n09629752"
         ],
@@ -17924,7 +17924,7 @@
         "coco_pano_id": 148,
         "coco_pano_name": "river",
         "freebase_mid": "/m/06cnp",
-        "parent_name": "_tmp_stream",
+        "parent_name": "water",
         "parents_pwn30": [
             "n09448361"
         ],
@@ -18040,7 +18040,7 @@
         "oid_boxable_leaf": "/m/09rvcxw",
         "oid_inst_leaf": "/m/09rvcxw",
         "oid_name": "Rocket",
-        "parent_name": "_tmp_craft",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03596285"
         ],
@@ -18111,7 +18111,7 @@
         "oid_boxable_leaf": "/m/06m11",
         "oid_inst_leaf": "/m/06m11",
         "oid_name": "Rose",
-        "parent_name": "_tmp_bush",
+        "parent_name": "plant",
         "parents_pwn30": [
             "n13112664"
         ],
@@ -18128,7 +18128,7 @@
     "router": {
         "freebase_mid": "/m/06f76",
         "obj365_boxable_name": "Router/modem",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -18188,7 +18188,7 @@
         "oid_boxable_leaf": "/m/0hdln",
         "oid_inst_leaf": "/m/0hdln",
         "oid_name": "Ruler",
-        "parent_name": "_tmp_measure",
+        "parent_name": "container",
         "parents_pwn30": [
             "n03735637"
         ],
@@ -18206,7 +18206,7 @@
         "ade20k_name": "runway",
         "ade20k_names": "runway",
         "freebase_mid": "/m/015zzv",
-        "parent_name": "_tmp_paved_surface",
+        "parent_name": "horizontal_surface",
         "parents_pwn30": [
             "n03900509"
         ],
@@ -18223,7 +18223,7 @@
     "sailboat": {
         "freebase_mid": "/m/0hsrw",
         "obj365_boxable_name": "Sailboat",
-        "parent_name": "_tmp_sailing_ship",
+        "parent_name": "watercraft",
         "parents_pwn30": [
             "n04128837"
         ],
@@ -18241,7 +18241,7 @@
         "freebase_mid": "/m/0grw1",
         "oid_boxable_leaf": "/m/0grw1",
         "oid_name": "Salad",
-        "parent_name": "_tmp_dish",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -18324,7 +18324,7 @@
         "freebase_mid": "/m/0l515",
         "obj365_boxable_name": "Sandwich",
         "oid_name": "Sandwich",
-        "parent_name": "_tmp_snack_food",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07712382"
         ],
@@ -18359,7 +18359,7 @@
     },
     "sausage": {
         "obj365_boxable_name": "Sausage",
-        "parent_name": "_tmp_meat",
+        "parent_name": "food",
         "parents_pwn30": [
             "n07649854"
         ],
@@ -18395,7 +18395,7 @@
         "freebase_mid": "/m/03txqz",
         "obj365_boxable_name": "Scale",
         "oid_name": "Scale",
-        "parent_name": "_tmp_measuring_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03733925"
         ],
@@ -18410,7 +18410,7 @@
     },
     "scallop": {
         "obj365_boxable_name": "Scallop",
-        "parent_name": "_tmp_bivalve",
+        "parent_name": "shellfish",
         "parents_pwn30": [
             "n01955933"
         ],
@@ -18429,7 +18429,7 @@
         "oid_boxable_leaf": "/m/02h19r",
         "oid_inst_leaf": "/m/02h19r",
         "oid_name": "Scarf",
-        "parent_name": "_tmp_garment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03419014"
         ],
@@ -18452,7 +18452,7 @@
         "oid_boxable_leaf": "/m/01lsmm",
         "oid_inst_leaf": "/m/01lsmm",
         "oid_name": "Scissors",
-        "parent_name": "_tmp_edge_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03265032",
             "n03082127"
@@ -18469,7 +18469,7 @@
     "scooter": {
         "freebase_mid": "/m/0dmq2",
         "obj365_boxable_name": "Scooter",
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211"
         ],
@@ -18502,7 +18502,7 @@
     "scorpion": {
         "freebase_mid": "/m/0755b",
         "oid_name": "Scorpion",
-        "parent_name": "_tmp_arachnid",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01769347"
         ],
@@ -18538,7 +18538,7 @@
         "oid_boxable_leaf": "/m/01bms0",
         "oid_inst_leaf": "/m/01bms0",
         "oid_name": "Screwdriver",
-        "parent_name": "_tmp_hand_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03489162"
         ],
@@ -18597,7 +18597,7 @@
         "oid_boxable_leaf": "/m/0gd36",
         "oid_inst_leaf": "/m/0gd36",
         "oid_name": "Sea lion",
-        "parent_name": "_tmp_eared_seal",
+        "parent_name": "seal",
         "parents_pwn30": [
             "n02076779"
         ],
@@ -18648,7 +18648,7 @@
         "freebase_mid": "/m/0nybt",
         "oid_boxable_leaf": "/m/0nybt",
         "oid_name": "Seahorse",
-        "parent_name": "_tmp_pipefish",
+        "parent_name": "fish",
         "parents_pwn30": [
             "n01455778"
         ],
@@ -18683,7 +18683,7 @@
         "oid_boxable_leaf": "/m/0dkzw",
         "oid_inst_leaf": "/m/0dkzw",
         "oid_name": "Seat belt",
-        "parent_name": "_tmp_life_belt",
+        "parent_name": "belt",
         "parents_pwn30": [
             "n04125853"
         ],
@@ -18719,7 +18719,7 @@
         "oid_boxable_leaf": "/m/076bq",
         "oid_inst_leaf": "/m/076bq",
         "oid_name": "Segway",
-        "parent_name": "_tmp_electrical_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03269401"
         ],
@@ -18739,7 +18739,7 @@
         "freebase_mid": "/m/0h8n27j",
         "oid_boxable_leaf": "/m/0h8n27j",
         "oid_name": "Serving tray",
-        "parent_name": "_tmp_receptacle",
+        "parent_name": "container",
         "parents_pwn30": [
             "n04060904"
         ],
@@ -18878,7 +18878,7 @@
         "oid_boxable_leaf": "/m/01n4qj",
         "oid_inst_leaf": "/m/01n4qj",
         "oid_name": "Shirt",
-        "parent_name": "_tmp_garment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03419014"
         ],
@@ -18945,7 +18945,7 @@
     },
     "shovel": {
         "obj365_boxable_name": "Shovel",
-        "parent_name": "_tmp_hand_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03489162"
         ],
@@ -19001,7 +19001,7 @@
         "obj365_boxable_name": "Shrimp",
         "oid_boxable_leaf": "/m/0ll1f78",
         "oid_name": "Shrimp",
-        "parent_name": "_tmp_decapod",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01976146"
         ],
@@ -19043,7 +19043,7 @@
         "mvd_id": 15,
         "mvd_name": "construction--flat--sidewalk",
         "mvd_pano_id": 15,
-        "parent_name": "_tmp_paved_surface",
+        "parent_name": "horizontal_surface",
         "parents_pwn30": [
             "n03900509"
         ],
@@ -19119,7 +19119,7 @@
         "oid_boxable_leaf": "/m/06_fw",
         "oid_inst_leaf": "/m/06_fw",
         "oid_name": "Skateboard",
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211",
             "n02856463"
@@ -19175,7 +19175,7 @@
     "skirt": {
         "freebase_mid": "/m/02wv6h6",
         "oid_name": "Skirt",
-        "parent_name": "_tmp_garment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03419014"
         ],
@@ -19211,7 +19211,7 @@
     "skunk": {
         "freebase_mid": "/m/0km7z",
         "oid_name": "Skunk",
-        "parent_name": "_tmp_mustelid",
+        "parent_name": "carnivore",
         "parents_pwn30": [
             "n02441326"
         ],
@@ -19318,7 +19318,7 @@
         "oid_boxable_leaf": "/m/02tsc9",
         "oid_inst_leaf": "/m/02tsc9",
         "oid_name": "Slow cooker",
-        "parent_name": "_tmp_cooker",
+        "parent_name": "kitchen_utensil",
         "parents_pwn30": [
             "n03101156"
         ],
@@ -19351,7 +19351,7 @@
         "freebase_mid": "/m/0f9_l",
         "oid_boxable_leaf": "/m/0f9_l",
         "oid_name": "Snail",
-        "parent_name": "_tmp_univalve",
+        "parent_name": "shellfish",
         "parents_pwn30": [
             "n01942177"
         ],
@@ -19370,7 +19370,7 @@
         "oid_boxable_leaf": "/m/078jl",
         "oid_inst_leaf": "/m/078jl",
         "oid_name": "Snake",
-        "parent_name": "_tmp_hand_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03489162",
             "n04248010"
@@ -19388,7 +19388,7 @@
     "sneakers": {
         "freebase_mid": "/m/027k4k",
         "obj365_boxable_name": "Sneakers",
-        "parent_name": "_tmp_shoe",
+        "parent_name": "footwear",
         "parents_pwn30": [
             "n04199027"
         ],
@@ -19467,7 +19467,7 @@
         "oid_boxable_leaf": "/m/01x3jk",
         "oid_inst_leaf": "/m/01x3jk",
         "oid_name": "Snowmobile",
-        "parent_name": "_tmp_tracked_vehicle",
+        "parent_name": "train",
         "parents_pwn30": [
             "n04464852"
         ],
@@ -19484,7 +19484,7 @@
         "freebase_mid": "/m/04vv5k",
         "oid_boxable_leaf": "/m/04vv5k",
         "oid_name": "Snowplow",
-        "parent_name": "_tmp_motor_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03791235"
         ],
@@ -19500,7 +19500,7 @@
     "soap_dispenser": {
         "freebase_mid": "/m/0c3mkw",
         "oid_name": "Soap dispenser",
-        "parent_name": "_tmp_dispenser",
+        "parent_name": "container",
         "parents_pwn30": [
             "n03210683"
         ],
@@ -19534,7 +19534,7 @@
         "oid_boxable_leaf": "/m/01nq26",
         "oid_inst_leaf": "/m/01nq26",
         "oid_name": "Sock",
-        "parent_name": "_tmp_hose",
+        "parent_name": "footwear",
         "parents_pwn30": [
             "n03540267"
         ],
@@ -19552,7 +19552,7 @@
         "oid_boxable_leaf": "/m/03m3pdh",
         "oid_inst_leaf": "/m/03m3pdh",
         "oid_name": "Sofa bed",
-        "parent_name": "_tmp_sofa",
+        "parent_name": "furniture",
         "parents_pwn30": [
             "n04256520"
         ],
@@ -19608,7 +19608,7 @@
         "oid_boxable_leaf": "/m/0h23m",
         "oid_inst_leaf": "/m/0h23m",
         "oid_name": "Sparrow",
-        "parent_name": "_tmp_accentor",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01527194"
         ],
@@ -19626,7 +19626,7 @@
         "oid_boxable_leaf": "/m/02d1br",
         "oid_inst_leaf": "/m/02d1br",
         "oid_name": "Spatula",
-        "parent_name": "_tmp_hand_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03489162"
         ],
@@ -19664,7 +19664,7 @@
         "freebase_mid": "/m/09kmb",
         "oid_boxable_leaf": "/m/09kmb",
         "oid_name": "Spider",
-        "parent_name": "_tmp_arachnid",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01769347"
         ],
@@ -19755,7 +19755,7 @@
     "spring_rolls": {
         "freebase_mid": "/m/04fzqn3",
         "obj365_boxable_name": "Spring Rolls",
-        "parent_name": "_tmp_dish",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -19788,7 +19788,7 @@
     "squid": {
         "freebase_mid": "/m/09gys",
         "oid_name": "Squid",
-        "parent_name": "_tmp_decapod",
+        "parent_name": "invertebrate",
         "parents_pwn30": [
             "n01971094"
         ],
@@ -19806,7 +19806,7 @@
         "oid_boxable_leaf": "/m/071qp",
         "oid_inst_leaf": "/m/071qp",
         "oid_name": "Squirrel",
-        "parent_name": "_tmp_rodent",
+        "parent_name": "mammal",
         "parents_pwn30": [
             "n02329401"
         ],
@@ -19897,7 +19897,7 @@
         "oid_boxable_leaf": "/m/01h8tj",
         "oid_inst_leaf": "/m/01h8tj",
         "oid_name": "Starfish",
-        "parent_name": "_tmp_echinoderm",
+        "parent_name": "marine_invertebrates",
         "parents_pwn30": [
             "n02316707"
         ],
@@ -19961,7 +19961,7 @@
     "stethoscope": {
         "freebase_mid": "/m/073g6",
         "oid_name": "Stethoscope",
-        "parent_name": "_tmp_medical_instrument",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03739693"
         ],
@@ -19998,7 +19998,7 @@
         "obj365_boxable_name": "Stool",
         "oid_boxable_leaf": "/m/0fqt361",
         "oid_name": "Stool",
-        "parent_name": "_tmp_seat",
+        "parent_name": "furniture",
         "parents_pwn30": [
             "n04161981"
         ],
@@ -20053,7 +20053,7 @@
         "oid_boxable_leaf": "/m/07fbm7",
         "oid_inst_leaf": "/m/07fbm7",
         "oid_name": "Strawberry",
-        "parent_name": "_tmp_berry",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07742704"
         ],
@@ -20136,7 +20136,7 @@
     "stroller": {
         "freebase_mid": "/m/03ylns",
         "obj365_boxable_name": "Stroller",
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211"
         ],
@@ -20166,7 +20166,7 @@
         "context": "submersible",
         "freebase_mid": "/m/074d1",
         "oid_name": "Submarine",
-        "parent_name": "_tmp_submersible",
+        "parent_name": "ship",
         "parents_pwn30": [
             "n04348184"
         ],
@@ -20204,7 +20204,7 @@
         "oid_boxable_leaf": "/m/01xyhv",
         "oid_inst_leaf": "/m/01xyhv",
         "oid_name": "Suit",
-        "parent_name": "_tmp_garment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03419014"
         ],
@@ -20342,7 +20342,7 @@
         "obj365_boxable_name": "Sushi",
         "oid_boxable_leaf": "/m/07030",
         "oid_name": "Sushi",
-        "parent_name": "_tmp_dish",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -20398,7 +20398,7 @@
         "oid_boxable_leaf": "/m/04tn4x",
         "oid_inst_leaf": "/m/04tn4x",
         "oid_name": "Swim cap",
-        "parent_name": "_tmp_cap",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n02954340"
         ],
@@ -20437,7 +20437,7 @@
         "oid_boxable_leaf": "/m/01gkx_",
         "oid_inst_leaf": "/m/01gkx_",
         "oid_name": "Swimwear",
-        "parent_name": "_tmp_garment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03419014"
         ],
@@ -20507,7 +20507,7 @@
     "syringe": {
         "freebase_mid": "/m/012ysf",
         "oid_name": "Syringe",
-        "parent_name": "_tmp_medical_instrument",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03739693"
         ],
@@ -20576,7 +20576,7 @@
         "oid_boxable_leaf": "/m/0bh9flk",
         "oid_inst_leaf": "/m/0bh9flk",
         "oid_name": "Tablet computer",
-        "parent_name": "_tmp_portable_computer",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03985232"
         ],
@@ -20611,7 +20611,7 @@
         "freebase_mid": "/m/07crc",
         "oid_boxable_leaf": "/m/07crc",
         "oid_name": "Taco",
-        "parent_name": "_tmp_dish",
+        "parent_name": "tableware",
         "parents_pwn30": [
             "n07557434"
         ],
@@ -20634,7 +20634,7 @@
         "oid_boxable_leaf": "/m/07cmd",
         "oid_inst_leaf": "/m/07cmd",
         "oid_name": "Tank",
-        "parent_name": "_tmp_tracked_vehicle",
+        "parent_name": "train",
         "parents_pwn30": [
             "n04464852",
             "n02740533",
@@ -20730,7 +20730,7 @@
         "oid_boxable_leaf": "/m/07clx",
         "oid_inst_leaf": "/m/07clx",
         "oid_name": "Tea",
-        "parent_name": "_tmp_bush",
+        "parent_name": "plant",
         "parents_pwn30": [
             "n13112664"
         ],
@@ -20814,7 +20814,7 @@
         "freebase_mid": "/m/0bx_y3w",
         "oid_boxable_leaf": "/m/07c52",
         "oid_name": "Television",
-        "parent_name": "_tmp_receiver",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n04060647"
         ],
@@ -20898,7 +20898,7 @@
         "freebase_mid": "/m/01krhy",
         "oid_boxable_leaf": "/m/01krhy",
         "oid_name": "Tiara",
-        "parent_name": "_tmp_jeweled_headdress",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03597317"
         ],
@@ -20915,7 +20915,7 @@
         "freebase_mid": "/m/0175cv",
         "oid_boxable_leaf": "/m/0175cv",
         "oid_name": "Tick",
-        "parent_name": "_tmp_acarine",
+        "parent_name": "spider",
         "parents_pwn30": [
             "n01776192"
         ],
@@ -20938,7 +20938,7 @@
         "oid_boxable_leaf": "/m/01rkbr",
         "oid_inst_leaf": "/m/01rkbr",
         "oid_name": "Tie",
-        "parent_name": "_tmp_neckwear",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03816005"
         ],
@@ -21122,7 +21122,7 @@
         "oid_boxable_leaf": "/m/07j87",
         "oid_inst_leaf": "/m/07j87",
         "oid_name": "Tomato",
-        "parent_name": "_tmp_solanaceous_vegetable",
+        "parent_name": "vegetable",
         "parents_pwn30": [
             "n07710007"
         ],
@@ -21137,7 +21137,7 @@
     },
     "tongs": {
         "obj365_boxable_name": "Tong",
-        "parent_name": "_tmp_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03183080"
         ],
@@ -21416,7 +21416,7 @@
         "mvd_inst_id": 60,
         "mvd_name": "object--vehicle--trailer",
         "mvd_pano_id": 60,
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211"
         ],
@@ -21511,7 +21511,7 @@
         "obj365_boxable_name": "Treadmill",
         "oid_boxable_leaf": "/m/030610",
         "oid_name": "Treadmill",
-        "parent_name": "_tmp_exercise_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03302790"
         ],
@@ -21532,7 +21532,7 @@
         "coco_pano_name": "tree-merged",
         "freebase_mid": "/m/07j7r",
         "oid_name": "Tree",
-        "parent_name": "_tmp_woody_plant",
+        "parent_name": "plant",
         "parents_pwn30": [
             "n13103136"
         ],
@@ -21568,7 +21568,7 @@
     "tricycle": {
         "freebase_mid": "/m/01786t",
         "obj365_boxable_name": "Tricycle",
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211"
         ],
@@ -21637,7 +21637,7 @@
     "trousers": {
         "freebase_mid": "/m/07mhn",
         "oid_name": "Trousers",
-        "parent_name": "_tmp_garment",
+        "parent_name": "clothing",
         "parents_pwn30": [
             "n03419014"
         ],
@@ -21675,7 +21675,7 @@
         "oid_boxable_leaf": "/m/07r04",
         "oid_inst_leaf": "/m/07r04",
         "oid_name": "Truck",
-        "parent_name": "_tmp_motor_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03791235"
         ],
@@ -21777,7 +21777,7 @@
         "oid_boxable_leaf": "/m/0jly1",
         "oid_inst_leaf": "/m/0jly1",
         "oid_name": "Turkey",
-        "parent_name": "_tmp_fowl",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01789740"
         ],
@@ -21793,7 +21793,7 @@
     "turtle": {
         "freebase_mid": "/m/09dzg",
         "oid_name": "Turtle",
-        "parent_name": "_tmp_chelonian",
+        "parent_name": "reptile",
         "parents_pwn30": [
             "n01662622"
         ],
@@ -21844,7 +21844,7 @@
     "unicycle": {
         "freebase_mid": "/m/0f6nr",
         "oid_name": "Unicycle",
-        "parent_name": "_tmp_wheeled_vehicle",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n04576211"
         ],
@@ -21957,7 +21957,7 @@
         "oid_boxable_leaf": "/m/02s195",
         "oid_inst_leaf": "/m/02s195",
         "oid_name": "Vase",
-        "parent_name": "_tmp_jar",
+        "parent_name": "container",
         "parents_pwn30": [
             "n03593526"
         ],
@@ -22042,7 +22042,7 @@
         "ade20k_name": "crt screen",
         "ade20k_names": "crt;screen",
         "obj365_boxable_name": "Moniter/TV",
-        "parent_name": "_tmp_electronic_device",
+        "parent_name": "dynamic",
         "parents_pwn30": [
             "n03277771"
         ],
@@ -22061,7 +22061,7 @@
         "obj365_boxable_name": "Violin",
         "oid_boxable_leaf": "/m/07y_7",
         "oid_name": "Violin",
-        "parent_name": "_tmp_string",
+        "parent_name": "musical_instrument",
         "parents_pwn30": [
             "n02880546"
         ],
@@ -22164,7 +22164,7 @@
         "mvd_id": 6,
         "mvd_name": "construction--barrier--wall",
         "mvd_pano_id": 6,
-        "parent_name": "_tmp_embankment",
+        "parent_name": "hill",
         "parents_pwn30": [
             "n03282060"
         ],
@@ -22296,7 +22296,7 @@
         "oid_boxable_leaf": "/m/0gjkl",
         "oid_inst_leaf": "/m/0gjkl",
         "oid_name": "Watch",
-        "parent_name": "_tmp_horologe",
+        "parent_name": "clock",
         "parents_pwn30": [
             "n04437953"
         ],
@@ -22338,7 +22338,7 @@
     "watercraft": {
         "freebase_mid": "/m/01rzcn",
         "oid_name": "Watercraft",
-        "parent_name": "_tmp_craft",
+        "parent_name": "vehicle",
         "parents_pwn30": [
             "n03125870"
         ],
@@ -22622,7 +22622,7 @@
         "oid_boxable_leaf": "/m/02cvgx",
         "oid_inst_leaf": "/m/02cvgx",
         "oid_name": "Winter melon",
-        "parent_name": "_tmp_muskmelon",
+        "parent_name": "fruit",
         "parents_pwn30": [
             "n07755707"
         ],
@@ -22658,7 +22658,7 @@
         "oid_boxable_leaf": "/m/03bt1vf",
         "oid_inst_leaf": "/m/03bt1vf",
         "oid_name": "Woman",
-        "parent_name": "_tmp_adult",
+        "parent_name": "person",
         "parents_pwn30": [
             "n09619168",
             "n09605289"
@@ -22721,7 +22721,7 @@
         "oid_boxable_leaf": "/m/01dy8n",
         "oid_inst_leaf": "/m/01dy8n",
         "oid_name": "Woodpecker",
-        "parent_name": "_tmp_piciform_bird",
+        "parent_name": "bird",
         "parents_pwn30": [
             "n01838038"
         ],
@@ -22756,7 +22756,7 @@
         "oid_boxable_leaf": "/m/01j5ks",
         "oid_inst_leaf": "/m/01j5ks",
         "oid_name": "Wrench",
-        "parent_name": "_tmp_hand_tool",
+        "parent_name": "tool",
         "parents_pwn30": [
             "n03489162"
         ],
@@ -22814,7 +22814,7 @@
         "oid_boxable_leaf": "/m/027pcv",
         "oid_inst_leaf": "/m/027pcv",
         "oid_name": "Zucchini",
-        "parent_name": "_tmp_summer_squash",
+        "parent_name": "squash",
         "parents_pwn30": [
             "n07715721"
         ],

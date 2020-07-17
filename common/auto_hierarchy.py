@@ -108,7 +108,14 @@ def main(argv=sys.argv[1:]):
             print("Warning: Found no parent for "+key)
             cnt_no_parent += 1
         elif not is_tmp_key:
-            possible_keys += get_possible_keys(joined_label_space, key)
+            pkeys = get_possible_keys(joined_label_space, key)
+            if vals['parent_name'].find("_tmp") >= 0:
+                for p in pkeys[1:]:
+                    if p.find("_tmp") < 0:
+                        vals['parent_name'] = p
+                        break
+                
+            possible_keys += pkeys
      
     possible_keys = set(possible_keys)   
     cleanup_keys = [key for key in joined_label_space.keys() if key.find('_tmp_') >= 0 and not key in possible_keys and not "parent_name" in joined_label_space[key]]
