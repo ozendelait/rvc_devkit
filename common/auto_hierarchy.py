@@ -83,8 +83,10 @@ def main(argv=sys.argv[1:]):
 
     #automatically adds missing parent candidates 
     remove_keys = []
+    cnt_no_parent = 0
     for key,vals in joined_label_space.items():
-        if key.find(' ') > 0 or key.find("'") > 0 or (key.find('_tmp_') >= 0 and key.replace('_tmp_','') in joined_label_space):
+        is_tmp_key = key.find('_tmp_') >= 0
+        if key.find(' ') > 0 or key.find("'") > 0 or (is_tmp_key and key.replace('_tmp_','') in joined_label_space):
             remove_keys.append(key)
             continue
         if 'parent_name' in vals and not vals['parent_name'] in joined_label_space:
@@ -92,6 +94,8 @@ def main(argv=sys.argv[1:]):
         if 'parent_name' in vals and vals['parent_name'].find('_tmp_') >= 0 and vals['parent_name'].replace('_tmp_','') in joined_label_space:
             vals['parent_name'] = vals['parent_name'].replace('_tmp_','')#fix connection            
         get_parents(vals)
+        if not is_tmp_key and not 'parent_name' in vals:
+            cnt_no_parent += 1
     
     for r in remove_keys:
         joined_label_space.pop(r)
@@ -116,7 +120,8 @@ def main(argv=sys.argv[1:]):
             vals['parent_name'] = key_parent
         elif len(found_link0) > 1:
             print("Warning: Multiple parents found for "+key+':', found_link0)
-        else:
+        if False:
+        #else:
             #add temporary jump nodes
             for p in vals.get('parents_qid',[]):
                 addtmp = wikidata_from_qid(p)
