@@ -32,7 +32,7 @@ fix_unified_labels = {'flying_disc':'frisbee', 'doughnut':'donut', 'keyboard': '
                  'french' : 'french_horn', 'fan':'electric_fan', 'extractor' : 'exhaust_hood', 'extention_cord' : 'extension_cord',
                  'curling' : 'curling_stone', 'converter' : 'power_brick', 'computer_box' : 'computer_housing',
                  'table_teniis_paddle' : 'table_teniis_racket', 'table_tennis' : 'table_tennis_ball', 'chips' : 'potato_chip',
-                 'earphones':'in-ear-earphones', 'head_phone' : 'headphone', 'cd' : 'compact_disc'
+                 'earphones':'in-ear-earphones', 'head_phone' : 'headphone', 'cd' : 'compact_disc', 'music_instrument': 'musical_instrument'
                 }
 
 #faulty qid (corresp./data must be fixed on wikidata itself): "balance_beam"
@@ -86,8 +86,12 @@ def get_wordnet_gloss(pwn30, retries = 0, wd_id=None):
         else:
             time.sleep(retry_time_sleep_s)#wait 1s to reduce number of 429 errors
             return get_wordnet_gloss(pwn30, retries - 1)
-        
-    dict_ret =  {'wordnet_pwn30': ret_pwn30, 'wordnet_gloss': res0[0]['definition']}      
+    
+    names = [l["lemma"] for l in res0[0]["lemmas"] if l["language"] == "en"]
+    names = list(sorted(names, key=len)) # find shortest lemma
+    dict_ret =  {'wordnet_pwn30': ret_pwn30, 'wordnet_gloss': res0[0]['definition']} 
+    if len(names) > 0:     
+        dict_ret['wordnet_name'] = names[0]
     parents_pwn30 = []
     if wd_id is None:
         #find parent ("hypernym")
