@@ -70,6 +70,15 @@ def add_parent_as_tmp(joined_label_space, key, addtmp):
         return addtmp, keyparent
     return {}, None
 
+def get_possible_keys(joined_label_space, start_key, max_depth=16):
+    visited_keys = [start_key]
+    for _ in range(max_depth):
+        next_key = joined_label_space[visited_keys[-1]].get("parent_name","")
+        if next_key == "" or next_key in visited_keys:
+            break
+        visited_keys.append(next_key)
+    return visited_keys
+    
 def main(argv=sys.argv[1:]):
     global link_pwn30, link_qid, link_freebase
     parser = argparse.ArgumentParser()
@@ -83,6 +92,7 @@ def main(argv=sys.argv[1:]):
 
     #automatically adds missing parent candidates 
     remove_keys = []
+    possible_keys = []
     cnt_no_parent = 0
     for key,vals in joined_label_space.items():
         is_tmp_key = key.find('_tmp_') >= 0
@@ -94,9 +104,15 @@ def main(argv=sys.argv[1:]):
         if 'parent_name' in vals and vals['parent_name'].find('_tmp_') >= 0 and vals['parent_name'].replace('_tmp_','') in joined_label_space:
             vals['parent_name'] = vals['parent_name'].replace('_tmp_','')#fix connection            
         get_parents(vals)
-        if not is_tmp_key and not 'parent_name' in vals:
+        if not 'parent_name' in vals:
+            print("Warning: Found no parent for "+key)
             cnt_no_parent += 1
-    
+        elif not is_tmp_key:
+            possible_keys += get_possible_keys(joined_label_space, key)
+     
+    possible_keys = set(possible_keys)   
+    cleanup_keys = [key for key in joined_label_space.keys() if key.find('_tmp_') >= 0 and not key in possible_keys and not "parent_name" in joined_label_space[key]]
+    remove_keys = list(set(remove_keys+cleanup_keys))
     for r in remove_keys:
         joined_label_space.pop(r)
     
@@ -120,8 +136,8 @@ def main(argv=sys.argv[1:]):
             vals['parent_name'] = key_parent
         elif len(found_link0) > 1:
             print("Warning: Multiple parents found for "+key+':', found_link0)
-        if False:
-        #else:
+        #if False:
+        elif key.find("_tmp") < 0:
             #add temporary jump nodes
             for p in vals.get('parents_qid',[]):
                 addtmp = wikidata_from_qid(p)
