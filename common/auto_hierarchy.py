@@ -119,6 +119,8 @@ def main(argv=sys.argv[1:]):
             if  vals['parent_name'].find("_tmp") >= 0:
                 print("Warning: temporary entry as parent: ",pkeys)
                 cnt_no_parent += 1
+            if pkeys[-1] != "unlabeled": #all paths should lead to unlabeled
+                print("Warning: incomplete entry: ",pkeys)
             possible_keys += pkeys
     print("Open entries: ", cnt_no_parent)
     possible_keys = set(possible_keys)   
