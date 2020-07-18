@@ -6,6 +6,8 @@ The Object detection challenge consists of four datasets:
 - [Objects365](objects365.org)
 - [Mapillary Vistas](https://www.mapillary.com/dataset/vistas) (MVD)
 
+** Update 2020-07-17: Megvii had to remove Obj365 from the RVC due to internal policy changes; we will rank the obj. det. challenge using the three benchmarks COCO, OID, and MVD **
+
 ## Requirements ##
 Install additional requirements with:
     ``` pip install -r requirements.txt ```
