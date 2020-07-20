@@ -45,4 +45,13 @@ These files can directly be used in your object detector training framework.
 
 ## Result Submission ##
 
-This repo will be updated as soon as the submission support is ready. See robustvision.net for news.
+You have to run the evaluation for the test set of each dataset individually as specified on http://www.robustvision.net/submit.php .
+For predictions in the coco format we provide a script to map the predicted categories back from the joint embedding space. Use
+
+ ```bash remap_results.sh -p /path/to/predictions -d DATASET ```
+ 
+ Replace DATASET with the corresponding datasets abbreviation:
+ - `mvd` for mapillary vistas
+ - `coco` for COCO 
+ - `oid` for OpenImages. 
+ The converted predictions will be saved in the same location as the predictions but the filename fill be changed to FILENAME_remapped_results.json.

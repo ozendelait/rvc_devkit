@@ -97,7 +97,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/mvd/annotations/boxes_val_2018.json" ]; then
 fi
 
 if [ ! -f "$RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json" ]; then
-    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR//mvd/annotations/boxes_val_2018.json \
+    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/mvd/annotations/boxes_val_2018.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row mvd_boxable_name \
                             --image_root_rel $RVC_DATA_SRC_DIR/mvd/validation/images \
