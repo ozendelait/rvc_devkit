@@ -32,7 +32,7 @@ fix_unified_labels = {'flying_disc':'frisbee', 'doughnut':'donut', 'keyboard': '
                  'french' : 'french_horn', 'fan':'electric_fan', 'extractor' : 'exhaust_hood', 'extention_cord' : 'extension_cord',
                  'curling' : 'curling_stone', 'converter' : 'power_brick', 'computer_box' : 'computer_housing',
                  'table_teniis_paddle' : 'table_teniis_racket', 'table_tennis' : 'table_tennis_ball', 'chips' : 'potato_chip',
-                 'earphones':'in-ear-earphones', 'head_phone' : 'headphone', 'cd' : 'compact_disc'
+                 'earphones':'in-ear-earphones', 'head_phone' : 'headphone', 'cd' : 'compact_disc', 'music_instrument': 'musical_instrument'
                 }
 
 #faulty qid (corresp./data must be fixed on wikidata itself): "balance_beam"
@@ -62,24 +62,52 @@ def unify_namings(name0):
     unif_name = name0.replace(' ','_').lower()
     return fix_unified_labels.get(unif_name,unif_name)
 
-def get_wordnet_gloss(pwn30, retries = 0):
+def get_wordnet_gloss(pwn30, retries = 0, wd_id=None):
     res0, res0_r = None, None
     try:
+        if not wd_id is None: #use specific wordnet id instead of pwn30
+            request_url = "http://wordnet-rdf.princeton.edu/json/id/%s"%(wd_id)
+        else:
+            request_url = "http://wordnet-rdf.princeton.edu/json/pwn30/%s"%(pwn30[1:]+'-'+pwn30[0])
         res0_r = requests.get(
-        "http://wordnet-rdf.princeton.edu/json/pwn30/%s"%(pwn30[1:]+'-'+pwn30[0]), params={"format": "json"})
+        request_url , params={"format": "json"})
         if res0_r.status_code == 200:
             res0 = res0_r.json()
     except:
         print("Unexpected error:", sys.exc_info()[0], res0_r)
         res0 = None
-    if res0 == None or len(res0) < 1 or res0[0]['old_keys']['pwn30'][0][-1]+res0[0]['old_keys']['pwn30'][0][:-2] != pwn30:
+    ret_pwn30 = None
+    if not res0 is None and len(res0) > 0:
+        ret_pwn30 = res0[0]['old_keys']['pwn30'][0][-1]+res0[0]['old_keys']['pwn30'][0][:-2]
+    if ret_pwn30 is None or (not pwn30 is None and ret_pwn30 != pwn30):
         if retries <= 0:
             print("Warning: bad request:", pwn30, res0_r)
             return {}
         else:
             time.sleep(retry_time_sleep_s)#wait 1s to reduce number of 429 errors
             return get_wordnet_gloss(pwn30, retries - 1)
-    return {'wordnet_pwn30': pwn30, 'wordnet_gloss': res0[0]['definition']}
+    
+    names = [l["lemma"] for l in res0[0]["lemmas"] if l["language"] == "en"]
+    names = list(sorted(names, key=len)) # find shortest lemma
+    dict_ret =  {'wordnet_pwn30': ret_pwn30, 'wordnet_gloss': res0[0]['definition']} 
+    if len(names) > 0:     
+        dict_ret['wordnet_name'] = names[0]
+    parents_pwn30 = []
+    if wd_id is None:
+        #find parent ("hypernym")
+        for r in res0[0].get("relations",[]):
+            if r["rel_type"] == "hypernym":
+                for _ in range(max_retries_wikidata):
+                    get_pwn30 = get_wordnet_gloss(None, retries = 0, wd_id=r["target"])
+                    if 'wordnet_pwn30' in get_pwn30 and not get_pwn30['wordnet_pwn30'] is None:
+                        parents_pwn30.append(get_pwn30['wordnet_pwn30'])
+                        break
+                
+        if len(parents_pwn30) > 0:
+            dict_ret['parents_pwn30'] = list(set(parents_pwn30))
+
+    return dict_ret
+
 
 def get_wordnet(str0, context = None, retries = 0):
     res0 = None
@@ -130,8 +158,13 @@ def get_wordnet(str0, context = None, retries = 0):
             best_r = r
             continue
 
+    names = [l["lemma"] for l in best_r["lemmas"] if l["language"] == "en"]
+    names = list(sorted(names, key=len)) # find shortest lemma
+
     if not best_r is None:
         ret_b = {'wordnet_pwn30': 'n'+best_r['old_keys']['pwn30'][0][:-2], 'wordnet_gloss': best_r['definition']}
+        if len(names) > 0:
+            ret_b["wordnet_name"] = names[0]
         return ret_b
     return {}
 
@@ -200,6 +233,14 @@ def get_wikidata(str0, context = None, retries = 0):
             ret_b['wordnet_pwn30'] = wn3_conv[-1]+wn3_conv[:-2]
         if 'FREEN' in best_b:
             ret_b['freebase_mid'] = best_b['FREEN']['value']
+        if 'INSTANCEOF' in best_b:
+            ret_b['parents_qid'] = [best_b['INSTANCEOF']['value'].split('/')[-1]]
+        if 'SUBCLASS' in best_b:
+            ret_b.setdefault('parents_qid',[]).append(best_b['SUBCLASS']['value'].split('/')[-1])
+        if 'PARTOF' in best_b:
+            ret_b.setdefault('parents_qid',[]).append(best_b['PARTOF']['value'].split('/')[-1])
+        if 'parents_qid' in ret_b:
+            ret_b['parents_qid'] = list(set(ret_b['parents_qid']))
         return ret_b
     return {}
 
@@ -215,19 +256,25 @@ def wikidata_from_freebaseid(freebaseid):
 
 def wikidata_from_qid(qid):
     sparql_query0 = """
-    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
+    SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN ?INSTANCEOF ?SUBCLASS ?PARTOF WHERE{  
       ?article schema:about ?item .
       OPTIONAL { ?item  wdt:P2888  ?WN3 }
       OPTIONAL { ?item  wdt:P646  ?FREEN }
+      OPTIONAL { ?item  wdt:P31  ?INSTANCEOF }
+      OPTIONAL { ?item  wdt:P279  ?SUBCLASS }
+      OPTIONAL { ?item  wdt:P361  ?PARTOF }
       BIND(wd:%s AS ?item).
       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
     }
     """
     sparql_query1 = """
-        SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN WHERE{  
+        SELECT distinct ?item ?itemLabel ?itemDescription ?WN3 ?FREEN ?INSTANCEOF ?SUBCLASS ?PARTOF WHERE{  
           ?item ?label "%s"@en
           OPTIONAL { ?item  wdt:P2888  ?WN3 }
-          OPTIONAL { ?item  wdt:P646  ?FREEN }   
+          OPTIONAL { ?item  wdt:P646  ?FREEN } 
+          OPTIONAL { ?item  wdt:P31  ?INSTANCEOF }
+          OPTIONAL { ?item  wdt:P279  ?SUBCLASS }
+          OPTIONAL { ?item  wdt:P361  ?PARTOF }  
         }
         """
     d0 = get_wikidata(sparql_query0 % qid, retries=max_retries_wikidata)
