@@ -10,9 +10,9 @@ pip install argparse numpy imageio
 
 For the Robust Vision Challenge 2020, we propose three single-image
 depth datasets:
-KITTI - http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction
-MPI Sintel - http://sintel.is.tue.mpg.de/
-rabbitAI - https://rabbitai.de/benchmark/
+- KITTI - http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction
+- MPI Sintel - http://sintel.is.tue.mpg.de/
+- rabbitAI - https://rabbitai.de/benchmark/
 
 For the rabbitAI dataset please register at:
 https://rabbitai.de/benchmark/register/
@@ -30,6 +30,7 @@ The download script will not delete any data, to free space again,
 remove all files you don't need.
 
 Note: The VIPER benchmark does not supply training data but participants still have to submit results for its test set!
+You can add any additional public data source you like as long as you reference it.
 
 ## Short Format and Layout Description
 
@@ -91,10 +92,10 @@ and the focal point by (o_x, o_y).
 ## Submission ##
 Here are the submission websites to upload your predictions:
 
-KITTI      : http://www.cvlibs.net/datasets/kitti/user_submit.php
-MPI Sintel : Online at 1st Aug. latest
-rabbitai   : https://rabbitai.de/benchmark/upload
-VIPER      : https://playing-for-benchmarks.org/submissions/my/
+- KITTI      : http://www.cvlibs.net/datasets/kitti/user_submit.php
+- MPI Sintel : Online at 1st Aug. latest
+- rabbitai   : https://rabbitai.de/benchmark/upload
+- VIPER      : https://playing-for-benchmarks.org/submissions/my/
 
 Please register at each submission website and upload the corresponding test set using the online forms.
 Finally, register your method at the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
