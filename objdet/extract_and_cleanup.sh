@@ -45,15 +45,15 @@ do
 done
 popd
 
-echo "Extracting Obj365"
-pushd ${RVC_EXTR_ROOT_DIR}/objects365
-for onetarfile in *.tar.gz
-do
-  echo "Extracting tar file $onetarfile..."
+#echo "Extracting Obj365"
+#pushd ${RVC_EXTR_ROOT_DIR}/objects365
+#for onetarfile in *.tar.gz
+#do
+#  echo "Extracting tar file $onetarfile..."
   # tar file comes with an objects365 root folder
-  tar xf $onetarfile -C ${RVC_EXTR_ROOT_DIR} && rm $onetarfile
-done
-popd
+#  tar xf $onetarfile -C ${RVC_EXTR_ROOT_DIR} && rm $onetarfile
+#done
+#popd
 
 unzip ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.2.zip -d ${RVC_EXTR_ROOT_DIR}/mvd/
 rm ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.2.zip

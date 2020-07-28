@@ -3,8 +3,9 @@
 The Object detection challenge consists of four datasets:
 - [MS COCO](cocodataset.org/)
 - [OpenImages](https://storage.googleapis.com/openimages/web/index.html) (OID)
-- [Objects365](objects365.org)
 - [Mapillary Vistas](https://www.mapillary.com/dataset/vistas) (MVD)
+
+**Update 2020-07-17: Megvii had to remove Obj365 from the RVC due to internal policy changes (see objects365.org); we will rank the obj. det. challenge using the three benchmarks COCO, OID, and MVD**
 
 ## Requirements ##
 Install additional requirements with:
@@ -45,4 +46,10 @@ These files can directly be used in your object detector training framework.
 
 ## Result Submission ##
 
-This repo will be updated as soon as the submission support is ready. See robustvision.net for news.
+Fill in the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
+
+After that, upload your predictions for the respective test sets of each benchmark:
+
+- COCO : https://competitions.codalab.org/competitions/25334
+- MVD : https://codalab.mapillary.com/competitions/41
+- OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
