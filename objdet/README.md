@@ -57,7 +57,8 @@ For predictions in the coco format we provide a script to map the predicted cate
  - `coco` for COCO 
  - `oid` for OpenImages. 
  The converted predictions will be saved in the same location as the predictions but the filename fill be changed to FILENAME_remapped_results.json.
- After that, upload your predictions for the respective test sets of each benchmark:
+
+After that, upload your predictions for the respective test sets of each benchmark:
 
 - COCO : https://competitions.codalab.org/competitions/25334
 - MVD : https://codalab.mapillary.com/competitions/41
