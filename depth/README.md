@@ -90,12 +90,10 @@ Where focal length in horizontal and vertical axis are given by f_x and f_y,
 and the focal point by (o_x, o_y).
 
 ## Submission ##
-Here are the submission websites to upload your predictions:
+Fill in the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
+After that, upload your predictions for the respective test sets of each benchmark:
 
 - KITTI      : http://www.cvlibs.net/datasets/kitti/user_submit.php
 - MPI Sintel : Online at 1st Aug. latest
 - rabbitai   : https://rabbitai.de/benchmark/upload
 - VIPER      : https://playing-for-benchmarks.org/submissions/my/
-
-Please register at each submission website and upload the corresponding test set using the online forms.
-Finally, register your method at the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
