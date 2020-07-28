@@ -50,6 +50,6 @@ Fill in the "Register Method to RVC" form here: http://www.robustvision.net/subm
 
 After that, upload your predictions for the respective test sets of each benchmark:
 
-COCO : https://competitions.codalab.org/competitions/25334
-MVD : https://codalab.mapillary.com/competitions/41
-OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
+- COCO : https://competitions.codalab.org/competitions/25334
+- MVD : https://codalab.mapillary.com/competitions/41
+- OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
