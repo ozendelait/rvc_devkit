@@ -46,6 +46,7 @@ These files can directly be used in your object detector training framework.
 
 ## Result Submission ##
 
+Fill in the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
 You have to run the evaluation for the test set of each dataset individually as specified on http://www.robustvision.net/submit.php .
 For predictions in the coco format we provide a script to map the predicted categories back from the joint embedding space. Use
 
@@ -56,3 +57,8 @@ For predictions in the coco format we provide a script to map the predicted cate
  - `coco` for COCO 
  - `oid` for OpenImages. 
  The converted predictions will be saved in the same location as the predictions but the filename fill be changed to FILENAME_remapped_results.json.
+ After that, upload your predictions for the respective test sets of each benchmark:
+
+- COCO : https://competitions.codalab.org/competitions/25334
+- MVD : https://codalab.mapillary.com/competitions/41
+- OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
