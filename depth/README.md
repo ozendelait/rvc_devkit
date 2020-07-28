@@ -29,6 +29,8 @@ The process requires roughly 300GB of space!
 The download script will not delete any data, to free space again,
 remove all files you don't need.
 
+Note: The VIPER benchmark does not supply training data but participants still have to submit results for its test set!
+
 ## Short Format and Layout Description
 
 The rabbitAI data set as well as the data created by the download script
@@ -85,3 +87,14 @@ f_x     0   o_x
 
 Where focal length in horizontal and vertical axis are given by f_x and f_y,
 and the focal point by (o_x, o_y).
+
+## Submission ##
+Here are the submission websites to upload your predictions:
+
+KITTI      : http://www.cvlibs.net/datasets/kitti/user_submit.php
+MPI Sintel : Online at 1st Aug. latest
+rabbitai   : https://rabbitai.de/benchmark/upload
+VIPER      : https://playing-for-benchmarks.org/submissions/my/
+
+Please register at each submission website and upload the corresponding test set using the online forms.
+Finally, register your method at the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
