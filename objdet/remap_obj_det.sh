@@ -106,6 +106,12 @@ if [ ! -f "$RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json" ]; then
                             --output $RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json
 fi
 
+if [ ! -f "$RVC_DATA_TRG_DIR/mvd_boxable.rvc_test.json" ]; then
+    python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/create_test_image_info_coco.py --image_root_rel $RVC_DATA_SRC_DIR/mvd/testing/images \
+                            --annotations_val $RVC_DATA_TRG_DIR/mvd_boxable.rvc_val.json \
+                            --output $RVC_DATA_TRG_DIR/mvd_boxable.rvc_test.json
+fi
+
 if [ ! -f "$RVC_DATA_SRC_DIR/mvd/annotations/boxes_train_2018.json" ]; then
     python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/convert_coco_panoptic_bbox.py --input $RVC_DATA_SRC_DIR/mvd/training/panoptic/panoptic_2018.json \
                             --output $RVC_DATA_SRC_DIR/mvd/annotations/boxes_train_2018.json
