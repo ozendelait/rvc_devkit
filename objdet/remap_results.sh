@@ -35,11 +35,11 @@ do
         shift # Remove argument name from processing
         shift # Remove argument value from processing
         ;;
-        -s|--split)
-        SPLIT="$2"
-        shift # Remove argument name from processing
-        shift # Remove argument value from processing
-        ;;
+        #-s|--split)
+        #SPLIT="$2"
+        #shift # Remove argument name from processing
+        #shift # Remove argument value from processing
+        #;;
     esac
 done
 
@@ -53,6 +53,7 @@ if [ $DATASET = "mvd" ]; then
                             --annotations $RVC_DATA_TRG_DIR/mvd/annotations/boxes_val_2018.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row mvd_boxable_name \
+                            --map_to id \
                             --void_id 0 \
                             --remove_void \
                             --reduce_boxable \
@@ -63,6 +64,7 @@ elif [ $DATASET = "coco" ]; then
                             --annotations $RVC_DATA_TRG_DIR/coco/annotations/instances_val2017.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row coco_boxable_name \
+                            --map_to id \
                             --void_id 0 \
                             --remove_void \
                             --reduce_boxable \
@@ -73,6 +75,7 @@ elif [ $DATASET = "oid" ]; then
                             --annotations $RVC_DATA_TRG_DIR/oid/annotations/openimages_challenge_2019_val_bbox.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row oid_boxable_leaf \
+                            --map_to freebase_id \
                             --void_id 0 \
                             --remove_void \
                             --reduce_boxable \
