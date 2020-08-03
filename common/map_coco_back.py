@@ -77,9 +77,13 @@ def main(argv=sys.argv[1:]):
     for p in tqdm(pred, desc='Remapping predictions '):
         if 'category_id' in p:
             p['category_id'] = trg_to_src.get(p['category_id'], args.void_id)
+            p['bbox'] = [round(box, 2) for box in p['bbox']]
+            p['score'] = round(p['score'], 4)
         if 'segments_info' in p:
             for s in p['segments_info']:
                 s["category_id"] = trg_to_src.get(s['category_id'], args.void_id)
+                s['bbox'] = [round(box, 2) for box in s['bbox']]
+                p['score'] = round(p['score'], 4)
         if args.reduce_boxable or args.reduce_pano:
             p.pop('segmentation',None)
         
