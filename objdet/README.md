@@ -15,19 +15,16 @@ Install additional requirements with:
 ## Dataset Download ##
 
 We provide a devkit to download, extract, and convert the challenge datasets into a unified format.
-This is done by first specifying the target root directory for all RVC datasets using an environment variable
 
- ``` export RVC_DATA_DIR=/path/to/rvc_dataroot  ```
+1. Specify the target root directory for all RVC datasets with ``` export RVC_DATA_DIR=/path/to/rvc_dataroot  ```
 
-Now you can execute the download script ``` bash download_obj_det.sh ``` which will download most of the RVC datasets.
-The extracted dataset needs xxxx GB of disk space (COCO: 26GB, OID: 527GB, Objects365: 394GB, MVD: 25GB). Please note that up to 50% more disc space is required during the extraction process.
+2. Get an authentication token for the Kaggle API as described here: https://www.kaggle.com/docs/api. This is required to download the OpenImages test data from kaggle.
 
-You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
-https://www.mapillary.com/dataset/vistas
+3. Execute the download script ``` bash download_obj_det.sh ``` which will download most of the RVC datasets. The extracted dataset needs ca. 600GB of disk space (COCO: 26GB, OID: 527GB, MVD: 25GB). Please note that up to 50% more disc space is required during the extraction process.
 
-You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvd.
+4. To download the Mapillary Vistas (Research Edition) dataset you need to manually register and download at https://www.mapillary.com/dataset/vistas You will receive an email with download instructions. Save/Move the downloaded zip file into the folder RVC_DATA_DIR/mvd.
 
-After successfully downloading all datasets, execute this script to extract and delete clean up files:  ``` bash extract_and_cleanup.sh ``` 
+5. After successfully downloading all datasets, execute ``` bash extract_and_cleanup.sh ``` to extract and delete clean up files.
 
 ### Dataset remapping ###
 
