@@ -79,6 +79,20 @@ elif [ $DATASET = "oid" ]; then
                             --void_id 0 \
                             --remove_void \
                             --reduce_boxable \
-                            --output $PREDICTIONS_REMAPPED                       
+                            --output $PREDICTIONS_REMAPPED
+                            
+    echo "Converting predictions to OID format..."
+    if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
+    # getting defined version of openimages2coco repo
+        git -C $RVC_OBJ_DET_SCRIPT_DIR clone https://github.com/bethgelab/openimages2coco.git 
+        git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout 0f104984fbb5ddd8df55bdc6e6159256cc8a9746
+    fi
+    
+    
+    #remapping COCO format to OID .csv
+    pushd $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/
+    python3 convert_predictions.py --p $PREDICTIONS_REMAPPED --image_dir $RVC_DATA_SRC_DIR/oid/test/
+    popd
+
 fi
 
