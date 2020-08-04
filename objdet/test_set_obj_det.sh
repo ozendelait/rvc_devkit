@@ -17,10 +17,21 @@ else
   RVC_USE_DATA_ROOT_DIR=${RVC_DATA_DIR}/
 fi
 
-#check MVD test set (needs to be manually installed!)
+#check MVD test set size (needs to be manually installed!)
 count_files_mvd=$(find ${RVC_USE_DATA_ROOT_DIR}/mvd/testing/images/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_mvd} -ne 5000 ] ; then
-  echo "Missing MVD files (only ${count_files_mvd})! You need to request MVD via https://www.mapillary.com/dataset/vistas \n and unpack the file manually to ${RVC_USE_DATA_ROOT_DIR}/mvd/"
+  echo "Missing MVD files (only ${count_files_mvd})! You need to request"
+  echo "MVD via https://www.mapillary.com/dataset/vistas "
+  echo "and unpack the file manually to ${RVC_USE_DATA_ROOT_DIR}/mvd/"
+else
+  #check file size to determine differnce between v1.1 and v1.2 (anonymized images)
+  file_size_check_mvd=$(stat --printf="%s" "${RVC_USE_DATA_ROOT_DIR}/mvd/testing/images/0F9m3hsCahtlL0AzLph9LQ.jpg")
+  if [ ${file_size_check_mvd} -ne 630864 ] ; then
+    echo "Warning! You are using v1.1 of MVD; testing is done using v1.2!"
+    echo "Request it via https://www.mapillary.com/dataset/vistas"
+    echo "and unpack the file manually to ${RVC_USE_DATA_ROOT_DIR}/mvd/"
+  fi
+  file_size_check_mvd=
 fi
 
 #check COCO test set
