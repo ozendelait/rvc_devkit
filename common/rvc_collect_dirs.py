@@ -59,7 +59,7 @@ if __name__ == '__main__':
 		help="source folder(s) seperated by semicolon")
 	parser.add_argument("--dst_root", type=str, default='./', 
 		help="destination folder")
-	parser.add_argument("--collapse_depth", type=int, default=3,
+	parser.add_argument("--collapse_depth", type=int, default=0,
 		help="automatically collapses directory structure to use only leaf subfolder up to depth collapse_depth")
 	parser.add_argument("--type", default='dryrun', choices=('symlink', 'copy', 'move', 'copy_files', 'move_files', 'dryrun', 'dryrun_files', 'dryrun_symlink'),
 		help="type of collection operation; possible values: copy, move, copy_files, move_files and symlink ; *_files will use a single dst subfolder")
