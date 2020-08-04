@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #collects dataq directories by either copy, move or symlink operation
 
-import argparse, os, sys, subprocess, glob, shutil
+import argparse, os, sys, subprocess, glob, itertools, shutil
 
 #creates a symbolic link / junction at dst pointing at directory src
 def unpriv_symb_link(src, dst):
@@ -37,6 +37,9 @@ def list_subdirs(path, depth=1):
 				ret_subdirs.append(c)
 		return ret_subdirs
 
+def recursive_glob(root_folder, ext_glob):
+	return list(itertools.chain.from_iterable(glob.iglob(os.path.join(root,ext_glob)) for root, dirs, files in os.walk(root_folder)))
+
 def fix_folder_path(path):
 	path = path.replace('\\','/') #fix windows path errors
 	if '*' in path:
@@ -65,7 +68,7 @@ if __name__ == '__main__':
 		help="type of collection operation; possible values: copy, move, copy_files, move_files and symlink ; *_files will use a single dst subfolder")
 	args = parser.parse_args()
 	dst_real = fix_folder_path(args.dst_root)
-	
+	num_collected = 0
 	all_srcs = args.src.split(';')
 	if "dryrun" in args.type:
 		print("No action; showing dryrun results only. Restart script with a different --type to execute.")
@@ -90,7 +93,7 @@ if __name__ == '__main__':
 			if trg_dir1 != trg_dir0:
 				trg_dir1 = trg_dir0+'_'+trg_dir1
 			if skip_subfolder:
-				src_files = glob.glob(src_real+'/**/'+glob_sel)
+				src_files = recursive_glob(src_real,glob_sel)
 			elif glob_sel != '*.*' and not "symlink" in args.type:
 				src_files = glob.glob(src_real+'/'+glob_sel)
 			else:
@@ -103,6 +106,7 @@ if __name__ == '__main__':
 				if not skip_subfolder and os.path.isdir(src_file) and os.path.isdir(dst_folder):
 					print("Warning: directory "+dst_folder+ " already exists; skipping!")
 					continue
+				num_collected += 1
 				if args.type == "symlink":
 					unpriv_symb_link(src_file, dst_folder)
 				elif "dryrun" in args.type:
@@ -117,3 +121,6 @@ if __name__ == '__main__':
 					shutil.copy2(src_file, dst_folder)
 					if "move" in args.type and os.path.isfile(src_file):
 						os.remove(src_file) #TODO: cleanup empty folders as well
+						
+		print("Collection finished after %i items."%num_collected)
+						

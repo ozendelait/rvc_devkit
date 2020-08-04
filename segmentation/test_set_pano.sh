@@ -116,7 +116,7 @@ fi
 if [ ${ALL_TESTSETS_CORRECT} -eq 1 ] ; then
   echo "Success: all test sets found and verified."
   if [ -n "${RVC_TEST_SET_COLLECT_DIR}" ] ; then
-    if [ -z "${RVC_TEST_SET_COLLECT_TYPE}"] ; then
+    if [ -z "${RVC_TEST_SET_COLLECT_TYPE}" ] ; then
       echo "use export RVC_TEST_SET_COLLECT_TYPE=<coll_type> to define collection operation type."
       echo "potential choices: dryrun, symlink, copy, move, copy_files, move_files"
     else
