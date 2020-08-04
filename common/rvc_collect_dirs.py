@@ -75,7 +75,7 @@ if __name__ == '__main__':
 			glob_sel = src.replace('\\','/').split('/')[-1]
 		src_dir = fix_folder_path(src)
 		if dst_real in src_dir:
-			print("Warning: your destination root directory is a parent folder of your src directory. Skipping src dir "+ src_dir)
+			print("Warning: your destination root directory "+dst_real+" is a parent folder of your src. \n Skipping src dir "+ src_dir)
 			continue
 		trg_dir0 = get_trg_dir_name(src_dir)
 		skip_subfolder = '_files' in args.type

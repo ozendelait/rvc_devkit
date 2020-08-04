@@ -115,11 +115,15 @@ fi
 
 if [ ${ALL_TESTSETS_CORRECT} -eq 1 ] ; then
   echo "Success: all test sets found and verified."
-  if [ -z "${RVC_TEST_SET_COLLECT_DIR}" ] ; then
-    echo "Collection test sets into one folder structure can be done by changing the type of the next call."
-    pushd ${RVC_USE_DATA_ROOT_DIR}
-      python ${RVC_SEGM_SCRIPT_DIR}/../common/rvc_collect_dirs.py --dst_root "${RVC_USE_DATA_ROOT_DIR}" --src "./mvd/testing/images;./coco/images/test2017;./cityscapes/leftImg8bit/test;./kitti/testing/image_2/*_10.png;./viper/test;./wilddash/test/images" --type dryrun --collapse_depth 3
-    popd
+  if [ -n "${RVC_TEST_SET_COLLECT_DIR}" ] ; then
+    if [ -z "${RVC_TEST_SET_COLLECT_TYPE}"] ; then
+      echo "use export RVC_TEST_SET_COLLECT_TYPE=<coll_type> to define collection operation type."
+      echo "potential choices: dryrun, symlink, copy, move, copy_files, move_files"
+    else
+      pushd ${RVC_USE_DATA_ROOT_DIR}
+        python ${RVC_SEGM_SCRIPT_DIR}/../common/rvc_collect_dirs.py --dst_root "${RVC_TEST_SET_COLLECT_DIR}" --src "./mvd/testing/images;./coco/images/test2017;./cityscapes/leftImg8bit/test;./kitti/testing/image_2/*_10.png;./viper/test;./wilddash/test/images" --type ${RVC_TEST_SET_COLLECT_TYPE} --collapse_depth 3
+      popd
+    fi
   fi
 fi
 
