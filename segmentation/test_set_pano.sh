@@ -96,9 +96,9 @@ fi
 
 #check WildDash2 test set
 if [ ! -d "${RVC_USE_DATA_ROOT_DIR}/wilddash/test" ]; then
-  if [ -f "${RVC_USE_DATA_ROOT_DIR}/wilddash/wd_public_02.zip" ]; then
+  if [ -f "${RVC_USE_DATA_ROOT_DIR}/wilddash/wd_both_02.zip" ]; then
     mkdir -p "${RVC_USE_DATA_ROOT_DIR}/wilddash/test"
-    unzip ${RVC_USE_DATA_ROOT_DIR}/wilddash/wd_public_02.zip -d ${RVC_USE_DATA_ROOT_DIR}/wilddash/test
+    unzip ${RVC_USE_DATA_ROOT_DIR}/wilddash/wd_both_02.zip -d ${RVC_USE_DATA_ROOT_DIR}/wilddash/test
   else
     echo "WildDash2 test files missing. Please extract WildDash2's wd_public_02.zip"
     echo "to ${RVC_USE_DATA_ROOT_DIR}/wilddash/test/"
