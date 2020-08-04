@@ -74,8 +74,8 @@ if [ ! -d "${RVC_USE_DATA_ROOT_DIR}/kitti/testing" ]; then
   KITTI_SEM_URL=
 fi
 
-count_files_kitti=$(find ${RVC_USE_DATA_ROOT_DIR}/kitti/testing/image_2/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
-if [ ${count_files_kitti} -ne 400 ] ; then
+count_files_kitti=$(find ${RVC_USE_DATA_ROOT_DIR}/kitti/testing/image_2/*_10.png -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
+if [ ${count_files_kitti} -ne 200 ] ; then
   echo "Missing KITTI files (only ${count_files_kitti})! Check your KITTI test set installation"
   ALL_TESTSETS_CORRECT=0
 fi
@@ -107,7 +107,7 @@ if [ ! -d "${RVC_USE_DATA_ROOT_DIR}/wilddash/test" ]; then
   fi
 fi
 
-count_files_wilddash=$(find ${RVC_USE_DATA_ROOT_DIR}/test/images/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
+count_files_wilddash=$(find ${RVC_USE_DATA_ROOT_DIR}/wilddash/test/images/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_wilddash} -ne 812 ] ; then
   echo "Missing WildDash2 files (only ${count_files_wilddash})! Check your WildDash2 test set installation"
   ALL_TESTSETS_CORRECT=0
