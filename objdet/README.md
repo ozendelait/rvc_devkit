@@ -40,12 +40,31 @@ http://cocodataset.org/#format-data
 
 The "file_name" tag of each image entry has been prepended with the relative path calculated from RVC_DATA_DIR.
 These files can directly be used in your object detector training framework.
+We provide a version of [MMDetection](https://github.com/michaelisc/mmdetection_rvc) that was adapted for the challenge at https://github.com/michaelisc/mmdetection_rvc.
 
 ## Result Submission ##
 
-Fill in the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
-You have to run the evaluation for the test set of each dataset individually as specified on http://www.robustvision.net/submit.php .
-For predictions in the coco format we provide a script to map the predicted categories back from the joint embedding space. Use
+The devkit contains code to remap and convert your predictions so they are ready for submission.
+
+1. Fill in the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
+
+2. Run the evaluation for the test set of each dataset individually as specified on http://www.robustvision.net/submit.php .
+
+3. Map predictions back into the embedding space of the respective dataset. For predictions in the coco format we provide a script to map the predicted categories back from the joint embedding space. See details below. 
+
+4. Upload your predictions for the respective test sets of each benchmark:
+
+- COCO : https://competitions.codalab.org/competitions/25334
+- MVD : https://codalab.mapillary.com/competitions/41
+- OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
+
+For COCO and MVD the predictions must be renamed to detections_test2017_METHOD_results.json (COCO) or detections_test_METHOD_results.json (MVD) respectively and compressed into a single .zip file. 
+METHOD should be replaced with your method's name.
+For OID the file name does not matter but you have to upload the automatically generated OID style .csv file instead of the COCO style .json.
+
+## Prediction remapping ## 
+
+To remap the predictions from our joint labelling space use:
 
  ```bash remap_results.sh -p /path/to/predictions -d DATASET ```
  
@@ -54,8 +73,3 @@ For predictions in the coco format we provide a script to map the predicted cate
  - `coco` for COCO 
  - `oid` for OpenImages. 
  The converted predictions will be saved in the same location as the predictions but the filename fill be changed to FILENAME_remapped_results.json.
- After that, upload your predictions for the respective test sets of each benchmark:
-
-- COCO : https://competitions.codalab.org/competitions/25334
-- MVD : https://codalab.mapillary.com/competitions/41
-- OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
