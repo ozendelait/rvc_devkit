@@ -1,5 +1,6 @@
 #!/bin/sh
-# Downloads & extracts OID & COCO test sets (i.e. only benchmark input images
+# Downloads & extracts OID & COCO test sets (i.e. only benchmark input images)
+# Automatically tests correctness of the mvd test set (must be downloaded manually)
 # OID download needs support for the kaggle api which can be installed via:
 # pip install kaggle
 # and you need to supply your kaggle api credentials as described here:
