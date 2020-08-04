@@ -13,12 +13,15 @@ else
   RVC_USE_DATA_ROOT_DIR=${RVC_DATA_DIR}/
 fi
 
+ALL_TESTSETS_CORRECT=1
+
 #check MVD test set size (needs to be manually installed!)
 count_files_mvd=$(find ${RVC_USE_DATA_ROOT_DIR}/mvd/testing/images/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_mvd} -ne 5000 ] ; then
   echo "Missing MVD files (only ${count_files_mvd})! You need to request"
   echo "MVD via https://www.mapillary.com/dataset/vistas "
   echo "and unpack the file manually to ${RVC_USE_DATA_ROOT_DIR}/mvd/"
+  ALL_TESTSETS_CORRECT=0
 else
   #check file size to determine differnce between v1.1 and v1.2 (anonymized images)
   file_size_check_mvd=$(stat --printf="%s" "${RVC_USE_DATA_ROOT_DIR}/mvd/testing/images/0F9m3hsCahtlL0AzLph9LQ.jpg")
@@ -26,6 +29,7 @@ else
     echo "Warning! You are using v1.1 of MVD; testing is done using v1.2!"
     echo "Request it via https://www.mapillary.com/dataset/vistas"
     echo "and unpack the file manually to ${RVC_USE_DATA_ROOT_DIR}/mvd/"
+    ALL_TESTSETS_CORRECT=0
   fi
   file_size_check_mvd=
 fi
@@ -43,6 +47,7 @@ fi
 count_files_coco=$(find ${RVC_USE_DATA_ROOT_DIR}/coco/images/test2017/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_coco} -ne 40670 ] ; then
   echo "Missing COCO files (only ${count_files_coco})! Check your COCO test set installation"
+  ALL_TESTSETS_CORRECT=0
 fi
 
 #check Cityscapes test set
@@ -56,6 +61,7 @@ fi
 count_files_cs=$(find ${RVC_USE_DATA_ROOT_DIR}/cityscapes/leftImg8bit/test/. -maxdepth 2 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_cs} -ne 1525 ] ; then
   echo "Missing Cityscapes files (only ${count_files_cs})! Check your Cityscapes test set installation"
+  ALL_TESTSETS_CORRECT=0
 fi
 
 #check KITTI test set
@@ -71,6 +77,7 @@ fi
 count_files_kitti=$(find ${RVC_USE_DATA_ROOT_DIR}/kitti/testing/image_2/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_kitti} -ne 400 ] ; then
   echo "Missing KITTI files (only ${count_files_kitti})! Check your KITTI test set installation"
+  ALL_TESTSETS_CORRECT=0
 fi
 
 #check VIPER test set
@@ -84,6 +91,7 @@ fi
 count_files_viper=$(find ${RVC_USE_DATA_ROOT_DIR}/viper/test/. -maxdepth 3 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_viper} -ne 2500 ] ; then
   echo "Missing VIPER files (only ${count_files_viper})! Check your VIPER test set installation"
+  ALL_TESTSETS_CORRECT=0
 fi
 
 #check WildDash2 test set
@@ -102,11 +110,16 @@ fi
 count_files_wilddash=$(find ${RVC_USE_DATA_ROOT_DIR}/test/images/. -maxdepth 1 -type f -printf "\n" 2>/dev/null | wc -l)
 if [ ${count_files_wilddash} -ne 812 ] ; then
   echo "Missing WildDash2 files (only ${count_files_wilddash})! Check your WildDash2 test set installation"
+  ALL_TESTSETS_CORRECT=0
 fi
 
+if [ ${ALL_TESTSETS_CORRECT} -eq 1 ] ; then
+  echo "Success: all test sets found and verified."
+fi
 
 RVC_SEGM_SCRIPT_DIR=
 RVC_USE_DATA_ROOT_DIR=
+ALL_TESTSETS_CORRECT=
 count_files_mvd=
 count_files_coco=
 count_files_cs=
