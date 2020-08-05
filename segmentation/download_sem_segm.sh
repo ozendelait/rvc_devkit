@@ -21,9 +21,9 @@ if [ ! -d "$RVC_SEM_SEG_SCRIPT_DIR/mseg_api" ]; then
   pip install -e $RVC_SEM_SEG_SCRIPT_DIR/mseg_api
 fi
 
-${RVC_SEM_SEG_SCRIPT_DIR}/download_coco_pano.sh
 mseg_download_ade20k.sh ${RVC_DOWNL_SEM_TRG_DIR}/ade20k
 ${RVC_SEM_SEG_SCRIPT_DIR}/download_cityscapes_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/cityscapes
+${RVC_SEM_SEG_SCRIPT_DIR}/download_kitti_pano.sh ${RVC_DOWNL_SEM_TRG_DIR}/kitti
 
 pushd ${RVC_SEM_SEG_SCRIPT_DIR}/legacy/
 python download_scannet.py -o ${RVC_DOWNL_SEM_TRG_DIR}/scannet --rob_task_data
