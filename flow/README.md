@@ -1,5 +1,7 @@
 # Robust Vision Challenge 2020 - Optical Flow Devkit #
 
+**Update 2020-08-05: The  HD1K flow challenge server has technical difficulties. The challenges will be ranked with the remaining benchmarks: MPI-Sintel, KITTI2015, Middlebury, and VIPER. You do not have to change your existing models, as stated by the rules any additional public datasets are allowed during training.**
+
 ## Dataset Download ##
 
 The simplest way to use the devkit is to run the main script without any program
