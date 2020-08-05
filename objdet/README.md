@@ -72,4 +72,8 @@ To remap the predictions from our joint labelling space use:
  - `mvd` for mapillary vistas
  - `coco` for COCO 
  - `oid` for OpenImages. 
- The converted predictions will be saved in the same location as the predictions but the filename fill be changed to FILENAME_remapped_results.json.
+
+
+The converted predictions will be saved in the same location as the predictions but the filename fill be changed to FILENAME_remapped_results.json.
+
+Note: this mapping (as the training mapping) is a starting point and does not represent the best approach towards solving the joint label space problem. **You can use any joint label space and method to map between src/trg spaces as long as they conform to the [RVC rules](http://www.robustvision.net/submit.php#rules2020)**.

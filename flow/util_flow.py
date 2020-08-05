@@ -112,12 +112,15 @@ def WriteKittiPngFile(path, width, height, u, v, mask=None):
     """
 
     data = array.array('H',[0])*width*height*3
+    if mask is None:
+        mask = array.array('H',[1])*width*height*3
+        pass
 
     for i,(u_,v_,mask_) in enumerate(zip(u,v,mask)):
         data[3*i] = int(u_*64.0+2**15)
         data[3*i+1] = int(v_*64.0+2**15)
         data[3*i+2] = int(mask_)
-
+        
         # if mask_ > 0:
         #     print(data[3*i], data[3*i+1],data[3*i+2])
 
