@@ -115,6 +115,9 @@ an output file structure as described above.
 
 ## Result Submission ##
 
+Start your submission by submitting a short form on the
+Robust Vision Challenge website: [submission form](http://robustvision.net/submit.php#register).
+
 After a flow method has been run on all datasets, the results can be
 automatically packaged for submission to each individual benchmark. To do so,
 simply run the devkit script again in the same directory:
@@ -131,15 +134,11 @@ The resulting archives must be submitted to the respective benchmarks:
 * [Kitti2015](<http://www.cvlibs.net/datasets/kitti/user_login.php>
 )
 * [Middlebury](http://vision.middlebury.edu/flow/submit/)
-* [HD1K](http://hci-benchmark.org/submit)
+* [VIPER](https://playing-for-benchmarks.org/submissions/my/)
 
 To signify that your method is part of a submission to the Robust Vision
 Challenge, please add the postfix ``_RVC`` to your algorithm name for all
 submissions.
-
-Furthermore, the submission must be completed by filling a short form on the
-Robust Vision Challenge website: [submission form](http://robustvision.net/submit.php#register).
-
 
 ## Command Line Interface ##
 
