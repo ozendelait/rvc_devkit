@@ -56,7 +56,6 @@ Here are the upload links for each of the segmentation tasks:
 
 ### Semantic Segmentation Task ###
 - ADE20K: http://sceneparsing.csail.mit.edu/eval/
-- COCO: Online before 1st Aug. 2020; Note: as used in the dev kit for training (and also in MSeg) this evaluation is using COCO panoptic classes; not COCO-Stuff!
 - Cityscapes: https://www.cityscapes-dataset.com/submit/
 - KITTI: http://www.cvlibs.net/datasets/kitti/user_submit.php
 - MVD: https://codalab.mapillary.com/competitions/43
@@ -77,7 +76,6 @@ Here are the upload links for each of the segmentation tasks:
 ### Panoptic Segmentation Task ###
 - COCO: https://competitions.codalab.org/competitions/25386#learn_the_details
 - Cityscapes: https://www.cityscapes-dataset.com/submit/
-- KITTI: Online before 1st Aug. 2020
 - MVD: https://codalab.mapillary.com/competitions/42
 - VIPER: https://playing-for-benchmarks.org/submissions/my/
 - WildDash: https://wilddash.cc/challenges/submissions
