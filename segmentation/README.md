@@ -1,5 +1,7 @@
 # Robust Vision Challenge 2020 - Panoptic, Instance, and Semantic Segmentation Devkit #
 
+**Update 2020-08-05: The  KITTI panoptic challenge server and the COCO semantic segmentation challenge server have technical difficulties. Both challenges will be ranked with the remaining benchmarks. You do not have to change your existing models, as stated by the rules any additional public datasets are allowed during training. **
+
 ## Dataset Download ##
 
 We provide a devkit to download, extract, and convert the challenge datasets into a unified format. First specifying the target root directory for all RVC datasets using an environment variable
