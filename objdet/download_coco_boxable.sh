@@ -25,6 +25,9 @@ echo "Downloading COCO boxable dataset..."
 COCOP_ANNOT_BOX_URL="http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
 wget --no-check-certificate --continue $COCOP_ANNOT_BOX_URL -P ${RVC_COCO_TRG_DIR}
 
+COCOP_ANNOT_TEST_URL="http://images.cocodataset.org/annotations/image_info_test2017.zip"
+wget --no-check-certificate --continue $COCOP_ANNOT_TEST_URL -P ${RVC_COCO_TRG_DIR}
+
 # train2017.zip will be 19GB.
 TRAIN_IMGS_URL="http://images.cocodataset.org/zips/train2017.zip"
 wget --no-check-certificate --continue $TRAIN_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
@@ -32,7 +35,7 @@ wget --no-check-certificate --continue $TRAIN_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
 VAL_IMGS_URL="http://images.cocodataset.org/zips/val2017.zip"
 wget --no-check-certificate --continue $VAL_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
 # test2017.zip will be 6GB.
-VAL_IMGS_URL="http://images.cocodataset.org/zips/test2017.zip"
-wget --no-check-certificate --continue $VAL_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
+TEST_IMGS_URL="http://images.cocodataset.org/zips/test2017.zip"
+wget --no-check-certificate --continue $TEST_IMGS_URL  -P ${RVC_COCO_TRG_DIR}
 
 echo "COCO boxable dataset downloaded."

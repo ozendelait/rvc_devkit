@@ -33,6 +33,8 @@ rm ${RVC_EXTR_ROOT_DIR}/coco/test2017.zip
 
 unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations_trainval2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
 rm ${RVC_EXTR_ROOT_DIR}/coco/annotations_trainval2017.zip
+unzip ${RVC_EXTR_ROOT_DIR}/coco/image_info_test2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
+rm ${RVC_EXTR_ROOT_DIR}/coco/image_info_test2017.zip
 #unzip ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
 #rm ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip
 
@@ -44,6 +46,10 @@ do
   tar xf $onetarfile -C ${RVC_EXTR_ROOT_DIR}/oid && rm $onetarfile
 done
 popd
+
+unzip ${RVC_EXTR_ROOT_DIR}/oid/open-images-object-detection-rvc-2020.zip -d ${RVC_EXTR_ROOT_DIR}/oid
+rm ${RVC_EXTR_ROOT_DIR}/oid/open-images-object-detection-rvc-2020.zip
+rm ${RVC_EXTR_ROOT_DIR}/oid/sample_submission.csv
 
 #echo "Extracting Obj365"
 #pushd ${RVC_EXTR_ROOT_DIR}/objects365

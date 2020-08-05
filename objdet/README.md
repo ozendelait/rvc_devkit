@@ -15,19 +15,16 @@ Install additional requirements with:
 ## Dataset Download ##
 
 We provide a devkit to download, extract, and convert the challenge datasets into a unified format.
-This is done by first specifying the target root directory for all RVC datasets using an environment variable
 
- ``` export RVC_DATA_DIR=/path/to/rvc_dataroot  ```
+1. Specify the target root directory for all RVC datasets with ``` export RVC_DATA_DIR=/path/to/rvc_dataroot  ```
 
-Now you can execute the download script ``` bash download_obj_det.sh ``` which will download most of the RVC datasets.
-The extracted dataset needs xxxx GB of disk space (COCO: 26GB, OID: 527GB, Objects365: 394GB, MVD: 25GB). Please note that up to 50% more disc space is required during the extraction process.
+2. Get an authentication token for the Kaggle API as described here: https://www.kaggle.com/docs/api. This is required to download the OpenImages test data from kaggle.
 
-You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
-https://www.mapillary.com/dataset/vistas
+3. Execute the download script ``` bash download_obj_det.sh ``` which will download most of the RVC datasets. The extracted dataset needs ca. 600GB of disk space (COCO: 26GB, OID: 527GB, MVD: 25GB). Please note that up to 50% more disc space is required during the extraction process.
 
-You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvd.
+4. To download the Mapillary Vistas (Research Edition) dataset you need to manually register and download at https://www.mapillary.com/dataset/vistas You will receive an email with download instructions. Save/Move the downloaded zip file into the folder RVC_DATA_DIR/mvd.
 
-After successfully downloading all datasets, execute this script to extract and delete clean up files:  ``` bash extract_and_cleanup.sh ``` 
+5. After successfully downloading all datasets, execute ``` bash extract_and_cleanup.sh ``` to extract and delete clean up files.
 
 ### Dataset remapping ###
 
@@ -43,13 +40,40 @@ http://cocodataset.org/#format-data
 
 The "file_name" tag of each image entry has been prepended with the relative path calculated from RVC_DATA_DIR.
 These files can directly be used in your object detector training framework.
+We provide a version of [MMDetection](https://github.com/michaelisc/mmdetection_rvc) that was adapted for the challenge at https://github.com/michaelisc/mmdetection_rvc.
 
 ## Result Submission ##
 
-Fill in the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
+The devkit contains code to remap and convert your predictions so they are ready for submission.
 
-After that, upload your predictions for the respective test sets of each benchmark:
+1. Fill in the "Register Method to RVC" form here: http://www.robustvision.net/submit.php
+
+2. Run the evaluation for the test set of each dataset individually as specified on http://www.robustvision.net/submit.php .
+
+3. Map predictions back into the embedding space of the respective dataset. For predictions in the coco format we provide a script to map the predicted categories back from the joint embedding space. See details below. 
+
+4. Upload your predictions for the respective test sets of each benchmark:
 
 - COCO : https://competitions.codalab.org/competitions/25334
 - MVD : https://codalab.mapillary.com/competitions/41
 - OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
+
+For COCO and MVD the predictions must be renamed to detections_test2017_METHOD_results.json (COCO) or detections_test_METHOD_results.json (MVD) respectively and compressed into a single .zip file. 
+METHOD should be replaced with your method's name.
+For OID the file name does not matter but you have to upload the automatically generated OID style .csv file instead of the COCO style .json.
+
+## Prediction remapping ## 
+
+To remap the predictions from our joint labelling space use:
+
+ ```bash remap_results.sh -p /path/to/predictions -d DATASET ```
+ 
+ Replace DATASET with the corresponding datasets abbreviation:
+ - `mvd` for mapillary vistas
+ - `coco` for COCO 
+ - `oid` for OpenImages. 
+
+
+The converted predictions will be saved in the same location as the predictions but the filename fill be changed to FILENAME_remapped_results.json.
+
+Note: this mapping (as the training mapping) is a starting point and does not represent the best approach towards solving the joint label space problem. **You can use any joint label space and method to map between src/trg spaces as long as they conform to the [RVC rules](http://www.robustvision.net/submit.php#rules2020)**.

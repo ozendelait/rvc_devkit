@@ -1,5 +1,7 @@
 # Robust Vision Challenge 2020 - Panoptic, Instance, and Semantic Segmentation Devkit #
 
+**Update 2020-08-05: The  KITTI panoptic challenge server and the COCO semantic segmentation challenge server have technical difficulties. Both challenges will be ranked with the remaining benchmarks. You do not have to change your existing models, as stated by the rules any additional public datasets are allowed during training.**
+
 ## Dataset Download ##
 
 We provide a devkit to download, extract, and convert the challenge datasets into a unified format. First specifying the target root directory for all RVC datasets using an environment variable
@@ -55,7 +57,6 @@ Here are the upload links for each of the segmentation tasks:
 
 ### Semantic Segmentation Task ###
 - ADE20K: http://sceneparsing.csail.mit.edu/eval/
-- COCO: Online before 1st Aug. 2020; Note: as used in the dev kit for training (and also in MSeg) this evaluation is using COCO panoptic classes; not COCO-Stuff!
 - Cityscapes: https://www.cityscapes-dataset.com/submit/
 - KITTI: http://www.cvlibs.net/datasets/kitti/user_submit.php
 - MVD: https://codalab.mapillary.com/competitions/43
@@ -76,7 +77,6 @@ Here are the upload links for each of the segmentation tasks:
 ### Panoptic Segmentation Task ###
 - COCO: https://competitions.codalab.org/competitions/25386#learn_the_details
 - Cityscapes: https://www.cityscapes-dataset.com/submit/
-- KITTI: Online before 1st Aug. 2020
 - MVD: https://codalab.mapillary.com/competitions/42
 - VIPER: https://playing-for-benchmarks.org/submissions/my/
 - WildDash: https://wilddash.cc/challenges/submissions

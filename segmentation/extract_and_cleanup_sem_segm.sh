@@ -24,24 +24,6 @@ fi
 
 #ADE20K is extracted by the mseg download script
 
-echo "Extracting COCO"
-mkdir -p ${RVC_EXTR_ROOT_DIR}/coco/images
-unzip ${RVC_EXTR_ROOT_DIR}/coco/train2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/images
-rm ${RVC_EXTR_ROOT_DIR}/coco/train2017.zip
-unzip ${RVC_EXTR_ROOT_DIR}/coco/val2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/images
-rm ${RVC_EXTR_ROOT_DIR}/coco/val2017.zip
-unzip ${RVC_EXTR_ROOT_DIR}/coco/test2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/images
-rm ${RVC_EXTR_ROOT_DIR}/coco/test2017.zip
-
-unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations_trainval2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
-rm ${RVC_EXTR_ROOT_DIR}/coco/annotations_trainval2017.zip
-unzip ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/
-rm ${RVC_EXTR_ROOT_DIR}/coco/panoptic_annotations_trainval2017.zip
-unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_val2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/annotations/
-rm ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_val2017.zip
-unzip ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_train2017.zip -d ${RVC_EXTR_ROOT_DIR}/coco/annotations/
-rm ${RVC_EXTR_ROOT_DIR}/coco/annotations/panoptic_train2017.zip
-
 unzip ${RVC_EXTR_ROOT_DIR}/cityscapes/gtFine_trainvaltest.zip -d ${RVC_EXTR_ROOT_DIR}/cityscapes
 rm ${RVC_EXTR_ROOT_DIR}/cityscapes/gtFine_trainvaltest.zip
 # Note: README and license are found in both files
