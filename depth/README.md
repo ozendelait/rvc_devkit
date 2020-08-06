@@ -95,6 +95,6 @@ Fill in the "Register Method to RVC" form here: http://www.robustvision.net/subm
 After that, upload your predictions for the respective test sets of each benchmark:
 
 - KITTI      : http://www.cvlibs.net/datasets/kitti/user_submit.php
-- MPI Sintel : Online at 1st Aug. latest
+- MPI Sintel : https://sintel-depth.csail.mit.edu/landing
 - rabbitai   : https://rabbitai.de/benchmark/upload
 - VIPER      : https://playing-for-benchmarks.org/submissions/my/

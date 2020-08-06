@@ -35,11 +35,11 @@ do
         shift # Remove argument name from processing
         shift # Remove argument value from processing
         ;;
-        -s|--split)
-        SPLIT="$2"
-        shift # Remove argument name from processing
-        shift # Remove argument value from processing
-        ;;
+        #-s|--split)
+        #SPLIT="$2"
+        #shift # Remove argument name from processing
+        #shift # Remove argument value from processing
+        #;;
     esac
 done
 
@@ -53,6 +53,7 @@ if [ $DATASET = "mvd" ]; then
                             --annotations $RVC_DATA_TRG_DIR/mvd/annotations/boxes_val_2018.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row mvd_boxable_name \
+                            --map_to id \
                             --void_id 0 \
                             --remove_void \
                             --reduce_boxable \
@@ -63,6 +64,7 @@ elif [ $DATASET = "coco" ]; then
                             --annotations $RVC_DATA_TRG_DIR/coco/annotations/instances_val2017.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row coco_boxable_name \
+                            --map_to id \
                             --void_id 0 \
                             --remove_void \
                             --reduce_boxable \
@@ -73,9 +75,24 @@ elif [ $DATASET = "oid" ]; then
                             --annotations $RVC_DATA_TRG_DIR/oid/annotations/openimages_challenge_2019_val_bbox.json \
                             --mapping $RVC_OBJ_DET_SCRIPT_DIR/obj_det_mapping.csv \
                             --mapping_row oid_boxable_leaf \
+                            --map_to freebase_id \
                             --void_id 0 \
                             --remove_void \
                             --reduce_boxable \
-                            --output $PREDICTIONS_REMAPPED                       
+                            --output $PREDICTIONS_REMAPPED
+                            
+    echo "Converting predictions to OID format..."
+    if [ ! -d $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco ]; then
+    # getting defined version of openimages2coco repo
+        git -C $RVC_OBJ_DET_SCRIPT_DIR clone https://github.com/bethgelab/openimages2coco.git 
+        git -C $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco checkout 8991d9bccbd3d91f32b87f04dab60b2a61cb608e
+    fi
+    
+    
+    #remapping COCO format to OID .csv
+    pushd $RVC_OBJ_DET_SCRIPT_DIR/openimages2coco/
+    python3 convert_predictions.py --p $PREDICTIONS_REMAPPED --subset test-rvc2020
+    popd
+
 fi
 
