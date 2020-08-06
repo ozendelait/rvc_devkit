@@ -36,6 +36,7 @@ aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_e.tar.gz ${RVC_OI
 aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_f.tar.gz ${RVC_OID_TRG_DIR}
 aws s3 --no-sign-request cp s3://open-images-dataset/tar/validation.tar.gz ${RVC_OID_TRG_DIR}
 
+kaggle competitions download -c open-images-object-detection-rvc-2020 -p ${RVC_OID_TRG_DIR}
 
 wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-train-detection-bbox.csv -P ${RVC_OID_TRG_DIR}/annotations
 wget --no-check-certificate https://storage.googleapis.com/openimages/challenge_2019/challenge-2019-validation-detection-bbox.csv -P ${RVC_OID_TRG_DIR}/annotations

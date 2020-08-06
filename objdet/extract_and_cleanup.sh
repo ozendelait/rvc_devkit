@@ -47,6 +47,10 @@ do
 done
 popd
 
+unzip ${RVC_EXTR_ROOT_DIR}/oid/open-images-object-detection-rvc-2020.zip -d ${RVC_EXTR_ROOT_DIR}/oid
+rm ${RVC_EXTR_ROOT_DIR}/oid/open-images-object-detection-rvc-2020.zip
+rm ${RVC_EXTR_ROOT_DIR}/oid/sample_submission.csv
+
 #echo "Extracting Obj365"
 #pushd ${RVC_EXTR_ROOT_DIR}/objects365
 #for onetarfile in *.tar.gz
