@@ -7,6 +7,10 @@
 # pip install pillow
 # pip install git+git://github.com/waspinator/pycococreator.git@0.2.0
 
+# if pycocotools ois missing, you may fix this by installing
+# sudo apt-get install python<YourVersion>-dev
+# pip install Cython
+# pip install pycocotools 
 
 RVC_SEGM_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 RVC_MVD_SRC_DIR=${1}
@@ -23,6 +27,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/mvd/panoptic/coco/training.json" ]; then
   fi
 
   pushd ${RVC_SEGM_SCRIPT_DIR}/seamseg/scripts/data_preparation
+    mkdir -p ${RVC_MVD_SRC_DIR}/panoptic
     python prepare_vistas.py ${RVC_MVD_SRC_DIR} ${RVC_MVD_SRC_DIR}/panoptic
   popd
 fi
