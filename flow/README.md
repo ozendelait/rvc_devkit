@@ -17,6 +17,9 @@ folder in the current working directory. The folder layout is as follows:
   - test
   - training
 ```
+Note that the script will first download the dataset archives, then 
+extract and convert them. The extraction & conversion steps may take a long time after the
+downloads have finished to complete.
 
 If the optional program argument `--keep_archives` is given, the downloaded
 archive files will not be deleted after the datasets are extracted
@@ -89,7 +92,9 @@ datasets_middlebury/
             ...
 ```
 
-For HD1K, the time for calculating the optical flow is expected in addition to each flow result.
+For KITTI and Middlebury, there needs to be a file frame_0010.flo in each SEQ directory. 
+For Sintel and VIPER there must be a frame_00xx.flo for each frame pair in each sequence. Note that the VIPER frame pairs are non-consecutive. 
+For HD1K (not currently supported), the time for calculating the optical flow is expected in addition to each flow result.
 The time in seconds is stored as a floating point value in ASCII encoding in a text file called ```frame_XXXX.txt```.
 The file must contain only that number. Runtime files should be placed right next to the flow results in the same directory.
 
@@ -112,6 +117,12 @@ See the Middlebury output description for further details.
 Currently, it is required to manually call your method and create
 an output file structure as described above.
 
+In the Middlebury format, when running a method on pairs of input images, name the resulting .flo file after the lower-indexed input frame image.
+For example, if you're running your method on frame_0010.png and frame_0011.png, name the output file frame_0010.flo.
+Thus, the submission packager expects files frame_0010.flo in each SEQ directory for KITTI and Middlebury,
+files frame_0001.flo through frame_0049.flo (for example) for Sintel, and one file corresponding to each image pair for VIPER.
+
+It may be necessary to write bash scripts to run your method on each frame pair in each dataset. 
 
 ## Result Submission ##
 
