@@ -1,7 +1,5 @@
-#!/bin/sh
-# Downloads the open image dataset
-# requires awscli, this can be installed using 
-# pip install awscli
+#!/bin/bash
+# Extract and cleanup instance segmentation datasets
 #
 # (use gitbash for MS Windows)
 
@@ -56,6 +54,7 @@ rm ${RVC_EXTR_ROOT_DIR}/cityscapes/README
 rm ${RVC_EXTR_ROOT_DIR}/cityscapes/license.txt
 unzip ${RVC_EXTR_ROOT_DIR}/cityscapes/leftImg8bit_trainvaltest.zip -d ${RVC_EXTR_ROOT_DIR}/cityscapes
 rm ${RVC_EXTR_ROOT_DIR}/cityscapes/leftImg8bit_trainvaltest.zip
+$RVC_OID_SCRIPT_DIR/convert_cityscapes_coco.sh ${RVC_EXTR_ROOT_DIR}/cityscapes
 
 unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
 rm ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip
@@ -67,10 +66,13 @@ rm ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_25k.zip
 mkdir -p ${RVC_EXTR_ROOT_DIR}/scannet/bench
 unzip ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_test.zip -d ${RVC_EXTR_ROOT_DIR}/scannet/bench
 rm ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_test.zip
+$RVC_OID_SCRIPT_DIR/convert_scannet_coco.sh ${RVC_EXTR_ROOT_DIR}/scannet
 
 unzip ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip -d ${RVC_EXTR_ROOT_DIR}/mvd/
 rm ${RVC_EXTR_ROOT_DIR}/mvd/mapillary-vistas-dataset_public_v1.1.zip
 $RVC_OID_SCRIPT_DIR/convert_mvd_coco.sh ${RVC_EXTR_ROOT_DIR}/mvd
+#viper is extracted by the downloader itself
+$RVC_OID_SCRIPT_DIR/convert_viper_coco.sh ${RVC_EXTR_ROOT_DIR}/viper
 
 unzip ${RVC_EXTR_ROOT_DIR}/wilddash/wd_public_02.zip -d ${RVC_EXTR_ROOT_DIR}/wilddash/
 rm ${RVC_EXTR_ROOT_DIR}/wilddash/wd_public_02.zip

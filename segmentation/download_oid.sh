@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Downloads the open image dataset
 # requires awscli, this can be installed using 
 # pip install awscli
@@ -12,6 +12,14 @@ if [ -z "${RVC_OID_TRG_DIR}" ]; then
 else
   RVC_OID_TRG_DIR=${RVC_DATA_DIR}/oid
 fi
+
+if ! command -v awscli &> /dev/null
+then
+    echo "awscli could not be found! It can be installed via pip install awscli"
+    exit
+fi
+
+
 
 echo "Downloading Open Images Train And Validation to ${RVC_OID_TRG_DIR}"
 echo "WARNING: the size of the full dataset is around 550GB, make sure you have enough space on the harddrive"

@@ -1,5 +1,5 @@
 #!/bin/sh
-# Converts GT from VIPER into COCO format
+# Converts GT from Scannet into COCO format
 # requires python
 
 RVC_SEGM_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
