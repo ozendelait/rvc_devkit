@@ -70,7 +70,8 @@ def readFlowFile(filename):
         print('readFlowFile: filename %s should have extension ''.flo''' % filename)
         return
 
-    fid = open(filename, 'r');
+    fid = open(filename, 'rb');
+
     if fid.closed:
         print('readFlowFile: could not open %s' % filename)
         return
