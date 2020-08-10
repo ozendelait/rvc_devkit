@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Converts GT from cityscapes into COCO format
 # requires git, python
 # (use gitbash for MS Windows)
@@ -28,7 +28,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_test.json" 
   
   #remap cityscapes format to COCO
   mkdir -p "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
-  PYTHONPATH=$RVC_SEGM_SCRIPT_DIR/cityscapesScripts python $RVC_SEGM_SCRIPT_DIR/cityscapesScripts/cityscapesscripts/preparation/createPanopticImgs.py --dataset-folder "$RVC_DATA_SRC_DIR/cityscapes/gtFine/" --output-folder "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
+  PYTHONPATH=$RVC_SEGM_SCRIPT_DIR/cityscapesScripts python3 $RVC_SEGM_SCRIPT_DIR/cityscapesScripts/cityscapesscripts/preparation/createPanopticImgs.py --dataset-folder "$RVC_DATA_SRC_DIR/cityscapes/gtFine/" --output-folder "$RVC_DATA_SRC_DIR/cityscapes/panoptic/"
 fi
 
 RVC_DATA_TRG_DIR=
