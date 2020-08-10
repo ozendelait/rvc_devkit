@@ -110,7 +110,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_train.json" ]; then
                         --image_root_rel $RVC_DATA_SRC_DIR/cityscapes/leftImg8bit_sequence/val/{frame_name_su[0]}/ \
                         --annotation_root_rel $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_val/ \
                         --void_id 0 \
-                        --output $RVC_DATA_TRG_DIR/cs_pano.rvc_train.json
+                        --output $RVC_DATA_TRG_DIR/cs_pano.rvc_val.json
 fi
 
 if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_val.json" ]; then
@@ -120,7 +120,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_val.json" ]; then
                         --image_root_rel $RVC_DATA_SRC_DIR/cityscapes/leftImg8bit_sequence/train/{frame_name_su[0]}/ \
                         --annotation_root_rel $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_train/ \
                         --void_id 0 \
-                        --output $RVC_DATA_TRG_DIR/cs_pano.rvc_val.json
+                        --output $RVC_DATA_TRG_DIR/cs_pano.rvc_train.json
 fi
 
                         
