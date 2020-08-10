@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Converts GT from VIPER into COCO format
 # requires python
 
@@ -15,7 +15,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/viper/train/pano.json" ]; then
   echo "Converting VIPER training data to COCO format..."
 
   pushd ${RVC_SEGM_SCRIPT_DIR}/legacy/
-  python convert_viper_pano.py ${RVC_DATA_SRC_DIR}/viper train --label_definition ${RVC_SEGM_SCRIPT_DIR}/../common/label_definitions/viper_classes.csv
+  python3 convert_viper_pano.py ${RVC_DATA_SRC_DIR}/viper train --label_definition ${RVC_SEGM_SCRIPT_DIR}/../common/label_definitions/viper_classes.csv
   popd
 fi
 
@@ -23,7 +23,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/viper/val/pano.json" ]; then
   echo "Converting VIPER validation data to COCO format..."
 
   pushd ${RVC_SEGM_SCRIPT_DIR}/legacy/
-  python convert_viper_pano.py ${RVC_DATA_SRC_DIR}/viper val --label_definition ${RVC_SEGM_SCRIPT_DIR}/../common/label_definitions/viper_classes.csv
+  python3 convert_viper_pano.py ${RVC_DATA_SRC_DIR}/viper val --label_definition ${RVC_SEGM_SCRIPT_DIR}/../common/label_definitions/viper_classes.csv
   popd
 fi
 
