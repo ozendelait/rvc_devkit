@@ -80,13 +80,18 @@ def main(argv=sys.argv[1:]):
 						help="apply collection op to files found in template folder structure; also rearrange to fit template")
 	parser.add_argument("--fix_dim", type=str, default=None,
 						help="Resize images to this dimension in WxH (e.g. 640x480); use 0x0 to read and apply template_dir file dims")
+	parser.add_argument("--fix_ext", type=str, default=None,
+						help="Change image file extension (e.g. jpg)")
+	parser.add_argument("--inter_nn", action='store_true',
+						help="Use Nearest Neighbor Interpolation for scaling (e.g. for result label masks/depth values)")
 	args = parser.parse_args(argv)
 	dst_real = fix_folder_path(args.dst_root)
 	num_collected_total = 0
 	all_srcs = args.src.split(';')
 	if "dryrun" in args.type:
 		print("No action; showing dryrun results only. Restart script with a different --type to execute.")
-
+	if not args.fix_ext is None and args.fix_ext[0] != '.':
+		args.fix_ext = '.'+args.fix_ext
 	for src in all_srcs:
 		num_collected = 0
 		glob_sel = "*.*"
@@ -167,18 +172,24 @@ def main(argv=sys.argv[1:]):
 					if not os.path.exists(parent_dir):
 						os.makedirs(parent_dir)
 					apply_resizing = False
-					if args.fix_dim:
+					if not args.fix_ext is None and not dst_path.endswith(args.fix_ext):
+						dst_path = dst_path[:dst_path.rfind('.')]+args.fix_ext
+						apply_resizing = True
+					if args.fix_dim or apply_resizing:
 						im0 = cv2.imread(src_file)
 						trg_dim = (args.fix_dim[0],args.fix_dim[1])
 						if trg_dim[0] == 0:
 							im1 = cv2.imread(tmpl_file)
 							trg_dim = (im1.shape[1], im1.shape[0])
+						img_sz_mismatch =  im0.shape[0] != trg_dim[1] or im0.shape[1] != trg_dim[0]
+						if img_sz_mismatch:
+							apply_resizing = True
+						if args.inter_nn and img_sz_mismatch:
+							im0 = cv2.resize(im0, trg_dim, interpolation=cv2.INTER_NEAREST)
 						if im0.shape[0] <= trg_dim[1] and  im0.shape[1] <= trg_dim[0]:
 							im0 = cv2.resize(im0,trg_dim,interpolation = cv2.INTER_AREA)
-							apply_resizing = True
-						elif im0.shape[0] != trg_dim[1] or im0.shape[1] != trg_dim[0]:
+						elif img_sz_mismatch:
 							im0 = cv2.resize(im0, trg_dim, interpolation=cv2.INTER_CUBIC)
-							apply_resizing = True
 					if apply_resizing:
 						cv2.imwrite(dst_path, im0)
 					else:
