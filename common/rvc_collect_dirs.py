@@ -1,7 +1,15 @@
 #!/usr/bin/python3
-#collects dataq directories by either copy, move or symlink operation
+#collects data directories by either copy, move or symlink operation
+# this can be usefull to join subfolder trees into one folder
+# the --template_dir call can be used to untangle result files into the original folder structure
+# example for sintel files (which contain doublicate filenames in different folders) scaled to a fixed size:
+# --src ./test --dst_root ./onefolder --type copy_files --collapse_depth 4 --collapse_char - --fix_dim 1216x352
+# results can be mapped back with:
+# --src ./onefolder --template_dir ./test --dst_root ./onefolder2 --type copy_files --collapse_depth 4 --collapse_char - --fix_dim 0x0
 
 import argparse, os, sys, subprocess, glob, itertools, shutil
+import cv2
+from itertools import chain
 
 #creates a symbolic link / junction at dst pointing at directory src
 def unpriv_symb_link(src, dst):
@@ -56,7 +64,7 @@ def get_trg_dir_name(path):
 	ignore_dirs = ["test", "image", "leftImg"]
 	return [d for d in path.replace('\\','/').split('/') if not any([id for id in ignore_dirs if id in d])][-1]
 
-if __name__ == '__main__':
+def main(argv=sys.argv[1:]):
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--src", type=str, required=True, 
 		help="source folder(s) seperated by semicolon")
@@ -64,19 +72,47 @@ if __name__ == '__main__':
 		help="destination folder")
 	parser.add_argument("--collapse_depth", type=int, default=0,
 		help="automatically collapses directory structure to use only leaf subfolder up to depth collapse_depth")
+	parser.add_argument('--collapse_char', type=str, default=None,
+						help="puts files in dst_root, collapse_char is used to create a unique filename.")
 	parser.add_argument("--type", default='dryrun', choices=('symlink', 'copy', 'move', 'copy_files', 'move_files', 'dryrun', 'dryrun_files', 'dryrun_symlink'),
 		help="type of collection operation; possible values: copy, move, copy_files, move_files and symlink ; *_files will use a single dst subfolder")
-	args = parser.parse_args()
+	parser.add_argument("--template_dir", type=str, default=None,
+						help="apply collection op to files found in template folder structure; also rearrange to fit template")
+	parser.add_argument("--fix_dim", type=str, default=None,
+						help="Resize images to this dimension in WxH (e.g. 640x480); use 0x0 to read and apply template_dir file dims")
+	args = parser.parse_args(argv)
 	dst_real = fix_folder_path(args.dst_root)
-	num_collected = 0
+	num_collected_total = 0
 	all_srcs = args.src.split(';')
 	if "dryrun" in args.type:
 		print("No action; showing dryrun results only. Restart script with a different --type to execute.")
+
 	for src in all_srcs:
+		num_collected = 0
 		glob_sel = "*.*"
 		if '*' in src:
 			glob_sel = src.replace('\\','/').split('/')[-1]
 		src_dir = fix_folder_path(src)
+		templ_mapping = None
+		if not args.template_dir is None:
+			templ_subdirs = list_subdirs(args.template_dir, depth=args.collapse_depth)
+			templ_files = list(chain(*[recursive_glob(fix_folder_path(s), "*.*") for s in templ_subdirs]))
+			templ_files = [t.replace('\\', '/') for t in templ_files]
+			path_templ_root = src_dir.split('/')
+			templ_mapping = {}
+			for f in templ_files:
+				path_f = f.split('/')
+				rel_p = '/'.join(path_f[len(path_templ_root):])
+				if not args.collapse_char is None:
+					templ_f = args.collapse_char.join(path_f[len(path_templ_root):])
+				else:
+					templ_f = path_f[-1]
+				templ_mapping[templ_f] = rel_p
+			if len(templ_mapping) != len(templ_files):
+				print("Warning: template dir contains multiple files with the same file name. Use a correct collapse_char option!")
+				continue
+		if not args.fix_dim is None:
+			args.fix_dim = [int(d) for d in args.fix_dim.split('x')]
 		if dst_real in src_dir:
 			print("Warning: your destination root directory "+dst_real+" is a parent folder of your src. \n Skipping src dir "+ src_dir)
 			continue
@@ -100,27 +136,60 @@ if __name__ == '__main__':
 				src_files = [src_real]
 				
 			dst_folder = dst_real
-			if not skip_subfolder:
-				dst_folder = fix_folder_path(os.path.join(dst_real,trg_dir1))
+			if args.collapse_char is None and not skip_subfolder:
+				dst_folder = fix_folder_path(dst_real+ '/' + trg_dir1)
 			for src_file in src_files:
-				if not skip_subfolder and os.path.isdir(src_file) and os.path.isdir(dst_folder):
-					print("Warning: directory "+dst_folder+ " already exists; skipping!")
+				dst_path = dst_folder
+				tmpl_file = None
+				if not templ_mapping is None:
+					fname = os.path.basename(src_file)
+					if not fname in templ_mapping:
+						continue
+					tmpl_file = os.path.realpath(args.template_dir + '/' + templ_mapping[fname])
+					dst_path = dst_real + '/' + templ_mapping[fname]
+				elif not args.collapse_char is None:
+					path_root = src_real.split('/')
+					path_src = src_file.replace('\\', '/').split('/')
+					dst_path = dst_folder+'/'+args.collapse_char.join(path_src[len(path_root):])
+				if not skip_subfolder and os.path.isdir(src_file) and os.path.isdir(dst_path):
+					print("Warning: directory "+dst_path+ " already exists; skipping!")
 					continue
 				num_collected += 1
 				if args.type == "symlink":
-					unpriv_symb_link(src_file, dst_folder)
+					unpriv_symb_link(src_file, dst_path)
 				elif "dryrun" in args.type:
-					print("collecting %s to %s"%(src_file, dst_folder))
+					print("collecting %s to %s"%(src_file, dst_path))
 				else:
-					if skip_subfolder:
-						parent_dir = dst_folder
+					if skip_subfolder and args.collapse_char is None:
+						parent_dir = dst_path
 					else:
-						parent_dir = os.path.dirname(dst_folder)
+						parent_dir = os.path.dirname(dst_path)
 					if not os.path.exists(parent_dir):
 						os.makedirs(parent_dir)
-					shutil.copy2(src_file, dst_folder)
+					apply_resizing = False
+					if args.fix_dim:
+						im0 = cv2.imread(src_file)
+						trg_dim = (args.fix_dim[0],args.fix_dim[1])
+						if trg_dim[0] == 0:
+							im1 = cv2.imread(tmpl_file)
+							trg_dim = (im1.shape[1], im1.shape[0])
+						if im0.shape[0] <= trg_dim[1] and  im0.shape[1] <= trg_dim[0]:
+							im0 = cv2.resize(im0,trg_dim,interpolation = cv2.INTER_AREA)
+							apply_resizing = True
+						elif im0.shape[0] != trg_dim[1] or im0.shape[1] != trg_dim[0]:
+							im0 = cv2.resize(im0, trg_dim, interpolation=cv2.INTER_CUBIC)
+							apply_resizing = True
+					if apply_resizing:
+						cv2.imwrite(dst_path, im0)
+					else:
+						shutil.copy2(src_file, dst_path)
 					if "move" in args.type and os.path.isfile(src_file):
 						os.remove(src_file) #TODO: cleanup empty folders as well
 						
-		print("Collection finished after %i items."%num_collected)
+		print("Collection for "+src+" finished after %i items."%num_collected)
+		num_collected_total +=  num_collected
+	if len(all_srcs) > 1:
+		print("Total number of items collected: %i" % num_collected_total)
 						
+if __name__ == '__main__':
+	sys.exit(main())
