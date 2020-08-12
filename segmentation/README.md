@@ -84,7 +84,8 @@ You can create a single directory with all files for prediction:
    export RVC_TEST_SET_COLLECT_TYPE=copy_files
 ```
    
-Your results can be split and remapped using the common/remap_coco.py script
+Your results can be split and remapped using the common/remap_coco.py script.
+
 The submission format is the COCO panoptic results format: https://cocodataset.org/#format-results
 
 Submit the zipped panoptic submission to each individual leaderboard:
