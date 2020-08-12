@@ -78,7 +78,7 @@ Here are the upload links for each of the segmentation tasks:
 ### Panoptic Segmentation Task ###
 Use test_set_pano.sh to download/validate your benchmarking frames. 
 
-You can create a single directory with all files for prediction:
+You can call the same script to create a single directory with all files for prediction:
 ```
    export RVC_TEST_SET_COLLECT_DIR=/path/for/prediction/input/folder
    export RVC_TEST_SET_COLLECT_TYPE=copy_files
