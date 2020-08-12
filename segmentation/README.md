@@ -76,6 +76,13 @@ Here are the upload links for each of the segmentation tasks:
 - WildDash2: https://wilddash.cc/challenges/submissions
 
 ### Panoptic Segmentation Task ###
+Use test_set_pano.sh to download/validate your benchmarking frames. 
+You can create a single directory with all files for prediction:
+   export RVC_TEST_SET_COLLECT_DIR=/path/for/prediction/input/folder
+   export RVC_TEST_SET_COLLECT_TYPE=copy_files
+Your results can be split and remapped using the common/remap_coco.py script
+The submission format is the COCO panoptic results format: https://cocodataset.org/#format-results
+Submit the zipped panoptic submission to each individual leaderboard:
 - COCO: https://competitions.codalab.org/competitions/25386#learn_the_details
 - Cityscapes: https://www.cityscapes-dataset.com/submit/
 - MVD: https://codalab.mapillary.com/competitions/42
