@@ -94,3 +94,5 @@ Submit the zipped panoptic submission to each individual leaderboard:
 - MVD: https://codalab.mapillary.com/competitions/42
 - VIPER: https://playing-for-benchmarks.org/submissions/my/
 - WildDash: https://wilddash.cc/challenges/submissions
+
+Some notes: MVD expects category ids in the range [1;65] where "bird" has category_id 1 and there is no unlabeled label. VIPER requires the file_name entry to be the same filename as found in the testset (png instead of jpg ext.). 
