@@ -103,7 +103,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/wd2_pano.rvc_val.json" ]; then
                         --output $RVC_DATA_TRG_DIR/wd2_pano.rvc_val.json
 fi
 
-if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_train.json" ]; then
+if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_val.json" ]; then
   python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_val.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
                         --mapping_row cityscapes_pano_name \
@@ -113,7 +113,7 @@ if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_train.json" ]; then
                         --output $RVC_DATA_TRG_DIR/cs_pano.rvc_val.json
 fi
 
-if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_val.json" ]; then
+if [ ! -f "$RVC_DATA_SRC_DIR/cs_pano.rvc_train.json" ]; then
   python3 $RVC_OBJ_DET_SCRIPT_DIR/../common/remap_coco.py --input $RVC_DATA_SRC_DIR/cityscapes/panoptic/cityscapes_panoptic_train.json \
                         --mapping $RVC_OBJ_DET_SCRIPT_DIR/pano_mapping.csv \
                         --mapping_row cityscapes_pano_name \
