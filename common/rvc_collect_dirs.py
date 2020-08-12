@@ -82,6 +82,8 @@ def main(argv=sys.argv[1:]):
 						help="Resize images to this dimension in WxH (e.g. 640x480); use 0x0 to read and apply template_dir file dims")
 	parser.add_argument("--fix_ext", type=str, default=None,
 						help="Change image file extension (e.g. jpg)")
+	parser.add_argument("--fix_chan", type=int, default=-1,
+						help="Fix number of channels for images (e.g. 1 for result label masks/depth values)")
 	parser.add_argument("--inter_nn", action='store_true',
 						help="Use Nearest Neighbor Interpolation for scaling (e.g. for result label masks/depth values)")
 	args = parser.parse_args(argv)
@@ -176,7 +178,12 @@ def main(argv=sys.argv[1:]):
 						dst_path = dst_path[:dst_path.rfind('.')]+args.fix_ext
 						apply_resizing = True
 					if args.fix_dim or apply_resizing:
-						im0 = cv2.imread(src_file)
+						if args.fix_chan == 1:
+							im0 = cv2.imread(src_file, cv2.IMREAD_ANYDEPTH)
+						elif args.fix_chan == 3:
+							im0 = cv2.imread(src_file, cv2.IMREAD_COLOR)
+						else:
+							im0 = cv2.imread(src_file)
 						trg_dim = (args.fix_dim[0],args.fix_dim[1])
 						if trg_dim[0] == 0:
 							im1 = cv2.imread(tmpl_file)
