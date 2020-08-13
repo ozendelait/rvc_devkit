@@ -86,7 +86,7 @@ You can call the same script to create a single directory with all files for pre
    
 Your results can be split and remapped using the common/remap_coco.py script.
 
-The submission format is the COCO panoptic results format: https://cocodataset.org/#format-results
+The submission format for each benchmark is the COCO panoptic results format: https://cocodataset.org/#format-results
 
 Submit the zipped panoptic submission to each individual leaderboard:
 - COCO: https://competitions.codalab.org/competitions/25386#learn_the_details
@@ -95,4 +95,4 @@ Submit the zipped panoptic submission to each individual leaderboard:
 - VIPER: https://playing-for-benchmarks.org/submissions/my/
 - WildDash: https://wilddash.cc/challenges/submissions
 
-Some notes: MVD expects category ids in the range [1;65] where "bird" has category_id 1 and there is no unlabeled label. VIPER requires the file_name entry to be the same filename as found in the testset (png instead of jpg ext.). 
+Some notes: MVD expects category ids in the range [1;65] where "bird" has category_id 1 and there is no unlabeled label. VIPER requires the "file_name" entry to be the same filename as found in the testset (.png instead of jpg ext.). 
