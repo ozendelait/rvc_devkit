@@ -9,6 +9,7 @@
 
 import argparse, os, sys, subprocess, glob, itertools, shutil
 import cv2
+import numpy as np
 from itertools import chain
 
 #creates a symbolic link / junction at dst pointing at directory src
@@ -63,6 +64,13 @@ def fix_folder_path(path):
 def get_trg_dir_name(path):
 	ignore_dirs = ["test", "image", "leftImg"]
 	return [d for d in path.replace('\\','/').split('/') if not any([id for id in ignore_dirs if id in d])][-1]
+
+def float_to_uint16(im0, scale_factor=256.0):
+	im0 = im0 * scale_factor
+	im0[im0 < 0] = 0
+	im0[im0 > 65534] = 65534
+	im0[np.isnan(im0)] = 65535  # handle invalids
+	return im0.astype(np.uint16)
 
 def main(argv=sys.argv[1:]):
 	parser = argparse.ArgumentParser()
@@ -183,7 +191,13 @@ def main(argv=sys.argv[1:]):
 						dst_path = dst_path[:dst_path.rfind('.')]+args.fix_ext
 						apply_resizing = True
 					if args.fix_dim or apply_resizing:
-						if args.fix_chan == 1:
+						if src_file.endswith('.npz'): #floats *256 -> uint 16bit == KITTI depth scale
+							im0 = np.load(src_file)
+							if isinstance(im0,dict) and 'depth' in im0: #loads output of packnet-sfm correctly
+								im0 = im0['depth']
+							if im0.dtype == np.float32:
+								im0 = float_to_uint16(im0, 256.0)
+						elif args.fix_chan == 1:
 							im0 = cv2.imread(src_file, cv2.IMREAD_ANYDEPTH)
 						elif args.fix_chan == 3:
 							im0 = cv2.imread(src_file, cv2.IMREAD_COLOR)
