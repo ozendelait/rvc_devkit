@@ -149,6 +149,8 @@ The resulting archives must be submitted to the respective benchmarks:
 * [Middlebury](http://vision.middlebury.edu/flow/submit/)
 * [VIPER](https://playing-for-benchmarks.org/submissions/my/)
 
+For VIPER submission use the [VIPER toolkit](https://github.com/srrichter/viper) script [prepare_submission.py](https://github.com/srrichter/viper/blob/master/prepare_submission.py) which creates a submission from a folder with results as .flo files ( [details](https://github.com/srrichter/viper/blob/master/EVALUATION.md#optical-flow) ).
+
 To signify that your method is part of a submission to the Robust Vision
 Challenge, please add the postfix ``_RVC`` to your algorithm name for all
 submissions.

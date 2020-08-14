@@ -94,6 +94,8 @@ def main(argv=sys.argv[1:]):
 		print("No action; showing dryrun results only. Restart script with a different --type to execute.")
 	if not args.fix_ext is None and args.fix_ext[0] != '.':
 		args.fix_ext = '.'+args.fix_ext
+	if not args.template_dir is None:
+		args.template_dir = (args.template_dir.replace('\\','/')+'/').replace('//','/')
 	for src in all_srcs:
 		num_collected = 0
 		glob_sel = "*.*"
@@ -107,15 +109,16 @@ def main(argv=sys.argv[1:]):
 				templ_subdirs = [args.template_dir]
 			templ_files = list(chain(*[recursive_glob(fix_folder_path(s), "*.*") for s in templ_subdirs]))
 			templ_files = [t.replace('\\', '/') for t in templ_files]
-			path_templ_root = [s for s in src_dir.split('/') if len(s) > 0]
+			path_templ_root = [p.strip() for p in args.template_dir.split('/') if len(p.strip()) > 0]
 			templ_mapping = {}
 			for f in templ_files:
-				path_f = [s for s in f.split('/') if len(s) > 0]
+				path_f = [p.strip() for p in f.split('/') if len(p.strip()) > 0]
 				rel_p = '/'.join(path_f[len(path_templ_root):])
 				if not args.collapse_char is None:
 					templ_f = args.collapse_char.join(path_f[len(path_templ_root):])
 				else:
 					templ_f = path_f[-1]
+				templ_f = os.path.splitext(templ_f)[0]
 				templ_mapping[templ_f] = rel_p
 			if len(templ_mapping) != len(templ_files):
 				print("Warning: template dir contains multiple files with the same file name. Use a correct collapse_char option!")
@@ -151,7 +154,7 @@ def main(argv=sys.argv[1:]):
 				dst_path = dst_folder
 				tmpl_file = None
 				if not templ_mapping is None:
-					fname = os.path.basename(src_file)
+					fname = os.path.splitext(os.path.basename(src_file))[0]
 					if not fname in templ_mapping:
 						continue
 					tmpl_file = os.path.realpath(args.template_dir + '/' + templ_mapping[fname])
