@@ -103,12 +103,14 @@ def main(argv=sys.argv[1:]):
 		templ_mapping = None
 		if not args.template_dir is None:
 			templ_subdirs = list_subdirs(args.template_dir, depth=args.collapse_depth)
+			if len(templ_subdirs) == 0:
+				templ_subdirs = [args.template_dir]
 			templ_files = list(chain(*[recursive_glob(fix_folder_path(s), "*.*") for s in templ_subdirs]))
 			templ_files = [t.replace('\\', '/') for t in templ_files]
-			path_templ_root = src_dir.split('/')
+			path_templ_root = [s for s in src_dir.split('/') if len(s) > 0]
 			templ_mapping = {}
 			for f in templ_files:
-				path_f = f.split('/')
+				path_f = [s for s in f.split('/') if len(s) > 0]
 				rel_p = '/'.join(path_f[len(path_templ_root):])
 				if not args.collapse_char is None:
 					templ_f = args.collapse_char.join(path_f[len(path_templ_root):])
