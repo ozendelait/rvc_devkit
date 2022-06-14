@@ -6,7 +6,7 @@
 import os, sys, argparse, json, csv, time
 
 #boxable
-#join_data = ["oid_boxable_leaf","obj365_boxable_name","coco_boxable_name","mvd_boxable_name"]
+#join_data = ["oid_boxable_leaf","coco_boxable_name","mvd_boxable_name"]
 #instance
 #join_data = ["oid_inst_leaf", "coco_inst_id_name", "cityscapes_inst_id_name", "mvd_inst_id_name", 'scannet_pano_id_name', 'viper_inst_id_name', 'cityscapes_inst_id_name', 'wilddash_inst_id_name']
 #panoptic

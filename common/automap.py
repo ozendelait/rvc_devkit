@@ -318,7 +318,7 @@ def wikidata_from_name(name, context = None):
         d0 = get_wikidata(sparql_query1 % label_check, context=context, retries=max_retries_wikidata)
     return d0
 
-unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid','obj365_boxable_name',
+unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid',
                     'coco_pano_id','mvd_pano_id','cityscapes_id', 'mvd_name','cityscapes_name',
                     'scannet_name', 'ade20k_id', 'wilddash_name', 'wilddash_pano_id',
                     'viper_id', 'viper_name', 'viper_inst_id', 'viper_pano_id', 'ade20k_name']
@@ -413,25 +413,6 @@ def main(argv=sys.argv[1:]):
                     continue
                 add_entry.update(f_wd)
                 joined_label_space.setdefault(key, {}).append(add_entry)
-        elif isinstance(appendf, dict) and "Person" in appendf:
-            #obj365 file
-            for key, vals in appendf.items():
-                if key in check_dubl['obj365_boxable_name']:
-                    continue
-                fitting_key = unify_namings(key)
-                if "wordnet_pwn30" in vals and vals["wordnet_pwn30"] in check_dubl['wordnet_pwn30']:
-                    fitting_key = check_dubl['wordnet_pwn30'][vals["wordnet_pwn30"]]
-                elif not fitting_key in joined_label_space and "wordnet_name" in vals and unify_namings(vals["wordnet_name"]) in joined_label_space:
-                    fitting_key = unify_namings(vals["wordnet_name"])
-                if not fitting_key in joined_label_space:
-                    print("Adding: "+fitting_key+ " for "+ key + "("+vals.get("wordnet_gloss",'')+")")
-                    joined_label_space[fitting_key] = {'obj365_boxable_name':key}
-                trg_entry = joined_label_space[fitting_key]
-                if not check_for_dublicates(fitting_key, vals, trg_entry):
-                    continue
-                if "wordnet_pwn30" in vals:
-                    trg_entry["wordnet_pwn30"] = vals["wordnet_pwn30"]
-                trg_entry['obj365_boxable_name'] = key
         elif isinstance(appendf, dict) and "labels" in appendf and "id_prefix" in appendf:
             #mapillary-style json
             id_param = appendf["id_prefix"]+"_id"

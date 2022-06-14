@@ -12,7 +12,7 @@ def join_info(old_info, add_info = {}):
         add_info = old_info
     else:
         contributor = old_info.get('contributor','') +"; "+ add_info.get('contributor','')
-    ret_info = {"year":2020, "version":"0.1", "description": 'Joint dataset for RVC, see element "datasets" for included datasets; original root element "licenses" is added to "info"; individual image entries contain a ds_id which references the original dataset within this table. The license field refers to the original license idx.',
+    ret_info = {"year":2022, "version":"0.2", "description": 'Joint dataset for RVC, see element "datasets" for included datasets; original root element "licenses" is added to "info"; individual image entries contain a ds_id which references the original dataset within this table. The license field refers to the original license idx.',
                 "contributor": contributor,
                 "datasets": old_info.get("datasets",[])+[add_info],
                 "url":"robustvision.net", "date_created": str(datetime.datetime.now())}

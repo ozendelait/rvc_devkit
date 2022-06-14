@@ -22,7 +22,6 @@
     },
     "adhesive_tape": {
         "freebase_mid": "/m/03m3vtv",
-        "obj365_boxable_name": "Tape",
         "oid_boxable_leaf": "/m/03m3vtv",
         "oid_inst_leaf": "/m/03m3vtv",
         "oid_name": "Adhesive tape",
@@ -35,7 +34,6 @@
     },
     "air_conditioner": {
         "freebase_mid": "/m/01127",
-        "obj365_boxable_name": "Air Conditioner",
         "parent_name": "home_appliance",
         "wikidata_desc": "a device used to cool air",
         "wikidata_name": "air conditioner",
@@ -62,7 +60,6 @@
         "coco_pano_id": 5,
         "coco_pano_name": "airplane",
         "freebase_mid": "/m/0cmf2",
-        "obj365_boxable_name": "Airplane",
         "oid_boxable_leaf": "/m/0cmf2",
         "oid_inst_leaf": "/m/0cmf2",
         "oid_name": "Airplane",
@@ -103,7 +100,6 @@
     },
     "ambulance": {
         "freebase_mid": "/m/012n7d",
-        "obj365_boxable_name": "Ambulance",
         "oid_boxable_leaf": "/m/012n7d",
         "oid_inst_leaf": "/m/012n7d",
         "oid_name": "Ambulance",
@@ -116,7 +112,6 @@
     },
     "american_football": {
         "freebase_mid": "/m/01226z",
-        "obj365_boxable_name": "American Football",
         "oid_boxable_leaf": "/m/01226z",
         "oid_inst_leaf": "/m/01226z",
         "oid_name": "Football",
@@ -155,7 +150,6 @@
     },
     "antelope": {
         "freebase_mid": "/m/0czz2",
-        "obj365_boxable_name": "Antelope",
         "oid_boxable_leaf": "/m/0czz2",
         "oid_name": "Antelope",
         "parent_name": "ground_animal",
@@ -172,7 +166,6 @@
         "coco_pano_name": "apple",
         "context": "fruit",
         "freebase_mid": "/m/014j1m",
-        "obj365_boxable_name": "Apple",
         "oid_boxable_leaf": "/m/014j1m",
         "oid_inst_leaf": "/m/014j1m",
         "oid_name": "Apple",
@@ -249,7 +242,6 @@
         "wordnet_pwn30": "n02762044"
     },
     "avocado": {
-        "obj365_boxable_name": "Avocado",
         "parent_name": "fruit",
         "wikidata_desc": "fruit, use Q37153 for the species",
         "wikidata_name": "avocado",
@@ -262,7 +254,6 @@
         "ade20k_name": "awning",
         "ade20k_names": "awning;sunshade;sunblind",
         "freebase_mid": "/m/07vvqb",
-        "obj365_boxable_name": "Awning",
         "parent_name": "canopy",
         "wikidata_desc": "secondary covering attached to the exterior wall of a building",
         "wikidata_name": "awning",
@@ -286,7 +277,6 @@
         "coco_pano_id": 27,
         "coco_pano_name": "backpack",
         "freebase_mid": "/m/01940j",
-        "obj365_boxable_name": "Backpack",
         "oid_boxable_leaf": "/m/01940j",
         "oid_inst_leaf": "/m/01940j",
         "oid_name": "Backpack",
@@ -339,7 +329,6 @@
         "coco_pano_name": "sports ball",
         "context": "round",
         "freebase_mid": "/m/018xm",
-        "obj365_boxable_name": "Other Balls",
         "oid_name": "Ball",
         "parent_name": "sports_equipment",
         "wikidata_desc": "round object",
@@ -367,7 +356,6 @@
         "coco_pano_name": "banana",
         "context": "fruit",
         "freebase_mid": "/m/09qck",
-        "obj365_boxable_name": "Banana",
         "oid_boxable_leaf": "/m/09qck",
         "oid_inst_leaf": "/m/09qck",
         "oid_name": "Banana",
@@ -407,7 +395,6 @@
     },
     "baozi": {
         "freebase_mid": "/m/0659_7",
-        "obj365_boxable_name": "Baozi",
         "parent_name": "bread",
         "wikidata_desc": "filled bun",
         "wikidata_name": "baozi",
@@ -427,7 +414,6 @@
     },
     "bar_soap": {
         "freebase_mid": "/m/0fw68",
-        "obj365_boxable_name": "Soap",
         "parent_name": "cleaning_products",
         "wikidata_desc": "salt of fatty acids (long-chain carboxylic acids), used for washing and cleaning",
         "wikidata_name": "soap",
@@ -437,7 +423,6 @@
     },
     "barbell": {
         "freebase_mid": "/m/03_163",
-        "obj365_boxable_name": "Barbell",
         "parent_name": "sports_equipment",
         "wikidata_desc": "exercise equipment used in weight training",
         "wikidata_name": "barbell",
@@ -462,7 +447,6 @@
         "ade20k_name": "barrel",
         "ade20k_names": "barrel;cask",
         "freebase_mid": "/m/02zn6n",
-        "obj365_boxable_name": "Barrel/bucket",
         "oid_boxable_leaf": "/m/02zn6n",
         "oid_inst_leaf": "/m/02zn6n",
         "oid_name": "Barrel",
@@ -491,7 +475,6 @@
     },
     "baseball": {
         "freebase_mid": "/m/03v6wp",
-        "obj365_boxable_name": "Baseball",
         "parent_name": "ball",
         "wikidata_desc": "ball used in the sport of baseball",
         "wikidata_name": "baseball",
@@ -505,7 +488,6 @@
         "coco_pano_id": 39,
         "coco_pano_name": "baseball bat",
         "freebase_mid": "/m/03g8mr",
-        "obj365_boxable_name": "Baseball Bat",
         "oid_boxable_leaf": "/m/03g8mr",
         "oid_inst_leaf": "/m/03g8mr",
         "oid_name": "Baseball bat",
@@ -522,7 +504,6 @@
         "coco_pano_id": 40,
         "coco_pano_name": "baseball glove",
         "freebase_mid": "/m/03grzl",
-        "obj365_boxable_name": "Baseball Glove",
         "oid_boxable_leaf": "/m/03grzl",
         "oid_inst_leaf": "/m/03grzl",
         "oid_name": "Baseball glove",
@@ -538,7 +519,6 @@
         "ade20k_name": "basket",
         "ade20k_names": "basket;handbasket",
         "freebase_mid": "/m/01z562",
-        "obj365_boxable_name": "Bakset",
         "parent_name": "container",
         "wikidata_desc": "container which is traditionally constructed from stiff fibres",
         "wikidata_name": "basket",
@@ -548,7 +528,6 @@
     },
     "basketball": {
         "freebase_mid": "/m/018w8",
-        "obj365_boxable_name": "Basketball",
         "parent_name": "ball",
         "wikidata_desc": "team sport played on a court with baskets on either end",
         "wikidata_name": "basketball",
@@ -593,7 +572,6 @@
         "ade20k_name": "bathtub",
         "ade20k_names": "bathtub;bathing;tub;bath;tub",
         "freebase_mid": "/m/03dnzn",
-        "obj365_boxable_name": "Bathtub",
         "oid_boxable_leaf": "/m/03dnzn",
         "oid_name": "Bathtub",
         "parent_name": "container",
@@ -625,7 +603,6 @@
         "coco_pano_name": "bear",
         "context": "mammal",
         "freebase_mid": "/m/01dws",
-        "obj365_boxable_name": "Bear",
         "oid_name": "Bear",
         "parent_name": "carnivore",
         "wikidata_desc": "family of mammals",
@@ -655,7 +632,6 @@
         "coco_pano_id": 65,
         "coco_pano_name": "bed",
         "freebase_mid": "/m/03ssj5",
-        "obj365_boxable_name": "Bed",
         "oid_name": "Bed",
         "parent_name": "furniture",
         "scannet_id": 4,
@@ -727,7 +703,6 @@
     "belt": {
         "context": "waist",
         "freebase_mid": "/m/0176mf",
-        "obj365_boxable_name": "Belt",
         "oid_boxable_leaf": "/m/0176mf",
         "oid_inst_leaf": "/m/0176mf",
         "oid_name": "Belt",
@@ -754,7 +729,6 @@
         "mvd_inst_id": 33,
         "mvd_name": "object--bench",
         "mvd_pano_id": 33,
-        "obj365_boxable_name": "Bench",
         "oid_boxable_leaf": "/m/0cvnqh",
         "oid_name": "Bench",
         "parent_name": "furniture",
@@ -784,7 +758,6 @@
         "mvd_inst_id": 52,
         "mvd_name": "object--vehicle--bicycle",
         "mvd_pano_id": 52,
-        "obj365_boxable_name": "Bicycle",
         "oid_boxable_leaf": "/m/0199g",
         "oid_name": "Bicycle",
         "parent_name": "vehicle",
@@ -907,7 +880,6 @@
     },
     "billiard_ball": {
         "freebase_mid": "/m/02x8n6",
-        "obj365_boxable_name": "Billards",
         "parent_name": "ball",
         "wikidata_desc": "ball used in cue sports",
         "wikidata_name": "billiard ball",
@@ -932,7 +904,6 @@
     },
     "binoculars": {
         "freebase_mid": "/m/0lt4_",
-        "obj365_boxable_name": "Binoculars",
         "oid_boxable_leaf": "/m/0lt4_",
         "oid_inst_leaf": "/m/0lt4_",
         "oid_name": "Binoculars",
@@ -956,7 +927,6 @@
         "mvd_inst_id": 0,
         "mvd_name": "animal--bird",
         "mvd_pano_id": 0,
-        "obj365_boxable_name": "Wild Bird",
         "oid_name": "Bird",
         "parent_name": "animal",
         "wikidata_desc": "class of tetrapods",
@@ -981,7 +951,6 @@
     },
     "blender": {
         "freebase_mid": "/m/02pjr4",
-        "obj365_boxable_name": "Blender",
         "oid_boxable_leaf": "/m/02pjr4",
         "oid_name": "Blender",
         "parent_name": "mixer",
@@ -1005,7 +974,6 @@
     },
     "board_eraser": {
         "freebase_mid": "/m/0g9_drw",
-        "obj365_boxable_name": "Board Eraser",
         "parent_name": "eraser",
         "wikidata_name": "Chalkboard eraser",
         "wikidata_qid": "Q2553927",
@@ -1028,7 +996,6 @@
         "mvd_inst_id": 53,
         "mvd_name": "object--vehicle--boat",
         "mvd_pano_id": 53,
-        "obj365_boxable_name": "Boat",
         "oid_name": "Boat",
         "parent_name": "watercraft",
         "viper_inst_id": 31,
@@ -1070,7 +1037,6 @@
         "coco_pano_id": 84,
         "coco_pano_name": "book",
         "freebase_mid": "/m/0bt_c3",
-        "obj365_boxable_name": "Book",
         "oid_boxable_leaf": "/m/0bt_c3",
         "oid_inst_leaf": "/m/0bt_c3",
         "oid_name": "Book",
@@ -1103,7 +1069,6 @@
     "boot": {
         "context": "footwear",
         "freebase_mid": "/m/01b638",
-        "obj365_boxable_name": "Boots",
         "oid_boxable_leaf": "/m/01b638",
         "oid_inst_leaf": "/m/01b638",
         "oid_name": "Boot",
@@ -1134,7 +1099,6 @@
         "coco_pano_id": 44,
         "coco_pano_name": "bottle",
         "freebase_mid": "/m/04dr76w",
-        "obj365_boxable_name": "Bottle",
         "oid_boxable_leaf": "/m/04dr76w",
         "oid_inst_leaf": "/m/04dr76w",
         "oid_name": "Bottle",
@@ -1169,7 +1133,6 @@
     },
     "bow_tie": {
         "freebase_mid": "/m/0286h_",
-        "obj365_boxable_name": "Bow Tie",
         "parent_name": "tie",
         "wikidata_desc": "variety of necktie",
         "wikidata_name": "bow tie",
@@ -1184,7 +1147,6 @@
         "coco_pano_name": "bowl",
         "context": "tableware",
         "freebase_mid": "/m/04kkgm",
-        "obj365_boxable_name": "Bowl/Basin",
         "oid_boxable_leaf": "/m/04kkgm",
         "oid_inst_leaf": "/m/04kkgm",
         "oid_name": "Bowl",
@@ -1208,7 +1170,6 @@
         "ade20k_name": "box",
         "ade20k_names": "box",
         "freebase_mid": "/m/025dyy",
-        "obj365_boxable_name": "Storage box",
         "oid_boxable_leaf": "/m/025dyy",
         "oid_inst_leaf": "/m/025dyy",
         "oid_name": "Box",
@@ -1235,7 +1196,6 @@
     },
     "bracelet": {
         "freebase_mid": "/m/01llx7",
-        "obj365_boxable_name": "Bracelet",
         "parent_name": "jewelry",
         "wikidata_desc": "article worn around the wrist",
         "wikidata_name": "bracelet",
@@ -1256,7 +1216,6 @@
     },
     "bread": {
         "freebase_mid": "/m/09728",
-        "obj365_boxable_name": "Bread",
         "oid_boxable_leaf": "/m/09728",
         "oid_inst_leaf": "/m/09728",
         "oid_name": "Bread",
@@ -1301,7 +1260,6 @@
     },
     "briefcase": {
         "freebase_mid": "/m/0584n8",
-        "obj365_boxable_name": "Briefcase",
         "oid_boxable_leaf": "/m/0584n8",
         "oid_inst_leaf": "/m/0584n8",
         "oid_name": "Briefcase",
@@ -1319,7 +1277,6 @@
         "coco_pano_name": "broccoli",
         "context": "vegetable",
         "freebase_mid": "/m/0hkxq",
-        "obj365_boxable_name": "Broccoli",
         "oid_boxable_leaf": "/m/0hkxq",
         "oid_inst_leaf": "/m/0hkxq",
         "oid_name": "Broccoli",
@@ -1343,7 +1300,6 @@
         "wordnet_pwn30": "n02906175"
     },
     "broom": {
-        "obj365_boxable_name": "Broom",
         "parent_name": "tool",
         "wikidata_desc": "cleaning tool",
         "wikidata_name": "broom",
@@ -1365,7 +1321,6 @@
     },
     "brush": {
         "freebase_mid": "/m/02chd9",
-        "obj365_boxable_name": "Brush",
         "parent_name": "tool",
         "wikidata_desc": "tool with bristles, wire or other filaments, used for cleaning, grooming hair, make up, painting, surface finishing and for many other purposes",
         "wikidata_name": "brush",
@@ -1460,7 +1415,6 @@
         "mvd_inst_id": 54,
         "mvd_name": "object--vehicle--bus",
         "mvd_pano_id": 54,
-        "obj365_boxable_name": "Bus",
         "oid_boxable_leaf": "/m/01bjv",
         "oid_inst_leaf": "/m/01bjv",
         "oid_name": "Bus",
@@ -1492,7 +1446,6 @@
     },
     "butterfly": {
         "freebase_mid": "/m/0cyf8",
-        "obj365_boxable_name": "Buttefly",
         "oid_boxable_leaf": "/m/0cyf8",
         "oid_name": "Butterfly",
         "parent_name": "moths_and_butterflies",
@@ -1504,7 +1457,6 @@
     },
     "cabbage": {
         "freebase_mid": "/m/0fbw6",
-        "obj365_boxable_name": "Cabbage",
         "oid_boxable_leaf": "/m/0fbw6",
         "oid_inst_leaf": "/m/0fbw6",
         "oid_name": "Cabbage",
@@ -1522,7 +1474,6 @@
         "coco_pano_id": 188,
         "coco_pano_name": "cabinet-merged",
         "freebase_mid": "/m/01s105",
-        "obj365_boxable_name": "Cabinet/shelf",
         "oid_boxable_leaf": "/m/01s105",
         "oid_name": "Cabinetry",
         "parent_name": "furniture",
@@ -1541,7 +1492,6 @@
         "coco_pano_id": 61,
         "coco_pano_name": "cake",
         "freebase_mid": "/m/0fszt",
-        "obj365_boxable_name": "Cake",
         "oid_boxable_leaf": "/m/0fszt",
         "oid_inst_leaf": "/m/0fszt",
         "oid_name": "Cake",
@@ -1564,7 +1514,6 @@
     },
     "calculator": {
         "freebase_mid": "/m/024d2",
-        "obj365_boxable_name": "Calculator",
         "oid_name": "Calculator",
         "parent_name": "electrical_device",
         "wikidata_desc": "electronic device used to perform operations of arithmetic",
@@ -1575,7 +1524,6 @@
     },
     "camel": {
         "freebase_mid": "/m/01x_v",
-        "obj365_boxable_name": "Campel",
         "oid_boxable_leaf": "/m/01x_v",
         "oid_inst_leaf": "/m/01x_v",
         "oid_name": "Camel",
@@ -1588,7 +1536,6 @@
     },
     "camera": {
         "freebase_mid": "/m/0dv5r",
-        "obj365_boxable_name": "Camera",
         "oid_boxable_leaf": "/m/0dv5r",
         "oid_inst_leaf": "/m/0dv5r",
         "oid_name": "Camera",
@@ -1623,7 +1570,6 @@
     },
     "candle": {
         "freebase_mid": "/m/0c06p",
-        "obj365_boxable_name": "Candle",
         "oid_boxable_leaf": "/m/0c06p",
         "oid_inst_leaf": "/m/0c06p",
         "oid_name": "Candle",
@@ -1644,7 +1590,6 @@
     },
     "candy": {
         "freebase_mid": "/m/0gm28",
-        "obj365_boxable_name": "Candy",
         "oid_boxable_leaf": "/m/0gm28",
         "oid_name": "Candy",
         "parent_name": "food",
@@ -1691,7 +1636,6 @@
     },
     "cantaloupe": {
         "freebase_mid": "/m/0kpt_",
-        "obj365_boxable_name": "Hamimelon",
         "oid_name": "Cantaloupe",
         "parent_name": "fruit",
         "wikidata_desc": "variety of plants",
@@ -1721,7 +1665,6 @@
         "mvd_inst_id": 55,
         "mvd_name": "object--vehicle--car",
         "mvd_pano_id": 55,
-        "obj365_boxable_name": "Car",
         "oid_name": "Car",
         "parent_name": "vehicle",
         "viper_inst_id": 24,
@@ -1793,7 +1736,6 @@
         "coco_pano_id": 57,
         "coco_pano_name": "carrot",
         "freebase_mid": "/m/0fj52s",
-        "obj365_boxable_name": "Carrot",
         "oid_boxable_leaf": "/m/0fj52s",
         "oid_inst_leaf": "/m/0fj52s",
         "oid_name": "Carrot",
@@ -1842,7 +1784,6 @@
         "coco_pano_id": 17,
         "coco_pano_name": "cat",
         "freebase_mid": "/m/01yrx",
-        "obj365_boxable_name": "Cat",
         "oid_boxable_leaf": "/m/01yrx",
         "oid_inst_leaf": "/m/01yrx",
         "oid_name": "Cat",
@@ -1927,7 +1868,6 @@
     },
     "cello": {
         "freebase_mid": "/m/01xqw",
-        "obj365_boxable_name": "Cello",
         "oid_boxable_leaf": "/m/01xqw",
         "oid_inst_leaf": "/m/01xqw",
         "oid_name": "Cello",
@@ -1951,7 +1891,6 @@
     },
     "chainsaw": {
         "freebase_mid": "/m/01j4z9",
-        "obj365_boxable_name": "Chainsaw",
         "oid_name": "Chainsaw",
         "parent_name": "tool",
         "wikidata_desc": "recurring tool",
@@ -1969,7 +1908,6 @@
         "coco_pano_id": 62,
         "coco_pano_name": "chair",
         "freebase_mid": "/m/01mzpv",
-        "obj365_boxable_name": "Chair",
         "oid_boxable_leaf": "/m/01mzpv",
         "oid_name": "Chair",
         "parent_name": "seating",
@@ -1997,7 +1935,6 @@
     },
     "cheese": {
         "freebase_mid": "/m/01nkt",
-        "obj365_boxable_name": "Cheese",
         "oid_name": "Cheese",
         "parent_name": "dairy_product",
         "wikidata_desc": "generic term for a diverse group of milk-based food products",
@@ -2021,7 +1958,6 @@
     "cherry": {
         "context": "fruit",
         "freebase_mid": "/m/0f8sw",
-        "obj365_boxable_name": "Cherry",
         "parent_name": "fruit",
         "wikidata_desc": "the fruit (for the best-known species see Q165137; or Q131517)",
         "wikidata_name": "cherry",
@@ -2048,7 +1984,6 @@
     },
     "chicken": {
         "freebase_mid": "/m/09b5t",
-        "obj365_boxable_name": "Chicken",
         "oid_boxable_leaf": "/m/09b5t",
         "oid_inst_leaf": "/m/09b5t",
         "oid_name": "Chicken",
@@ -2081,7 +2016,6 @@
     },
     "chopstick": {
         "freebase_mid": "/m/01_5g",
-        "obj365_boxable_name": "Chopsticks",
         "oid_boxable_leaf": "/m/01_5g",
         "oid_inst_leaf": "/m/01_5g",
         "oid_name": "Chopsticks",
@@ -2105,7 +2039,6 @@
         "wordnet_pwn30": "n03026626"
     },
     "cleaning_products": {
-        "obj365_boxable_name": "Cleaning Products",
         "parent_name": "dynamic",
         "wikidata_desc": "substance used to remove dirt or other contaminants",
         "wikidata_name": "cleaning product",
@@ -2122,7 +2055,6 @@
         "coco_pano_id": 85,
         "coco_pano_name": "clock",
         "freebase_mid": "/m/01x3z",
-        "obj365_boxable_name": "Clock",
         "oid_name": "Clock",
         "parent_name": "static",
         "wikidata_desc": "instrument that measures the passage of time",
@@ -2191,7 +2123,6 @@
     },
     "coconut": {
         "freebase_mid": "/m/0djtd",
-        "obj365_boxable_name": "Coconut",
         "oid_boxable_leaf": "/m/0djtd",
         "oid_name": "Coconut",
         "parent_name": "nut",
@@ -2230,7 +2161,6 @@
         "ade20k_name": "coffee table",
         "ade20k_names": "coffee;table;cocktail;table",
         "freebase_mid": "/m/078n6m",
-        "obj365_boxable_name": "Coffee Table",
         "oid_boxable_leaf": "/m/078n6m",
         "oid_name": "Coffee table",
         "parent_name": "table",
@@ -2242,7 +2172,6 @@
     },
     "coffeemaker": {
         "freebase_mid": "/m/07xyvk",
-        "obj365_boxable_name": "Coffee Machine",
         "oid_boxable_leaf": "/m/07xyvk",
         "oid_name": "Coffeemaker",
         "parent_name": "electrical_device",
@@ -2266,7 +2195,6 @@
     },
     "comb": {
         "freebase_mid": "/m/020sdj",
-        "obj365_boxable_name": "Comb",
         "parent_name": "dynamic",
         "wikidata_desc": "toothed device used for styling, cleaning and managing hair and scalp",
         "wikidata_name": "comb",
@@ -2276,7 +2204,6 @@
     },
     "compact_disc": {
         "freebase_mid": "/m/01www",
-        "obj365_boxable_name": "CD",
         "parent_name": "dynamic",
         "wikidata_desc": "optical disc used to store digital data",
         "wikidata_name": "Compact Disc",
@@ -2302,7 +2229,6 @@
         "coco_pano_id": 76,
         "coco_pano_name": "keyboard",
         "freebase_mid": "/m/01m2v",
-        "obj365_boxable_name": "Keyboard",
         "oid_boxable_leaf": "/m/01m2v",
         "oid_inst_leaf": "/m/01m2v",
         "oid_name": "Computer keyboard",
@@ -2341,7 +2267,6 @@
     },
     "construction_vehicle": {
         "freebase_mid": "/m/02gx17",
-        "obj365_boxable_name": "Machinery Vehicle",
         "parent_name": "vehicle",
         "wikidata_desc": "vehicles designed for executing construction tasks",
         "wikidata_name": "heavy equipment",
@@ -2380,7 +2305,6 @@
     },
     "cookie": {
         "freebase_mid": "/m/021mn",
-        "obj365_boxable_name": "Cookies",
         "oid_boxable_leaf": "/m/021mn",
         "oid_inst_leaf": "/m/021mn",
         "oid_name": "Cookie",
@@ -2413,7 +2337,6 @@
     },
     "corn": {
         "freebase_mid": "/m/0mgg8",
-        "obj365_boxable_name": "Corn",
         "parent_name": "food",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Zea",
@@ -2423,7 +2346,6 @@
     },
     "cosmetic": {
         "freebase_mid": "/m/014trl",
-        "obj365_boxable_name": "Cosmetics",
         "oid_name": "Cosmetics",
         "parent_name": "personal_care",
         "wikidata_desc": "substances used to enhance the appearance or odor of the human body",
@@ -2433,7 +2355,6 @@
         "wordnet_pwn30": "n03113152"
     },
     "cosmetics_mirror": {
-        "obj365_boxable_name": "Cosmetics Mirror",
         "parent_name": "cosmetic",
         "wikidata_desc": "portable case for makeup or facepowder, usually with a mirror in its lid",
         "wikidata_name": "compact",
@@ -2450,7 +2371,6 @@
         "coco_pano_id": 63,
         "coco_pano_name": "couch",
         "freebase_mid": "/m/0703r8",
-        "obj365_boxable_name": "Couch",
         "oid_boxable_leaf": "/m/0703r8",
         "oid_inst_leaf": "/m/0703r8",
         "oid_name": "Loveseat",
@@ -2509,7 +2429,6 @@
         "coco_inst_id": 21,
         "coco_pano_id": 21,
         "coco_pano_name": "cow",
-        "obj365_boxable_name": "Cow",
         "parent_name": "mammal",
         "wikidata_desc": "female cattle",
         "wikidata_name": "cow",
@@ -2531,7 +2450,6 @@
     },
     "crab": {
         "freebase_mid": "/m/0n28_",
-        "obj365_boxable_name": "Crab",
         "oid_boxable_leaf": "/m/0n28_",
         "oid_name": "Crab",
         "parent_name": "animal",
@@ -2542,7 +2460,6 @@
     },
     "crane": {
         "freebase_mid": "/m/01v50j",
-        "obj365_boxable_name": "Crane",
         "parent_name": "dynamic",
         "wikidata_desc": "type of machine",
         "wikidata_name": "crane",
@@ -2596,7 +2513,6 @@
         "wordnet_pwn30": "n07691650"
     },
     "crosswalk_sign": {
-        "obj365_boxable_name": "Crosswalk Sign",
         "parent_name": "traffic_sign_front",
         "wikidata_desc": "",
         "wikidata_name": "Crossing signs",
@@ -2628,7 +2544,6 @@
     "cucumber": {
         "context": "fruit",
         "freebase_mid": "/m/015x4r",
-        "obj365_boxable_name": "Cucumber",
         "oid_boxable_leaf": "/m/015x4r",
         "oid_inst_leaf": "/m/015x4r",
         "oid_name": "Cucumber",
@@ -2641,7 +2556,6 @@
     },
     "cue": {
         "freebase_mid": "/m/04p168",
-        "obj365_boxable_name": "Cue",
         "parent_name": "sports_equipment",
         "wikidata_desc": "Cue Stick",
         "wikidata_name": "cue stick",
@@ -2654,7 +2568,6 @@
         "coco_inst_id": 47,
         "coco_pano_id": 47,
         "coco_pano_name": "cup",
-        "obj365_boxable_name": "Cup",
         "parent_name": "container",
         "wikidata_desc": "open-top container used to hold liquids",
         "wikidata_name": "cup",
@@ -2700,7 +2613,6 @@
         "wordnet_pwn30": ""
     },
     "curling_stone": {
-        "obj365_boxable_name": "Curling",
         "parent_name": "sports_equipment",
         "wikidata_desc": "",
         "wikidata_name": "curling stone",
@@ -2741,7 +2653,6 @@
     },
     "cutting_board": {
         "freebase_mid": "/m/02pdsw",
-        "obj365_boxable_name": "Cutting/chopping Board",
         "oid_boxable_leaf": "/m/02pdsw",
         "oid_name": "Cutting board",
         "parent_name": "kitchen_utensil",
@@ -2752,7 +2663,6 @@
         "wordnet_pwn30": "n03025513"
     },
     "cymbal": {
-        "obj365_boxable_name": "Cymbal",
         "parent_name": "musical_instrument",
         "wikidata_desc": "common percussion instrument",
         "wikidata_name": "cymbal",
@@ -2784,7 +2694,6 @@
     },
     "deer": {
         "freebase_mid": "/m/09kx5",
-        "obj365_boxable_name": "Deer",
         "oid_boxable_leaf": "/m/09kx5",
         "oid_name": "Deer",
         "parent_name": "ground_animal",
@@ -2799,7 +2708,6 @@
         "ade20k_name": "desk",
         "ade20k_names": "desk",
         "freebase_mid": "/m/01y9k5",
-        "obj365_boxable_name": "Desk",
         "oid_boxable_leaf": "/m/01y9k5",
         "oid_name": "Desk",
         "parent_name": "table",
@@ -2814,7 +2722,6 @@
     },
     "desktop_computer": {
         "freebase_mid": "/m/0dvvc",
-        "obj365_boxable_name": "Computer Box",
         "parent_name": "dynamic",
         "wikidata_desc": "personal computer=null in a form intended for regular use at a single location desk/table",
         "wikidata_name": "desktop computer",
@@ -2824,7 +2731,6 @@
     },
     "dessert": {
         "freebase_mid": "/m/0270h",
-        "obj365_boxable_name": "Dessert",
         "oid_name": "Dessert",
         "parent_name": "food",
         "wikidata_desc": "course that concludes a meal; usually sweet",
@@ -2873,7 +2779,6 @@
         "coco_inst_id": 67,
         "coco_pano_id": 67,
         "coco_pano_name": "dining table",
-        "obj365_boxable_name": "Dinning Table",
         "parent_name": "table",
         "wikidata_desc": "table used when eating",
         "wikidata_name": "dining table",
@@ -2910,7 +2815,6 @@
         "ade20k_name": "dishwasher",
         "ade20k_names": "dishwasher;dish;washer;dishwashing;machine",
         "freebase_mid": "/m/0ky7b",
-        "obj365_boxable_name": "Dishwasher",
         "oid_name": "Dishwasher",
         "parent_name": "home_appliance",
         "wikidata_desc": "mechanical device for cleaning dishware and cutlery",
@@ -2926,7 +2830,6 @@
         "coco_pano_name": "dog",
         "context": "animal",
         "freebase_mid": "/m/0bt9lr",
-        "obj365_boxable_name": "Dog",
         "oid_boxable_leaf": "/m/0bt9lr",
         "oid_inst_leaf": "/m/0bt9lr",
         "oid_name": "Dog",
@@ -2961,7 +2864,6 @@
     },
     "dolphin": {
         "freebase_mid": "/m/02hj4",
-        "obj365_boxable_name": "Dolphin",
         "oid_boxable_leaf": "/m/02hj4",
         "oid_inst_leaf": "/m/02hj4",
         "oid_name": "Dolphin",
@@ -2974,7 +2876,6 @@
     },
     "donkey": {
         "freebase_mid": "/m/0ffhf",
-        "obj365_boxable_name": "Donkey",
         "parent_name": "ground_animal",
         "wikidata_desc": "domesticated member of the horse family",
         "wikidata_name": "Equus africanus asinus",
@@ -2988,7 +2889,6 @@
         "coco_pano_id": 60,
         "coco_pano_name": "donut",
         "freebase_mid": "/m/0jy4k",
-        "obj365_boxable_name": "Donut",
         "oid_boxable_leaf": "/m/0jy4k",
         "oid_inst_leaf": "/m/0jy4k",
         "oid_name": "Doughnut",
@@ -3108,7 +3008,6 @@
     "drum": {
         "context": "instrument",
         "freebase_mid": "/m/026t6",
-        "obj365_boxable_name": "Drum",
         "oid_boxable_leaf": "/m/026t6",
         "oid_name": "Drum",
         "parent_name": "musical_instrument",
@@ -3120,7 +3019,6 @@
     },
     "duck": {
         "freebase_mid": "/m/09ddx",
-        "obj365_boxable_name": "Duck",
         "oid_boxable_leaf": "/m/09ddx",
         "oid_inst_leaf": "/m/09ddx",
         "oid_name": "Duck",
@@ -3134,7 +3032,6 @@
     "dumbbell": {
         "context": "weight",
         "freebase_mid": "/m/04h8sr",
-        "obj365_boxable_name": "Dumbbell",
         "oid_boxable_leaf": "/m/04h8sr",
         "oid_inst_leaf": "/m/04h8sr",
         "oid_name": "Dumbbell",
@@ -3147,7 +3044,6 @@
     },
     "dumpling": {
         "freebase_mid": "/m/06r77g",
-        "obj365_boxable_name": "Dumpling",
         "parent_name": "dessert",
         "wikidata_desc": "Korean dumplings",
         "wikidata_name": "mandu",
@@ -3157,7 +3053,6 @@
     },
     "durian": {
         "freebase_mid": "/m/02dx0",
-        "obj365_boxable_name": "Durian",
         "parent_name": "fruit",
         "wikidata_desc": "the general fruit. Use Q2309085 for the genus or Q1135236 for the commonest species",
         "wikidata_name": "durian",
@@ -3208,7 +3103,6 @@
         "wordnet_pwn30": "n05320899"
     },
     "earbud": {
-        "obj365_boxable_name": "earphone",
         "parent_name": "headphone",
         "wikidata_qid": "Q50184015",
         "wordnet_gloss": "an earphone that is inserted into the ear canal",
@@ -3228,7 +3122,6 @@
     "egg": {
         "context": "food",
         "freebase_mid": "/m/033cnk",
-        "obj365_boxable_name": "Egg",
         "oid_boxable_leaf": "/m/033cnk",
         "oid_name": "Egg (Food)",
         "parent_name": "food",
@@ -3240,7 +3133,6 @@
     },
     "eggplant": {
         "freebase_mid": "/m/0cdk2",
-        "obj365_boxable_name": "Eggplant",
         "parent_name": "vegetable",
         "wikidata_desc": "plant species Solanum melongena",
         "wikidata_name": "eggplant",
@@ -3270,7 +3162,6 @@
     "electric_drill": {
         "context": "tool",
         "freebase_mid": "/m/01d380",
-        "obj365_boxable_name": "Electric Drill",
         "oid_name": "Drill (Tool)",
         "parent_name": "electrical_device",
         "wikidata_desc": "tool for boring holes",
@@ -3284,7 +3175,6 @@
         "ade20k_name": "fan",
         "ade20k_names": "fan",
         "freebase_mid": "/m/02x984l",
-        "obj365_boxable_name": "Fan",
         "oid_boxable_leaf": "/m/02x984l",
         "oid_name": "Mechanical fan",
         "parent_name": "dynamic",
@@ -3307,7 +3197,6 @@
         "coco_pano_id": 22,
         "coco_pano_name": "elephant",
         "freebase_mid": "/m/0bwd_0j",
-        "obj365_boxable_name": "Elephant",
         "oid_boxable_leaf": "/m/0bwd_0j",
         "oid_inst_leaf": "/m/0bwd_0j",
         "oid_name": "Elephant",
@@ -3333,7 +3222,6 @@
     },
     "eraser": {
         "freebase_mid": "/m/02fh7f",
-        "obj365_boxable_name": "Eraser",
         "oid_name": "Eraser",
         "parent_name": "tool",
         "wikidata_desc": "piece of rubber or cloth, used to remove marks made with pen, pencil, chalk, or the like",
@@ -3359,7 +3247,6 @@
         "ade20k_name": "hood",
         "ade20k_names": "hood;exhaust;hood",
         "freebase_mid": "/m/03mw1c",
-        "obj365_boxable_name": "Extractor",
         "parent_name": "kitchen_appliance",
         "wikidata_desc": "type of that home appliance that clears smoke from a stove",
         "wikidata_name": "exhaust hood",
@@ -3368,7 +3255,6 @@
         "wordnet_pwn30": "n03531546"
     },
     "extension_cord": {
-        "obj365_boxable_name": "Extention Cord",
         "parent_name": "electrical_device",
         "wikidata_desc": "flexible electrical power cable with a plug on one end and one or more sockets on the other end",
         "wikidata_name": "extension cord",
@@ -3390,7 +3276,6 @@
     },
     "eyeglasses": {
         "freebase_mid": "/m/0jyfg",
-        "obj365_boxable_name": "Glasses",
         "oid_boxable_leaf": "/m/0jyfg",
         "oid_name": "Glasses",
         "parent_name": "dynamic",
@@ -3401,7 +3286,6 @@
         "wordnet_pwn30": "n04272054"
     },
     "eyeliner_pencil": {
-        "obj365_boxable_name": "Cosmetics Brush/Eyeliner Pencil",
         "parent_name": "cosmetic",
         "wikidata_qid": "",
         "wordnet_pwn30": ""
@@ -3556,7 +3440,6 @@
     },
     "fire_extinguisher": {
         "freebase_mid": "/m/01nl4x",
-        "obj365_boxable_name": "Fire Extinguisher",
         "parent_name": "dynamic",
         "wikidata_desc": "an active fire protection device",
         "wikidata_name": "fire extinguisher",
@@ -3577,7 +3460,6 @@
         "mvd_inst_id": 38,
         "mvd_name": "object--fire-hydrant",
         "mvd_pano_id": 38,
-        "obj365_boxable_name": "Fire Hydrant",
         "oid_boxable_leaf": "/m/01pns0",
         "oid_inst_leaf": "/m/01pns0",
         "oid_name": "Fire hydrant",
@@ -3592,7 +3474,6 @@
     },
     "fire_truck": {
         "freebase_mid": "/m/012ndj",
-        "obj365_boxable_name": "Fire Truck",
         "parent_name": "truck",
         "wikidata_desc": "emergency vehicle intended to put out fires",
         "wikidata_name": "fire engine",
@@ -3616,7 +3497,6 @@
     },
     "fish": {
         "freebase_mid": "/m/0ch_cf",
-        "obj365_boxable_name": "Other Fish",
         "oid_name": "Fish",
         "parent_name": "animal",
         "wikidata_desc": "vertebrate animal that lives in water and (typically) has gills",
@@ -3627,7 +3507,6 @@
     },
     "fishing_rod": {
         "freebase_mid": "Oh yea",
-        "obj365_boxable_name": "Fishing Rod",
         "parent_name": "tool",
         "wikidata_desc": "tool",
         "wikidata_name": "fishing rod",
@@ -3640,7 +3519,6 @@
         "ade20k_name": "flag",
         "ade20k_names": "flag",
         "freebase_mid": "/m/03120",
-        "obj365_boxable_name": "Flag",
         "oid_boxable_leaf": "/m/03120",
         "oid_inst_leaf": "/m/03120",
         "oid_name": "Flag",
@@ -3665,7 +3543,6 @@
     },
     "flask": {
         "freebase_mid": "/m/05hw3k",
-        "obj365_boxable_name": "Flask",
         "parent_name": "bottle",
         "wikidata_desc": "type of laboratory glassware",
         "wikidata_name": "laboratory flask",
@@ -3728,7 +3605,6 @@
         "coco_pano_id": 119,
         "coco_pano_name": "flower",
         "freebase_mid": "/m/0c9ph5",
-        "obj365_boxable_name": "Flower",
         "oid_name": "Flower",
         "parent_name": "vegetation",
         "wikidata_desc": "The sexual reproductive structure of the angiosperms, typically with a gynoecium, androecium, perianth and an axis.",
@@ -3754,7 +3630,6 @@
     },
     "flute": {
         "freebase_mid": "/m/0l14j_",
-        "obj365_boxable_name": "Flute",
         "oid_boxable_leaf": "/m/0l14j_",
         "oid_inst_leaf": "/m/0l14j_",
         "oid_name": "Flute",
@@ -3767,7 +3642,6 @@
     },
     "folder": {
         "context": "paper",
-        "obj365_boxable_name": "Folder",
         "parent_name": "office_supplies",
         "wikidata_desc": "folder that holds loose papers together for organization and protection",
         "wikidata_name": "file folder",
@@ -3841,7 +3715,6 @@
         "coco_pano_id": 48,
         "coco_pano_name": "fork",
         "freebase_mid": "/m/0dt3t",
-        "obj365_boxable_name": "Fork",
         "oid_boxable_leaf": "/m/0dt3t",
         "oid_name": "Fork",
         "parent_name": "tableware",
@@ -3879,7 +3752,6 @@
     },
     "french_fries": {
         "freebase_mid": "/m/02y6n",
-        "obj365_boxable_name": "French Fries",
         "oid_boxable_leaf": "/m/02y6n",
         "oid_name": "French fries",
         "parent_name": "potato",
@@ -3891,7 +3763,6 @@
     },
     "french_horn": {
         "freebase_mid": "/m/0319l",
-        "obj365_boxable_name": "French",
         "oid_boxable_leaf": "/m/0319l",
         "oid_name": "French horn",
         "parent_name": "musical_instrument",
@@ -3907,7 +3778,6 @@
         "coco_pano_id": 34,
         "coco_pano_name": "frisbee",
         "freebase_mid": "/m/02wmf",
-        "obj365_boxable_name": "Frisbee",
         "oid_name": "Flying disc",
         "parent_name": "toy",
         "wikidata_desc": "gliding toy or sporting item, generally plastic and roughly 20\u201325 cm in diameter with a pronounced lip, used recreationally and competitively for throwing and catching",
@@ -3967,7 +3837,6 @@
         "wordnet_pwn30": "n03405725"
     },
     "game_board": {
-        "obj365_boxable_name": "Game board",
         "parent_name": "horizontal_surface",
         "wikidata_desc": "in board games, the central place where the game takes place",
         "wikidata_name": "game board",
@@ -3977,7 +3846,6 @@
     },
     "garden_asparagus": {
         "freebase_mid": "/m/0cjs7",
-        "obj365_boxable_name": "Asparagus",
         "oid_boxable_leaf": "/m/0cjs7",
         "oid_inst_leaf": "/m/0cjs7",
         "oid_name": "Garden Asparagus",
@@ -3990,7 +3858,6 @@
     },
     "garlic": {
         "freebase_mid": "/m/0dbrl",
-        "obj365_boxable_name": "Garlic",
         "parent_name": "food",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Ajo",
@@ -4000,7 +3867,6 @@
     },
     "gas_stove": {
         "freebase_mid": "/m/02wv84t",
-        "obj365_boxable_name": "Gas stove",
         "oid_boxable_leaf": "/m/02wv84t",
         "oid_name": "Gas stove",
         "parent_name": "stove",
@@ -4015,7 +3881,6 @@
         "coco_pano_id": 25,
         "coco_pano_name": "giraffe",
         "freebase_mid": "/m/03bk1",
-        "obj365_boxable_name": "Giraffe",
         "oid_boxable_leaf": "/m/03bk1",
         "oid_inst_leaf": "/m/03bk1",
         "oid_name": "Giraffe",
@@ -4040,7 +3905,6 @@
     },
     "globe": {
         "freebase_mid": "/m/01q_cy",
-        "obj365_boxable_name": "Globe",
         "parent_name": "furniture",
         "wikidata_desc": "scale model of a celestial body",
         "wikidata_name": "globe",
@@ -4050,7 +3914,6 @@
     },
     "glove": {
         "freebase_mid": "/m/0174n1",
-        "obj365_boxable_name": "Gloves",
         "oid_name": "Glove",
         "parent_name": "clothing",
         "wikidata_desc": "covering worn on the hand",
@@ -4084,7 +3947,6 @@
     },
     "goldfish": {
         "freebase_mid": "/m/03fj2",
-        "obj365_boxable_name": "Goldfish",
         "oid_boxable_leaf": "/m/03fj2",
         "oid_inst_leaf": "/m/03fj2",
         "oid_name": "Goldfish",
@@ -4097,7 +3959,6 @@
     },
     "golf_ball": {
         "freebase_mid": "/m/044r5d",
-        "obj365_boxable_name": "Golf Ball",
         "oid_boxable_leaf": "/m/044r5d",
         "oid_name": "Golf ball",
         "parent_name": "ball",
@@ -4120,7 +3981,6 @@
     },
     "golf_club": {
         "freebase_mid": "/m/03gzqq",
-        "obj365_boxable_name": "Golf Club",
         "parent_name": "sports_equipment",
         "wikidata_desc": "piece of sporting equipment used to hit a golf ball in a game of golf",
         "wikidata_name": "golf club",
@@ -4142,7 +4002,6 @@
     },
     "goose": {
         "freebase_mid": "/m/0dbvp",
-        "obj365_boxable_name": "Goose",
         "oid_boxable_leaf": "/m/0dbvp",
         "oid_inst_leaf": "/m/0dbvp",
         "oid_name": "Goose",
@@ -4167,7 +4026,6 @@
     "grape": {
         "context": "fruit",
         "freebase_mid": "/m/0388q",
-        "obj365_boxable_name": "Grape",
         "oid_boxable_leaf": "/m/0388q",
         "oid_inst_leaf": "/m/0388q",
         "oid_name": "Grape",
@@ -4180,7 +4038,6 @@
     },
     "grapefruit": {
         "freebase_mid": "/m/0hqkz",
-        "obj365_boxable_name": "Grapefruit",
         "oid_boxable_leaf": "/m/0hqkz",
         "oid_inst_leaf": "/m/0hqkz",
         "oid_name": "Grapefruit",
@@ -4217,7 +4074,6 @@
         "wordnet_pwn30": "n14698884"
     },
     "green_beans": {
-        "obj365_boxable_name": "Green beans",
         "parent_name": "vegetable",
         "wikidata_desc": "vegetable",
         "wikidata_name": "green bean",
@@ -4227,7 +4083,6 @@
     },
     "green_onion": {
         "freebase_mid": "/m/042lv8",
-        "obj365_boxable_name": "Green Onion",
         "parent_name": "onion",
         "wikidata_desc": "species of plant",
         "wikidata_name": "Welsh onion",
@@ -4312,7 +4167,6 @@
     },
     "guitar": {
         "freebase_mid": "/m/0342h",
-        "obj365_boxable_name": "Guitar",
         "oid_boxable_leaf": "/m/0342h",
         "oid_inst_leaf": "/m/0342h",
         "oid_name": "Guitar",
@@ -4341,7 +4195,6 @@
         "coco_pano_id": 89,
         "coco_pano_name": "hair drier",
         "freebase_mid": "/m/03wvsk",
-        "obj365_boxable_name": "Hair Dryer",
         "oid_name": "Hair dryer",
         "parent_name": "electrical_device",
         "wikidata_desc": "type of home appliance used to dry hair",
@@ -4362,7 +4215,6 @@
     },
     "hamburger": {
         "freebase_mid": "/m/0cdn1",
-        "obj365_boxable_name": "Hamburger",
         "oid_boxable_leaf": "/m/0cdn1",
         "oid_inst_leaf": "/m/0cdn1",
         "oid_name": "Hamburger",
@@ -4375,7 +4227,6 @@
     },
     "hammer": {
         "freebase_mid": "/m/03l9g",
-        "obj365_boxable_name": "Hammer",
         "oid_name": "Hammer",
         "parent_name": "tool",
         "wikidata_desc": "tool meant to deliver an impact to an object",
@@ -4423,7 +4274,6 @@
         "coco_pano_id": 31,
         "coco_pano_name": "handbag",
         "freebase_mid": "/m/080hkjn",
-        "obj365_boxable_name": "Handbag/Satchel",
         "oid_boxable_leaf": "/m/080hkjn",
         "oid_inst_leaf": "/m/080hkjn",
         "oid_name": "Handbag",
@@ -4441,7 +4291,6 @@
         "mvd_inst_id": 62,
         "mvd_name": "object--vehicle--wheeled-slow",
         "mvd_pano_id": 62,
-        "obj365_boxable_name": "Trolley",
         "parent_name": "vehicle",
         "wikidata_qid": "",
         "wordnet_gloss": "wheeled vehicle that can be pushed by a person; may have one or two or four wheels; \"he used a handcart to carry the rocks away\"; \"their pushcart was piled high with groceries\"",
@@ -4449,7 +4298,6 @@
     },
     "handgun": {
         "freebase_mid": "/m/0gxl3",
-        "obj365_boxable_name": "Gun",
         "oid_boxable_leaf": "/m/0gxl3",
         "oid_inst_leaf": "/m/0gxl3",
         "oid_name": "Handgun",
@@ -4473,7 +4321,6 @@
     },
     "hanger": {
         "freebase_mid": "/m/0ksls",
-        "obj365_boxable_name": "Hanger",
         "parent_name": "tool",
         "wikidata_desc": "devices of wood, metal, or plastic used to hang garments",
         "wikidata_name": "clothes hanger",
@@ -4530,7 +4377,6 @@
     "hat": {
         "context": "head",
         "freebase_mid": "/m/02dl1y",
-        "obj365_boxable_name": "Hat",
         "oid_name": "Hat",
         "parent_name": "clothing",
         "wikidata_desc": "shaped head covering, having a brim and a crown, or one of these",
@@ -4553,7 +4399,6 @@
     },
     "headphone": {
         "freebase_mid": "/m/01b7fy",
-        "obj365_boxable_name": "Head Phone",
         "oid_boxable_leaf": "/m/01b7fy",
         "oid_name": "Headphones",
         "parent_name": "electrical_device",
@@ -4585,7 +4430,6 @@
     },
     "helicopter": {
         "freebase_mid": "/m/09ct_",
-        "obj365_boxable_name": "Helicopter",
         "oid_boxable_leaf": "/m/09ct_",
         "oid_name": "Helicopter",
         "parent_name": "aircraft",
@@ -4598,7 +4442,6 @@
     "helmet": {
         "context": "gear",
         "freebase_mid": "/m/0zvk5",
-        "obj365_boxable_name": "Helmet",
         "oid_name": "Helmet",
         "parent_name": "clothing",
         "wikidata_desc": "any type of historical or modern armor worn to protect the head",
@@ -4609,7 +4452,6 @@
     },
     "high_heels": {
         "freebase_mid": "/m/06k2mb",
-        "obj365_boxable_name": "High Heels",
         "oid_boxable_leaf": "/m/06k2mb",
         "oid_inst_leaf": "/m/06k2mb",
         "oid_name": "High heels",
@@ -4652,7 +4494,6 @@
     },
     "hockey_stick": {
         "freebase_mid": "/m/01tysc",
-        "obj365_boxable_name": "Hockey Stick",
         "parent_name": "tool",
         "wikidata_desc": "used to propel the puck in hockey",
         "wikidata_name": "hockey stick",
@@ -4710,7 +4551,6 @@
         "coco_pano_id": 19,
         "coco_pano_name": "horse",
         "freebase_mid": "/m/03k3r",
-        "obj365_boxable_name": "Horse",
         "oid_boxable_leaf": "/m/03k3r",
         "oid_inst_leaf": "/m/03k3r",
         "oid_name": "Horse",
@@ -4722,7 +4562,6 @@
         "wordnet_pwn30": "n03538037"
     },
     "horse_carriage": {
-        "obj365_boxable_name": "Carriage",
         "parent_name": "cart",
         "wikidata_desc": "two or four wheeled convertible carraige with one bench for two passengers, controlled from the seat. Primarily for casual rides and leisure",
         "wikidata_name": "horse and buggy",
@@ -4733,7 +4572,6 @@
     "hot_air_balloon": {
         "context": "aerostat",
         "freebase_mid": "/m/03dk1w",
-        "obj365_boxable_name": "Hotair ballon",
         "parent_name": "aircraft",
         "wikidata_desc": "type of aerostat that remains aloft due to its buoyancy",
         "wikidata_name": "balloon",
@@ -4748,7 +4586,6 @@
         "coco_pano_name": "hot dog",
         "context": "bun",
         "freebase_mid": "/m/01b9xk",
-        "obj365_boxable_name": "Hot dog",
         "oid_boxable_leaf": "/m/01b9xk",
         "oid_inst_leaf": "/m/01b9xk",
         "oid_name": "Hot dog",
@@ -4786,7 +4623,6 @@
         "wordnet_pwn30": "n03544360"
     },
     "hoverboard": {
-        "obj365_boxable_name": "Hoverboard",
         "parent_name": "toy",
         "wikidata_desc": "battery-powered electric vehicle",
         "wikidata_name": "self-balancing scooter",
@@ -4803,7 +4639,6 @@
         "wordnet_pwn30": ""
     },
     "hurdle": {
-        "obj365_boxable_name": "Hurdle",
         "parent_name": "sports_equipment",
         "wikidata_desc": "obstacle used in track and field hurdles",
         "wikidata_name": "hurdle",
@@ -4825,7 +4660,6 @@
     },
     "ice_cream": {
         "freebase_mid": "/m/0cxn2",
-        "obj365_boxable_name": "Ice cream",
         "oid_boxable_leaf": "/m/0cxn2",
         "oid_name": "Ice cream",
         "parent_name": "dairy_product",
@@ -4846,7 +4680,6 @@
     },
     "induction_stove": {
         "freebase_mid": "/m/04mlf2",
-        "obj365_boxable_name": "Induction Cooker",
         "parent_name": "home_appliance",
         "wikidata_desc": "Type of cooker that uses electromagnetic induction",
         "wikidata_name": "induction stove",
@@ -4956,7 +4789,6 @@
     "jellyfish": {
         "context": "aquatic",
         "freebase_mid": "/m/0d8zb",
-        "obj365_boxable_name": "Jellyfish",
         "oid_boxable_leaf": "/m/0d8zb",
         "oid_name": "Jellyfish",
         "parent_name": "animal",
@@ -4987,7 +4819,6 @@
     },
     "jug": {
         "freebase_mid": "/m/08hvt4",
-        "obj365_boxable_name": "Jug",
         "oid_boxable_leaf": "/m/08hvt4",
         "oid_inst_leaf": "/m/08hvt4",
         "oid_name": "Jug",
@@ -5038,7 +4869,6 @@
     },
     "kettle": {
         "freebase_mid": "/m/03s_tn",
-        "obj365_boxable_name": "Kettle",
         "oid_boxable_leaf": "/m/03s_tn",
         "oid_inst_leaf": "/m/03s_tn",
         "oid_name": "Kettle",
@@ -5051,7 +4881,6 @@
     },
     "key": {
         "freebase_mid": "/m/0dxyr",
-        "obj365_boxable_name": "Key",
         "parent_name": "dynamic",
         "wikidata_desc": "piece of information in cryptography",
         "wikidata_name": "key",
@@ -5123,7 +4952,6 @@
         "coco_pano_id": 38,
         "coco_pano_name": "kite",
         "freebase_mid": "/m/02zt3",
-        "obj365_boxable_name": "Kite",
         "oid_boxable_leaf": "/m/02zt3",
         "oid_inst_leaf": "/m/02zt3",
         "oid_name": "Kite",
@@ -5136,7 +4964,6 @@
     },
     "kiwi_fruit": {
         "freebase_mid": "/m/04f8p",
-        "obj365_boxable_name": "Kiwi fruit",
         "parent_name": "fruit",
         "wikidata_desc": "edible berry of several species of woody vines in the genus Actinidia, native to China",
         "wikidata_name": "kiwifruit",
@@ -5150,7 +4977,6 @@
         "coco_pano_id": 49,
         "coco_pano_name": "knife",
         "freebase_mid": "/m/04ctx",
-        "obj365_boxable_name": "Knife",
         "oid_boxable_leaf": "/m/04ctx",
         "oid_inst_leaf": "/m/04ctx",
         "oid_name": "Knife",
@@ -5173,7 +4999,6 @@
     },
     "ladder": {
         "freebase_mid": "/m/012w5l",
-        "obj365_boxable_name": "Ladder",
         "oid_boxable_leaf": "/m/012w5l",
         "oid_name": "Ladder",
         "parent_name": "stairs",
@@ -5221,7 +5046,6 @@
         "ade20k_name": "lamp",
         "ade20k_names": "lamp",
         "freebase_mid": "/m/0dtln",
-        "obj365_boxable_name": "Lamp",
         "oid_boxable_leaf": "/m/0dtln",
         "oid_name": "Lamp",
         "parent_name": "light_source",
@@ -5250,7 +5074,6 @@
     },
     "lantern": {
         "freebase_mid": "/m/01jfsr",
-        "obj365_boxable_name": "Lantern",
         "oid_boxable_leaf": "/m/01jfsr",
         "oid_name": "Lantern",
         "parent_name": "lamp",
@@ -5266,7 +5089,6 @@
         "coco_pano_id": 73,
         "coco_pano_name": "laptop",
         "freebase_mid": "/m/01c648",
-        "obj365_boxable_name": "Laptop",
         "oid_boxable_leaf": "/m/01c648",
         "oid_inst_leaf": "/m/01c648",
         "oid_name": "Laptop",
@@ -5290,7 +5112,6 @@
         "wordnet_pwn30": "n12849717"
     },
     "leather_shoes": {
-        "obj365_boxable_name": "Leather Shoes",
         "parent_name": "shoes",
         "wikidata_desc": "",
         "wikidata_name": "Leather shoes",
@@ -5311,7 +5132,6 @@
     },
     "lemon": {
         "freebase_mid": "/m/09k_b",
-        "obj365_boxable_name": "Lemon",
         "oid_boxable_leaf": "/m/09k_b",
         "oid_inst_leaf": "/m/09k_b",
         "oid_name": "Lemon",
@@ -5333,7 +5153,6 @@
     },
     "lettuce": {
         "freebase_mid": "/m/0fqlj",
-        "obj365_boxable_name": "Lettuce",
         "parent_name": "vegetable",
         "wikidata_desc": "species of annual plant of the daisy family, most often grown as a leaf vegetable",
         "wikidata_name": "lettuce",
@@ -5355,7 +5174,6 @@
     },
     "lifesaver": {
         "freebase_mid": "/m/02hj2v",
-        "obj365_boxable_name": "Lifesaver",
         "parent_name": "personal_flotation_device",
         "wikidata_desc": "buoy designed to be thrown to person in water, to prevent drowning",
         "wikidata_name": "lifebuoy",
@@ -5401,7 +5219,6 @@
     },
     "lighter": {
         "freebase_mid": "/m/01ypq8",
-        "obj365_boxable_name": "Lighter",
         "parent_name": "tool",
         "wikidata_desc": "portable device used to generate a flame",
         "wikidata_name": "lighter",
@@ -5446,7 +5263,6 @@
     },
     "lion": {
         "freebase_mid": "/m/096mb",
-        "obj365_boxable_name": "Lion",
         "oid_boxable_leaf": "/m/096mb",
         "oid_inst_leaf": "/m/096mb",
         "oid_name": "Lion",
@@ -5459,7 +5275,6 @@
     },
     "lipstick": {
         "freebase_mid": "/m/06c7f7",
-        "obj365_boxable_name": "Lipstick",
         "oid_name": "Lipstick",
         "parent_name": "cosmetic",
         "wikidata_desc": "cosmetic for coloring the lips",
@@ -5482,7 +5297,6 @@
     },
     "lobster": {
         "freebase_mid": "/m/0cjq5",
-        "obj365_boxable_name": "Lobster",
         "oid_boxable_leaf": "/m/0cjq5",
         "oid_name": "Lobster",
         "parent_name": "invertebrate",
@@ -5494,7 +5308,6 @@
     },
     "loudspeaker": {
         "freebase_mid": "/m/0cfpc",
-        "obj365_boxable_name": "Speaker",
         "parent_name": "electrical_device",
         "wikidata_desc": "transducer that converts electrical energy into sound energy; electroacoustic transducer that converts an electrical audio signal into a corresponding sound; does not include a box",
         "wikidata_name": "loudspeaker",
@@ -5507,7 +5320,6 @@
         "ade20k_name": "bag",
         "ade20k_names": "bag",
         "freebase_mid": "/m/0hf58v5",
-        "obj365_boxable_name": "Luggage",
         "oid_name": "Luggage and bags",
         "parent_name": "container",
         "scannet_id": 37,
@@ -5579,7 +5391,6 @@
     },
     "mango": {
         "freebase_mid": "/m/0fldg",
-        "obj365_boxable_name": "Mango",
         "oid_boxable_leaf": "/m/0fldg",
         "oid_inst_leaf": "/m/0fldg",
         "oid_name": "Mango",
@@ -5645,7 +5456,6 @@
     },
     "marker": {
         "freebase_mid": "/m/02fbz6",
-        "obj365_boxable_name": "Marker",
         "parent_name": "tool",
         "wikidata_desc": "type of writing tool",
         "wikidata_name": "marker",
@@ -5656,7 +5466,6 @@
     "mask": {
         "context": "disguise",
         "freebase_mid": "/m/01kr41",
-        "obj365_boxable_name": "Mask",
         "parent_name": "clothing",
         "wikidata_desc": "any full or partial face covering, whether ceremonial, protective, decorative, or used as disguise",
         "wikidata_name": "mask",
@@ -5677,7 +5486,6 @@
     },
     "meatball": {
         "freebase_mid": "/m/01bzmc",
-        "obj365_boxable_name": "Meat ball",
         "parent_name": "food",
         "wikidata_desc": "dish made from ground meat rolled into a small ball-like form",
         "wikidata_name": "meatball",
@@ -5687,7 +5495,6 @@
     },
     "medal": {
         "freebase_mid": "/m/020yd1",
-        "obj365_boxable_name": "Medal",
         "parent_name": "dynamic",
         "wikidata_desc": "round piece of metal, often used as an award",
         "wikidata_name": "medal",
@@ -5706,7 +5513,6 @@
     },
     "megaphone": {
         "freebase_mid": "/m/01f0r6",
-        "obj365_boxable_name": "Megaphone",
         "parent_name": "tool",
         "wikidata_desc": "handheld device that amplifies the voice of a speaking person, can be an acoustic megaphone or electronic megaphone",
         "wikidata_name": "megaphone",
@@ -5716,7 +5522,6 @@
     },
     "microphone": {
         "freebase_mid": "/m/0hg7b",
-        "obj365_boxable_name": "Microphone",
         "oid_boxable_leaf": "/m/0hg7b",
         "oid_name": "Microphone",
         "parent_name": "electrical_device",
@@ -5736,7 +5541,6 @@
         "coco_pano_name": "microwave",
         "context": "appliance",
         "freebase_mid": "/m/0fx9l",
-        "obj365_boxable_name": "Microwave",
         "oid_boxable_leaf": "/m/0fx9l",
         "oid_inst_leaf": "/m/0fx9l",
         "oid_name": "Microwave oven",
@@ -5788,7 +5592,6 @@
         "coco_pano_name": "mirror-stuff",
         "context": "surface",
         "freebase_mid": "/m/054_l",
-        "obj365_boxable_name": "Mirror",
         "oid_boxable_leaf": "/m/054_l",
         "oid_name": "Mirror",
         "parent_name": "dynamic",
@@ -5840,7 +5643,6 @@
         "coco_pano_id": 77,
         "coco_pano_name": "cell phone",
         "freebase_mid": "/m/050k8",
-        "obj365_boxable_name": "Cell Phone",
         "oid_boxable_leaf": "/m/050k8",
         "oid_inst_leaf": "/m/050k8",
         "oid_name": "Mobile phone",
@@ -5853,7 +5655,6 @@
     },
     "monkey": {
         "freebase_mid": "/m/08pbxl",
-        "obj365_boxable_name": "Monkey",
         "oid_boxable_leaf": "/m/08pbxl",
         "oid_inst_leaf": "/m/08pbxl",
         "oid_name": "Monkey",
@@ -5866,7 +5667,6 @@
     },
     "mop": {
         "freebase_mid": "/m/04cvgx",
-        "obj365_boxable_name": "Mop",
         "parent_name": "tool",
         "wikidata_desc": "mass or bundle of coarse strings or yarn attached to a stick",
         "wikidata_name": "mop",
@@ -5902,7 +5702,6 @@
         "mvd_inst_id": 57,
         "mvd_name": "object--vehicle--motorcycle",
         "mvd_pano_id": 57,
-        "obj365_boxable_name": "Motorcycle",
         "oid_boxable_leaf": "/m/04_sv",
         "oid_inst_leaf": "/m/04_sv",
         "oid_name": "Motorcycle",
@@ -5961,7 +5760,6 @@
         "coco_pano_name": "mouse",
         "context": "animal",
         "freebase_mid": "/m/04rmv",
-        "obj365_boxable_name": "Mouse",
         "oid_boxable_leaf": "/m/04rmv",
         "oid_inst_leaf": "/m/04rmv",
         "oid_name": "Mouse",
@@ -6023,7 +5821,6 @@
     },
     "mushroom": {
         "freebase_mid": "/m/052sf",
-        "obj365_boxable_name": "Mushroon",
         "oid_boxable_leaf": "/m/052sf",
         "oid_inst_leaf": "/m/052sf",
         "oid_name": "Mushroom",
@@ -6070,7 +5867,6 @@
     },
     "napkin": {
         "freebase_mid": "/m/026lrs",
-        "obj365_boxable_name": "Napkin",
         "parent_name": "trash",
         "wikidata_desc": "piece of cloth or paper used to wipe one's face or skin while eating",
         "wikidata_name": "napkin",
@@ -6080,7 +5876,6 @@
     },
     "necklace": {
         "freebase_mid": "/m/01llwg",
-        "obj365_boxable_name": "Necklace",
         "oid_boxable_leaf": "/m/01llwg",
         "oid_name": "Necklace",
         "parent_name": "jewelry",
@@ -6104,7 +5899,6 @@
     },
     "nightstand": {
         "freebase_mid": "/m/02z51p",
-        "obj365_boxable_name": "Nightstand",
         "oid_boxable_leaf": "/m/02z51p",
         "oid_name": "Nightstand",
         "parent_name": "table",
@@ -6118,7 +5912,6 @@
     },
     "noodle": {
         "freebase_mid": "/m/0mfnf",
-        "obj365_boxable_name": "Noddles",
         "parent_name": "pasta",
         "wikidata_desc": "type of staple food made from some type of unleavened dough",
         "wikidata_name": "noodle",
@@ -6140,7 +5933,6 @@
     },
     "nut": {
         "freebase_mid": "/m/01lbxg",
-        "obj365_boxable_name": "Nuts",
         "parent_name": "fruit",
         "wikidata_desc": "in botany, type of dry indehiscent fruit",
         "wikidata_name": "nut",
@@ -6181,7 +5973,6 @@
     },
     "okra": {
         "freebase_mid": "/m/025s18p",
-        "obj365_boxable_name": "Okra",
         "parent_name": "vegetable",
         "wikidata_desc": "species of edible plant",
         "wikidata_name": "Abelmoschus esculentus",
@@ -6190,7 +5981,6 @@
         "wordnet_pwn30": "n07733394"
     },
     "onion": {
-        "obj365_boxable_name": "Onion",
         "parent_name": "vegetable",
         "wikidata_desc": "onion",
         "wikidata_name": "Echalion",
@@ -6205,7 +5995,6 @@
         "coco_pano_name": "orange",
         "context": "fruit",
         "freebase_mid": "/m/0cyhj_",
-        "obj365_boxable_name": "Orange/Tangerine",
         "oid_boxable_leaf": "/m/0cyhj_",
         "oid_inst_leaf": "/m/0cyhj_",
         "oid_name": "Orange",
@@ -6283,7 +6072,6 @@
         "coco_pano_id": 79,
         "coco_pano_name": "oven",
         "freebase_mid": "/m/029bxz",
-        "obj365_boxable_name": "Oven",
         "oid_boxable_leaf": "/m/029bxz",
         "oid_inst_leaf": "/m/029bxz",
         "oid_name": "Oven",
@@ -6308,7 +6096,6 @@
     },
     "oyster": {
         "freebase_mid": "/m/0_cp5",
-        "obj365_boxable_name": "Oyster",
         "oid_boxable_leaf": "/m/0_cp5",
         "oid_inst_leaf": "/m/0_cp5",
         "oid_name": "Oyster",
@@ -6321,7 +6108,6 @@
     },
     "paddle": {
         "freebase_mid": "/m/014y4n",
-        "obj365_boxable_name": "Paddle",
         "oid_boxable_leaf": "/m/014y4n",
         "oid_name": "Paddle",
         "parent_name": "tool",
@@ -6332,7 +6118,6 @@
         "wordnet_pwn30": "n03873416"
     },
     "paintbrush": {
-        "obj365_boxable_name": "Paint Brush",
         "parent_name": "brush",
         "wikidata_desc": "brush for painting",
         "wikidata_name": "paintbrush",
@@ -6379,7 +6164,6 @@
     },
     "papaya": {
         "freebase_mid": "/m/0g4fr",
-        "obj365_boxable_name": "Papaya",
         "parent_name": "fruit",
         "wikidata_desc": "fruit",
         "wikidata_name": "papaya",
@@ -6391,7 +6175,6 @@
         "coco_pano_id": 195,
         "coco_pano_name": "paper-merged",
         "freebase_mid": "/m/0641k",
-        "obj365_boxable_name": "Notepaper",
         "parent_name": "dynamic",
         "scannet_id": 26,
         "scannet_name": "paper",
@@ -6440,7 +6223,6 @@
         "coco_pano_id": 14,
         "coco_pano_name": "parking meter",
         "freebase_mid": "/m/015qbp",
-        "obj365_boxable_name": "Parking meter",
         "oid_name": "Parking meter",
         "parent_name": "pole",
         "wikidata_desc": "device",
@@ -6469,7 +6251,6 @@
     },
     "parrot": {
         "freebase_mid": "/m/0gv1x",
-        "obj365_boxable_name": "Parrot",
         "oid_boxable_leaf": "/m/0gv1x",
         "oid_inst_leaf": "/m/0gv1x",
         "oid_name": "Parrot",
@@ -6482,7 +6263,6 @@
     },
     "party_balloon": {
         "freebase_mid": "/m/06lpsr",
-        "obj365_boxable_name": "Ballon",
         "parent_name": "toy",
         "wikidata_desc": "small balloon used as a children's toy",
         "wikidata_name": "toy balloon",
@@ -6492,7 +6272,6 @@
     },
     "pasta": {
         "freebase_mid": "/m/05z55",
-        "obj365_boxable_name": "Pasta",
         "oid_boxable_leaf": "/m/05z55",
         "oid_name": "Pasta",
         "parent_name": "food",
@@ -6525,7 +6304,6 @@
     },
     "peach": {
         "freebase_mid": "/m/0dj6p",
-        "obj365_boxable_name": "Peach",
         "oid_boxable_leaf": "/m/0dj6p",
         "oid_inst_leaf": "/m/0dj6p",
         "oid_name": "Peach",
@@ -6538,7 +6316,6 @@
     },
     "pear": {
         "freebase_mid": "/m/061_f",
-        "obj365_boxable_name": "Pear",
         "oid_boxable_leaf": "/m/061_f",
         "oid_inst_leaf": "/m/061_f",
         "oid_name": "Pear",
@@ -6585,7 +6362,6 @@
     },
     "pen": {
         "freebase_mid": "/m/0k1tl",
-        "obj365_boxable_name": "Pen/Pencil",
         "oid_boxable_leaf": "/m/0k1tl",
         "oid_inst_leaf": "/m/0k1tl",
         "oid_name": "Pen",
@@ -6598,7 +6374,6 @@
     },
     "pencil_case": {
         "freebase_mid": "/m/05676x",
-        "obj365_boxable_name": "Pencil Case",
         "oid_name": "Pencil case",
         "parent_name": "box",
         "wikidata_desc": "container used to store pencils, pens and writing equipment",
@@ -6619,7 +6394,6 @@
     },
     "penguin": {
         "freebase_mid": "/m/05z6w",
-        "obj365_boxable_name": "Penguin",
         "oid_boxable_leaf": "/m/05z6w",
         "oid_inst_leaf": "/m/05z6w",
         "oid_name": "Penguin",
@@ -6631,7 +6405,6 @@
         "wordnet_pwn30": "n02055803"
     },
     "pepper": {
-        "obj365_boxable_name": "Pepper",
         "parent_name": "vegetable",
         "wikidata_desc": "species of the plant genus Capsicum",
         "wikidata_name": "Capsicum annuum",
@@ -6671,7 +6444,6 @@
         "mvd_inst_id": 19,
         "mvd_name": "human--person",
         "mvd_pano_id": 19,
-        "obj365_boxable_name": "Person",
         "oid_name": "Person",
         "parent_name": "dynamic",
         "scannet_id": 31,
@@ -6691,7 +6463,6 @@
     },
     "personal_care": {
         "freebase_mid": "/m/02w3_ws",
-        "obj365_boxable_name": "Toiletry",
         "oid_name": "Personal care",
         "parent_name": "dynamic",
         "wikidata_desc": "consumer products used in personal hygiene and for beautification",
@@ -6727,7 +6498,6 @@
     },
     "piano": {
         "freebase_mid": "/m/05r5c",
-        "obj365_boxable_name": "Piano",
         "oid_boxable_leaf": "/m/05r5c",
         "oid_inst_leaf": "/m/05r5c",
         "oid_name": "Piano",
@@ -6740,7 +6510,6 @@
     },
     "pickup_truck": {
         "freebase_mid": "/m/0cvq3",
-        "obj365_boxable_name": "Pickup Truck",
         "parent_name": "truck",
         "wikidata_desc": "light-duty truck with an enclosed cab and an open cargo area",
         "wikidata_name": "pickup truck",
@@ -6766,7 +6535,6 @@
         "ade20k_name": "painting",
         "ade20k_names": "painting;picture",
         "freebase_mid": "/m/06z37_",
-        "obj365_boxable_name": "Picture/Frame",
         "oid_boxable_leaf": "/m/06z37_",
         "oid_inst_leaf": "/m/06z37_",
         "oid_name": "Picture frame",
@@ -6782,7 +6550,6 @@
     },
     "pie": {
         "freebase_mid": "/m/0mjqn",
-        "obj365_boxable_name": "Pie",
         "parent_name": "pastry",
         "wikidata_desc": "baked dish",
         "wikidata_name": "pie",
@@ -6804,7 +6571,6 @@
     },
     "pig": {
         "freebase_mid": "/m/068zj",
-        "obj365_boxable_name": "Pig",
         "oid_boxable_leaf": "/m/068zj",
         "oid_inst_leaf": "/m/068zj",
         "oid_name": "Pig",
@@ -6817,7 +6583,6 @@
     },
     "pigeon": {
         "freebase_mid": "/m/01c08f",
-        "obj365_boxable_name": "Pigeon",
         "parent_name": "bird",
         "wikidata_desc": "species of pigeon; the wild bird from which domesticated pigeons derive",
         "wikidata_name": "Rock Dove",
@@ -6844,7 +6609,6 @@
         "coco_pano_id": 141,
         "coco_pano_name": "pillow",
         "freebase_mid": "/m/034c16",
-        "obj365_boxable_name": "Pillow",
         "oid_boxable_leaf": "/m/034c16",
         "oid_inst_leaf": "/m/034c16",
         "oid_name": "Pillow",
@@ -6859,7 +6623,6 @@
     },
     "pineapple": {
         "freebase_mid": "/m/0fp6w",
-        "obj365_boxable_name": "Pineapple",
         "oid_boxable_leaf": "/m/0fp6w",
         "oid_name": "Pineapple",
         "parent_name": "fruit",
@@ -6888,7 +6651,6 @@
         "coco_pano_id": 59,
         "coco_pano_name": "pizza",
         "freebase_mid": "/m/0663v",
-        "obj365_boxable_name": "Pizza",
         "oid_boxable_leaf": "/m/0663v",
         "oid_inst_leaf": "/m/0663v",
         "oid_name": "Pizza",
@@ -6950,7 +6712,6 @@
         "ade20k_name": "plate",
         "ade20k_names": "plate",
         "freebase_mid": "/m/050gv4",
-        "obj365_boxable_name": "Plate",
         "oid_boxable_leaf": "/m/050gv4",
         "oid_name": "Plate",
         "parent_name": "tableware",
@@ -6986,7 +6747,6 @@
         "wordnet_pwn30": "n03963198"
     },
     "playing_card": {
-        "obj365_boxable_name": "Poker Card",
         "parent_name": "toy",
         "wikidata_desc": "card used as one of a set for playing card games",
         "wikidata_name": "playing card",
@@ -7007,7 +6767,6 @@
     },
     "pliers": {
         "freebase_mid": "/m/02qtr5",
-        "obj365_boxable_name": "Pliers",
         "parent_name": "tool",
         "wikidata_desc": "tool with two legs, can fix or modify a workpiece",
         "wikidata_name": "pliers",
@@ -7017,7 +6776,6 @@
     },
     "plum": {
         "freebase_mid": "/m/0hs32",
-        "obj365_boxable_name": "Plum",
         "parent_name": "fruit",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Prunus",
@@ -7084,7 +6842,6 @@
     },
     "pomegranate": {
         "freebase_mid": "/m/0jwn_",
-        "obj365_boxable_name": "Pomegranate",
         "oid_boxable_leaf": "/m/0jwn_",
         "oid_inst_leaf": "/m/0jwn_",
         "oid_name": "Pomegranate",
@@ -7143,7 +6900,6 @@
         "wordnet_pwn30": "n06793426"
     },
     "pot": {
-        "obj365_boxable_name": "Pot",
         "parent_name": "container",
         "wikidata_desc": "rounded container used for domestic purposes, such as cooking or serving",
         "wikidata_name": "pot",
@@ -7153,7 +6909,6 @@
     },
     "potato": {
         "freebase_mid": "/m/05vtc",
-        "obj365_boxable_name": "Potato",
         "oid_boxable_leaf": "/m/05vtc",
         "oid_inst_leaf": "/m/05vtc",
         "oid_name": "Potato",
@@ -7166,7 +6921,6 @@
     },
     "potato_chip": {
         "freebase_mid": "/m/066sg",
-        "obj365_boxable_name": "Chips",
         "parent_name": "snack",
         "wikidata_desc": "deep fried thin slice of potato",
         "wikidata_name": "potato chip",
@@ -7194,7 +6948,6 @@
         "coco_pano_id": 64,
         "coco_pano_name": "potted plant",
         "freebase_mid": "/m/03fp41",
-        "obj365_boxable_name": "Potted Plant",
         "oid_boxable_leaf": "/m/03fp41",
         "oid_name": "Houseplant",
         "parent_name": "plant",
@@ -7205,7 +6958,6 @@
         "wordnet_pwn30": "n13083023"
     },
     "power_brick": {
-        "obj365_boxable_name": "Converter",
         "parent_name": "electrical_device",
         "wikidata_desc": "external, enclosed power supply that converts mains electricity for an appliance",
         "wikidata_name": "AC adapter",
@@ -7214,7 +6966,6 @@
         "wordnet_pwn30": "n04471315"
     },
     "power_outlet": {
-        "obj365_boxable_name": "Power outlet",
         "parent_name": "power_plugs_and_sockets",
         "wikidata_desc": "Power socket using alternating current.",
         "wikidata_name": "AC power socket",
@@ -7261,7 +7012,6 @@
     "printer": {
         "context": "computer",
         "freebase_mid": "/m/01m4t",
-        "obj365_boxable_name": "Printer",
         "oid_boxable_leaf": "/m/01m4t",
         "oid_inst_leaf": "/m/01m4t",
         "oid_name": "Printer",
@@ -7286,7 +7036,6 @@
     },
     "projector": {
         "freebase_mid": "/m/0crf4xx",
-        "obj365_boxable_name": "Projector",
         "parent_name": "electrical_device",
         "wikidata_desc": "optical device that projects an image or moving images onto a surface",
         "wikidata_name": "projector",
@@ -7296,7 +7045,6 @@
     },
     "pumpkin": {
         "freebase_mid": "/m/05zsy",
-        "obj365_boxable_name": "Pumpkin",
         "oid_boxable_leaf": "/m/05zsy",
         "oid_inst_leaf": "/m/05zsy",
         "oid_name": "Pumpkin",
@@ -7320,7 +7068,6 @@
     },
     "purse": {
         "freebase_mid": "/m/02_vjy",
-        "obj365_boxable_name": "Wallet/Purse",
         "parent_name": "container",
         "wikidata_desc": "small, flat case that is used to carry personal items such as cash",
         "wikidata_name": "wallet",
@@ -7330,7 +7077,6 @@
     },
     "rabbit": {
         "freebase_mid": "/m/06mf6",
-        "obj365_boxable_name": "Rabbit",
         "oid_boxable_leaf": "/m/06mf6",
         "oid_inst_leaf": "/m/06mf6",
         "oid_name": "Rabbit",
@@ -7354,7 +7100,6 @@
         "wordnet_pwn30": "n02508021"
     },
     "race_car": {
-        "obj365_boxable_name": "Formula 1 ",
         "parent_name": "car",
         "wikidata_desc": "type of car used for automobile racing",
         "wikidata_name": "racing automobile",
@@ -7377,7 +7122,6 @@
         "ade20k_id": 147,
         "ade20k_name": "radiator",
         "ade20k_names": "radiator",
-        "obj365_boxable_name": "Radiator",
         "parent_name": "heater",
         "wikidata_desc": "Radiant body through water or other liquids. Type of heat exchanger",
         "wikidata_name": "radiator",
@@ -7387,7 +7131,6 @@
     },
     "radish": {
         "freebase_mid": "/m/015x5n",
-        "obj365_boxable_name": "Radish",
         "oid_boxable_leaf": "/m/015x5n",
         "oid_inst_leaf": "/m/015x5n",
         "oid_name": "Radish",
@@ -7453,7 +7196,6 @@
         "wordnet_pwn30": "n01496617"
     },
     "recorder": {
-        "obj365_boxable_name": "Recorder",
         "parent_name": "dynamic",
         "wikidata_desc": "device that records sound",
         "wikidata_name": "sound recording device",
@@ -7473,7 +7215,6 @@
     },
     "red_cabbage": {
         "freebase_mid": "/m/06vm6n",
-        "obj365_boxable_name": "Red Cabbage",
         "parent_name": "cabbage",
         "wikidata_desc": "vegetable",
         "wikidata_name": "red cabbage",
@@ -7500,7 +7241,6 @@
         "coco_pano_id": 82,
         "coco_pano_name": "refrigerator",
         "freebase_mid": "/m/040b_t",
-        "obj365_boxable_name": "Refrigerator",
         "oid_boxable_leaf": "/m/040b_t",
         "oid_name": "Refrigerator",
         "parent_name": "home_appliance",
@@ -7520,7 +7260,6 @@
         "coco_pano_name": "remote",
         "context": "device",
         "freebase_mid": "/m/0qjjc",
-        "obj365_boxable_name": "Remote",
         "oid_name": "Remote control",
         "parent_name": "dynamic",
         "wikidata_desc": "system or device used to control other device remotely (or wirelessly)",
@@ -7553,7 +7292,6 @@
     },
     "rice": {
         "freebase_mid": "/m/0l_yh",
-        "obj365_boxable_name": "Rice",
         "parent_name": "food",
         "wikidata_desc": "genus of plants",
         "wikidata_name": "Oryza",
@@ -7563,7 +7301,6 @@
     },
     "rice_cooker": {
         "freebase_mid": "/m/020ytc",
-        "obj365_boxable_name": "Rice Cooker",
         "parent_name": "electrical_device",
         "wikidata_desc": "container or kitchen appliance dedicated to cooking rice",
         "wikidata_name": "rice cooker",
@@ -7572,7 +7309,6 @@
     },
     "rickshaw": {
         "freebase_mid": "/m/0dd5q",
-        "obj365_boxable_name": "Rickshaw",
         "parent_name": "cart",
         "wikidata_desc": "two or three-wheeled passenger cart, of Asian origin",
         "wikidata_name": "rickshaw",
@@ -7617,7 +7353,6 @@
     },
     "ring": {
         "freebase_mid": "/m/01zx6q",
-        "obj365_boxable_name": "Ring",
         "parent_name": "jewelry",
         "wikidata_desc": "circular band worn as a type of ornamental jewellery around the finger",
         "wikidata_name": "ring",
@@ -7736,7 +7471,6 @@
     },
     "roll_of_tobacco": {
         "freebase_mid": "/m/04gvstg",
-        "obj365_boxable_name": "Cigar/Cigarette ",
         "parent_name": "dynamic",
         "wikidata_desc": "",
         "wikidata_name": "tobacco product",
@@ -7781,7 +7515,6 @@
     },
     "router": {
         "freebase_mid": "/m/06f76",
-        "obj365_boxable_name": "Router/modem",
         "parent_name": "dynamic",
         "wikidata_desc": "device that forwards data packets between computer networks, creating an overlay internetwork",
         "wikidata_name": "router",
@@ -7796,7 +7529,6 @@
         "coco_pano_id": 200,
         "coco_pano_name": "rug-merged",
         "freebase_mid": "/m/01n5cy",
-        "obj365_boxable_name": "Carpet",
         "parent_name": "floor",
         "wikidata_desc": "textile floor covering",
         "wikidata_name": "carpet",
@@ -7819,7 +7551,6 @@
     "ruler": {
         "context": "stick",
         "freebase_mid": "/m/0hdln",
-        "obj365_boxable_name": "Tape Measur/ Ruler",
         "oid_boxable_leaf": "/m/0hdln",
         "oid_inst_leaf": "/m/0hdln",
         "oid_name": "Ruler",
@@ -7844,7 +7575,6 @@
     },
     "sailboat": {
         "freebase_mid": "/m/0hsrw",
-        "obj365_boxable_name": "Sailboat",
         "parent_name": "watercraft",
         "wikidata_desc": "boat propelled partly or entirely by sails",
         "wikidata_name": "sailboat",
@@ -7895,7 +7625,6 @@
     },
     "sandal": {
         "freebase_mid": "/m/03nfch",
-        "obj365_boxable_name": "Sandals",
         "oid_boxable_leaf": "/m/03nfch",
         "oid_name": "Sandal",
         "parent_name": "shoes",
@@ -7911,7 +7640,6 @@
         "coco_pano_id": 54,
         "coco_pano_name": "sandwich",
         "freebase_mid": "/m/0l515",
-        "obj365_boxable_name": "Sandwich",
         "oid_name": "Sandwich",
         "parent_name": "food",
         "wikidata_desc": "two slices of bread with filling in between them",
@@ -7933,7 +7661,6 @@
         "wordnet_pwn30": "n04139291"
     },
     "sausage": {
-        "obj365_boxable_name": "Sausage",
         "parent_name": "food",
         "wikidata_desc": "food usually made from ground meat with a skin around it",
         "wikidata_name": "sausage",
@@ -7943,7 +7670,6 @@
     },
     "saxophone": {
         "freebase_mid": "/m/06ncr",
-        "obj365_boxable_name": "Saxophone",
         "oid_boxable_leaf": "/m/06ncr",
         "oid_inst_leaf": "/m/06ncr",
         "oid_name": "Saxophone",
@@ -7956,7 +7682,6 @@
     },
     "scale": {
         "freebase_mid": "/m/03txqz",
-        "obj365_boxable_name": "Scale",
         "oid_name": "Scale",
         "parent_name": "dynamic",
         "wikidata_desc": "instrument used in measuring the weight or mass of an object",
@@ -7966,7 +7691,6 @@
         "wordnet_pwn30": "n04141975"
     },
     "scallop": {
-        "obj365_boxable_name": "Scallop",
         "parent_name": "shellfish",
         "wikidata_desc": "Name applied to numerous species of saltwater clams or marine bivalve mollusks in the Pectinidae family, the scallops. The common name scallop is also applied to species in other families of the superfamily Pectinoidea, including the thorny oysters.",
         "wikidata_name": "scallop",
@@ -7992,7 +7716,6 @@
         "coco_pano_id": 87,
         "coco_pano_name": "scissors",
         "freebase_mid": "/m/01lsmm",
-        "obj365_boxable_name": "Scissors",
         "oid_boxable_leaf": "/m/01lsmm",
         "oid_inst_leaf": "/m/01lsmm",
         "oid_name": "Scissors",
@@ -8005,7 +7728,6 @@
     },
     "scooter": {
         "freebase_mid": "/m/0dmq2",
-        "obj365_boxable_name": "Scooter",
         "parent_name": "vehicle",
         "wikidata_desc": "type of motorcycle",
         "wikidata_name": "scooter",
@@ -8046,7 +7768,6 @@
     },
     "screwdriver": {
         "freebase_mid": "/m/01bms0",
-        "obj365_boxable_name": "Screwdriver",
         "oid_boxable_leaf": "/m/01bms0",
         "oid_inst_leaf": "/m/01bms0",
         "oid_name": "Screwdriver",
@@ -8131,7 +7852,6 @@
     },
     "seal": {
         "freebase_mid": "/m/0gd3n",
-        "obj365_boxable_name": "Seal",
         "parent_name": "mammal",
         "wikidata_desc": "infraorder of mammals",
         "wikidata_name": "Pinnipedia",
@@ -8217,7 +7937,6 @@
         "coco_pano_id": 20,
         "coco_pano_name": "sheep",
         "freebase_mid": "/m/07bgp",
-        "obj365_boxable_name": "Sheep",
         "oid_boxable_leaf": "/m/07bgp",
         "oid_inst_leaf": "/m/07bgp",
         "oid_name": "Sheep",
@@ -8261,7 +7980,6 @@
         "ade20k_name": "ship",
         "ade20k_names": "ship",
         "freebase_mid": "/m/06q74",
-        "obj365_boxable_name": "Ship",
         "parent_name": "watercraft",
         "wikidata_desc": "large buoyant watercraft",
         "wikidata_name": "ship",
@@ -8283,7 +8001,6 @@
     },
     "shoes": {
         "freebase_mid": "/m/06rrc",
-        "obj365_boxable_name": "Other Shoes",
         "parent_name": "footwear",
         "wikidata_desc": "footwear",
         "wikidata_name": "shoe",
@@ -8315,7 +8032,6 @@
         "wordnet_pwn30": "n04206356"
     },
     "shovel": {
-        "obj365_boxable_name": "Shovel",
         "parent_name": "tool",
         "wikidata_desc": "tool for digging, lifting, and moving bulk materials",
         "wikidata_name": "shovel",
@@ -8339,7 +8055,6 @@
         "ade20k_name": "shower",
         "ade20k_names": "shower",
         "freebase_mid": "/m/02f9f_",
-        "obj365_boxable_name": "Showerhead",
         "oid_boxable_leaf": "/m/02f9f_",
         "oid_inst_leaf": "/m/02f9f_",
         "oid_name": "Shower",
@@ -8352,7 +8067,6 @@
     },
     "shrimp": {
         "freebase_mid": "/m/0ll1f78",
-        "obj365_boxable_name": "Shrimp",
         "oid_boxable_leaf": "/m/0ll1f78",
         "oid_name": "Shrimp",
         "parent_name": "invertebrate",
@@ -8363,7 +8077,6 @@
         "wordnet_pwn30": "n01986806"
     },
     "side_table": {
-        "obj365_boxable_name": "Side Table",
         "parent_name": "table",
         "wikidata_desc": "low table, often tiered, for use next to a chair or sofa",
         "wikidata_name": "end table",
@@ -8420,7 +8133,6 @@
         "coco_pano_name": "sink",
         "context": "basin",
         "freebase_mid": "/m/0130jx",
-        "obj365_boxable_name": "Sink",
         "oid_boxable_leaf": "/m/0130jx",
         "oid_name": "Sink",
         "parent_name": "wall",
@@ -8439,7 +8151,6 @@
         "coco_pano_id": 41,
         "coco_pano_name": "skateboard",
         "freebase_mid": "/m/06_fw",
-        "obj365_boxable_name": "Skateboard",
         "oid_boxable_leaf": "/m/06_fw",
         "oid_inst_leaf": "/m/06_fw",
         "oid_name": "Skateboard",
@@ -8456,7 +8167,6 @@
         "coco_pano_id": 35,
         "coco_pano_name": "skis",
         "freebase_mid": "/m/071p9",
-        "obj365_boxable_name": "Skiboard",
         "oid_boxable_leaf": "/m/071p9",
         "oid_name": "Ski",
         "parent_name": "tool",
@@ -8468,7 +8178,6 @@
     },
     "ski_boot": {
         "freebase_mid": "/m/01xdh9",
-        "obj365_boxable_name": "Skating and Skiing shoes",
         "parent_name": "boot",
         "wikidata_desc": "specialized footwear that are used in skiing to provide a way to attach the skier to skis",
         "wikidata_name": "ski boot",
@@ -8553,7 +8262,6 @@
     },
     "slide": {
         "freebase_mid": "/m/0260d_1",
-        "obj365_boxable_name": "Slide",
         "parent_name": "static",
         "wikidata_desc": "slides for children to play on in playgrounds",
         "wikidata_name": "playground slide",
@@ -8563,7 +8271,6 @@
     },
     "slippers": {
         "freebase_mid": "/m/0216vm",
-        "obj365_boxable_name": "Slippers",
         "parent_name": "footwear",
         "wikidata_desc": "light footwear made for indoor wear, generally without means of fastening",
         "wikidata_name": "slipper",
@@ -8618,7 +8325,6 @@
     },
     "sneakers": {
         "freebase_mid": "/m/027k4k",
-        "obj365_boxable_name": "Sneakers",
         "parent_name": "footwear",
         "wikidata_desc": "type of shoe",
         "wikidata_name": "athletic shoe",
@@ -8648,7 +8354,6 @@
         "coco_pano_id": 36,
         "coco_pano_name": "snowboard",
         "freebase_mid": "/m/06__v",
-        "obj365_boxable_name": "Snowboard",
         "oid_boxable_leaf": "/m/06__v",
         "oid_name": "Snowboard",
         "parent_name": "sports_equipment",
@@ -8703,7 +8408,6 @@
         "wordnet_pwn30": "n04254120"
     },
     "soccer_ball": {
-        "obj365_boxable_name": "Soccer",
         "parent_name": "ball",
         "wikidata_desc": "ball used in the sport of association football",
         "wikidata_name": "football",
@@ -8786,7 +8490,6 @@
         "wordnet_pwn30": "n04269944"
     },
     "speed_limit_sign": {
-        "obj365_boxable_name": "Speed Limit Sign",
         "parent_name": "traffic_sign_front",
         "wikidata_name": "speed limit sign",
         "wikidata_qid": "Q67356821",
@@ -8817,7 +8520,6 @@
         "coco_pano_id": 50,
         "coco_pano_name": "spoon",
         "freebase_mid": "/m/0cmx8",
-        "obj365_boxable_name": "Spoon",
         "oid_boxable_leaf": "/m/0cmx8",
         "oid_inst_leaf": "/m/0cmx8",
         "oid_name": "Spoon",
@@ -8830,7 +8532,6 @@
     },
     "sports_car": {
         "freebase_mid": "/m/012mq4",
-        "obj365_boxable_name": "Sports Car",
         "parent_name": "car",
         "wikidata_desc": "performance-oriented car class, generally small or light-weight with good handling",
         "wikidata_name": "sports car",
@@ -8862,7 +8563,6 @@
     },
     "spring_rolls": {
         "freebase_mid": "/m/04fzqn3",
-        "obj365_boxable_name": "Spring Rolls",
         "parent_name": "food",
         "wikidata_desc": "Vietnamese spring roll",
         "wikidata_name": "ch\u1ea3 gi\u00f2",
@@ -8944,7 +8644,6 @@
     },
     "stapler": {
         "freebase_mid": "/m/025fsf",
-        "obj365_boxable_name": "Stapler",
         "oid_name": "Stapler",
         "parent_name": "tool",
         "wikidata_desc": "office equipment used to fasten pieces of paper together",
@@ -8993,7 +8692,6 @@
     },
     "steak": {
         "freebase_mid": "/m/0grtl",
-        "obj365_boxable_name": "Steak",
         "parent_name": "food",
         "wikidata_desc": "cut of meat (e.g. beef, pork)",
         "wikidata_name": "steak",
@@ -9026,7 +8724,6 @@
         "ade20k_name": "stool",
         "ade20k_names": "stool",
         "freebase_mid": "/m/0fqt361",
-        "obj365_boxable_name": "Stool",
         "oid_boxable_leaf": "/m/0fqt361",
         "oid_name": "Stool",
         "parent_name": "furniture",
@@ -9042,7 +8739,6 @@
         "coco_pano_id": 13,
         "coco_pano_name": "stop sign",
         "freebase_mid": "/m/02pv19",
-        "obj365_boxable_name": "Stop Sign",
         "oid_boxable_leaf": "/m/02pv19",
         "oid_inst_leaf": "/m/02pv19",
         "oid_name": "Stop sign",
@@ -9065,7 +8761,6 @@
     },
     "strawberry": {
         "freebase_mid": "/m/07fbm7",
-        "obj365_boxable_name": "Strawberry",
         "oid_boxable_leaf": "/m/07fbm7",
         "oid_inst_leaf": "/m/07fbm7",
         "oid_name": "Strawberry",
@@ -9088,7 +8783,6 @@
         "mvd_inst_id": 44,
         "mvd_name": "object--street-light",
         "mvd_pano_id": 44,
-        "obj365_boxable_name": "Street Lights",
         "oid_boxable_leaf": "/m/033rq4",
         "oid_name": "Street light",
         "parent_name": "lamp",
@@ -9130,7 +8824,6 @@
     },
     "stroller": {
         "freebase_mid": "/m/03ylns",
-        "obj365_boxable_name": "Stroller",
         "parent_name": "vehicle",
         "wikidata_desc": "wheeled baby transport",
         "wikidata_name": "stroller",
@@ -9240,7 +8933,6 @@
         "coco_pano_id": 42,
         "coco_pano_name": "surfboard",
         "freebase_mid": "/m/019w40",
-        "obj365_boxable_name": "Surfboard",
         "oid_boxable_leaf": "/m/019w40",
         "oid_inst_leaf": "/m/019w40",
         "oid_name": "Surfboard",
@@ -9258,7 +8950,6 @@
         "mvd_inst_id": 37,
         "mvd_name": "object--cctv-camera",
         "mvd_pano_id": 37,
-        "obj365_boxable_name": "Surveillance Camera",
         "parent_name": "static",
         "wikidata_desc": "video or still camera used to secure an area",
         "wikidata_name": "security camera",
@@ -9268,7 +8959,6 @@
     },
     "sushi": {
         "freebase_mid": "/m/07030",
-        "obj365_boxable_name": "Sushi",
         "oid_boxable_leaf": "/m/07030",
         "oid_name": "Sushi",
         "parent_name": "food",
@@ -9280,7 +8970,6 @@
     },
     "suv": {
         "freebase_mid": "/m/0ctrp",
-        "obj365_boxable_name": "SUV",
         "parent_name": "car",
         "wikidata_desc": "type of automobile",
         "wikidata_name": "sport utility vehicle",
@@ -9290,7 +8979,6 @@
     },
     "swan": {
         "freebase_mid": "/m/0dftk",
-        "obj365_boxable_name": "Swan",
         "oid_boxable_leaf": "/m/0dftk",
         "oid_inst_leaf": "/m/0dftk",
         "oid_name": "Swan",
@@ -9341,7 +9029,6 @@
     },
     "swing": {
         "freebase_mid": "/m/02y929",
-        "obj365_boxable_name": "Swing",
         "parent_name": "toy",
         "wikidata_desc": "hanging seat",
         "wikidata_name": "swing",
@@ -9402,7 +9089,6 @@
         "wordnet_pwn30": "n04379243"
     },
     "table_tennis_ball": {
-        "obj365_boxable_name": "Table Tennis ",
         "parent_name": "ball",
         "wikidata_desc": "ball used in the game of table tennis",
         "wikidata_name": "table tennis ball",
@@ -9411,7 +9097,6 @@
     },
     "table_tennis_racket": {
         "freebase_mid": "/m/05_5p_0",
-        "obj365_boxable_name": "Table Teniis paddle",
         "oid_boxable_leaf": "/m/05_5p_0",
         "oid_inst_leaf": "/m/05_5p_0",
         "oid_name": "Table tennis racket",
@@ -9423,7 +9108,6 @@
     },
     "tablet_computer": {
         "freebase_mid": "/m/0bh9flk",
-        "obj365_boxable_name": "Tablet",
         "oid_boxable_leaf": "/m/0bh9flk",
         "oid_inst_leaf": "/m/0bh9flk",
         "oid_name": "Tablet computer",
@@ -9472,7 +9156,6 @@
     },
     "tap": {
         "freebase_mid": "/m/02jz0l",
-        "obj365_boxable_name": "Faucet",
         "oid_boxable_leaf": "/m/02jz0l",
         "oid_inst_leaf": "/m/02jz0l",
         "oid_name": "Tap",
@@ -9485,7 +9168,6 @@
     },
     "target": {
         "freebase_mid": "/m/04_z0s",
-        "obj365_boxable_name": "Target",
         "parent_name": "sports_equipment",
         "wikidata_desc": "grammar: participant of a situation upon whom an action is carried out or the thematic relation such a participant has with an action. Sometimes, \"theme\" and \"patient\" are used to mean the same thing",
         "wikidata_name": "patient",
@@ -9495,7 +9177,6 @@
     },
     "tart": {
         "freebase_mid": "/m/02zvsm",
-        "obj365_boxable_name": "Egg tart",
         "oid_boxable_leaf": "/m/02zvsm",
         "oid_inst_leaf": "/m/02zvsm",
         "oid_name": "Tart",
@@ -9532,7 +9213,6 @@
     },
     "teapot": {
         "freebase_mid": "/m/01fh4r",
-        "obj365_boxable_name": "Tea pot",
         "oid_boxable_leaf": "/m/01fh4r",
         "oid_inst_leaf": "/m/01fh4r",
         "oid_name": "Teapot",
@@ -9561,7 +9241,6 @@
     },
     "telephone": {
         "freebase_mid": "/m/07cx4",
-        "obj365_boxable_name": "Telephone",
         "oid_name": "Telephone",
         "parent_name": "electrical_device",
         "wikidata_desc": "telecommunications device",
@@ -9592,7 +9271,6 @@
     },
     "tennis_ball": {
         "freebase_mid": "/m/05ctyq",
-        "obj365_boxable_name": "Tennis",
         "oid_boxable_leaf": "/m/05ctyq",
         "oid_inst_leaf": "/m/05ctyq",
         "oid_name": "Tennis ball",
@@ -9609,7 +9287,6 @@
         "coco_pano_id": 43,
         "coco_pano_name": "tennis racket",
         "freebase_mid": "/m/0h8my_4",
-        "obj365_boxable_name": "Tennis Racket",
         "oid_boxable_leaf": "/m/0h8my_4",
         "oid_inst_leaf": "/m/0h8my_4",
         "oid_name": "Tennis racket",
@@ -9627,7 +9304,6 @@
         "coco_pano_id": 166,
         "coco_pano_name": "tent",
         "freebase_mid": "/m/01j61q",
-        "obj365_boxable_name": "Tent",
         "oid_boxable_leaf": "/m/01j61q",
         "oid_name": "Tent",
         "parent_name": "dynamic",
@@ -9665,7 +9341,6 @@
         "coco_pano_id": 32,
         "coco_pano_name": "tie",
         "freebase_mid": "/m/01rkbr",
-        "obj365_boxable_name": "Tie",
         "oid_boxable_leaf": "/m/01rkbr",
         "oid_inst_leaf": "/m/01rkbr",
         "oid_name": "Tie",
@@ -9701,7 +9376,6 @@
     },
     "tin_can": {
         "freebase_mid": "/m/02jnhm",
-        "obj365_boxable_name": "Canned",
         "oid_boxable_leaf": "/m/02jnhm",
         "oid_name": "Tin can",
         "parent_name": "container",
@@ -9725,7 +9399,6 @@
     "tissue": {
         "context": "paper",
         "freebase_mid": "/m/06g3fd",
-        "obj365_boxable_name": "Tissue",
         "parent_name": "paper",
         "wikidata_desc": "lightweight paper or, light cr\u00eape paper",
         "wikidata_name": "tissue paper",
@@ -9740,7 +9413,6 @@
         "coco_pano_name": "toaster",
         "context": "appliance",
         "freebase_mid": "/m/01k6s3",
-        "obj365_boxable_name": "Toaster",
         "oid_boxable_leaf": "/m/01k6s3",
         "oid_inst_leaf": "/m/01k6s3",
         "oid_name": "Toaster",
@@ -9760,7 +9432,6 @@
         "coco_pano_id": 70,
         "coco_pano_name": "toilet",
         "freebase_mid": "/m/09g1w",
-        "obj365_boxable_name": "Toilet",
         "oid_boxable_leaf": "/m/09g1w",
         "oid_inst_leaf": "/m/09g1w",
         "oid_name": "Toilet",
@@ -9776,7 +9447,6 @@
     },
     "toilet_paper": {
         "freebase_mid": "/m/09gtd",
-        "obj365_boxable_name": "Toilet Paper",
         "oid_boxable_leaf": "/m/09gtd",
         "oid_inst_leaf": "/m/09gtd",
         "oid_name": "Toilet paper",
@@ -9789,7 +9459,6 @@
     },
     "tomato": {
         "freebase_mid": "/m/07j87",
-        "obj365_boxable_name": "Tomato",
         "oid_boxable_leaf": "/m/07j87",
         "oid_inst_leaf": "/m/07j87",
         "oid_name": "Tomato",
@@ -9801,7 +9470,6 @@
         "wordnet_pwn30": "n07734017"
     },
     "tongs": {
-        "obj365_boxable_name": "Tong",
         "parent_name": "dynamic",
         "wikidata_desc": "kitchenware used for picking up items",
         "wikidata_name": "tongs",
@@ -9825,7 +9493,6 @@
         "coco_pano_id": 90,
         "coco_pano_name": "toothbrush",
         "freebase_mid": "/m/012xff",
-        "obj365_boxable_name": "Toothbrush",
         "oid_name": "Toothbrush",
         "parent_name": "brush",
         "wikidata_desc": "Dental Hygine tool",
@@ -9865,7 +9532,6 @@
         "coco_pano_id": 168,
         "coco_pano_name": "towel",
         "freebase_mid": "/m/0162_1",
-        "obj365_boxable_name": "Towel",
         "oid_boxable_leaf": "/m/0162_1",
         "oid_inst_leaf": "/m/0162_1",
         "oid_name": "Towel",
@@ -9897,7 +9563,6 @@
         "ade20k_name": "plaything",
         "ade20k_names": "plaything;toy",
         "freebase_mid": "/m/0138tl",
-        "obj365_boxable_name": "Stuffed Toy",
         "oid_name": "Toy",
         "parent_name": "dynamic",
         "wikidata_desc": "thing to be played with",
@@ -9908,7 +9573,6 @@
     },
     "traffic_cone": {
         "freebase_mid": "/m/03sy7v",
-        "obj365_boxable_name": "Traffic cone",
         "parent_name": "dynamic",
         "wikidata_desc": "Traffick Cone",
         "wikidata_name": "traffic cone",
@@ -9934,7 +9598,6 @@
         "mvd_inst_id": 48,
         "mvd_name": "object--traffic-light",
         "mvd_pano_id": 48,
-        "obj365_boxable_name": "Traffic Light",
         "oid_boxable_leaf": "/m/015qff",
         "oid_inst_leaf": "/m/015qff",
         "oid_name": "Traffic light",
@@ -9987,7 +9650,6 @@
         "mvd_inst_id": 50,
         "mvd_name": "object--traffic-sign--front",
         "mvd_pano_id": 50,
-        "obj365_boxable_name": "Traffic Sign",
         "oid_name": "Traffic sign",
         "parent_name": "signboard",
         "viper_name": "trafficsign",
@@ -10039,7 +9701,6 @@
         "mvd_id": 58,
         "mvd_name": "object--vehicle--on-rails",
         "mvd_pano_id": 58,
-        "obj365_boxable_name": "Train",
         "oid_boxable_leaf": "/m/07jdr",
         "oid_inst_leaf": "/m/07jdr",
         "oid_name": "Train",
@@ -10080,7 +9741,6 @@
     },
     "treadmill": {
         "freebase_mid": "/m/030610",
-        "obj365_boxable_name": "Treadmill",
         "oid_boxable_leaf": "/m/030610",
         "oid_name": "Treadmill",
         "parent_name": "dynamic",
@@ -10119,7 +9779,6 @@
     },
     "tricycle": {
         "freebase_mid": "/m/01786t",
-        "obj365_boxable_name": "Tricycle",
         "parent_name": "vehicle",
         "wikidata_desc": "three-wheeled self-powered vehicle",
         "wikidata_name": "tricycle",
@@ -10129,7 +9788,6 @@
     },
     "tripod": {
         "freebase_mid": "/m/073bxn",
-        "obj365_boxable_name": "Tripod",
         "oid_boxable_leaf": "/m/073bxn",
         "oid_name": "Tripod",
         "parent_name": "dynamic",
@@ -10141,7 +9799,6 @@
     },
     "trombone": {
         "freebase_mid": "/m/07c6l",
-        "obj365_boxable_name": "Trombone",
         "oid_boxable_leaf": "/m/07c6l",
         "oid_name": "Trombone",
         "parent_name": "musical_instrument",
@@ -10153,7 +9810,6 @@
     },
     "trophy": {
         "freebase_mid": "/m/02x94h",
-        "obj365_boxable_name": "Trophy",
         "parent_name": "dynamic",
         "wikidata_desc": "reward for a specific achievement",
         "wikidata_name": "trophy",
@@ -10192,7 +9848,6 @@
         "mvd_inst_id": 61,
         "mvd_name": "object--vehicle--truck",
         "mvd_pano_id": 61,
-        "obj365_boxable_name": "Truck",
         "oid_boxable_leaf": "/m/07r04",
         "oid_inst_leaf": "/m/07r04",
         "oid_name": "Truck",
@@ -10212,7 +9867,6 @@
     },
     "trucking_rig": {
         "freebase_mid": "/m/078my",
-        "obj365_boxable_name": "Heavy Truck",
         "parent_name": "truck",
         "wikidata_desc": "combination of a tractor unit and one or more semi-trailers to carry freight",
         "wikidata_name": "semi-trailer truck",
@@ -10222,7 +9876,6 @@
     },
     "trumpet": {
         "freebase_mid": "/m/07gql",
-        "obj365_boxable_name": "Trumpet",
         "oid_boxable_leaf": "/m/07gql",
         "oid_name": "Trumpet",
         "parent_name": "musical_instrument",
@@ -10233,7 +9886,6 @@
         "wordnet_pwn30": "n03110669"
     },
     "tuba": {
-        "obj365_boxable_name": "Tuba",
         "parent_name": "musical_instrument",
         "wikidata_desc": "type of musical instrument of the brass family",
         "wikidata_name": "tuba",
@@ -10289,7 +9941,6 @@
         "coco_pano_id": 28,
         "coco_pano_name": "umbrella",
         "freebase_mid": "/m/0hnnb",
-        "obj365_boxable_name": "Umbrella",
         "oid_boxable_leaf": "/m/0hnnb",
         "oid_name": "Umbrella",
         "parent_name": "tool",
@@ -10342,7 +9993,6 @@
     },
     "urinal": {
         "freebase_mid": "/m/033qwb",
-        "obj365_boxable_name": "Urinal",
         "parent_name": "plumbing_fixture",
         "wikidata_desc": "device in which to urinate while standing",
         "wikidata_name": "Pico",
@@ -10371,7 +10021,6 @@
         "ade20k_names": "van",
         "context": "vehicle",
         "freebase_mid": "/m/0h2r6",
-        "obj365_boxable_name": "Van",
         "oid_boxable_leaf": "/m/0h2r6",
         "oid_inst_leaf": "/m/0h2r6",
         "oid_name": "Van",
@@ -10398,7 +10047,6 @@
         "coco_pano_id": 86,
         "coco_pano_name": "vase",
         "freebase_mid": "/m/02s195",
-        "obj365_boxable_name": "Vase",
         "oid_boxable_leaf": "/m/02s195",
         "oid_inst_leaf": "/m/02s195",
         "oid_name": "Vase",
@@ -10411,7 +10059,6 @@
     },
     "vegetable": {
         "freebase_mid": "/m/0f4s2w",
-        "obj365_boxable_name": "Green Vegetables",
         "oid_name": "Vegetable",
         "parent_name": "food",
         "wikidata_desc": "edible plant or part of a plant, involved in cooking",
@@ -10457,7 +10104,6 @@
         "ade20k_id": 142,
         "ade20k_name": "crt screen",
         "ade20k_names": "crt;screen",
-        "obj365_boxable_name": "Moniter/TV",
         "parent_name": "dynamic",
         "wikidata_desc": "electrically controlled display with no moving parts",
         "wikidata_name": "electronic visual display",
@@ -10467,7 +10113,6 @@
     },
     "violin": {
         "freebase_mid": "/m/07y_7",
-        "obj365_boxable_name": "Violin",
         "oid_boxable_leaf": "/m/07y_7",
         "oid_name": "Violin",
         "parent_name": "musical_instrument",
@@ -10492,7 +10137,6 @@
     "volleyball": {
         "context": "ball",
         "freebase_mid": "/m/02rgn06",
-        "obj365_boxable_name": "Volleyball",
         "oid_boxable_leaf": "/m/02rgn06",
         "oid_inst_leaf": "/m/02rgn06",
         "oid_name": "Volleyball (Ball)",
@@ -10593,7 +10237,6 @@
         "ade20k_name": "washer",
         "ade20k_names": "washer;automatic;washer;washing;machine",
         "freebase_mid": "/m/0174k2",
-        "obj365_boxable_name": "Washing Machine/Drying Machine",
         "oid_boxable_leaf": "/m/0174k2",
         "oid_inst_leaf": "/m/0174k2",
         "oid_name": "Washing machine",
@@ -10615,7 +10258,6 @@
         "mvd_inst_id": 51,
         "mvd_name": "object--trash-can",
         "mvd_pano_id": 51,
-        "obj365_boxable_name": "Trash bin Can",
         "oid_boxable_leaf": "/m/0bjyj5",
         "oid_inst_leaf": "/m/0bjyj5",
         "oid_name": "Waste container",
@@ -10630,7 +10272,6 @@
     },
     "watch": {
         "freebase_mid": "/m/0gjkl",
-        "obj365_boxable_name": "Watch",
         "oid_boxable_leaf": "/m/0gjkl",
         "oid_inst_leaf": "/m/0gjkl",
         "oid_name": "Watch",
@@ -10684,7 +10325,6 @@
     },
     "watermelon": {
         "freebase_mid": "/m/0kpqd",
-        "obj365_boxable_name": "Watermelon",
         "oid_boxable_leaf": "/m/0kpqd",
         "oid_inst_leaf": "/m/0kpqd",
         "oid_name": "Watermelon",
@@ -10731,7 +10371,6 @@
     },
     "wheelchair": {
         "freebase_mid": "/m/0qmmr",
-        "obj365_boxable_name": "Wheelchair",
         "oid_boxable_leaf": "/m/0qmmr",
         "oid_name": "Wheelchair",
         "parent_name": "chair",
@@ -10753,7 +10392,6 @@
     },
     "whiteboard": {
         "freebase_mid": "/m/02d9qx",
-        "obj365_boxable_name": "Blackboard/Whiteboard",
         "oid_boxable_leaf": "/m/02d9qx",
         "oid_inst_leaf": "/m/02d9qx",
         "oid_name": "Whiteboard",
@@ -10832,7 +10470,6 @@
         "coco_pano_id": 46,
         "coco_pano_name": "wine glass",
         "freebase_mid": "/m/09tvcd",
-        "obj365_boxable_name": "Wine Glass",
         "oid_boxable_leaf": "/m/09tvcd",
         "oid_name": "Wine glass",
         "parent_name": "drinking_glass",
@@ -10951,7 +10588,6 @@
     },
     "yak": {
         "freebase_mid": "/m/01hhp3",
-        "obj365_boxable_name": "Yak",
         "parent_name": "ground_animal",
         "wikidata_desc": "species of mammal, the wild yak (may, or may not, include the domesticated yak, which otherwise is Bos grunniens, Q19829410)",
         "wikidata_name": "Bos mutus",
@@ -10965,7 +10601,6 @@
         "coco_pano_id": 24,
         "coco_pano_name": "zebra",
         "freebase_mid": "/m/0898b",
-        "obj365_boxable_name": "Zebra",
         "oid_boxable_leaf": "/m/0898b",
         "oid_inst_leaf": "/m/0898b",
         "oid_name": "Zebra",
