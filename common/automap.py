@@ -59,7 +59,7 @@ oid_context_fixed = {"gondola": ("boat","n03447447"), "cucumber":("fruit","n0771
                      }
 
 def unify_namings(name0):
-    unif_name = name0.replace(' ','_').lower()
+    unif_name = name0.replace(' ','_').lower().replace('_-_','_').replace('(','').replace(')','')
     return fix_unified_labels.get(unif_name,unif_name)
 
 def get_wordnet_gloss(pwn30, retries = 0, wd_id=None):
@@ -157,11 +157,9 @@ def get_wordnet(str0, context = None, retries = 0):
         if curr_pwn < min_pwn:  # smaller q usually stands for a more general entry (vs. an instance)
             best_r = r
             continue
-
-    names = [l["lemma"] for l in best_r["lemmas"] if l["language"] == "en"]
-    names = list(sorted(names, key=len)) # find shortest lemma
-
     if not best_r is None:
+        names = [l["lemma"] for l in best_r["lemmas"] if not l is None and l["language"] == "en"]
+        names = list(sorted(names, key=len)) # find shortest lemma
         ret_b = {'wordnet_pwn30': 'n'+best_r['old_keys']['pwn30'][0][:-2], 'wordnet_gloss': best_r['definition']}
         if len(names) > 0:
             ret_b["wordnet_name"] = names[0]
@@ -332,7 +330,7 @@ def check_for_dublicates(key, add_entry, cmp_entry = {}, append_dubl_data = True
             print(p + ' id for ' + key + ' already exists at key: ' + check_dubl[p][add_entry[p]])
             return False
         if p in cmp_entry and cmp_entry[p] != add_entry[p]:
-            print(p+' collision for ' + key + ': ' + cmp_entry[p] + ' vs ' + add_entry[p])
+            print(p+' collision for ' + key + ': ' + str(cmp_entry[p]) + ' vs ' + str(add_entry[p]))
             return False
         if append_dubl_data:
             check_dubl[p][add_entry[p]] = key
@@ -422,7 +420,7 @@ def main(argv=sys.argv[1:]):
             id_param_eval += "_id" if id_is_idx else "_name"
             possible_cat = None
             id_is_idx = not "boxable" in id_param_eval
-            for idx0, vals in enumerate(appendf["labels"]):
+            for idx0, vals in enumerate(appendf["labels"]):               
                 if not id_is_idx and not vals.get('instances', True):
                     continue # quick hack to add all instance classes as boxables / inst
                 if vals['name'] in check_dubl[name_param]:
@@ -434,6 +432,11 @@ def main(argv=sys.argv[1:]):
                     if len(context) > 1 and context[1][-1] == ')':
                         key = context[0].strip().replace('_', '')
                         possible_cat = context[1][:-1]
+                    if ' Arrow (' in vals["readable"] or ' Way (' in vals["readable"] or \
+                       ' General (' in vals["readable"] or ' Direction (' in vals["readable"] or \
+                       ' Hatched (' in vals["readable"] or ' Symbol (' in vals["readable"] or \
+                       ' Temporary (' in vals["readable"]:
+                        vals["readable"] = vals["readable"].replace(' (',' ')[:-1] #fix for arrow() captions at MVD v2p0
                     pos_dd = vals['name'].find('--')
                     if pos_dd > 0:
                         possible_cat = vals['name'][:pos_dd]
@@ -477,6 +480,7 @@ def main(argv=sys.argv[1:]):
                 trg_entry = joined_label_space[key]
                 trg_entry.update({'ade20k_names':names,'ade20k_id':idx0})
 
+    skip_auto = ["lane_marking_", "traffic_light_", "lane_marking_dashed_", "signage_", "traffic_light_", "traffic_sign_"]
     #automatically adds qids
     for key, vals in joined_label_space.items():
         if 'wikidata_qid' in vals:
@@ -485,6 +489,8 @@ def main(argv=sys.argv[1:]):
                 if not check_for_dublicates(key, w1, vals):
                     continue
                 vals.update(w1)
+            continue
+        if any([s in key for s in skip_auto]):
             continue
         n_qid = wikidata_from_name(key, context=vals.get('context','').split('_'))
         if len(n_qid) == 0:
@@ -501,6 +507,8 @@ def main(argv=sys.argv[1:]):
                 continue
             add_entry = vals
         else:
+            if any([s in key for s in skip_auto]):
+                continue
             key0 = key.replace('-stuff','').replace('-merged','').replace('-other','')
             key0 = fix_unified_labels.get(key0, key0)
             if key0 in joined_label_space and 'wordnet_pwn30' in joined_label_space[key0]:
