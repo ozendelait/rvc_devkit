@@ -6777,7 +6777,6 @@
         "wordnet_pwn30": "n00007846"
     },
     "person_group": {
-        "cityscapes_name": "persongroup",
         "context": "human",
         "mvd_v2p0_id": 31,
         "mvd_v2p0_name": "human--person--person-group",
