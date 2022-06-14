@@ -2798,4 +2798,8 @@ if __name__ == '__main__':
     try:
         _main(sys.argv)
     except Error as e:
-        print >>sys.stderr, e
+        if sys.version_info[0] < 3:
+            print >> sys.stderr, e
+        else
+            print(e,file=sys.stderr)
+        
