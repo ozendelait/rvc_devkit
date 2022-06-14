@@ -1,6 +1,6 @@
-# Robust Vision Challenge 2020 Devkits
+# Robust Vision Challenge 2022 Devkits
 
-This repository contains the devkits for the [Robust Vision Challenge 2020](http://robustvision.net/).
+This repository contains the devkits for the [Robust Vision Challenge 2022](http://robustvision.net/).
 The devkits make it easy to participate in the challenge by:
 
 * downloading the required datasets,
@@ -13,6 +13,9 @@ Notice that using the devkits is not required for participating in the
 challenge: alternatively, algorithms can be manually run on each dataset and
 results submitted to all benchmarks individually (as long as the same method and
 parameters are used for all results).
+
+If you have questions or find any bugs: please open an [issue in this github](https://github.com/ozendelait/rvc_devkit/issues).
+
 
 ## Getting started ##
 
