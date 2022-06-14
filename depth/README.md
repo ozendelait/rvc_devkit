@@ -1,4 +1,4 @@
-# Robust Vision Challenge 2020 - Single Image Depth Prediction Devkit
+# Robust Vision Challenge 2022 - Single Image Depth Prediction Devkit
 
 
 ## Required Pip Packages
@@ -8,11 +8,12 @@ pip install argparse numpy imageio
 
 ## Dataset Download
 
-For the Robust Vision Challenge 2020, we propose three single-image
+For the Robust Vision Challenge 2022, we use four single-image
 depth datasets:
 - KITTI - http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction
 - MPI Sintel - http://sintel.is.tue.mpg.de/
 - rabbitAI - https://rabbitai.de/benchmark/
+- VIPER - https://playing-for-benchmarks.org/leaderboards/monodepth/
 
 For the rabbitAI dataset please register at:
 https://rabbitai.de/benchmark/register/
@@ -29,7 +30,7 @@ The process requires roughly 300GB of space!
 The download script will not delete any data, to free space again,
 remove all files you don't need.
 
-Note: The VIPER benchmark does not supply training data but participants still have to submit results for its test set!
+Note: The VIPER benchmark does not supply any training data but participants still have to submit results for its test set!
 You can add any additional public data source you like as long as you reference it.
 
 ## Short Format and Layout Description

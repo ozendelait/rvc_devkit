@@ -1,4 +1,4 @@
-# Robust Vision Challenge 2020 - Stereo Devkit #
+# Robust Vision Challenge 2022 - Stereo Devkit #
 
 ## Dataset Download ##
 

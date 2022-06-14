@@ -1,11 +1,9 @@
-# Robust Vision Challenge 2020 - Object Detection Devkit #
+# Robust Vision Challenge 2022 - Object Detection Devkit #
 
 The Object detection challenge consists of four datasets:
 - [MS COCO](cocodataset.org/)
 - [OpenImages](https://storage.googleapis.com/openimages/web/index.html) (OID)
 - [Mapillary Vistas](https://www.mapillary.com/dataset/vistas) (MVD)
-
-**Update 2020-07-17: Megvii had to remove Obj365 from the RVC due to internal policy changes (see objects365.org); we will rank the obj. det. challenge using the three benchmarks COCO, OID, and MVD**
 
 ## Requirements ##
 Install additional requirements with:
@@ -22,7 +20,9 @@ We provide a devkit to download, extract, and convert the challenge datasets int
 
 3. Execute the download script ``` bash download_obj_det.sh ``` which will download most of the RVC datasets. The extracted dataset needs ca. 600GB of disk space (COCO: 26GB, OID: 527GB, MVD: 25GB). Please note that up to 50% more disc space is required during the extraction process.
 
-4. To download the Mapillary Vistas (Research Edition) dataset you need to manually register and download at https://www.mapillary.com/dataset/vistas You will receive an email with download instructions. Save/Move the downloaded zip file into the folder RVC_DATA_DIR/mvd.
+4. To download the Mapillary Vistas (Research Edition) dataset you need to manually register and download at https://www.mapillary.com/dataset/vistas You will receive an email with download instructions. 
+Note: RVC2022 uses *MVD v1.2*!
+Save/Move the downloaded zip file into the folder RVC_DATA_DIR/mvd.
 
 5. After successfully downloading all datasets, execute ``` bash extract_and_cleanup.sh ``` to extract and delete clean up files.
 

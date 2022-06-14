@@ -6,7 +6,6 @@ from benchmark import *
 from benchmark_sintel import *
 from benchmark_kitti2015 import *
 from benchmark_middlebury import *
-from benchmark_hd1k import *
 from benchmark_viper import *
 from dataset_format import *
 from dataset_format_middlebury import *
