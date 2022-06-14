@@ -43,8 +43,12 @@ def download_file_with_resume(url, destination, try_resume_bytes=-1, total_sz = 
                     requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
                     response = session.get(url, params=params, headers=resume_headers, stream=True, verify=False)
                 else:
-                    print("Error: it looks like your python requests SSL verification is broken.",file=sys.stderr)
-                    print("Try to update certifi: \nconda install -c anaconda certifi\nOtherwise you can skip ssl verifications by defining:\nexport RVC_CUSTOM_SSL_SKIP_VERIFY=1",file=sys.stderr)
+                    ssl_err_msg = "Error: it looks like your python requests SSL verification is broken."
+                    ssl_err_msg += "\nTry to update certifi: \nconda install -c anaconda certifi\nOtherwise you can skip ssl verifications by defining:\nexport RVC_CUSTOM_SSL_SKIP_VERIFY=1"
+                    if sys.version_info[0] < 3:
+                        sys.stderr.write(str(ssl_err_msg))
+                    else
+                        print(ssl_err_msg,file=sys.stderr)
                     raise ssl_execption
 
             if "docs.google.com" in url:

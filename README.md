@@ -19,7 +19,7 @@ If you have questions or find any bugs: please open an [issue in this github](ht
 
 ## Getting started ##
 
-Prerequisites: Install `wget`, `git`, and `python` (both versions 2.7.x and 3.x should work) if they are not installed yet.
+Prerequisites: Install `wget`, `git`, and `python` (version 3.x; 2.x is deprecated) if they are not installed yet.
 
 1. Clone this repository:
    ```git clone https://github.com/ozendelait/rvc_devkit.git```
