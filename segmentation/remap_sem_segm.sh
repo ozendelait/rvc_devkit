@@ -34,7 +34,7 @@ pushd $RVC_SEM_SEG_SCRIPT_DIR/../common
   python rvc_remap_dataset_mseg.py --orig_dname ade20k-151 --orig_dataroot ${RVC_DATA_SRC_DIR}/ade20k/ADEChallengeData2016 $RVC_COMMON_CONV_PARAMS
   python rvc_remap_dataset_mseg.py --orig_dname cityscapes-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/cityscapes $RVC_COMMON_CONV_PARAMS
   #python rvc_remap_dataset_mseg.py --orig_dname coco-panoptic-201 --orig_dataroot ${RVC_DATA_SRC_DIR}/coco --panoptic_json "${RVC_DATA_SRC_DIR}/coco/annotations/panoptic_{split}2017.json" $RVC_COMMON_CONV_PARAMS
-  python rvc_remap_dataset_mseg.py --orig_dname kitti-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/kitti $RVC_COMMON_CONV_PARAMS
+  #python rvc_remap_dataset_mseg.py --orig_dname kitti-34 --orig_dataroot ${RVC_DATA_SRC_DIR}/kitti $RVC_COMMON_CONV_PARAMS
   python rvc_remap_dataset_mseg.py --orig_dname mapillary-public66 --orig_dataroot ${RVC_DATA_DIR}/mvd --convert_label_from_rgb $RVC_COMMON_CONV_PARAMS
   python rvc_remap_dataset_mseg.py --orig_dname scannet-41 --orig_dataroot ${RVC_DATA_SRC_DIR}/scannet/scannet_frames_25k $RVC_COMMON_CONV_PARAMS
 

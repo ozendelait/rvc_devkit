@@ -32,10 +32,10 @@ rm ${RVC_EXTR_ROOT_DIR}/cityscapes/license.txt
 unzip ${RVC_EXTR_ROOT_DIR}/cityscapes/leftImg8bit_trainvaltest.zip -d ${RVC_EXTR_ROOT_DIR}/cityscapes
 rm ${RVC_EXTR_ROOT_DIR}/cityscapes/leftImg8bit_trainvaltest.zip
 
-unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
-rm ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip
-unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
-rm ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip
+#unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
+#rm ${RVC_EXTR_ROOT_DIR}/kitti/data_semantics.zip
+#unzip ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip -d ${RVC_EXTR_ROOT_DIR}/kitti
+#rm ${RVC_EXTR_ROOT_DIR}/kitti/data_panoptic.zip
 
 unzip ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_25k.zip -d ${RVC_EXTR_ROOT_DIR}/scannet
 rm ${RVC_EXTR_ROOT_DIR}/scannet/scannet_frames_25k.zip
