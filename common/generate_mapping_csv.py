@@ -6,12 +6,12 @@
 import os, sys, argparse, json, csv, time
 
 #boxable
-#join_data = ["oid_boxable_leaf","coco_boxable_name","mvd_boxable_name"]
+join_data = ["oid_boxable_leaf","coco_boxable_name","mvd_v2p0_boxable_name"]
 #instance
 #join_data = ["oid_inst_leaf", "coco_inst_id_name", "cityscapes_inst_id_name", "mvd_inst_id_name", 'scannet_pano_id_name', 'viper_inst_id_name', 'cityscapes_inst_id_name', 'wilddash_inst_id_name']
 #panoptic
 #join_data = ["coco_pano_id_name", "cityscapes_pano_id_name", "cityscapes_pano_id_name", "mvd_pano_id_name", 'viper_name', 'wilddash_pano_id_name']
-join_data = [ "mvd_pano_id_name", "mvd_pano_id", "cityscapes_pano_id", "cityscapes_pano_id_name", "cityscapes_inst_id_name"]
+#join_data = [ "mvd_pano_id_name", "mvd_pano_id", "cityscapes_pano_id", "cityscapes_pano_id_name", "cityscapes_inst_id_name"]
 #semseg
 #join_data = ["ade20k_id", "coco_pano_id", "cityscapes_pano_id", "cityscapes_pano_id", "mvd_pano_id", 'scannet_pano_id', 'cityscapes_pano_id', 'wilddash_pano_id']
 
@@ -39,7 +39,7 @@ def main(argv=sys.argv[1:]):
     #with open('label_definitions/challenge-2019-label300-segmentable-hierarchy.json', 'r') as ifile:
     #    super_cat_info = json.load(ifile)
     #solve_leaf_boxable(joined_label_space, super_cat_info, mid_to_key)
-    populate_empty = args.populate_empty.split(';')
+    populate_empty = {} if not args.populate_empty else args.populate_empty.split(';')
 
     all_lines = [['key']+join_data]
     for key, vals in joined_label_space.items():

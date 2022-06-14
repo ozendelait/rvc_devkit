@@ -317,7 +317,7 @@ def wikidata_from_name(name, context = None):
     return d0
 
 unique_id_params = ['wordnet_pwn30','freebase_mid','wikidata_qid',
-                    'coco_pano_id','mvd_pano_id','cityscapes_id', 'mvd_name','cityscapes_name',
+                    'coco_pano_id','mvd_pano_id','cityscapes_id', 'mvd_v2p0_name','cityscapes_name',
                     'scannet_name', 'ade20k_id', 'wilddash_name', 'wilddash_pano_id',
                     'viper_id', 'viper_name', 'viper_inst_id', 'viper_pano_id', 'ade20k_name']
 check_dubl = {p:{} for p in unique_id_params}
@@ -428,15 +428,15 @@ def main(argv=sys.argv[1:]):
                 else:
                     key = vals["readable"]
                     possible_cat = None
-                    context = vals["readable"].split('(')
-                    if len(context) > 1 and context[1][-1] == ')':
-                        key = context[0].strip().replace('_', '')
-                        possible_cat = context[1][:-1]
                     if ' Arrow (' in vals["readable"] or ' Way (' in vals["readable"] or \
                        ' General (' in vals["readable"] or ' Direction (' in vals["readable"] or \
                        ' Hatched (' in vals["readable"] or ' Symbol (' in vals["readable"] or \
                        ' Temporary (' in vals["readable"]:
-                        vals["readable"] = vals["readable"].replace(' (',' ')[:-1] #fix for arrow() captions at MVD v2p0
+                        vals["readable"] = vals["readable"].replace(' (',' ')[:-1] #fix for arrow() captions at 
+                    context = vals["readable"].split('(')
+                    if len(context) > 1 and context[1][-1] == ')':
+                        key = context[0].strip().replace('_', '')
+                        possible_cat = context[1][:-1]
                     pos_dd = vals['name'].find('--')
                     if pos_dd > 0:
                         possible_cat = vals['name'][:pos_dd]
