@@ -28,7 +28,7 @@ The semantic segmentation task uses [MSeg](http://vladlen.info/publications/mseg
 
 You need to manually register and download the Mapillary Vistas (Research Edition) dataset:
 https://www.mapillary.com/dataset/vistas
-Note: RVC2022 uses *MVD v1.2*! 
+Note: RVC2022 uses **MVD v1.2** ! 
 
 You will receive an email with download instructions. Save/Move the downloaded zip file into the folder ${RVC_DATA_DIR}/mvd.
 
@@ -55,7 +55,7 @@ Here are the upload links for each of the segmentation tasks:
 ### Semantic Segmentation Task ###
 - ADE20K: http://sceneparsing.csail.mit.edu/eval/
 - Cityscapes: https://www.cityscapes-dataset.com/submit/
-- MVD: https://codalab.mapillary.com/competitions/43
+- MVD: Using label policy MVD 1.2 [TBD; July 15th]
 - ScanNet: http://kaldir.vc.in.tum.de/scannet_benchmark/login
 - VIPER: https://playing-for-benchmarks.org/submissions/my/
 - WildDash2: https://wilddash.cc/challenges/submissions
