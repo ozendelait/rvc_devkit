@@ -55,8 +55,8 @@ The devkit contains code to remap and convert your predictions so they are ready
 4. Upload your predictions for the respective test sets of each benchmark:
 
 - COCO : https://competitions.codalab.org/competitions/25334
-- MVD : https://codalab.mapillary.com/competitions/41
-- OID : https://www.kaggle.com/c/open-images-object-detection-rvc-2020
+- MVD : using MVD v1.2 [TBD; July 15th]
+- OID : on kaggle [TBD; July 15th]
 
 For COCO and MVD the predictions must be renamed to detections_test2017_METHOD_results.json (COCO) or detections_test_METHOD_results.json (MVD) respectively and compressed into a single .zip file. 
 METHOD should be replaced with your method's name.
