@@ -9,7 +9,7 @@ export RVC_DATA_DIR=/path/to/rvc_dataroot
 Some segmentation benchmarks require users to register and to confirm the license terms before granting access to their data.
 For the Cityscapes dataset, please register at: https://www.cityscapes-dataset.com 
 
-For the WildDash dataset, please register at: https://www.wilddash.cc (Note: RVC users can already use a alpha version of WildDash v2; see the downloaded readme/license for details).
+For the WildDash dataset, please register at: https://www.wilddash.cc (Note: you can use the beta or final version of WildDash v2; both use the same evaluation label policy; see the downloaded readme/license for details).
 
 To use the automatic download script, define these environment variables using 
 
