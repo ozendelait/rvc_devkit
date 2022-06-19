@@ -47,7 +47,7 @@ def download_file_with_resume(url, destination, try_resume_bytes=-1, total_sz = 
                     ssl_err_msg += "\nTry to update certifi: \nconda install -c anaconda certifi\nOtherwise you can skip ssl verifications by defining:\nexport RVC_CUSTOM_SSL_SKIP_VERIFY=1"
                     if sys.version_info[0] < 3:
                         sys.stderr.write(str(ssl_err_msg))
-                    else
+                    else:
                         print(ssl_err_msg,file=sys.stderr)
                     raise ssl_execption
 
