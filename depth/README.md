@@ -15,9 +15,8 @@ depth datasets:
 - rabbitAI - https://rabbitai.de/benchmark/
 - VIPER - https://playing-for-benchmarks.org/leaderboards/monodepth/
 
-For the rabbitAI dataset please register at:
-https://rabbitai.de/benchmark/register/
-you will receive a download link.
+For the rabbitAI training dataset please download:
+https://download.rabbitai.de/benchmarks/rvc_2020/data.zip
 
 To download KITTI and MPI Sintel datasets you may execute:
 
