@@ -55,7 +55,7 @@ Here are the upload links for each of the segmentation tasks:
 ### Semantic Segmentation Task ###
 - ADE20K: http://sceneparsing.csail.mit.edu/eval/
 - Cityscapes: https://www.cityscapes-dataset.com/submit/
-- MVD: Using label policy MVD 1.2 [TBD; July 15th]
+- MVD v1.2: https://codalab.lisn.upsaclay.fr/competitions/5821
 - ScanNet: http://kaldir.vc.in.tum.de/scannet_benchmark/login
 - VIPER: https://playing-for-benchmarks.org/submissions/my/
 - WildDash2: https://wilddash.cc/challenges/submissions
