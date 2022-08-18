@@ -42,7 +42,6 @@ The process for participating in the challenge is as follows.
 * Once you are happy with the results of your algorithm based on the training datasets,
   run your algorithm on all datasets. See the README for the specific task for
   information on the expected result format.
-* Note: Submissions start on July 15th
 * Use the devkit to create submission archives for all included benchmarks.
 * Register your submission at the [submission form](http://robustvision.net/submit.php#register).
   Choose a short method name (up to 10 characters) for your method (allowed characters: + - _ A..Z a..z 0..9)
