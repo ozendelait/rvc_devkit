@@ -12,10 +12,10 @@ For the Robust Vision Challenge 2022, we use four single-image
 depth datasets:
 - KITTI - http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction
 - MPI Sintel - http://sintel.is.tue.mpg.de/
-- rabbitAI - https://rabbitai.de/benchmark/
+- <s>rabbitAI - https://rabbitai.de/benchmark/</s>
 - VIPER - https://playing-for-benchmarks.org/leaderboards/monodepth/
 
-For the rabbitAI training dataset please download:
+You can use the rabbitAI training dataset to improve your robustness:
 https://download.rabbitai.de/benchmarks/rvc_2020/data.zip
 
 To download KITTI and MPI Sintel datasets you may execute:
@@ -96,5 +96,6 @@ After that, upload your predictions for the respective test sets of each benchma
 
 - KITTI      : http://www.cvlibs.net/datasets/kitti/user_submit.php
 - MPI Sintel : https://sintel-depth.csail.mit.edu/landing
-- rabbitai   : https://rabbitai.de/benchmark/upload
 - VIPER      : https://playing-for-benchmarks.org/submissions/my/
+
+The rabbitai benchmark had technical difficulties and will not be part of RVC2022. You can still use existing (or new) solutions you created with the rabbitai training data and submit the results to the three remaining leaderboards.
