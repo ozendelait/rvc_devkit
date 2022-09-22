@@ -60,8 +60,10 @@ The devkit contains code to remap and convert your predictions so they are ready
 
 For COCO and MVD the predictions must be renamed to detections_test2017_METHOD_results.json (COCO) or detections_test_METHOD_results.json (MVD) respectively and compressed into a single .zip file. 
 METHOD should be replaced with your method's name.
+The json should contain a list of dicts where each dict represent one bbox; something e.g. {category_id: 7, bbox:[<x0>, <y0>, <w>, <h>], image_id: <specific_to_dataset>, score: 0.7}
 For OID the file name does not matter but you have to upload the automatically generated OID style .csv file instead of the COCO style .json.
 For MVD, the 'image_id' is expected to be a string of the 22 character image filename without file extension
+For COCO, the 'image_id' is an integer, which is identical to int(<file_name_without_ext>)
 
 ## Prediction remapping ## 
 
